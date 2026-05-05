@@ -1,0 +1,88 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2605.02267v1",
+    "title": "Composition-Weighted Symbolic Regression for General-Purpose Property Prediction",
+    "authors": [
+      "Yang Huang",
+      "Jingrun Chen"
+    ],
+    "summary": "We introduce a composition-weighted symbolic regression framework for interpretable prediction of materials properties directly from chemical composition. The method jointly learns analytical functional forms and task-dependent elemental weightings without predefined descriptors. By incorporating max/min operators, it naturally enforces constraints such as non-negative band gaps and bounded classification probabilities, unifying regression and classification tasks. Efficient search is achieved through a hybrid Monte Carlo tree search--genetic programming algorithm with gradient-based refinement and parallel computation. Benchmarks on MatBench tasks show competitive accuracy relative to state-of-the-art black-box models while yielding explicit analytical expressions. Applied to III--V semiconductor alloys, the model produces smooth composition-dependent trends and learned elemental weights with chemically meaningful periodic behavior. This framework provides a scalable and interpretable route for materials discovery and property screening.",
+    "published": "2026-05-04T06:20:50+00:00",
+    "updated": "2026-05-04T06:20:50+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "physics.comp-ph"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": "8 pages, 4 figures and 1 table",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2605.02267v1",
+    "base_id": "2605.02267",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2605.02267v1"
+  },
+  {
+    "id": "http://arxiv.org/abs/2604.23758v3",
+    "title": "Agentic Fusion of Large Atomic and Language Models to Accelerate Superconductor Discovery",
+    "authors": [
+      "Mingze Li",
+      "Yu Rong",
+      "Songyou Li",
+      "Lihong Wang",
+      "Jiacheng Cen",
+      "Liming Wu",
+      "Anyi Li",
+      "Zongzhao Li",
+      "Qiuliang Liu",
+      "Rui Jiao",
+      "Tian Bian",
+      "Pengju Wang",
+      "Hao Sun",
+      "Jianfeng Zhang",
+      "Ji-Rong Wen",
+      "Deli Zhao",
+      "Shifeng Jin",
+      "Tingyang Xu",
+      "Wenbing Huang"
+    ],
+    "summary": "Artificial intelligence has accelerated materials discovery through high-throughput prediction and generation, yet the decision problem remains a formidable bottleneck. While current AI systems readily propose millions of candidates, navigating the decision regarding a viable experimental target requires resolving multi-dimensional judgments across atomic-scale numerical computation and high-level semantic reasoning. Here we present ElementsClaw, an agentic framework for materials discovery that orchestrates a suite of Large Atomic Model (LAM) tools finetuned from our proposed 1-billion-parameter model Elements for numerical computation, while leveraging Large Language Models (LLMs) for semantic reasoning. Applied to superconductors, ElementsClaw rediscovers 66 experimentally verified superconductors that are absent from the standard SuperCon3D database. Scaling to 2.4 million equilibrium crystals, ElementsClaw identifies 68,000 high-confidence candidates in just 28 GPU hours (https://developer.damo-academy.com/material), expanding known superconducting space by orders of magnitude compared to datasets curated over decades. Guided by the agent's reasoning, we experimentally synthesize and verify four novel superconductors: the motif-guided Zr$_3$ScRe$_8$ ($T_c$ = 6.5 K), the de novo generated HfZrRe$_4$ ($T_c$ = 5.9 K), the structurally reinterpreted Zr$_4$VRe$_7$ ($T_c$ = 3.5 K), and the database-latent Hf$_{21}$Re$_{25}$ ($T_c$ = 2.5 K). Together, our results establish a knowledge integrated, autonomously orchestrated, and experimentally grounded paradigm for materials discovery.",
+    "published": "2026-04-26T15:14:38+00:00",
+    "updated": "2026-05-04T03:23:33+00:00",
+    "categories": [
+      "cs.LG",
+      "cond-mat.mtrl-sci"
+    ],
+    "primary_category": "cs.LG",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2604.23758v3",
+    "base_id": "2604.23758",
+    "version": "3",
+    "url": "http://arxiv.org/abs/2604.23758v3"
+  },
+  {
+    "id": "http://arxiv.org/abs/2605.01286v1",
+    "title": "Inverse Materials Design via Joint Generation of Crystal Structures and Local Electronic Descriptors",
+    "authors": [
+      "Ibuki Okuda",
+      "Izumi Takahara",
+      "Teruyasu Mizoguchi"
+    ],
+    "summary": "Inverse design of inorganic crystals, in which structures are generated to satisfy a target property while preserving diversity and physical plausibility, remains more demanding than ab initio generation, as property conditioning can degrade the structural quality that current generative models otherwise achieve. We propose a diffusion framework that jointly denoises crystal-structure variables and site-resolved local electronic descriptors through a shared score network. As representative descriptors, we adopt Bader charge and atomic density of states (atomic DOS). Under both band-gap and formation energy conditioned generation, the joint models achieved higher success rates than the structure-only baseline in most target conditions, while simultaneously increasing the fraction of generated structures that satisfy uniqueness, novelty, thermodynamic stability, and physical validity (VSUN criteria). A dummy-variable control confirms that these gains originate from the electronic content of the descriptors rather than from auxiliary site-wise variables. The generated Bader charges agree with DFT references with an MAE of 5.5e-2 e on stable structures, and the generated atomic DOS captures the coarse spectral profile of the DFT reference around the modal accuracy range, although finer details and accuracy vary with elemental species. These results establish local electronic descriptors as effective generative variables that serve two complementary roles: broadening the explored materials space through increased structural diversity, and mitigating the trade-off between property targeting and structural quality by guiding the structural trajectory toward electronically plausible configurations during joint denoising.",
+    "published": "2026-05-02T06:46:52+00:00",
+    "updated": "2026-05-02T06:46:52+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": "13 pages, 5 figures, 2 pages SI",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2605.01286v1",
+    "base_id": "2605.01286",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2605.01286v1"
+  }
+]

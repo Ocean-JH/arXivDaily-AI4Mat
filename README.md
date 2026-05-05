@@ -34,39 +34,55 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (2)
+## New Papers (3)
 
-*Last updated: 2026-05-05 06:56:07 (SGT)*
+*Last updated: 2026-05-06 06:53:25 (SGT)*
 
-### 1. AI-Driven Expansion and Application of the Alexandria Database
+### 1. Composition-Weighted Symbolic Regression for General-Purpose Property Prediction
 
-**Authors:** Théo Cavignac, Jonathan Schmidt, Pierre-Paul De Breuck, Antoine Loew, Tiago F. T. Cerqueira, Hai-Chen Wang, Anton Bochkarev, Yury Lysogorskiy, Aldo H. Romero, Ralf Drautz, Silvana Botti, Miguel A. L. Marques
+**Authors:** Yang Huang, Jingrun Chen
 
-**Published:** 2025-12-09
+**Published:** 2026-05-04
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2512.09169v2
+**ID:** 2605.02267v1
 
-**Link:** [http://arxiv.org/abs/2512.09169v2](http://arxiv.org/abs/2512.09169v2)
+**Link:** [http://arxiv.org/abs/2605.02267v1](http://arxiv.org/abs/2605.02267v1)
 
-**Summary:** We present a novel multi-stage workflow for computational materials discovery that achieves a 99% success rate in identifying compounds within 100 meV/atom of thermodynamic stability, with a threefold improvement over previous approaches. By combining the Matra-Genoa generative model, Orb-v2 universal machine learning interatomic potential, and ALIGNN graph neural network for energy prediction, we generated 119 million candidate structures and added 1.3 million DFT-validated compounds to the ALEXANDRIA database, including 74 thousand new stable materials. The expanded ALEXANDRIA database now contains 5.8 million structures with 175 thousand compounds on the convex hull. Predicted structural disorder rates (37-43%) match experimental databases, unlike other recent AI-generated datasets. Analysis reveals fundamental patterns in space group distributions, coordination environments, and phase stability networks, including sub-linear scaling of convex hull connectivity. We release the complete dataset, including sAlex25 with 14 million out-of-equilibrium structures containing forces and stresses for training universal force fields. We demonstrate that fine-tuning a GRACE model on this data improves benchmark accuracy. All data, models, and workflows are freely available under Creative Commons licenses....
+**Summary:** We introduce a composition-weighted symbolic regression framework for interpretable prediction of materials properties directly from chemical composition. The method jointly learns analytical functional forms and task-dependent elemental weightings without predefined descriptors. By incorporating max/min operators, it naturally enforces constraints such as non-negative band gaps and bounded classification probabilities, unifying regression and classification tasks. Efficient search is achieved through a hybrid Monte Carlo tree search--genetic programming algorithm with gradient-based refinement and parallel computation. Benchmarks on MatBench tasks show competitive accuracy relative to state-of-the-art black-box models while yielding explicit analytical expressions. Applied to III--V semiconductor alloys, the model produces smooth composition-dependent trends and learned elemental weights with chemically meaningful periodic behavior. This framework provides a scalable and interpretable route for materials discovery and property screening....
 
 ---
 
-### 2. Beyond Structure: Revolutionising Materials Discovery via AI-Driven Synthesis Protocol-Property Relationships
+### 2. Agentic Fusion of Large Atomic and Language Models to Accelerate Superconductor Discovery
 
-**Authors:** Guillaume Lambard
+**Authors:** Mingze Li, Yu Rong, Songyou Li, Lihong Wang, Jiacheng Cen, Liming Wu, Anyi Li, Zongzhao Li, Qiuliang Liu, Rui Jiao, Tian Bian, Pengju Wang, Hao Sun, Jianfeng Zhang, Ji-Rong Wen, Deli Zhao, Shifeng Jin, Tingyang Xu, Wenbing Huang
 
-**Published:** 2026-05-01
+**Published:** 2026-04-26
+
+**Category:** cs.LG
+
+**ID:** 2604.23758v3
+
+**Link:** [http://arxiv.org/abs/2604.23758v3](http://arxiv.org/abs/2604.23758v3)
+
+**Summary:** Artificial intelligence has accelerated materials discovery through high-throughput prediction and generation, yet the decision problem remains a formidable bottleneck. While current AI systems readily propose millions of candidates, navigating the decision regarding a viable experimental target requires resolving multi-dimensional judgments across atomic-scale numerical computation and high-level semantic reasoning. Here we present ElementsClaw, an agentic framework for materials discovery that orchestrates a suite of Large Atomic Model (LAM) tools finetuned from our proposed 1-billion-parameter model Elements for numerical computation, while leveraging Large Language Models (LLMs) for semantic reasoning. Applied to superconductors, ElementsClaw rediscovers 66 experimentally verified superconductors that are absent from the standard SuperCon3D database. Scaling to 2.4 million equilibrium crystals, ElementsClaw identifies 68,000 high-confidence candidates in just 28 GPU hours (https://developer.damo-academy.com/material), expanding known superconducting space by orders of magnitude compared to datasets curated over decades. Guided by the agent's reasoning, we experimentally synthesize and verify four novel superconductors: the motif-guided Zr$_3$ScRe$_8$ ($T_c$ = 6.5 K), the de novo generated HfZrRe$_4$ ($T_c$ = 5.9 K), the structurally reinterpreted Zr$_4$VRe$_7$ ($T_c$ = 3.5 K), and the database-latent Hf$_{21}$Re$_{25}$ ($T_c$ = 2.5 K). Together, our results establish a knowledge integrated, autonomously orchestrated, and experimentally grounded paradigm for materials discovery....
+
+---
+
+### 3. Inverse Materials Design via Joint Generation of Crystal Structures and Local Electronic Descriptors
+
+**Authors:** Ibuki Okuda, Izumi Takahara, Teruyasu Mizoguchi
+
+**Published:** 2026-05-02
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2605.00313v1
+**ID:** 2605.01286v1
 
-**Link:** [http://arxiv.org/abs/2605.00313v1](http://arxiv.org/abs/2605.00313v1)
+**Link:** [http://arxiv.org/abs/2605.01286v1](http://arxiv.org/abs/2605.01286v1)
 
-**Summary:** The current structure-centric paradigm in artificial intelligence (AI)-driven materials discovery, despite delivering thousands of candidate structures, is stalling at a critical barrier: the synthesizability gap. We argue that closing this gap demands a pivot to a synthesis-first paradigm in which executable synthesis protocols, not just atomic configurations, are treated as primary design variables. We outline a roadmap built on three pillars: (i) representing synthesis procedures as machine-readable protocols, (ii) deploying generative and inverse-design models to propose actionable reaction pathways and recipes, and (iii) integrating closed-loop optimisation to refine protocols against experimental realities and sustainability constraints. Framed in terms of the causal backbone P->X->y from protocol P to structure X and properties y, this perspective sets out methodological building blocks, standards needs and self-driving laboratory (SDL) integration strategies to accelerate reproducible, data-first materials discovery....
+**Summary:** Inverse design of inorganic crystals, in which structures are generated to satisfy a target property while preserving diversity and physical plausibility, remains more demanding than ab initio generation, as property conditioning can degrade the structural quality that current generative models otherwise achieve. We propose a diffusion framework that jointly denoises crystal-structure variables and site-resolved local electronic descriptors through a shared score network. As representative descriptors, we adopt Bader charge and atomic density of states (atomic DOS). Under both band-gap and formation energy conditioned generation, the joint models achieved higher success rates than the structure-only baseline in most target conditions, while simultaneously increasing the fraction of generated structures that satisfy uniqueness, novelty, thermodynamic stability, and physical validity (VSUN criteria). A dummy-variable control confirms that these gains originate from the electronic content of the descriptors rather than from auxiliary site-wise variables. The generated Bader charges agree with DFT references with an MAE of 5.5e-2 e on stable structures, and the generated atomic DOS captures the coarse spectral profile of the DFT reference around the modal accuracy range, although finer details and accuracy vary with elemental species. These results establish local electronic descriptors as effective generative variables that serve two complementary roles: broadening the explored materials space through increased structural diversity, and mitigating the trade-off between property targeting and structural quality by guiding the structural trajectory toward electronically plausible configurations during joint denoising....
 
 ---
 
