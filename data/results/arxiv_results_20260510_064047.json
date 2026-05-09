@@ -1,0 +1,27 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2605.06641v1",
+    "title": "GlazyBench: A Benchmark for Ceramic Glaze Property Prediction and Image Generation",
+    "authors": [
+      "Ziyu Zhai",
+      "Siyou Li",
+      "Juexi Shao",
+      "Juntao Yu"
+    ],
+    "summary": "Developing ceramic glazes is a costly, time-consuming process of trial and error due to complex chemistry, placing a significant burden on independent artists. While recent advances in multimodal AI offer a modern solution, the field lacks the large-scale datasets required to train these models. We propose GlazyBench, the first dataset for AI-assisted glaze design. Comprising 23,148 real glaze formulations, GlazyBench supports two primary tasks: predicting post-firing surface properties, such as color and transparency, from raw materials, and generating accurate visual representations of the glaze based on these properties. We establish comprehensive baselines for property prediction using traditional machine learning and large language models, alongside image generation benchmarks using deep generative and large multimodal models. Our experiments demonstrate promising yet challenging results. GlazyBench pioneers a new research direction in AI-assisted material design, providing a standardized benchmark for systematic evaluation.",
+    "published": "2026-05-07T17:51:13+00:00",
+    "updated": "2026-05-07T17:51:13+00:00",
+    "categories": [
+      "cs.AI",
+      "cs.CV"
+    ],
+    "primary_category": "cs.AI",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2605.06641v1",
+    "base_id": "2605.06641",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2605.06641v1"
+  }
+]
