@@ -34,23 +34,39 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## New Papers (2)
 
-*Last updated: 2026-05-10 06:40:55 (SGT)*
+*Last updated: 2026-05-12 06:51:59 (SGT)*
 
-### 1. GlazyBench: A Benchmark for Ceramic Glaze Property Prediction and Image Generation
+### 1. RIDER: 3D RNA Inverse Design with Reinforcement Learning-Guided Diffusion
 
-**Authors:** Ziyu Zhai, Siyou Li, Juexi Shao, Juntao Yu
+**Authors:** Tianmeng Hu, Yongzheng Cui, Biao Luo, Ke Li
+
+**Published:** 2026-02-18
+
+**Category:** cs.LG
+
+**ID:** 2602.16548v2
+
+**Link:** [http://arxiv.org/abs/2602.16548v2](http://arxiv.org/abs/2602.16548v2)
+
+**Summary:** The inverse design of RNA three-dimensional (3D) structures is crucial for engineering functional RNAs in synthetic biology and therapeutics. While recent deep learning approaches have advanced this field, they are typically optimized and evaluated using native sequence recovery, which is a limited surrogate for structural fidelity, since different sequences can fold into similar 3D structures and high recovery does not necessarily indicate correct folding. To address this limitation, we propose RIDER, an RNA Inverse DEsign framework with Reinforcement learning that directly optimizes for 3D structural similarity. First, we develop and pre-train a GNN-based generative diffusion model conditioned on the target 3D structure, achieving a 9% improvement in native sequence recovery over state-of-the-art methods. Then, we fine-tune the model with an improved policy gradient algorithm using four task-specific reward functions based on 3D self-consistency metrics. Experimental results show that RIDER improves structural similarity by over 100% across all metrics and discovers designs that are distinct from native sequences....
+
+---
+
+### 2. LLM-Guided Open Hypothesis Learning from Autonomous Scanning Probe Microscopy Experiments
+
+**Authors:** Boris Slautin, Utkarsh Pratiush, Yu Liu, Kamyar Barakati, Sergei Kalinin
 
 **Published:** 2026-05-07
 
-**Category:** cs.AI
+**Category:** cond-mat.mtrl-sci
 
-**ID:** 2605.06641v1
+**ID:** 2605.06839v1
 
-**Link:** [http://arxiv.org/abs/2605.06641v1](http://arxiv.org/abs/2605.06641v1)
+**Link:** [http://arxiv.org/abs/2605.06839v1](http://arxiv.org/abs/2605.06839v1)
 
-**Summary:** Developing ceramic glazes is a costly, time-consuming process of trial and error due to complex chemistry, placing a significant burden on independent artists. While recent advances in multimodal AI offer a modern solution, the field lacks the large-scale datasets required to train these models. We propose GlazyBench, the first dataset for AI-assisted glaze design. Comprising 23,148 real glaze formulations, GlazyBench supports two primary tasks: predicting post-firing surface properties, such as color and transparency, from raw materials, and generating accurate visual representations of the glaze based on these properties. We establish comprehensive baselines for property prediction using traditional machine learning and large language models, alongside image generation benchmarks using deep generative and large multimodal models. Our experiments demonstrate promising yet challenging results. GlazyBench pioneers a new research direction in AI-assisted material design, providing a standardized benchmark for systematic evaluation....
+**Summary:** Autonomous experimentation has transformed microscopy and materials discovery by enabling closed-loop optimization including imaging and spectroscopy tuning, strucutre property relationship discovery, and exploration of combinatorial libraries. However, most current workflows remain limited to selecting measurements within fixed objective or hypothesis spaces, rather than generating new physical models from experimental data. Here, we introduce an open hypothesis-learning framework that combines symbolic regression with large-language-model-based physical evaluation and implement it for autonomous scanning probe microscopy. Symbolic regression generates candidate analytical relationships directly from sparse measurements, while the language-model evaluator ranks these candidates according to physical plausibility, scaling behavior, and consistency with known mechanisms. We demonstrate the approach on autonomous piezoresponse force microscopy measurements of ferroelectric domain switching in a PZT thin film. Starting from five seed measurements, the workflow evolves from physically incomplete candidate expressions toward interpretable voltage-time growth laws consistent with kinetic domain-wall motion. This work extends autonomous microscopy from closed-loop optimization toward open hypothesis discovery, where candidate physical laws emerge from the experiment itself rather than being specified in advance. More broadly, the framework establishes a route for integrating symbolic regression, physical reasoning, and adaptive experimentation into hierarchical autonomous scientific workflows....
 
 ---
 
