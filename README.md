@@ -34,39 +34,71 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (2)
+## New Papers (4)
 
-*Last updated: 2026-05-12 06:51:59 (SGT)*
+*Last updated: 2026-05-13 06:59:29 (SGT)*
 
-### 1. RIDER: 3D RNA Inverse Design with Reinforcement Learning-Guided Diffusion
+### 1. Enabling Structure-Only Initialization and Out-of-Distribution Generalization in GNN-based Molecular Dynamics Simulators
 
-**Authors:** Tianmeng Hu, Yongzheng Cui, Biao Luo, Ke Li
+**Authors:** S. A. Shteingolts, Salman N. Salman, Dan Mendels
 
-**Published:** 2026-02-18
+**Published:** 2026-05-10
 
-**Category:** cs.LG
+**Category:** physics.chem-ph
 
-**ID:** 2602.16548v2
+**ID:** 2605.09495v1
 
-**Link:** [http://arxiv.org/abs/2602.16548v2](http://arxiv.org/abs/2602.16548v2)
+**Link:** [http://arxiv.org/abs/2605.09495v1](http://arxiv.org/abs/2605.09495v1)
 
-**Summary:** The inverse design of RNA three-dimensional (3D) structures is crucial for engineering functional RNAs in synthetic biology and therapeutics. While recent deep learning approaches have advanced this field, they are typically optimized and evaluated using native sequence recovery, which is a limited surrogate for structural fidelity, since different sequences can fold into similar 3D structures and high recovery does not necessarily indicate correct folding. To address this limitation, we propose RIDER, an RNA Inverse DEsign framework with Reinforcement learning that directly optimizes for 3D structural similarity. First, we develop and pre-train a GNN-based generative diffusion model conditioned on the target 3D structure, achieving a 9% improvement in native sequence recovery over state-of-the-art methods. Then, we fine-tune the model with an improved policy gradient algorithm using four task-specific reward functions based on 3D self-consistency metrics. Experimental results show that RIDER improves structural similarity by over 100% across all metrics and discovers designs that are distinct from native sequences....
+**Summary:** Machine learning-based simulators offer the potential to model the dynamics of complex systems more efficiently than classical approaches, while retaining differentiability, a key property for materials design. Graph neural network (GNN)-based simulators have shown strong performance across a range of physical domains, including molecular dynamics. However, their reliance on temporal context for accurate prediction limits their use in inverse design settings, where simulations must be initialized from a single static configuration. Moreover, inverse design requires robust out-of-distribution (OOD) generalization, as candidate structures typically lie outside the training domain. Here, we address both challenges by introducing two complementary strategies that enable stable and accurate structure-only initialization of GNN-based simulations. To directly target OOD generalization, we propose an inference-time physics-based optimization framework that constrains model predictions to remain physically consistent during rollout. In addition, we introduce a differentiable, GNN-based barostat that enables accurate tracking of system dimensions and pressure, critical for capturing macroscopic responses and supporting OOD generalization. We evaluate these approaches in the context of uniaxial compression of disordered elastic networks spanning a broad range of geometries, Poisson ratios, and microscopic behaviors. We find that, together, these methods substantially improve rollout stability and enable reliable OOD generalization, including regimes with distinct, more complex dynamics than those in the training data. These results show that, when properly initialized and constrained, GNN-based simulators can serve as efficient and generalizable tools for materials discovery and structural optimization, advancing their use in materials, molecular, and dynamical system design....
 
 ---
 
-### 2. LLM-Guided Open Hypothesis Learning from Autonomous Scanning Probe Microscopy Experiments
+### 2. Inverse Design for Conditional Distribution Matching
 
-**Authors:** Boris Slautin, Utkarsh Pratiush, Yu Liu, Kamyar Barakati, Sergei Kalinin
+**Authors:** Ori Meidler, Shaul Tolkovsky, Or Zuk
 
-**Published:** 2026-05-07
+**Published:** 2026-05-10
 
-**Category:** cond-mat.mtrl-sci
+**Category:** cs.LG
 
-**ID:** 2605.06839v1
+**ID:** 2605.09439v1
 
-**Link:** [http://arxiv.org/abs/2605.06839v1](http://arxiv.org/abs/2605.06839v1)
+**Link:** [http://arxiv.org/abs/2605.09439v1](http://arxiv.org/abs/2605.09439v1)
 
-**Summary:** Autonomous experimentation has transformed microscopy and materials discovery by enabling closed-loop optimization including imaging and spectroscopy tuning, strucutre property relationship discovery, and exploration of combinatorial libraries. However, most current workflows remain limited to selecting measurements within fixed objective or hypothesis spaces, rather than generating new physical models from experimental data. Here, we introduce an open hypothesis-learning framework that combines symbolic regression with large-language-model-based physical evaluation and implement it for autonomous scanning probe microscopy. Symbolic regression generates candidate analytical relationships directly from sparse measurements, while the language-model evaluator ranks these candidates according to physical plausibility, scaling behavior, and consistency with known mechanisms. We demonstrate the approach on autonomous piezoresponse force microscopy measurements of ferroelectric domain switching in a PZT thin film. Starting from five seed measurements, the workflow evolves from physically incomplete candidate expressions toward interpretable voltage-time growth laws consistent with kinetic domain-wall motion. This work extends autonomous microscopy from closed-loop optimization toward open hypothesis discovery, where candidate physical laws emerge from the experiment itself rather than being specified in advance. More broadly, the framework establishes a route for integrating symbolic regression, physical reasoning, and adaptive experimentation into hierarchical autonomous scientific workflows....
+**Summary:** Generative models are powerful tools for sampling from a learned distribution $\mathcal{P}(Y \mid X)$, and inverse-design methods invert this map to find an input $x$ that produces a desired point output $y^*$. However, many design goals are naturally distributional rather than pointwise, incorporating the inherent uncertainty of $Y$ and targeting a specific form for it, a task not addressed by standard inverse design. To address this issue we introduce Conditional Distribution Matching (CDM), a new inverse-design problem class in generative modeling: given a joint distribution $\mathcal{P}(X, Y)$ and a target distribution $\mathcal{G}(Y)$, find an input $x^*$ whose induced conditional distribution $\mathcal{P}(Y \mid X = x^*)$ matches $\mathcal{G}$. We formally define two variants: Conditional Distribution Matching Sampling (CDMS) and Conditional Distribution Matching Optimization (CDMO). To solve these problems, we propose MLGD-F (Matching-Loss Guided Diffusion with a Fast inner sampler), a plug-and-play inference-time algorithm that combines a pretrained score-based diffusion model with a pretrained fast conditional sampler, requiring no additional training or fine-tuning. By leveraging single-step conditional sampling, MLGD-F enables tractable gradient computation, making the estimation of $\mathcal{P}(Y \mid X)$ both memory-efficient and computationally lightweight. We validate MLGD-F on synthetic benchmarks, structured image transformations, and generative editing optimization, demonstrating reliable recovery of inputs whose conditional distributions match diverse user-specified targets, including discrete mixtures and continuous low-rank supports....
+
+---
+
+### 3. Inverse Design of Multi-Layer Sub-Pixel-Resolution RF Passives Through Grayscale Diffusion with Flexible S-Parameter Conditioning
+
+**Authors:** Tommaso Dreossi, Christopher M. Bryant, Hao Liu, Nathan Mirman, Noah Kessler, Michael Frei, Harish Krishnaswamy
+
+**Published:** 2026-05-06
+
+**Category:** eess.SP
+
+**ID:** 2605.08233v1
+
+**Link:** [http://arxiv.org/abs/2605.08233v1](http://arxiv.org/abs/2605.08233v1)
+
+**Summary:** Inverse design of RF passive components from S-parameters is a high-dimensional, ill-posed problem, and prior generative approaches are limited to single-layer binary-metallization structures. This paper presents an inverse design approach that generates passive components from partial S-parameter inputs on an $8\times8$ mm board discretized at $64\times64$ pixels with sub-pixel grayscale metallization across 1-20 GHz. The framework generates two-layer copper layouts with vias, with hard physical constraints on feed locations enforced through annealed Langevin projection, flexible multi-modal conditioning on partial S-parameter specifications, port locations, dielectric properties, reference topology, and variable port placement. Candidate designs are generated in seconds, with surrogate-predicted S-parameters matching targets to within $0.77 \pm 1.28$ dB weighted mean absolute error. We validate the approach with two fabricated designs on RO4003C: a manufacturable alternative to a hairpin filter whose coupling gaps violate fabrication rules, and a combline bandpass filter designed from scratch given only target S-parameters....
+
+---
+
+### 4. Reinforcement learning for inverse structural design and rapid laser cutting of kirigami prototypes
+
+**Authors:** Milad Yazdani, Shahriar Shalileh, Dena Shahriari
+
+**Published:** 2026-04-16
+
+**Category:** cs.LG
+
+**ID:** 2605.08098v1
+
+**Link:** [http://arxiv.org/abs/2605.08098v1](http://arxiv.org/abs/2605.08098v1)
+
+**Summary:** Kirigami is an increasingly useful fabrication method to produce shape-programmable metamaterial structures. However, inverse design remains difficult because deployment is nonlinear, and feasible cut layouts must satisfy discrete compatibility rules, avoid overlap, and map one target shape to valid designs. We present RL-Kirigami, an inverse design framework that combines optimal-transport conditional flow matching (OT-CFM) with reinforcement learning to generate compatible ratio fields for compact reconfigurable parallelogram quad kirigami. A marching decoder enforces global geometric compatibility, and Group Relative Policy Optimization (GRPO) aligns the generator with nondifferentiable rewards for silhouette matching, feasibility, and ratio-field regularity. Across procedurally generated target shape instances, a single sample from the pretrained OT-CFM prior reached $94.2%$ sIoU and outperformed solver baselines while reducing forward simulator evaluations from hundreds to 1. GRPO improved accuracy to $94.91%$ sIoU and, with regularity included, reduced $\mathrm{TV}(\mathbf{x})$ from 0.95 to 0.81 while maintaining $94.83%$ sIoU. Generated layouts were exported to DXF and laser-cut in $50~μ\mathrm{m}$ polymeric sheets to produce deployable prototypes in $8.0 \pm 1.0$ minutes per part. These results support a manufacturing-aware inverse design workflow for deployable kirigami metamaterials under hard geometric feasibility constraints....
 
 ---
 
