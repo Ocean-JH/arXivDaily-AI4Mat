@@ -34,27 +34,27 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (2)
+## New Papers (10)
 
-*Last updated: 2026-05-19 06:59:31 (SGT)*
+*Last updated: 2026-05-21 07:10:48 (SGT)*
 
-### 1. ColPackAgent: Agent-Skill-Guided Hard-Particle Monte Carlo Workflows for Colloidal Packing
+### 1. Learning ORDER-Aware Multimodal Representations for Composite Materials Design
 
-**Authors:** Lijie Ding, Changwoo Do
+**Authors:** Xinyao Li, Hangwei Qian, Jingjing Li, Lei Zhu, Ivor Tsang
 
-**Published:** 2026-05-15
+**Published:** 2026-01-23
 
-**Category:** cs.AI
+**Category:** cs.LG
 
-**ID:** 2605.15625v1
+**ID:** 2602.02513v2
 
-**Link:** [http://arxiv.org/abs/2605.15625v1](http://arxiv.org/abs/2605.15625v1)
+**Link:** [http://arxiv.org/abs/2602.02513v2](http://arxiv.org/abs/2602.02513v2)
 
-**Summary:** We introduce ColPackAgent, an agent framework that autonomously runs Monte Carlo simulations of colloidal packing through a Model Context Protocol (MCP) tool server and an agent skill, whether as a standalone agent or inside an existing agent system. By harnessing the MCP server and agent skill, ColPackAgent executes a structured workflow for colloidal packing simulations, which are central to studies of phase behavior, self-assembly, and materials design. Without dedicated simulation tools and workflow instructions, general-purpose Large Language Model (LLM) agents tend to describe such workflows rather than execute them reliably. The MCP server exposes a custom-built colpack Python package that wraps HOOMD-blue hard-particle Monte Carlo, and the skill encodes a four-stage workflow contract. ColPackAgent can carry out the workflow interactively with human feedback, autonomously from an end-to-end prompt, or as autoresearch following a provided program file. We demonstrate the system in different modes with several colloidal packing simulation examples such as cube particles in 3D, a binary system of disks and capsules in 2D, and the 2D hard-disk freezing transition using autoresearch. We also compare model performance on this workflow across a panel of LLMs with 17 stage-specific prompts. This benchmark provides a stage-level check of how reliably different models follow the setup, planning, and analysis workflow. Together, these results show that pairing a domain Python package with MCP tools and a portable agent skill provides a practical route for turning a simulation toolkit into an agent-assisted research workflow....
+**Summary:** Artificial intelligence has shown remarkable success in materials discovery and property prediction, particularly for crystalline and polymer systems where material properties and structures are dominated by discrete graph representations. Such graph-central paradigm breaks down on composite materials, which possess continuous and nonlinear design spaces. General composite descriptors, e.g., fiber volume and misalignment angle, cannot fully capture the fiber distributions that determine microstructural characteristics, necessitating the integration of heterogeneous data sources through multimodal learning. Existing alignment-oriented frameworks have proven effective on abundant crystal or polymer data under discrete, unique graph-property mapping assumptions, but fail to address the highly continuous composite design space under extreme data scarcity. In this work we introduce ORDinal-aware imagE-tabulaR alignment (ORDER), a multimodal pretraining framework that establishes ordinality as a core principle for material representations. ORDER ensures that materials with similar target properties occupy nearby regions in the latent space, which effectively preserves the continuous nature of composite properties and enables meaningful interpolation between sparsely observed designs. We evaluate ORDER on a Nanofiber-reinforced composite dataset and a carbon fiber T700 dataset. ORDER and its variants outperform both alignment-oriented and customized property-aware contrastive baselines across property prediction, cross-modal retrieval, and microstructure generation tasks. We further introduce physics-based ordinal surrogate signals avoiding the need for full property annotation during pretrain. Our work demonstrates learning continuous multimodal features are fundamental for composite materials, and provides a reliable pathway toward data-efficient universal multimodal intelligent systems....
 
 ---
 
-### 2. Unified Simulation of Lagrangian Particle Dynamics via Transformer
+### 2. WorldParticle: Unified Simulation of Lagrangian Particle Dynamics via Transformer
 
 **Authors:** Caoliwen Wang, Minghao Guo, Siyuan Chen, Heng Zhang, Mengdi Wang, Xingyu Ni, Hanson Sun, Kunyi Wang, Zherong Pan, Kui Wu, Lingjie Liu, Yin Yang, Chenfanfu Jiang, Taku Komura, Wojciech Matusik, Peter Yichen Chen
 
@@ -62,11 +62,140 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 **Category:** cs.GR
 
-**ID:** 2605.15305v1
+**ID:** 2605.15305v3
 
-**Link:** [http://arxiv.org/abs/2605.15305v1](http://arxiv.org/abs/2605.15305v1)
+**Link:** [http://arxiv.org/abs/2605.15305v3](http://arxiv.org/abs/2605.15305v3)
 
 **Summary:** A unified simulator that can model diverse physical phenomena without solver-specific redesign is a long-standing goal across simulation science. We present a learning-based particle simulator built on a single transformer architecture to model cloth, elastic solds, Newtonian and non-Newtonian fluids, granular materials, and molecular dynamics. Our model follows a prediction-correction design on a shared Lagrangian particle representation. An explicit predictor first advances particles under the known external forces, producing an intermediate state that captures externally driven motion but not inter-particle interactions. A learned corrector then predicts the residual position and velocity updates through three stages: a particle tokenizer that encodes local particle-particle, particle-boundary, and topology-guided interactions; a super-token encoder that hierarchically merges particle tokens into a compact set of super tokens via alternating self-attention and token merging; and a super-token decoder that lifts these super tokens back to particle resolution through cross-attention to predict per-particle position and velocity corrections. Progressive token merging reduces the attention cost at successive encoder layers by halving the token count at each level, and the decoder communicates through the compact super-token set rather than full particle-to-particle attention. Across the six dynamics categories, the same architecture generalizes to unseen materials, boundary configurations, initial conditions, and external forces. We further demonstrate downstream interactive control, inverse design, and learning from real-world manipulation data, reducing the need for per-phenomenon solver engineering....
+
+---
+
+### 3. Atomistic Modeling of Chemical Disorder in Materials: Bridging Classical Methods and AI-Assisted Approaches
+
+**Authors:** Jiayu Peng, Peichen Zhong
+
+**Published:** 2026-05-18
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2605.19124v1
+
+**Link:** [http://arxiv.org/abs/2605.19124v1](http://arxiv.org/abs/2605.19124v1)
+
+**Summary:** Chemical disorder, originating from the mixed occupation of crystallographic sites by multiple elements, is widespread in alloys, ceramics, and compositionally complex materials, where short- and long-range orderings can strongly influence properties. A central obstacle is the representation gap between experiments and simulations: experiments often report disorder as partial occupancies and ensemble-averaged behaviors, whereas atomistic simulations and AI workflows usually require fully specified configurations. Tackling this gap requires computational methods that convert averaged disorder descriptions into representative configurational ensembles while balancing cost, bias, and fidelity. This challenge has become more urgent in AI-driven computational discovery, where ignoring disorder may cause AI workflows to misrank stability, misjudge novelty, and misdirect experiments with too-idealized representations. This Review highlights how classical and AI-driven methods can bridge this representation gap. We assess the strengths and limitations of approaches spanning mean-field theories, cluster expansion, quasi-random approximations, Monte Carlo, and emerging schemes powered by universal interatomic potentials and generative models. We further highlight how AI can accelerate classical computational schemes by lowering the cost of microstate evaluation, configurational exploration, and atomistic-to-thermodynamic closure. We also emphasize how AI can enable disorder-native capabilities, including workflow triage, ordering-sensitive and alchemical representations, generative models of disordered structures and distributions, and kinetics-aware disorder prediction. Together, this framework outlines a practical roadmap toward disorder-native AI, which can transform chemical disorder from a representational obstacle into a controllable variable for realistic AI-accelerated materials discovery....
+
+---
+
+### 4. InvDesFlow-AL: active learning-based workflow for inverse design of functional materials
+
+**Authors:** Xiao-Qi Han, Peng-Jie Guo, Ze-Feng Gao, Hao Sun, Zhong-Yi Lu
+
+**Published:** 2025-05-14
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2505.09203v2
+
+**Link:** [http://arxiv.org/abs/2505.09203v2](http://arxiv.org/abs/2505.09203v2)
+
+**Summary:** Developing inverse design methods for functional materials with specific properties is critical to advancing fields like renewable energy, catalysis, energy storage, and carbon capture. Generative models based on diffusion principles can directly produce new materials that meet performance constraints, thereby significantly accelerating the material design process. However, existing methods for generating and predicting crystal structures often remain limited by low success rates. In this work, we propose a novel inverse material design generative framework called InvDesFlow-AL, which is based on active learning strategies. This framework can iteratively optimize the material generation process to gradually guide it towards desired performance characteristics. In terms of crystal structure prediction, the InvDesFlow-AL model achieves an RMSE of 0.0423 Å, representing an 32.96% improvement in performance compared to exsisting generative models. Additionally, InvDesFlow-AL has been successfully validated in the design of low-formation-energy and low-Ehull materials. It can systematically generate materials with progressively lower formation energies while continuously expanding the exploration across diverse chemical spaces. These results fully demonstrate the effectiveness of the proposed active learning-driven generative model in accelerating material discovery and inverse design. To further prove the effectiveness of this method, we took the search for BCS superconductors under ambient pressure as an example explored by InvDesFlow-AL. As a result, we successfully identified Li\(_2\)AuH\(_6\) as a conventional BCS superconductor with an ultra-high transition temperature of 140 K. This discovery provides strong empirical support for the application of inverse design in materials science....
+
+---
+
+### 5. Perovskite-R1: a domain-specialized large language model for intelligent discovery of precursor additives and experimental design
+
+**Authors:** Xin-De Wang, Zhi-Rui Chen, Peng-Jie Guo, Ze-Feng Gao, Cheng Mu, Zhong-Yi Lu
+
+**Published:** 2025-07-22
+
+**Category:** cs.LG
+
+**ID:** 2507.16307v2
+
+**Link:** [http://arxiv.org/abs/2507.16307v2](http://arxiv.org/abs/2507.16307v2)
+
+**Summary:** Perovskite solar cells (PSCs) have rapidly emerged as a leading contender in next-generation photovoltaic technologies, owing to their exceptional power conversion efficiencies and advantageous material properties. Despite these advances, challenges such as long-term stability, environmental sustainability, and scalable manufacturing continue to hinder their commercialization. Precursor additive engineering has shown promise in addressing these issues by enhancing both the performance and durability of PSCs. However, the explosive growth of scientific literature and the complex interplay of materials, processes, and device architectures make it increasingly difficult for researchers to efficiently access, organize, and utilize domain knowledge in this rapidly evolving field. To address this gap, we introduce Perovskite-R1, a specialized large language model (LLM) with advanced reasoning capabilities tailored for the discovery and design of PSC precursor additives. By systematically mining and curating 1,232 high-quality scientific publications and integrating a comprehensive library of 33,269 candidate materials, we constructed a domain-specific instruction-tuning dataset using automated question-answer generation and chain-of-thought reasoning. Fine-tuning the QwQ-32B model on this dataset resulted in Perovskite-R1, which can intelligently synthesize literature insights and generate innovative and practical solutions for defect passivation and the selection of precursor additives. Experimental validation of several model-proposed strategies confirms their effectiveness in improving material stability and performance. Our work demonstrates the potential of domain-adapted LLMs in accelerating materials discovery and provides a closed-loop framework for intelligent, data-driven advancements in perovskite photovoltaic research....
+
+---
+
+### 6. CatalyticMLLM: A Graph-Text Multimodal Large Language Model for Catalytic Materials
+
+**Authors:** Yanjie Li
+
+**Published:** 2026-05-17
+
+**Category:** cs.AI
+
+**ID:** 2605.17254v1
+
+**Link:** [http://arxiv.org/abs/2605.17254v1](http://arxiv.org/abs/2605.17254v1)
+
+**Summary:** Property prediction and inverse structural design of catalytic materials are typically modeled as two independent tasks: the former predicts target properties from given structures, whereas the latter generates candidate structures according to desired properties. Although the decoupled paradigm facilitates the implementation of a ``generation--evaluation--screening'' workflow, the inconsistency between the generative model and the property prediction model in terms of representation spaces and training objectives can readily introduce data distribution shifts and evaluator bias, thereby limiting the stability of closed-loop optimization.
+  In this work, we propose QE-Catalytic-V2, a unified graph--text multimodal large language model for catalytic materials, which integrates property prediction and inverse design within the same model and shared representation space. Under this unified framework, QE-Catalytic-V2 can not only perform reliable property prediction by leveraging three-dimensional structures and textual information, but also generate and screen physically feasible CIF candidates conditioned on target properties, thereby forming a closed-loop optimization workflow of ``inverse design--prediction--screening--redesign.'' Experimental results demonstrate that this unified paradigm outperforms decoupled baselines on both catalytic relaxed-energy prediction and inverse design tasks, validating the effectiveness of jointly modeling property prediction and structure generation within a single multimodal model....
+
+---
+
+### 7. Active learning for photonic crystals
+
+**Authors:** Ryan Lopez, Charlotte Loh, Rumen Dangovski, Marin Soljačić
+
+**Published:** 2026-01-22
+
+**Category:** physics.optics
+
+**ID:** 2601.16287v3
+
+**Link:** [http://arxiv.org/abs/2601.16287v3](http://arxiv.org/abs/2601.16287v3)
+
+**Summary:** Active learning for photonic crystals explores the integration of analytic approximate Bayesian last layer neural networks (LL-BNNs) with uncertainty-driven sample selection to accelerate photonic band gap prediction. We employ an analytic LL-BNN formulation, corresponding to the infinite Monte Carlo sample limit, to obtain uncertainty estimates that are strongly correlated with the true predictive error on unlabeled candidate structures. These uncertainty scores drive an active learning strategy that prioritizes the most informative simulations during training. Applied to the task of predicting band gap sizes in two-dimensional, two-tone photonic crystals, our approach achieves up to a 2.7x reduction on average in required training data compared to a random sampling baseline while maintaining predictive accuracy. The efficiency gains arise from concentrating computational resources on high uncertainty regions of the design space rather than sampling uniformly. Given the substantial cost of full band structure simulations, especially in three dimensions, this data efficiency enables rapid and scalable surrogate modeling. Our results suggest that analytic LL-BNN based active learning can substantially accelerate topological optimization and inverse design workflows for photonic crystals, and more broadly, offers a general framework for data efficient regression across scientific machine learning domains....
+
+---
+
+### 8. Universal Dynamics of Punctuated Progress
+
+**Authors:** Yian Yin, Dashun Wang
+
+**Published:** 2026-05-16
+
+**Category:** physics.soc-ph
+
+**ID:** 2605.16719v1
+
+**Link:** [http://arxiv.org/abs/2605.16719v1](http://arxiv.org/abs/2605.16719v1)
+
+**Summary:** Scientific and technological frontiers advance through punctuated dynamics, yet the principles governing these dynamics remain poorly understood. Here we collect and analyze datasets tracking the evolution of frontiers across 9 different domains, spanning materials discovery, structural biology, AI, computational biomedicine, data science, theoretical computer science, Formula-1 racing, and physical wheel building. Analyzing 6.8M solutions to 6.7K tasks, we uncover three universal patterns: (1) waiting times between new frontiers are heavy-tailed, with most attempts concentrated in long stasis; (2) frontier records accumulate at a sublinear rate, faster than logarithmic yet slower than linear growth; (3) record-breaking events are temporally correlated, generating short-term predictability yet long-term unpredictability. Despite the differences in the scale, scope, and definition of the settings, these patterns are remarkably consistent across all domains we study, and are not captured by models from complex systems, record statistics, economics of innovation, and cultural evolution. We trace the missing ingredient to the distinction between radical and incremental innovation, and develop a minimal, analytically solvable model incorporating both radical resets that restructure what is achievable and incremental refinements that exploit the current frontier. The simple model reproduces all three empirical regularities. Remarkably, the leading-order predictions are parameter-independent, identifying a new universality class governing punctuated progress and yielding testable predictions about how openness and access to frontier solutions shape the pace of advance. Overall, these results reveal universal dynamics governing punctuated progress and identify the interplay between radical resets and incremental refinements as the key driver of how scientific and technological frontiers advance....
+
+---
+
+### 9. PRISMat: Policy-Driven, Permutation-Invariant Autoregressive Material Generation
+
+**Authors:** Claire Schlesinger, Circe Hsu, Peter Schindler, Robin Walters
+
+**Published:** 2026-05-15
+
+**Category:** cs.AI
+
+**ID:** 2605.16612v1
+
+**Link:** [http://arxiv.org/abs/2605.16612v1](http://arxiv.org/abs/2605.16612v1)
+
+**Summary:** Rapid identification of candidate materials with target properties has become a key task in materials science. Machine learning has emerged as an alternative to physics-based simulation, offering a faster and cheaper way to filter materials based on their stability and other target properties, reducing the number of candidates that reach the costly synthesis stage. Recently, Large Language Models (LLMs) have been applied to this role, but these models are parameter-heavy and computationally expensive both during training and at inference time, making them unsuitable for high-throughput tasks. This inefficiency stems from both the large over-parameterization of language models and the difficulty of framing material generation as a sequence learning problem. In this paper, we present PRISMat, a cost-effective, permutation-invariant model, which addresses these limitations. We show that PRISMat, despite taking less time for inference, is able to outperform LLMs in generating crystal slabs conditioned on critical materials' surface properties. In targeted material discovery, we achieve mean absolute errors of 0.188 eV/A$^2$ and 2.79 eV for cleavage energy and work function tasks, respectively, reducing the error of the next best model by 4$\times$....
+
+---
+
+### 10. BlendedNet++: A dataset and benchmark for field-resolved aerodynamics and inverse design of blended wing body aircraft
+
+**Authors:** Nicholas Sung, Steven Spreizer, Mohamed Elrefaie, Matthew C. Jones, Faez Ahmed
+
+**Published:** 2025-12-02
+
+**Category:** cs.LG
+
+**ID:** 2512.03280v2
+
+**Link:** [http://arxiv.org/abs/2512.03280v2](http://arxiv.org/abs/2512.03280v2)
+
+**Summary:** The conceptual design of Blended Wing Body (BWB) aircraft is often constrained by the high computational cost of resolving complex aerodynamics over a high-dimensional design space. While deep learning offers a pathway to rapid aerodynamic prediction and inverse design, its adoption in aerospace engineering is limited by a lack of large-scale, field-resolved training data. This work addresses this gap by introducing BlendedNet++, a comprehensive aerodynamic dataset comprising 12,492 unique BWB geometries, each evaluated using steady Reynolds-Averaged Navier--Stokes (RANS) simulations to provide integrated forces and dense surface fields (Cp, Cf). Leveraging this data, we establish a robust framework for two critical engineering tasks: (1) real-time prediction of surface aerodynamic fields using geometric deep learning models, and (2) generative inverse design. We benchmark five surrogate architectures, identifying Transolver as the most accurate for field predictions. Furthermore, we demonstrate a generative inverse design pipeline using conditional diffusion models combined with gradient-based refinement. This hybrid approach is shown to generate multiple feasible designs that satisfy specific lift-to-drag targets with high accuracy (R^2 > 0.99), as confirmed by computational fluid dynamics (CFD) simulation. These resources enable a shift from iterative analysis to direct generation in early-stage BWB design....
 
 ---
 
