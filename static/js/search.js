@@ -23,7 +23,7 @@ function updateVisiblePapers(visiblePapers) {
 }
 
 function performSearch() {
-    const searchTerm = searchInput.value.toLowerCase();
+    const searchTerm = searchInput.value.trim().toLowerCase();
     const matchingPapers = papers.filter(paper => {
         const title = paper.querySelector('h3').textContent.toLowerCase();
         const authors = paper.querySelector('.paper-info').textContent.toLowerCase();
@@ -44,7 +44,7 @@ function performSearch() {
         } else {
             resultsInfo.style.display = 'block';
             resultsInfo.textContent = resultsFound ?
-                `Find papers containing "${searchTerm}"` :
+                `Showing papers containing "${searchTerm}"` :
                 `No papers were found containing "${searchTerm}"`;
         }
     } else {
@@ -53,7 +53,7 @@ function performSearch() {
         infoElement.className = 'search-results-info';
         if (searchTerm !== '') {
             infoElement.textContent = resultsFound ?
-                `Find papers containing "${searchTerm}"` :
+                `Showing papers containing "${searchTerm}"` :
                 `No papers were found containing "${searchTerm}"`;
         } else {
             infoElement.style.display = 'none';
@@ -62,9 +62,11 @@ function performSearch() {
     }
 }
 
-searchButton.addEventListener('click', performSearch);
-searchInput.addEventListener('keyup', function (event) {
-    if (event.key === 'Enter') {
-        performSearch();
-    }
-});
+if (searchButton && searchInput) {
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', function (event) {
+        if (event.key === 'Enter') {
+            performSearch();
+        }
+    });
+}

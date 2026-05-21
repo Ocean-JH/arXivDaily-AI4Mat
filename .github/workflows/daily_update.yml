@@ -12,6 +12,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: daily-arxiv-update
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
