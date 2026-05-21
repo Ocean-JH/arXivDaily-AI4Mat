@@ -17,28 +17,28 @@
 </head>
 <body>
 <!-- Toggle Button -->
-<button id="theme-toggle">🌙 Night</button>
+<button id="theme-toggle" type="button" aria-label="Switch to dark theme">🌙 Night</button>
 
 <a href="https://ocean-jh.github.io/" target="_blank" class="top-left-logo">
     <img src="static/favicon_io/logo.png" alt="Wang Jianghai's Blog" class="blog-logo">
 </a>
 
 <div class="header">
-    <h1>ArXiv Daily - AI for Materials Science!</h1>
+    <h1>ArXiv Daily<br>AI for Materials Science</h1>
     <p>Discover the latest research at the intersection of <strong>Artificial Intelligence</strong> and <strong>Materials
         Science</strong>.</p>
     <p>Every day, we track and curate new papers from <a href="https://arxiv.org" target="_blank">arXiv.org</a>,
         focusing on cutting-edge innovations in materials discovery, design, and prediction powered by AI and machine
         learning.</p>
-    <p>🔎 Updated daily — Powered by automation, driven by curiosity.</p>
+    <p>Updated daily. Powered by automation, driven by curiosity.</p>
 </div>
 
     {navbar}
 
     <!-- Search Container -->
     <div class="search-container">
-        <input type="text" id="search-input" placeholder="Search papers by title, author, or summary...">
-        <button id="search-button">🔍 Search</button>
+        <input type="text" id="search-input" placeholder="Search papers by title, author, or summary..." aria-label="Search papers">
+        <button id="search-button" type="button">Search</button>
     </div>
 
     <!-- Main Content -->
@@ -46,12 +46,12 @@
 
     <footer>
         <p>Last updated: {timestamp}</p>
-        <p>2025 <a href="https://ocean-jh.github.io/" target="_blank">Wang Jianghai</a><a href="mailto:jianghai001@e.ntu.edu.sg">📧</a> @ Nanyang Technological University | All Rights Reserved</p>
+        <p>2025 <a href="https://ocean-jh.github.io/" target="_blank">Wang Jianghai</a> <a href="mailto:jianghai001@e.ntu.edu.sg">Email</a> @ Nanyang Technological University | All Rights Reserved</p>
         <p><a href="https://github.com/Ocean-JH/ArXivDaily-AI4MAT">Star on GitHub</a></p>
         <p>Powered by <a href="https://arxiv.org/" target="_blank">arXiv</a> · Updated Daily</p>
     </footer>
 
-    <button id="back-to-top" title="Back to Top">↑</button>
+    <button id="back-to-top" type="button" title="Back to Top" aria-label="Back to top">↑</button>
 
     <!-- JavaScript -->
     <script src="static/js/dark-mode.js"></script>

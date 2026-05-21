@@ -31,9 +31,11 @@
 """
 import os
 import datetime
+import html
 import json
 import argparse
 import logging
+import re
 from typing import List, Dict, Any, Optional
 
 import arxiv
@@ -46,6 +48,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("arxiv-tracker")
 SGT = datetime.timezone(datetime.timedelta(hours=8))
+VERSIONED_ARXIV_ID = re.compile(r"^(?P<base>.+?)v(?P<version>\d+)$")
 
 
 class ArxivTracker:
@@ -117,11 +120,53 @@ class ArxivTracker:
 
     def _get_base_id(self, short_id: str):
         """Extract base ID from short ID (removing version)"""
-        return short_id.split("v")[0] if "v" in short_id else short_id
+        match = VERSIONED_ARXIV_ID.match(short_id)
+        return match.group("base") if match else short_id
 
     def _get_version(self, short_id: str):
         """Extract version from short ID"""
-        return int(short_id.split("v")[-1]) if "v" in short_id else 1
+        match = VERSIONED_ARXIV_ID.match(short_id)
+        return int(match.group("version")) if match else 1
+
+    def _html(self, value: Any) -> str:
+        """Escape generated content before inserting it into static HTML."""
+        return html.escape("" if value is None else str(value), quote=True)
+
+    def _paper_base_id(self, paper: Dict[str, Any]) -> str:
+        """Return the stable arXiv ID without the version suffix."""
+        if paper.get("base_id"):
+            return str(paper["base_id"])
+
+        paper_id = paper.get("id") or paper.get("url") or ""
+        short_id = str(paper_id).rstrip("/").split("/")[-1]
+        return self._get_base_id(short_id)
+
+    def _paper_version(self, paper: Dict[str, Any]) -> int:
+        """Return a comparable paper version from saved result data."""
+        try:
+            return int(paper.get("version", 1))
+        except (TypeError, ValueError):
+            short_id = str(paper.get("id") or paper.get("url") or "").rstrip("/").split("/")[-1]
+            return self._get_version(short_id)
+
+    def _dedupe_papers(self, papers: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Keep only the latest saved version for each arXiv base ID."""
+        latest_papers: Dict[str, Dict[str, Any]] = {}
+
+        for paper in papers:
+            base_id = self._paper_base_id(paper)
+            current = latest_papers.get(base_id)
+
+            if current is None:
+                latest_papers[base_id] = paper
+                continue
+
+            paper_key = (self._paper_version(paper), paper.get("updated", ""))
+            current_key = (self._paper_version(current), current.get("updated", ""))
+            if paper_key > current_key:
+                latest_papers[base_id] = paper
+
+        return list(latest_papers.values())
 
     def paper_to_dict(self, paper: arxiv.Result) -> Dict[str, Any]:
         """Convert paper object to dictionary for saving"""
@@ -138,16 +183,24 @@ class ArxivTracker:
             "journal_ref": paper.journal_ref,
             "doi": paper.doi,
             "pdf_url": paper.pdf_url,
-            "base_id": paper.get_short_id().split("v")[0],  # Remove version if present
-            "version": paper.get_short_id().split("v")[-1] if "v" in paper.get_short_id() else "1",
+            "base_id": self._get_base_id(paper.get_short_id()),
+            "version": str(self._get_version(paper.get_short_id())),
             "url": paper.entry_id
         }
 
     def filter_new_papers(self, papers: List[arxiv.Result]) -> List[Dict[str, Any]]:
         """Filter out papers we've already seen"""
         new_papers = []
+        latest_results = {}
+
         for paper in papers:
             base_id = self._get_base_id(paper.get_short_id())
+            version = self._get_version(paper.get_short_id())
+            existing = latest_results.get(base_id)
+            if existing is None or version > self._get_version(existing.get_short_id()):
+                latest_results[base_id] = paper
+
+        for base_id, paper in latest_results.items():
             version = self._get_version(paper.get_short_id())
             prev_version = self.known_papers.get(base_id, 0)
             if version > prev_version:
@@ -249,22 +302,20 @@ class ArxivTracker:
         html += f"<p><em>Last updated: {datetime.datetime.now(SGT).strftime('%Y-%m-%d %H:%M:%S')} SGT</em></p>\n"
 
         for i, paper in enumerate(papers):
-            if paper.get_short_id().split("v")[-1] == "1":
-                tag_html = "<span style='color:yellow;font-weight:bold;'>🌟 New</span>"
-            elif paper.get_short_id().split("v")[-1]:
-                tag_html = "<span style='color:orange;font-weight:bold;'>🔄 Updated</span>"
+            if self._get_version(paper.get_short_id()) == 1:
+                tag_html = " <span class='paper-badge'>New</span>"
             else:
-                tag_html = ""
+                tag_html = " <span class='paper-badge updated'>Updated</span>"
 
             paper_html = paper_template.format(
                 index=i + 1,
-                title=paper.title,
-                authors=", ".join(str(author) for author in paper.authors),
-                published_date=paper.published.strftime("%Y-%m-%d"),
-                category=paper.primary_category,
-                paper_id=paper.get_short_id(),
-                url=paper.entry_id,
-                summary=paper.summary,
+                title=self._html(paper.title),
+                authors=self._html(", ".join(str(author) for author in paper.authors)),
+                published_date=self._html(paper.published.strftime("%Y-%m-%d")),
+                category=self._html(paper.primary_category),
+                paper_id=self._html(paper.get_short_id()),
+                url=self._html(paper.entry_id),
+                summary=self._html(paper.summary),
                 tag=tag_html
             )
             html += paper_html
@@ -306,7 +357,7 @@ class ArxivTracker:
         """Create an archive.html file with all known papers"""
         # Load all saved results
         all_papers = []
-        results_files = [f for f in os.listdir(self.output_dir) if f.endswith('.json')]
+        results_files = sorted(f for f in os.listdir(self.output_dir) if f.endswith('.json'))
         navbar = """
     <div class="nav">
         <a href="index.html">Latest Papers</a> | <strong>Archive</strong>
@@ -321,8 +372,8 @@ class ArxivTracker:
             except Exception as e:
                 logger.error(f"Error loading results file {file}: {e}")
 
-                # Sort papers by published date (newest first)
-        all_papers.sort(key=lambda p: p['published'], reverse=True)
+        all_papers = self._dedupe_papers(all_papers)
+        all_papers.sort(key=lambda p: (p.get('published', ''), p.get('updated', '')), reverse=True)
 
         with open("templates/paper_item.html", 'r', encoding='utf-8') as f:
             paper_template = f.read()
@@ -334,13 +385,13 @@ class ArxivTracker:
         for i, paper in enumerate(all_papers):
             paper_html = paper_template.format(
                 index=i + 1,
-                title=paper["title"],
-                authors=", ".join(paper["authors"]),
-                published_date=paper["published"][:10],
-                category=paper["primary_category"],
-                paper_id=paper["base_id"],
-                url=paper["url"],
-                summary=paper["summary"],
+                title=self._html(paper.get("title", "")),
+                authors=self._html(", ".join(paper.get("authors", []))),
+                published_date=self._html(paper.get("published", "")[:10]),
+                category=self._html(paper.get("primary_category", "")),
+                paper_id=self._html(f"{self._paper_base_id(paper)}v{self._paper_version(paper)}"),
+                url=self._html(paper.get("url", "")),
+                summary=self._html(paper.get("summary", "")),
                 tag=""
             )
             content += paper_html
@@ -359,7 +410,7 @@ class ArxivTracker:
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(html_content)
 
-        logger.info(f"Created archive.html with {len(all_papers)} papers")
+        logger.info(f"Created archive.html with {len(all_papers)} unique papers")
 
     def run(self, update_readme: bool = True, create_html: bool = True):
         """Run the tracker once"""
@@ -385,11 +436,6 @@ class ArxivTracker:
                 if update_readme:
                     self.update_readme(new_papers)
 
-                    # Create HTML if requested
-                if create_html:
-                    self.create_index_html(new_papers)
-
-                    # Create Archive Page
                 if create_html:
                     self.create_index_html(new_papers)
                     self.create_archive_html()

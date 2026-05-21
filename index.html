@@ -17,20 +17,20 @@
 </head>
 <body>
 <!-- Toggle Button -->
-<button id="theme-toggle">🌙 Night</button>
+<button id="theme-toggle" type="button" aria-label="Switch to dark theme">🌙 Night</button>
 
 <a href="https://ocean-jh.github.io/" target="_blank" class="top-left-logo">
     <img src="static/favicon_io/logo.png" alt="Wang Jianghai's Blog" class="blog-logo">
 </a>
 
 <div class="header">
-    <h1>ArXiv Daily - AI for Materials Science!</h1>
+    <h1>ArXiv Daily<br>AI for Materials Science</h1>
     <p>Discover the latest research at the intersection of <strong>Artificial Intelligence</strong> and <strong>Materials
         Science</strong>.</p>
     <p>Every day, we track and curate new papers from <a href="https://arxiv.org" target="_blank">arXiv.org</a>,
         focusing on cutting-edge innovations in materials discovery, design, and prediction powered by AI and machine
         learning.</p>
-    <p>🔎 Updated daily — Powered by automation, driven by curiosity.</p>
+    <p>Updated daily. Powered by automation, driven by curiosity.</p>
 </div>
 
     
@@ -41,15 +41,15 @@
 
     <!-- Search Container -->
     <div class="search-container">
-        <input type="text" id="search-input" placeholder="Search papers by title, author, or summary...">
-        <button id="search-button">🔍 Search</button>
+        <input type="text" id="search-input" placeholder="Search papers by title, author, or summary..." aria-label="Search papers">
+        <button id="search-button" type="button">Search</button>
     </div>
 
     <!-- Main Content -->
     <h2>New Papers (2)</h2>
-<p><em>Last updated: 2026-05-19 06:59:31 SGT</em></p>
+<p><em>Last updated: 2026-05-21 12:51:37 SGT</em></p>
 <div class="paper">
-  <h3 class="paper-title">1. ColPackAgent: Agent-Skill-Guided Hard-Particle Monte Carlo Workflows for Colloidal Packing<br><span style='color:yellow;font-weight:bold;'>🌟 New</span><br></h3>
+  <h3 class="paper-title">1. ColPackAgent: Agent-Skill-Guided Hard-Particle Monte Carlo Workflows for Colloidal Packing <span class='paper-badge'>New</span></h3>
 
   <div class="paper-info">
     <p class="paper-authors"><strong>Authors:</strong> Lijie Ding, Changwoo Do</p>
@@ -66,8 +66,9 @@
   </details>
 
   <hr class="paper-divider">
-</div><div class="paper">
-  <h3 class="paper-title">2. Unified Simulation of Lagrangian Particle Dynamics via Transformer<br><span style='color:yellow;font-weight:bold;'>🌟 New</span><br></h3>
+</div>
+<div class="paper">
+  <h3 class="paper-title">2. Unified Simulation of Lagrangian Particle Dynamics via Transformer <span class='paper-badge'>New</span></h3>
 
   <div class="paper-info">
     <p class="paper-authors"><strong>Authors:</strong> Caoliwen Wang, Minghao Guo, Siyuan Chen, Heng Zhang, Mengdi Wang, Xingyu Ni, Hanson Sun, Kunyi Wang, Zherong Pan, Kui Wu, Lingjie Liu, Yin Yang, Chenfanfu Jiang, Taku Komura, Wojciech Matusik, Peter Yichen Chen</p>
@@ -86,14 +87,15 @@
   <hr class="paper-divider">
 </div>
 
+
     <footer>
-        <p>Last updated: 2026-05-19 06:59:31 (SGT)</p>
-        <p>2025 <a href="https://ocean-jh.github.io/" target="_blank">Wang Jianghai</a><a href="mailto:jianghai001@e.ntu.edu.sg">📧</a> @ Nanyang Technological University | All Rights Reserved</p>
+        <p>Last updated: 2026-05-21 12:51:37 (SGT)</p>
+        <p>2025 <a href="https://ocean-jh.github.io/" target="_blank">Wang Jianghai</a> <a href="mailto:jianghai001@e.ntu.edu.sg">Email</a> @ Nanyang Technological University | All Rights Reserved</p>
         <p><a href="https://github.com/Ocean-JH/ArXivDaily-AI4MAT">Star on GitHub</a></p>
         <p>Powered by <a href="https://arxiv.org/" target="_blank">arXiv</a> · Updated Daily</p>
     </footer>
 
-    <button id="back-to-top" title="Back to Top">↑</button>
+    <button id="back-to-top" type="button" title="Back to Top" aria-label="Back to top">↑</button>
 
     <!-- JavaScript -->
     <script src="static/js/dark-mode.js"></script>

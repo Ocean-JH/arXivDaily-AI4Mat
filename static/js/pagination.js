@@ -13,9 +13,9 @@
     const controls = document.createElement('div');
     controls.className = 'pagination-controls';
     controls.innerHTML = `
-        <button id="pagination-prev" class="pagination-button">← Previous</button>
+        <button id="pagination-prev" class="pagination-button" type="button">← Previous</button>
         <span id="pagination-info" class="pagination-info"></span>
-        <button id="pagination-next" class="pagination-button">Next →</button>
+        <button id="pagination-next" class="pagination-button" type="button">Next →</button>
     `;
 
     const lastPaper = allPapers[allPapers.length - 1];
@@ -49,11 +49,13 @@
     prevButton.addEventListener('click', function () {
         currentPage -= 1;
         render();
+        controls.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
     nextButton.addEventListener('click', function () {
         currentPage += 1;
         render();
+        controls.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
     window.paperPagination = {
