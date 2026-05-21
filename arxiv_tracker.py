@@ -332,7 +332,8 @@ class ArxivTracker:
         html_template = self.load_base_template()
         navbar = """
     <div class="nav">
-        <strong>Latest Papers</strong> | <a href="archive.html">View Archive</a>
+        <strong>Latest</strong>
+        <a href="archive.html">Archive</a>
     </div>
     """
         papers = [paper['paper'] for paper in papers]  # Extract arxiv.Result objects
@@ -360,7 +361,8 @@ class ArxivTracker:
         results_files = sorted(f for f in os.listdir(self.output_dir) if f.endswith('.json'))
         navbar = """
     <div class="nav">
-        <a href="index.html">Latest Papers</a> | <strong>Archive</strong>
+        <a href="index.html">Latest</a>
+        <strong>Archive</strong>
     </div>
     """
 

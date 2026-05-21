@@ -1,5 +1,7 @@
-<div class="paper">
-  <h3 class="paper-title">{index}. {title}{tag}</h3>
+<article class="paper">
+  <div class="paper-index" aria-hidden="true">{index}</div>
+  <div class="paper-body">
+  <h3 class="paper-title">{title}{tag}</h3>
 
   <div class="paper-info">
     <p class="paper-authors"><strong>Authors:</strong> {authors}</p>
@@ -8,12 +10,11 @@
     <p class="paper-id"><strong>ID:</strong> {paper_id}</p>
   </div>
 
-  <p class="paper-link"><strong>Link:</strong> <a href="{url}">{url}</a></p>
+  <p class="paper-link"><strong>arXiv:</strong> <a href="{url}" target="_blank" rel="noopener noreferrer">{url}</a></p>
 
   <details class="paper-summary">
-    <summary>Summary (Click to Expand)</summary>
+    <summary>Abstract</summary>
     <p>{summary}</p>
   </details>
-
-  <hr class="paper-divider">
-</div>
+  </div>
+</article>
