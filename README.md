@@ -36,53 +36,54 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 ## New Papers (3)
 
-*Last updated: 2026-05-21 13:15:31 (SGT)*
+*Last updated: 2026-05-23 06:56:43 (SGT)*
 
-### 1. WorldParticle: Unified World Simulation of Lagrangian Particle Dynamics via Transformer
+### 1. optimade-maker: Automated generation of interoperable materials APIs from static datasets
 
-**Authors:** Caoliwen Wang, Minghao Guo, Siyuan Chen, Heng Zhang, Mengdi Wang, Xingyu Ni, Hanson Sun, Kunyi Wang, Zherong Pan, Kui Wu, Lingjie Liu, Yin Yang, Chenfanfu Jiang, Taku Komura, Wojciech Matusik, Peter Yichen Chen
+**Authors:** Kristjan Eimre, Matthew L. Evans, Bud Macaulay, Xing Wang, Jusong Yu, Nicola Marzari, Gian-Marco Rignanese, Giovanni Pizzi
 
-**Published:** 2026-05-14
+**Published:** 2026-03-12
 
-**Category:** cs.GR
+**Category:** cs.DB
 
-**ID:** 2605.15305v4
+**ID:** 2603.23536v2
 
-**Link:** [http://arxiv.org/abs/2605.15305v4](http://arxiv.org/abs/2605.15305v4)
+**Link:** [http://arxiv.org/abs/2603.23536v2](http://arxiv.org/abs/2603.23536v2)
 
-**Summary:** A unified simulator that can model diverse physical phenomena without solver-specific redesign is a long-standing goal across simulation science. We present a learning-based particle simulator built on a single transformer architecture to model cloth, elastic solds, Newtonian and non-Newtonian fluids, granular materials, and molecular dynamics. Our model follows a prediction-correction design on a shared Lagrangian particle representation. An explicit predictor first advances particles under the known external forces, producing an intermediate state that captures externally driven motion but not inter-particle interactions. A learned corrector then predicts the residual position and velocity updates through three stages: a particle tokenizer that encodes local particle-particle, particle-boundary, and topology-guided interactions; a super-token encoder that hierarchically merges particle tokens into a compact set of super tokens via alternating self-attention and token merging; and a super-token decoder that lifts these super tokens back to particle resolution through cross-attention to predict per-particle position and velocity corrections. Progressive token merging reduces the attention cost at successive encoder layers by halving the token count at each level, and the decoder communicates through the compact super-token set rather than full particle-to-particle attention. Across the six dynamics categories, the same architecture generalizes to unseen materials, boundary configurations, initial conditions, and external forces. We further demonstrate downstream interactive control, inverse design, and learning from real-world manipulation data, reducing the need for per-phenomenon solver engineering....
-
----
-
-### 2. Transferable 3D Convolutional Neural Networks for Elastic Constants Prediction in Nanoporous Metals
-
-**Authors:** Sergei Zorkaltsev, Rafał Topolnicki, Tal-El Carmon, Santhosh Mathesan, Paweł Dłotko, Dan Mordehai, Maciej Harańczyk
-
-**Published:** 2026-05-20
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2605.20890v1
-
-**Link:** [http://arxiv.org/abs/2605.20890v1](http://arxiv.org/abs/2605.20890v1)
-
-**Summary:** The topology of nanoporous metals is crucial for determining their mechanical response. In this work, we generated 6,000 gold and 422 silver nanoporous structures and calculated three components of elastic modulus with Molecular Dynamics simulations, resulting in 19,263 data points. This study compared two distinct approaches of predicting elastic modulus: a Fully-Connected neural network trained on precomputed topological descriptors, and several 3D Convolutional neural network architectures adapted from computer vision. The 3D CNNs outperformed the descriptor-based baseline model ($R^2 = 0.704$), with to-performing DenseNet-201 architecture achieving $R^2 = 0.955$. Additionally, the effects of training grid resolution, dataset size, and descriptor integration into a model were investigated. We further demonstrated model robustness through Transfer learning: a pretrained model was fine-tuned on a much smaller dataset of denser gold structures and the dataset of denser silver structures. Finally, the trained model was employed to evaluate the mechanical properties of 100,000 stochastic nanoporous gold structures and identify the Pareto optimal designs....
+**Summary:** Atomistic structural data are central to materials science, condensed matter physics, and chemistry, and are increasingly digitised across diverse repositories and databases. Interoperable access to these heterogeneous data sources enables reusable clients and tools, and is essential for cross-database analyses and data-driven materials discovery. Toward this aim, the OPTIMADE (Open Databases Integration for Materials Design) specification defines a standard REST API for atomistic structures and related properties. However, deploying and maintaining compliant services remains technically demanding and poses a significant barrier for many data providers. Here, we present optimade-maker, a lightweight toolkit for the automated generation of OPTIMADE-compliant APIs directly from raw atomistic structure and property data. The toolkit supports a wide range of raw datasets, enables conversion to a standardised OPTIMADE data representation, and allows for rapid deployment of APIs in both local and production environments. We further demonstrate it through an automated service on the Materials Cloud Archive, which automatically creates and publishes OPTIMADE APIs for contributed datasets, enabling immediate discoverability and interoperability. In addition, we implement data transformation pipelines for the Cambridge Structural Database (CSD) and the Inorganic Crystal Structure Database (ICSD), enabling unified access to these curated resources through the OPTIMADE framework. By lowering the technical barriers to interoperable data publication, optimade-maker represents an important step toward a scalable, FAIR materials data ecosystem integrating both community-contributed and curated databases....
 
 ---
 
-### 3. Open Materials 2024 (OMat24) Inorganic Materials Dataset and Models
+### 2. CatalyticMLLM: A Graph-Text Multimodal Large Language Model for Catalytic Materials
 
-**Authors:** Luis Barroso-Luque, Muhammed Shuaibi, Xiang Fu, Brandon M. Wood, Misko Dzamba, Meng Gao, Ammar Rizvi, C. Lawrence Zitnick, Zachary W. Ulissi
+**Authors:** Yanjie Li, Jian Xu, Xu-Yao Zhang, Shiming Xiang, Nian Ran, Weijun Li, Cheng-Lin Liu
 
-**Published:** 2024-10-16
+**Published:** 2026-05-17
+
+**Category:** cs.AI
+
+**ID:** 2605.17254v2
+
+**Link:** [http://arxiv.org/abs/2605.17254v2](http://arxiv.org/abs/2605.17254v2)
+
+**Summary:** Property prediction and inverse structural design of catalytic materials are typically modeled as two independent tasks: the former predicts target properties from given structures, whereas the latter generates candidate structures according to desired properties. Although the decoupled paradigm facilitates the implementation of a ``generation--evaluation--screening'' workflow, the inconsistency between the generative model and the property prediction model in terms of representation spaces and training objectives can readily introduce data distribution shifts and evaluator bias, thereby limiting the stability of closed-loop optimization.
+  In this work, we propose QE-Catalytic-V2, a unified graph--text multimodal large language model for catalytic materials, which integrates property prediction and inverse design within the same model and shared representation space. Under this unified framework, QE-Catalytic-V2 can not only perform reliable property prediction by leveraging three-dimensional structures and textual information, but also generate and screen physically feasible CIF candidates conditioned on target properties, thereby forming a closed-loop optimization workflow of ``inverse design--prediction--screening--redesign.'' Experimental results demonstrate that this unified paradigm outperforms decoupled baselines on both catalytic relaxed-energy prediction and inverse design tasks, validating the effectiveness of jointly modeling property prediction and structure generation within a single multimodal model....
+
+---
+
+### 3. Theory-Guided, Machine-Learning-Accelerated Discovery of a 3D Carbon Nested Nodal-Surface Semimetal
+
+**Authors:** Shuaihua Zhang, Silei Guo, Jingxiang Liu, Baoxin Hu, Yanling Wu, Jun Li
+
+**Published:** 2026-05-21
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2410.12771v2
+**ID:** 2605.22141v1
 
-**Link:** [http://arxiv.org/abs/2410.12771v2](http://arxiv.org/abs/2410.12771v2)
+**Link:** [http://arxiv.org/abs/2605.22141v1](http://arxiv.org/abs/2605.22141v1)
 
-**Summary:** The ability to discover new materials with desirable properties is critical for numerous applications from helping mitigate climate change to advances in next generation computing hardware. AI has the potential to accelerate materials discovery and design by more effectively exploring the chemical space compared to other computational methods or by trial-and-error. While substantial progress has been made on AI for materials data, benchmarks, and models, a barrier that has emerged is the lack of publicly available training data and open pre-trained models. To address this, we present a Meta FAIR release of the Open Materials 2024 (OMat24) large-scale open dataset and an accompanying set of pre-trained models. OMat24 contains over 110 million density functional theory (DFT) calculations focused on structural and compositional diversity. Our EquiformerV2 models achieve state-of-the-art performance on the Matbench Discovery leaderboard and are capable of predicting ground-state stability and formation energies to an F1 score above 0.9 and an accuracy of 20 meV/atom, respectively. We explore the impact of model size, auxiliary denoising objectives, and fine-tuning on performance across a range of datasets including OMat24, MPtraj, and Alexandria. The open release of the OMat24 dataset and models enables the research community to build upon our efforts and drive further advancements in AI-assisted materials science....
+**Summary:** Extending the Dirac physics of two-dimensional (2D) graphene into three dimensions (3D) carbon allotropes with higher-dimensional band degeneracies remains a central challenge in topological materials science. Here, we propose a general symmetry-engineering principle that systematically transforms graphene's Dirac cone into a 3D nodal surface via controlled layering and registry shift, and employ this principle to guide a machine-learning-accelerated inverse design. By integrating a crystal diffusion variational autoencoder(CDVAE) with a Crystal Transformer, we discover a novel, dynamically and mechanically stable carbon allotrope named \textbf{Netsene} (bct-C$_{24}$), which crystallizes in the body-centered tetragonal \textit{I4/mcm} space group. First-principles calculations confirm that Netsene is a unique nested nodal-surface semimetal: it hosts a complex, double-bowl-shaped nodal-surface system around the Fermi level, protected by non-symmorphic symmetries, alongside Dirac-like linear crossings with Fermi velocities comparable to graphene ($\sim 9 \times 10^5$~m/s). Its non-trivial bulk topology manifests in drumhead surface states, including a nearly flat band. Netsene provides a structurally robust, bulk platform that unifies ultrahigh carrier mobility, topological nodal surfaces, and potential correlation physics, demonstrating the power of theory-guided, machine-learning-accelerated discovery for engineering topological quantum phases....
 
 ---
 
