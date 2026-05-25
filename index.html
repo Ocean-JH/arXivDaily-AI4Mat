@@ -66,11 +66,33 @@
             <button id="search-button" type="button">Search</button>
         </div>
 
-        <div class='notice'>🥳 No new papers today<br>Enjoy the break!</div>
+        <h2>New Papers (1)</h2>
+<p><em>Last updated: 2026-05-26 06:59:07 SGT</em></p>
+<article class="paper">
+  <div class="paper-index" aria-hidden="true">1</div>
+  <div class="paper-body">
+  <h3 class="paper-title">MatClaw: An Autonomous Code-First LLM Agent for End-to-End Materials Exploration <span class='paper-badge updated'>Updated</span></h3>
+
+  <div class="paper-info">
+    <p class="paper-authors"><strong>Authors:</strong> Chenmu Zhang, Boris I. Yakobson</p>
+    <p class="paper-date"><strong>Published:</strong> 2026-04-03</p>
+    <p class="paper-category"><strong>Category:</strong> cond-mat.mtrl-sci</p>
+    <p class="paper-id"><strong>ID:</strong> 2604.02688v3</p>
+  </div>
+
+  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2604.02688v3" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2604.02688v3</a></p>
+
+  <details class="paper-summary">
+    <summary>Abstract</summary>
+    <p>Existing LLM agents for computational materials science are constrained by pipeline-bounded architectures tied to specific simulation codes and by dependence on manually written tool functions that grow with task scope. We present MatClaw, a code-first agent that writes and executes Python directly, composing any installed domain library to orchestrate multi-code workflows on remote HPC clusters without predefined tool functions. To sustain coherent execution across multi-day workflows, MatClaw uses a four-layer memory architecture that prevents progressive context loss, and retrieval-augmented generation over domain source code that raises per-step API-call accuracy to ${\sim}$99 %. Three end-to-end demonstrations on ferroelectric CuInP2S6 (machine-learning force field training via active learning, Curie temperature prediction, and heuristic parameter-space search) reveal that the agent handles code generation reliably but struggles with tacit domain knowledge. The missing knowledge, such as appropriate simulation timescales, equilibration protocols, and sampling strategies, is the kind that researchers accumulate through experience but rarely formalize. Two lightweight interventions, literature self-learning and expert-specified constraints, bridge these gaps, defining a guided autonomy model in which the researcher provides high-level domain knowledge while the agent handles workflow execution. Our results demonstrate that the gap between guided and fully autonomous computational materials research is narrower than ever before: LLMs already handle code generation and scientific interpretation reliably, and the rapid improvement in their capabilities will accelerate materials discovery beyond what manual workflows can achieve. All code and benchmarks are open-source.</p>
+  </details>
+  </div>
+</article>
+
     </main>
 
     <footer>
-        <p>Last updated: 2026-05-25 06:56:55 (SGT)</p>
+        <p>Last updated: 2026-05-26 06:59:07 (SGT)</p>
         <p>2025 <a href="https://ocean-jh.github.io/" target="_blank">Wang Jianghai</a> <a href="mailto:jianghai001@e.ntu.edu.sg">Email</a> @ Nanyang Technological University | All Rights Reserved</p>
         <p><a href="https://github.com/Ocean-JH/ArXivDaily-AI4MAT">Star on GitHub</a> · Powered by <a href="https://arxiv.org/" target="_blank">arXiv</a></p>
     </footer>
