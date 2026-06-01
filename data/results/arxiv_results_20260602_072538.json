@@ -1,0 +1,135 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2605.31495v1",
+    "title": "General-purpose LLMs as Constrained Crystal Composition Generators",
+    "authors": [
+      "Hedda Oschinski",
+      "Maximilian L. Ach",
+      "Konstantin S. Jakob",
+      "Christian Carbogno",
+      "Karsten Reuter"
+    ],
+    "summary": "The targeted discovery of inorganic materials remains challenging due to the vastness of compositional design spaces and the high cost of exhaustive screening. Task-specific generative artificial intelligence represents a particularly efficient alternative to screening, yet demands tedious collection of training data before providing real benefit. General-purpose large language models (LLMs) have recently shown tremendous potential for the targeted generation of single, optimal materials compositions without the need for task-specific fine-tuning. However, it is unclear whether LLMs generally pose an advantage compared to specialized generative models, in particular in large design spaces. Here, we demonstrate that such models are capable of covering entire regions of the targeted property space effectively and systematically. Using Elpasolite materials as an established benchmark for generative tasks in large chemical spaces, we find that an iterative prompt-and-response framework is able to recover on average 96% of all low-energy Elpasolites in the target region. This performance, driven mainly by iterative in-context learning, surpasses the generative abilities of previous, task-specific models. Our results establish general-purpose LLMs as flexible and accessible components for inverse materials design workflows.",
+    "published": "2026-05-29T16:16:30+00:00",
+    "updated": "2026-05-29T16:16:30+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2605.31495v1",
+    "base_id": "2605.31495",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2605.31495v1"
+  },
+  {
+    "id": "http://arxiv.org/abs/2605.30743v1",
+    "title": "A Padding Method for Enhanced Encoding of Inorganic Structures with Varying Chemical Compositions",
+    "authors": [
+      "Thang Dang",
+      "Haderbache Amir",
+      "Tzanakakis Alexandros",
+      "Yoshimoto Yuta"
+    ],
+    "summary": "Designing novel inorganic materials through generative models remains an important challenge for material science, driven by the complexity and diversity of inorganic structures across expansive chemical compositions and structural landscape. The vast combinatorial space of inorganic compounds demands innovative, AI-driven approaches to overcome limitations in generative accuracy and efficiency. To address this, we introduce a novel method that redefines the encoding and generation of inorganic materials by utilizing domain-specific symmetry-aware representation. Our approach not only refines the representation of intricate inorganic structures but also contributes to the field of material discovery by enhancing the precision and stability of generated candidates. Central to our methodology is a novel padding technique that exploits crystal symmetry information to enhance the encoding process. By integrating Wyckoff position length-aware padding into an encoder architecture, we achieve a more robust informed representation of inorganic materials. This symmetry-driven enhancement improves deep learning models to generate stable, previously unexplored inorganic structures with superior accuracy and computational efficiency. Furthermore, we introduce an end-to-end system that leverages the machine learning potential models to seamlessly generate novel, even those unseen in the training data, and stable inorganic materials from initial data to validated output. This pipeline integrates advanced generative models with stability analysis, marking a significant leap forward in the automated exploration and design of next-generation inorganic materials. Our method improved reconstruction accuracy 5.3% in proton conductor data, and generated 63.5% more novel stable inorganic material to baseline model on the perov-5 dataset.",
+    "published": "2026-05-29T02:16:32+00:00",
+    "updated": "2026-05-29T02:16:32+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.CE",
+      "cs.CL"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2605.30743v1",
+    "base_id": "2605.30743",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2605.30743v1"
+  },
+  {
+    "id": "http://arxiv.org/abs/2603.23398v2",
+    "title": "Graph Energy Matching: Transport-Aligned Energy-Based Modeling for Graph Generation",
+    "authors": [
+      "Michal Balcerak",
+      "Suprosana Shit",
+      "Chinmay Prabhakar",
+      "Sebastian Kaltenbach",
+      "Michael S. Albergo",
+      "Yilun Du",
+      "Bjoern Menze"
+    ],
+    "summary": "Generative modeling of discrete data, such as graphs, underpins many scientific and industrial applications, including molecular discovery and materials design. In these domains, probabilistic inference is particularly valuable, as it enables composable generation and principled incorporation of desired constraints, such as structural or functional properties. Energy-based models naturally support this goal by capturing relative likelihoods and enabling composable inference by directly enforcing constraints during inference. However, discrete energy-based models typically struggle with efficient and high-quality sampling, as off-support regions often contain spurious local minima, trapping samplers and causing training instabilities, resulting in a fidelity gap compared to discrete diffusion models. To address this gap, we introduce Graph Energy Matching (GEM), a discrete generative framework inspired by the Jordan-Kinderlehrer-Otto (JKO) transport-map optimization perspective. GEM learns a permutation-invariant potential energy that simultaneously guides discrete transport from noise toward high-likelihood graph regions and refines samples within these regions. We further introduce a sampling protocol leveraging an energy-based switching strategy, seamlessly bridging rapid, gradient-guided transport and a local mixing regime for effective exploration. On molecular graph benchmarks, GEM matches or surpasses strong discrete diffusion baselines on most reported metrics. Beyond improving generation quality, GEM's relative likelihood modeling enables targeted exploration, facilitating compositional generation, property-constrained sampling, and interpolation between graphs. Project page: https://michalbalcerak.ai/graph-energy-matching/.",
+    "published": "2026-03-24T16:35:25+00:00",
+    "updated": "2026-05-28T22:03:51+00:00",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2603.23398v2",
+    "base_id": "2603.23398",
+    "version": "2",
+    "url": "http://arxiv.org/abs/2603.23398v2"
+  },
+  {
+    "id": "http://arxiv.org/abs/2512.19427v2",
+    "title": "Measuring the Hall effect in hysteretic materials",
+    "authors": [
+      "Jaime M. Moya",
+      "Anthony Voyemant",
+      "Sudipta Chatterjee",
+      "Scott B. Lee",
+      "Grigorii Skorupskii",
+      "Connor J. Pollak",
+      "Leslie M. Schoop"
+    ],
+    "summary": "Measurement of the Hall effect is a ubiquitous probe for materials discovery, characterization, and metrology. Inherent to the Hall measurement geometry, the measured signal is often contaminated by unwanted contributions, so the data must be processed to isolate the Hall response. The standard approach invokes Onsager-Casimir reciprocity and antisymmetrizes the raw signal about zero applied magnetic field. In hysteretic materials this becomes nontrivial, since Onsager-Casimir relations apply only to microscopically reversible states. Incorrect antisymmetrization can lead to artifacts that mimic anomalous or topological Hall signatures. The situation is especially subtle when hysteresis loops are not centered at zero applied field, as in exchange-biased systems. A practical reference for generically extracting the Hall response in hysteretic materials is lacking. Here, using Co$_3$Sn$_2$S$_2$ as a bulk single-crystal model that can be prepared with or without exchange-biased hysteresis, we demonstrate two procedures that can be used to extract the Hall effect: (1) reverse-magnetic-field reciprocity and (2) antisymmetrization with respect to applied field. We then measure the Hall effect on CeCoGe$_3$, a noncentrosymmetric antiferromagnet which can be prepared to have asymmetric magnetization and magnetoresistance, and demonstrate how improper processing can generate artificial anomalous Hall signals. These methods are generic and can be applied to any conductor.",
+    "published": "2025-12-22T14:28:50+00:00",
+    "updated": "2026-05-28T21:05:44+00:00",
+    "categories": [
+      "cond-mat.str-el",
+      "cond-mat.mtrl-sci",
+      "cond-mat.other"
+    ],
+    "primary_category": "cond-mat.str-el",
+    "comment": null,
+    "journal_ref": "Advanced Materials, 2026, e23674",
+    "doi": "10.1002/adma.202523674",
+    "pdf_url": "https://arxiv.org/pdf/2512.19427v2",
+    "base_id": "2512.19427",
+    "version": "2",
+    "url": "http://arxiv.org/abs/2512.19427v2"
+  },
+  {
+    "id": "http://arxiv.org/abs/2512.05976v3",
+    "title": "Physics Enhanced Deep Surrogates for the Phonon Boltzmann Transport Equation",
+    "authors": [
+      "Antonio Varagnolo",
+      "Giuseppe Romano",
+      "Raphaël Pestourie"
+    ],
+    "summary": "Designing materials with controlled heat flow at the nano-scale is central to advances in microelectronics, thermoelectrics, and energy-conversion technologies. At these scales, phonon transport follows the Boltzmann Transport Equation (BTE), which captures non-diffusive (ballistic) effects but is too costly to solve repeatedly in inverse-design loops. Existing surrogate approaches trade speed for accuracy: fast macroscopic solvers can overestimate conductivities by hundreds of percent, while recent data-driven operator learners often require thousands of high-fidelity simulations. This creates a need for a fast, data-efficient surrogate that remains reliable across ballistic and diffusive regimes. We introduce a Physics-Enhanced Deep Surrogate (PEDS) that combines a differentiable Fourier solver with a neural generator and couples it with uncertainty-driven active learning. The Fourier solver acts as a physical inductive bias, while the network learns geometry-dependent corrections and a mixing coefficient that interpolates between macroscopic and nano-scale behavior. PEDS reduces training-data requirements by up to 70% compared with purely data-driven baselines, achieves roughly 5% fractional error with only 300 high-fidelity BTE simulations, and enables efficient design of porous geometries spanning 12-85 W m$^{-1}$ K$^{-1}$ with average design errors of 4%. The learned mixing parameter recovers the ballistic-diffusive transition and improves out of distribution robustness. These results show that embedding simple, differentiable low-fidelity physics can dramatically increase surrogate data-efficiency and interpretability, making repeated PDE-constrained optimization practical for nano-scale thermal-materials design.",
+    "published": "2025-11-25T16:25:24+00:00",
+    "updated": "2026-05-28T19:12:46+00:00",
+    "categories": [
+      "physics.comp-ph",
+      "cs.LG"
+    ],
+    "primary_category": "physics.comp-ph",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.1115/1.4071904",
+    "pdf_url": "https://arxiv.org/pdf/2512.05976v3",
+    "base_id": "2512.05976",
+    "version": "3",
+    "url": "http://arxiv.org/abs/2512.05976v3"
+  }
+]
