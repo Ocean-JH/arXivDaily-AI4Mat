@@ -1,0 +1,56 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2605.17254v4",
+    "title": "CatalyticMLLM: A Graph-Text Multimodal Large Language Model for Catalytic Materials",
+    "authors": [
+      "Yanjie Li",
+      "Jian Xu",
+      "Xu-Yao Zhang",
+      "Shiming Xiang",
+      "Nian Ran",
+      "Weijun Li",
+      "Cheng-Lin Liu"
+    ],
+    "summary": "Property prediction and inverse structural design of catalytic materials are typically modeled as two independent tasks: the former predicts target properties from given structures, whereas the latter generates candidate structures according to desired properties. Although the decoupled paradigm facilitates the implementation of a ``generation--evaluation--screening'' workflow, the inconsistency between the generative model and the property prediction model in terms of representation spaces and training objectives can readily introduce data distribution shifts and evaluator bias, thereby limiting the stability of closed-loop optimization.\n  In this work, we propose CatalyticMLLM, a unified graph--text multimodal large language model for catalytic materials, which integrates property prediction and \\textbf{inverse design} within the same model and shared representation space. Under this unified framework, CatalyticMLLM can not only perform reliable property prediction by leveraging three-dimensional structures and textual information, but also generate and screen physically feasible CIF candidates conditioned on target properties, thereby forming a closed-loop optimization workflow of ``inverse design--prediction--screening--redesign.'' Experimental results demonstrate that this unified paradigm outperforms decoupled baselines on both catalytic relaxed-energy prediction and inverse design tasks, validating the effectiveness of jointly modeling property prediction and structure generation within a single multimodal model.",
+    "published": "2026-05-17T04:31:46+00:00",
+    "updated": "2026-06-09T02:22:55+00:00",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "comment": "71 page",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2605.17254v4",
+    "base_id": "2605.17254",
+    "version": "4",
+    "url": "http://arxiv.org/abs/2605.17254v4"
+  },
+  {
+    "id": "http://arxiv.org/abs/2606.10251v1",
+    "title": "Robust AI-Driven Discovery of Electronic Metal Phosphide Semiconductors",
+    "authors": [
+      "Benhao Zhu",
+      "Muhammad Faizan",
+      "Zewei Li",
+      "Wenshuo Li",
+      "Feifei Ren",
+      "Jiahao Xie",
+      "Lijun Zhang"
+    ],
+    "summary": "Metal phosphides have diverse bonding motifs and coordination environments, making them promising for optoelectronic and thermoelectric applications, but their chemical space remains underexplored. Here we report an AI-driven high-throughput discovery workflow that combines generative materials design, machine-learning interatomic potentials, and targeted density functional theory (DFT) calculations. ICSD-derived Wyckoff-site substitution and MatterGen-based conditional structure generation are used to expand the candidate space beyond existing phosphide databases. A domain-finetuned DPA3 machine-learning potential then enables efficient prescreening of thermodynamic and dynamical stability before DFT validation. This workflow identifies 3,574 previously unreported stable phosphide structures, including 196 semiconductors with HSE06 band gaps of 0-3.0 eV. By screening these new semiconductors together with experimentally known phosphide semiconductors, we identify 30 promising optoelectronic candidates and 26 promising thermoelectric candidates, including seven newly discovered optoelectronic materials and eight newly discovered thermoelectric materials. These results provide a candidate pool for experimental synthesis and show that combining generative AI with machine-learning interatomic potentials can accelerate the discovery of functional semiconductor materials.",
+    "published": "2026-06-08T23:37:29+00:00",
+    "updated": "2026-06-08T23:37:29+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": "46 pages, 5 main figures; Supporting Information included",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2606.10251v1",
+    "base_id": "2606.10251",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2606.10251v1"
+  }
+]
