@@ -67,45 +67,44 @@
         </div>
 
         <h2>New Papers (2)</h2>
-<p><em>Last updated: 2026-06-11 07:23:33 SGT</em></p>
+<p><em>Last updated: 2026-06-12 07:19:48 SGT</em></p>
 <article class="paper">
   <div class="paper-index" aria-hidden="true">1</div>
   <div class="paper-body">
-  <h3 class="paper-title">CatalyticMLLM: A Graph-Text Multimodal Large Language Model for Catalytic Materials <span class='paper-badge updated'>Updated</span></h3>
+  <h3 class="paper-title">Tensor Methods: A Unified and Interpretable Approach for Material Design <span class='paper-badge updated'>Updated</span></h3>
 
   <div class="paper-info">
-    <p class="paper-authors"><strong>Authors:</strong> Yanjie Li, Jian Xu, Xu-Yao Zhang, Shiming Xiang, Nian Ran, Weijun Li, Cheng-Lin Liu</p>
-    <p class="paper-date"><strong>Published:</strong> 2026-05-17</p>
-    <p class="paper-category"><strong>Category:</strong> cs.AI</p>
-    <p class="paper-id"><strong>ID:</strong> 2605.17254v4</p>
+    <p class="paper-authors"><strong>Authors:</strong> Shaan Pakala, Aldair E. Gongora, Brian Giera, Evangelos E. Papalexakis</p>
+    <p class="paper-date"><strong>Published:</strong> 2026-02-11</p>
+    <p class="paper-category"><strong>Category:</strong> cs.LG</p>
+    <p class="paper-id"><strong>ID:</strong> 2602.10392v2</p>
   </div>
 
-  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2605.17254v4" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2605.17254v4</a></p>
+  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2602.10392v2" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2602.10392v2</a></p>
 
   <details class="paper-summary">
     <summary>Abstract</summary>
-    <p>Property prediction and inverse structural design of catalytic materials are typically modeled as two independent tasks: the former predicts target properties from given structures, whereas the latter generates candidate structures according to desired properties. Although the decoupled paradigm facilitates the implementation of a ``generation--evaluation--screening&#x27;&#x27; workflow, the inconsistency between the generative model and the property prediction model in terms of representation spaces and training objectives can readily introduce data distribution shifts and evaluator bias, thereby limiting the stability of closed-loop optimization.
-  In this work, we propose CatalyticMLLM, a unified graph--text multimodal large language model for catalytic materials, which integrates property prediction and \textbf{inverse design} within the same model and shared representation space. Under this unified framework, CatalyticMLLM can not only perform reliable property prediction by leveraging three-dimensional structures and textual information, but also generate and screen physically feasible CIF candidates conditioned on target properties, thereby forming a closed-loop optimization workflow of ``inverse design--prediction--screening--redesign.&#x27;&#x27; Experimental results demonstrate that this unified paradigm outperforms decoupled baselines on both catalytic relaxed-energy prediction and inverse design tasks, validating the effectiveness of jointly modeling property prediction and structure generation within a single multimodal model.</p>
+    <p>When designing new materials, it is often necessary to tailor the material design to have some desired properties. As the set of design parameters grow, the search space grows exponentially, making the actual synthesis and evaluation of all material combinations virtually impossible. Even using traditional computational methods such as Finite Element Analysis becomes too computationally heavy to search the design space. Recent methods use machine learning (ML) surrogate models to more efficiently determine optimal material designs; unfortunately, these methods often (i) are notoriously difficult to interpret and (ii) under perform when the training data comes from a non-uniform sampling of the design space. We suggest the use of tensor completion methods as an all-in-one approach for interpretability and predictions. We observe classical tensor methods are able to compete with traditional ML in predictions, with the added benefit of their interpretable tensor factors (which are given completely for free, as a result of the prediction). In our experiments, we are able to rediscover physical phenomena via the tensor factors, indicating that our predictions are aligned with the true underlying physics of the problem. This also means these tensor factors could be used by experimentalists to identify potentially novel patterns, given we are able to rediscover existing ones. We also study the effects of both types of surrogate models when we encounter training data from a non-uniform sampling of the design space. We observe more specialized tensor methods that can give better generalization in these non-uniforms sampling scenarios. We find the best generalization comes from a tensor model, which is able to improve upon the baseline ML methods by up to 5% on aggregate $R^2$, and halve the error in some out of distribution regions.</p>
   </details>
   </div>
 </article>
 <article class="paper">
   <div class="paper-index" aria-hidden="true">2</div>
   <div class="paper-body">
-  <h3 class="paper-title">Robust AI-Driven Discovery of Electronic Metal Phosphide Semiconductors <span class='paper-badge'>New</span></h3>
+  <h3 class="paper-title">Open Materials Generation with Inference-Time Reinforcement Learning <span class='paper-badge updated'>Updated</span></h3>
 
   <div class="paper-info">
-    <p class="paper-authors"><strong>Authors:</strong> Benhao Zhu, Muhammad Faizan, Zewei Li, Wenshuo Li, Feifei Ren, Jiahao Xie, Lijun Zhang</p>
-    <p class="paper-date"><strong>Published:</strong> 2026-06-08</p>
-    <p class="paper-category"><strong>Category:</strong> cond-mat.mtrl-sci</p>
-    <p class="paper-id"><strong>ID:</strong> 2606.10251v1</p>
+    <p class="paper-authors"><strong>Authors:</strong> Philipp Hoellmer, Stefano Martiniani</p>
+    <p class="paper-date"><strong>Published:</strong> 2026-01-31</p>
+    <p class="paper-category"><strong>Category:</strong> cs.LG</p>
+    <p class="paper-id"><strong>ID:</strong> 2602.00424v2</p>
   </div>
 
-  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2606.10251v1" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2606.10251v1</a></p>
+  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2602.00424v2" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2602.00424v2</a></p>
 
   <details class="paper-summary">
     <summary>Abstract</summary>
-    <p>Metal phosphides have diverse bonding motifs and coordination environments, making them promising for optoelectronic and thermoelectric applications, but their chemical space remains underexplored. Here we report an AI-driven high-throughput discovery workflow that combines generative materials design, machine-learning interatomic potentials, and targeted density functional theory (DFT) calculations. ICSD-derived Wyckoff-site substitution and MatterGen-based conditional structure generation are used to expand the candidate space beyond existing phosphide databases. A domain-finetuned DPA3 machine-learning potential then enables efficient prescreening of thermodynamic and dynamical stability before DFT validation. This workflow identifies 3,574 previously unreported stable phosphide structures, including 196 semiconductors with HSE06 band gaps of 0-3.0 eV. By screening these new semiconductors together with experimentally known phosphide semiconductors, we identify 30 promising optoelectronic candidates and 26 promising thermoelectric candidates, including seven newly discovered optoelectronic materials and eight newly discovered thermoelectric materials. These results provide a candidate pool for experimental synthesis and show that combining generative AI with machine-learning interatomic potentials can accelerate the discovery of functional semiconductor materials.</p>
+    <p>Continuous-time generative models for crystalline materials enable inverse materials design by learning to predict stable crystal structures, but incorporating explicit target properties into the generative process remains challenging. Policy-gradient reinforcement learning (RL) provides a principled mechanism for aligning generative models with downstream objectives but typically requires access to the score, which has prevented its application to flow-based models that learn only velocity fields. We introduce Open Materials Generation with Inference-time Reinforcement Learning (OMatG-IRL), a policy-gradient RL framework that operates directly on the learned velocity fields and eliminates the need for the explicit computation of the score. OMatG-IRL leverages stochastic perturbations of the underlying generation dynamics preserving the baseline performance of the pretrained generative model while enabling exploration and policy-gradient estimation at inference time. Using OMatG-IRL, we present the first application of RL to crystal structure prediction (CSP). Our method enables effective reinforcement of an energy-based objective while preserving diversity through composition conditioning, and it achieves performance competitive with score-based RL approaches. Finally, we show that OMatG-IRL can learn time-dependent velocity-annealing schedules, enabling accurate CSP with order-of-magnitude improvements in sampling efficiency and, correspondingly, reduction in generation time. The OMatG-IRL code is included in a new release of the Open Materials Generation (OMatG) framework available at https://github.com/FERMat-ML/OMatG.</p>
   </details>
   </div>
 </article>
@@ -113,7 +112,7 @@
     </main>
 
     <footer>
-        <p>Last updated: 2026-06-11 07:23:33 (SGT)</p>
+        <p>Last updated: 2026-06-12 07:19:48 (SGT)</p>
         <p>2025 <a href="https://ocean-jh.github.io/" target="_blank">Wang Jianghai</a> <a href="mailto:jianghai001@e.ntu.edu.sg">Email</a> @ Nanyang Technological University | All Rights Reserved</p>
         <p><a href="https://github.com/Ocean-JH/ArXivDaily-AI4MAT">Star on GitHub</a> · Powered by <a href="https://arxiv.org/" target="_blank">arXiv</a></p>
     </footer>
