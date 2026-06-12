@@ -34,39 +34,55 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (2)
+## New Papers (3)
 
-*Last updated: 2026-06-12 07:19:48 (SGT)*
+*Last updated: 2026-06-13 07:14:52 (SGT)*
 
-### 1. Tensor Methods: A Unified and Interpretable Approach for Material Design
+### 1. Lone-Pair-Induced Lattice Softness Enables Ultralow Thermal Conductivity in Hybrid Organic-Inorganic Perovskite GuaPbI$_3$
 
-**Authors:** Shaan Pakala, Aldair E. Gongora, Brian Giera, Evangelos E. Papalexakis
+**Authors:** Rudra P. Singh, Shantanu Pathak, Saswata Bhattacharya, R Lakshmi Narayan
 
-**Published:** 2026-02-11
+**Published:** 2026-06-11
 
-**Category:** cs.LG
+**Category:** cond-mat.mtrl-sci
 
-**ID:** 2602.10392v2
+**ID:** 2606.13561v1
 
-**Link:** [http://arxiv.org/abs/2602.10392v2](http://arxiv.org/abs/2602.10392v2)
+**Link:** [http://arxiv.org/abs/2606.13561v1](http://arxiv.org/abs/2606.13561v1)
 
-**Summary:** When designing new materials, it is often necessary to tailor the material design to have some desired properties. As the set of design parameters grow, the search space grows exponentially, making the actual synthesis and evaluation of all material combinations virtually impossible. Even using traditional computational methods such as Finite Element Analysis becomes too computationally heavy to search the design space. Recent methods use machine learning (ML) surrogate models to more efficiently determine optimal material designs; unfortunately, these methods often (i) are notoriously difficult to interpret and (ii) under perform when the training data comes from a non-uniform sampling of the design space. We suggest the use of tensor completion methods as an all-in-one approach for interpretability and predictions. We observe classical tensor methods are able to compete with traditional ML in predictions, with the added benefit of their interpretable tensor factors (which are given completely for free, as a result of the prediction). In our experiments, we are able to rediscover physical phenomena via the tensor factors, indicating that our predictions are aligned with the true underlying physics of the problem. This also means these tensor factors could be used by experimentalists to identify potentially novel patterns, given we are able to rediscover existing ones. We also study the effects of both types of surrogate models when we encounter training data from a non-uniform sampling of the design space. We observe more specialized tensor methods that can give better generalization in these non-uniforms sampling scenarios. We find the best generalization comes from a tensor model, which is able to improve upon the baseline ML methods by up to 5% on aggregate $R^2$, and halve the error in some out of distribution regions....
+**Summary:** Thermoelectric cooling efficiency is fundamentally constrained by lattice thermal conductivity, yet conventional inorganic thermoelectrics have approached a performance plateau despite extensive nanostructural engineering. Organic thermoelectrics possess intrinsically low thermal conductivity but often suffer from limited and morphology-sensitive charge transport. Here, we introduce a lone-pair-driven materials design strategy based on chemically induced lattice softness in hybrid organic-inorganic perovskites. A physics-guided symbolic-regression-based machine-learning framework identifies a lone-pair-dominated compositional regime associated with suppressed lattice thermal conductivity and selects GuaPbI3 as a candidate material. Mechanochemical synthesis yields crystalline GuaPbI3 with an ultralow room-temperature thermal conductivity of kappa = 0.088 W m^-1 K^-1. Electrical measurements reveal electronically active, bias-dependent bulk conduction pathways despite strong phonon suppression, while impedance spectroscopy confirms bulk-dominated transport. Density functional theory calculations indicate weakly dispersive valence bands, valence-conduction asymmetry, and localized electrostatic microenvironments from charge redistribution within the lattice. Calculated transport coefficients suggest strong sensitivity of carrier transport to chemical potential, while Lorenz-number analysis indicates deviations from conventional Wiedemann-Franz behavior near the band edges. These results support a picture in which lone-pair-rich hybrid frameworks generate soft and electronically heterogeneous lattice environments that suppress phonon transport while preserving electronically accessible states. This work establishes chemically induced lattice softness as a design principle for ultralow-thermal-conductivity hybrid materials....
 
 ---
 
-### 2. Open Materials Generation with Inference-Time Reinforcement Learning
+### 2. Physics-informed time-series forecasting of perovskite photoluminescence stability
 
-**Authors:** Philipp Hoellmer, Stefano Martiniani
+**Authors:** Alexander Wieczorek, Manuel Kober-Czerny, Fábio Lopes, Austin George Kuba, Leon Müller, Christian M. Wolff, Jason Hattrick-Simpers, Sebastian Siol
 
-**Published:** 2026-01-31
+**Published:** 2026-06-11
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2606.13414v1
+
+**Link:** [http://arxiv.org/abs/2606.13414v1](http://arxiv.org/abs/2606.13414v1)
+
+**Summary:** Accelerated ageing using elevated temperatures and illumination is one of the most common methods to rapidly study the stability of novel semiconductor materials. However, as the pace of materials discovery continues to accelerate, even faster stability evaluations are needed. A physics-informed time-series forecasting algorithm designed to predict the long-term photoluminescence stability of metal halide perovskites is presented. A diverse experimental dataset of 167 metal halide perovskites is collected, including different crystallinities and compositions. These are stressed using heat and light, while the photoluminescence (PL) is monitored. The >86k collected PL spectra are featurized using a physics-informed model, and a hybrid CNN-LSTM model is trained to forecast the PL intensity during degradation of samples unseen during model training. Notably, the approach generalizes across the material groups and outperforms baseline benchmarks. Furthermore, the physics-based featurization ensures explainability, enabling analysis to identify critical stability descriptors for given predictions. It is expected that this approach will be adapted to other types of time-series data and enables a pathway to significantly reduce experimental testing times....
+
+---
+
+### 3. PLaID++: A Preference Aligned Language Model for Targeted Inorganic Materials Design
+
+**Authors:** Andy Xu, Rohan Desai, Larry Wang, Ethan Ritz, Gabriel Hope
+
+**Published:** 2025-09-08
 
 **Category:** cs.LG
 
-**ID:** 2602.00424v2
+**ID:** 2509.07150v4
 
-**Link:** [http://arxiv.org/abs/2602.00424v2](http://arxiv.org/abs/2602.00424v2)
+**Link:** [http://arxiv.org/abs/2509.07150v4](http://arxiv.org/abs/2509.07150v4)
 
-**Summary:** Continuous-time generative models for crystalline materials enable inverse materials design by learning to predict stable crystal structures, but incorporating explicit target properties into the generative process remains challenging. Policy-gradient reinforcement learning (RL) provides a principled mechanism for aligning generative models with downstream objectives but typically requires access to the score, which has prevented its application to flow-based models that learn only velocity fields. We introduce Open Materials Generation with Inference-time Reinforcement Learning (OMatG-IRL), a policy-gradient RL framework that operates directly on the learned velocity fields and eliminates the need for the explicit computation of the score. OMatG-IRL leverages stochastic perturbations of the underlying generation dynamics preserving the baseline performance of the pretrained generative model while enabling exploration and policy-gradient estimation at inference time. Using OMatG-IRL, we present the first application of RL to crystal structure prediction (CSP). Our method enables effective reinforcement of an energy-based objective while preserving diversity through composition conditioning, and it achieves performance competitive with score-based RL approaches. Finally, we show that OMatG-IRL can learn time-dependent velocity-annealing schedules, enabling accurate CSP with order-of-magnitude improvements in sampling efficiency and, correspondingly, reduction in generation time. The OMatG-IRL code is included in a new release of the Open Materials Generation (OMatG) framework available at https://github.com/FERMat-ML/OMatG....
+**Summary:** Reinforcement Learning from Verifiable Rewards (RLVR) has emerged as a promising approach to improve correctness in LLMs, however, in many scientific problems, the objective is not necessarily to produce the correct answer, but instead to produce a diverse array of candidates which satisfy a set of constraints. We study this challenge in the context of materials generation. To this end, we introduce PLaID++, an LLM post-trained for stable and property-guided crystal generation. We find that performance hinges on our crystallographic representation and reward formulation. First, we introduce a compact, symmetry-informed Wyckoff text representation which improves computational efficiency and encourages generalization from physical priors. Second, we demonstrate that temperature scaling acts as an entropy regularizer which counteracts mode collapse and encourages exploration. By encoding symmetry constraints directly into text and guiding model outputs towards desirable chemical space, PLaID++ generates structures that are thermodynamically stable, unique, and novel at a $\sim$50\% greater rate than prior methods and conditionally generates structures with desired space group properties. Our work demonstrates the potential of adapting post-training techniques from natural language processing to materials design, paving the way for targeted and efficient discovery of novel materials....
 
 ---
 
