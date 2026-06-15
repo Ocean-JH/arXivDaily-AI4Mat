@@ -1,0 +1,26 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2606.13561v2",
+    "title": "Lone-Pair-Induced Lattice Softness Enables Ultralow Thermal Conductivity in Hybrid Organic-Inorganic Perovskite GuaPbI$_3$",
+    "authors": [
+      "Rudra P. Singh",
+      "Shantanu Pathak",
+      "Saswata Bhattacharya",
+      "R Lakshmi Narayan"
+    ],
+    "summary": "Thermal conductivity ($κ$) minimization of inorganic thermoelectrics can only be achieved to a certain extent via nanostructural engineering. Here, we introduce a lone-pair-driven materials design strategy based on chemically induced lattice softness to develop hybrid organic-inorganic perovskites with ultra-low $κ$. A physics-guided symbolic-regression machine-learning framework identifies a lone-pair-dominated compositional regime statistically associated with suppressed lattice $κ$ and selects $\\text{GuaPbI}_3$ as a candidate material. Mechanochemical synthesis yields $\\text{GuaPbI}_3$ with an ultra-low room-temperature $κ\\approx 0.088\\text{ W m}^{-1}\\text{ K}^{-1}$. Electrical measurements reveal electronically active, bias-dependent bulk conduction pathways despite strong phonon suppression, while impedance spectroscopy confirms predominantly bulk-dominated transport. Density functional theory calculations indicate weakly dispersive valence bands, pronounced valence-conduction asymmetry, and localized electrostatic microenvironments arising from lattice charge redistribution. Calculated transport coefficients suggest strong sensitivity of carrier transport to chemical potential, while Lorenz-number analysis reveals deviations from conventional Wiedemann-Franz behavior near band edges. These observations indicate that lone-pair-rich hybrid frameworks generate intrinsically soft and electronically heterogeneous lattice environments capable of strongly suppressing phonon transport while preserving electronically accessible states. This work establishes chemically induced lattice softness as a viable design principle for identifying ultralow-thermal-conductivity hybrid materials without relying on nanostructuring or extrinsic disorder engineering.",
+    "published": "2026-06-11T16:47:40+00:00",
+    "updated": "2026-06-12T13:05:32+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2606.13561v2",
+    "base_id": "2606.13561",
+    "version": "2",
+    "url": "http://arxiv.org/abs/2606.13561v2"
+  }
+]
