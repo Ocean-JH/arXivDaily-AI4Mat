@@ -1,0 +1,132 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2606.16133v1",
+    "title": "InvDesMobility: a reliability-gated first-principles feedback framework for closed-loop materials discovery",
+    "authors": [
+      "Wen-Kao Li",
+      "Ze-Feng Gao",
+      "Peng-Jie Guo",
+      "Wei Ji",
+      "Zhong-Yi Lu"
+    ],
+    "summary": "Inverse materials design starts from target functionality and searches for structures that can realize it. Its value in closed-loop discovery depends not only on prediction performance, but also on whether expensive first-principles results are independently validated, provenance-recorded, and admitted as feedback only when evidence is sufficient. This is especially important for composite properties such as carrier mobility, where a final scalar value hides intermediate quantities, fit quality, convergence history, and workflow assumptions. Here we present InvDesMobility, a reliability-gated first-principles feedback framework that integrates multi-agent automated DFT, evidence stratification, generative structure proposal, acquisition ranking, and auditable release. Using 516 2DMatPedia-derived candidates, the workflow produced 280 QC-passed materials and 573 retained carrier-direction seed channels after channel-level reliability gating. These records were split into two feedback objects: relaxed structures updated the generative model, while retained mobility channels trained the acquisition model and set validation priority. Over multiple iterations, InvDesMobility screened 2.4 x 10^6 structures, submitted 102 candidates for DFT validation, and retained 86 reliability-gated generated channels across 41 formulas. Overall, the main contribution is not a fixed list of high-mobility materials, but a transferable feedback contract that makes closed-loop inverse design both useful and auditable when learning from expensive calculated properties. All source data, retained feedback records, and workflows are available at https://github.com/DreamLufei/invDesMobility, with an accompanying evidence website at https://dreamlufei.github.io/invDesMobility/.",
+    "published": "2026-06-15T02:47:18+00:00",
+    "updated": "2026-06-15T02:47:18+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.AI"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": "33 pages, 4 main figures, 2 main tables; Supplementary Information included",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2606.16133v1",
+    "base_id": "2606.16133",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2606.16133v1"
+  },
+  {
+    "id": "http://arxiv.org/abs/2606.16032v1",
+    "title": "Machine learning enables roughness-driven inverse design of milling processes",
+    "authors": [
+      "Hadi Bakhshan",
+      "Sima Farshbaf",
+      "Fernando Rastellini",
+      "Josep Maria Carbonell"
+    ],
+    "summary": "Interest in applying data-driven approaches in manufacturing has grown significantly, particularly for mapping complex, high-dimensional relationships. The milling process is one area where predictive models can link influential parameters to surface roughness metrics prior to in situ operations. While this approach offers clear advantages, it faces challenges due to limited datasets and robustness issues in inverse design paradigms. To address these challenges, this paper proposes a machine learning (ML)-based framework for the inverse design of the surface milling process, with a focus on surface roughness as the design objective. The framework employs forward training of two ML models, a deep neural network (DNN) and a random forest (RF) ensemble, both developed using a high-fidelity synthetic dataset generated from a computational simulation framework. These trained models are integrated into a Bayesian optimization (BO) procedure to overcome the multiplicity problem arising from the many-to-one mapping inherent in the dataset. The approach identifies top-performing milling process configurations, considering both process and tool parameters, and presents them from the full solution space. The models achieve average relative errors below 5% when compared to reference results, thereby demonstrating the robustness and reliability of the proposed methodology.",
+    "published": "2026-06-14T21:49:41+00:00",
+    "updated": "2026-06-14T21:49:41+00:00",
+    "categories": [
+      "cond-mat.other",
+      "cs.LG"
+    ],
+    "primary_category": "cond-mat.other",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2606.16032v1",
+    "base_id": "2606.16032",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2606.16032v1"
+  },
+  {
+    "id": "http://arxiv.org/abs/2601.21527v3",
+    "title": "Sustainable Materials Discovery in the Era of Artificial Intelligence",
+    "authors": [
+      "Sajid Mannan",
+      "Rupert J. Myers",
+      "Rohit Batra",
+      "Rocio Mercado",
+      "Lothar Wondraczek",
+      "N. M. Anoop Krishnan"
+    ],
+    "summary": "Artificial intelligence (AI) has transformed materials discovery, enabling rapid exploration of chemical space through generative models and surrogate screening. Yet current generative AI models for materials discovery, which now drive exploration of vast chemical and structural spaces, optimize candidates exclusively for structural stability and functional properties, with no integration of environmental assessment at any stage of the design loop. Prospective and ex-ante life cycle assessment methods exist and have been applied to emerging technologies, but they operate as standalone downstream analyses, not as active constraints within generative or active-learning pipelines. The result is that environmental feedback, even when produced, arrives after design decisions have been made rather than informing them. The disconnect between atomic-scale design and lifecycle assessment (LCA) reflects fundamental challenges: (i) data scarcity across heterogeneous sources, (ii) scale gaps from atoms to industrial systems, (iii) uncertainty in synthesis pathways, and (iv) the absence of frameworks that co-optimize performance with environmental impact. In this Perspective, we propose integrating upstream ML-assisted materials discovery with downstream LCA into the ML-LCA framework, comprising five components: information extraction for building materials-environment knowledge bases, harmonized databases linking properties to sustainability metrics, multi-scale models bridging atomic properties to lifecycle impacts, ensemble prediction of manufacturing pathways with uncertainty quantification, and uncertainty-aware optimization enabling simultaneous performance-sustainability navigation. Case studies spanning polymers, glass, photoresists, and cement demonstrate both necessity and feasibility while identifying material-specific integration challenges.",
+    "published": "2026-01-29T10:42:44+00:00",
+    "updated": "2026-06-13T17:55:31+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.AI"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.21527v3",
+    "base_id": "2601.21527",
+    "version": "3",
+    "url": "http://arxiv.org/abs/2601.21527v3"
+  },
+  {
+    "id": "http://arxiv.org/abs/2606.15321v1",
+    "title": "Symmetry-aware generative design of flat-band materials beyond known crystal-net prototypes",
+    "authors": [
+      "Yihao Wei",
+      "Ivan Savochkin",
+      "Artem Mishchenko",
+      "Xiangwen Wang",
+      "Qian Yang"
+    ],
+    "summary": "Flat electronic bands underlie a range of strongly correlated and topological phenomena, whose design in real materials has so far relied on a small catalogue of named geometric motifs such as kagome, Lieb, and pyrochlore nets. This discrete catalogue is by no means to exhaust the geometries that support flat bands in real compounds, as band flatness is a property of network connectivity. Here we combine a continuous geometric representation of crystal sublattices, with a symmetry-constrained generative model, to access a broader design space for materials hosting flat bands. The key step is to choose sublattice motifs that are outside the known geometric clusters, ensuring the novelty of the generated structures. We then introduce SkeleGen, which pins these unconventional skeletons to symmetry-compatible Wyckoff positions while denoising the surrounding chemistry, resulting in 9,352 crystal candidates that survive stability and flatnessscreening. Band flatness is confirmed using high throughput full DFT calculations, which agree well also with the tight-binding spectra of the isolated skeletons, supporting a geometric origin of the band flatness. We demonstrate \"out-of-distribution\" motifs as a new design principle to dramatically expand geometric repertoire for materials discovery, potentially beyond flat bands.",
+    "published": "2026-06-13T14:28:48+00:00",
+    "updated": "2026-06-13T14:28:48+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cond-mat.mes-hall"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2606.15321v1",
+    "base_id": "2606.15321",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2606.15321v1"
+  },
+  {
+    "id": "http://arxiv.org/abs/2606.14861v1",
+    "title": "Designing Strong and Broadband Nonreciprocal Thermal Radiation in Magnetic Topological Materials",
+    "authors": [
+      "Yiyang Jiang",
+      "Yufei Zhao",
+      "Linxiao Zhu",
+      "Binghai Yan"
+    ],
+    "summary": "Breaking reciprocity in thermal radiation opens opportunities for energy harvesting, sensing, and thermal management. Traditional nonreciprocal radiative semiconductor devices need external magnetic field. In this work, we predict a series of magnetic topological materials for magnetic-field-free nonreciprocal thermal radiation in the infrared regime, by combining first-principles calculations with Maxwell electrodynamics. We find strong and broadband nonreciprocity in magnetic Weyl semimetals (e.g., Co$_3$Sn$_2$S$_2$), outperforming the conventional semiconductor such as InAs. Furthermore, we propose universal material design recipes: strong nonreciprocity requires a large anomalous Hall response relative to the optical loss, whereas the broadband response favors large optical loss and small dielectric dispersion. Our work establishes a predictive materials-discovery framework and quantitative design rules for next-generation magnet-free nonreciprocal thermal devices.",
+    "published": "2026-06-12T18:03:36+00:00",
+    "updated": "2026-06-12T18:03:36+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cond-mat.mes-hall",
+      "physics.app-ph"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": "16 pages, 5 figures",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2606.14861v1",
+    "base_id": "2606.14861",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2606.14861v1"
+  }
+]

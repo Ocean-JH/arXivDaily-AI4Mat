@@ -66,25 +66,105 @@
             <button id="search-button" type="button">Search</button>
         </div>
 
-        <h2>New Papers (1)</h2>
-<p><em>Last updated: 2026-06-16 07:43:05 SGT</em></p>
+        <h2>New Papers (5)</h2>
+<p><em>Last updated: 2026-06-17 07:22:26 SGT</em></p>
 <article class="paper">
   <div class="paper-index" aria-hidden="true">1</div>
   <div class="paper-body">
-  <h3 class="paper-title">Lone-Pair-Induced Lattice Softness Enables Ultralow Thermal Conductivity in Hybrid Organic-Inorganic Perovskite GuaPbI$_3$ <span class='paper-badge updated'>Updated</span></h3>
+  <h3 class="paper-title">InvDesMobility: a reliability-gated first-principles feedback framework for closed-loop materials discovery <span class='paper-badge'>New</span></h3>
 
   <div class="paper-info">
-    <p class="paper-authors"><strong>Authors:</strong> Rudra P. Singh, Shantanu Pathak, Saswata Bhattacharya, R Lakshmi Narayan</p>
-    <p class="paper-date"><strong>Published:</strong> 2026-06-11</p>
+    <p class="paper-authors"><strong>Authors:</strong> Wen-Kao Li, Ze-Feng Gao, Peng-Jie Guo, Wei Ji, Zhong-Yi Lu</p>
+    <p class="paper-date"><strong>Published:</strong> 2026-06-15</p>
     <p class="paper-category"><strong>Category:</strong> cond-mat.mtrl-sci</p>
-    <p class="paper-id"><strong>ID:</strong> 2606.13561v2</p>
+    <p class="paper-id"><strong>ID:</strong> 2606.16133v1</p>
   </div>
 
-  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2606.13561v2" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2606.13561v2</a></p>
+  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2606.16133v1" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2606.16133v1</a></p>
 
   <details class="paper-summary">
     <summary>Abstract</summary>
-    <p>Thermal conductivity ($κ$) minimization of inorganic thermoelectrics can only be achieved to a certain extent via nanostructural engineering. Here, we introduce a lone-pair-driven materials design strategy based on chemically induced lattice softness to develop hybrid organic-inorganic perovskites with ultra-low $κ$. A physics-guided symbolic-regression machine-learning framework identifies a lone-pair-dominated compositional regime statistically associated with suppressed lattice $κ$ and selects $\text{GuaPbI}_3$ as a candidate material. Mechanochemical synthesis yields $\text{GuaPbI}_3$ with an ultra-low room-temperature $κ\approx 0.088\text{ W m}^{-1}\text{ K}^{-1}$. Electrical measurements reveal electronically active, bias-dependent bulk conduction pathways despite strong phonon suppression, while impedance spectroscopy confirms predominantly bulk-dominated transport. Density functional theory calculations indicate weakly dispersive valence bands, pronounced valence-conduction asymmetry, and localized electrostatic microenvironments arising from lattice charge redistribution. Calculated transport coefficients suggest strong sensitivity of carrier transport to chemical potential, while Lorenz-number analysis reveals deviations from conventional Wiedemann-Franz behavior near band edges. These observations indicate that lone-pair-rich hybrid frameworks generate intrinsically soft and electronically heterogeneous lattice environments capable of strongly suppressing phonon transport while preserving electronically accessible states. This work establishes chemically induced lattice softness as a viable design principle for identifying ultralow-thermal-conductivity hybrid materials without relying on nanostructuring or extrinsic disorder engineering.</p>
+    <p>Inverse materials design starts from target functionality and searches for structures that can realize it. Its value in closed-loop discovery depends not only on prediction performance, but also on whether expensive first-principles results are independently validated, provenance-recorded, and admitted as feedback only when evidence is sufficient. This is especially important for composite properties such as carrier mobility, where a final scalar value hides intermediate quantities, fit quality, convergence history, and workflow assumptions. Here we present InvDesMobility, a reliability-gated first-principles feedback framework that integrates multi-agent automated DFT, evidence stratification, generative structure proposal, acquisition ranking, and auditable release. Using 516 2DMatPedia-derived candidates, the workflow produced 280 QC-passed materials and 573 retained carrier-direction seed channels after channel-level reliability gating. These records were split into two feedback objects: relaxed structures updated the generative model, while retained mobility channels trained the acquisition model and set validation priority. Over multiple iterations, InvDesMobility screened 2.4 x 10^6 structures, submitted 102 candidates for DFT validation, and retained 86 reliability-gated generated channels across 41 formulas. Overall, the main contribution is not a fixed list of high-mobility materials, but a transferable feedback contract that makes closed-loop inverse design both useful and auditable when learning from expensive calculated properties. All source data, retained feedback records, and workflows are available at https://github.com/DreamLufei/invDesMobility, with an accompanying evidence website at https://dreamlufei.github.io/invDesMobility/.</p>
+  </details>
+  </div>
+</article>
+<article class="paper">
+  <div class="paper-index" aria-hidden="true">2</div>
+  <div class="paper-body">
+  <h3 class="paper-title">Machine learning enables roughness-driven inverse design of milling processes <span class='paper-badge'>New</span></h3>
+
+  <div class="paper-info">
+    <p class="paper-authors"><strong>Authors:</strong> Hadi Bakhshan, Sima Farshbaf, Fernando Rastellini, Josep Maria Carbonell</p>
+    <p class="paper-date"><strong>Published:</strong> 2026-06-14</p>
+    <p class="paper-category"><strong>Category:</strong> cond-mat.other</p>
+    <p class="paper-id"><strong>ID:</strong> 2606.16032v1</p>
+  </div>
+
+  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2606.16032v1" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2606.16032v1</a></p>
+
+  <details class="paper-summary">
+    <summary>Abstract</summary>
+    <p>Interest in applying data-driven approaches in manufacturing has grown significantly, particularly for mapping complex, high-dimensional relationships. The milling process is one area where predictive models can link influential parameters to surface roughness metrics prior to in situ operations. While this approach offers clear advantages, it faces challenges due to limited datasets and robustness issues in inverse design paradigms. To address these challenges, this paper proposes a machine learning (ML)-based framework for the inverse design of the surface milling process, with a focus on surface roughness as the design objective. The framework employs forward training of two ML models, a deep neural network (DNN) and a random forest (RF) ensemble, both developed using a high-fidelity synthetic dataset generated from a computational simulation framework. These trained models are integrated into a Bayesian optimization (BO) procedure to overcome the multiplicity problem arising from the many-to-one mapping inherent in the dataset. The approach identifies top-performing milling process configurations, considering both process and tool parameters, and presents them from the full solution space. The models achieve average relative errors below 5% when compared to reference results, thereby demonstrating the robustness and reliability of the proposed methodology.</p>
+  </details>
+  </div>
+</article>
+<article class="paper">
+  <div class="paper-index" aria-hidden="true">3</div>
+  <div class="paper-body">
+  <h3 class="paper-title">Sustainable Materials Discovery in the Era of Artificial Intelligence <span class='paper-badge updated'>Updated</span></h3>
+
+  <div class="paper-info">
+    <p class="paper-authors"><strong>Authors:</strong> Sajid Mannan, Rupert J. Myers, Rohit Batra, Rocio Mercado, Lothar Wondraczek, N. M. Anoop Krishnan</p>
+    <p class="paper-date"><strong>Published:</strong> 2026-01-29</p>
+    <p class="paper-category"><strong>Category:</strong> cond-mat.mtrl-sci</p>
+    <p class="paper-id"><strong>ID:</strong> 2601.21527v3</p>
+  </div>
+
+  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2601.21527v3" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2601.21527v3</a></p>
+
+  <details class="paper-summary">
+    <summary>Abstract</summary>
+    <p>Artificial intelligence (AI) has transformed materials discovery, enabling rapid exploration of chemical space through generative models and surrogate screening. Yet current generative AI models for materials discovery, which now drive exploration of vast chemical and structural spaces, optimize candidates exclusively for structural stability and functional properties, with no integration of environmental assessment at any stage of the design loop. Prospective and ex-ante life cycle assessment methods exist and have been applied to emerging technologies, but they operate as standalone downstream analyses, not as active constraints within generative or active-learning pipelines. The result is that environmental feedback, even when produced, arrives after design decisions have been made rather than informing them. The disconnect between atomic-scale design and lifecycle assessment (LCA) reflects fundamental challenges: (i) data scarcity across heterogeneous sources, (ii) scale gaps from atoms to industrial systems, (iii) uncertainty in synthesis pathways, and (iv) the absence of frameworks that co-optimize performance with environmental impact. In this Perspective, we propose integrating upstream ML-assisted materials discovery with downstream LCA into the ML-LCA framework, comprising five components: information extraction for building materials-environment knowledge bases, harmonized databases linking properties to sustainability metrics, multi-scale models bridging atomic properties to lifecycle impacts, ensemble prediction of manufacturing pathways with uncertainty quantification, and uncertainty-aware optimization enabling simultaneous performance-sustainability navigation. Case studies spanning polymers, glass, photoresists, and cement demonstrate both necessity and feasibility while identifying material-specific integration challenges.</p>
+  </details>
+  </div>
+</article>
+<article class="paper">
+  <div class="paper-index" aria-hidden="true">4</div>
+  <div class="paper-body">
+  <h3 class="paper-title">Symmetry-aware generative design of flat-band materials beyond known crystal-net prototypes <span class='paper-badge'>New</span></h3>
+
+  <div class="paper-info">
+    <p class="paper-authors"><strong>Authors:</strong> Yihao Wei, Ivan Savochkin, Artem Mishchenko, Xiangwen Wang, Qian Yang</p>
+    <p class="paper-date"><strong>Published:</strong> 2026-06-13</p>
+    <p class="paper-category"><strong>Category:</strong> cond-mat.mtrl-sci</p>
+    <p class="paper-id"><strong>ID:</strong> 2606.15321v1</p>
+  </div>
+
+  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2606.15321v1" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2606.15321v1</a></p>
+
+  <details class="paper-summary">
+    <summary>Abstract</summary>
+    <p>Flat electronic bands underlie a range of strongly correlated and topological phenomena, whose design in real materials has so far relied on a small catalogue of named geometric motifs such as kagome, Lieb, and pyrochlore nets. This discrete catalogue is by no means to exhaust the geometries that support flat bands in real compounds, as band flatness is a property of network connectivity. Here we combine a continuous geometric representation of crystal sublattices, with a symmetry-constrained generative model, to access a broader design space for materials hosting flat bands. The key step is to choose sublattice motifs that are outside the known geometric clusters, ensuring the novelty of the generated structures. We then introduce SkeleGen, which pins these unconventional skeletons to symmetry-compatible Wyckoff positions while denoising the surrounding chemistry, resulting in 9,352 crystal candidates that survive stability and flatnessscreening. Band flatness is confirmed using high throughput full DFT calculations, which agree well also with the tight-binding spectra of the isolated skeletons, supporting a geometric origin of the band flatness. We demonstrate &quot;out-of-distribution&quot; motifs as a new design principle to dramatically expand geometric repertoire for materials discovery, potentially beyond flat bands.</p>
+  </details>
+  </div>
+</article>
+<article class="paper">
+  <div class="paper-index" aria-hidden="true">5</div>
+  <div class="paper-body">
+  <h3 class="paper-title">Designing Strong and Broadband Nonreciprocal Thermal Radiation in Magnetic Topological Materials <span class='paper-badge'>New</span></h3>
+
+  <div class="paper-info">
+    <p class="paper-authors"><strong>Authors:</strong> Yiyang Jiang, Yufei Zhao, Linxiao Zhu, Binghai Yan</p>
+    <p class="paper-date"><strong>Published:</strong> 2026-06-12</p>
+    <p class="paper-category"><strong>Category:</strong> cond-mat.mtrl-sci</p>
+    <p class="paper-id"><strong>ID:</strong> 2606.14861v1</p>
+  </div>
+
+  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2606.14861v1" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2606.14861v1</a></p>
+
+  <details class="paper-summary">
+    <summary>Abstract</summary>
+    <p>Breaking reciprocity in thermal radiation opens opportunities for energy harvesting, sensing, and thermal management. Traditional nonreciprocal radiative semiconductor devices need external magnetic field. In this work, we predict a series of magnetic topological materials for magnetic-field-free nonreciprocal thermal radiation in the infrared regime, by combining first-principles calculations with Maxwell electrodynamics. We find strong and broadband nonreciprocity in magnetic Weyl semimetals (e.g., Co$_3$Sn$_2$S$_2$), outperforming the conventional semiconductor such as InAs. Furthermore, we propose universal material design recipes: strong nonreciprocity requires a large anomalous Hall response relative to the optical loss, whereas the broadband response favors large optical loss and small dielectric dispersion. Our work establishes a predictive materials-discovery framework and quantitative design rules for next-generation magnet-free nonreciprocal thermal devices.</p>
   </details>
   </div>
 </article>
@@ -92,7 +172,7 @@
     </main>
 
     <footer>
-        <p>Last updated: 2026-06-16 07:43:05 (SGT)</p>
+        <p>Last updated: 2026-06-17 07:22:26 (SGT)</p>
         <p>2025 <a href="https://ocean-jh.github.io/" target="_blank">Wang Jianghai</a> <a href="mailto:jianghai001@e.ntu.edu.sg">Email</a> @ Nanyang Technological University | All Rights Reserved</p>
         <p><a href="https://github.com/Ocean-JH/ArXivDaily-AI4MAT">Star on GitHub</a> · Powered by <a href="https://arxiv.org/" target="_blank">arXiv</a></p>
     </footer>
