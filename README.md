@@ -34,87 +34,55 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (5)
+## New Papers (3)
 
-*Last updated: 2026-06-17 07:22:26 (SGT)*
+*Last updated: 2026-06-18 07:22:15 (SGT)*
 
-### 1. InvDesMobility: a reliability-gated first-principles feedback framework for closed-loop materials discovery
+### 1. Adaptable Method for Crystal Design across Diverse Constraints and Objectives with Pretrained Property Predictors
 
-**Authors:** Wen-Kao Li, Ze-Feng Gao, Peng-Jie Guo, Wei Ji, Zhong-Yi Lu
+**Authors:** Akihiro Fujii, Yoshitaka Ushiku, Koji Shimizu, Anh Khoa Augustin Lu, Satoshi Watanabe
 
-**Published:** 2026-06-15
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2606.16133v1
-
-**Link:** [http://arxiv.org/abs/2606.16133v1](http://arxiv.org/abs/2606.16133v1)
-
-**Summary:** Inverse materials design starts from target functionality and searches for structures that can realize it. Its value in closed-loop discovery depends not only on prediction performance, but also on whether expensive first-principles results are independently validated, provenance-recorded, and admitted as feedback only when evidence is sufficient. This is especially important for composite properties such as carrier mobility, where a final scalar value hides intermediate quantities, fit quality, convergence history, and workflow assumptions. Here we present InvDesMobility, a reliability-gated first-principles feedback framework that integrates multi-agent automated DFT, evidence stratification, generative structure proposal, acquisition ranking, and auditable release. Using 516 2DMatPedia-derived candidates, the workflow produced 280 QC-passed materials and 573 retained carrier-direction seed channels after channel-level reliability gating. These records were split into two feedback objects: relaxed structures updated the generative model, while retained mobility channels trained the acquisition model and set validation priority. Over multiple iterations, InvDesMobility screened 2.4 x 10^6 structures, submitted 102 candidates for DFT validation, and retained 86 reliability-gated generated channels across 41 formulas. Overall, the main contribution is not a fixed list of high-mobility materials, but a transferable feedback contract that makes closed-loop inverse design both useful and auditable when learning from expensive calculated properties. All source data, retained feedback records, and workflows are available at https://github.com/DreamLufei/invDesMobility, with an accompanying evidence website at https://dreamlufei.github.io/invDesMobility/....
-
----
-
-### 2. Machine learning enables roughness-driven inverse design of milling processes
-
-**Authors:** Hadi Bakhshan, Sima Farshbaf, Fernando Rastellini, Josep Maria Carbonell
-
-**Published:** 2026-06-14
-
-**Category:** cond-mat.other
-
-**ID:** 2606.16032v1
-
-**Link:** [http://arxiv.org/abs/2606.16032v1](http://arxiv.org/abs/2606.16032v1)
-
-**Summary:** Interest in applying data-driven approaches in manufacturing has grown significantly, particularly for mapping complex, high-dimensional relationships. The milling process is one area where predictive models can link influential parameters to surface roughness metrics prior to in situ operations. While this approach offers clear advantages, it faces challenges due to limited datasets and robustness issues in inverse design paradigms. To address these challenges, this paper proposes a machine learning (ML)-based framework for the inverse design of the surface milling process, with a focus on surface roughness as the design objective. The framework employs forward training of two ML models, a deep neural network (DNN) and a random forest (RF) ensemble, both developed using a high-fidelity synthetic dataset generated from a computational simulation framework. These trained models are integrated into a Bayesian optimization (BO) procedure to overcome the multiplicity problem arising from the many-to-one mapping inherent in the dataset. The approach identifies top-performing milling process configurations, considering both process and tool parameters, and presents them from the full solution space. The models achieve average relative errors below 5% when compared to reference results, thereby demonstrating the robustness and reliability of the proposed methodology....
-
----
-
-### 3. Sustainable Materials Discovery in the Era of Artificial Intelligence
-
-**Authors:** Sajid Mannan, Rupert J. Myers, Rohit Batra, Rocio Mercado, Lothar Wondraczek, N. M. Anoop Krishnan
-
-**Published:** 2026-01-29
+**Published:** 2024-10-11
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2601.21527v3
+**ID:** 2410.08562v5
 
-**Link:** [http://arxiv.org/abs/2601.21527v3](http://arxiv.org/abs/2601.21527v3)
+**Link:** [http://arxiv.org/abs/2410.08562v5](http://arxiv.org/abs/2410.08562v5)
 
-**Summary:** Artificial intelligence (AI) has transformed materials discovery, enabling rapid exploration of chemical space through generative models and surrogate screening. Yet current generative AI models for materials discovery, which now drive exploration of vast chemical and structural spaces, optimize candidates exclusively for structural stability and functional properties, with no integration of environmental assessment at any stage of the design loop. Prospective and ex-ante life cycle assessment methods exist and have been applied to emerging technologies, but they operate as standalone downstream analyses, not as active constraints within generative or active-learning pipelines. The result is that environmental feedback, even when produced, arrives after design decisions have been made rather than informing them. The disconnect between atomic-scale design and lifecycle assessment (LCA) reflects fundamental challenges: (i) data scarcity across heterogeneous sources, (ii) scale gaps from atoms to industrial systems, (iii) uncertainty in synthesis pathways, and (iv) the absence of frameworks that co-optimize performance with environmental impact. In this Perspective, we propose integrating upstream ML-assisted materials discovery with downstream LCA into the ML-LCA framework, comprising five components: information extraction for building materials-environment knowledge bases, harmonized databases linking properties to sustainability metrics, multi-scale models bridging atomic properties to lifecycle impacts, ensemble prediction of manufacturing pathways with uncertainty quantification, and uncertainty-aware optimization enabling simultaneous performance-sustainability navigation. Case studies spanning polymers, glass, photoresists, and cement demonstrate both necessity and feasibility while identifying material-specific integration challenges....
-
----
-
-### 4. Symmetry-aware generative design of flat-band materials beyond known crystal-net prototypes
-
-**Authors:** Yihao Wei, Ivan Savochkin, Artem Mishchenko, Xiangwen Wang, Qian Yang
-
-**Published:** 2026-06-13
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2606.15321v1
-
-**Link:** [http://arxiv.org/abs/2606.15321v1](http://arxiv.org/abs/2606.15321v1)
-
-**Summary:** Flat electronic bands underlie a range of strongly correlated and topological phenomena, whose design in real materials has so far relied on a small catalogue of named geometric motifs such as kagome, Lieb, and pyrochlore nets. This discrete catalogue is by no means to exhaust the geometries that support flat bands in real compounds, as band flatness is a property of network connectivity. Here we combine a continuous geometric representation of crystal sublattices, with a symmetry-constrained generative model, to access a broader design space for materials hosting flat bands. The key step is to choose sublattice motifs that are outside the known geometric clusters, ensuring the novelty of the generated structures. We then introduce SkeleGen, which pins these unconventional skeletons to symmetry-compatible Wyckoff positions while denoising the surrounding chemistry, resulting in 9,352 crystal candidates that survive stability and flatnessscreening. Band flatness is confirmed using high throughput full DFT calculations, which agree well also with the tight-binding spectra of the isolated skeletons, supporting a geometric origin of the band flatness. We demonstrate "out-of-distribution" motifs as a new design principle to dramatically expand geometric repertoire for materials discovery, potentially beyond flat bands....
+**Summary:** Advanced crystal design can accelerate materials discovery across applications from photovoltaics to spintronics. Practical design must satisfy multiple properties and physical constraints, yet existing machine-learning-based approaches to such design often depend on large datasets, retraining, or task-specific generators. Here, we show that direct predictor-guided gradient optimization enables data-efficient, constraint-rich crystal design by combining off-the-shelf predictors with site-wise element masks, template initialization, and task-specific losses. In perovskites, it outperformed generative and Bayesian baselines under three targets -- band gap, formation energy, and tolerance factor -- and two hard constraints. DFT assessment further showed band-gap targeting competitive with a leading generative model despite using predictors trained on roughly one-tenth of the data. By flexibly combining pretrained predictors with application-oriented masks and custom losses, the same framework supported half-metal design. Such modularity could help researchers and engineers translate diverse application requirements directly into optimized candidate crystals with minimal computational cost....
 
 ---
 
-### 5. Designing Strong and Broadband Nonreciprocal Thermal Radiation in Magnetic Topological Materials
+### 2. Toward Controllable Catalyst Inverse Design via Large-Scale Autoregressive Pretraining
 
-**Authors:** Yiyang Jiang, Yufei Zhao, Linxiao Zhu, Binghai Yan
+**Authors:** Dong Hyeon Mok, Jonggeol Na, Seoin Back
 
-**Published:** 2026-06-12
+**Published:** 2026-06-16
+
+**Category:** cs.LG
+
+**ID:** 2606.17445v1
+
+**Link:** [http://arxiv.org/abs/2606.17445v1](http://arxiv.org/abs/2606.17445v1)
+
+**Summary:** Inverse design of heterogeneous catalysts remains challenging because catalyst surfaces exhibit substantial structural complexity with coupled surface-adsorbate interactions across a vast chemical space that is difficult to explore efficiently through conventional screening alone. Although machine learning-based high-throughput screening has accelerated catalyst discovery, its efficiency inevitably declines as the search space grows, motivating the development of generative models that can directly construct catalysts with target properties. Here, we present a conditional catalyst generative model based on the Generative Pretrained Transformer architecture with a numerical embedding layer that enables the generation of catalyst structures conditioned on both categorical and continuous properties within a single autoregressive framework. The model was pretrained on 133 million catalyst structures and subsequently fine-tuned on approximately 460,000 optimized structures with associated categorical properties and binding energies for conditional generation. The resulting model achieved 98% structural validity, 95% optimization validity, and high categorical condition fidelity, with a 93 % joint match rate for adsorbate type and composition. For binding energy conditioning, the match rate of approximately 20% represents a four-fold improvement over the baseline training distribution, and the generated distributions shift systematically toward the target values, enabling a 1.5 to 4-fold improvement in screening efficiency for reaction-targeted catalyst discovery without additional fine-tuning. These results show that large-scale autoregressive pre-training, combined with explicit property conditioning, provides a practical route toward controllable catalyst generation and accelerated catalysts discovery....
+
+---
+
+### 3. Sustainable Metal-Organic Framework Water Harvesters in the Artificial Intelligence Era
+
+**Authors:** Reid A. Coyle, Shyam Chand Pal, Peter Walther, Saeun Park, Bin Feng, Zhiling Zheng
+
+**Published:** 2026-05-27
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2606.14861v1
+**ID:** 2605.29179v2
 
-**Link:** [http://arxiv.org/abs/2606.14861v1](http://arxiv.org/abs/2606.14861v1)
+**Link:** [http://arxiv.org/abs/2605.29179v2](http://arxiv.org/abs/2605.29179v2)
 
-**Summary:** Breaking reciprocity in thermal radiation opens opportunities for energy harvesting, sensing, and thermal management. Traditional nonreciprocal radiative semiconductor devices need external magnetic field. In this work, we predict a series of magnetic topological materials for magnetic-field-free nonreciprocal thermal radiation in the infrared regime, by combining first-principles calculations with Maxwell electrodynamics. We find strong and broadband nonreciprocity in magnetic Weyl semimetals (e.g., Co$_3$Sn$_2$S$_2$), outperforming the conventional semiconductor such as InAs. Furthermore, we propose universal material design recipes: strong nonreciprocity requires a large anomalous Hall response relative to the optical loss, whereas the broadband response favors large optical loss and small dielectric dispersion. Our work establishes a predictive materials-discovery framework and quantitative design rules for next-generation magnet-free nonreciprocal thermal devices....
+**Summary:** Metal-organic frameworks (MOFs) are excellent candidates for water harvesting due to their tunable pore environments, which can be precisely engineered to capture and release water in arid conditions. Integrating artificial intelligence (AI) into MOF discovery can further accelerate the design of high-performance sorbents by identifying structural features that enhance atmospheric water harvesting (AWH), stability, and cycling efficiency. In this Perspective, we examine key MOF design principles, including cooperative adsorption, operational relative humidity (RH), uptake capacity, hysteresis, and scalability. We highlight recent design advancements such as multivariate strategies and long-arm linker extension, and examine how these principles tune pore capacity and hydrophilicity, while preserving stability and crystallinity. Furthermore, we discuss how AI, large language models (LLMs), and data mining can accelerate the discovery process through predictive synthesis, inverse design, and elucidating synthesis-structure-property relationships for the next generation of MOF water harvesters....
 
 ---
 
