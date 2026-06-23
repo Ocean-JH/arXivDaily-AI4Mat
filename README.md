@@ -34,55 +34,71 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (3)
+## New Papers (4)
 
-*Last updated: 2026-06-18 07:22:15 (SGT)*
+*Last updated: 2026-06-24 07:07:22 (SGT)*
 
-### 1. Adaptable Method for Crystal Design across Diverse Constraints and Objectives with Pretrained Property Predictors
+### 1. Discovery and recovery of crystalline materials with property-conditioned transformers
 
-**Authors:** Akihiro Fujii, Yoshitaka Ushiku, Koji Shimizu, Anh Khoa Augustin Lu, Satoshi Watanabe
+**Authors:** Cyprien Bone, Matthew Walker, Bradley A. A. Martin, Kuangdai Leng, Luis M. Antunes, Ricardo Grau-Crespo, Amil Aligayev, Javier Dominguez, Keith T. Butler
 
-**Published:** 2024-10-11
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2410.08562v5
-
-**Link:** [http://arxiv.org/abs/2410.08562v5](http://arxiv.org/abs/2410.08562v5)
-
-**Summary:** Advanced crystal design can accelerate materials discovery across applications from photovoltaics to spintronics. Practical design must satisfy multiple properties and physical constraints, yet existing machine-learning-based approaches to such design often depend on large datasets, retraining, or task-specific generators. Here, we show that direct predictor-guided gradient optimization enables data-efficient, constraint-rich crystal design by combining off-the-shelf predictors with site-wise element masks, template initialization, and task-specific losses. In perovskites, it outperformed generative and Bayesian baselines under three targets -- band gap, formation energy, and tolerance factor -- and two hard constraints. DFT assessment further showed band-gap targeting competitive with a leading generative model despite using predictors trained on roughly one-tenth of the data. By flexibly combining pretrained predictors with application-oriented masks and custom losses, the same framework supported half-metal design. Such modularity could help researchers and engineers translate diverse application requirements directly into optimized candidate crystals with minimal computational cost....
-
----
-
-### 2. Toward Controllable Catalyst Inverse Design via Large-Scale Autoregressive Pretraining
-
-**Authors:** Dong Hyeon Mok, Jonggeol Na, Seoin Back
-
-**Published:** 2026-06-16
-
-**Category:** cs.LG
-
-**ID:** 2606.17445v1
-
-**Link:** [http://arxiv.org/abs/2606.17445v1](http://arxiv.org/abs/2606.17445v1)
-
-**Summary:** Inverse design of heterogeneous catalysts remains challenging because catalyst surfaces exhibit substantial structural complexity with coupled surface-adsorbate interactions across a vast chemical space that is difficult to explore efficiently through conventional screening alone. Although machine learning-based high-throughput screening has accelerated catalyst discovery, its efficiency inevitably declines as the search space grows, motivating the development of generative models that can directly construct catalysts with target properties. Here, we present a conditional catalyst generative model based on the Generative Pretrained Transformer architecture with a numerical embedding layer that enables the generation of catalyst structures conditioned on both categorical and continuous properties within a single autoregressive framework. The model was pretrained on 133 million catalyst structures and subsequently fine-tuned on approximately 460,000 optimized structures with associated categorical properties and binding energies for conditional generation. The resulting model achieved 98% structural validity, 95% optimization validity, and high categorical condition fidelity, with a 93 % joint match rate for adsorbate type and composition. For binding energy conditioning, the match rate of approximately 20% represents a four-fold improvement over the baseline training distribution, and the generated distributions shift systematically toward the target values, enabling a 1.5 to 4-fold improvement in screening efficiency for reaction-targeted catalyst discovery without additional fine-tuning. These results show that large-scale autoregressive pre-training, combined with explicit property conditioning, provides a practical route toward controllable catalyst generation and accelerated catalysts discovery....
-
----
-
-### 3. Sustainable Metal-Organic Framework Water Harvesters in the Artificial Intelligence Era
-
-**Authors:** Reid A. Coyle, Shyam Chand Pal, Peter Walther, Saeun Park, Bin Feng, Zhiling Zheng
-
-**Published:** 2026-05-27
+**Published:** 2025-11-26
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2605.29179v2
+**ID:** 2511.21299v3
 
-**Link:** [http://arxiv.org/abs/2605.29179v2](http://arxiv.org/abs/2605.29179v2)
+**Link:** [http://arxiv.org/abs/2511.21299v3](http://arxiv.org/abs/2511.21299v3)
 
-**Summary:** Metal-organic frameworks (MOFs) are excellent candidates for water harvesting due to their tunable pore environments, which can be precisely engineered to capture and release water in arid conditions. Integrating artificial intelligence (AI) into MOF discovery can further accelerate the design of high-performance sorbents by identifying structural features that enhance atmospheric water harvesting (AWH), stability, and cycling efficiency. In this Perspective, we examine key MOF design principles, including cooperative adsorption, operational relative humidity (RH), uptake capacity, hysteresis, and scalability. We highlight recent design advancements such as multivariate strategies and long-arm linker extension, and examine how these principles tune pore capacity and hydrophilicity, while preserving stability and crystallinity. Furthermore, we discuss how AI, large language models (LLMs), and data mining can accelerate the discovery process through predictive synthesis, inverse design, and elucidating synthesis-structure-property relationships for the next generation of MOF water harvesters....
+**Summary:** Generative models have recently shown great promise for accelerating the design and discovery of new functional materials. Conditional generation enhances this capacity by allowing inverse design, where specific desired properties can be requested during the generation process. However, conditioning of transformer-based approaches, in particular, is constrained by discrete tokenisation schemes and the risk of catastrophic forgetting during fine-tuning. This work introduces CrystaLLM-π (property injection), a conditional autoregressive framework that integrates continuous property representations directly into the transformer's attention mechanism. Two architectures, Property-Key-Value (PKV) Prefix attention and PKV Residual attention, are presented. These methods bypass inefficient sequence-level tokenisation and preserve foundational knowledge from unsupervised pre-training on Crystallographic Information Files (CIFs) as textual input. We establish the efficacy of these mechanisms through systematic robustness studies and evaluate the framework's versatility across two distinct tasks. First, for structure recovery, the model processes high-dimensional, heterogeneous X-ray diffraction patterns, achieving structural accuracy competitive with specialised models and demonstrating applications to experimental structure recovery and polymorph differentiation. Second, for materials discovery, the model is fine-tuned on a specialised photovoltaic dataset to generate novel, stable candidates validated by Density Functional Theory (DFT). It implicitly learns to target optimal band gap regions for high photovoltaic efficiency, demonstrating a capability to map complex structure-property relationships. CrystaLLM-π provides a unified, flexible, and computationally efficient framework for inverse materials design....
+
+---
+
+### 2. ARIA: A Causal-Aware Framework for Rescuing LLM Reasoning in Trustworthy Materials Discovery
+
+**Authors:** Yi Cao, Liaoyaqi Wang, Jieneng Chen, Benjamin Van Durme, Alan Yuille, Paulette Clancy
+
+**Published:** 2026-06-21
+
+**Category:** cs.AI
+
+**ID:** 2606.22375v1
+
+**Link:** [http://arxiv.org/abs/2606.22375v1](http://arxiv.org/abs/2606.22375v1)
+
+**Summary:** Generative models have revolutionized the process of materials discovery, yet they often fail to satisfy underlying physical causality. Through an analysis of Large Language Models (LLMs) augmented with knowledge graphs derived from current literature, we uncover a phenomenon termed contextual tunneling, where models "over-anchor" on narrow, retrieved evidence while suppressing global physical reasoning. To address this problem, we introduce ARIA, a causal-aware framework that conditions knowledge use on mechanistic completeness. ARIA routes each query through a three-tier cascade: (i) direct causal reasoning when complete evidence chains of Process-Structure-Property (PSP) are available, (ii) physics-informed analogical transfer for sparse or novel material systems, and (iii) explicit parametric fallback when external evidence is incomplete. As a proof of concept, we construct a Knowledge Graph (KG) containing 2,839 extracted PSP relations from peer-reviewed articles in the materials literature and evaluate ARIA on forward prediction and inverse design tasks for two-dimensional (2D) materials. ARIA mitigates contextual tunneling, improves over unaugmented and naive KG-augmented baselines, and provides further gains when an online literature search is used for evidence enrichment. Crucially, ARIA produces auditable causal traces, enabling physically grounded and trustworthy AI-assisted materials discovery....
+
+---
+
+### 3. New Crystal Structures Hide in Plain Sight: A Stress Test for AI-Guided Materials Discovery
+
+**Authors:** Xin Zhang, Scott B. Lee, Sudipta Chatterjee, Hanqi Pi, Yi Jiang, Fatmagül Katmer, Emily G. Ward, Daniel E. Widdowson, Charles C. Tam, Sarah Schwarz, Connor J. Pollak, Jaime M. Moya, Grigorii Skorupskii, Vitaliy A. Kurlin, Stephen D. Wilson, B. Andrei Bernevig, Leslie M. Schoop
+
+**Published:** 2026-03-05
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2603.05613v2
+
+**Link:** [http://arxiv.org/abs/2603.05613v2](http://arxiv.org/abs/2603.05613v2)
+
+**Summary:** New types of crystal structures are discovered only rarely, and the artificial intelligence (AI) models now reshaping materials discovery have so far produced new chemical compositions within known structural families rather than genuinely new structures. We report GdNiSn4 and LuNiSn4, intermetallics that adopt a previously unreported structure type, found not by computation but by exploratory synthesis. Single-crystal diffraction shows that the structure is an intergrowth of two known structural units. We then use this system as a benchmark for two leading generative models, MatterGen and DiffCSP++. For DiffCSP++, the benchmark is performed in its crystallographically constrained setting, using the required space-group and Wyckoff-position inputs. Under our sampling budget, neither model recovers the experimentally reported monoclinic structure within the structural-matching tolerance. The generated structures are evaluated without further structural relaxation using the nonmagnetic analog LuNiSn4, where we rule out 4f magnetism as the cause. Because the new structure is built from familiar building blocks, it should be derivable. We argue that encoding chemical reasoning, such as the stacking of known motifs, is a concrete path toward AI that can discover structurally novel materials....
+
+---
+
+### 4. Empowering Polymeric Materials Discovery by Artificial Intelligence
+
+**Authors:** Chenyao Ma, Linda Zhang, Yuheng Chen, Wei Du, Shangwen Fang, Zihao Jiang, Chuanyu Liu, Xinyu Ma, Rui Su, Gang Wang, Muyao Yu, Dong Zhong, Jie Zhu, Weibo Gong, Huan Gu, Limin Li, Chen Shen, Rui Wu, Zhenghao Wu, Kan Xu, Min Zhou, Donglin He, Xiayun Huang, Shan Jiang, Pengfei Ou, Jiayu Peng, Yuwei Zhang, Jie Zhao, Di Zhang, Piao Ma, Zhenghao Li, Hao Li
+
+**Published:** 2026-06-18
+
+**Category:** physics.chem-ph
+
+**ID:** 2606.20753v1
+
+**Link:** [http://arxiv.org/abs/2606.20753v1](http://arxiv.org/abs/2606.20753v1)
+
+**Summary:** Polymeric materials underpin modern technologies spanning energy storage, microelectronics, healthcare and sustainable manufacturing. Yet their rational design remains exceptionally challenging because material performance emerges from complex interactions among molecular composition, chain architecture, processing history and hierarchical structural evolution across multiple length and time scales. Consequently, polymer research has long relied on labor-intensive experimentation and fragmented modeling approaches, limiting both mechanistic understanding and innovation efficiency. Recent advances in data infrastructure, machine learning, large artificial intelligence (AI) models and laboratory automation are beginning to reshape this landscape. Rather than functioning as isolated tools, polymer databases, predictive models, AI agents and automated laboratories are increasingly converging into interconnected discovery ecosystems. As a result, the central challenge is shifting from improving predictive accuracy alone to enabling reliable decision-making, adaptive learning and seamless integration across computation, experimentation and scientific reasoning. We argue that polymer science is entering an era of autonomous discovery, in which data, simulation, reasoning and experimentation operate within self-improving feedback loops that continuously generate hypotheses, design materials, execute experiments and refine predictive models. By unifying molecular design, process optimization, experimental validation and industrial translation, such autonomous ecosystems establish a more predictive, reproducible and scalable paradigm for polymer innovation, fundamentally transforming how polymer research is conducted....
 
 ---
 
