@@ -1,0 +1,28 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2606.25502v1",
+    "title": "A Differentiable DFT-Based Framework for Inverse Materials Design",
+    "authors": [
+      "Kohei Ishii",
+      "Hisazumi Akai",
+      "Tetsuya Fukushima",
+      "Hikari Shinya",
+      "Koji Inui"
+    ],
+    "summary": "Discovering solid-state materials with target properties remains a central challenge in computational materials science. Existing approaches -- high-throughput screening, surrogate optimization, and generative models -- require extensive evaluations or training data and extrapolate poorly to unseen compositions. Here we develop a first-principles inverse-design framework, integrating reverse-mode automatic differentiation (AD) into KKR-CPA -- the Korringa--Kohn--Rostoker method with the coherent potential approximation -- where atomic compositions are continuous variables to be optimized. Reverse-mode AD yields gradients of objective functions with respect to composition at a cost independent of the number of candidate elements, enabling gradient-based optimization to identify materials from compositional spaces spanning dozens of elements. In this framework, any computable quantity can serve as the objective. We demonstrate this generality through two contrasting applications, magnetic alloys and half-metals, yielding candidates such as (Lu$_{0.553}$Yb$_{0.447}$)(Co$_{0.759}$Fe$_{0.241}$)$_2$Fe$_3$ and FeZr(Sb$_{0.94}$Te$_{0.06}$). Our framework offers a physically grounded route from a target property to the material that realizes it.",
+    "published": "2026-06-24T07:34:51+00:00",
+    "updated": "2026-06-24T07:34:51+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "physics.comp-ph"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": "24 pages, 6 figures, 3 tables",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2606.25502v1",
+    "base_id": "2606.25502",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2606.25502v1"
+  }
+]
