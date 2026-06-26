@@ -34,23 +34,39 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## New Papers (2)
 
-*Last updated: 2026-06-26 07:16:20 (SGT)*
+*Last updated: 2026-06-27 07:03:50 (SGT)*
 
-### 1. A Differentiable DFT-Based Framework for Inverse Materials Design
+### 1. Inverse Design of Compact and Wideband Inverted Doherty Power Amplifiers Using Deep Learning
 
-**Authors:** Kohei Ishii, Hisazumi Akai, Tetsuya Fukushima, Hikari Shinya, Koji Inui
+**Authors:** Han Zhou, Haojie Chang, David Widen, Christian Fager
 
-**Published:** 2026-06-24
+**Published:** 2026-06-25
+
+**Category:** eess.SP
+
+**ID:** 2606.27002v1
+
+**Link:** [http://arxiv.org/abs/2606.27002v1](http://arxiv.org/abs/2606.27002v1)
+
+**Summary:** This paper presents a deep learning-assisted methodology for the inverse synthesis of a compact, wideband inverted Doherty power amplifier (PA). Convolutional neural networks (CNNs) and genetic algorithms (GAs) are jointly employed to generate pixelated Doherty combiner networks that integrate load modulation, impedance matching, power combining, and phase compensation into a single structure. As a proof of concept, we design and fabricate a GaN HEMT Doherty PA with a pixelated output combiner. The prototype achieves a measured peak drain efficiency of 51%-63% and a 6-dB back-off efficiency of 48%-54% over 1.9-2.5 GHz. Within the same frequency range, the measured output power is 44+/-0.3 dBm. Furthermore, with digital predistortion (DPD) applied, the prototype circuit demonstrates an adjacent channel leakage ratio (ACLR) better than -53.2 dBc....
+
+---
+
+### 2. Finetuning-Free Diffusion Model with Adaptive Constraint Guidance for Inorganic Crystal Structure Generation
+
+**Authors:** Auguste de Lambilly, Vladimir Baturin, David Portehault, Guillaume Lambard, Nataliya Sokolovska, Florence d'Alché-Buc, Jean-Claude Crivello
+
+**Published:** 2026-04-14
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2606.25502v1
+**ID:** 2604.13354v3
 
-**Link:** [http://arxiv.org/abs/2606.25502v1](http://arxiv.org/abs/2606.25502v1)
+**Link:** [http://arxiv.org/abs/2604.13354v3](http://arxiv.org/abs/2604.13354v3)
 
-**Summary:** Discovering solid-state materials with target properties remains a central challenge in computational materials science. Existing approaches -- high-throughput screening, surrogate optimization, and generative models -- require extensive evaluations or training data and extrapolate poorly to unseen compositions. Here we develop a first-principles inverse-design framework, integrating reverse-mode automatic differentiation (AD) into KKR-CPA -- the Korringa--Kohn--Rostoker method with the coherent potential approximation -- where atomic compositions are continuous variables to be optimized. Reverse-mode AD yields gradients of objective functions with respect to composition at a cost independent of the number of candidate elements, enabling gradient-based optimization to identify materials from compositional spaces spanning dozens of elements. In this framework, any computable quantity can serve as the objective. We demonstrate this generality through two contrasting applications, magnetic alloys and half-metals, yielding candidates such as (Lu$_{0.553}$Yb$_{0.447}$)(Co$_{0.759}$Fe$_{0.241}$)$_2$Fe$_3$ and FeZr(Sb$_{0.94}$Te$_{0.06}$). Our framework offers a physically grounded route from a target property to the material that realizes it....
+**Summary:** Generative diffusion models have emerged as powerful tools for the discovery of inorganic crystal structures, yet steering their sampling process toward user-defined physical and chemical objectives remains challenging. We present a computational framework that integrates adaptive constraint guidance into a pre-trained crystal diffusion model, enabling the generation of candidate structures that satisfy targeted structural and chemical requirements without model retraining. The approach incorporates differentiable constraint functions directly during sampling, providing an interpretable mechanism for expert-driven exploration of the crystal structure space. To assess the reliability of generated candidates, we introduce a multi-stage validation workflow combining descriptor-based analysis, duplicate removal, comparison with reference crystal databases, graph neural network energy prediction, and thermodynamic stability evaluation through convex-hull analysis. The framework is applied to several classes of inorganic compounds and to constraints involving atomic volume, local coordination environments, and near-neighbor structural motifs. Results demonstrate that adaptive guidance effectively redirects the sampling distribution toward structures exhibiting the desired characteristics while preserving chemical plausibility. Subsequent validation reveals which generated candidates remain viable after energetic and thermodynamic screening. The proposed methodology provides a practical and transparent strategy for incorporating expert knowledge into crystal generative models and establishes a general computational framework for constrained materials discovery....
 
 ---
 
