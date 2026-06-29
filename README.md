@@ -36,37 +36,37 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 ## New Papers (2)
 
-*Last updated: 2026-06-27 07:03:50 (SGT)*
+*Last updated: 2026-06-30 06:55:19 (SGT)*
 
-### 1. Inverse Design of Compact and Wideband Inverted Doherty Power Amplifiers Using Deep Learning
+### 1. Physics-constrained neural networks for surrogate modeling of lossless periodic structures
 
-**Authors:** Han Zhou, Haojie Chang, David Widen, Christian Fager
+**Authors:** Eric Prehn, Peter Jung
 
-**Published:** 2026-06-25
+**Published:** 2026-06-26
 
-**Category:** eess.SP
+**Category:** physics.optics
 
-**ID:** 2606.27002v1
+**ID:** 2606.28119v1
 
-**Link:** [http://arxiv.org/abs/2606.27002v1](http://arxiv.org/abs/2606.27002v1)
+**Link:** [http://arxiv.org/abs/2606.28119v1](http://arxiv.org/abs/2606.28119v1)
 
-**Summary:** This paper presents a deep learning-assisted methodology for the inverse synthesis of a compact, wideband inverted Doherty power amplifier (PA). Convolutional neural networks (CNNs) and genetic algorithms (GAs) are jointly employed to generate pixelated Doherty combiner networks that integrate load modulation, impedance matching, power combining, and phase compensation into a single structure. As a proof of concept, we design and fabricate a GaN HEMT Doherty PA with a pixelated output combiner. The prototype achieves a measured peak drain efficiency of 51%-63% and a 6-dB back-off efficiency of 48%-54% over 1.9-2.5 GHz. Within the same frequency range, the measured output power is 44+/-0.3 dBm. Furthermore, with digital predistortion (DPD) applied, the prototype circuit demonstrates an adjacent channel leakage ratio (ACLR) better than -53.2 dBc....
+**Summary:** We introduce a physics-constrained neural network (PCNN) for the rapid prediction of rigorous coupled-wave analysis (RCWA) outputs in the form of Jones matrices. Starting from energy conservation in lossless layered periodic structures, we use the fact that RCWA outputs lie on a Stiefel manifold. This energy constraint is enforced as a hard condition by projecting onto the manifold using differentiable symmetric orthogonalization. The resulting surrogate enforces energy conservation by construction while preserving differentiability for gradient-based inverse design. The performance and generality of the proposed approach are demonstrated through the inverse design of a diffractive waveguide combiner for augmented reality glasses....
 
 ---
 
-### 2. Finetuning-Free Diffusion Model with Adaptive Constraint Guidance for Inorganic Crystal Structure Generation
+### 2. Amorphous Fe-Sn nanofilms for anomalous-Nernst heat-flux sensing
 
-**Authors:** Auguste de Lambilly, Vladimir Baturin, David Portehault, Guillaume Lambard, Nataliya Sokolovska, Florence d'Alché-Buc, Jean-Claude Crivello
+**Authors:** Kenji Tanabe, Ko Mibu, Atsushi Tsukazaki, Kohei Fujiwara
 
-**Published:** 2026-04-14
+**Published:** 2026-06-26
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2604.13354v3
+**ID:** 2606.27716v1
 
-**Link:** [http://arxiv.org/abs/2604.13354v3](http://arxiv.org/abs/2604.13354v3)
+**Link:** [http://arxiv.org/abs/2606.27716v1](http://arxiv.org/abs/2606.27716v1)
 
-**Summary:** Generative diffusion models have emerged as powerful tools for the discovery of inorganic crystal structures, yet steering their sampling process toward user-defined physical and chemical objectives remains challenging. We present a computational framework that integrates adaptive constraint guidance into a pre-trained crystal diffusion model, enabling the generation of candidate structures that satisfy targeted structural and chemical requirements without model retraining. The approach incorporates differentiable constraint functions directly during sampling, providing an interpretable mechanism for expert-driven exploration of the crystal structure space. To assess the reliability of generated candidates, we introduce a multi-stage validation workflow combining descriptor-based analysis, duplicate removal, comparison with reference crystal databases, graph neural network energy prediction, and thermodynamic stability evaluation through convex-hull analysis. The framework is applied to several classes of inorganic compounds and to constraints involving atomic volume, local coordination environments, and near-neighbor structural motifs. Results demonstrate that adaptive guidance effectively redirects the sampling distribution toward structures exhibiting the desired characteristics while preserving chemical plausibility. Subsequent validation reveals which generated candidates remain viable after energetic and thermodynamic screening. The proposed methodology provides a practical and transparent strategy for incorporating expert knowledge into crystal generative models and establishes a general computational framework for constrained materials discovery....
+**Summary:** Amorphous magnetic films are promising for anomalous-Nernst heat-flux sensing because their low thermal conductivity can enhance the temperature gradient generated by an applied heat flux. However, amorphization often degrades electronic transport and thermoelectric properties, making it challenging to obtain a large anomalous Nernst response in structurally disordered films. Here, we demonstrate nanometer-thick amorphous Fe-Sn films as high-sensitivity anomalous-Nernst heat-flux sensing materials. By systematically controlling composition and thickness, we find that amorphous Fe-Sn nanofilms combine a large anomalous Nernst response with low thermal conductivity, resulting in a heat-flux sensitivity of 0.37 um/A. This value exceeds the sensitivities reported for both amorphous magnetic thin films and representative crystalline topological magnets. X-ray diffraction and Mossbauer spectroscopy show that the optimized films lack long-range crystallinity while retaining local Fe-Sn environments, suggesting that short-range atomic order contributes to the anomalous Nernst response in the amorphous matrix. The sensitivity is also reproduced on flexible polymer substrates, indicating compatibility with mechanically compliant device architectures. These results establish amorphous Fe-Sn nanofilms as a platform for anomalous-Nernst heat-flux sensing and provide a materials design route based on local-structure control and thermal-conductivity reduction....
 
 ---
 
