@@ -1,0 +1,105 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2607.02015v1",
+    "title": "Mirror Illusion Art",
+    "authors": [
+      "Xiaopei Zhu",
+      "Zeyuan Li",
+      "Jun Zhu",
+      "Xiaolin Hu"
+    ],
+    "summary": "Mirror Illusion Art is a novel reflection-conditioned 3D illusion where one object yields two target appearances (front and mirror). The task is formulated as inverse design from two target 2D images (front and mirror) to a printable 3D object with geometry and texture. Prior topology-driven and shadow-based approaches demand substantial manual effort, optimize shape only, and often yield non-smooth or incomplete geometry. To address these challenges, we propose AutoMIA, an automated Mirror Illusion Art design pipeline that jointly optimizes shape and color. To stabilize optimization and suppress artifacts, four mechanisms are introduced: (1) projection-alignment component (PAC) selection to reduce surface noise, (2) position-weighted adaptive (PWA) suppression for background noise, (3) internal voxel preservation (IVP) to prevent internal fractures, and (4) shape-color decoupled (SCD) optimization that balance shape and color optimization. AutoMIA generate diverse smooth Mirror Illusion artworks successfully both in the digital and physical world, with only around 76s design time and 2.6 GB memory on average using a single RTX 3090, advancing inverse graphics and computational design. Our code is available at https://github.com/zxp555/AutoMIA.",
+    "published": "2026-07-02T10:47:42+00:00",
+    "updated": "2026-07-02T10:47:42+00:00",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "comment": "CVPR 2026 Highlight, also got an Efficient CVPR award",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2607.02015v1",
+    "base_id": "2607.02015",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2607.02015v1"
+  },
+  {
+    "id": "http://arxiv.org/abs/2607.01004v1",
+    "title": "Complex crystal structure prediction using ML-enhanced multi-minima iterative genetic algorithm",
+    "authors": [
+      "Ling Tang",
+      "Weiyi Xia",
+      "Tyler J. Slade",
+      "Paul C. Canfield",
+      "Cai-Zhuang Wang"
+    ],
+    "summary": "Current machine learning (ML) approaches for materials discovery rely heavily on known structural databases, limiting their ability to identify entirely novel structure types. In this work, we develop a multi-minima iterative genetic algorithm (MMIGA) that integrates an artificial-neural-network machine learning (ANN-ML) interatomic potential with an iterative, metadynamics-inspired penalty scheme. We demonstrate the robustness of this method on a complex ternary La-Co-Pb system, characterized by Co-Pb immiscibility and an intricate energy landscape. The ML-enhanced MMIGA successfully predicts the ground-state Pbam structure of the recently synthesized La4Co4Pb antagonistic-pair-phase, a novel structure missed by previous database-reliant ML predictions, while also identifying multiple metastable competing phases. Additionally, we challenged the MMIGA method to predict the structure of La5CoPb2 antagonistic-pair-phase, a new compound discovered during earlier attempts to synthesize the predicted phase La3CoPb. With only knowledge of the composition, our MMIGA approach successfully predicts the orthorhombic structure of La5CoPb2, producing an exact match with the structure independently determined by x-ray diffraction. By efficiently mapping both global minimum and relevant competing metastable states, this approach provides critical theoretical insights into phase selection for novel quantum and magnetic materials.",
+    "published": "2026-07-01T14:44:13+00:00",
+    "updated": "2026-07-01T14:44:13+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2607.01004v1",
+    "base_id": "2607.01004",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2607.01004v1"
+  },
+  {
+    "id": "http://arxiv.org/abs/2607.00924v1",
+    "title": "Graph-Native Reinforcement Learning Enables Traceable Scientific Hypothesis Generation through Conceptual Recombination",
+    "authors": [
+      "Subhadeep Pal",
+      "Shashwat Sourav",
+      "Tirthankar Ghosal",
+      "Markus J. Buehler"
+    ],
+    "summary": "Accelerating materials discovery requires AI systems that can generate scientifically valid hypotheses through multi-step, domain-grounded reasoning. Standard large language models often produce fluent but weakly traceable responses to open-ended materials design problems, making it difficult to determine whether final answers are supported by coherent intermediate reasoning. We develop Graph-PRefLexOR, a family of graph-native reasoning models fine-tuned with Group Relative Policy Optimization (GRPO) to organize reasoning into explicit phases for mechanism exploration, graph construction, pattern extraction, and hypothesis synthesis. This design links neural language generation with symbolic relational structure, enabling causal connections to be constructed, inspected, and reused. On 100 open-ended questions from materials science and mechanics literature, Graph-PRefLexOR achieves 40-65% improvements over corresponding base models, with the largest gains in reasoning traceability. Embedding analyses show broader semantic exploration and approximately 2-3 times greater semantic diversity than baselines. Semantic backtracking and layer-wise hidden-state analyses further show stronger alignment between structured reasoning and final answers. Finally, test-time graph expansion reveals that additional compute primarily increases long-range conceptual recombination within a bounded semantic space, rather than simply expanding semantic coverage. These results establish graph-native reinforcement learning as a pathway toward interpretable AI systems for scientific hypothesis generation in materials design and other scientific applications.",
+    "published": "2026-07-01T13:26:10+00:00",
+    "updated": "2026-07-01T13:26:10+00:00",
+    "categories": [
+      "cs.AI",
+      "cond-mat.mtrl-sci",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "primary_category": "cs.AI",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2607.00924v1",
+    "base_id": "2607.00924",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2607.00924v1"
+  },
+  {
+    "id": "http://arxiv.org/abs/2604.22938v2",
+    "title": "Large language model-enabled automated data extraction for concrete materials informatics",
+    "authors": [
+      "Zhanzhao Li",
+      "Kengran Yang",
+      "Qiyao He",
+      "Kai Gong"
+    ],
+    "summary": "The promise of data-driven materials discovery remains constrained by the scarcity of large, high-quality, and accessible experimental datasets. Here, we introduce a generalizable large language model (LLM)-powered pipeline for automated extraction and structuring of materials data from unstructured scientific literature, using concrete materials as a representative and particularly challenging example. The pipeline exhibits robust performance across a broad range of LLMs and achieves an $F_1$ score of up to 0.98 for diverse composition--process--property attributes. Within one hour, it extracts nearly 9,000 high-quality records with over 100 attributes from a corpus screened from more than 27,000 publications, enabling the construction of the largest open laboratory database for blended cement concrete. Machine learning analyses underscore the importance of large, diverse, and information-rich datasets for enhancing both in-distribution accuracy and out-of-distribution generalization to unseen materials. The proposed pipeline is readily adaptable to other materials domains and accelerates the development of scalable data infrastructures for materials informatics.",
+    "published": "2026-04-24T18:24:19+00:00",
+    "updated": "2026-06-30T23:32:43+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": "21 pages, 5 figures, 1 table",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2604.22938v2",
+    "base_id": "2604.22938",
+    "version": "2",
+    "url": "http://arxiv.org/abs/2604.22938v2"
+  }
+]

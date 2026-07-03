@@ -36,69 +36,69 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 ## New Papers (4)
 
-*Last updated: 2026-07-01 07:10:01 (SGT)*
+*Last updated: 2026-07-04 07:01:11 (SGT)*
 
-### 1. Accelerated Inorganic Electrides Discovery by Generative Models and Hierarchical Screening
+### 1. Mirror Illusion Art
 
-**Authors:** Shuo Tao, Qiang Zhu
+**Authors:** Xiaopei Zhu, Zeyuan Li, Jun Zhu, Xiaolin Hu
 
-**Published:** 2026-01-28
+**Published:** 2026-07-02
+
+**Category:** cs.CV
+
+**ID:** 2607.02015v1
+
+**Link:** [http://arxiv.org/abs/2607.02015v1](http://arxiv.org/abs/2607.02015v1)
+
+**Summary:** Mirror Illusion Art is a novel reflection-conditioned 3D illusion where one object yields two target appearances (front and mirror). The task is formulated as inverse design from two target 2D images (front and mirror) to a printable 3D object with geometry and texture. Prior topology-driven and shadow-based approaches demand substantial manual effort, optimize shape only, and often yield non-smooth or incomplete geometry. To address these challenges, we propose AutoMIA, an automated Mirror Illusion Art design pipeline that jointly optimizes shape and color. To stabilize optimization and suppress artifacts, four mechanisms are introduced: (1) projection-alignment component (PAC) selection to reduce surface noise, (2) position-weighted adaptive (PWA) suppression for background noise, (3) internal voxel preservation (IVP) to prevent internal fractures, and (4) shape-color decoupled (SCD) optimization that balance shape and color optimization. AutoMIA generate diverse smooth Mirror Illusion artworks successfully both in the digital and physical world, with only around 76s design time and 2.6 GB memory on average using a single RTX 3090, advancing inverse graphics and computational design. Our code is available at https://github.com/zxp555/AutoMIA....
+
+---
+
+### 2. Complex crystal structure prediction using ML-enhanced multi-minima iterative genetic algorithm
+
+**Authors:** Ling Tang, Weiyi Xia, Tyler J. Slade, Paul C. Canfield, Cai-Zhuang Wang
+
+**Published:** 2026-07-01
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2601.21077v2
+**ID:** 2607.01004v1
 
-**Link:** [http://arxiv.org/abs/2601.21077v2](http://arxiv.org/abs/2601.21077v2)
+**Link:** [http://arxiv.org/abs/2607.01004v1](http://arxiv.org/abs/2607.01004v1)
 
-**Summary:** Electrides are exotic compounds in which excess electrons occupy interstitial regions of the crystal lattice and serve as anions, exhibiting exceptional properties such as low work function, high electron mobility, and strong catalytic activity. Although they show promise for diverse applications, identifying new electrides remains challenging due to the difficulty of achieving energetically favorable electron localization in crystal cavities. Here, we present an accelerated materials discovery framework that combines physical principles, diffusion-based materials generation with hierarchical thermodynamic and electronic structure screening. Using this workflow, we systematically explored 1,510 binary and 6,654 ternary chemical compositions containing excess valence electrons from electropositive alkaline, alkaline-earth, and early transition metals, and then filtered them with a high throughput validation on both thermodynamical stability and electronic structure analysis. As a result, we have identified 264 new electron rich compounds within 0.05 eV/atom above the convex hull at the density functional theory (DFT) level, including 13 thermodynamically stable electrides. Our approach demonstrates a generalizable strategy for targeted materials discovery in a vast chemical space....
-
----
-
-### 2. Interpretable Inverse Design of Metal-Organic Frameworks with Large Language Model Agents
-
-**Authors:** Kyungmin Nam, Seunghee Han, Jihan Kim
-
-**Published:** 2026-06-28
-
-**Category:** cs.LG
-
-**ID:** 2606.29459v1
-
-**Link:** [http://arxiv.org/abs/2606.29459v1](http://arxiv.org/abs/2606.29459v1)
-
-**Summary:** Inverse design of metal-organic frameworks (MOFs) requires searching a combinatorially vast space where property labels are expensive and most machine-learning models reveal little about why a structure succeeds. We introduce LLM4MOF, a closed-loop framework in which language-model agents reason about chemistry, build candidate MOFs, and test them in simulation, refining hypotheses over ten autonomous iterations. One agent proposes interpretable design hypotheses over metal nodes, linkers, pore geometry, and functional chemistry, and a second translates them into constraints that select candidate MOFs, each made of a metal node, organic linker, and matching topology. Each hypothesis is tested through four diagnostic beams that apply different subsets of its constraints, so comparing them shows whether geometry, chemistry, or metal choice drives performance. Even when blind to the global property landscape of databases, LLM4MOF concentrates its search on top-performing structures across six adsorption, separation, and electronic-structure tasks within 400 property evaluations. The same loop also generates new MOFs de novo and validates them in live simulation, where it adapts the geometry to each requested condition, outperforming random search and a genetic algorithm at roughly $1 per campaign. LLM4MOF shows that language-model agents can run interpretable, simulation-grounded inverse design without training a model per objective....
+**Summary:** Current machine learning (ML) approaches for materials discovery rely heavily on known structural databases, limiting their ability to identify entirely novel structure types. In this work, we develop a multi-minima iterative genetic algorithm (MMIGA) that integrates an artificial-neural-network machine learning (ANN-ML) interatomic potential with an iterative, metadynamics-inspired penalty scheme. We demonstrate the robustness of this method on a complex ternary La-Co-Pb system, characterized by Co-Pb immiscibility and an intricate energy landscape. The ML-enhanced MMIGA successfully predicts the ground-state Pbam structure of the recently synthesized La4Co4Pb antagonistic-pair-phase, a novel structure missed by previous database-reliant ML predictions, while also identifying multiple metastable competing phases. Additionally, we challenged the MMIGA method to predict the structure of La5CoPb2 antagonistic-pair-phase, a new compound discovered during earlier attempts to synthesize the predicted phase La3CoPb. With only knowledge of the composition, our MMIGA approach successfully predicts the orthorhombic structure of La5CoPb2, producing an exact match with the structure independently determined by x-ray diffraction. By efficiently mapping both global minimum and relevant competing metastable states, this approach provides critical theoretical insights into phase selection for novel quantum and magnetic materials....
 
 ---
 
-### 3. Latent Genetic Algorithm for Crystal Structure Prediction
+### 3. Graph-Native Reinforcement Learning Enables Traceable Scientific Hypothesis Generation through Conceptual Recombination
 
-**Authors:** Kaixin Zheng, Wanjian Yin, Hongyu Yu, Hongjun Xiang
+**Authors:** Subhadeep Pal, Shashwat Sourav, Tirthankar Ghosal, Markus J. Buehler
 
-**Published:** 2026-06-28
+**Published:** 2026-07-01
 
-**Category:** physics.comp-ph
+**Category:** cs.AI
 
-**ID:** 2606.29220v1
+**ID:** 2607.00924v1
 
-**Link:** [http://arxiv.org/abs/2606.29220v1](http://arxiv.org/abs/2606.29220v1)
+**Link:** [http://arxiv.org/abs/2607.00924v1](http://arxiv.org/abs/2607.00924v1)
 
-**Summary:** Predicting crystal structures requires navigating rugged energy landscapes in which favorable local motifs must be inherited across candidates with incompatible cells, densities, and symmetries. Conventional real-space crossover often destroys these motifs when parent structures are geometrically mismatched. Here we show that latent representations learned by pretrained universal interatomic potentials can serve as continuous evolutionary coordinates for crystal structure prediction. In the Latent Genetic Algorithm (LGA), offspring are generated by inverse optimization of atomic positions and lattice vectors to match a target latent representation, which is constructed via interpolation of the parent latent vectors. LGA suppresses high-energy and short-contact offspring, increases the HfO$_2$ ground-state recovery rate from 20-35% to 60-95%, and enables a unified variable-supercell search over 16 perovskites with a nearly tenfold reduction in search cost. Applied to (PbTiO$_3$)$_n$/(PbZrO$_3$)$_n$ superlattices, LGA reveals $\sqrt{2} \times 3\sqrt{2} \times 1$ long-period ground-state structures characterized by a common in-plane finite-$q$ modulation $q{_\parallel} = (1/6,1/6)$ and layer-coupled sidebands. To our knowledge, this in-plane periodicity has not been reported in any related oxide perovskite superlattice studies. Altogether, LGA offers a powerful representation-guided paradigm for ground-state structure prediction and provides a practical, decoder-free route toward materials inverse design....
+**Summary:** Accelerating materials discovery requires AI systems that can generate scientifically valid hypotheses through multi-step, domain-grounded reasoning. Standard large language models often produce fluent but weakly traceable responses to open-ended materials design problems, making it difficult to determine whether final answers are supported by coherent intermediate reasoning. We develop Graph-PRefLexOR, a family of graph-native reasoning models fine-tuned with Group Relative Policy Optimization (GRPO) to organize reasoning into explicit phases for mechanism exploration, graph construction, pattern extraction, and hypothesis synthesis. This design links neural language generation with symbolic relational structure, enabling causal connections to be constructed, inspected, and reused. On 100 open-ended questions from materials science and mechanics literature, Graph-PRefLexOR achieves 40-65% improvements over corresponding base models, with the largest gains in reasoning traceability. Embedding analyses show broader semantic exploration and approximately 2-3 times greater semantic diversity than baselines. Semantic backtracking and layer-wise hidden-state analyses further show stronger alignment between structured reasoning and final answers. Finally, test-time graph expansion reveals that additional compute primarily increases long-range conceptual recombination within a bounded semantic space, rather than simply expanding semantic coverage. These results establish graph-native reinforcement learning as a pathway toward interpretable AI systems for scientific hypothesis generation in materials design and other scientific applications....
 
 ---
 
-### 4. Surrogate-Gated Generation and Foundation-Model Embeddings for Bayesian Materials Design
+### 4. Large language model-enabled automated data extraction for concrete materials informatics
 
-**Authors:** Sk Md Ahnaf Akif Alvi, Jan Janssen, Danny Perez, Douglas Allaire, Raymundo Arroyave
+**Authors:** Zhanzhao Li, Kengran Yang, Qiyao He, Kai Gong
 
-**Published:** 2026-06-26
+**Published:** 2026-04-24
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2606.28578v1
+**ID:** 2604.22938v2
 
-**Link:** [http://arxiv.org/abs/2606.28578v1](http://arxiv.org/abs/2606.28578v1)
+**Link:** [http://arxiv.org/abs/2604.22938v2](http://arxiv.org/abs/2604.22938v2)
 
-**Summary:** Closed-loop materials discovery iterates between proposing candidate structures and evaluating their properties, and property evaluation dominates the cost. In the generative variant, a learned prior proposes candidate crystals and a property oracle scores them; we ask whether a cheap probabilistic surrogate can triage the generator's output, and what such a surrogate must do well. Across three architecturally distinct pretrained diffusion priors (MatterGen, CrystalFlow, ADiT) and two targets (room-temperature heat capacity and bulk modulus), we insert a Gaussian process acquisition gate between structure generation and the oracle in an RL-steered generative workflow. The gate matches or exceeds ungated fine-tuning of the generative model while capping oracle calls at a fixed per-cycle budget. Budget-matched ablations isolate the mechanism. At an identical four-call budget, ranking-based selection outperforms arbitrary selection, confirming that the gain comes from the surrogate's choice; the gate comes within $\sim$9\% of exhaustive oracle spending at roughly one-fifth of the calls. A density-functional-theory check of the bulk-modulus discoveries confirms the learned oracle to within 2.5\% on average and the surrogate's ranking of the generated structures at Spearman $ρ= 0.94$. A cross-factorial benchmark of surrogate performance spanning mechanical, electronic, and vibrational properties identifies pretrained ORB embeddings with a Gaussian process as the most reliable combination, which we adopt as the building blocks of the proposed workflow. The complete pipeline is released as open-source software....
+**Summary:** The promise of data-driven materials discovery remains constrained by the scarcity of large, high-quality, and accessible experimental datasets. Here, we introduce a generalizable large language model (LLM)-powered pipeline for automated extraction and structuring of materials data from unstructured scientific literature, using concrete materials as a representative and particularly challenging example. The pipeline exhibits robust performance across a broad range of LLMs and achieves an $F_1$ score of up to 0.98 for diverse composition--process--property attributes. Within one hour, it extracts nearly 9,000 high-quality records with over 100 attributes from a corpus screened from more than 27,000 publications, enabling the construction of the largest open laboratory database for blended cement concrete. Machine learning analyses underscore the importance of large, diverse, and information-rich datasets for enhancing both in-distribution accuracy and out-of-distribution generalization to unseen materials. The proposed pipeline is readily adaptable to other materials domains and accelerates the development of scalable data infrastructures for materials informatics....
 
 ---
 
