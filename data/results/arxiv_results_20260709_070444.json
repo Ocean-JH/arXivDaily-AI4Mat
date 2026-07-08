@@ -1,0 +1,29 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2607.02289v2",
+    "title": "Neural-Network Inverse Design of SRF Cavities and Transmons for Bosonic Quantum Computation",
+    "authors": [
+      "Joseph Yaker",
+      "Jovan Markovic",
+      "Alessandro Reineri",
+      "Doga Murat Kurkcuoglu",
+      "Silvia Zorzetti"
+    ],
+    "summary": "Three-dimensional superconducting radio-frequency (SRF) cavities provide exceptionally long-lived electromagnetic modes and, when coupled to nonlinear elements such as transmon qubits, become promising architectures for bosonic quantum information processing. The inverse design of such systems, i.e., recovering device geometries that produce specified electromagnetic and coupling targets, is generally a one-to-many problem. The qubit-cavity coupling strength depends sensitively on both the transmon geometry and its position within the cavity's electromagnetic field. As these systems scale up and their design parameter spaces grow, the cost of conventional iterative simulation becomes prohibitive. We present two deep neural network (DNN) approaches that address this inverse-design problem at complementary levels of the design stack. The first proposes SRF cavity geometries that produce target cavity observables. The second proposes transmon qubit designs that produce target qubit-cavity parameters - the coupling rate, qubit frequency, and anharmonicity $(g, ν_q, α)$. The recovered candidate designs match the targets to within ~5% (cavity) and ~2% (transmon), confirmed by end-to-end re-simulation. Both approaches map desired device behavior directly to candidate designs, a fast alternative to the iterative simulation studies usually required.",
+    "published": "2026-07-02T15:06:11+00:00",
+    "updated": "2026-07-07T08:58:16+00:00",
+    "categories": [
+      "quant-ph",
+      "cs.AI",
+      "hep-ex"
+    ],
+    "primary_category": "quant-ph",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2607.02289v2",
+    "base_id": "2607.02289",
+    "version": "2",
+    "url": "http://arxiv.org/abs/2607.02289v2"
+  }
+]
