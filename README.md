@@ -34,55 +34,39 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (3)
+## New Papers (2)
 
-*Last updated: 2026-07-10 07:09:17 (SGT)*
+*Last updated: 2026-07-11 06:57:39 (SGT)*
 
-### 1. Neural Operator-enabled Topology-informed Evolutionary Strategy for PDE-Constrained Optimization
+### 1. PhononScore: a phonon-aware scoring function for dynamical stability
 
-**Authors:** Xiangming Huang, Guannan Zhang, Lu Lu, Raphaël Pestourie
+**Authors:** Xiao-Qi Han, Ze-Feng Gao, Zhong-Yi Lu
 
-**Published:** 2026-07-08
-
-**Category:** cs.LG
-
-**ID:** 2607.07682v1
-
-**Link:** [http://arxiv.org/abs/2607.07682v1](http://arxiv.org/abs/2607.07682v1)
-
-**Summary:** The inverse design of physical systems governed by partial differential equations is computationally demanding due to the high dimensionality and non-convexity of design spaces. Generative models for inverse design often lack robustness and transferability, whereas evolutionary strategies are robust but struggle in high-dimensional spaces. This paper introduces a Neural Operator-enabled Topology-informed Evolutionary Strategy (NOTES) that integrates dimensionality reduction, representation learning, and evolutionary optimization for efficient and transferable inverse design. NOTES couples a DeepONet-based neural operator with the Covariance Matrix Adaptation Evolution Strategy (CMA-ES) to perform global optimization in a compact latent space that encodes topology-aware priors while discovering high-performance designs for unseen operating conditions. Applied to nanophotonic beam-deflector inverse design governed by Maxwell's equations, NOTES reduces the design dimensionality from 256 to 25 and consistently achieves over 95 percent efficiency, outperforming CMA-ES, topology optimization, and other baselines. Applied to structural optimization, NOTES discovers designs that achieve compliance down to 246. By decoupling topology learning of a DeepONet from the governing physics in a PDE solver, NOTES provides a flexible and transferable framework for the inverse design of physical systems....
-
----
-
-### 2. Human and LLM Collaboration for Accelerated Materials Synthesis and Discovery
-
-**Authors:** Gregory Bassen, Wyatt Bunstine, Sarah Okandey, Sarah Cheung, Elaine Flowers, Ritwik Bose, Joshua Hummel, Christopher D. Stiles, Maxime A. Siegler, Tyrel M. McQueen
-
-**Published:** 2026-07-08
+**Published:** 2026-07-09
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2607.07604v1
+**ID:** 2607.08518v1
 
-**Link:** [http://arxiv.org/abs/2607.07604v1](http://arxiv.org/abs/2607.07604v1)
+**Link:** [http://arxiv.org/abs/2607.08518v1](http://arxiv.org/abs/2607.08518v1)
 
-**Summary:** Although Large Language Models (LLM) and Artificial Intelligence (AI) tools have enabled a rapid increase in the generation rate of predicted materials, the rate of new materials discovery has lagged behind. This is due to the challenges associated with designing a sequence of chemical reactions to predictably produce new materials, especially in new structure types. Here, we report a study of human and LLM generated recipes for the synthesis of known and new materials. The success of the recipes is determined through in-lab experimentation, and the results are passed back to the humans and LLMs in a closed-loop process to study the effects of their collaboration. The Ruddlesden-Popper homologous series was selected for all material candidates to provide a materials phase space that is simultaneously well studied and likely to host undiscovered materials. We find that humans (H) and LLM (L) have similar success rates: 83(8)% (H) and 75(9)% (L) [known materials, round one], 17(9)% (H) and 22(10)% (L) [unknown materials, round one], 79(8)% (H) and 71(9)% (L) [known materials, round two], and 22(7)% (H) and 14(6)% (L) [unknown materials, round two]. Through this collaborative human-LLM effort, we discovered Ba3PtO5, a material with a new structural prototype that constitutes the missing 1D member of the herein reported dimensionally tunable Rock-Salt Perovskite (RSP) homologous series of the form (AX)m(ABX3)p, of which the Ruddlesden-Popper series is a subset....
+**Summary:** In recent years, crystal generation models have enabled the design of massive numbers of candidate materials. However, the lack of dynamical stability among generated structures has become a major bottleneck preventing their translation into practical materials discovery. To address this challenge, we propose PhononScore, a phonon-aware scoring function for crystal generation. Unlike computationally expensive explicit phonon calculations, PhononScore predicts a unified stability score from crystal structures, enabling ranking of candidate materials dynamical stability with second-level computational cost. We construct a multi-fidelity phonon dataset containing 157,463 crystal structures. On the PhononBench benchmark, PhononScore improves the average dynamical stability rate of candidate pools generated by nine crystal generation models from 30.7% to 83.7%, achieving a 2.72-fold enrichment of stable structures, while the average stability rate of the Top-10 candidates reaches 97.5%. On a high-fidelity DFT-PBE phonon benchmark, the DFT-finetuned PhononScore-DFT increases the Top-100 stability rate to 93.0% and achieves 5-6-fold enrichment of dynamically stable structures under an extremely imbalanced hard-screening scenario. As a materials-screening tool analogous to scoring functions in drug discovery, PhononScore can serve directly as a dynamical-stability feedback signal for crystal generation, active learning, and reinforcement learning, enabling second-level stability-aware reranking without explicit phonon calculations and providing a unified and efficient dynamical stability evaluator for high-throughput materials discovery, active learning, reinforcement learning, and closed-loop inverse design. The online PhononScore platform is available at: http://phononbench.cn/phononscore/...
 
 ---
 
-### 3. Bayesian Optimization of Genetic Algorithm Hyperparameters in a Multi-Fidelity Framework for Efficient Lattice Material Design
+### 2. Reaction-network reasoning with frontier models for experimentally confirmed catalyst-selectivity hypotheses
 
-**Authors:** Sergei Zorkaltsev, Maciej Haranczyk, Christina Schenk
+**Authors:** Sutanay Choudhury, Anwesha Banerjee, Udishnu Sanyal, Jorin Dawidowicz, Chiezugolum Ijeoma Odilinye, Jesun Firoz, Liney Arnadottir, Simone Raugei, Johannes Lercher, Arnab Dutta
 
-**Published:** 2026-07-08
+**Published:** 2026-07-09
 
-**Category:** cond-mat.mtrl-sci
+**Category:** physics.chem-ph
 
-**ID:** 2607.07289v1
+**ID:** 2607.08003v1
 
-**Link:** [http://arxiv.org/abs/2607.07289v1](http://arxiv.org/abs/2607.07289v1)
+**Link:** [http://arxiv.org/abs/2607.08003v1](http://arxiv.org/abs/2607.08003v1)
 
-**Summary:** This study presents a multi-fidelity framework for the systematic optimization of genetic algorithm (GA) hyperparameters. The framework integrates three fidelity levels: high-fidelity Fast Fourier Transform (FFT) homogenization for validation, a medium-fidelity 3D convolutional neural network surrogate for rapid property evaluation, and a low-fidelity Gaussian process (GP) surrogate within a Bayesian optimization (BO) framework to guide the hyperparameter search. Various acquisition functions are evaluated, with logNEI achieving the best performance by effectively accounting for the noise inherent in GA evaluations. The proposed framework identifies hyperparameter configurations that enable a 25-generation GA run to achieve elastic modulus values comparable to those obtained in a full 75-generation optimization. Furthermore, introducing a penalized BO objective significantly reduces the number of required lattices with only minor decreases in absolute achieved elastic modulus, revealing a practical trade-off between performance and the number of structures that must be evaluated. High-fidelity FFT validation verifies the effectiveness of the surrogate-driven optimization strategy. The optimized hyperparameters allow for rapid convergence, eliminate the need for lattice mutation, and reduce the overall computational cost by 24% (from 225 to 171 hours) while preserving mechanical performance. These results demonstrate the potential of multi-fidelity optimization as an efficient and practical approach for GA hyperparameter tuning and future experimental lattice design studies....
+**Summary:** Catalysts are essential for sustainable chemical manufacturing, yet discovering novel architectures remains a bottleneck dominated by trial-and-error experimentation and computationally intensive screening. In complex reactions such as electrochemical carbon dioxide reduction, product selectivity is governed by dynamic interfacial, electrolyte, and potential factors as well as kinetic pathway competition. Conventional descriptor-based machine learning and computational potentials struggle to resolve these mechanistic branch points, primarily relying on static ground-state descriptors or bulk structural correlations rather than end-to-end topological pathway analysis. Here, we show that frontier language models, when strictly constrained to reason over explicit reaction networks, can discover novel catalysts by identifying the physical levers that govern pathway competition. We developed a human-AI co-thinking framework that enforces network invariance to extract testable hypotheses from complex chemical graphs. Applied to CO2 electroreduction, the framework identified ketene desorption and hydroxide capture as the acetate-forming pathway, and predicted a distinct adsorbed CO and CH2 coupling route to ketene. By isolating actionable control levers, specifically local alkalinity, controlled iron incorporation, and restricted interfacial proton-donor accessibility, the framework guided the prospective synthesis of a copper-iron oxide catalyst demonstrating a threefold increase in acetate selectivity over matched Cu-rich baselines. This mechanism-guided reasoning architecture shifts the computational paradigm from retrospective statistical prediction to forward-looking hypothesis generation, providing a broadly applicable blueprint for mechanism-guided materials discovery....
 
 ---
 
