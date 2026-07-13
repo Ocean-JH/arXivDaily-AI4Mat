@@ -1,0 +1,52 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2507.19307v2",
+    "title": "Physics-grounded generative design of inherently stable, novel and controllable crystal structures",
+    "authors": [
+      "Zhilong Song",
+      "Qionghua Zhou",
+      "Chongyi Ling",
+      "Qiang Li",
+      "Lixue Cheng",
+      "Jinlan Wang"
+    ],
+    "summary": "Generative inverse design is reshaping the discovery of functional crystalline materials. Yet current generative models face challenges in simultaneously achieving stability, novelty, and precise controllability in a single trained model. We address these challenges with a key physical insight: the diversity of crystals is governed by their crystallographic information (CI), namely composition, space group and lattice, whereas only a few stable atomic configurations remain once the CI is fixed. Built on this insight, we introduce SCGEN (stable and controllable crystal structure generation), a physics-grounded generative model with two components. A variational autoencoder samples diverse, physically plausible CI, and a symmetry- and Wyckoff-position-constrained optimizer locates stable atomic positions via universal machine-learning potentials. Benchmarked on roughly two million structures, SCGEN reaches state-of-the-art stability while preserving comparable novelty, and it satisfies any specified composition, space group, lattice or joint constraint with 100% success and no task-specific retraining. Applied to photocatalytic water splitting, property-guided optimization with SCGEN generates 200,000 candidate structures and identify top 22 stable, active and synthesizable photocatalysts. By decoupling CI generation from coordinate optimization, SCGEN establishes a physics-grounded inverse-design paradigm that yields synthesis-ready crystals on demand, rather than structures requiring post hoc repair, relaxation, or retraining.",
+    "published": "2025-07-25T14:22:52+00:00",
+    "updated": "2026-07-10T15:43:01+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2507.19307v2",
+    "base_id": "2507.19307",
+    "version": "2",
+    "url": "http://arxiv.org/abs/2507.19307v2"
+  },
+  {
+    "id": "http://arxiv.org/abs/2602.10392v3",
+    "title": "Tensor Methods: A Unified and Interpretable Approach for Material Design",
+    "authors": [
+      "Shaan Pakala",
+      "Aldair E. Gongora",
+      "Brian Giera",
+      "Evangelos E. Papalexakis"
+    ],
+    "summary": "When designing new materials, it is often necessary to tailor the material design to have some desired properties. As the set of material design parameters grows, the search space grows exponentially, making the actual synthesis and evaluation of all combinations of designs virtually impossible. Even using traditional computational methods, such as Finite Element Analysis (FEA), becomes too computationally heavy to search this design space. Recent methods use machine learning (ML) surrogate models to more efficiently determine optimal material designs; unfortunately, these methods often (i) are notoriously difficult to interpret and (ii) under perform when the training data comes from a non-uniform sampling of the entire design space. In this work, we suggest the use of tensor completion methods as an all-in-one approach for interpretability and predictions. We observe classical tensor methods are able to compete with traditional ML methods in predictions, with the added benefit of their interpretable tensor factors (which are given for free). In our experiments, we are able to rediscover physical phenomena via the tensor factors, indicating that our predictions are aligned with the physics of the problem. This also means these factors could be used by experimentalists to identify potentially novel patterns, given we are able to rediscover existing ones. We also study the effects of both types of surrogate models (traditional ML \\& tensor-based) when we encounter training data from a non-uniform sampling of the design space. We observe some more specialized tensor methods that are able to give better generalization in these non-uniform sampling scenarios, due to the low-rank constraint. We find the best generalization comes from a tensor model, which is able to improve upon the baseline ML methods by up to 5\\% on aggregate $R^2$, and halve the error in some out of distribution sections.",
+    "published": "2026-02-11T00:30:39+00:00",
+    "updated": "2026-07-09T21:14:38+00:00",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "comment": "To appear in the ACM SIGKDD 2026 AI for Sciences track",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.10392v3",
+    "base_id": "2602.10392",
+    "version": "3",
+    "url": "http://arxiv.org/abs/2602.10392v3"
+  }
+]
