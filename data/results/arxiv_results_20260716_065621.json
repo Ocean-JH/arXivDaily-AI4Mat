@@ -1,0 +1,52 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2607.12488v1",
+    "title": "Sample Efficient Generative Optimization for Molecular Design",
+    "authors": [
+      "Sarina Kopf",
+      "Cristina Nevado",
+      "Philippe Schwaller"
+    ],
+    "summary": "Molecular optimization in drug discovery, materials design, and catalysis requires searching vast chemical spaces under tight evaluation budgets, since high-fidelity oracles and experimental measurements are costly. The practical impact of an optimization method therefore hinges on its sample efficiency: how few evaluations it needs to find strong candidates. We introduce Sample Efficient Generative Optimization (SEGO), a framework for Bayesian optimization on adaptively generated molecules. In SEGO, a probabilistic surrogate model forms a hypothesis about where hits lie in chemical space, a generative model is steered to propose candidates in that region, the most promising candidate is selected via an acquisition function, and the resulting oracle call is used both to sharpen the surrogate and to anchor the generator in real reward. SEGO attains state-of-the-art performance on the practical molecular optimization (PMO) benchmark using only one tenth of the oracle calls consumed by other methods, and on a multiparameter docking task it reaches ten hits in roughly half the oracle calls of existing approaches. These gains move molecular optimization closer to campaigns driven by direct experimental feedback.",
+    "published": "2026-07-14T08:22:13+00:00",
+    "updated": "2026-07-14T08:22:13+00:00",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2607.12488v1",
+    "base_id": "2607.12488",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2607.12488v1"
+  },
+  {
+    "id": "http://arxiv.org/abs/2511.04068v3",
+    "title": "TXL Fusion: A Hybrid Machine Learning Framework Integrating Chemical Heuristics and Large Language Models for Topological Materials Discovery",
+    "authors": [
+      "Arif Ullah",
+      "Rajibul Islam",
+      "Yangming Huang",
+      "Ghulam Hussain",
+      "Zahir Muhammad",
+      "Xiaoguang Li",
+      "Ming Yang"
+    ],
+    "summary": "Topological materials, including topological insulators (TIs) and topological semimetals (TSMs), offer promising platforms for quantum, spintronic, and low-dissipation electronic technologies. Their discovery, however, remains constrained by the high cost of first-principles calculations and the slow, resource-intensive nature of experimental validation. Here, we introduce TXL Fusion, a hybrid machine-learning framework that integrates chemically inspired heuristics, physically interpretable numerical descriptors, and large language model (LLM)-derived semantic embeddings for topological-materials classification and discovery. By combining space-group symmetry, electron-count and orbital descriptors, composition-derived topological heuristics, and physics-aware semantic representations, TXL Fusion classifies materials into trivial, TSM, and TI categories with improved overall performance and enhanced minority-class TI recognition relative to conventional descriptor-based baselines. The model further serves as a high-throughput pre-screening tool for external discovery spaces, rapidly prioritizing candidate TSMs before expensive first-principles or experimental validation. Representative TXL-prioritized candidates were subsequently supported by density functional theory (DFT) calculations, demonstrating the practical value of the framework for reducing discovery cost. By uniting symbolic chemical rules, statistical learning, and language-based representations, TXL Fusion provides a scalable and interpretable strategy for accelerating the discovery of next-generation topological and quantum materials.",
+    "published": "2025-11-06T05:19:18+00:00",
+    "updated": "2026-07-14T03:46:15+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": "https://github.com/Arif-PhyChem/txl_fusion",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.04068v3",
+    "base_id": "2511.04068",
+    "version": "3",
+    "url": "http://arxiv.org/abs/2511.04068v3"
+  }
+]
