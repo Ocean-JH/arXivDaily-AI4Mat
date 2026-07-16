@@ -1,0 +1,30 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2607.14025v1",
+    "title": "The WEST code for large-scale excited-state materials simulations",
+    "authors": [
+      "Victor Wen-zhe Yu",
+      "Siyuan Chen",
+      "Yu Jin",
+      "Vrindaa Somjit",
+      "Stefano Paolo Villani",
+      "Jiawei Zhan",
+      "Marco Govoni",
+      "Giulia Galli"
+    ],
+    "summary": "We present WEST, an open-source plane-wave pseudopotential code for large-scale excited-state materials simulations, and describe its theoretical foundations, software architecture, and capabilities. WEST implements full-frequency GW, quantum defect embedding theory, the Bethe-Salpeter equation, and time-dependent density functional theory within a common algorithmic framework that avoids the explicit computation of virtual electronic states. By combining density functional and density matrix perturbation theory, low-rank representations of the dielectric screening and exact exchange, and localization techniques, WEST achieves favorable computational scaling with system size. The code supports the calculation of quasi-particle and neutral excitation energies, optical and photoluminescence spectra, excited-state forces, and non-adiabatic couplings, with interoperable workflows connecting to quantum chemistry, vibronic coupling, and quantum computing packages. A hierarchical parallelization strategy and GPU acceleration deliver near-ideal strong scaling to thousands of GPUs, enabling accurate excited-state simulations of systems with more than a thousand atoms. Representative applications, spanning the full optical cycle of solid-state spin defects, self-trapped excitons in metal-halide perovskites, and the optical response of liquid water and ice, demonstrate the accuracy and versatility of the code across diverse material classes. The capabilities implemented in WEST establish the code as a scalable platform for predictive excited-state simulations, high-throughput materials discovery, and the generation of high-fidelity datasets for machine learning in computational materials science.",
+    "published": "2026-07-15T16:56:46+00:00",
+    "updated": "2026-07-15T16:56:46+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2607.14025v1",
+    "base_id": "2607.14025",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2607.14025v1"
+  }
+]
