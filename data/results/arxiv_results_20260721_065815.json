@@ -1,0 +1,52 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2602.22440v2",
+    "title": "An Information-theoretic Collective Variable for Configurational Entropy",
+    "authors": [
+      "Ashley Z. Guo",
+      "Kaelyn Chang",
+      "Nicholas J. Corrente"
+    ],
+    "summary": "Entropy governs molecular self-assembly, phase transitions, and material stability, yet remains challenging to quantify and directly control in molecular systems. Here, we demonstrate that the computable information density (CID), a data compression-based information theoretic metric, provides a general per-configuration structural descriptor that tracks configurational entropy changes in molecular dynamics simulations, reflecting both local and long-range structural organization. We validate the CID across systems of increasing complexity, beginning with single-component Lennard-Jones melting before examining binary phase separation, polymer condensation and dispersion, and assembly of amorphous carbon networks at multiple densities. Unlike conventional order parameters, CID requires no a priori knowledge of relevant structural features and captures organizational signatures across a variety of molecular systems and discretization resolutions. By establishing a data compression-based structural complexity metric as a practical proxy for configurational entropy, this framework lays a foundation for future entropy-driven materials design and optimization strategies.",
+    "published": "2026-02-25T21:58:37+00:00",
+    "updated": "2026-07-17T13:21:49+00:00",
+    "categories": [
+      "cond-mat.stat-mech",
+      "cond-mat.mtrl-sci",
+      "cond-mat.soft",
+      "physics.chem-ph"
+    ],
+    "primary_category": "cond-mat.stat-mech",
+    "comment": "Main text: 13 pages, 7 figures; Supplemental: 4 pages, 5 figures",
+    "journal_ref": null,
+    "doi": "10.1039/D6ME00083E",
+    "pdf_url": "https://arxiv.org/pdf/2602.22440v2",
+    "base_id": "2602.22440",
+    "version": "2",
+    "url": "http://arxiv.org/abs/2602.22440v2"
+  },
+  {
+    "id": "http://arxiv.org/abs/2607.15535v1",
+    "title": "Symbolic Predicate-Guided Language Agents for Inverse Design of Perovskite Oxides",
+    "authors": [
+      "Dong Hyeon Mok",
+      "Seoin Back",
+      "Victor Fung",
+      "Guoxiang Hu"
+    ],
+    "summary": "Efficient discovery of high-performance materials has been pursued through a variety of data- and AI-driven strategies, among which inverse design, generating materials from desired target properties, has emerged as an important paradigm. Large language models (LLMs) offer a complementary route for inverse materials design because their reasoning and in-context learning capability can be used not only to propose candidates but also to demonstrate interpretable design principles. In this work, we introduce a domain specific language (DSL)-guided strategy to improve the reasoning and design capability of LLM agents by translating natural language design rules into symbolic predicates encoded in a predefined chemistry DSL. These predicates allow the LLM agent to obtain statistical evidence from the accumulated materials data, enabling the agent to evaluate and refine its own reasoning during the design loop. Based on this strategy, we developed a multi-agent materials design framework, called Operational Rule-grounded CHEmical Search Through Reasoning Agents (ORCHESTRA), and applied it to the inverse design of double perovskite oxides under multiple target-property objectives. The results show that symbolic predicates help the LLM identify unsupported rules, validate newly proposed rules and improve the rule store over iterative design cycles. Compared with a strategy relying only on natural language rules, the DSL-guided framework showed the potential to improve materials design performance, particularly for challenging target properties. These findings suggest that mathematical and statistical grounding can enhance the reasoning capability of LLM agents in materials science and that LLM-based inverse design can be performed effectively without large task-specific datasets or additional model training.",
+    "published": "2026-07-17T01:11:27+00:00",
+    "updated": "2026-07-17T01:11:27+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2607.15535v1",
+    "base_id": "2607.15535",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2607.15535v1"
+  }
+]
