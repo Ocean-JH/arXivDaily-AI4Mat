@@ -1,0 +1,30 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2607.17910v1",
+    "title": "Chemical filters for ultra-high-throughput materials screening and generation",
+    "authors": [
+      "Kinga O. Mastej",
+      "Panyalak Detrattanawichai",
+      "Hyunsoo Park",
+      "Anthony Onwuli",
+      "Masahiro Negishi",
+      "Aron Walsh"
+    ],
+    "summary": "Generative artificial intelligence is rapidly transforming materials design by enabling de novo exploration of immense chemical spaces. Yet a large proportion of AI-generated compositions remain implausible, violating established chemical principles, which limits the reliability and interpretability of generative materials design. Here, we introduce a chemical validity operator that recasts heuristic chemical rules as a configurable algorithmic prior for evaluating and guiding generative materials discovery. Built on the open-source SMACT package, a data-informed oxidation-state model exposes tunable thresholds, allowing users to interpolate continuously between permissive and conservative chemical constraints, while supporting both exploratory and conservative materials-design workflows. Benchmarking six state-of-the-art generative models for inorganic crystals shows that most reproduce stoichiometry but under-represent realistic oxidation-state combinations, and that filtering removes compositions reliant on rarely observed oxidation states while preserving low-energy compounds near the convex hull. Beyond screening, the same operator can also serve as a reinforcement-learning reward, steering a latent diffusion model towards chemically grounded compositions. By encoding chemical heuristics and observations, this work establishes a foundation for oxidation-state-aware generative models.",
+    "published": "2026-07-20T13:06:54+00:00",
+    "updated": "2026-07-20T13:06:54+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": "19 pages, 7 figures, 3 tables, including Supplementary Information",
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2607.17910v1",
+    "base_id": "2607.17910",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2607.17910v1"
+  }
+]

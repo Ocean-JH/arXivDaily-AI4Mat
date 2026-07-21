@@ -34,39 +34,23 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (2)
+## New Papers (1)
 
-*Last updated: 2026-07-21 06:58:21 (SGT)*
+*Last updated: 2026-07-22 06:54:01 (SGT)*
 
-### 1. An Information-theoretic Collective Variable for Configurational Entropy
+### 1. Chemical filters for ultra-high-throughput materials screening and generation
 
-**Authors:** Ashley Z. Guo, Kaelyn Chang, Nicholas J. Corrente
+**Authors:** Kinga O. Mastej, Panyalak Detrattanawichai, Hyunsoo Park, Anthony Onwuli, Masahiro Negishi, Aron Walsh
 
-**Published:** 2026-02-25
-
-**Category:** cond-mat.stat-mech
-
-**ID:** 2602.22440v2
-
-**Link:** [http://arxiv.org/abs/2602.22440v2](http://arxiv.org/abs/2602.22440v2)
-
-**Summary:** Entropy governs molecular self-assembly, phase transitions, and material stability, yet remains challenging to quantify and directly control in molecular systems. Here, we demonstrate that the computable information density (CID), a data compression-based information theoretic metric, provides a general per-configuration structural descriptor that tracks configurational entropy changes in molecular dynamics simulations, reflecting both local and long-range structural organization. We validate the CID across systems of increasing complexity, beginning with single-component Lennard-Jones melting before examining binary phase separation, polymer condensation and dispersion, and assembly of amorphous carbon networks at multiple densities. Unlike conventional order parameters, CID requires no a priori knowledge of relevant structural features and captures organizational signatures across a variety of molecular systems and discretization resolutions. By establishing a data compression-based structural complexity metric as a practical proxy for configurational entropy, this framework lays a foundation for future entropy-driven materials design and optimization strategies....
-
----
-
-### 2. Symbolic Predicate-Guided Language Agents for Inverse Design of Perovskite Oxides
-
-**Authors:** Dong Hyeon Mok, Seoin Back, Victor Fung, Guoxiang Hu
-
-**Published:** 2026-07-17
+**Published:** 2026-07-20
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2607.15535v1
+**ID:** 2607.17910v1
 
-**Link:** [http://arxiv.org/abs/2607.15535v1](http://arxiv.org/abs/2607.15535v1)
+**Link:** [http://arxiv.org/abs/2607.17910v1](http://arxiv.org/abs/2607.17910v1)
 
-**Summary:** Efficient discovery of high-performance materials has been pursued through a variety of data- and AI-driven strategies, among which inverse design, generating materials from desired target properties, has emerged as an important paradigm. Large language models (LLMs) offer a complementary route for inverse materials design because their reasoning and in-context learning capability can be used not only to propose candidates but also to demonstrate interpretable design principles. In this work, we introduce a domain specific language (DSL)-guided strategy to improve the reasoning and design capability of LLM agents by translating natural language design rules into symbolic predicates encoded in a predefined chemistry DSL. These predicates allow the LLM agent to obtain statistical evidence from the accumulated materials data, enabling the agent to evaluate and refine its own reasoning during the design loop. Based on this strategy, we developed a multi-agent materials design framework, called Operational Rule-grounded CHEmical Search Through Reasoning Agents (ORCHESTRA), and applied it to the inverse design of double perovskite oxides under multiple target-property objectives. The results show that symbolic predicates help the LLM identify unsupported rules, validate newly proposed rules and improve the rule store over iterative design cycles. Compared with a strategy relying only on natural language rules, the DSL-guided framework showed the potential to improve materials design performance, particularly for challenging target properties. These findings suggest that mathematical and statistical grounding can enhance the reasoning capability of LLM agents in materials science and that LLM-based inverse design can be performed effectively without large task-specific datasets or additional model training....
+**Summary:** Generative artificial intelligence is rapidly transforming materials design by enabling de novo exploration of immense chemical spaces. Yet a large proportion of AI-generated compositions remain implausible, violating established chemical principles, which limits the reliability and interpretability of generative materials design. Here, we introduce a chemical validity operator that recasts heuristic chemical rules as a configurable algorithmic prior for evaluating and guiding generative materials discovery. Built on the open-source SMACT package, a data-informed oxidation-state model exposes tunable thresholds, allowing users to interpolate continuously between permissive and conservative chemical constraints, while supporting both exploratory and conservative materials-design workflows. Benchmarking six state-of-the-art generative models for inorganic crystals shows that most reproduce stoichiometry but under-represent realistic oxidation-state combinations, and that filtering removes compositions reliant on rarely observed oxidation states while preserving low-energy compounds near the convex hull. Beyond screening, the same operator can also serve as a reinforcement-learning reward, steering a latent diffusion model towards chemically grounded compositions. By encoding chemical heuristics and observations, this work establishes a foundation for oxidation-state-aware generative models....
 
 ---
 
