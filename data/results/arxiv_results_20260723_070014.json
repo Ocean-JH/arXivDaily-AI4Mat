@@ -1,0 +1,31 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2607.19198v1",
+    "title": "ATLAS: A Foundation Neural Sampler for Amorphous Materials",
+    "authors": [
+      "Mouyang Cheng",
+      "Denis Blessing",
+      "Botao Yu",
+      "Gerhard Neumann",
+      "Mingda Li",
+      "Carles Domingo-Enrich",
+      "Yuanqi Du"
+    ],
+    "summary": "Amorphous materials exhibit exceptional mechanical and functional properties, yet their rugged energy landscapes are notoriously difficult to sample. Below the glass-transition temperature, conventional molecular dynamics and Monte Carlo become inefficient because equilibration relies on rare barrier-crossing events, while data-driven generative models are constrained by scarce and biased reference ensembles. Here, we introduce ATLAS, an efficient sampler that learns a diffusion process to generate Boltzmann-distributed amorphous structures directly from a target energy function. Parameterized by an equivariant graph neural network, ATLAS generalizes across system size, temperature, and composition. By exploiting the time reversal of the diffusion process, it enables efficient estimation of thermodynamic quantities and steering toward target observables. In two-dimensional Kob-Andersen systems, ATLAS reproduces parallel tempering Markov chain Monte Carlo structural distributions, free energies and entropies, achieving below 0.2% free energy error in the low-temperature glass regime with over 500-fold fewer energy evaluations. In Cu-Zr and Cr-Co-Ni metallic glasses, ATLAS recovers experimentally observed short-range-order trends and steers structures toward prescribed order parameters and optimized bulk moduli. Moreover, composition-amortized pretraining outperforms composition-specific training from scratch, reduces inverse-design costs by several hundred-fold, and enables sampling with expensive universal machine learning interatomic potentials. Coupled to a large language model agent, ATLAS searches an eight-element space for high-entropy metallic glasses balancing stiffness and ductility, identifying a converged Pareto frontier within 480 oracle evaluations. Together, these results establish ATLAS as a foundation model for sampling, steering and designing amorphous materials.",
+    "published": "2026-07-21T15:31:49+00:00",
+    "updated": "2026-07-21T15:31:49+00:00",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.LG",
+      "physics.comp-ph"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "comment": null,
+    "journal_ref": null,
+    "doi": null,
+    "pdf_url": "https://arxiv.org/pdf/2607.19198v1",
+    "base_id": "2607.19198",
+    "version": "1",
+    "url": "http://arxiv.org/abs/2607.19198v1"
+  }
+]
