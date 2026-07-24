@@ -36,21 +36,21 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 ## New Papers (1)
 
-*Last updated: 2026-07-23 07:00:28 (SGT)*
+*Last updated: 2026-07-25 06:58:35 (SGT)*
 
-### 1. ATLAS: A Foundation Neural Sampler for Amorphous Materials
+### 1. A high-dimensional neural network potential for finite-temperature phenomena in NiTi martensite
 
-**Authors:** Mouyang Cheng, Denis Blessing, Botao Yu, Gerhard Neumann, Mingda Li, Carles Domingo-Enrich, Yuanqi Du
+**Authors:** Petr Jaroš, Petr Sedlák, Petr Šesták, Miroslav Černý, Jörg Behler, Hanuš Seiner
 
-**Published:** 2026-07-21
+**Published:** 2026-07-22
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2607.19198v1
+**ID:** 2607.20681v1
 
-**Link:** [http://arxiv.org/abs/2607.19198v1](http://arxiv.org/abs/2607.19198v1)
+**Link:** [http://arxiv.org/abs/2607.20681v1](http://arxiv.org/abs/2607.20681v1)
 
-**Summary:** Amorphous materials exhibit exceptional mechanical and functional properties, yet their rugged energy landscapes are notoriously difficult to sample. Below the glass-transition temperature, conventional molecular dynamics and Monte Carlo become inefficient because equilibration relies on rare barrier-crossing events, while data-driven generative models are constrained by scarce and biased reference ensembles. Here, we introduce ATLAS, an efficient sampler that learns a diffusion process to generate Boltzmann-distributed amorphous structures directly from a target energy function. Parameterized by an equivariant graph neural network, ATLAS generalizes across system size, temperature, and composition. By exploiting the time reversal of the diffusion process, it enables efficient estimation of thermodynamic quantities and steering toward target observables. In two-dimensional Kob-Andersen systems, ATLAS reproduces parallel tempering Markov chain Monte Carlo structural distributions, free energies and entropies, achieving below 0.2% free energy error in the low-temperature glass regime with over 500-fold fewer energy evaluations. In Cu-Zr and Cr-Co-Ni metallic glasses, ATLAS recovers experimentally observed short-range-order trends and steers structures toward prescribed order parameters and optimized bulk moduli. Moreover, composition-amortized pretraining outperforms composition-specific training from scratch, reduces inverse-design costs by several hundred-fold, and enables sampling with expensive universal machine learning interatomic potentials. Coupled to a large language model agent, ATLAS searches an eight-element space for high-entropy metallic glasses balancing stiffness and ductility, identifying a converged Pareto frontier within 480 oracle evaluations. Together, these results establish ATLAS as a foundation model for sampling, steering and designing amorphous materials....
+**Summary:** We present a high-dimensional neural network potential (HDNNP) for the martensitic phase of the NiTi shape-memory alloy trained to density functional theory (DFT) data. A central aspect of this work is the systematic validation of the potential with respect to the underlying DFT reference method for key properties governing structural evolution, including equilibrium crystal structures, elastic constants, generalized-stacking fault energies, and vibrational spectra. The HDNNP accurately describes the relative stability of the B19$^\prime$ and B33 phases, including subtle energy differences on the order of meV/atom. The predicted stacking-fault energy landscape is strongly anisotropic and reveals a preferential shear pathway, providing atomistic insight into deformation and twinning mechanisms. Finite-temperature molecular dynamics simulations further enable the investigation of unconstrained structural evolution as a function of temperature. Overall, the developed HDNNP provides a robust basis for atomistic simulations of the complex structural and functional behavior of martensitic NiTi systems containing hundreds of thousands of atoms on nanosecond time scales....
 
 ---
 
