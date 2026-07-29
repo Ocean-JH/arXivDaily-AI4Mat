@@ -34,55 +34,23 @@ Thank you to [arXiv](https://arxiv.org/) for use of its open access interoperabi
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (3)
+## New Papers (1)
 
-*Last updated: 2026-07-29 06:55:33 (SGT)*
+*Last updated: 2026-07-30 06:57:21 (SGT)*
 
-### 1. Physics-Guided Generative AI for Property-Targeted 3D Porous Media Design
+### 1. MDTransformer: A Hardware-Software Co-Design of Mode-Division Photonic Transformer Accelerator with Inverse-Designed Coherent Crossbar
 
-**Authors:** Peng Wang
+**Authors:** Solomon Micheal Serunjogi, Rachmad Vidya Wicaksana Putra, Ayat Taha, Muhammad Shafique, Mahmoud Rasras
 
-**Published:** 2026-07-27
+**Published:** 2026-07-28
 
-**Category:** cs.LG
+**Category:** cs.AR
 
-**ID:** 2607.24274v1
+**ID:** 2607.26016v1
 
-**Link:** [http://arxiv.org/abs/2607.24274v1](http://arxiv.org/abs/2607.24274v1)
+**Link:** [http://arxiv.org/abs/2607.26016v1](http://arxiv.org/abs/2607.26016v1)
 
-**Summary:** Inverse design of three-dimensional porous media is central to applications in filtration, catalysis, energy storage, fuel cells, thermal management, and biomedical scaffolds, but remains challenging because many distinct pore geometries can share similar porosity or permeability while small structural changes can strongly affect transport behaviour. This paper proposes a physics-guided generative AI framework for property-targeted porous media design, combining a property-aware variational autoencoder, a conditional latent diffusion model, and an independently trained differentiable structure-to-property surrogate. The framework learns a compact, physically informative latent design space, generates porous structures conditioned on target porosity and directional permeability, and refines generated samples using property-level feedback during denoising and decoding. Experiments on procedurally generated structures and real micro-CT porous-media datasets show improved target-property matching, directional permeability control, and property correlation compared with representative property-aware variational-autoencoder and latent-diffusion baselines. The results demonstrate a scalable route towards controllable inverse design of complex porous geometries and establish a foundation for simulation-informed generative AI tools in engineering and advanced materials discovery....
-
----
-
-### 2. Catalyst Diffusion Transformer: Generative Inverse Design of Heterogeneous Catalysts
-
-**Authors:** Hayoung Doo, Dong Hyeon Mok, Seoin Back, Jonggeol Na
-
-**Published:** 2026-07-27
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2607.24272v1
-
-**Link:** [http://arxiv.org/abs/2607.24272v1](http://arxiv.org/abs/2607.24272v1)
-
-**Summary:** The vast chemical design space and complex, interdependent design variables make catalyst discovery for targeted properties highly labor- and resource-intensive. Although generative models have emerged as a promising solution, existing approaches are generally limited to single-property conditioning or narrow chemical spaces. Here, we present Catalyst Diffusion Transformer (CatDiT), a unified framework for inverse catalyst design that generates valid and novel structures ranging from intermetallic alloys to oxide surfaces. By learning compressed latent representations, CatDiT enables efficient training and rapid sampling while supporting simultaneous conditioning on adsorbate type, binding energy, and catalyst class. The model provides reliable control of discrete properties and directional control of continuous properties, enriching candidate pools for reaction-specific catalyst discovery. As a representative application, multi-conditional generation for the nitrogen reduction reaction (NRR) yields 28 density functional theory (DFT)-relaxed alloy candidates that satisfy the target activity window and lie above the pure-metal *N-*H scaling line, corresponding to a ~1.5-fold enrichment over the source distribution. These results establish CatDiT as a practical and scalable approach for property-directed catalyst inverse design and targeted catalyst generation....
-
----
-
-### 3. Stoichiometric cluster learning for few-shot property prediction of multi-ionic integrated energetic materials
-
-**Authors:** Ming-Yu Guo, Wei-Jia Zou, Yu Shang, Wei-Xiong Zhang
-
-**Published:** 2026-07-25
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2607.23208v1
-
-**Link:** [http://arxiv.org/abs/2607.23208v1](http://arxiv.org/abs/2607.23208v1)
-
-**Summary:** Multi-ionic materials pose a distinct representational challenge in machine learning-driven materials design. Different from single-molecule or composition-based materials, their properties arise from how charged building blocks aggregate into specific assemblies. Here, we show how pretrained machine-learned interatomic potentials (MLIPs) can bypass full crystal-structure prediction and support pre-synthesis screening from stoichiometric ionic clusters using multi-ionic integrated explosives (MIXs) as a synthesis-facing example. This strategy combines a stoichiometric ionic-cluster representation, which represents each candidate material by a non-periodic, stoichiometry-preserved formula-unit cluster, with multi-task fine-tuning (MT-FT), which adapts a pretrained atomistic backbone while retaining the energy--force objective as physical regularization for the sparse detonation-velocity labels. With the pretrained backbone regularized by MT-FT, this surrogate provides a cross-validated screen across only 25 structurally curated perovskite-type energetic materials (PEMs) with experimentally derived Kamlet--Jacobs (K--J) detonation velocities. Representation probes show that the learned descriptors implicitly retain site-aware ionic organization, density information, and coarse packing compatibility, implying why non-periodic clusters can remain predictive before full crystal structures are known. The surrogate extends known PEMs chemistry to three newly synthesized ABX$_4$ materials with both unseen ABX$_4$ stoichiometry and an unseen ethylenediammonium B-site cation, yielding three-point concordance with K--J reference velocities and a mean absolute error (MAE) of 92~m$\cdot$s$^{-1}$ without retraining. Together, these results establish stoichiometry-preserved cluster learning as a synthesis-facing screening strategy for data-scarce multi-ionic materials....
+**Summary:** Recently, photonic transformer accelerators (PTAs) have successfully achieved significant speedup and energy efficiency improvements over electronic accelerators for expediting Transformer inference. However, state-of-the-art rely on expensive multi-wavelength light generation and large dot-product units due to active phase-shifter components, thus making their approach inefficient and impractical. To address this, we propose MDTransformer, a novel hardware-software co-design of PTA based on mode-division optical dataflow and operations. Specifically, MDTransformer performs complex matrix operations using spatial-mode interference, that leverages the inverse-designed multi-mode couplers, crossings, and Mach-Zehnder IQ modulators into a compact mode-division photonic tensor core (MPTC), capable of executing matrix multiplications in the optical domain. Its each guided mode (i.e., TE0-TE3) acts as an independent computational lane, enabling four-fold parallelism-per-waveguide without spectral filtering or free-spectral-range limitations. Moreover, its coherent detection and IQ modulation jointly encode amplitude and phase, realizing complex-valued arithmetic for full-range operations in transformers. MDTransformer offers analog multiplication with sub-4-bit effective precision and inter-modal crosstalk below -30 dB. Its inverse-designed approach also offers scalable and full compatibility with single-laser continuous-wave operation at 1550 nm. Experimental results show that MDTransformer achieves 40.4% area reduction, 63.6% power saving, 40.6% energy saving, and comparable latency over the state-of-the-art PTA across different workloads (i.e., DeiT-Tiny/Small/Base and BERT-Base/Large). These results show that MDTransformer offers a practical solution for high-performance and energy-efficient transformer-based systems....
 
 ---
 
