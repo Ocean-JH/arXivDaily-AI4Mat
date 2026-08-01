@@ -16,6 +16,7 @@
     }
 
     var pageType = body.dataset.pageType;
+    var siteRoot = body.dataset.siteRoot || '';
     var localPapers = Array.prototype.slice.call(document.querySelectorAll('.paper'));
     var archiveIndexPromise = null;
     var searchSequence = 0;
@@ -145,9 +146,9 @@
     function archivePageHref(paper) {
         var page = Number.parseInt(paper.page, 10);
         var fileName = Number.isFinite(page) && page > 1
-            ? 'archive-' + page + '.html'
+            ? 'archive/page-' + page + '.html'
             : 'archive.html';
-        return fileName + '#' + encodeURIComponent(safeAnchor(paper));
+        return siteRoot + fileName + '#' + encodeURIComponent(safeAnchor(paper));
     }
 
     function renderArchiveResults(matches, query) {

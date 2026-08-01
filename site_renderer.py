@@ -17,7 +17,10 @@ from typing import Any
 
 LOGGER = logging.getLogger("arxiv-tracker")
 SITE_BASE_URL = "https://ocean-jh.github.io/arXivDaily-AI4Mat/"
-ARCHIVE_PAGE_FILE = re.compile(r"archive-(?P<number>[2-9]\d*)\.html\Z")
+LEGACY_ARCHIVE_PAGE_FILE = re.compile(r"archive-(?P<number>[1-9]\d*)\.html\Z")
+NUMBERED_ARCHIVE_PAGE_FILE = re.compile(
+    r"page-(?P<number>(?:[2-9]|[1-9]\d+))\.html\Z"
+)
 
 
 def _html(value: Any) -> str:
@@ -90,13 +93,13 @@ class SiteRenderer:
         )
 
     @staticmethod
-    def _navbar(page_type: str) -> str:
+    def _navbar(page_type: str, site_root: str) -> str:
         latest_current = ' aria-current="page"' if page_type == "latest" else ""
         archive_current = ' aria-current="page"' if page_type == "archive" else ""
         return (
             '<nav class="nav" aria-label="Primary navigation">'
-            f'<a href="index.html"{latest_current}>Latest</a>'
-            f'<a href="archive.html"{archive_current}>Archive</a>'
+            f'<a href="{site_root}index.html"{latest_current}>Latest</a>'
+            f'<a href="{site_root}archive.html"{archive_current}>Archive</a>'
             "</nav>"
         )
 
@@ -112,6 +115,7 @@ class SiteRenderer:
         status_notice: str = "",
     ) -> str:
         canonical_url = SITE_BASE_URL + ("" if page_file == "index.html" else page_file)
+        site_root = "../" if "/" in page_file else ""
         base_template, _ = self._templates()
         return base_template.format(
             title=_html(title),
@@ -121,8 +125,9 @@ class SiteRenderer:
             og_title=_html(title),
             og_description=_html(description),
             page_type=_html(page_type),
-            archive_search_index_url="data/archive-search-index.json",
-            navbar=self._navbar(page_type),
+            site_root=site_root,
+            archive_search_index_url=f"{site_root}data/archive-search-index.json",
+            navbar=self._navbar(page_type, site_root),
             status_notice=status_notice,
             content=content,
             timestamp_iso=_html(timestamp.isoformat()),
@@ -180,7 +185,13 @@ class SiteRenderer:
 
     @staticmethod
     def _archive_filename(page: int) -> str:
-        return "archive.html" if page == 1 else f"archive-{page}.html"
+        return "archive.html" if page == 1 else f"archive/page-{page}.html"
+
+    def _archive_page_href(self, page: int, current_page: int) -> str:
+        filename = self._archive_filename(page)
+        if current_page == 1:
+            return filename
+        return "../archive.html" if page == 1 else Path(filename).name
 
     def _archive_pagination(self, current_page: int, total_pages: int) -> str:
         if total_pages <= 1:
@@ -193,7 +204,7 @@ class SiteRenderer:
         parts = ['<nav class="archive-pagination" aria-label="Archive pages">']
         if current_page > 1:
             parts.append(
-                f'<a href="{self._archive_filename(current_page - 1)}" '
+                f'<a href="{self._archive_page_href(current_page - 1, current_page)}" '
                 'rel="prev">← Previous</a>'
             )
 
@@ -207,14 +218,14 @@ class SiteRenderer:
                 )
             else:
                 parts.append(
-                    f'<a href="{self._archive_filename(page)}" '
+                    f'<a href="{self._archive_page_href(page, current_page)}" '
                     f'aria-label="Page {page}">{page}</a>'
                 )
             previous = page
 
         if current_page < total_pages:
             parts.append(
-                f'<a href="{self._archive_filename(current_page + 1)}" '
+                f'<a href="{self._archive_page_href(current_page + 1, current_page)}" '
                 'rel="next">Next →</a>'
             )
         parts.append("</nav>")
@@ -405,7 +416,15 @@ class SiteRenderer:
         return outputs, set(archive_documents)
 
     def remove_stale_archive_pages(self, desired: set[Path]) -> None:
-        for path in self.root_dir.glob("archive-*.html"):
-            if ARCHIVE_PAGE_FILE.fullmatch(path.name) and path not in desired:
+        candidates = [
+            *self.root_dir.glob("archive-*.html"),
+            *self.root_dir.glob("archive/page-*.html"),
+        ]
+        for path in candidates:
+            is_generated_archive = (
+                LEGACY_ARCHIVE_PAGE_FILE.fullmatch(path.name)
+                or NUMBERED_ARCHIVE_PAGE_FILE.fullmatch(path.name)
+            )
+            if is_generated_archive and path not in desired:
                 path.unlink()
                 LOGGER.info("Removed stale archive page: %s", path.name)

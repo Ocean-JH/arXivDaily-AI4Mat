@@ -28,9 +28,11 @@ function pageMarkup(options = {}) {
     const papers = options.papers || '';
     const pageType = options.pageType || 'latest';
     const archiveIndex = options.archiveIndex || '';
+    const siteRoot = options.siteRoot || '';
 
     return `<!doctype html>
-        <html><body data-page-type="${pageType}" data-archive-search-index="${archiveIndex}">
+        <html><body data-page-type="${pageType}" data-site-root="${siteRoot}"
+            data-archive-search-index="${archiveIndex}">
             <main>
                 <form id="paper-search"><input id="search-input"><button type="submit">Search</button></form>
                 <p id="search-results-info" hidden></p>
@@ -147,7 +149,40 @@ test('archive search loads its index lazily and links to the owning static page'
     assert.equal(fetchCount, 1);
     assert.equal(dom.window.document.getElementById('papers-content').hidden, true);
     assert.equal(dom.window.document.getElementById('archive-search-results').hidden, false);
-    assert.equal(link.getAttribute('href'), 'archive-2.html#paper-2601.00001');
+    assert.equal(link.getAttribute('href'), 'archive/page-2.html#paper-2601.00001');
+});
+
+test('archive search keeps links root-relative from nested archive pages', async () => {
+    const dom = makeDom(pageMarkup({
+        pageType: 'archive',
+        siteRoot: '../',
+        archiveIndex: '../data/archive-search-index.json'
+    }), 'https://example.test/archive/page-3.html');
+
+    dom.window.fetch = async () => ({
+        ok: true,
+        async json() {
+            return {
+                papers: [{
+                    id: '2601.00001v1',
+                    base_id: '2601.00001',
+                    title: 'Nested archive result',
+                    page: 2,
+                    anchor: 'paper-2601.00001'
+                }]
+            };
+        }
+    });
+
+    dom.window.eval(script('search.js'));
+    const input = dom.window.document.getElementById('search-input');
+    input.value = 'nested';
+    dom.window.document.getElementById('paper-search')
+        .dispatchEvent(new dom.window.Event('submit', { bubbles: true, cancelable: true }));
+    await new Promise(resolve => setImmediate(resolve));
+
+    const link = dom.window.document.querySelector('.archive-search-item a');
+    assert.equal(link.getAttribute('href'), '../archive/page-2.html#paper-2601.00001');
 });
 
 test('theme initialization follows the system before the toggle stores an explicit choice', () => {

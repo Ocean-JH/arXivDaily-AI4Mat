@@ -51,8 +51,8 @@ status. Review the resulting diff before committing it.
   assets.
 - `data/known_papers.json` and `data/results/` are the durable ingestion state.
 - `data/archive-search-index.json` is the compact public search index.
-- `index.html`, `archive*.html`, `feed.xml`, `sitemap.xml`, and
-  `site-status.json` are generated outputs.
+- `index.html`, `archive.html`, `archive/page-*.html`, `feed.xml`,
+  `sitemap.xml`, and `site-status.json` are generated outputs.
 - `scripts/prepare_site_artifact.py` validates generated HTML and assembles a
   strict allowlist of files for GitHub Pages.
 
@@ -110,7 +110,7 @@ arXiv's API access and attribution requirements.
 
 _No new papers were found in the latest check; showing the most recent additions._
 
-*Last checked: 2026-08-01 15:51:07 (SGT)*
+*Last checked: 2026-08-01 16:19:47 (SGT)*
 
 ### 1. MDTransformer: A Hardware-Software Co-Design of Mode-Division Photonic Transformer Accelerator with Inverse-Designed Coherent Crossbar
 

@@ -14,7 +14,10 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 
-ARCHIVE_PAGE = re.compile(r"archive(?:-(?P<number>[1-9]\d*))?\.html\Z")
+NUMBERED_ARCHIVE_PAGE = re.compile(
+    r"page-(?P<number>(?:[2-9]|[1-9]\d+))\.html\Z"
+)
+LEGACY_ARCHIVE_PAGE = re.compile(r"archive-[1-9]\d*\.html\Z")
 PUBLIC_ROOT_FILES = (
     "404.html",
     "CNAME",
@@ -76,11 +79,12 @@ class DocumentInspector(HTMLParser):
 
 
 def _archive_sort_key(path: Path) -> tuple[int, str]:
-    match = ARCHIVE_PAGE.fullmatch(path.name)
+    if path.name == "archive.html":
+        return (1, path.name)
+    match = NUMBERED_ARCHIVE_PAGE.fullmatch(path.name)
     if not match:
         return (sys.maxsize, path.name)
-    number = match.group("number")
-    return (1 if number is None else int(number), path.name)
+    return (int(match.group("number")), path.name)
 
 
 def _site_html_files(source: Path) -> list[Path]:
@@ -96,18 +100,43 @@ def _site_html_files(source: Path) -> list[Path]:
             f"Missing required generated HTML: {', '.join(missing)}"
         )
 
-    archive_pages = sorted(
-        (
-            path
-            for path in source.glob("archive*.html")
-            if ARCHIVE_PAGE.fullmatch(path.name)
-        ),
-        key=_archive_sort_key,
-    )
-    return [index, *archive_pages]
+    legacy_pages = [
+        path for path in source.glob("archive-*.html")
+        if LEGACY_ARCHIVE_PAGE.fullmatch(path.name)
+    ]
+    if legacy_pages:
+        names = ", ".join(sorted(path.name for path in legacy_pages))
+        raise SiteValidationError(
+            f"Legacy archive pages must be moved under archive/: {names}"
+        )
+
+    archive_candidates = list((source / "archive").glob("page-*.html"))
+    invalid_pages = [
+        path for path in archive_candidates
+        if not NUMBERED_ARCHIVE_PAGE.fullmatch(path.name)
+    ]
+    if invalid_pages:
+        names = ", ".join(sorted(path.name for path in invalid_pages))
+        raise SiteValidationError(f"Invalid numbered archive pages: {names}")
+
+    numbered_pages = sorted(archive_candidates, key=_archive_sort_key)
+    page_numbers = [
+        int(NUMBERED_ARCHIVE_PAGE.fullmatch(path.name).group("number"))
+        for path in numbered_pages
+    ]
+    expected_numbers = list(range(2, len(numbered_pages) + 2))
+    if page_numbers != expected_numbers:
+        raise SiteValidationError(
+            "Numbered archive pages must be contiguous from page 2"
+        )
+    return [index, archive, *numbered_pages]
 
 
-def _resolve_local_reference(source: Path, reference: str) -> Path | None:
+def _resolve_local_reference(
+    source: Path,
+    document: Path,
+    reference: str,
+) -> Path | None:
     parsed = urlsplit(reference)
     if parsed.scheme or parsed.netloc or reference.startswith(("#", "//", "/")):
         return None
@@ -116,7 +145,7 @@ def _resolve_local_reference(source: Path, reference: str) -> Path | None:
     if not relative:
         return None
 
-    candidate = (source / relative).resolve()
+    candidate = (document.parent / relative).resolve()
     try:
         candidate.relative_to(source)
     except ValueError as exc:
@@ -150,7 +179,7 @@ def _validate_html(source: Path, path: Path) -> None:
 
     missing_references: list[str] = []
     for reference in inspector.local_references:
-        target = _resolve_local_reference(source, reference)
+        target = _resolve_local_reference(source, path, reference)
         if target is not None and not target.exists():
             missing_references.append(reference)
     if missing_references:
@@ -228,6 +257,7 @@ def validate_site(source: Path, *, require_deploy_files: bool) -> list[Path]:
 
     search_index = source / "data" / "archive-search-index.json"
     status_file = source / "site-status.json"
+    status: dict[str, object] | None = None
     if require_deploy_files:
         for path in (search_index, status_file):
             if not path.is_file():
@@ -236,15 +266,16 @@ def validate_site(source: Path, *, require_deploy_files: bool) -> list[Path]:
                 )
         _load_json(search_index)
         status = _validate_status(status_file)
-        if status["archive_pages"] != len(html_files) - 1:
-            raise SiteValidationError(
-                "site-status.json archive_pages does not match generated archive pages"
-            )
     else:
         if search_index.is_file():
             _load_json(search_index)
         if status_file.is_file():
-            _validate_status(status_file)
+            status = _validate_status(status_file)
+
+    if status and status["archive_pages"] != len(html_files) - 1:
+        raise SiteValidationError(
+            "site-status.json archive_pages does not match generated archive pages"
+        )
 
     return html_files
 
@@ -279,7 +310,7 @@ def build_artifact(source: Path, output: Path) -> list[Path]:
     output.mkdir(parents=True)
 
     for path in html_files:
-        _copy_file(path, output / path.name)
+        _copy_file(path, output / path.relative_to(source))
     _copy_tree(source / "static", output / "static")
     _copy_file(
         source / "data" / "archive-search-index.json",

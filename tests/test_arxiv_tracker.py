@@ -167,17 +167,23 @@ def test_build_splits_archive_and_creates_search_feed_and_status(tmp_path: Path)
         stored_record(tracker, "2607.00001v1", "Oldest paper", 1),
     ]
     write_results(tracker, records)
-    stale_page = tmp_path / "archive-3.html"
+    stale_page = tmp_path / "archive/page-3.html"
+    stale_page.parent.mkdir()
     stale_page.write_text("stale", encoding="utf-8")
+    legacy_page = tmp_path / "archive-9.html"
+    legacy_page.write_text("legacy", encoding="utf-8")
 
     tracker.build_from_saved(checked_at=NOW, update_readme=False)
 
     first_page = (tmp_path / "archive.html").read_text(encoding="utf-8")
-    second_page = (tmp_path / "archive-2.html").read_text(encoding="utf-8")
+    second_page = (tmp_path / "archive/page-2.html").read_text(encoding="utf-8")
     assert first_page.count('<article class="paper"') == 2
     assert second_page.count('<article class="paper"') == 1
-    assert "archive-2.html" in first_page
+    assert 'href="archive/page-2.html"' in first_page
+    assert 'href="../archive.html"' in second_page
+    assert 'src="../static/js/search.js"' in second_page
     assert not stale_page.exists()
+    assert not legacy_page.exists()
 
     search_index = json.loads(
         (tmp_path / "data/archive-search-index.json").read_text(encoding="utf-8")
@@ -196,7 +202,9 @@ def test_build_splits_archive_and_creates_search_feed_and_status(tmp_path: Path)
         "total_papers": 3,
     }
     assert "Newest paper" in (tmp_path / "feed.xml").read_text(encoding="utf-8")
-    assert "archive-2.html" in (tmp_path / "sitemap.xml").read_text(encoding="utf-8")
+    assert "archive/page-2.html" in (
+        tmp_path / "sitemap.xml"
+    ).read_text(encoding="utf-8")
 
 
 def test_empty_run_keeps_latest_batch_on_homepage(tmp_path: Path) -> None:

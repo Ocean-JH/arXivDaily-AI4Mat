@@ -98,6 +98,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A -- README.md static data index.html site-status.json 'archive*.html'
+          if [[ -d archive ]] || [[ -n "$(git ls-files -- archive)" ]]; then
+            git add -A -- archive
+          fi
           for artifact in atom.xml feed.xml robots.txt rss.xml sitemap.xml; do
             if [[ -e "$artifact" ]] || git ls-files --error-unmatch "$artifact" >/dev/null 2>&1; then
               git add -A -- "$artifact"
