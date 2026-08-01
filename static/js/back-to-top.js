@@ -1,22 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const backToTopBtn = document.getElementById("back-to-top");
+(function () {
+    'use strict';
 
-  if (!backToTopBtn) {
-    return;
-  }
+    var button = document.getElementById('back-to-top');
+    var reduceMotion = window.matchMedia
+        && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.style.display = "block";
-    } else {
-      backToTopBtn.style.display = "none";
+    if (!button) {
+        return;
     }
-  });
 
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    function updateVisibility() {
+        button.hidden = window.scrollY <= 500;
+    }
+
+    window.addEventListener('scroll', updateVisibility, { passive: true });
+    button.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: reduceMotion ? 'auto' : 'smooth'
+        });
     });
-  });
-});
+
+    updateVisibility();
+}());

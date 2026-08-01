@@ -1,110 +1,59 @@
-/* Dark mode for the independent presentation system */
-body.dark-mode {
+/* Color-only overrides. The early theme initializer sets this attribute before
+   styles load, avoiding a light-theme flash for dark-mode visitors. */
+
+html[data-theme="dark"] {
     color-scheme: dark;
-    --page: #111315;
-    --panel: #1a1d20;
-    --panel-subtle: #22262a;
-    --ink: #f2efe8;
-    --muted: #a8b0ae;
-    --line: #363b3d;
-    --line-strong: #50595a;
-    --teal: #57d0c8;
-    --teal-deep: #86e4dd;
-    --amber: #f3bd69;
-    --red: #f09a90;
-    --blue: #9fc1f4;
-    --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
-    --shadow-small: 0 10px 28px rgba(0, 0, 0, 0.32);
+    --page: #111416;
+    --page-grid: rgba(255, 255, 255, 0.032);
+    --panel: #1a1e20;
+    --panel-raised: #202528;
+    --panel-subtle: #23282b;
+    --ink: #f1eee7;
+    --muted: #a8b1af;
+    --line: #373d3f;
+    --line-strong: #555f60;
+    --teal: #62d5ce;
+    --teal-hover: #8be5df;
+    --teal-soft: #173a39;
+    --amber: #f2bb67;
+    --amber-soft: #41301b;
+    --red: #f0a29a;
+    --red-soft: #432728;
+    --blue: #a9c8f2;
+    --blue-soft: #202f43;
+    --button-ink: #081817;
+    --header-start: #080c0e;
+    --header-mid: #102f2d;
+    --header-end: #4b2c13;
+    --header-ink: #fff9ee;
+    --header-muted: #d6cec0;
+    --focus: rgba(98, 213, 206, 0.38);
+    --shadow: 0 18px 55px rgba(0, 0, 0, 0.42);
+    --shadow-small: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] body {
     background:
-        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, var(--page-grid) 1px, transparent 1px),
+        linear-gradient(180deg, var(--page-grid) 1px, transparent 1px),
         var(--page);
 }
 
-body.dark-mode::before {
-    background:
-        linear-gradient(135deg, rgba(87, 208, 200, 0.12), transparent 30%),
-        linear-gradient(315deg, rgba(243, 189, 105, 0.1), transparent 26%);
+html[data-theme="dark"] .site-frame {
+    background: color-mix(in srgb, var(--panel) 96%, transparent);
 }
 
-body.dark-mode a {
-    color: var(--teal-deep);
+html[data-theme="dark"] .nav a[aria-current="page"],
+html[data-theme="dark"] .nav strong {
+    color: #17201e;
 }
 
-body.dark-mode a:hover {
-    color: #b7f3ee;
-}
-
-body.dark-mode .site-frame {
-    background: rgba(26, 29, 32, 0.94);
-}
-
-body.dark-mode .header {
-    background:
-        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-        linear-gradient(135deg, #080b0d 0%, #102d2b 56%, #4a2b13 100%);
-    background-size: 32px 32px, 32px 32px, auto;
-}
-
-body.dark-mode .search-container {
-    background: #121517;
-}
-
-body.dark-mode #search-input {
+html[data-theme="dark"] .paper-title a,
+html[data-theme="dark"] .archive-search-item a {
     color: var(--ink);
-    background: #1a1d20;
 }
 
-body.dark-mode #search-input::placeholder {
-    color: #858d8b;
-}
-
-body.dark-mode #search-button,
-body.dark-mode .pagination-button,
-body.dark-mode #back-to-top {
-    color: #061817;
-    background: var(--teal);
-}
-
-body.dark-mode #search-button:hover,
-body.dark-mode .pagination-button:hover:not(:disabled),
-body.dark-mode #back-to-top:hover {
-    background: var(--teal-deep);
-}
-
-body.dark-mode .paper-index {
-    background:
-        linear-gradient(180deg, rgba(243, 189, 105, 0.12), transparent),
-        #171a1d;
-}
-
-body.dark-mode .paper-info strong,
-body.dark-mode .paper-link strong {
-    color: #e7e1d6;
-}
-
-body.dark-mode .paper-badge {
-    color: #ffd38b;
-    border-color: rgba(243, 189, 105, 0.28);
-    background: rgba(243, 189, 105, 0.13);
-}
-
-body.dark-mode .paper-badge.updated {
-    color: #ffb2a9;
-    border-color: rgba(240, 154, 144, 0.26);
-    background: rgba(240, 154, 144, 0.12);
-}
-
-body.dark-mode .paper-summary {
-    color: #ccd3d0;
-}
-
-body.dark-mode .paper-summary summary {
-    color: var(--blue);
-    background: rgba(159, 193, 244, 0.12);
-}
-
-body.dark-mode footer {
-    background: #15181a;
+html[data-theme="dark"] .paper-title a:hover,
+html[data-theme="dark"] .archive-search-item a:hover {
+    color: var(--teal-hover);
 }

@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.13"
+
+jobs:
+  validate:
+    name: Test and validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --requirement requirements.txt
+          python -m pip install --requirement requirements-dev.txt
+          npm install --ignore-scripts --no-package-lock
+
+      - name: Run tests
+        run: python -m pytest
+
+      - name: Compile Python sources
+        run: python -m compileall -q arxiv_tracker.py site_renderer.py scripts tests
+
+      - name: Run static checks
+        run: python -m ruff check .
+
+      - name: Validate generated HTML
+        run: python scripts/prepare_site_artifact.py check
+
+      - name: Check JavaScript syntax
+        run: |
+          for script in static/js/*.js; do node --check "$script"; done
+
+      - name: Test frontend interactions
+        run: npm run test:frontend

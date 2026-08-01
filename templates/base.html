@@ -1,82 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F3PL2Q961N"></script>
-    <script src="static/js/gtag-init.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{description}">
+    <meta name="theme-color" content="#f7f4ee">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
+    <link rel="canonical" href="{canonical_url}">
+    <link rel="alternate" type="application/rss+xml" title="AI4Mat arXiv paper feed" href="{rss_url}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AI4Mat Research Monitor">
+    <meta property="og:title" content="{og_title}">
+    <meta property="og:description" content="{og_description}">
+    <meta property="og:url" content="{canonical_url}">
+    <meta property="og:image" content="https://ocean-jh.github.io/arXivDaily-AI4Mat/static/images/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta property="og:image:alt" content="AI4Mat Research Monitor — daily AI and materials science papers">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{og_title}">
+    <meta name="twitter:description" content="{og_description}">
+    <meta name="twitter:image" content="https://ocean-jh.github.io/arXivDaily-AI4Mat/static/images/og-preview.png">
+    <meta name="twitter:image:alt" content="AI4Mat Research Monitor — daily AI and materials science papers">
+
+    <script src="static/js/theme-init.js"></script>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/dark-mode.css">
-    <link rel="icon" type="image/x-icon" href="static/favicon_io/favicon.ico">
+
+    <link rel="icon" href="static/favicon_io/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="16x16" href="static/favicon_io/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="static/favicon_io/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="static/favicon_io/apple-touch-icon.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F3PL2Q961N"></script>
+    <script src="static/js/gtag-init.js"></script>
 </head>
-<body>
+<body class="page-{page_type}"
+      data-page-type="{page_type}"
+      data-archive-search-index="{archive_search_index_url}">
+<a class="skip-link" href="#main-content">Skip to papers</a>
+
 <div class="site-frame">
-    <header class="header">
+    <header class="site-header">
         <div class="topbar">
-            <a href="https://ocean-jh.github.io/" target="_blank" class="brand-link">
-                <img src="static/favicon_io/logo.png" alt="Wang Jianghai's Blog" class="blog-logo">
+            <a href="https://ocean-jh.github.io/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="brand-link">
+                <img src="static/favicon_io/logo.png"
+                     width="38"
+                     height="38"
+                     alt=""
+                     class="blog-logo">
                 <span>AI4Mat Research Monitor</span>
             </a>
 
             <div class="topbar-actions">
                 {navbar}
-                <button id="theme-toggle" type="button" aria-label="Switch to dark theme">🌙 Night</button>
+                <button id="theme-toggle"
+                        class="theme-toggle"
+                        type="button"
+                        aria-label="Switch to dark theme"
+                        aria-pressed="false">
+                    <span aria-hidden="true">◐</span>
+                    <span class="theme-toggle-label">Theme</span>
+                </button>
             </div>
         </div>
 
         <div class="hero">
             <div class="hero-copy">
-                <p class="eyebrow">Daily arXiv signal for materials intelligence</p>
-                <h1>ArXiv Daily<br>AI for Materials Science</h1>
-                <p class="hero-lede">A focused stream of papers connecting machine learning, generative design,
-                    crystal structure prediction, and materials discovery.</p>
+                <p class="eyebrow">Daily arXiv signal</p>
+                <h1>AI for Materials <span>research monitor</span></h1>
+                <p class="hero-lede">A focused stream of machine learning, generative design, crystal structure,
+                    and materials discovery research.</p>
             </div>
 
-            <div class="hero-notes" aria-label="Site summary">
+            <dl class="hero-notes" aria-label="Site summary">
                 <div>
-                    <span class="note-label">Source</span>
-                    <strong>arXiv.org</strong>
+                    <dt>Source</dt>
+                    <dd>arXiv</dd>
                 </div>
                 <div>
-                    <span class="note-label">Refresh</span>
-                    <strong>Daily automation</strong>
+                    <dt>Refresh</dt>
+                    <dd>Daily</dd>
                 </div>
                 <div>
-                    <span class="note-label">Focus</span>
-                    <strong>AI + Materials</strong>
+                    <dt>Focus</dt>
+                    <dd>AI + materials</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </header>
 
-    <main class="content-shell">
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search title, author, category, ID, or summary..." aria-label="Search papers">
-            <button id="search-button" type="button">Search</button>
-        </div>
+    <main id="main-content" class="content-shell" tabindex="-1">
+        <div class="status-notice" role="status" aria-live="polite">{status_notice}</div>
 
-        {content}
+        <section class="research-tools" aria-labelledby="search-label">
+            <form id="paper-search" class="search-form" role="search" method="get">
+                <div class="search-heading">
+                    <label id="search-label" for="search-input">Search papers</label>
+                    <span id="search-help">Title, author, category, arXiv ID, or abstract</span>
+                </div>
+                <div class="search-controls">
+                    <input type="search"
+                           id="search-input"
+                           name="q"
+                           placeholder="Try “graph neural network”"
+                           autocomplete="off"
+                           aria-describedby="search-help search-results-info">
+                    <button id="search-button" type="submit">Search</button>
+                </div>
+            </form>
+            <p id="search-results-info"
+               class="search-results-info"
+               role="status"
+               aria-live="polite"
+               aria-atomic="true"
+               hidden></p>
+        </section>
+
+        <section id="archive-search-results"
+                 class="archive-search-results"
+                 aria-labelledby="archive-search-heading"
+                 hidden>
+            <div class="section-heading">
+                <h2 id="archive-search-heading">Archive search results</h2>
+                <p id="archive-search-summary"></p>
+            </div>
+            <ol id="archive-search-list" class="archive-search-list"></ol>
+        </section>
+
+        <div id="papers-content">
+            {content}
+        </div>
     </main>
 
-    <footer>
-        <p>Last updated: {timestamp}</p>
-        <p>2025 <a href="https://ocean-jh.github.io/" target="_blank">Wang Jianghai</a> <a href="mailto:jianghai001@e.ntu.edu.sg">Email</a> @ Nanyang Technological University | All Rights Reserved</p>
-        <p><a href="https://github.com/Ocean-JH/ArXivDaily-AI4MAT">Star on GitHub</a> · Powered by <a href="https://arxiv.org/" target="_blank">arXiv</a></p>
+    <footer class="site-footer">
+        <p>Last updated <time datetime="{timestamp_iso}">{timestamp}</time></p>
+        <p>© {current_year} <a href="https://ocean-jh.github.io/"
+                              target="_blank"
+                              rel="noopener noreferrer">Wang Jianghai</a>
+            · Nanyang Technological University
+            · <a href="mailto:jianghai001@e.ntu.edu.sg">Email</a>
+        </p>
+        <p><a href="https://github.com/Ocean-JH/arXivDaily-AI4Mat"
+              target="_blank"
+              rel="noopener noreferrer">GitHub</a>
+            · Powered by <a href="https://arxiv.org/"
+                            target="_blank"
+                            rel="noopener noreferrer">arXiv</a>
+            · <a href="{rss_url}">RSS</a>
+        </p>
     </footer>
 </div>
 
-<button id="back-to-top" type="button" title="Back to Top" aria-label="Back to top">↑</button>
+<button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" hidden>↑</button>
 
-    <!-- JavaScript -->
-    <script src="static/js/dark-mode.js"></script>
-    <script src="static/js/pagination.js"></script>
-    <script src="static/js/search.js"></script>
-    <script src="static/js/back-to-top.js"></script>
+<script src="static/js/dark-mode.js"></script>
+<script src="static/js/pagination.js"></script>
+<script src="static/js/search.js"></script>
+<script src="static/js/back-to-top.js"></script>
 </body>
 </html>

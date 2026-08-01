@@ -1,20 +1,38 @@
-<article class="paper">
-  <div class="paper-index" aria-hidden="true">{index}</div>
-  <div class="paper-body">
-  <h3 class="paper-title">{title}{tag}</h3>
+<article class="paper"
+         id="{anchor}"
+         data-paper-id="{base_id}"
+         aria-labelledby="title-{anchor}"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">{index}</div>
+    <div class="paper-body">
+        <h3 id="title-{anchor}" class="paper-title"><a href="{url}" target="_blank" rel="noopener noreferrer">{title}</a>{tag}</h3>
 
-  <div class="paper-info">
-    <p class="paper-authors"><strong>Authors:</strong> {authors}</p>
-    <p class="paper-date"><strong>Published:</strong> {published_date}</p>
-    <p class="paper-category"><strong>Category:</strong> {category}</p>
-    <p class="paper-id"><strong>ID:</strong> {paper_id}</p>
-  </div>
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>{authors}</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="{published_iso}">{published_date}</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>{category}</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>{paper_id}</dd>
+            </div>
+        </dl>
 
-  <p class="paper-link"><strong>arXiv:</strong> <a href="{url}" target="_blank" rel="noopener noreferrer">{url}</a></p>
+        <div class="paper-actions">
+            <a href="{url}" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
 
-  <details class="paper-summary">
-    <summary>Abstract</summary>
-    <p>{summary}</p>
-  </details>
-  </div>
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>{summary}</p>
+        </details>
+    </div>
 </article>

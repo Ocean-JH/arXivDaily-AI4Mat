@@ -1,51 +1,178 @@
-name: Daily arXiv Update
+name: Daily arXiv update and Pages deployment
 
 on:
   push:
     branches:
       - main
   schedule:
-    # Run at 6:00 SGT every day
-    - cron: '0 22 * * *'
-  workflow_dispatch:  # Allow manual triggering
+    # 06:00 Singapore time (22:00 UTC on the previous day).
+    - cron: "0 22 * * *"
+  workflow_dispatch:
 
-permissions:
-  contents: write
+permissions: {}
 
 concurrency:
-  group: daily-arxiv-update
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
+
+env:
+  PYTHON_VERSION: "3.13"
 
 jobs:
   update:
+    name: Generate and package
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pages: read
+    outputs:
+      generated_at: ${{ steps.site_status.outputs.generated_at }}
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Verify Actions-based Pages publishing
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! build_type="$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '.build_type')"; then
+            echo "::error::Enable Pages and select GitHub Actions under Settings > Pages > Source."
+            exit 1
+          fi
+          if [[ "$build_type" != "workflow" ]]; then
+            echo "::error::Pages is configured for '${build_type}', not GitHub Actions. Select GitHub Actions under Settings > Pages > Source."
+            exit 1
+          fi
+
+      - name: Configure GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+        with:
+          enablement: false
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
-          python-version: '3.10'
-          cache: 'pip'
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python -m pip install --requirement requirements.txt
+          python -m pip install --requirement requirements-dev.txt
+          npm install --ignore-scripts --no-package-lock
 
-      - name: Run ArXiv Tracker
+      - name: Run tests and static checks
+        run: |
+          python -m pytest
+          python -m compileall -q arxiv_tracker.py site_renderer.py scripts tests
+          python -m ruff check .
+          python scripts/prepare_site_artifact.py check
+          for script in static/js/*.js; do node --check "$script"; done
+          npm run test:frontend
+
+      - name: Generate site
         run: python arxiv_tracker.py
 
-      - name: Commit and push if changed
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build public Pages artifact
+        run: >-
+          python scripts/prepare_site_artifact.py build
+          --source .
+          --output "${RUNNER_TEMP}/pages"
+
+      - name: Read generated site status
+        id: site_status
         run: |
-          git config --global user.name 'Wang Jianghai'
-          git config --global user.email 'jianghai001@e.ntu.edu.sg'
-          git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/${{ github.repository }}.git
-          git add README.md static/ data/ index.html archive.html
-          git diff --quiet && git diff --staged --quiet || (
-            git commit -m "Update arXiv papers: $(date +'%Y-%m-%d')"
-            git push
-          )
+          python -c 'import json; print("generated_at=" + json.load(open("site-status.json", encoding="utf-8"))["generated_at"])' >> "$GITHUB_OUTPUT"
+
+      - name: Commit generated files
+        if: startsWith(github.ref, 'refs/heads/')
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- README.md static data index.html site-status.json 'archive*.html'
+          for artifact in atom.xml feed.xml robots.txt rss.xml sitemap.xml; do
+            if [[ -e "$artifact" ]] || git ls-files --error-unmatch "$artifact" >/dev/null 2>&1; then
+              git add -A -- "$artifact"
+            fi
+          done
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+          git commit -m "Update arXiv papers: $(date +'%Y-%m-%d')"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: ${{ runner.temp }}/pages
+          retention-days: 1
+
+  deploy:
+    name: Deploy GitHub Pages
+    if: github.ref == 'refs/heads/main'
+    needs: update
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
+
+  verify:
+    name: Verify deployed freshness
+    needs:
+      - update
+      - deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions: {}
+    env:
+      EXPECTED_GENERATED_AT: ${{ needs.update.outputs.generated_at }}
+      PAGE_URL: ${{ needs.deploy.outputs.page_url }}
+
+    steps:
+      - name: Compare deployed site status
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in {1..12}; do
+            status_url="${PAGE_URL%/}/site-status.json?run=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}&attempt=${attempt}"
+            if curl --fail --silent --show-error --location \
+              --connect-timeout 5 \
+              --max-time 10 \
+              --header "Cache-Control: no-cache" \
+              "$status_url" --output deployed-status.json; then
+              if deployed_generated_at="$(python3 -c 'import json; print(json.load(open("deployed-status.json", encoding="utf-8"))["generated_at"])')" &&
+                [[ "$deployed_generated_at" == "$EXPECTED_GENERATED_AT" ]]; then
+                echo "Deployment is current at ${deployed_generated_at}."
+                exit 0
+              fi
+            fi
+            echo "Attempt ${attempt}: waiting for the deployed status to become current."
+            sleep 10
+          done
+          echo "Expected generated_at=${EXPECTED_GENERATED_AT}" >&2
+          if [[ -f deployed-status.json ]]; then
+            echo "Last deployed status:" >&2
+            sed -n '1,80p' deployed-status.json >&2
+          fi
+          exit 1

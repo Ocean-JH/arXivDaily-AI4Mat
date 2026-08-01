@@ -1,109 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F3PL2Q961N"></script>
-    <script src="static/js/gtag-init.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The latest arXiv research connecting artificial intelligence, materials discovery, inverse design, and crystal structure prediction.">
+    <meta name="theme-color" content="#f7f4ee">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv Daily - Latest Papers</title>
+    <title>AI4Mat Research Monitor — Latest Papers</title>
+    <link rel="canonical" href="https://ocean-jh.github.io/arXivDaily-AI4Mat/">
+    <link rel="alternate" type="application/rss+xml" title="AI4Mat arXiv paper feed" href="https://ocean-jh.github.io/arXivDaily-AI4Mat/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AI4Mat Research Monitor">
+    <meta property="og:title" content="AI4Mat Research Monitor — Latest Papers">
+    <meta property="og:description" content="The latest arXiv research connecting artificial intelligence, materials discovery, inverse design, and crystal structure prediction.">
+    <meta property="og:url" content="https://ocean-jh.github.io/arXivDaily-AI4Mat/">
+    <meta property="og:image" content="https://ocean-jh.github.io/arXivDaily-AI4Mat/static/images/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta property="og:image:alt" content="AI4Mat Research Monitor — daily AI and materials science papers">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI4Mat Research Monitor — Latest Papers">
+    <meta name="twitter:description" content="The latest arXiv research connecting artificial intelligence, materials discovery, inverse design, and crystal structure prediction.">
+    <meta name="twitter:image" content="https://ocean-jh.github.io/arXivDaily-AI4Mat/static/images/og-preview.png">
+    <meta name="twitter:image:alt" content="AI4Mat Research Monitor — daily AI and materials science papers">
+
+    <script src="static/js/theme-init.js"></script>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/dark-mode.css">
-    <link rel="icon" type="image/x-icon" href="static/favicon_io/favicon.ico">
+
+    <link rel="icon" href="static/favicon_io/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="16x16" href="static/favicon_io/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="static/favicon_io/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="static/favicon_io/apple-touch-icon.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F3PL2Q961N"></script>
+    <script src="static/js/gtag-init.js"></script>
 </head>
-<body>
+<body class="page-latest"
+      data-page-type="latest"
+      data-archive-search-index="data/archive-search-index.json">
+<a class="skip-link" href="#main-content">Skip to papers</a>
+
 <div class="site-frame">
-    <header class="header">
+    <header class="site-header">
         <div class="topbar">
-            <a href="https://ocean-jh.github.io/" target="_blank" class="brand-link">
-                <img src="static/favicon_io/logo.png" alt="Wang Jianghai's Blog" class="blog-logo">
+            <a href="https://ocean-jh.github.io/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="brand-link">
+                <img src="static/favicon_io/logo.png"
+                     width="38"
+                     height="38"
+                     alt=""
+                     class="blog-logo">
                 <span>AI4Mat Research Monitor</span>
             </a>
 
             <div class="topbar-actions">
-                
-    <div class="nav">
-        <strong>Latest</strong>
-        <a href="archive.html">Archive</a>
-    </div>
-    
-                <button id="theme-toggle" type="button" aria-label="Switch to dark theme">🌙 Night</button>
+                <nav class="nav" aria-label="Primary navigation"><a href="index.html" aria-current="page">Latest</a><a href="archive.html">Archive</a></nav>
+                <button id="theme-toggle"
+                        class="theme-toggle"
+                        type="button"
+                        aria-label="Switch to dark theme"
+                        aria-pressed="false">
+                    <span aria-hidden="true">◐</span>
+                    <span class="theme-toggle-label">Theme</span>
+                </button>
             </div>
         </div>
 
         <div class="hero">
             <div class="hero-copy">
-                <p class="eyebrow">Daily arXiv signal for materials intelligence</p>
-                <h1>ArXiv Daily<br>AI for Materials Science</h1>
-                <p class="hero-lede">A focused stream of papers connecting machine learning, generative design,
-                    crystal structure prediction, and materials discovery.</p>
+                <p class="eyebrow">Daily arXiv signal</p>
+                <h1>AI for Materials <span>research monitor</span></h1>
+                <p class="hero-lede">A focused stream of machine learning, generative design, crystal structure,
+                    and materials discovery research.</p>
             </div>
 
-            <div class="hero-notes" aria-label="Site summary">
+            <dl class="hero-notes" aria-label="Site summary">
                 <div>
-                    <span class="note-label">Source</span>
-                    <strong>arXiv.org</strong>
+                    <dt>Source</dt>
+                    <dd>arXiv</dd>
                 </div>
                 <div>
-                    <span class="note-label">Refresh</span>
-                    <strong>Daily automation</strong>
+                    <dt>Refresh</dt>
+                    <dd>Daily</dd>
                 </div>
                 <div>
-                    <span class="note-label">Focus</span>
-                    <strong>AI + Materials</strong>
+                    <dt>Focus</dt>
+                    <dd>AI + materials</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </header>
 
-    <main class="content-shell">
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search title, author, category, ID, or summary..." aria-label="Search papers">
-            <button id="search-button" type="button">Search</button>
+    <main id="main-content" class="content-shell" tabindex="-1">
+        <div class="status-notice" role="status" aria-live="polite"><p>Showing the most recent saved additions.</p></div>
+
+        <section class="research-tools" aria-labelledby="search-label">
+            <form id="paper-search" class="search-form" role="search" method="get">
+                <div class="search-heading">
+                    <label id="search-label" for="search-input">Search papers</label>
+                    <span id="search-help">Title, author, category, arXiv ID, or abstract</span>
+                </div>
+                <div class="search-controls">
+                    <input type="search"
+                           id="search-input"
+                           name="q"
+                           placeholder="Try “graph neural network”"
+                           autocomplete="off"
+                           aria-describedby="search-help search-results-info">
+                    <button id="search-button" type="submit">Search</button>
+                </div>
+            </form>
+            <p id="search-results-info"
+               class="search-results-info"
+               role="status"
+               aria-live="polite"
+               aria-atomic="true"
+               hidden></p>
+        </section>
+
+        <section id="archive-search-results"
+                 class="archive-search-results"
+                 aria-labelledby="archive-search-heading"
+                 hidden>
+            <div class="section-heading">
+                <h2 id="archive-search-heading">Archive search results</h2>
+                <p id="archive-search-summary"></p>
+            </div>
+            <ol id="archive-search-list" class="archive-search-list"></ol>
+        </section>
+
+        <div id="papers-content">
+            <div class="section-heading"><h2 id="latest-papers">Latest papers (1)</h2>
+<p>Checked 2026-08-01 15:51 SGT</p></div>
+<article class="paper"
+         id="paper-2607.26016"
+         data-paper-id="2607.26016"
+         aria-labelledby="title-paper-2607.26016"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">1</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2607.26016" class="paper-title"><a href="https://arxiv.org/abs/2607.26016v1" target="_blank" rel="noopener noreferrer">MDTransformer: A Hardware-Software Co-Design of Mode-Division Photonic Transformer Accelerator with Inverse-Designed Coherent Crossbar</a></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Solomon Micheal Serunjogi, Rachmad Vidya Wicaksana Putra, Ayat Taha, Muhammad Shafique, Mahmoud Rasras</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2026-07-28">2026-07-28</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cs.AR</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2607.26016v1</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2607.26016v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
         </div>
 
-        <h2>New Papers (1)</h2>
-<p><em>Last updated: 2026-07-30 06:57:21 SGT</em></p>
-<article class="paper">
-  <div class="paper-index" aria-hidden="true">1</div>
-  <div class="paper-body">
-  <h3 class="paper-title">MDTransformer: A Hardware-Software Co-Design of Mode-Division Photonic Transformer Accelerator with Inverse-Designed Coherent Crossbar <span class='paper-badge'>New</span></h3>
-
-  <div class="paper-info">
-    <p class="paper-authors"><strong>Authors:</strong> Solomon Micheal Serunjogi, Rachmad Vidya Wicaksana Putra, Ayat Taha, Muhammad Shafique, Mahmoud Rasras</p>
-    <p class="paper-date"><strong>Published:</strong> 2026-07-28</p>
-    <p class="paper-category"><strong>Category:</strong> cs.AR</p>
-    <p class="paper-id"><strong>ID:</strong> 2607.26016v1</p>
-  </div>
-
-  <p class="paper-link"><strong>arXiv:</strong> <a href="http://arxiv.org/abs/2607.26016v1" target="_blank" rel="noopener noreferrer">http://arxiv.org/abs/2607.26016v1</a></p>
-
-  <details class="paper-summary">
-    <summary>Abstract</summary>
-    <p>Recently, photonic transformer accelerators (PTAs) have successfully achieved significant speedup and energy efficiency improvements over electronic accelerators for expediting Transformer inference. However, state-of-the-art rely on expensive multi-wavelength light generation and large dot-product units due to active phase-shifter components, thus making their approach inefficient and impractical. To address this, we propose MDTransformer, a novel hardware-software co-design of PTA based on mode-division optical dataflow and operations. Specifically, MDTransformer performs complex matrix operations using spatial-mode interference, that leverages the inverse-designed multi-mode couplers, crossings, and Mach-Zehnder IQ modulators into a compact mode-division photonic tensor core (MPTC), capable of executing matrix multiplications in the optical domain. Its each guided mode (i.e., TE0-TE3) acts as an independent computational lane, enabling four-fold parallelism-per-waveguide without spectral filtering or free-spectral-range limitations. Moreover, its coherent detection and IQ modulation jointly encode amplitude and phase, realizing complex-valued arithmetic for full-range operations in transformers. MDTransformer offers analog multiplication with sub-4-bit effective precision and inter-modal crosstalk below -30 dB. Its inverse-designed approach also offers scalable and full compatibility with single-laser continuous-wave operation at 1550 nm. Experimental results show that MDTransformer achieves 40.4% area reduction, 63.6% power saving, 40.6% energy saving, and comparable latency over the state-of-the-art PTA across different workloads (i.e., DeiT-Tiny/Small/Base and BERT-Base/Large). These results show that MDTransformer offers a practical solution for high-performance and energy-efficient transformer-based systems.</p>
-  </details>
-  </div>
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Recently, photonic transformer accelerators (PTAs) have successfully achieved significant speedup and energy efficiency improvements over electronic accelerators for expediting Transformer inference. However, state-of-the-art rely on expensive multi-wavelength light generation and large dot-product units due to active phase-shifter components, thus making their approach inefficient and impractical. To address this, we propose MDTransformer, a novel hardware-software co-design of PTA based on mode-division optical dataflow and operations. Specifically, MDTransformer performs complex matrix operations using spatial-mode interference, that leverages the inverse-designed multi-mode couplers, crossings, and Mach-Zehnder IQ modulators into a compact mode-division photonic tensor core (MPTC), capable of executing matrix multiplications in the optical domain. Its each guided mode (i.e., TE0-TE3) acts as an independent computational lane, enabling four-fold parallelism-per-waveguide without spectral filtering or free-spectral-range limitations. Moreover, its coherent detection and IQ modulation jointly encode amplitude and phase, realizing complex-valued arithmetic for full-range operations in transformers. MDTransformer offers analog multiplication with sub-4-bit effective precision and inter-modal crosstalk below -30 dB. Its inverse-designed approach also offers scalable and full compatibility with single-laser continuous-wave operation at 1550 nm. Experimental results show that MDTransformer achieves 40.4% area reduction, 63.6% power saving, 40.6% energy saving, and comparable latency over the state-of-the-art PTA across different workloads (i.e., DeiT-Tiny/Small/Base and BERT-Base/Large). These results show that MDTransformer offers a practical solution for high-performance and energy-efficient transformer-based systems.</p>
+        </details>
+    </div>
 </article>
 
+        </div>
     </main>
 
-    <footer>
-        <p>Last updated: 2026-07-30 06:57:21 (SGT)</p>
-        <p>2025 <a href="https://ocean-jh.github.io/" target="_blank">Wang Jianghai</a> <a href="mailto:jianghai001@e.ntu.edu.sg">Email</a> @ Nanyang Technological University | All Rights Reserved</p>
-        <p><a href="https://github.com/Ocean-JH/ArXivDaily-AI4MAT">Star on GitHub</a> · Powered by <a href="https://arxiv.org/" target="_blank">arXiv</a></p>
+    <footer class="site-footer">
+        <p>Last updated <time datetime="2026-08-01T15:51:07.238614+08:00">2026-08-01 15:51:07 SGT</time></p>
+        <p>© 2026 <a href="https://ocean-jh.github.io/"
+                              target="_blank"
+                              rel="noopener noreferrer">Wang Jianghai</a>
+            · Nanyang Technological University
+            · <a href="mailto:jianghai001@e.ntu.edu.sg">Email</a>
+        </p>
+        <p><a href="https://github.com/Ocean-JH/arXivDaily-AI4Mat"
+              target="_blank"
+              rel="noopener noreferrer">GitHub</a>
+            · Powered by <a href="https://arxiv.org/"
+                            target="_blank"
+                            rel="noopener noreferrer">arXiv</a>
+            · <a href="https://ocean-jh.github.io/arXivDaily-AI4Mat/feed.xml">RSS</a>
+        </p>
     </footer>
 </div>
 
-<button id="back-to-top" type="button" title="Back to Top" aria-label="Back to top">↑</button>
+<button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" hidden>↑</button>
 
-    <!-- JavaScript -->
-    <script src="static/js/dark-mode.js"></script>
-    <script src="static/js/pagination.js"></script>
-    <script src="static/js/search.js"></script>
-    <script src="static/js/back-to-top.js"></script>
+<script src="static/js/dark-mode.js"></script>
+<script src="static/js/pagination.js"></script>
+<script src="static/js/search.js"></script>
+<script src="static/js/back-to-top.js"></script>
 </body>
 </html>

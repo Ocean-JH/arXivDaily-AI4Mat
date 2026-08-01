@@ -1,0 +1,10 @@
+{
+  "name": "arxiv-daily-ai4mat-frontend-tests",
+  "private": true,
+  "scripts": {
+    "test:frontend": "node tests/frontend/interactions.test.js"
+  },
+  "devDependencies": {
+    "jsdom": "19.0.0"
+  }
+}

@@ -1,501 +1,654 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-    ArXiv Paper Tracker
+#!/usr/bin/env python3
+"""Fetch arXiv papers and publish the static AI4Mat research monitor."""
 
-    This script periodically tracks and retrieves new papers from arXiv based on a configurable search query.
-    It filters out previously known papers and stores the results in JSON format. The results can be saved to
-    a README.md file and HTML pages (index and archive). It also generates Markdown summaries for new papers.
+from __future__ import annotations
 
-    The script uses the arXiv API and handles the retrieval, storage, and display of relevant papers based on
-    specific search criteria. It is ideal for monitoring research progress in particular domains like materials
-    discovery or generative models.
-
-    Features:
-    - Search for new papers on arXiv based on a configurable query
-    - Filter out previously known papers
-    - Store new papers in JSON format and save the results in an organized manner
-    - Update the README.md file with new papers
-    - Generate HTML and Markdown pages for the papers
-    - Archive the results for long-term tracking and visualization
-
-    Dependencies:
-    - `arxiv` Python package
-    - `json`
-    - `argparse`
-    - `logging`
-
-    Author: Wang Jianghai@NTU (Ocean-JH)
-    GitHub: https://github.com/Ocean-JH/ArXivDaily-AI4MAT
-    Date: 2025-07-16
-"""
-import os
-import datetime
-import html
-import json
 import argparse
+import datetime as dt
+import json
 import logging
+import os
 import re
-from typing import List, Dict, Any, Optional
+import tempfile
+from collections.abc import Callable, Iterable, Sequence
+from pathlib import Path
+from typing import Any
+from urllib.parse import quote, urlsplit
 
-import arxiv
+from site_renderer import SiteRenderer
+
+try:
+    import arxiv
+except ModuleNotFoundError:  # Build-only mode does not need the API dependency.
+    arxiv = None  # type: ignore[assignment]
 
 
-# Configure logging  
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger("arxiv-tracker")
-SGT = datetime.timezone(datetime.timedelta(hours=8))
+LOGGER = logging.getLogger("arxiv-tracker")
+SGT = dt.timezone(dt.timedelta(hours=8), name="SGT")
+README_START = "<!-- ARXIV_PAPERS_START -->"
+README_END = "<!-- ARXIV_PAPERS_END -->"
 VERSIONED_ARXIV_ID = re.compile(r"^(?P<base>.+?)v(?P<version>\d+)$")
+SAFE_ARXIV_ID = re.compile(r"^[A-Za-z0-9./-]+(?:v\d+)?$")
+ALLOWED_ARXIV_HOSTS = {"arxiv.org", "www.arxiv.org", "export.arxiv.org"}
+
+
+def _json_text(value: Any, *, indent: int | None = 2) -> str:
+    return json.dumps(
+        value,
+        ensure_ascii=False,
+        indent=indent,
+        sort_keys=indent is not None,
+    ) + "\n"
+
+
+def _atomic_write_text(path: Path, content: str) -> bool:
+    """Atomically replace *path* when its UTF-8 content has changed."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.is_file() and path.read_text(encoding="utf-8") == content:
+        return False
+
+    temporary_path: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            "w",
+            encoding="utf-8",
+            dir=path.parent,
+            prefix=f".{path.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as handle:
+            handle.write(content)
+            handle.flush()
+            os.fsync(handle.fileno())
+            temporary_path = Path(handle.name)
+        os.replace(temporary_path, path)
+    except Exception:
+        if temporary_path is not None:
+            temporary_path.unlink(missing_ok=True)
+        raise
+    return True
 
 
 class ArxivTracker:
-    """Periodically track new papers on arXiv"""
+    """Version-aware arXiv ingestion and static-site generation."""
 
-    def __init__(self,
-                 query: str,
-                 max_results: int = 200,
-                 output_dir: str = "./data/results",
-                 known_papers_file: str = "./data/known_papers.json",
-                 templates_dir: str = "./templates"):
-        """
-        Initialize ArxivMonitor
+    def __init__(
+        self,
+        query: str,
+        max_results: int = 200,
+        output_dir: str | Path = "./data/results",
+        known_papers_file: str | Path = "./data/known_papers.json",
+        templates_dir: str | Path = "./templates",
+        *,
+        root_dir: str | Path = ".",
+        archive_page_size: int = 40,
+        client: Any | None = None,
+        now_provider: Callable[[], dt.datetime] | None = None,
+    ) -> None:
+        query = str(query).strip()
+        if not query:
+            raise ValueError("query must not be empty")
+        if isinstance(max_results, bool) or int(max_results) <= 0:
+            raise ValueError("max_results must be a positive integer")
+        if isinstance(archive_page_size, bool) or int(archive_page_size) <= 0:
+            raise ValueError("archive_page_size must be a positive integer")
 
-        Parameters:
-            query: Search query string
-            max_results: Maximum number of results per search
-            output_dir: Directory to save results
-            known_papers_file: File to store known paper IDs
-            templates_dir: Directory for HTML templates
-        """
         self.query = query
-        self.max_results = max_results
-        self.output_dir = output_dir
-        self.known_papers_file = known_papers_file
-        self.templates_dir = templates_dir
+        self.max_results = int(max_results)
+        self.archive_page_size = int(archive_page_size)
+        self.root_dir = Path(root_dir).resolve()
+        self.output_dir = self._resolve(output_dir)
+        self.known_papers_file = self._resolve(known_papers_file)
+        self.templates_dir = self._resolve(templates_dir)
+        self.now_provider = now_provider or (lambda: dt.datetime.now(SGT))
+
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.known_papers_file.parent.mkdir(parents=True, exist_ok=True)
+        if not self.templates_dir.is_dir():
+            raise FileNotFoundError(f"Template directory not found: {self.templates_dir}")
+
         self.known_papers = self._load_known_papers()
-        self.client = arxiv.Client(
-            page_size=500,
-            delay_seconds=5.0
+        self.client = client
+        self.renderer = SiteRenderer(
+            root_dir=self.root_dir,
+            templates_dir=self.templates_dir,
+            archive_page_size=self.archive_page_size,
         )
 
-        # Create directories
-        os.makedirs(output_dir, exist_ok=True)
-        os.makedirs(os.path.dirname(known_papers_file), exist_ok=True)
-        os.makedirs(templates_dir, exist_ok=True)
+    def _resolve(self, path: str | Path) -> Path:
+        candidate = Path(path)
+        return candidate if candidate.is_absolute() else self.root_dir / candidate
 
-    def _load_known_papers(self) -> dict:
-        """Load the set of known papers from file"""
-        if os.path.exists(self.known_papers_file):
-            try:
-                with open(self.known_papers_file, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    return {str(k): int(v) for k, v in data.items()}
-            except FileNotFoundError as e:
-                logger.error(f"Known papers file not found: {e}")
-                return {}
-        return {}
+    def _now(self) -> dt.datetime:
+        value = self.now_provider()
+        if value.tzinfo is None:
+            raise ValueError("now_provider must return a timezone-aware datetime")
+        return value.astimezone(SGT)
 
-    def _save_known_papers(self):
-        """Save the set of known papers to file"""
-        try:
-            with open(self.known_papers_file, 'w', encoding='utf-8') as f:
-                json.dump(self.known_papers, f)
-        except Exception as e:
-            logger.error(f"Error saving known papers: {e}")
+    def _load_known_papers(self) -> dict[str, int]:
+        if not self.known_papers_file.exists():
+            return {}
+        with self.known_papers_file.open(encoding="utf-8") as handle:
+            data = json.load(handle)
+        if not isinstance(data, dict):
+            raise ValueError("known_papers_file must contain a JSON object")
 
-    def search_papers(self) -> List[arxiv.Result]:
-        """Execute search and return results"""
+        known: dict[str, int] = {}
+        for paper_id, version in data.items():
+            parsed_version = int(version)
+            if parsed_version < 1:
+                raise ValueError(f"Invalid known-paper version for {paper_id!r}")
+            known[str(paper_id)] = parsed_version
+        return known
+
+    def _save_known_papers(self) -> None:
+        _atomic_write_text(
+            self.known_papers_file,
+            json.dumps(self.known_papers, ensure_ascii=False, sort_keys=True) + "\n",
+        )
+
+    def search_papers(self) -> list[arxiv.Result]:
+        if arxiv is None:
+            raise RuntimeError(
+                "The arxiv package is required for live searches. "
+                "Install requirements.txt or use --build-only."
+            )
+        client = self.client or arxiv.Client(page_size=500, delay_seconds=5.0)
         search = arxiv.Search(
             query=self.query,
             max_results=self.max_results,
             sort_by=arxiv.SortCriterion.LastUpdatedDate,
-            sort_order=arxiv.SortOrder.Descending
+            sort_order=arxiv.SortOrder.Descending,
         )
+        return list(client.results(search))
 
-        results = list(self.client.results(search))
-        return results
+    @staticmethod
+    def _get_base_id(short_id: str) -> str:
+        match = VERSIONED_ARXIV_ID.match(str(short_id))
+        return match.group("base") if match else str(short_id)
 
-    def _get_base_id(self, short_id: str):
-        """Extract base ID from short ID (removing version)"""
-        match = VERSIONED_ARXIV_ID.match(short_id)
-        return match.group("base") if match else short_id
-
-    def _get_version(self, short_id: str):
-        """Extract version from short ID"""
-        match = VERSIONED_ARXIV_ID.match(short_id)
+    @staticmethod
+    def _get_version(short_id: str) -> int:
+        match = VERSIONED_ARXIV_ID.match(str(short_id))
         return int(match.group("version")) if match else 1
 
-    def _html(self, value: Any) -> str:
-        """Escape generated content before inserting it into static HTML."""
-        return html.escape("" if value is None else str(value), quote=True)
+    @staticmethod
+    def _extract_short_id(value: Any) -> str:
+        text = str(value or "").strip().rstrip("/")
+        if not text:
+            return ""
 
-    def _paper_base_id(self, paper: Dict[str, Any]) -> str:
-        """Return the stable arXiv ID without the version suffix."""
-        if paper.get("base_id"):
-            return str(paper["base_id"])
+        parsed = urlsplit(text)
+        if parsed.scheme or parsed.netloc:
+            path = parsed.path.rstrip("/")
+            for marker in ("/abs/", "/pdf/"):
+                if marker in path:
+                    short_id = path.split(marker, 1)[1]
+                    return short_id.removesuffix(".pdf")
+            return path.rsplit("/", 1)[-1].removesuffix(".pdf")
+        return text.removesuffix(".pdf")
 
-        paper_id = paper.get("id") or paper.get("url") or ""
-        short_id = str(paper_id).rstrip("/").split("/")[-1]
+    def _paper_base_id(self, paper: dict[str, Any]) -> str:
+        base_id = str(paper.get("base_id") or "").strip()
+        if base_id:
+            return base_id
+        short_id = self._extract_short_id(paper.get("short_id") or paper.get("id") or paper.get("url"))
         return self._get_base_id(short_id)
 
-    def _paper_version(self, paper: Dict[str, Any]) -> int:
-        """Return a comparable paper version from saved result data."""
+    def _paper_version(self, paper: dict[str, Any]) -> int:
         try:
-            return int(paper.get("version", 1))
+            version = int(paper.get("version", 0))
+            if version > 0:
+                return version
         except (TypeError, ValueError):
-            short_id = str(paper.get("id") or paper.get("url") or "").rstrip("/").split("/")[-1]
-            return self._get_version(short_id)
+            pass
+        short_id = self._extract_short_id(paper.get("short_id") or paper.get("id") or paper.get("url"))
+        return self._get_version(short_id)
 
-    def _dedupe_papers(self, papers: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Keep only the latest saved version for each arXiv base ID."""
-        latest_papers: Dict[str, Dict[str, Any]] = {}
+    def _paper_short_id(self, paper: dict[str, Any]) -> str:
+        return f"{self._paper_base_id(paper)}v{self._paper_version(paper)}"
 
-        for paper in papers:
-            base_id = self._paper_base_id(paper)
-            current = latest_papers.get(base_id)
+    @staticmethod
+    def _markdown(value: Any) -> str:
+        return (
+            str(value or "")
+            .replace("\\", "\\\\")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+            .replace("\r", " ")
+            .replace("\n", " ")
+            .strip()
+        )
 
-            if current is None:
-                latest_papers[base_id] = paper
-                continue
+    @staticmethod
+    def _clean_list(value: Any) -> list[str]:
+        if value is None:
+            return []
+        values = value if isinstance(value, list) else [value]
+        return [str(item).strip() for item in values if str(item).strip()]
 
-            paper_key = (self._paper_version(paper), paper.get("updated", ""))
-            current_key = (self._paper_version(current), current.get("updated", ""))
-            if paper_key > current_key:
-                latest_papers[base_id] = paper
+    def _normalize_arxiv_url(
+        self,
+        value: Any,
+        short_id: str,
+        *,
+        endpoint: str,
+    ) -> str:
+        if not SAFE_ARXIV_ID.fullmatch(short_id):
+            raise ValueError(f"Unsafe arXiv identifier: {short_id!r}")
 
-        return list(latest_papers.values())
+        parsed = urlsplit(str(value or "").strip())
+        expected_prefix = f"/{endpoint}/"
+        if (
+            parsed.hostname
+            and parsed.hostname.lower() in ALLOWED_ARXIV_HOSTS
+            and parsed.path.startswith(expected_prefix)
+        ):
+            normalized_path = parsed.path.removesuffix(".pdf") if endpoint == "abs" else parsed.path
+            return f"https://arxiv.org{quote(normalized_path, safe='/.-')}"
 
-    def paper_to_dict(self, paper: arxiv.Result) -> Dict[str, Any]:
-        """Convert paper object to dictionary for saving"""
+        suffix = ".pdf" if endpoint == "pdf" else ""
+        return f"https://arxiv.org/{endpoint}/{quote(short_id, safe='/.-')}{suffix}"
+
+    def _normalize_saved_paper(self, paper: dict[str, Any]) -> dict[str, Any]:
+        if not isinstance(paper, dict):
+            raise ValueError("Each saved paper must be a JSON object")
+
+        base_id = self._paper_base_id(paper)
+        version = self._paper_version(paper)
+        short_id = f"{base_id}v{version}"
+        title = str(paper.get("title") or "").strip()
+        if not base_id or not title:
+            raise ValueError("Saved papers require base_id and title")
+
+        status = str(paper.get("status") or paper.get("tag") or "").lower()
+        if status == "updated":
+            status = "update"
+        if status not in {"new", "update"}:
+            status = ""
+
         return {
+            "id": self._normalize_arxiv_url(
+                paper.get("url") or paper.get("id"),
+                short_id,
+                endpoint="abs",
+            ),
+            "short_id": short_id,
+            "base_id": base_id,
+            "version": version,
+            "title": title,
+            "authors": self._clean_list(paper.get("authors")),
+            "summary": str(paper.get("summary") or "").strip(),
+            "published": str(paper.get("published") or ""),
+            "updated": str(paper.get("updated") or paper.get("published") or ""),
+            "categories": self._clean_list(paper.get("categories")),
+            "primary_category": str(paper.get("primary_category") or ""),
+            "comment": paper.get("comment"),
+            "journal_ref": paper.get("journal_ref"),
+            "doi": paper.get("doi"),
+            "pdf_url": self._normalize_arxiv_url(
+                paper.get("pdf_url"),
+                short_id,
+                endpoint="pdf",
+            ),
+            "url": self._normalize_arxiv_url(
+                paper.get("url") or paper.get("id"),
+                short_id,
+                endpoint="abs",
+            ),
+            "status": status,
+        }
+
+    def paper_to_dict(self, paper: arxiv.Result, *, status: str = "") -> dict[str, Any]:
+        short_id = paper.get_short_id()
+        raw = {
             "id": paper.entry_id,
+            "short_id": short_id,
+            "base_id": self._get_base_id(short_id),
+            "version": self._get_version(short_id),
             "title": paper.title,
             "authors": [str(author) for author in paper.authors],
             "summary": paper.summary,
             "published": paper.published.isoformat(),
             "updated": paper.updated.isoformat(),
-            "categories": paper.categories,
+            "categories": list(paper.categories),
             "primary_category": paper.primary_category,
             "comment": paper.comment,
             "journal_ref": paper.journal_ref,
             "doi": paper.doi,
             "pdf_url": paper.pdf_url,
-            "base_id": self._get_base_id(paper.get_short_id()),
-            "version": str(self._get_version(paper.get_short_id())),
-            "url": paper.entry_id
+            "url": paper.entry_id,
+            "status": status,
         }
+        return self._normalize_saved_paper(raw)
 
-    def filter_new_papers(self, papers: List[arxiv.Result]) -> List[Dict[str, Any]]:
-        """Filter out papers we've already seen"""
-        new_papers = []
-        latest_results = {}
-
+    def filter_new_papers(self, papers: Sequence[arxiv.Result]) -> list[dict[str, Any]]:
+        latest_results: dict[str, arxiv.Result] = {}
         for paper in papers:
-            base_id = self._get_base_id(paper.get_short_id())
-            version = self._get_version(paper.get_short_id())
-            existing = latest_results.get(base_id)
-            if existing is None or version > self._get_version(existing.get_short_id()):
+            short_id = paper.get_short_id()
+            base_id = self._get_base_id(short_id)
+            current = latest_results.get(base_id)
+            if current is None or self._get_version(short_id) > self._get_version(current.get_short_id()):
                 latest_results[base_id] = paper
 
+        new_papers: list[dict[str, Any]] = []
         for base_id, paper in latest_results.items():
             version = self._get_version(paper.get_short_id())
-            prev_version = self.known_papers.get(base_id, 0)
-            if version > prev_version:
-                tag = "new" if prev_version == 0 else "update"
-                new_papers.append({
-                    "paper": paper,
-                    "tag": tag,
-                    "base_id": base_id,
-                    "version": version,
-                })
-                self.known_papers[base_id] = version
+            previous_version = self.known_papers.get(base_id, 0)
+            if version <= previous_version:
+                continue
+            status = "new" if previous_version == 0 else "update"
+            new_papers.append(self.paper_to_dict(paper, status=status))
+            self.known_papers[base_id] = version
         return new_papers
 
-    def save_results(self, papers: List[Dict[str, Any]], timestamp: str) -> Optional[str]:
-        """Save results to file"""
+    def _dedupe_papers(self, papers: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
+        latest: dict[str, dict[str, Any]] = {}
+        for raw_paper in papers:
+            paper = self._normalize_saved_paper(raw_paper)
+            base_id = paper["base_id"]
+            current = latest.get(base_id)
+            if current is None or (
+                paper["version"],
+                paper.get("updated", ""),
+            ) > (
+                current["version"],
+                current.get("updated", ""),
+            ):
+                latest[base_id] = paper
+        return list(latest.values())
+
+    def _result_files(self) -> list[Path]:
+        return sorted(self.output_dir.glob("arxiv_results_*.json"))
+
+    def _load_result_file(self, path: Path) -> list[dict[str, Any]]:
+        with path.open(encoding="utf-8") as handle:
+            data = json.load(handle)
+        if not isinstance(data, list):
+            raise ValueError(f"Result file must contain a JSON array: {path}")
+        return [self._normalize_saved_paper(paper) for paper in data]
+
+    def load_all_saved_papers(self) -> list[dict[str, Any]]:
+        papers: list[dict[str, Any]] = []
+        for path in self._result_files():
+            papers.extend(self._load_result_file(path))
+        deduped = self._dedupe_papers(papers)
+        deduped.sort(
+            key=lambda paper: (paper.get("published", ""), paper.get("updated", "")),
+            reverse=True,
+        )
+        return deduped
+
+    def load_latest_batch(self) -> list[dict[str, Any]]:
+        for path in reversed(self._result_files()):
+            papers = self._load_result_file(path)
+            if papers:
+                return papers
+        return []
+
+    def _content_updated_at(self, fallback: dt.datetime) -> dt.datetime:
+        files = self._result_files()
+        if not files:
+            return fallback
+        match = re.search(r"(\d{8}_\d{6})", files[-1].stem)
+        if not match:
+            return fallback
+        return dt.datetime.strptime(match.group(1), "%Y%m%d_%H%M%S").replace(tzinfo=SGT)
+
+    def save_results(
+        self,
+        papers: Sequence[dict[str, Any]],
+        timestamp: str,
+    ) -> Path | None:
         if not papers:
             return None
+        path = self.output_dir / f"arxiv_results_{timestamp}.json"
+        _atomic_write_text(path, _json_text(list(papers)))
+        return path
 
-        filename = f"arxiv_results_{timestamp}.json"
-        filepath = os.path.join(self.output_dir, filename)
-
-        with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump([self.paper_to_dict(paper["paper"]) for paper in papers], f,
-                      ensure_ascii=False, indent=2)
-
-        return filepath
-
-    def generate_markdown(self, papers: List[arxiv.Result], is_new: bool = False) -> str:
-        """Generate markdown for papers"""
-        if not papers:
-            md = f"## 🥳 No new papers today. Take it easy and recharge!"
-            md += f"*Last updated: {datetime.datetime.now(SGT).strftime('%Y-%m-%d %H:%M:%S')} (SGT)*\n\n"
-        else:
-            status = "New " if is_new else ""
-            md = f"## {status}Papers ({len(papers)})\n\n"
-            md += f"*Last updated: {datetime.datetime.now(SGT).strftime('%Y-%m-%d %H:%M:%S')} (SGT)*\n\n"
-
-            for i, paper in enumerate(papers):
-                md += f"### {i + 1}. {paper.title}\n\n"
-                md += f"**Authors:** {', '.join(str(author) for author in paper.authors)}\n\n"
-                md += f"**Published:** {paper.published.strftime('%Y-%m-%d')}\n\n"
-                md += f"**Category:** {paper.primary_category}\n\n"
-                md += f"**ID:** {paper.get_short_id()}\n\n"
-                md += f"**Link:** [{paper.entry_id}]({paper.entry_id})\n\n"
-                md += f"**Summary:** {paper.summary}...\n\n"
-                md += "---\n\n"
-
-        return md
-
-    def update_readme(self, papers: List[Dict[str, Any]], readme_path: str = "README.md"):
-        """Update the README.md with new papers"""
-        papers = [paper['paper'] for paper in papers]  # Extract arxiv.Result objects
-        # Generate markdown for new papers
-        new_papers_md = self.generate_markdown(papers, is_new=True)
-
-        # Read existing README  
-        readme_content = ""
-        if os.path.exists(readme_path):
-            with open(readme_path, 'r', encoding='utf-8') as f:
-                readme_content = f.read()
-
-                # Find the section marker or create it
-        section_marker = "<!-- ARXIV_PAPERS_START -->"
-        end_marker = "<!-- ARXIV_PAPERS_END -->"
-
-        if section_marker in readme_content and end_marker in readme_content:
-            # Replace the section  
-            start_idx = readme_content.find(section_marker)
-            end_idx = readme_content.find(end_marker) + len(end_marker)
-            readme_content = (
-                    readme_content[:start_idx] +
-                    section_marker + "\n\n" +
-                    new_papers_md +
-                    "\n" + end_marker +
-                    readme_content[end_idx:]
+    def generate_markdown(
+        self,
+        papers: Sequence[dict[str, Any]],
+        *,
+        checked_at: dt.datetime,
+        new_count: int,
+    ) -> str:
+        heading = "New Papers" if new_count else "Latest Papers"
+        lines = [f"## {heading} ({len(papers)})", ""]
+        if not new_count and papers:
+            lines.extend(
+                [
+                    "_No new papers were found in the latest check; showing the most recent additions._",
+                    "",
+                ]
             )
-        else:
-            # Add the section at the end  
-            if readme_content:
-                readme_content += "\n\n"
-            readme_content += f"{section_marker}\n\n{new_papers_md}\n{end_marker}"
-
-            # Write updated README
-        with open(readme_path, 'w', encoding='utf-8') as f:
-            f.write(readme_content)
-
-        logger.info(f"Updated README with {len(papers)} new papers")
-
-    def generate_html(self, papers: List[arxiv.Result], is_new: bool = False) -> str:
-        """Generate HTML for papers"""
-        if not papers:
-            return f"<div class='notice'>🥳 No new papers today<br>Enjoy the break!</div>"
-
-        with open("templates/paper_item.html", 'r', encoding='utf-8') as f:
-            paper_template = f.read()
-
-        status = "New " if is_new else ""
-        html = f"<h2>{status}Papers ({len(papers)})</h2>\n"
-        html += f"<p><em>Last updated: {datetime.datetime.now(SGT).strftime('%Y-%m-%d %H:%M:%S')} SGT</em></p>\n"
-
-        for i, paper in enumerate(papers):
-            if self._get_version(paper.get_short_id()) == 1:
-                tag_html = " <span class='paper-badge'>New</span>"
-            else:
-                tag_html = " <span class='paper-badge updated'>Updated</span>"
-
-            paper_html = paper_template.format(
-                index=i + 1,
-                title=self._html(paper.title),
-                authors=self._html(", ".join(str(author) for author in paper.authors)),
-                published_date=self._html(paper.published.strftime("%Y-%m-%d")),
-                category=self._html(paper.primary_category),
-                paper_id=self._html(paper.get_short_id()),
-                url=self._html(paper.entry_id),
-                summary=self._html(paper.summary),
-                tag=tag_html
-            )
-            html += paper_html
-
-        return html
-
-    def load_base_template(self) -> str:
-        """Load the base HTML template"""
-        with open("templates/base.html", 'r', encoding='utf-8') as f:
-            return f.read()
-
-    def create_index_html(self, papers: List[Dict[str, Any]], output_path: str = "index.html"):
-        """Create an index.html file with new papers"""
-        html_template = self.load_base_template()
-        navbar = """
-    <div class="nav">
-        <strong>Latest</strong>
-        <a href="archive.html">Archive</a>
-    </div>
-    """
-        papers = [paper['paper'] for paper in papers]  # Extract arxiv.Result objects
-        # Generate HTML content for papers
-        content = self.generate_html(papers, is_new=True)
-
-        # Fill in the template
-        html_content = html_template.format(
-            title="ArXiv Daily - Latest Papers",
-            content=content,
-            navbar=navbar,
-            timestamp=datetime.datetime.now(SGT).strftime("%Y-%m-%d %H:%M:%S") + " (SGT)"
+        lines.extend(
+            [
+                f"*Last checked: {checked_at:%Y-%m-%d %H:%M:%S} (SGT)*",
+                "",
+            ]
         )
 
-        # Write to file
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(html_content)
+        if not papers:
+            lines.extend(["No tracked papers are available yet.", ""])
+            return "\n".join(lines)
 
-        logger.info(f"Created index.html with {len(papers)} papers")
-
-    def create_archive_html(self, output_path: str = "archive.html"):
-        """Create an archive.html file with all known papers"""
-        # Load all saved results
-        all_papers = []
-        results_files = sorted(f for f in os.listdir(self.output_dir) if f.endswith('.json'))
-        navbar = """
-    <div class="nav">
-        <a href="index.html">Latest</a>
-        <strong>Archive</strong>
-    </div>
-    """
-
-        for file in results_files:
-            try:
-                with open(os.path.join(self.output_dir, file), 'r', encoding='utf-8') as f:
-                    papers_data = json.load(f)
-                    all_papers.extend(papers_data)
-            except Exception as e:
-                logger.error(f"Error loading results file {file}: {e}")
-
-        all_papers = self._dedupe_papers(all_papers)
-        all_papers.sort(key=lambda p: (p.get('published', ''), p.get('updated', '')), reverse=True)
-
-        with open("templates/paper_item.html", 'r', encoding='utf-8') as f:
-            paper_template = f.read()
-
-            # Generate HTML content
-        content = "<h2>All Papers</h2>\n"
-        content += f"<p><em>Total: {len(all_papers)} papers</em></p>\n"
-
-        for i, paper in enumerate(all_papers):
-            paper_html = paper_template.format(
-                index=i + 1,
-                title=self._html(paper.get("title", "")),
-                authors=self._html(", ".join(paper.get("authors", []))),
-                published_date=self._html(paper.get("published", "")[:10]),
-                category=self._html(paper.get("primary_category", "")),
-                paper_id=self._html(f"{self._paper_base_id(paper)}v{self._paper_version(paper)}"),
-                url=self._html(paper.get("url", "")),
-                summary=self._html(paper.get("summary", "")),
-                tag=""
+        for index, paper in enumerate(papers, start=1):
+            lines.extend(
+                [
+                    f"### {index}. {self._markdown(paper['title'])}",
+                    "",
+                    f"**Authors:** {self._markdown(', '.join(paper['authors']))}",
+                    "",
+                    f"**Published:** {self._markdown(paper['published'][:10])}",
+                    "",
+                    f"**Category:** {self._markdown(paper['primary_category'])}",
+                    "",
+                    f"**ID:** {self._markdown(paper['short_id'])}",
+                    "",
+                    f"**Link:** [{paper['url']}]({paper['url']})",
+                    "",
+                    f"**Summary:** {self._markdown(paper['summary'])}",
+                    "",
+                    "---",
+                    "",
+                ]
             )
-            content += paper_html
+        return "\n".join(lines)
 
-        # Fill in the template (reuse the same template as index.html)
-        html_template = self.load_base_template()
+    def _updated_readme_content(
+        self,
+        papers: Sequence[dict[str, Any]],
+        *,
+        checked_at: dt.datetime,
+        new_count: int,
+        path: Path,
+    ) -> str:
+        existing = path.read_text(encoding="utf-8") if path.exists() else ""
+        generated = self.generate_markdown(
+            papers,
+            checked_at=checked_at,
+            new_count=new_count,
+        )
+        section = f"{README_START}\n\n{generated}\n{README_END}"
+        if README_START in existing and README_END in existing:
+            start = existing.index(README_START)
+            end = existing.index(README_END, start) + len(README_END)
+            return existing[:start] + section + existing[end:]
+        separator = "\n\n" if existing else ""
+        return existing.rstrip() + separator + section + "\n"
 
-        html_content = html_template.format(
-            title="ArXiv Daily - Archive",
-            content=content,
-            navbar=navbar,
-            timestamp=datetime.datetime.now(SGT).strftime("%Y-%m-%d %H:%M:%S") + " (SGT)"
+    def update_readme(
+        self,
+        papers: Sequence[dict[str, Any]],
+        readme_path: str | Path = "README.md",
+        *,
+        checked_at: dt.datetime | None = None,
+        new_count: int | None = None,
+    ) -> None:
+        path = self._resolve(readme_path)
+        timestamp = checked_at or self._now()
+        count = len(papers) if new_count is None else new_count
+        _atomic_write_text(
+            path,
+            self._updated_readme_content(
+                papers,
+                checked_at=timestamp,
+                new_count=count,
+                path=path,
+            ),
         )
 
-        # Write to file
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(html_content)
+    def build_from_saved(
+        self,
+        *,
+        checked_at: dt.datetime | None = None,
+        update_readme: bool = True,
+    ) -> list[dict[str, Any]]:
+        timestamp = checked_at or self._now()
+        all_papers = self.load_all_saved_papers()
+        latest_papers = self.load_latest_batch()
+        content_updated_at = self._content_updated_at(timestamp)
+        outputs, desired_archives = self.renderer.site_outputs(
+            latest_papers=latest_papers,
+            all_papers=all_papers,
+            checked_at=timestamp,
+            content_updated_at=content_updated_at,
+            new_count=0,
+            build_only=True,
+        )
+        if update_readme:
+            readme_path = self.root_dir / "README.md"
+            outputs[readme_path] = self._updated_readme_content(
+                latest_papers,
+                checked_at=timestamp,
+                new_count=0,
+                path=readme_path,
+            )
+        for path, content in outputs.items():
+            _atomic_write_text(path, content)
+        self.renderer.remove_stale_archive_pages(desired_archives)
+        return latest_papers
 
-        logger.info(f"Created archive.html with {len(all_papers)} unique papers")
+    def run(
+        self,
+        update_readme: bool = True,
+        create_html: bool = True,
+    ) -> list[dict[str, Any]]:
+        checked_at = self._now()
+        timestamp = checked_at.strftime("%Y%m%d_%H%M%S")
+        LOGGER.info("Searching arXiv for: %s", self.query)
 
-    def run(self, update_readme: bool = True, create_html: bool = True):
-        """Run the tracker once"""
-        timestamp = datetime.datetime.now(SGT).strftime("%Y%m%d_%H%M%S")
-        logger.info(f"Searching for: {self.query}")
+        results = self.search_papers()
+        LOGGER.info("Found %d matching arXiv results", len(results))
+        new_papers = self.filter_new_papers(results)
+        LOGGER.info("Found %d new or updated papers", len(new_papers))
 
-        try:
-            # Get papers
-            papers = self.search_papers()
-            logger.info(f"Found {len(papers)} papers in total")
+        saved_papers = self.load_all_saved_papers()
+        all_papers = self._dedupe_papers([*saved_papers, *new_papers])
+        all_papers.sort(
+            key=lambda paper: (paper.get("published", ""), paper.get("updated", "")),
+            reverse=True,
+        )
+        latest_papers = new_papers or self.load_latest_batch()
+        content_updated_at = checked_at if new_papers else self._content_updated_at(checked_at)
 
-            # Filter new papers
-            new_papers = self.filter_new_papers(papers)
-            logger.info(f"Found {len(new_papers)} new papers")
+        outputs: dict[Path, str] = {}
+        desired_archives: set[Path] = set()
+        if update_readme:
+            readme_path = self.root_dir / "README.md"
+            outputs[readme_path] = self._updated_readme_content(
+                latest_papers,
+                checked_at=checked_at,
+                new_count=len(new_papers),
+                path=readme_path,
+            )
+        if create_html:
+            site_outputs, desired_archives = self.renderer.site_outputs(
+                latest_papers=latest_papers,
+                all_papers=all_papers,
+                checked_at=checked_at,
+                content_updated_at=content_updated_at,
+                new_count=len(new_papers),
+                build_only=False,
+            )
+            outputs.update(site_outputs)
 
-            if new_papers:
-                # Save results
-                filepath = self.save_results(new_papers, timestamp)
-                if filepath:
-                    logger.info(f"Results saved to: {filepath}")
-
-                    # Update README if requested
-                if update_readme:
-                    self.update_readme(new_papers)
-
-                if create_html:
-                    self.create_index_html(new_papers)
-                    self.create_archive_html()
-            else:
-                if create_html:
-                    self.create_index_html(new_papers)
-                    self.create_archive_html()
-
-                    # Save known papers
+        # All rendering and validation above completes before durable state changes.
+        if new_papers:
+            self.save_results(new_papers, timestamp)
+        for path, content in outputs.items():
+            _atomic_write_text(path, content)
+        if create_html:
+            self.renderer.remove_stale_archive_pages(desired_archives)
+        if new_papers:
             self._save_known_papers()
-
-            return new_papers
-
-        except Exception as e:
-            logger.error(f"Error during search: {e}", exc_info=True)
-            return []
+        return new_papers
 
 
-def main():
-    """Main function"""
-    parser = argparse.ArgumentParser(description="arXiv Paper Tracker")
-    parser.add_argument("--config", type=str, default="config.json", help="Path to config file")
-    parser.add_argument("--query", type=str, help="Search query (overrides config)")
+DEFAULT_CONFIG: dict[str, Any] = {
+    "query": (
+        '(cat:cond-mat.mtrl-sci OR cat:cs.AI OR cat:cs.LG) AND '
+        '(all:"materials design" OR all:"materials discovery" OR all:"inverse design") AND '
+        '(all:"generative" OR all:"crystal structure prediction")'
+    ),
+    "max_results": 500,
+    "output_dir": "./data/results",
+    "known_papers_file": "./data/known_papers.json",
+    "templates_dir": "./templates",
+    "archive_page_size": 40,
+}
+
+
+def _load_config(path: Path) -> dict[str, Any]:
+    config = dict(DEFAULT_CONFIG)
+    if not path.exists():
+        return config
+    with path.open(encoding="utf-8") as handle:
+        loaded = json.load(handle)
+    if not isinstance(loaded, dict):
+        raise ValueError("Configuration must contain a JSON object")
+    config.update(loaded)
+    return config
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--config", type=Path, default=Path("config.json"))
+    parser.add_argument("--query", help="Search query (overrides config)")
     parser.add_argument("--max-results", type=int, help="Maximum results (overrides config)")
-    parser.add_argument("--no-readme", action="store_true", help="Don't update README")
+    parser.add_argument("--no-readme", action="store_true", help="Do not update README")
+    parser.add_argument(
+        "--build-only",
+        action="store_true",
+        help="Regenerate the static site from saved result files without contacting arXiv",
+    )
     args = parser.parse_args()
 
-    # Load config  
-    config = {
-        "query": "(cat:cond-mat.mtrl-sci OR cat:cs.AI OR cat:cs.LG) AND (all:\"materials design\" OR all:\"materials discovery\" OR all:\"inverse design\") AND (all:\"generative\" OR all:\"crystal structure prediction\")",
-        "max_results": 500,
-        "output_dir": "./data/results",
-        "known_papers_file": "./data/known_papers.json"
-    }
-
-    if os.path.exists(args.config):
-        try:
-            with open(args.config, 'r', encoding='utf-8') as f:
-                config.update(json.load(f))
-        except Exception as e:
-            logger.error(f"Error loading config: {e}")
-
-            # Override with command line arguments
-    if args.query:
+    config = _load_config(args.config)
+    if args.query is not None:
         config["query"] = args.query
-    if args.max_results:
+    if args.max_results is not None:
         config["max_results"] = args.max_results
 
-        # Create and run Tracker
     tracker = ArxivTracker(
         query=config["query"],
         max_results=config["max_results"],
         output_dir=config["output_dir"],
-        known_papers_file=config["known_papers_file"]
+        known_papers_file=config["known_papers_file"],
+        templates_dir=config.get("templates_dir", "./templates"),
+        archive_page_size=config.get("archive_page_size", 40),
     )
-
-    tracker.run(update_readme=not args.no_readme)
+    if args.build_only:
+        tracker.build_from_saved(update_readme=not args.no_readme)
+    else:
+        tracker.run(update_readme=not args.no_readme)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    )
+    raise SystemExit(main())

@@ -1,6 +1,8 @@
 {
   "query": "(cat:cond-mat.mtrl-sci OR cat:cs.AI OR cat:cs.LG) AND (all:\"materials design\" OR all:\"materials discovery\" OR all:\"inverse design\") AND (all:\"generative\" OR all:\"crystal structure prediction\")",
   "max_results": 500,
+  "archive_page_size": 40,
   "output_dir": "./data/results",
-  "known_papers_file": "./data/known_papers.json"
+  "known_papers_file": "./data/known_papers.json",
+  "templates_dir": "./templates"
 }
