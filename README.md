@@ -106,9 +106,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (3)
+## Latest Papers (3)
 
-*Last checked: 2026-08-02 19:59:16 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-08-03 06:54:20 (SGT)*
 
 ### 1. Machine Learning for Designing Undesignable Metal-Organic Frameworks
 
