@@ -83,10 +83,10 @@ them through the protected `github-pages` environment. A final smoke check
 compares the deployed `site-status.json` timestamp with the artifact from the
 same run, so a stale deployment fails visibly.
 
-**Required one-time setting:** in the repository's **Settings → Pages** screen,
-select **GitHub Actions** as the publishing source. The workflow checks this
-before generating or publishing anything. It uses the repository-provided token
-and requires no personal access token or deployment secret.
+The deployment requires **GitHub Actions** under **Settings → Pages → Source**.
+The workflow rejects every other publishing source before generation begins.
+It uses the repository-provided token and requires no personal access token or
+deployment secret.
 
 ## Contributing
 
