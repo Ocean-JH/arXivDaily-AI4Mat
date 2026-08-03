@@ -106,57 +106,23 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (3)
+## New Papers (1)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-08-04 06:57:38 (SGT)*
 
-*Last checked: 2026-08-03 06:54:20 (SGT)*
+### 1. SeqGPT: A Constrained Transformer Agent for the Inverse Design of Multi-Panel Composite Structures
 
-### 1. Machine Learning for Designing Undesignable Metal-Organic Frameworks
+**Authors:** Driss Chraibi, Alejandro García Pis, Stéphane Grihon, Sixin Zhang
 
-**Authors:** Satya Kokonda
+**Published:** 2026-07-03
 
-**Published:** 2026-07-29
+**Category:** cs.NE
 
-**Category:** cond-mat.mtrl-sci
+**ID:** 2607.11910v1
 
-**ID:** 2607.27368v1
+**Link:** [https://arxiv.org/abs/2607.11910v1](https://arxiv.org/abs/2607.11910v1)
 
-**Link:** [https://arxiv.org/abs/2607.27368v1](https://arxiv.org/abs/2607.27368v1)
-
-**Summary:** Many crucial processes are too complex for computational modeling, requiring experimentation to identify promising materials. Here, a methodology for material design is presented, while photocatalysis is presented as a specific case-study. Metal-Organic Frameworks (MOFs) are a subset of highly promising porous nanomaterials, used in a variety of unmodellable applications. Reinforcement learning generated 60,000 novel MOFs optimized for CO/H20 selectivity. A predictor funnel system was created, iteratively removing low-scoring MOFs to 10,986 potential candidates, improving computational efficiency by 276%. While trained Crystal Graph Convolutional Neural Network (CGCNN) models predicted features for creating a fitness function incorporating stability, catalytic ability, material cost, sustainability, and adsorption while allowing the inclusion of application specific design criterion. This designed function provides a computational method to model photocatalytic performance- and filtered down to two promising MOFs which each pass a myriad of synthesis criteria, first a Cr-based MOF with photocatalyst score 230% higher than the control. Second, a Zn-based MOF outperforms the best control across all relevant metrics, demonstrating robustness against variable fitness functions. This work designed 20 materials, each 125% better than the control for this application. Furthermore, analysis revealed insightful design patterns, such as the significant influence of metal cluster N262 on catalytic performance, providing a method for future work to narrow the chemical space. By incorporating industrially applicable features such as cost or stability of the material, this work successfully designs industrially promising materials in otherwise unmodellable processes such as drug delivery, while paving a method for multi-objective optimization incorporating 260% more features than prior work.
-
----
-
-### 2. Instability-induced bistable shape-morphing kirigami structures
-
-**Authors:** Xiaoyuan Ying, Marcelo A. Dias
-
-**Published:** 2026-07-29
-
-**Category:** cond-mat.soft
-
-**ID:** 2607.26941v1
-
-**Link:** [https://arxiv.org/abs/2607.26941v1](https://arxiv.org/abs/2607.26941v1)
-
-**Summary:** Deployable shape-morphing structures that transform from flat sheets into stable three-dimensional configurations are highly desirable for applications ranging from soft robotics and biomedical devices to adaptive architecture and aerospace systems. Existing kirigami-based morphing systems primarily rely on isotropic deployment, compliant soft materials, or external constraints to maintain deployed shapes, which limits geometric programmability, structural integrity, and applicability in rigid-material systems. Here, we present an inverse design framework for anisotropic bistable kirigami structures that enables programmable shape morphing through controlled geometric frustration and instability-induced deployment. The framework combines a semi-analytical mechanical model with geometry to establish a direct connection between geometric transformation and the underlying energy landscape. We show that instability-induced shape morphing leads to tunable bistability and directional deployment in anisotropic kirigami structures. The results are validated through finite element simulations and experiments, demonstrating stable deployed configurations and programmable anisotropic morphing. The proposed framework further provides a general design strategy that can be integrated with various active actuation systems, enabling broader engineering applications.
-
----
-
-### 3. Thermodynamics-Informed Machine Learning for Energy Materials Discovery
-
-**Authors:** Pol Benítez, Cibrán López, Claudio Cazorla
-
-**Published:** 2026-07-28
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2607.26296v1
-
-**Link:** [https://arxiv.org/abs/2607.26296v1](https://arxiv.org/abs/2607.26296v1)
-
-**Summary:** Machine learning (ML) is transforming materials discovery by enabling rapid prediction of properties that previously required computationally expensive first-principles calculations. Yet most current ML models remain fundamentally limited to zero-temperature descriptions, learning static lattice energies while neglecting the thermodynamic effects that govern materials behaviour at finite temperature. Because phase stability, functional response, and performance are governed by free-energy landscapes rather than static energies alone, this limitation represents a major barrier to predictive materials design under realistic operating conditions. In this Perspective, we argue that developing thermodynamics-informed ML constitutes one of the most important and least explored frontiers in materials discovery. We examine the fundamental shortcomings of energy-based models, highlighting the essential roles of entropy and anharmonicity in determining free energies and materials functionality. We review emerging strategies, including machine-learned interatomic potentials and hybrid ML-statistical mechanics frameworks, while identifying key challenges related to data availability, transferability, and thermodynamic consistency. Building on these advances, we outline a roadmap for thermodynamics-informed ML centred on direct free-energy learning, entropy-aware representations, and adaptive sampling across temperature. We highlight the transformative opportunities this paradigm offers for energy materials and argue that the next generation of ML models must move beyond static energy predictions towards a thermodynamic description of materials behaviour under realistic operating conditions.
+**Summary:** Optimizing composite stacking sequences to match continuous targets (e.g., Lamination or Buckling Parameters) with discrete manufacturing constraints represents a challenging combinatorial inverse problem that regularly occurs in composite design especially when numerical optimization approaches are used (bi-step, bi-level configurations). In multipanel configurations, this complexity is further intensified by blending, a global compatibility/continuity requirement between the different panel stackings. This study presents SeqGPT, a conditional Transformer agent developed to replace computationally expensive iterative methods. To ensure both global continuity and manufacturing feasibility by construction, we implemented a hybrid neurosymbolic decoding strategy. SeqGPT predicts a conditional distribution that guides a Constrained Beam Search, where any branch violating blending rules is strictly pruned. Numerical experiments on the 18-panel horseshoe benchmark demonstrate that SeqGPT generates solutions near-instantaneously with buckling performance comparable to evolutionary methods, offering a significant speed-up compared to the state of the art.
 
 ---
 

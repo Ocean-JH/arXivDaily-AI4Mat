@@ -1,0 +1,29 @@
+[
+  {
+    "authors": [
+      "Driss Chraibi",
+      "Alejandro García Pis",
+      "Stéphane Grihon",
+      "Sixin Zhang"
+    ],
+    "base_id": "2607.11910",
+    "categories": [
+      "cs.NE",
+      "cs.AI"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2607.11910v1",
+    "journal_ref": "APIA 2026 -- Applications Pratiques de l'Intelligence Artificielle, AFIA, Jun 2026, Arras, France",
+    "pdf_url": "https://arxiv.org/pdf/2607.11910v1",
+    "primary_category": "cs.NE",
+    "published": "2026-07-03T12:00:39+00:00",
+    "short_id": "2607.11910v1",
+    "status": "new",
+    "summary": "Optimizing composite stacking sequences to match continuous targets (e.g., Lamination or Buckling Parameters) with discrete manufacturing constraints represents a challenging combinatorial inverse problem that regularly occurs in composite design especially when numerical optimization approaches are used (bi-step, bi-level configurations). In multipanel configurations, this complexity is further intensified by blending, a global compatibility/continuity requirement between the different panel stackings. This study presents SeqGPT, a conditional Transformer agent developed to replace computationally expensive iterative methods. To ensure both global continuity and manufacturing feasibility by construction, we implemented a hybrid neurosymbolic decoding strategy. SeqGPT predicts a conditional distribution that guides a Constrained Beam Search, where any branch violating blending rules is strictly pruned. Numerical experiments on the 18-panel horseshoe benchmark demonstrate that SeqGPT generates solutions near-instantaneously with buckling performance comparable to evolutionary methods, offering a significant speed-up compared to the state of the art.",
+    "title": "SeqGPT: A Constrained Transformer Agent for the Inverse Design of Multi-Panel Composite Structures",
+    "updated": "2026-07-03T12:00:39+00:00",
+    "url": "https://arxiv.org/abs/2607.11910v1",
+    "version": 1
+  }
+]
