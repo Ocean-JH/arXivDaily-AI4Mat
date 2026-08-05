@@ -106,23 +106,55 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## New Papers (3)
 
-*Last checked: 2026-08-04 06:57:38 (SGT)*
+*Last checked: 2026-08-06 06:56:02 (SGT)*
 
-### 1. SeqGPT: A Constrained Transformer Agent for the Inverse Design of Multi-Panel Composite Structures
+### 1. Physics-Informed and Knowledge-Driven Generative AI for Autonomous Discovery of Porous Oxide Energy Materials: Opportunities and Challenges
 
-**Authors:** Driss Chraibi, Alejandro García Pis, Stéphane Grihon, Sixin Zhang
+**Authors:** Dibakar Datta
 
-**Published:** 2026-07-03
+**Published:** 2026-08-03
 
-**Category:** cs.NE
+**Category:** cond-mat.mtrl-sci
 
-**ID:** 2607.11910v1
+**ID:** 2608.02858v1
 
-**Link:** [https://arxiv.org/abs/2607.11910v1](https://arxiv.org/abs/2607.11910v1)
+**Link:** [https://arxiv.org/abs/2608.02858v1](https://arxiv.org/abs/2608.02858v1)
 
-**Summary:** Optimizing composite stacking sequences to match continuous targets (e.g., Lamination or Buckling Parameters) with discrete manufacturing constraints represents a challenging combinatorial inverse problem that regularly occurs in composite design especially when numerical optimization approaches are used (bi-step, bi-level configurations). In multipanel configurations, this complexity is further intensified by blending, a global compatibility/continuity requirement between the different panel stackings. This study presents SeqGPT, a conditional Transformer agent developed to replace computationally expensive iterative methods. To ensure both global continuity and manufacturing feasibility by construction, we implemented a hybrid neurosymbolic decoding strategy. SeqGPT predicts a conditional distribution that guides a Constrained Beam Search, where any branch violating blending rules is strictly pruned. Numerical experiments on the 18-panel horseshoe benchmark demonstrate that SeqGPT generates solutions near-instantaneously with buckling performance comparable to evolutionary methods, offering a significant speed-up compared to the state of the art.
+**Summary:** The discovery of next-generation energy-storage materials is increasingly limited by the complexity of the underlying design problem rather than by computational capability alone. Porous transition-metal oxides represent a particularly challenging class of battery materials because their performance emerges from coupled interactions among crystal chemistry, pore architecture, ion transport, electrochemistry, electro-chemo-mechanics, synthesis, manufacturing, and battery-system operation. Recent advances in generative artificial intelligence (AI) have demonstrated remarkable capabilities for generating chemically plausible crystal structures. However, current approaches remain largely focused on crystallographic validity and thermodynamic stability. This perspective presents a roadmap for advancing generative AI beyond crystal generation toward physics-informed, application-aware, and synthesis-aware inverse design. Using porous oxide electrodes as a representative materials platform, we propose a seven-tier physics-informed inverse-design framework integrating chemistry, thermodynamics, transport, electrochemistry, durability, cell compatibility, and manufacturability. We further identify the "Missing Data Problem" as a fundamental bottleneck limiting application-aware AI and introduce an autonomous knowledge-generation framework supported by a Porous Oxide Energy Materials Ontology and a continuously evolving "Knowledge Base". Together, these concepts establish the foundation for Synthesis-Aware, Closed-Loop Autonomous Discovery, providing a general framework for AI-enabled autonomous materials discovery across energy-storage materials and other functional materials.
+
+---
+
+### 2. An Autonomous Scientific Knowledge Generation Framework for AI-Driven Scientific Discovery
+
+**Authors:** Dibakar Datta
+
+**Published:** 2026-07-09
+
+**Category:** cs.DL
+
+**ID:** 2607.09806v2
+
+**Link:** [https://arxiv.org/abs/2607.09806v2](https://arxiv.org/abs/2607.09806v2)
+
+**Summary:** Artificial intelligence (AI) is transforming scientific discovery, but its effectiveness is fundamentally limited by the availability of structured scientific knowledge. Although existing databases have accelerated data-driven materials research, much of the knowledge needed for predictive modeling and inverse design remains embedded in unstructured scientific literature. We present an Autonomous Scientific Knowledge Generation Framework that transforms scientific publications into a Unified AI-Ready Scientific Knowledge Base. The framework integrates ontology-guided literature acquisition, hybrid scientific knowledge extraction, semantic harmonization, knowledge fusion, and validation within a unified workflow. Rather than treating literature retrieval, information extraction, and database construction as separate tasks, the framework progressively converts scientific publications into structured, semantically consistent, and provenance-preserving knowledge suitable for AI-driven reasoning. As a proof of concept, the framework was applied to electro-optic materials. Autonomous literature acquisition retrieved and validated about 1,000 publications from multiple scholarly repositories. A representative subset of eight publications was processed through the complete workflow, generating 29 structured scientific records that were harmonized into 7 canonical scientific records. The results demonstrate the complete transformation from scientific literature to an AI-ready scientific knowledge base while preserving quantitative measurements, operating conditions, provenance, and scientific context. The proposed framework provides a scalable, domain-independent foundation for predictive AI, generative AI, and closed-loop AI-driven scientific discovery.
+
+---
+
+### 3. Conditional grain-graph diffusion for property-guided inverse design of polycrystalline microstructures
+
+**Authors:** Yuheng Zhou, Xiao Shang, Huicong Chen, Yu Zou
+
+**Published:** 2026-08-01
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2608.00707v1
+
+**Link:** [https://arxiv.org/abs/2608.00707v1](https://arxiv.org/abs/2608.00707v1)
+
+**Summary:** Graph representations compactly encode polycrystalline microstructures while retaining grain topology and grain boundary information. We present a conditional graph diffusion framework for property-guided inverse design of dual-phase Ti-6Al-4V microstructures. An enhanced grain graph neural network (GNN) with grain boundary edge features, learnable node and edge embeddings, and multi-statistic pooling serves as a forward surrogate for stress prediction and candidate evaluation. The conditional diffusion model generates candidates through reverse diffusion under prescribed α-phase volume fraction, elastic modulus, and yield-stress proxy targets. Across four target regimes and independently seeded starting sets, generated candidates consistently approach the prescribed properties, including a target outside the property envelope of the existing microstructures. Local crystallographic consistency is evaluated post-generation from deviations from the Burgers orientation relationship (BOR). BOR-aware ranking increases mean BOR consistency by up to 44.9% and 56.4% for the in- and out-of-envelope targets, respectively, while maintaining property alignment. Finite element validation of the five best candidates in each primary design case yields a maximum absolute relative error of 1.0% in their mean properties. In a representative benchmark, diffusion requires 32 candidate evaluations per input graph, compared with approximately 40,000 for random search and evolutionary optimization, and reduces runtime by approximately two orders of magnitude in the tested implementations. These results establish conditional grain-graph diffusion as an efficient framework for property-guided polycrystalline microstructure design.
 
 ---
 
