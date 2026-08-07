@@ -1,0 +1,54 @@
+[
+  {
+    "authors": [
+      "Ridha Eddhib",
+      "Matyáš Novák",
+      "Hubert Ebert",
+      "Aki Pulkkinen",
+      "Ján Minár"
+    ],
+    "base_id": "2608.05957",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2608.05957v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2608.05957v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-08-06T12:32:32+00:00",
+    "short_id": "2608.05957v1",
+    "status": "new",
+    "summary": "The Spin-Polarized Relativistic Korringa-Kohn-Rostoker (SPR-KKR) is an all-electron ab-initio multiple-scattering code that provides unique capabilities for treating chemical disorder, finite-temperature magnetism, relativistic effects, and spectroscopic properties of various types of solids through its fundamental formulation in terms of the single-particle Green's function rather than eigenstates. We present ASE2SPRKKR, a comprehensive Python interface that integrates SPR-KKR into the Atomic Simulation Environment (ASE), making SPR-KKR more accessible, streamlined, and uniform. Our implementation extends the ASE's Atoms object to handle fractional site occupations for coherent-potential-approximation calculations while maintaining full compatibility with ASE's extensive ecosystem of structure builders, optimizers, and analysis tools. Automated input generation with validation, comprehensive output parsing, and direct MPI support enable seamless integration into high-throughput and multi-method workflows. We demonstrate the interface through representative applications: semi-infinite surface calculations reproducing Rashba-split Au(111) surface states; one-step photoemission modeling capturing matrix-element effects; exchange-parameter extraction for atomistic spin dynamics; and X-ray absorption spectroscopy including magnetic circular dichroism. Beyond these demonstrations, ASE2SPRKKR is designed with transferability as a first-class concern. By grounding its architecture in FAIR principles of Findability, Accessibility, Interoperability, and Reusability, it establishes a replicable blueprint for bringing other specialized Green's function and first-principles codes into the collaborative, reproducible workflows that modern materials discovery requires.",
+    "title": "ASE2SPRKKR: a unified Python framework integrating the Spin-Polarized Relativistic Korringa-Kohn-Rostoker method into the Atomic Simulation Environment",
+    "updated": "2026-08-06T12:32:32+00:00",
+    "url": "https://arxiv.org/abs/2608.05957v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Yehudit Aperstein",
+      "Alexander Apartsin"
+    ],
+    "base_id": "2605.26540",
+    "categories": [
+      "physics.chem-ph",
+      "cs.AI"
+    ],
+    "comment": "33 pages, 5 figures",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2605.26540v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2605.26540v2",
+    "primary_category": "physics.chem-ph",
+    "published": "2026-05-26T04:43:45+00:00",
+    "short_id": "2605.26540v2",
+    "status": "new",
+    "summary": "Energetic materials power mining, demolition, propulsion and airbags, yet today's compounds were designed decades ago. A successor must combine high energy release, low sensitivity to accidental initiation and a practical synthesis route, found within an astronomically large molecular space. Generative models are the natural search tool, but their training data are mostly untrustworthy: of approximately 66,000 molecules with recorded properties, only approximately 3,000 were measured or computed from first principles. Models trained on all of them imitate the rough estimates and propose molecules that collapse under real physics. We introduce Domain-Gated Latent Diffusion (DGLD), a diffusion model that treats data reliability as an explicit design parameter: labels are sorted into four trust tiers, and only trustworthy ones steer generation, while the unreliable majority still teaches the model what a plausible molecule looks like. Learned controls tune performance, safety and viability independently, and every proposal passes a four-stage screen ending in a quantum-chemical DFT audit. DGLD proposes 10 molecules unknown to PubChem that survive this screen. The best, 3,4,5-trinitro-1,2-isoxazole, matches the benchmark explosives HMX and PETN in calculated detonation performance, is unlike molecules in its training set, and has a four-step synthesis route. Trust gating is chemistry-independent and can be applied wherever abundant weak data surround a reliable core.",
+    "title": "Domain-Gated Latent Diffusion: Generative Inverse Design of HMX-Class Energetic Materials with First-Principles Validation",
+    "updated": "2026-08-06T10:54:40+00:00",
+    "url": "https://arxiv.org/abs/2605.26540v2",
+    "version": 2
+  }
+]
