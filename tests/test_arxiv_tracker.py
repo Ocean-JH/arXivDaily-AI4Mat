@@ -33,15 +33,31 @@ if importlib.util.find_spec("arxiv") is None:
     class _SortOrder:
         Descending = "descending"
 
+    class _ArxivError(Exception):
+        pass
+
+    class _HTTPError(_ArxivError):
+        def __init__(self, url, retry, status):
+            self.url = url
+            self.retry = retry
+            self.status = status
+            super().__init__(f"Page request resulted in HTTP {status} ({url})")
+
+    class _UnexpectedEmptyPageError(_ArxivError):
+        pass
+
     arxiv_stub.Client = _Client
     arxiv_stub.Result = object
     arxiv_stub.Search = _Search
     arxiv_stub.SortCriterion = _SortCriterion
     arxiv_stub.SortOrder = _SortOrder
+    arxiv_stub.ArxivError = _ArxivError
+    arxiv_stub.HTTPError = _HTTPError
+    arxiv_stub.UnexpectedEmptyPageError = _UnexpectedEmptyPageError
     sys.modules["arxiv"] = arxiv_stub
 
 
-from arxiv_tracker import ArxivTracker, SGT  # noqa: E402
+from arxiv_tracker import ArxivTracker, SGT, arxiv  # noqa: E402
 
 
 NOW = dt.datetime(2026, 8, 1, 9, 30, tzinfo=SGT)
@@ -238,6 +254,67 @@ def test_api_failure_propagates_and_does_not_publish(tmp_path: Path) -> None:
     assert not (tmp_path / "site-status.json").exists()
 
 
+def test_default_client_uses_conservative_request_settings(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    tracker = make_project(tmp_path)
+    tracker.client = None
+    client_settings = {}
+
+    class RecordingClient(FakeClient):
+        def __init__(self, **kwargs):
+            super().__init__()
+            client_settings.update(kwargs)
+
+    monkeypatch.setattr(arxiv, "Client", RecordingClient)
+
+    assert tracker.search_papers() == []
+    assert client_settings == {
+        "page_size": 100,
+        "delay_seconds": 10.0,
+        "num_retries": 5,
+    }
+
+
+def test_transient_api_failure_rebuilds_saved_results(tmp_path: Path) -> None:
+    error = arxiv.HTTPError("https://export.arxiv.org/api/query", 5, 429)
+    tracker = make_project(tmp_path, client=FakeClient(error=error))
+    record = stored_record(tracker, "2607.00001v1", "Previously saved", 1)
+    write_results(tracker, [record])
+
+    papers = tracker.run_with_api_fallback()
+
+    assert papers == [record]
+    homepage = (tmp_path / "index.html").read_text(encoding="utf-8")
+    assert "Previously saved" in homepage
+    assert "Showing the most recent saved additions" in homepage
+    assert "Rebuilt from saved data 2026-08-01 09:30 SGT" in homepage
+    assert "Last checked" not in (tmp_path / "README.md").read_text(encoding="utf-8")
+
+
+def test_non_transient_api_failure_does_not_fallback(tmp_path: Path) -> None:
+    error = arxiv.HTTPError("https://export.arxiv.org/api/query", 5, 400)
+    tracker = make_project(tmp_path, client=FakeClient(error=error))
+    record = stored_record(tracker, "2607.00001v1", "Previously saved", 1)
+    write_results(tracker, [record])
+
+    with pytest.raises(arxiv.HTTPError):
+        tracker.run_with_api_fallback()
+
+    assert not (tmp_path / "index.html").exists()
+
+
+def test_transient_api_failure_without_saved_results_propagates(tmp_path: Path) -> None:
+    error = arxiv.HTTPError("https://export.arxiv.org/api/query", 5, 503)
+    tracker = make_project(tmp_path, client=FakeClient(error=error))
+
+    with pytest.raises(arxiv.HTTPError):
+        tracker.run_with_api_fallback()
+
+    assert not (tmp_path / "index.html").exists()
+
+
 def test_render_failure_does_not_advance_durable_known_state(tmp_path: Path) -> None:
     tracker = make_project(
         tmp_path,
@@ -259,6 +336,9 @@ def test_render_failure_does_not_advance_durable_known_state(tmp_path: Path) -> 
         ({"query": ""}, "query"),
         ({"query": "x", "max_results": 0}, "max_results"),
         ({"query": "x", "archive_page_size": 0}, "archive_page_size"),
+        ({"query": "x", "arxiv_page_size": 0}, "arxiv_page_size"),
+        ({"query": "x", "arxiv_delay_seconds": 0}, "arxiv_delay_seconds"),
+        ({"query": "x", "arxiv_num_retries": -1}, "arxiv_num_retries"),
     ],
 )
 def test_configuration_validation(tmp_path: Path, kwargs: dict, message: str) -> None:

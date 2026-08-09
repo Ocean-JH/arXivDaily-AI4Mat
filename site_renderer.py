@@ -139,10 +139,14 @@ class SiteRenderer:
         self,
         papers: Sequence[dict[str, Any]],
         checked_at: dt.datetime,
+        *,
+        build_only: bool,
     ) -> str:
+        timestamp_label = "Rebuilt from saved data" if build_only else "Checked"
         parts = [
             f'<div class="section-heading"><h2 id="latest-papers">Latest papers ({len(papers)})</h2>',
-            f"<p>Checked {_html(checked_at.strftime('%Y-%m-%d %H:%M SGT'))}</p></div>",
+            f"<p>{timestamp_label} "
+            f"{_html(checked_at.strftime('%Y-%m-%d %H:%M SGT'))}</p></div>",
         ]
         if papers:
             parts.extend(
@@ -171,7 +175,11 @@ class SiteRenderer:
         else:
             message = "No papers have been tracked yet."
         return self._base_document(
-            content=self._latest_content(papers, checked_at),
+            content=self._latest_content(
+                papers,
+                checked_at,
+                build_only=build_only,
+            ),
             page_type="latest",
             page_file="index.html",
             title="AI4Mat Research Monitor — Latest Papers",

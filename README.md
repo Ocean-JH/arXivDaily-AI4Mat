@@ -13,7 +13,9 @@ intersection of artificial intelligence and materials science.
 - Generative models for materials
 - Related computational materials science research
 
-The search expression and result limit live in [`config.json`](config.json).
+The search expression, result limit, and arXiv request pacing live in
+[`config.json`](config.json). The default client requests 100 records per page,
+waits 10 seconds between requests, and retries transient failures five times.
 See the
 [arXiv API query documentation](https://info.arxiv.org/help/api/user-manual.html#51-details-of-query-construction)
 before adapting the query for another topic.
@@ -39,7 +41,10 @@ python arxiv_tracker.py
 
 The command contacts arXiv, updates the local paper state, and regenerates the
 README, home page, archive pages, search index, feed, sitemap, and deployment
-status. Review the resulting diff before committing it.
+status. If arXiv remains unavailable with a rate-limit or server error after
+the configured retries, an existing installation rebuilds from its latest
+saved results so a temporary upstream outage does not block deployment. Review
+the resulting diff before committing it.
 
 ## Architecture
 
