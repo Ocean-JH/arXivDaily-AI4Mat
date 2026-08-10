@@ -115,7 +115,7 @@ arXiv's API access and attribution requirements.
 
 _No new papers were found in the latest check; showing the most recent additions._
 
-*Last checked: 2026-08-10 06:27:57 (SGT)*
+*Last checked: 2026-08-11 06:34:46 (SGT)*
 
 ### 1. ASE2SPRKKR: a unified Python framework integrating the Spin-Polarized Relativistic Korringa-Kohn-Rostoker method into the Atomic Simulation Environment
 
