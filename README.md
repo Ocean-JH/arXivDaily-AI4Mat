@@ -111,23 +111,39 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## New Papers (2)
 
-*Last checked: 2026-08-13 06:37:41 (SGT)*
+*Last checked: 2026-08-14 06:38:09 (SGT)*
 
-### 1. Inverse Design of Inorganic Compounds with Generative AI
+### 1. Planar Symmetric Pattern Generation
 
-**Authors:** Hannes Kneiding, Lucía Morán-González, Nishamol Kuriakose, Ainara Nova, David Balcells
+**Authors:** Ning Lin, Luxi Chen, Huaguan Chen, Jiacheng Cen, Chongxuan Li, Wenbing Huang, Hao Sun
 
-**Published:** 2026-04-11
+**Published:** 2026-06-01
 
-**Category:** physics.chem-ph
+**Category:** cs.LG
 
-**ID:** 2604.11827v2
+**ID:** 2606.02073v2
 
-**Link:** [https://arxiv.org/abs/2604.11827v2](https://arxiv.org/abs/2604.11827v2)
+**Link:** [https://arxiv.org/abs/2606.02073v2](https://arxiv.org/abs/2606.02073v2)
 
-**Summary:** Machine learning is revolutionizing chemistry. Beyond the value of predictive models accelerating virtual screening, generative AI aims at enabling inverse design, reversing the compound-to-property prediction paradigm into property-to-compound generation. Chemists now have access to a rich AI toolbox for organic chemistry, including drug discovery. However, the application of these methods to inorganic compounds remains limited by the challenges posed by their intrinsic nature. This Review analyzes how these challenges have been addressed, considering widely diverse systems ranging from molecules to crystals, including transition metal complexes and microporous materials. The analysis focuses on how generative AI methods have evolved towards data-representation-model pipelines that address the full complexity of inorganic compounds, including their chemical composition, geometry, symmetry, and electronic structure. Future directions, like benchmark standardization and the development of synthesizability metrics, are also discussed.
+**Summary:** Generating objects with specific symmetries is essential in various real-world scenarios. However, adapting existing 2D continuous representations to enforce planar group symmetry remains a challenge, as the transformation of non-reflective group elements may disrupt continuity. To overcome this limitation, we propose a symmetrization framework for arbitrary planar groups. Our method transforms any 2D continuous representation into a symmetric one while preserving continuity. We provide the mathematical formulation of this representation, demonstrate its approximation capability for symmetric functions, and detail the construction methodology. We validate our approach through three visual design tasks (pattern design, paper-cutting design and stylized topology design) and one material design task. Experiments confirm that our representation enables effective symmetry control and demonstrate its broader applicability.
+
+---
+
+### 2. Two-Stage Deformable-Convolutional Inverse Design of Nanophotonic Absorbers from Optical Spectra
+
+**Authors:** Waleed Waseer, Muhammad Shahid Jabbar, Muhammad Sohail Ibrahim, Shujaat Khan
+
+**Published:** 2026-08-12
+
+**Category:** physics.optics
+
+**ID:** 2608.11860v1
+
+**Link:** [https://arxiv.org/abs/2608.11860v1](https://arxiv.org/abs/2608.11860v1)
+
+**Summary:** Data-driven inverse design enables efficient generation of nanophotonic structures with prescribed optical responses, but spectrum-to-geometry mapping remains challenging due to non-uniqueness and fine geometric features. This work presents a two-stage deformable-convolutional framework for reconstructing metal--insulator--metal resonator geometries from 80-dimensional absorption spectra. The spectrum is projected to a $150\\times4\\times4$ latent representation and decoded into a $64\\times64$ resonator mask. Training combines supervised reconstruction with least-squares adversarial refinement initialized from the best supervised checkpoint. A three-run ablation compares deformable convolution with plain convolution, involution, Dynamic Conv, and ODConv under the same architecture. The proposed model achieves $20.79\\pm0.31$~dB PSNR and $0.8501\\pm0.0082$ SSIM, improving over plain convolution by 2.16~dB and 0.0831, respectively. It further achieves Dice $0.9623\\pm0.0027$, IoU $0.9342\\pm0.0038$, and boundary F-score $0.9550\\pm0.0027$. Spectral consistency evaluated using a frozen forward surrogate yields RMSE $0.0805\\pm0.0013$ and $R^2=0.7923\\pm0.0065$. Learned offsets show stronger adaptive sampling at coarse and intermediate decoder stages. Overall, deformable sampling with supervised initialization and adversarial refinement improves spectrum-conditioned geometry reconstruction.
 
 ---
 

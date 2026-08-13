@@ -1,0 +1,59 @@
+[
+  {
+    "authors": [
+      "Ning Lin",
+      "Luxi Chen",
+      "Huaguan Chen",
+      "Jiacheng Cen",
+      "Chongxuan Li",
+      "Wenbing Huang",
+      "Hao Sun"
+    ],
+    "base_id": "2606.02073",
+    "categories": [
+      "cs.LG"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2606.02073v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2606.02073v2",
+    "primary_category": "cs.LG",
+    "published": "2026-06-01T11:01:48+00:00",
+    "short_id": "2606.02073v2",
+    "status": "update",
+    "summary": "Generating objects with specific symmetries is essential in various real-world scenarios. However, adapting existing 2D continuous representations to enforce planar group symmetry remains a challenge, as the transformation of non-reflective group elements may disrupt continuity. To overcome this limitation, we propose a symmetrization framework for arbitrary planar groups. Our method transforms any 2D continuous representation into a symmetric one while preserving continuity. We provide the mathematical formulation of this representation, demonstrate its approximation capability for symmetric functions, and detail the construction methodology. We validate our approach through three visual design tasks (pattern design, paper-cutting design and stylized topology design) and one material design task. Experiments confirm that our representation enables effective symmetry control and demonstrate its broader applicability.",
+    "title": "Planar Symmetric Pattern Generation",
+    "updated": "2026-08-12T12:23:41+00:00",
+    "url": "https://arxiv.org/abs/2606.02073v2",
+    "version": 2
+  },
+  {
+    "authors": [
+      "Waleed Waseer",
+      "Muhammad Shahid Jabbar",
+      "Muhammad Sohail Ibrahim",
+      "Shujaat Khan"
+    ],
+    "base_id": "2608.11860",
+    "categories": [
+      "physics.optics",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2608.11860v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2608.11860v1",
+    "primary_category": "physics.optics",
+    "published": "2026-08-12T09:47:06+00:00",
+    "short_id": "2608.11860v1",
+    "status": "new",
+    "summary": "Data-driven inverse design enables efficient generation of nanophotonic structures with prescribed optical responses, but spectrum-to-geometry mapping remains challenging due to non-uniqueness and fine geometric features. This work presents a two-stage deformable-convolutional framework for reconstructing metal--insulator--metal resonator geometries from 80-dimensional absorption spectra. The spectrum is projected to a $150\\times4\\times4$ latent representation and decoded into a $64\\times64$ resonator mask. Training combines supervised reconstruction with least-squares adversarial refinement initialized from the best supervised checkpoint. A three-run ablation compares deformable convolution with plain convolution, involution, Dynamic Conv, and ODConv under the same architecture. The proposed model achieves $20.79\\pm0.31$~dB PSNR and $0.8501\\pm0.0082$ SSIM, improving over plain convolution by 2.16~dB and 0.0831, respectively. It further achieves Dice $0.9623\\pm0.0027$, IoU $0.9342\\pm0.0038$, and boundary F-score $0.9550\\pm0.0027$. Spectral consistency evaluated using a frozen forward surrogate yields RMSE $0.0805\\pm0.0013$ and $R^2=0.7923\\pm0.0065$. Learned offsets show stronger adaptive sampling at coarse and intermediate decoder stages. Overall, deformable sampling with supervised initialization and adversarial refinement improves spectrum-conditioned geometry reconstruction.",
+    "title": "Two-Stage Deformable-Convolutional Inverse Design of Nanophotonic Absorbers from Optical Spectra",
+    "updated": "2026-08-12T09:47:06+00:00",
+    "url": "https://arxiv.org/abs/2608.11860v1",
+    "version": 1
+  }
+]
