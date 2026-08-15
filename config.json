@@ -1,5 +1,5 @@
 {
-  "query": "(cat:cond-mat.mtrl-sci OR cat:cs.AI OR cat:cs.LG) AND (all:\"materials design\" OR all:\"materials discovery\" OR all:\"inverse design\") AND (all:\"generative\" OR all:\"crystal structure prediction\")",
+  "query": "(cat:cond-mat.mtrl-sci OR cat:cs.AI OR cat:cs.LG) AND (all:\"materials design\" OR all:\"materials discovery\" OR all:\"inverse design\" OR all:\"crystal generation\" OR all:\"crystal structure prediction\") AND (all:\"crystallography\" OR all:\"crystallographic\" OR all:\"space group\" or all:\"inorganic\" or all:\"crystalline\")",
   "max_results": 500,
   "arxiv_page_size": 100,
   "arxiv_delay_seconds": 10.0,
