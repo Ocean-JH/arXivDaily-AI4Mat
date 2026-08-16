@@ -115,7 +115,7 @@ arXiv's API access and attribution requirements.
 
 _No new papers were found in the latest check; showing the most recent additions._
 
-*Last checked: 2026-08-16 06:18:04 (SGT)*
+*Last checked: 2026-08-17 06:18:15 (SGT)*
 
 ### 1. Symmetry-Breaking De Novo Crystal Generation via Markovian Jump Diffusion
 
