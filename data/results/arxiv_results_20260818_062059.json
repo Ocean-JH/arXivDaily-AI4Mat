@@ -1,0 +1,34 @@
+[
+  {
+    "authors": [
+      "Juno Nam",
+      "Bowen Deng",
+      "Xiaochen Du",
+      "Luis Barroso-Luque",
+      "Benjamin Kurt Miller",
+      "Rafael Gómez-Bombarelli"
+    ],
+    "base_id": "2608.14502",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cond-mat.stat-mech",
+      "cs.AI",
+      "cs.LG",
+      "physics.chem-ph"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2608.14502v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2608.14502v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-08-14T17:16:27+00:00",
+    "short_id": "2608.14502v1",
+    "status": "new",
+    "summary": "Free energies govern solid-state phase stability, yet computational materials discovery still relies largely on ground-state energies because free energy calculations require ensemble averages. We introduce the thermodynamic interatomic potential (TIP), which extends an interatomic potential from its static energy to a thermodynamically consistent Gibbs free energy model, with thermodynamic responses following from temperature and pressure by automatic differentiation. We implement TIP[UMA] using the universal potential UMA, train it on free energies from quasi-harmonic to molecular dynamics fidelity, and calibrate it to higher-resolution calculations or experiment. From a single evaluation, it returns the equation of state of a crystal and locates phase transitions among competing branches, including dynamically stabilized phases. Fine-tuning extends the model to alloy solubility limits and miscibility gaps. TIP makes the free energy as accessible as the potential energy, opening finite-temperature phase stability to high-throughput discovery.",
+    "title": "Universal Thermodynamic Interatomic Potentials for Crystalline Materials",
+    "updated": "2026-08-14T17:16:27+00:00",
+    "url": "https://arxiv.org/abs/2608.14502v1",
+    "version": 1
+  }
+]
