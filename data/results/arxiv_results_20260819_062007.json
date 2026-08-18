@@ -1,0 +1,26 @@
+[
+  {
+    "authors": [
+      "Sreerag Sundaram",
+      "Karthik Sasihithlu"
+    ],
+    "base_id": "2608.16113",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2608.16113v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2608.16113v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-08-17T05:07:44+00:00",
+    "short_id": "2608.16113v1",
+    "status": "new",
+    "summary": "Many crystals exhibit polymorphism, undergoing atomic rearrangements that result in unit cells belonging to different symmetry groups. These structural changes directly affect lattice vibration modes and consequently influence their mid-infrared optical properties. In this study, we use tungsten trioxide (WO$_3$) as a representative system, owing to its multiple temperature-dependent phases, to study the impact of polymorphism on mid-infrared optical behaviour. Using a fully first-principles approach, we investigate three phases of WO$_3$ and evaluate their mid-infrared optical properties. Significant differences are observed among the three crystallographic phases, demonstrating the potential of this methodology as a predictive tool for materials discovery and targeted design.",
+    "title": "First-Principles Prediction of Phonon-Mediated Infrared Optical Properties of WO$_3$ Polymorphs",
+    "updated": "2026-08-17T05:07:44+00:00",
+    "url": "https://arxiv.org/abs/2608.16113v1",
+    "version": 1
+  }
+]

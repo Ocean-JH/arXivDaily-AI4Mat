@@ -113,21 +113,21 @@ arXiv's API access and attribution requirements.
 
 ## New Papers (1)
 
-*Last checked: 2026-08-18 06:20:59 (SGT)*
+*Last checked: 2026-08-19 06:20:07 (SGT)*
 
-### 1. Universal Thermodynamic Interatomic Potentials for Crystalline Materials
+### 1. First-Principles Prediction of Phonon-Mediated Infrared Optical Properties of WO$_3$ Polymorphs
 
-**Authors:** Juno Nam, Bowen Deng, Xiaochen Du, Luis Barroso-Luque, Benjamin Kurt Miller, Rafael Gómez-Bombarelli
+**Authors:** Sreerag Sundaram, Karthik Sasihithlu
 
-**Published:** 2026-08-14
+**Published:** 2026-08-17
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2608.14502v1
+**ID:** 2608.16113v1
 
-**Link:** [https://arxiv.org/abs/2608.14502v1](https://arxiv.org/abs/2608.14502v1)
+**Link:** [https://arxiv.org/abs/2608.16113v1](https://arxiv.org/abs/2608.16113v1)
 
-**Summary:** Free energies govern solid-state phase stability, yet computational materials discovery still relies largely on ground-state energies because free energy calculations require ensemble averages. We introduce the thermodynamic interatomic potential (TIP), which extends an interatomic potential from its static energy to a thermodynamically consistent Gibbs free energy model, with thermodynamic responses following from temperature and pressure by automatic differentiation. We implement TIP[UMA] using the universal potential UMA, train it on free energies from quasi-harmonic to molecular dynamics fidelity, and calibrate it to higher-resolution calculations or experiment. From a single evaluation, it returns the equation of state of a crystal and locates phase transitions among competing branches, including dynamically stabilized phases. Fine-tuning extends the model to alloy solubility limits and miscibility gaps. TIP makes the free energy as accessible as the potential energy, opening finite-temperature phase stability to high-throughput discovery.
+**Summary:** Many crystals exhibit polymorphism, undergoing atomic rearrangements that result in unit cells belonging to different symmetry groups. These structural changes directly affect lattice vibration modes and consequently influence their mid-infrared optical properties. In this study, we use tungsten trioxide (WO$_3$) as a representative system, owing to its multiple temperature-dependent phases, to study the impact of polymorphism on mid-infrared optical behaviour. Using a fully first-principles approach, we investigate three phases of WO$_3$ and evaluate their mid-infrared optical properties. Significant differences are observed among the three crystallographic phases, demonstrating the potential of this methodology as a predictive tool for materials discovery and targeted design.
 
 ---
 
