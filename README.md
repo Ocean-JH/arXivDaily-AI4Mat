@@ -115,7 +115,7 @@ arXiv's API access and attribution requirements.
 
 _No new papers were found in the latest check; showing the most recent additions._
 
-*Last checked: 2026-08-20 06:21:17 (SGT)*
+*Last checked: 2026-08-21 06:24:13 (SGT)*
 
 ### 1. First-Principles Prediction of Phonon-Mediated Infrared Optical Properties of WO$_3$ Polymorphs
 
