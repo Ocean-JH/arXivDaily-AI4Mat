@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T06:20:07+08:00",
+  "generated_at": "2026-08-22T06:21:26.746170+08:00",
   "papers": [
     {
       "anchor": "paper-2608.16113",
@@ -472,6 +472,28 @@
       "title": "Chemical filters for ultra-high-throughput materials screening and generation"
     },
     {
+      "anchor": "paper-2607.17417",
+      "authors": [
+        "Can Polat",
+        "Mustafa Kurban",
+        "Erchin Serpedin",
+        "Hasan Kurban"
+      ],
+      "base_id": "2607.17417",
+      "categories": [
+        "cs.LG",
+        "physics.chem-ph",
+        "physics.comp-ph",
+        "quant-ph"
+      ],
+      "id": "2607.17417v2",
+      "page": 1,
+      "primary_category": "cs.LG",
+      "published": "2026-07-19T21:44:47+00:00",
+      "summary": "Language models are moving into chemistry and materials discovery workflows, where a wrong molecular formula, space group, or formation energy can silently propagate into downstream decisions. These confabulations hide inside fluent reasoning traces and concentrate on rare, long-tail entities, where model confidence is least trustworthy. Retrieving reference data for every prompt would catch them, but at a heavy coverage and abstention cost. We show that deterministic, database-grounded verification catches and repairs these errors selectively, and that the binding constraint is detection rather than repair. Our tiered verifier extracts each checkable claim, tests it against authoritative databases and physical law, and retrieves a reference value only when a check fails. Across four models and over five hundred prompts with pinned conditions, gated correction cuts the error rate of committed formulas from 22% to 4% with 3.2 times fewer retrievals than blanket augmentation, and it outperforms a conversational retrieval oracle when every answer, corrected or not, is scored. When a flag fires, repair almost always succeeds; the benefit reaches the final answer only where the verifier's scope covers it and where long-tail error exists. Checkable claims, checked cheaply, are a practical lever for trustworthy machine reasoning in chemistry.",
+      "title": "Grounded verification of chemical and materials reasoning: detection is the bottleneck"
+    },
+    {
       "anchor": "paper-2607.15535",
       "authors": [
         "Dong Hyeon Mok",
@@ -821,7 +843,7 @@
         "cs.LG"
       ],
       "id": "2607.04123v1",
-      "page": 1,
+      "page": 2,
       "primary_category": "cs.LG",
       "published": "2026-07-05T05:40:01+00:00",
       "summary": "Inverse design of mechanical metamaterials seeks a periodic unit cell whose homogenized elastic properties meet a prescribed target, but current learning-based methods are data-hungry, mostly interpolative, and provide no guarantee that the generated design satisfies the specification. We introduce CertMix, a data-efficient framework that represents each exemplar unit cell as a small periodic neural implicit field, specifically a SIREN signed-distance decoder overfit from a shared anchor, so that exemplar weight vectors become aligned and directly comparable. The key observation is that, in this aligned weight space, the homogenized elasticity tensor is approximately linear in the mixing coefficients. Targeted design therefore reduces to a small constrained affine-mixing problem solved with a differentiable periodic homogenizer in the loop. Negative coefficients enable extrapolation beyond the exemplar range, a linearity-mismatch trust region keeps blends valid, and split-conformal calibration converts the mismatch signal into a distribution-free certificate on achieved-property error. From as few as 50 exemplars, CertMix attains a scaled property error of $10^{-4}$, roughly two to three orders of magnitude below conditional generative baselines trained on 1000 cells. It remains accurate far outside the exemplar range, is $57\\times$ faster than per-target topology optimization while avoiding checkerboards and enclosed voids, and extends to spatially graded fields, 3D triply periodic surfaces, and a certified running-shoe midsole application.",
@@ -1678,7 +1700,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2605.25904v1",
-      "page": 2,
+      "page": 3,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2026-05-25T14:37:53+00:00",
       "summary": "Transparent conducting oxides (TCOs) are central to optoelectronic technologies, yet their design is often guided by popular figures of merit that are disconnected from the electrical requirement of actual devices. As a result, widely used metrics guide material design under conditions that can be impractical for devices. Here, we introduce a benchmarking framework to guide TCO development, in which transparent conductors are evaluated at fixed, application-relevant sheet resistance $(R_S)$. The resulting metric, $T_{app}(R_S)$, anchors comparison to device requirements, asking instead: What optical transparency can be obtained at the sheet resistance required by a given application? This approach provides a directly interpretable measure of performance, enabling materials to be benchmarked in terms of absolute transparency gains at a specified $R_S$. Applied to representative conventional and emerging TCOs, the framework defines the sheet-resistance landscape relevant to each application and maps how different materials perform within it. In doing so, it provides an application-rooted guide to material development and selection. More broadly, this approach establishes a general strategy for evaluating materials under fixed operational constraints, bridging the gap between materials design and device integration.",
@@ -2531,7 +2553,7 @@
         "cs.AI"
       ],
       "id": "2604.21068v1",
-      "page": 3,
+      "page": 4,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2026-04-22T20:24:57+00:00",
       "summary": "The most technologically consequential materials are often the rarest: they occupy narrow regions of chemical space, obey competing physical constraints, and appear only sparsely in existing databases. High-kappa dielectrics, high-Tc superconductors, and ferromagnetic insulators are to name a few. This scarcity fundamentally limits today's data-driven materials discovery, where machine-learning models excel at interpolation but struggle to generate genuinely new candidates. Here, we introduce DielecMIND, an artificial intelligence framework that reframes materials discovery as a reasoning-driven exploration instead of a database-screening problem. Using high-kappa dielectrics as a data-scarce and technologically stringent test case, DielecMIND combines large-language-model hypothesis generation for the first time with physics validated first-principles calculation to navigate chemical space beyond known compounds. Prior to our work, only 14 experimentally or computationally validated materials with kappa > 150 were known. Our framework discovers and validates 5 new such compounds, expanding this rare-materials class by a remarkable = 35% in a single study. Among them, we find that Ba2TiHfO6 exhibits a dielectric constant of 637, minimal loss at low optical frequencies, and stability up to 800 K. Beyond dielectrics, this work demonstrates a new paradigm for artificial-intelligence-guided discovery: one that generates a small number of physically grounded, experimentally plausible candidates yet measurably expands sparsely populated functional materials spaces. Thus, DielecMIND points toward a general strategy for discovering rare, high-impact functional materials where data scarcity has long constrained progress.",
@@ -3385,7 +3407,7 @@
         "cs.LG"
       ],
       "id": "2603.13920v1",
-      "page": 4,
+      "page": 5,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2026-03-14T12:24:24+00:00",
       "summary": "Cold metals are a class of metals with an intrinsic energy gap located close to the Fermi level, which enables cold-carrier injection for steep-slope transistors and is therefore promising for low-power electronic applications. High-throughput screening has revealed 252 three-dimensional (3D) cold metals in the Materials Project database, but database searches are inherently limited to known compounds. Here we present an inverse-design workflow that generates 3D cold metals using MatterGPT, a conditional autoregressive Transformer trained on SLICES, an invertible and symmetry-invariant crystal string representation. We curate a training set of 26,309 metallic structures labeled with energy above hull and a unified band-edge distance descriptor that merges p-type and n-type cold-metal characteristics to address severe label imbalance. Property-conditioned generation targeting thermodynamic stability and 50-500 meV band-edge distances produces 148,506 unique candidates; 92.1% are successfully reconstructed to 3D structures and down-selected by symmetry, uniqueness and novelty filters, followed by high-throughput DFT validation. We identify 257 cold metals verified as novel with respect to the Materials Project database, with gaps around the Fermi level spanning 50-500 meV. First-principles phonon, electronic-structure, and work-function calculations for representative candidates confirm dynamical stability and contact-relevant work functions. Our results demonstrate that SLICES-enabled generative transformers can expand the chemical space of cold metals beyond high-throughput screening, providing a route to low-power electronic materials discovery.",
@@ -4261,7 +4283,7 @@
         "cs.AI"
       ],
       "id": "2602.01710v1",
-      "page": 5,
+      "page": 6,
       "primary_category": "cs.CV",
       "published": "2026-02-02T06:36:06+00:00",
       "summary": "Semantic segmentation of microscopy images is a critical task for high-throughput materials characterisation, yet its automation is severely constrained by the prohibitive cost, subjectivity, and scarcity of expert-annotated data. While physics-based simulations offer a scalable alternative to manual labelling, models trained on such data historically fail to generalise due to a significant domain gap, lacking the complex textures, noise patterns, and imaging artefacts inherent to experimental data. This paper introduces a novel framework for labour-free segmentation that successfully bridges this simulation-to-reality gap. Our pipeline leverages phase-field simulations to generate an abundant source of microstructural morphologies with perfect, intrinsically-derived ground-truth masks. We then employ a Cycle-Consistent Generative Adversarial Network (CycleGAN) for unpaired image-to-image translation, transforming the clean simulations into a large-scale dataset of high-fidelity, realistic SEM images. A U-Net model, trained exclusively on this synthetic data, demonstrated remarkable generalisation when deployed on unseen experimental images, achieving a mean Boundary F1-Score of 0.90 and an Intersection over Union (IOU) of 0.88. Comprehensive validation using t-SNE feature-space projection and Shannon entropy analysis confirms that our synthetic images are statistically and featurally indistinguishable from the real data manifold. By completely decoupling model training from manual annotation, our generative framework transforms a data-scarce problem into one of data abundance, providing a robust and fully automated solution to accelerate materials discovery and analysis.",
@@ -5141,7 +5163,7 @@
         "physics.comp-ph"
       ],
       "id": "2512.19529v1",
-      "page": 6,
+      "page": 7,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-12-22T16:18:57+00:00",
       "summary": "This study aims to evaluate the optoelectronic properties of metal free porphyrin-based D-$π$-A dyes via in-silico performance investigation notifying energy informatics and decision support. To develop novel organic dyes, three acceptor/anchoring groups and five donating groups were introduced to strategic positions of the base porphyrin structure, resulting in a total of fifteen dyes. The singlet ground state geometries of the dyes were optimized utilizing density functional theory (DFT) with B3LYP and the excited state optical properties were explored through time-dependent DFT (TD-DFT) using the PCM model with tetrahydrofuran (THF) as solvent. Both DFT and TD-DFT calculations were carried out using the 6-311G(d,p) basis set. The HOMO energy levels of almost all the modified dyes are lower than the redox potential of I$^-$/I$3^-$ and LUMO energy levels are higher than the conduction band of TiO$2$. The absorption maxima values ranged from 690.64 to 975.55 nm. The dye N1 using triphenylamine group as donor and p-ethynylbenzoic acid group as acceptor, showed optimum optoelectronic properties ($ΔG{reg}=-9.73$ eV, $ΔG{inj}=7.18$ eV, $V_{OC}=1.47$ V and $J_{SC}=15.03$ mA/cm$^2$) with highest PCE 14.37%, making it the best studied dye. This newly modified organic dye with enhanced PCE is remarkably effective for the dye-sensitized solar cells (DSSC) industry. Beyond materials discovery, this study highlights the role of high-performance computing in enabling predictive screening of dye candidates and generating performance indicators (HOMO-LUMO gaps, absorption spectra, charge transfer free energies, photovoltaic metrics). These outputs can serve as key parameters for energy informatics and system modelling.",
@@ -6006,7 +6028,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2512.01907v1",
-      "page": 7,
+      "page": 8,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-12-01T17:26:37+00:00",
       "summary": "Boron aluminum nitride (B$_x$Al$_{1-x}$N) is a promising material for next-generation electronic and optoelectronic devices due to its ultra-wide bandgap, high thermal stability, and compatibility with other III-nitride semiconductors. Despite its potential, the band alignments of B$_x$Al$_{1-x}$N remain largely unexplored, although this information is essential for device design. In this study, we compute the valence and conduction band alignments of nonpolar ($a$-plane) and polar ($c$-plane) B$_x$Al$_{1-x}$N, and compare them with those of AlN and GaN. Using density functional theory, many-body perturbation theory, $GW_0$ method, and a novel passivation scheme, we find that they have near-zero valence band alignments for low-$x$ B$_x$Al$_{1-x}$N/AlN, while higher compositions ($x > $0.333) exhibit type I or II band alignments. The band alignments also show a notable dependence on surface polarity and the tetrahedral distortion of the B$_x$Al$_{1-x}$N structures. Our computed offsets are in good agreement with available experimental data. Due to their low valence band alignments and higher conduction band alignments, the B$_x$Al$_{1-x}$N/AlN heterostructures could be well suited for high-electron-mobility transistors and ultraviolet light-emitting diodes. The band alignments of B$_x$Al$_{1-x}$N determined in this study provide essential design guidelines for integrating these ultra-wide bandgap alloys into advanced semiconductor technologies.",
@@ -6936,7 +6958,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2511.18586v1",
-      "page": 8,
+      "page": 9,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-11-23T19:00:19+00:00",
       "summary": "Electric polarization in the absence of an externally applied electric field is a key property of polar materials, but the standard interpolation-based ab initio approach to compute polarization differences within the modern theory of polarization presents challenges for automated high-throughput calculations. Berry flux diagonalization [J. Bonini et. al, Phys. Rev. B 102, 045141 (2020)] has been proposed as an efficient and reliable alternative, though it has yet to be widely deployed. Here, we assess Berry flux diagonalization using ab initio calculations of a large set of materials, introducing and validating heuristics that ensure branch alignment with a minimal number of intermediate interpolated structures. Our automated implementation of Berry flux diagonalization succeeds in cases where prior interpolation-based workflows fail due to band-gap closures or branch ambiguities. Benchmarking with ab initio calculations of 176 candidate ferroelectrics, we demonstrate the efficacy of the approach on a broad range of insulating materials and obtain accurate effective polarization values with fewer interpolated structures than prior automated interpolation-based workflows. Our real-space heuristics that can predict gauge stability a priori from ionic displacements enable a general automated framework for reliable polarization calculations and efficient high-throughput screening of chemically and structurally diverse polar insulators. These results establish Berry flux diagonalization as a robust and efficient method to compute the effective polarization of solids and to accelerate the data-driven discovery of functional polar materials.",
@@ -7859,7 +7881,7 @@
         "cs.AI"
       ],
       "id": "2511.09298v2",
-      "page": 9,
+      "page": 10,
       "primary_category": "cs.CV",
       "published": "2025-11-12T13:07:07+00:00",
       "summary": "The rise of 3D generative models has enabled automatic 3D geometry and texture synthesis from multimodal inputs (e.g., text or images). However, these methods often ignore physical constraints and manufacturability considerations. In this work, we address the challenge of producing 3D designs that are both lightweight and self-supporting. We present DensiCrafter, a framework for generating lightweight, self-supporting 3D hollow structures by optimizing the density field. Starting from coarse voxel grids produced by Trellis, we interpret these as continuous density fields to optimize and introduce three differentiable, physically constrained, and simulation-free loss terms. Additionally, a mass regularization penalizes unnecessary material, while a restricted optimization domain preserves the outer surface. Our method seamlessly integrates with pretrained Trellis-based models (e.g., Trellis, DSO) without any architectural changes. In extensive evaluations, we achieve up to 43% reduction in material mass on the text-to-3D task. Compared to state-of-the-art baselines, our method could improve the stability and maintain high geometric fidelity. Real-world 3D-printing experiments confirm that our hollow designs can be reliably fabricated and could be self-supporting.",
@@ -8749,7 +8771,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2511.00922v1",
-      "page": 10,
+      "page": 11,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-11-02T12:48:54+00:00",
       "summary": "Thermally activated delayed fluorescence (TADF) emitters are essential for next-generation, high-efficiency organic light-emitting diodes (OLEDs), yet their rational design is hampered by the high computational cost of accurate excited-state predictions. Here, we present a comprehensive benchmark study validating semi-empirical extended tight-binding (xTB) methods -- specifically sTDA-xTB and sTD-DFT-xTB -- for the high-throughput screening of TADF materials. Using an unprecedentedly large dataset of \\num{747} experimentally characterized emitters, our framework demonstrates a computational cost reduction of over \\qty{99}{\\percent} compared to conventional TD-DFT, while maintaining strong internal consistency between methods (Pearson $r \\approx \\num{0.82}$ for \\deltaest), validating their utility for relative molecular ranking. Validation against \\num{312} experimental \\deltaest values reveals a mean absolute error of approximately \\qty{0.17}{\\electronvolt}, a discrepancy attributed to the vertical approximation inherent to the HTS protocol, underscoring the methods' role in screening rather than quantitative prediction. Through large-scale data analysis, we statistically validate key design principles, confirming the superior performance of Donor-Acceptor-Donor (D-A-D) architectures and identifying an optimal D-A torsional angle range of \\qtyrange{50}{90}{\\degree} for efficient TADF. Principal Component Analysis reveals that the complex property space is fundamentally low-dimensional, with three components capturing nearly \\qty{90}{\\percent} of the variance. This work establishes these semi-empirical methods as powerful, cost-effective tools for accelerating TADF discovery and provides a robust set of data-driven design rules and methodological guidelines for the computational materials science community.",
@@ -9641,7 +9663,7 @@
         "cs.LG"
       ],
       "id": "2510.20976v1",
-      "page": 11,
+      "page": 12,
       "primary_category": "cs.LG",
       "published": "2025-10-23T20:12:46+00:00",
       "summary": "Large language models have demonstrated remarkable reasoning capabilities\nacross diverse natural language tasks. However, comparable breakthroughs in\nscientific discovery are more limited, because understanding complex physical\nphenomena demands multifaceted representations far beyond language alone. A\ncompelling example is the design of functional materials such as MOFs-critical\nfor a range of impactful applications like carbon capture and hydrogen storage.\nNavigating their vast and intricate design space in language-based\nrepresentations interpretable by LLMs is challenging due to the numerous\npossible three-dimensional atomic arrangements and strict reticular rules of\ncoordination geometry and topology. Despite promising early results in\nLLM-assisted discovery for simpler materials systems, MOF design remains\nheavily reliant on tacit human expertise rarely codified in textual information\nalone. To overcome this barrier, we introduce L2M3OF, the first multimodal LLM\nfor MOFs. L2M3OF integrates crystal representation learning with language\nunderstanding to process structural, textual, and knowledge modalities jointly.\nL2M3OF employs a pre-trained crystal encoder with a lightweight projection\nlayer to compress structural information into a token space, enabling efficient\nalignment with language instructions. To facilitate training and evaluation, we\ncurate a structure-property-knowledge database of crystalline materials and\nbenchmark L2M3OF against state-of-the-art closed-source LLMs such as GPT-5,\nGemini-2.5-Pro and DeepSeek-R1. Experiments show that L2M3OF outperforms\nleading text-based closed-source LLMs in property prediction and knowledge\ngeneration tasks, despite using far fewer parameters. These results highlight\nthe importance of multimodal approaches for porous material understanding and\nestablish L2M3OF as a foundation for next-generation AI systems in materials\ndiscovery.",
@@ -10522,7 +10544,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2510.10919v1",
-      "page": 12,
+      "page": 13,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-10-13T02:29:50+00:00",
       "summary": "The importance of electrical contact resistance and thermal boundary resistance has increased dramatically as devices are scaled to atomic limits. The use of a rich range of materials with various bandstructures (e.g. parabolic, conical), and in geometries exploiting various dimensionalities (e.g. 1D wires, 2D sheets, and 3D bulk) will increase in the future. Here we derive a single general expression for the quantum limit of electrical contact resistivity for various bandstructures and all dimensions. A corresponding result for the quantum limit of thermal boundary resistance is also derived. These results will be useful to quantitatively co-design, benchmark, and guide the lowering of electrical and thermal boundary resistances for energy efficient devices.",
@@ -11367,7 +11389,7 @@
         "cs.AI"
       ],
       "id": "2510.00795v1",
-      "page": 13,
+      "page": 14,
       "primary_category": "cs.AI",
       "published": "2025-10-01T11:50:11+00:00",
       "summary": "The emergence of agent-based systems represents a significant advancement in\nartificial intelligence, with growing applications in automated data\nextraction. However, chemical information extraction remains a formidable\nchallenge due to the inherent heterogeneity of chemical data. Current\nagent-based approaches, both general-purpose and domain-specific, exhibit\nlimited performance in this domain. To address this gap, we present ChemX, a\ncomprehensive collection of 10 manually curated and domain-expert-validated\ndatasets focusing on nanomaterials and small molecules. These datasets are\ndesigned to rigorously evaluate and enhance automated extraction methodologies\nin chemistry. To demonstrate their utility, we conduct an extensive\nbenchmarking study comparing existing state-of-the-art agentic systems such as\nChatGPT Agent and chemical-specific data extraction agents. Additionally, we\nintroduce our own single-agent approach that enables precise control over\ndocument preprocessing prior to extraction. We further evaluate the performance\nof modern baselines, such as GPT-5 and GPT-5 Thinking, to compare their\ncapabilities with agentic approaches. Our empirical findings reveal persistent\nchallenges in chemical information extraction, particularly in processing\ndomain-specific terminology, complex tabular and schematic representations, and\ncontext-dependent ambiguities. The ChemX benchmark serves as a critical\nresource for advancing automated information extraction in chemistry,\nchallenging the generalization capabilities of existing methods, and providing\nvaluable insights into effective evaluation strategies.",
@@ -12265,7 +12287,7 @@
         "physics.chem-ph"
       ],
       "id": "2509.17862v1",
-      "page": 14,
+      "page": 15,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-09-22T14:56:23+00:00",
       "summary": "Catalysis at solid-liquid interfaces plays a central role in the advancement of energy storage and sustainable chemical production technologies. By enabling accurate, long-time scale simulations, machine learning (ML) models have the potential to accelerate the discovery of (electro)catalysts. While prior Open Catalyst datasets (OC20 and OC22) have advanced the field by providing large-scale density functional theory (DFT) data of adsorbates on surfaces at solid-gas interfaces, they do not capture the critical role of solvent and electrolyte effects at solid-liquid interfaces. To bridge this gap, we introduce the Open Catalyst 2025 (OC25) dataset, consisting of 7,801,261 calculations across 1,511,270 unique explicit solvent environments. OC25 constitutes the largest and most diverse solid-liquid interface dataset that is currently available and provides configurational and elemental diversity: spanning 88 elements, commonly used solvents/ions, varying solvent layers, and off-equilibrium sampling. State-of-the-art models trained on the OC25 dataset exhibit energy, force, and solvation energy errors as low as 0.1 eV, 0.015 eV/Å, and 0.04 eV, respectively; significantly lower than than the recently released Universal Models for Atoms (UMA-OC20). Additionally, we discuss the impact of the quality of DFT-calculated forces on model training and performance. The dataset and accompanying baseline models are made openly available for the community. We anticipate the dataset to facilitate large length-scale and long-timescale simulations of catalytic transformations at solid-liquid interfaces, advancing molecular-level insights into functional interfaces and enabling the discovery of next-generation energy storage and conversion technologies.",
@@ -13131,7 +13153,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2509.07787v2",
-      "page": 15,
+      "page": 16,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-09-09T14:22:50+00:00",
       "summary": "Low-angle grain boundaries (LAGBs) are often regarded as penetrable interfaces to dislocation motion, yet recent studies suggest they can also act as strong barriers. The origin of this duality remains debated, particularly regarding the role of elastic interactions. Here, large-scale molecular dynamics simulations are employed to investigate dislocation transmission across various tilt LAGBs in BCC Fe. The results show that transmission resistance varies widely with boundary-dislocation geometry. Contrary to the prevailing view that dislocation reactions dominate, elastic interactions between lattice and boundary dislocations emerge as the primary controlling factor. Screw and screw-like dislocations generate shear stresses that bend GB dislocations and produce strong barriers, whereas edge dislocations lack such stresses and transmit more readily. Consequently, barrier strength increases as the dislocation character angle decreases, with screw dislocations experiencing the strongest resistance. From these insights, we develop an analytical model that quantitatively links net transmission stress to dislocation character, boundary inclination, and boundary misorientation, reproducing the simulation results with excellent agreement. These results establish the dominant role of elastic interactions in dislocation-LAGB interactions and provide a predictive basis for designing materials strengthened by controlled boundary architectures.",
@@ -13999,7 +14021,7 @@
         "cs.LG"
       ],
       "id": "2508.18561v1",
-      "page": 16,
+      "page": 17,
       "primary_category": "cs.LG",
       "published": "2025-08-25T23:41:36+00:00",
       "summary": "Molecular property prediction is a crucial task that guides the design of new compounds, including drugs and materials. While explainable artificial intelligence methods aim to scrutinize model predictions by identifying influential molecular substructures, many existing approaches rely on masking strategies that remove either atoms or atom-level features to assess importance via fidelity metrics. These methods, however, often fail to adhere to the underlying molecular distribution and thus yield unintuitive explanations. In this work, we propose counterfactual masking, a novel framework that replaces masked substructures with chemically reasonable fragments sampled from generative models trained to complete molecular graphs. Rather than evaluating masked predictions against implausible zeroed-out baselines, we assess them relative to counterfactual molecules drawn from the data distribution. Our method offers two key benefits: (1) molecular realism underpinning robust and distribution-consistent explanations, and (2) meaningful counterfactuals that directly indicate how structural modifications may affect predicted properties. We demonstrate that counterfactual masking is well-suited for benchmarking model explainers and yields more actionable insights across multiple datasets and property prediction tasks. Our approach bridges the gap between explainability and molecular design, offering a principled and generative path toward explainable machine learning in chemistry.",
@@ -14892,7 +14914,7 @@
         "cond-mat.other"
       ],
       "id": "2508.09771v1",
-      "page": 17,
+      "page": 18,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-08-13T12:55:38+00:00",
       "summary": "We map the high-pressure phase diagram of nitrogen hydrate up to 16 GPa at room temperature by combining neutron diffraction, Raman spectroscopy, and crystal structure prediction. We reveal a rich sequence of structural transformations, from sI/sII clathrates to hexagonal (sH) and tetragonal (sT) phases, culminating in a previously unknown orthorhombic filled-ice structure above 1.8 GPa in the Pnma space group, which we designate as NH-V. This new phase cannot be indexed to any known ice frameworks - such as the high-pressure methane hydrates MH-III (Imma) or MH-IV (Pmcn) - and exhibits a density approximately 30% lower than that of stable ice VII, pointing to distinctive water-nitrogen interactions. Our results refine the understanding of nitrogen hydrate behavior under extreme conditions and demonstrate the propensity of nitrogen and water to form stable filled-ice structures up to 16 GPa, with important implications for planetary science.",
@@ -15779,7 +15801,7 @@
         "eess.AS"
       ],
       "id": "2507.23010v1",
-      "page": 18,
+      "page": 19,
       "primary_category": "cs.LG",
       "published": "2025-07-30T18:19:11+00:00",
       "summary": "This paper investigates the inverse capabilities and broader utility of multimodal latent spaces within task-specific AI (Artificial Intelligence) models. While these models excel at their designed forward tasks (e.g., text-to-image generation, audio-to-text transcription), their potential for inverse mappings remains largely unexplored. We propose an optimization-based framework to infer input characteristics from desired outputs, applying it bidirectionally across Text-Image (BLIP, Flux.1-dev) and Text-Audio (Whisper-Large-V3, Chatterbox-TTS) modalities.\n  Our central hypothesis posits that while optimization can guide models towards inverse tasks, their multimodal latent spaces will not consistently support semantically meaningful and perceptually coherent inverse mappings. Experimental results consistently validate this hypothesis. We demonstrate that while optimization can force models to produce outputs that align textually with targets (e.g., a text-to-image model generating an image that an image captioning model describes correctly, or an ASR model transcribing optimized audio accurately), the perceptual quality of these inversions is chaotic and incoherent. Furthermore, when attempting to infer the original semantic input from generative models, the reconstructed latent space embeddings frequently lack semantic interpretability, aligning with nonsensical vocabulary tokens.\n  These findings highlight a critical limitation. multimodal latent spaces, primarily optimized for specific forward tasks, do not inherently possess the structure required for robust and interpretable inverse mappings. Our work underscores the need for further research into developing truly semantically rich and invertible multimodal latent spaces.",
@@ -16654,7 +16676,7 @@
         "cs.AI"
       ],
       "id": "2507.12006v4",
-      "page": 19,
+      "page": 20,
       "primary_category": "cs.CV",
       "published": "2025-07-16T07:59:54+00:00",
       "summary": "Vision Transformers (ViTs) have significantly advanced computer vision, demonstrating strong performance across various tasks. However, the attention mechanism in ViTs makes each layer function as a low-pass filter, and the stacked-layer architecture in existing transformers suffers from frequency vanishing. This leads to the loss of critical details and textures. We propose a novel, circuit-theory-inspired strategy called Frequency-Dynamic Attention Modulation (FDAM), which can be easily plugged into ViTs. FDAM directly modulates the overall frequency response of ViTs and consists of two techniques: Attention Inversion (AttInv) and Frequency Dynamic Scaling (FreqScale). Since circuit theory uses low-pass filters as fundamental elements, we introduce AttInv, a method that generates complementary high-pass filtering by inverting the low-pass filter in the attention matrix, and dynamically combining the two. We further design FreqScale to weight different frequency components for fine-grained adjustments to the target response function. Through feature similarity analysis and effective rank evaluation, we demonstrate that our approach avoids representation collapse, leading to consistent performance improvements across various models, including SegFormer, DeiT, and MaskDINO. These improvements are evident in tasks such as semantic segmentation, object detection, and instance segmentation. Additionally, we apply our method to remote sensing detection, achieving state-of-the-art results in single-scale settings. The code is available at https://github.com/Linwei-Chen/FDAM.",
@@ -17526,7 +17548,7 @@
         "cs.LG"
       ],
       "id": "2506.14167v6",
-      "page": 20,
+      "page": 21,
       "primary_category": "cs.LG",
       "published": "2025-06-17T04:07:32+00:00",
       "summary": "Learning an energy-based model (EBM) in the latent space of a top-down generative model offers a powerful framework for generation across many data modalities. However, it remains unclear how its interpretability can be used to guide model design, improve generative quality, and reduce training time. Moreover, the reliance on Langevin Monte Carlo (LMC) sampling presents challenges in efficiency and sampling multimodal latent distributions. We propose a novel adaptation of the Kolmogorov-Arnold representation theorem for generative modeling and introduce the Kolmogorov-Arnold Energy Model (KAEM) to take advantage of structural and inductive biases. By constraining the prior to univariate relationships, KAEM enables fast and exact inference via the inverse transform method. With the low dimensionality of the latent space and suitable inductive biases encoded, we demonstrate that importance sampling (IS) becomes a viable, unbiased, and highly efficient posterior sampler. For domains where IS fails, we introduce a strategy based on population-based LMC, decomposing the posterior into a sequence of annealed distributions to improve LMC mixing. KAEM balances common generative modeling trade-offs, offering fast inference, interpretability, and stable training, while being naturally suited to Zettascale Computing hardware.",
@@ -18523,7 +18545,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2506.11055v1",
-      "page": 21,
+      "page": 22,
       "primary_category": "cs.LG",
       "published": "2025-05-22T16:12:20+00:00",
       "summary": "Recent advances in Foundation Models for Materials Science are poised to revolutionize the discovery, manufacture, and design of novel materials with tailored properties and responses. Although great strides have been made, successes have been restricted to materials classes where multi-million sample data repositories can be readily curated (e.g., atomistic structures). Unfortunately, for many structural and functional materials (e.g., mesoscale structured metal alloys), such datasets are too costly or prohibitive to construct; instead, datasets are limited to very few examples. To address this challenge, we introduce a novel machine learning approach for learning from hyper-sparse, complex spatial data in scientific domains. Our core contribution is a physics-driven data augmentation scheme that leverages an ensemble of local generative models, trained on as few as five experimental observations, and coordinates them through a novel diversity curation strategy to generate a large-scale, physically diverse dataset. We utilize this framework to construct PolyMicros, the first Foundation Model for polycrystalline materials (a structural material class important across a broad range of industrial and scientific applications). We demonstrate the utility of PolyMicros by zero-shot solving several long standing challenges related to accelerating 3D experimental microscopy. Finally, we make both our models and datasets openly available to the community.",
@@ -19429,7 +19451,7 @@
         "physics.ao-ph"
       ],
       "id": "2504.17028v3",
-      "page": 22,
+      "page": 23,
       "primary_category": "cs.LG",
       "published": "2025-04-23T18:15:31+00:00",
       "summary": "This paper demonstrates the feasibility of democratizing AI-driven global weather forecasting models among university research groups by leveraging Graphics Processing Units (GPUs) and freely available AI models, such as NVIDIA's FourCastNetv2. FourCastNetv2 is an NVIDIA's advanced neural network for weather prediction and is trained on a 73-channel subset of the European Centre for Medium-Range Weather Forecasts (ECMWF) Reanalysis v5 (ERA5) dataset at single levels and different pressure levels. Although the training specifications for FourCastNetv2 are not released to the public, the training documentation of the model's first generation, FourCastNet, is available to all users. The training had 64 A100 GPUs and took 16 hours to complete. Although NVIDIA's models offer significant reductions in both time and cost compared to traditional Numerical Weather Prediction (NWP), reproducing published forecasting results presents ongoing challenges for resource-constrained university research groups with limited GPU availability. We demonstrate both (i) leveraging FourCastNetv2 to create predictions through the designated application programming interface (API) and (ii) utilizing NVIDIA hardware to train the original FourCastNet model. Further, this paper demonstrates the capabilities and limitations of NVIDIA A100's for resource-limited research groups in universities. We also explore data management, training efficiency, and model validation, highlighting the advantages and challenges of using limited high-performance computing resources. Consequently, this paper and its corresponding GitHub materials may serve as an initial guide for other university research groups and courses related to machine learning, climate science, and data science to develop research and education programs on AI weather forecasting, and hence help democratize the AI NWP in the digital economy.",
@@ -20318,7 +20340,7 @@
         "physics.comp-ph"
       ],
       "id": "2503.12554v2",
-      "page": 23,
+      "page": 24,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-03-16T15:50:25+00:00",
       "summary": "Metal-organic frameworks (MOFs) are porous materials composed of metal ions and organic linkers. Due to their chemical diversity, MOFs can support a broad range of applications in chemical separations. However, the vast amount of structural compositions encoded in crystallographic information files complicates application-oriented, computational screening and design. The existing crystallographic data, therefore, requires augmentation by simulated data so that suitable descriptors for machine-learning and quantum computing tasks become available. Here, we provide extensive simulation data augmentation for MOFs within the QMOF database. We have applied a tight-binding, lattice Hamiltonian and density functional theory to MOFs for performing electronic structure calculations. Specifically, we provide a tight-binding representation of 10,000 MOFs, and an Extended Hubbard model representation for a sub-set of 240 MOFs containing transition metals, where intra-site U and inter-site V parameters are computed self-consistently. The data supports computational workflows for identifying structure-property correlations that are needed for inverse material design. For validation and reuse, we have made the data available at https://dataverse.harvard.edu/dataverse/tbhubbard/.",
@@ -21302,7 +21324,7 @@
         "physics.chem-ph"
       ],
       "id": "2502.05970v1",
-      "page": 24,
+      "page": 25,
       "primary_category": "cs.LG",
       "published": "2025-02-09T17:37:36+00:00",
       "summary": "Discovery of high-performance materials and molecules requires identifying extremes with property values that fall outside the known distribution. Therefore, the ability to extrapolate to out-of-distribution (OOD) property values is critical for both solid-state materials and molecular design. Our objective is to train predictor models that extrapolate zero-shot to higher ranges than in the training data, given the chemical compositions of solids or molecular graphs and their property values. We propose using a transductive approach to OOD property prediction, achieving improvements in prediction accuracy. In particular, the True Positive Rate (TPR) of OOD classification of materials and molecules improved by 3x and 2.5x, respectively, and precision improved by 2x and 1.5x compared to non-transductive baselines. Our method leverages analogical input-target relations in the training and test sets, enabling generalization beyond the training target support, and can be applied to any other material and molecular tasks.",
@@ -22185,7 +22207,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2412.12753v3",
-      "page": 25,
+      "page": 26,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2024-12-17T10:18:17+00:00",
       "summary": "Understanding how the vibrational and thermal properties of solids are influenced by atomistic structural disorder is of fundamental scientific interest, and paramount to designing materials for next-generation energy technologies. While several studies indicate that structural disorder strongly influences the thermal conductivity, the fundamental physics governing the disorder-conductivity relation remains elusive. Here we show that order-of-magnitude, disorder-induced variations of conductivity in network solids can be predicted from a bond-network entropy, an atomistic structural descriptor that quantifies heterogeneity in the topology of the atomic-bond network. We employ the Wigner formulation of thermal transport to demonstrate the existence of a relation between the bond-network entropy, and observables such as smoothness of the vibrational density of states (VDOS) and macroscopic conductivity. We also show that the smoothing of the VDOS encodes information about the thermal resistance induced by disorder, and can be directly related to phenomenological models for phonon-disorder scattering based on the semiclassical Peierls-Boltzmann equation. Our findings rationalize the conductivity variations of disordered carbon polymorphs ranging from nanoporous electrodes to defective graphite used as a moderator in nuclear reactors.",
@@ -23222,7 +23244,7 @@
         "stat.ML"
       ],
       "id": "2410.23405v1",
-      "page": 26,
+      "page": 27,
       "primary_category": "cs.LG",
       "published": "2024-10-30T19:15:43+00:00",
       "summary": "Material discovery is a critical area of research with the potential to\nrevolutionize various fields, including carbon capture, renewable energy, and\nelectronics. However, the immense scale of the chemical space makes it\nchallenging to explore all possible materials experimentally. In this paper, we\nintroduce FlowLLM, a novel generative model that combines large language models\n(LLMs) and Riemannian flow matching (RFM) to design novel crystalline\nmaterials. FlowLLM first fine-tunes an LLM to learn an effective base\ndistribution of meta-stable crystals in a text representation. After converting\nto a graph representation, the RFM model takes samples from the LLM and\niteratively refines the coordinates and lattice parameters. Our approach\nsignificantly outperforms state-of-the-art methods, increasing the generation\nrate of stable materials by over three times and increasing the rate for\nstable, unique, and novel crystals by $\\sim50\\%$ - a huge improvement on a\ndifficult problem. Additionally, the crystals generated by FlowLLM are much\ncloser to their relaxed state when compared with another leading model,\nsignificantly reducing post-hoc computational cost.",
@@ -24066,7 +24088,7 @@
         "cs.LG"
       ],
       "id": "2408.13532v1",
-      "page": 27,
+      "page": 28,
       "primary_category": "cs.CE",
       "published": "2024-08-24T09:20:33+00:00",
       "summary": "Auxetic structures, known for their negative Poisson's ratio, exhibit\neffective elastic properties heavily influenced by their underlying structural\ngeometry and base material properties. While periodic homogenization of auxetic\nunit cells can be used to investigate these properties, it is computationally\nexpensive and limits design space exploration and inverse analysis. In this\npaper, surrogate models are developed for the real-time prediction of the\neffective elastic properties of auxetic unit cells with orthogonal voids of\ndifferent shapes. The unit cells feature orthogonal voids in four distinct\nshapes, including rectangular, diamond, oval, and peanut-shaped voids, each\ncharacterized by specific void diameters. The generated surrogate models accept\ngeometric parameters and the elastic properties of the base material as inputs\nto predict the effective elastic constants in real-time. This rapid evaluation\nenables a practical inverse analysis framework for obtaining the optimal design\nparameters that yield the desired effective response. The fast Fourier\ntransform (FFT)-based homogenization approach is adopted to efficiently\ngenerate data for developing the surrogate models, bypassing concerns about\nperiodic mesh generation and boundary conditions typically associated with the\nfinite element method (FEM). The performance of the generated surrogate models\nis rigorously examined through a train/test split methodology, a parametric\nstudy, and an inverse problem. Finally, a graphical user interface (GUI) is\ndeveloped, offering real-time prediction of the effective tangent stiffness and\nperforming inverse analysis to determine optimal geometric parameters.",
@@ -24936,7 +24958,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2406.17457v2",
-      "page": 28,
+      "page": 29,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2024-06-25T10:53:11+00:00",
       "summary": "Additively manufactured (AM) aluminum alloys with high strength and thermal\nstability have broad applications in turbine engines, vacuum pumps, heat\nexchangers, and many other industrial systems. Employing precipitates with an\nL1$_2$ structure to block dislocation motions is a widespread strategy to\nstrengthen aluminum. However, to achieve high strength, a high volume fraction\nof small precipitates is required, and these characteristics are generally\nmutually exclusive. Here, we show that for certain compositions of Al alloys,\nL1$_2$ phases initially precipitate as sub-micron metastable ternary phases\nunder the rapid solidification conditions of powder bed AM, yet the subsequent\nL1$_2$ phases that precipitate during heat treatment of the sample remain at\nthe nanoscale, imparting high strength. For strength to be retained at elevated\ntemperature, these nanoprecipitates must have low coarsening rates. To\ninversely design the composition of an alloy to have these target\nmicrostructural features, we used hybrid calculation of phase diagram\n(CALPHAD)-based integrated computational materials engineering (ICME) and\nBayesian optimization techniques. We tested our approach by designing an\nAl-Er-Zr-Y-Yb-Ni model alloy, and the selected composition was manufactured in\npowder form as AM feedstock. The strength of specimens manufactured via laser\npowder bed fusion (LPBF) from the designed composition is comparable to that of\nwrought Al 7075, yet without cracking that occurs upon LPBF of Al 7075. After\nhigh-temperature (400$^\\circ$C) aging the designed alloy is 50% stronger than\nthe strongest known benchmark printable Al alloy.",
@@ -25851,7 +25873,7 @@
         "cs.LG"
       ],
       "id": "2404.16292v1",
-      "page": 29,
+      "page": 30,
       "primary_category": "cs.GR",
       "published": "2024-04-25T02:23:11+00:00",
       "summary": "Procedural noise is a fundamental component of computer graphics pipelines,\noffering a flexible way to generate textures that exhibit \"natural\" random\nvariation. Many different types of noise exist, each produced by a separate\nalgorithm. In this paper, we present a single generative model which can learn\nto generate multiple types of noise as well as blend between them. In addition,\nit is capable of producing spatially-varying noise blends despite not having\naccess to such data for training. These features are enabled by training a\ndenoising diffusion model using a novel combination of data augmentation and\nnetwork conditioning techniques. Like procedural noise generators, the model's\nbehavior is controllable via interpretable parameters and a source of\nrandomness. We use our model to produce a variety of visually compelling noise\ntextures. We also present an application of our model to improving inverse\nprocedural material design; using our model in place of fixed-type noise nodes\nin a procedural material graph results in higher-fidelity material\nreconstructions without needing to know the type of noise in advance.",
@@ -26726,7 +26748,7 @@
         "cs.CY"
       ],
       "id": "2402.12702v2",
-      "page": 30,
+      "page": 31,
       "primary_category": "cs.AI",
       "published": "2024-02-20T03:59:27+00:00",
       "summary": "Generative Artificial Intelligence (AI) has shown tremendous prospects in all\naspects of technology, including design. However, due to its heavy demand on\nresources, it is usually trained on large computing infrastructure and often\nmade available as a cloud-based service. In this position paper, we consider\nthe potential, challenges, and promising approaches for generative AI for\ndesign on the edge, i.e., in resource-constrained settings where memory,\ncompute, energy (battery) and network connectivity may be limited. Adapting\ngenerative AI for such settings involves overcoming significant hurdles,\nprimarily in how to streamline complex models to function efficiently in\nlow-resource environments. This necessitates innovative approaches in model\ncompression, efficient algorithmic design, and perhaps even leveraging edge\ncomputing. The objective is to harness the power of generative AI in creating\nbespoke solutions for design problems, such as medical interventions, farm\nequipment maintenance, and educational material design, tailored to the unique\nconstraints and needs of remote areas. These efforts could democratize access\nto advanced technology and foster sustainable development, ensuring universal\naccessibility and environmental consideration of AI-driven design benefits.",
@@ -27585,7 +27607,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2312.04214v1",
-      "page": 31,
+      "page": 32,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2023-12-07T11:02:41+00:00",
       "summary": "The crystallographic texture of metallic materials is a key microstructural\nfeature that is responsible for the anisotropic behavior, e.g., important in\nforming operations. In materials science, crystallographic texture is commonly\ndescribed by the orientation distribution function, which is defined as the\nprobability density function of the orientations of the monocrystal grains\nconforming a polycrystalline material. For representing the orientation\ndistribution function, there are several approaches such as using generalized\nspherical harmonics, orientation histograms, and pole figure images . Measuring\ndistances between crystallographic textures is essential for any task that\nrequires assessing texture similarities, e.g. to guide forming processes.\nTherefore, we introduce novel distance measures based on (i) the Earth Movers\nDistance that takes into account local distance information encoded in\nhistogram-based texture representations and (ii) a distance measure based on\npole figure images. For this purpose, we evaluate and compare existing distance\nmeasures for selected use-cases. The present study gives insights into\nadvantages and drawbacks of using certain texture representations and distance\nmeasures with emphasis on applications in materials design and optimal process\ncontrol.",
@@ -28450,7 +28472,7 @@
         "physics.comp-ph"
       ],
       "id": "2310.00118v1",
-      "page": 32,
+      "page": 33,
       "primary_category": "physics.app-ph",
       "published": "2023-09-29T20:12:08+00:00",
       "summary": "We present a highly efficient workflow for designing semiconductor structures\nwith specific physical properties, which can be utilized for a range of\napplications, including photocatalytic water splitting. Our algorithm generates\ncandidate structures composed of earth-abundant elements that exhibit optimal\nlight-trapping, high efficiency in \\ce{H2} and/or \\ce{O2} production, and\nresistance to reduction and oxidation in aqueous media. To achieve this, we use\nan ionic translation model trained on the Inorganic Crystal Structure Database\n(ICSD) to predict over thirty thousand undiscovered semiconductor compositions.\nThese predictions are then screened for redox stability under Hydrogen\nEvolution Reaction (HER) or Oxygen Evolution Reaction (OER) conditions before\ngenerating thermodynamically stable crystal structures and calculating accurate\nband gap values for the compounds. Our approach results in the identification\nof dozens of promising semiconductor candidates with ideal properties for\nartificial photosynthesis, offering a significant advancement toward the\nconversion of sunlight into chemical fuels.",
@@ -29387,7 +29409,7 @@
         "cs.LG"
       ],
       "id": "2307.05378v1",
-      "page": 33,
+      "page": 34,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2023-06-14T23:06:36+00:00",
       "summary": "We introduce M$^2$Hub, a toolkit for advancing machine learning in materials\ndiscovery. Machine learning has achieved remarkable progress in modeling\nmolecular structures, especially biomolecules for drug discovery. However, the\ndevelopment of machine learning approaches for modeling materials structures\nlag behind, which is partly due to the lack of an integrated platform that\nenables access to diverse tasks for materials discovery. To bridge this gap,\nM$^2$Hub will enable easy access to materials discovery tasks, datasets,\nmachine learning methods, evaluations, and benchmark results that cover the\nentire workflow. Specifically, the first release of M$^2$Hub focuses on three\nkey stages in materials discovery: virtual screening, inverse design, and\nmolecular simulation, including 9 datasets that covers 6 types of materials\nwith 56 tasks across 8 types of material properties. We further provide 2\nsynthetic datasets for the purpose of generative tasks on materials. In\naddition to random data splits, we also provide 3 additional data partitions to\nreflect the real-world materials discovery scenarios. State-of-the-art machine\nlearning methods (including those are suitable for materials structures but\nnever compared in the literature) are benchmarked on representative tasks. Our\ncodes and library are publicly available at https://github.com/yuanqidu/M2Hub.",
@@ -30300,7 +30322,7 @@
         "cond-mat.str-el"
       ],
       "id": "2303.01966v2",
-      "page": 34,
+      "page": 35,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2023-03-03T14:36:04+00:00",
       "summary": "Band structure for a crystal generally consists of connected components in energy-momentum space, known as band complexes. Here, we explore a fundamental aspect regarding the maximal number of bands that can be accommodated in a single band complex. We show that in principle a band complex can have no finite upper bound for certain space groups. It means infinitely many bands can entangle together, forming a connected pattern stable against symmetry-preserving perturbations. This is demonstrated by our developed inductive construction procedure, through which a given band complex can always be grown into a larger one by gluing a basic building block to it. As a by-product, we demonstrate the existence of arbitrarily large accordion type band structures containing $N_C=4n$ bands, with $n\\in\\mathbb{N}$.",
@@ -31148,7 +31170,7 @@
         "cs.CE"
       ],
       "id": "2211.04453v1",
-      "page": 35,
+      "page": 36,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2022-10-26T10:00:43+00:00",
       "summary": "We extend the scope of our approach for unsupervised automated discovery of material laws (EUCLID) to the case of a material belonging to an unknown class of behavior. To this end, we leverage the theory of generalized standard materials, which encompasses a plethora of important constitutive classes. We show that, based only on full-field kinematic measurements and net reaction forces, EUCLID is able to automatically discover the two scalar thermodynamic potentials, namely, the Helmholtz free energy and the dissipation potential, which completely define the behavior of generalized standard materials. The a priori enforced constraint of convexity on these potentials guarantees by construction stability and thermodynamic consistency of the discovered model; balance of linear momentum acts as a fundamental constraint to replace the availability of stress-strain labeled pairs; sparsity promoting regularization enables the automatic selection of a small subset from a possibly large number of candidate model features and thus leads to a parsimonious, i.e., simple and interpretable, model. Importantly, since model features go hand in hand with the correspondingly active internal variables, sparse regression automatically induces a parsimonious selection of the few internal variables needed for an accurate but simple description of the material behavior. A fully automatic procedure leads to the selection of the hyperparameter controlling the weight of the sparsity promoting regularization term, in order to strike a user-defined balance between model accuracy and simplicity. By testing the method on synthetic data including artificial noise, we demonstrate that EUCLID is able to automatically discover the true hidden material model from a large catalog of constitutive classes, including elasticity, viscoelasticity, elastoplasticity, viscoplasticity, isotropic and kinematic hardening.",
@@ -32019,7 +32041,7 @@
         "stat.ML"
       ],
       "id": "2205.14208v3",
-      "page": 36,
+      "page": 37,
       "primary_category": "cs.LG",
       "published": "2022-05-27T19:29:24+00:00",
       "summary": "Modern advanced manufacturing and advanced materials design often require\nsearches of relatively high-dimensional process control parameter spaces for\nsettings that result in optimal structure, property, and performance\nparameters. The mapping from the former to the latter must be determined from\nnoisy experiments or from expensive simulations. We abstract this problem to a\nmathematical framework in which an unknown function from a control space to a\ndesign space must be ascertained by means of expensive noisy measurements,\nwhich locate optimal control settings generating desired design features within\nspecified tolerances, with quantified uncertainty. We describe targeted\nadaptive design (TAD), a new algorithm that performs this sampling task\nefficiently. TAD creates a Gaussian process surrogate model of the unknown\nmapping at each iterative stage, proposing a new batch of control settings to\nsample experimentally and optimizing the updated log-predictive likelihood of\nthe target design. TAD either stops upon locating a solution with uncertainties\nthat fit inside the tolerance box or uses a measure of expected future\ninformation to determine that the search space has been exhausted with no\nsolution. TAD thus embodies the exploration-exploitation tension in a manner\nthat recalls, but is essentially different from, Bayesian optimization and\noptimal experimental design.",
@@ -32873,7 +32895,7 @@
         "cond-mat.mes-hall"
       ],
       "id": "2201.07569v1",
-      "page": 37,
+      "page": 38,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2022-01-19T12:49:52+00:00",
       "summary": "Understanding ferroelectricity is of both fundamental and technological\nimportance to further stimulate the development of new materials designs and\nmanipulations. Here, we perform an in-depth first-principle study on the\nwell-known ferroelectric barium titanate BaTiO$_{3}$ under a hydrostatic\nnegative pressure, showing an isosymmetric phase transition to a\nsupertetragonal phase with high $c/a$ ratio of $\\sim1.3$. The microscopic\norigin and driving mechanisms of this phase transition are identified as a\ndrastic change of the covalently $\\pi$-bonded electrons. These findings provide\nguidance in the search for new supertetragonal phases, with great opportunities\nfor novel multiferroic materials; and can be generalized in the understanding\nof other isosymmetric phase transitions.",
@@ -33720,7 +33742,7 @@
         "cs.AI"
       ],
       "id": "2108.08500v3",
-      "page": 38,
+      "page": 39,
       "primary_category": "cs.LG",
       "published": "2021-08-19T05:00:08+00:00",
       "summary": "The inverse approach is computationally efficient in aerodynamic design as\nthe desired target performance distribution is prespecified. However, it has\nsome significant limitations that prevent it from achieving full efficiency.\nFirst, the iterative procedure should be repeated whenever the specified target\ndistribution changes. Target distribution optimization can be performed to\nclarify the ambiguity in specifying this distribution, but several additional\nproblems arise in this process such as loss of the representation capacity due\nto parameterization of the distribution, excessive constraints for a realistic\ndistribution, inaccuracy of quantities of interest due to theoretical/empirical\npredictions, and the impossibility of explicitly imposing geometric\nconstraints. To deal with these issues, a novel inverse design optimization\nframework with a two-step deep learning approach is proposed. A variational\nautoencoder and multi-layer perceptron are used to generate a realistic target\ndistribution and predict the quantities of interest and shape parameters from\nthe generated distribution, respectively. Then, target distribution\noptimization is performed as the inverse design optimization. The proposed\nframework applies active learning and transfer learning techniques to improve\naccuracy and efficiency. Finally, the framework is validated through\naerodynamic shape optimizations of the wind turbine airfoil. Their results show\nthat this framework is accurate, efficient, and flexible to be applied to other\ninverse design engineering applications.",
@@ -34628,7 +34650,7 @@
         "cond-mat.str-el"
       ],
       "id": "2103.01467v1",
-      "page": 39,
+      "page": 40,
       "primary_category": "physics.app-ph",
       "published": "2021-03-02T04:38:05+00:00",
       "summary": "A large transverse thermoelectric response, known as anomalous Nernst effect (ANE) has been recently observed in several topological magnets. Building a thermopile employing this effect has been the subject of several recent propositions. Here, we design and build a thermopile with an array of tilted adjacent crystals of Mn$_3$Sn. The design employs a single material and replaces pairs of P and N thermocouples of the traditional design with hermaphroditic legs. The design exploits the large lag angle between the applied field and the magnetization, which we attribute to the interruption of magnetic octupoles at the edge of $xy$-plane. Eliminating extrinsic contacts between legs will boost the efficiency, simplify the process and pave the way for a new generation of thermopiles.",
@@ -35518,7 +35540,7 @@
         "stat.ML"
       ],
       "id": "2006.15274v2",
-      "page": 40,
+      "page": 41,
       "primary_category": "cs.CE",
       "published": "2020-06-27T03:56:55+00:00",
       "summary": "Metamaterials are emerging as a new paradigmatic material system to render unprecedented and tailorable properties for a wide variety of engineering applications. However, the inverse design of metamaterial and its multiscale system is challenging due to high-dimensional topological design space, multiple local optima, and high computational cost. To address these hurdles, we propose a novel data-driven metamaterial design framework based on deep generative modeling. A variational autoencoder (VAE) and a regressor for property prediction are simultaneously trained on a large metamaterial database to map complex microstructures into a low-dimensional, continuous, and organized latent space. We show in this study that the latent space of VAE provides a distance metric to measure shape similarity, enable interpolation between microstructures and encode meaningful patterns of variation in geometries and properties. Based on these insights, systematic data-driven methods are proposed for the design of microstructure, graded family, and multiscale system. For microstructure design, the tuning of mechanical properties and complex manipulations of microstructures are easily achieved by simple vector operations in the latent space. The vector operation is further extended to generate metamaterial families with a controlled gradation of mechanical properties by searching on a constructed graph model. For multiscale metamaterial systems design, a diverse set of microstructures can be rapidly generated using VAE for target properties at different locations and then assembled by an efficient graph-based optimization method to ensure compatibility between adjacent microstructures. We demonstrate our framework by designing both functionally graded and heterogeneous metamaterial systems that achieve desired distortion behaviors.",
@@ -36412,7 +36434,7 @@
         "cs.LG"
       ],
       "id": "1907.09314v1",
-      "page": 41,
+      "page": 42,
       "primary_category": "physics.comp-ph",
       "published": "2019-07-19T09:07:09+00:00",
       "summary": "The model presented in this research predicts ideal chiral crystal and propose a new direction of designing chiral crystals. Skyrmions are topologically protected and structurally assymetric materials with an exotic spin composition. This work presents deep learning method for skyrmion material design of chiral crystals. This paper presents an approach to construct a probabilistic classifier and an Artificial Neural Network(ANN) from a true or false chirality dataset consisting of chiral and achiral compounds with 'A' and 'B' type elements. A quantitative predictor for accuracy of forming the chiral crystals is illustrated. The feasibility of ANN method is tested in a comprehensive manner by comparing with probalistic classifier method. Throughout this manuscript we present deep learnig algorithm design with modelling and simulations of materials. This research work elucidated paves a way to develop sophisticated software tool to make an indicator of crystal design.",
@@ -37277,7 +37299,7 @@
         "cs.LG"
       ],
       "id": "1807.03404v2",
-      "page": 42,
+      "page": 43,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2018-07-09T22:06:04+00:00",
       "summary": "The combination of high throughput computation and machine learning has led to a new paradigm in materials design by allowing for the direct screening of vast portions of structural, chemical, and property space. The use of these powerful techniques leads to the generation of enormous amounts of data, which in turn calls for new techniques to efficiently explore and visualize the materials space to help identify underlying patterns. In this work, we develop a unified framework to hierarchically visualize the compositional and structural similarities between materials in an arbitrary material space with representations learned from different layers of graph convolutional neural networks. We demonstrate the potential for such a visualization approach by showing that patterns emerge automatically that reflect similarities at different scales in three representative classes of materials: perovskites, elemental boron, and general inorganic crystals, covering material spaces of different compositions, structures, and both. For perovskites, elemental similarities are learned that reflects multiple aspects of atom properties. For elemental boron, structural motifs emerge automatically showing characteristic boron local environments. For inorganic crystals, the similarity and stability of local coordination environments are shown combining different center and neighbor atoms. The method could help transition to a data-centered exploration of materials space in automated materials design.",
@@ -38119,7 +38141,7 @@
         "physics.comp-ph"
       ],
       "id": "1601.04647v1",
-      "page": 43,
+      "page": 44,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2016-01-18T18:33:49+00:00",
       "summary": "Recent advances in theoretical structure prediction methods and high-throughput computational techniques are revolutionizing experimental discovery of the thermodynamically stable inorganic materials. Metastable materials represent a new frontier for studies, since even simple binary non ground state compounds of common elements may be awaiting discovery. However, there are significant research challenges related to non-equilibrium thin film synthesis and crystal structure predictions, such as small strained crystals in the experimental samples and energy minimization based theoretical algorithms. Here we report on experimental synthesis and characterization, as well as theoretical first-principles calculations of a previously unreported mixed-valent binary tin nitride. Thin film experiments indicate that this novel material is N-deficient SnN with tin in the mixed II/IV valence state and a small low-symmetry unit cell. Theoretical calculations suggest that the most likely crystal structure has the space group 2 (SG2) related to the distorted delafossite (SG166), which is nearly 0.1 eV/atom above the ground state SnN polymorph. This observation is rationalized by the structural similarity of the SnN distorted delafossite to the chemically related Sn3N4 spinel compound, which provides a fresh scientific insight into the reasons for growth of polymorphs of the metastable material. In addition to reporting on the discovery of the simple binary SnN compound, this paper illustrates a possible way of combining a wide range of advanced characterization techniques with the first-principle property calculation methods, to elucidate the most likely crystal structure of the previously unreported metastable materials.",
@@ -38637,5 +38659,5 @@
       "title": "Simulation of structural phase transitions by metadynamics"
     }
   ],
-  "total": 1745
+  "total": 1746
 }

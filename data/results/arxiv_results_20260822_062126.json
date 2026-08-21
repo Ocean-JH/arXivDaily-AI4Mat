@@ -1,0 +1,31 @@
+[
+  {
+    "authors": [
+      "Can Polat",
+      "Mustafa Kurban",
+      "Erchin Serpedin",
+      "Hasan Kurban"
+    ],
+    "base_id": "2607.17417",
+    "categories": [
+      "cs.LG",
+      "physics.chem-ph",
+      "physics.comp-ph",
+      "quant-ph"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2607.17417v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2607.17417v2",
+    "primary_category": "cs.LG",
+    "published": "2026-07-19T21:44:47+00:00",
+    "short_id": "2607.17417v2",
+    "status": "new",
+    "summary": "Language models are moving into chemistry and materials discovery workflows, where a wrong molecular formula, space group, or formation energy can silently propagate into downstream decisions. These confabulations hide inside fluent reasoning traces and concentrate on rare, long-tail entities, where model confidence is least trustworthy. Retrieving reference data for every prompt would catch them, but at a heavy coverage and abstention cost. We show that deterministic, database-grounded verification catches and repairs these errors selectively, and that the binding constraint is detection rather than repair. Our tiered verifier extracts each checkable claim, tests it against authoritative databases and physical law, and retrieves a reference value only when a check fails. Across four models and over five hundred prompts with pinned conditions, gated correction cuts the error rate of committed formulas from 22% to 4% with 3.2 times fewer retrievals than blanket augmentation, and it outperforms a conversational retrieval oracle when every answer, corrected or not, is scored. When a flag fires, repair almost always succeeds; the benefit reaches the final answer only where the verifier's scope covers it and where long-tail error exists. Checkable claims, checked cheaply, are a practical lever for trustworthy machine reasoning in chemistry.",
+    "title": "Grounded verification of chemical and materials reasoning: detection is the bottleneck",
+    "updated": "2026-08-20T02:44:43+00:00",
+    "url": "https://arxiv.org/abs/2607.17417v2",
+    "version": 2
+  }
+]

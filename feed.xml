@@ -5,7 +5,7 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Aug 2026 06:20:07 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 06:21:26 +0800</lastBuildDate>
     <item>
       <title>First-Principles Prediction of Phonon-Mediated Infrared Optical Properties of WO$_3$ Polymorphs</title>
       <link>https://arxiv.org/abs/2608.16113v1</link>
@@ -167,6 +167,13 @@
       <guid isPermaLink="true">https://arxiv.org/abs/2607.17910v1</guid>
       <pubDate>Mon, 20 Jul 2026 13:06:54 +0000</pubDate>
       <description>Generative artificial intelligence is rapidly transforming materials design by enabling de novo exploration of immense chemical spaces. Yet a large proportion of AI-generated compositions remain implausible, violating established chemical principles, which limits the reliability and interpretability of generative materials design. Here, we introduce a chemical validity operator that recasts heuristic chemical rules as a configurable algorithmic prior for evaluating and guiding generative materials discovery. Built on the open-source SMACT package, a data-informed oxidation-state model exposes tunable thresholds, allowing users to interpolate continuously between permissive and conservative chemical constraints, while supporting both exploratory and conservative materials-design workflows. Benchmarking six state-of-the-art generative models for inorganic crystals shows that most reproduce stoichiometry but under-represent realistic oxidation-state combinations, and that filtering removes compositions reliant on rarely observed oxidation states while preserving low-energy compounds near the convex hull. Beyond screening, the same operator can also serve as a reinforcement-learning reward, steering a latent diffusion model towards chemically grounded compositions. By encoding chemical heuristics and observations, this work establishes a foundation for oxidation-state-aware generative models.</description>
+    </item>
+    <item>
+      <title>Grounded verification of chemical and materials reasoning: detection is the bottleneck</title>
+      <link>https://arxiv.org/abs/2607.17417v2</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2607.17417v2</guid>
+      <pubDate>Sun, 19 Jul 2026 21:44:47 +0000</pubDate>
+      <description>Language models are moving into chemistry and materials discovery workflows, where a wrong molecular formula, space group, or formation energy can silently propagate into downstream decisions. These confabulations hide inside fluent reasoning traces and concentrate on rare, long-tail entities, where model confidence is least trustworthy. Retrieving reference data for every prompt would catch them, but at a heavy coverage and abstention cost. We show that deterministic, database-grounded verification catches and repairs these errors selectively, and that the binding constraint is detection rather than repair. Our tiered verifier extracts each checkable claim, tests it against authoritative databases and physical law, and retrieves a reference value only when a check fails. Across four models and over five hundred prompts with pinned conditions, gated correction cuts the error rate of committed formulas from 22% to 4% with 3.2 times fewer retrievals than blanket augmentation, and it outperforms a conversational retrieval oracle when every answer, corrected or not, is scored. When a flag fires, repair almost always succeeds; the benefit reaches the final answer only where the verifier's scope covers it and where long-tail error exists. Checkable claims, checked cheaply, are a practical lever for trustworthy machine reasoning in chemistry.</description>
     </item>
     <item>
       <title>Symbolic Predicate-Guided Language Agents for Inverse Design of Perovskite Oxides</title>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://arxiv.org/abs/2606.28578v1</guid>
       <pubDate>Fri, 26 Jun 2026 20:10:01 +0000</pubDate>
       <description>Closed-loop materials discovery iterates between proposing candidate structures and evaluating their properties, and property evaluation dominates the cost. In the generative variant, a learned prior proposes candidate crystals and a property oracle scores them; we ask whether a cheap probabilistic surrogate can triage the generator's output, and what such a surrogate must do well. Across three architecturally distinct pretrained diffusion priors (MatterGen, CrystalFlow, ADiT) and two targets (room-temperature heat capacity and bulk modulus), we insert a Gaussian process acquisition gate between structure generation and the oracle in an RL-steered generative workflow. The gate matches or exceeds ungated fine-tuning of the generative model while capping oracle calls at a fixed per-cycle budget. Budget-matched ablations isolate the mechanism. At an identical four-call budget, ranking-based selection outperforms arbitrary selection, confirming that the gain comes from the surrogate's choice; the gate comes within $\sim$9\% of exhaustive oracle spending at roughly one-fifth of the calls. A density-functional-theory check of the bulk-modulus discoveries confirms the learned oracle to within 2.5\% on average and the surrogate's ranking of the generated structures at Spearman $ρ= 0.94$. A cross-factorial benchmark of surrogate performance spanning mechanical, electronic, and vibrational properties identifies pretrained ORB embeddings with a Gaussian process as the most reliable combination, which we adopt as the building blocks of the proposed workflow. The complete pipeline is released as open-source software.</description>
-    </item>
-    <item>
-      <title>Physics-constrained neural networks for surrogate modeling of lossless periodic structures</title>
-      <link>https://arxiv.org/abs/2606.28119v1</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2606.28119v1</guid>
-      <pubDate>Fri, 26 Jun 2026 14:19:41 +0000</pubDate>
-      <description>We introduce a physics-constrained neural network (PCNN) for the rapid prediction of rigorous coupled-wave analysis (RCWA) outputs in the form of Jones matrices. Starting from energy conservation in lossless layered periodic structures, we use the fact that RCWA outputs lie on a Stiefel manifold. This energy constraint is enforced as a hard condition by projecting onto the manifold using differentiable symmetric orthogonalization. The resulting surrogate enforces energy conservation by construction while preserving differentiability for gradient-based inverse design. The performance and generality of the proposed approach are demonstrated through the inverse design of a diffractive waveguide combiner for augmented reality glasses.</description>
     </item>
   </channel>
 </rss>

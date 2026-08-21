@@ -111,25 +111,23 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (1)
+## New Papers (1)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-08-22 06:21:26 (SGT)*
 
-*Last checked: 2026-08-21 06:24:13 (SGT)*
+### 1. Grounded verification of chemical and materials reasoning: detection is the bottleneck
 
-### 1. First-Principles Prediction of Phonon-Mediated Infrared Optical Properties of WO$_3$ Polymorphs
+**Authors:** Can Polat, Mustafa Kurban, Erchin Serpedin, Hasan Kurban
 
-**Authors:** Sreerag Sundaram, Karthik Sasihithlu
+**Published:** 2026-07-19
 
-**Published:** 2026-08-17
+**Category:** cs.LG
 
-**Category:** cond-mat.mtrl-sci
+**ID:** 2607.17417v2
 
-**ID:** 2608.16113v1
+**Link:** [https://arxiv.org/abs/2607.17417v2](https://arxiv.org/abs/2607.17417v2)
 
-**Link:** [https://arxiv.org/abs/2608.16113v1](https://arxiv.org/abs/2608.16113v1)
-
-**Summary:** Many crystals exhibit polymorphism, undergoing atomic rearrangements that result in unit cells belonging to different symmetry groups. These structural changes directly affect lattice vibration modes and consequently influence their mid-infrared optical properties. In this study, we use tungsten trioxide (WO$_3$) as a representative system, owing to its multiple temperature-dependent phases, to study the impact of polymorphism on mid-infrared optical behaviour. Using a fully first-principles approach, we investigate three phases of WO$_3$ and evaluate their mid-infrared optical properties. Significant differences are observed among the three crystallographic phases, demonstrating the potential of this methodology as a predictive tool for materials discovery and targeted design.
+**Summary:** Language models are moving into chemistry and materials discovery workflows, where a wrong molecular formula, space group, or formation energy can silently propagate into downstream decisions. These confabulations hide inside fluent reasoning traces and concentrate on rare, long-tail entities, where model confidence is least trustworthy. Retrieving reference data for every prompt would catch them, but at a heavy coverage and abstention cost. We show that deterministic, database-grounded verification catches and repairs these errors selectively, and that the binding constraint is detection rather than repair. Our tiered verifier extracts each checkable claim, tests it against authoritative databases and physical law, and retrieves a reference value only when a check fails. Across four models and over five hundred prompts with pinned conditions, gated correction cuts the error rate of committed formulas from 22% to 4% with 3.2 times fewer retrievals than blanket augmentation, and it outperforms a conversational retrieval oracle when every answer, corrected or not, is scored. When a flag fires, repair almost always succeeds; the benefit reaches the final answer only where the verifier's scope covers it and where long-tail error exists. Checkable claims, checked cheaply, are a practical lever for trustworthy machine reasoning in chemistry.
 
 ---
 
