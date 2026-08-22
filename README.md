@@ -111,9 +111,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## Latest Papers (1)
 
-*Last checked: 2026-08-22 06:21:26 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-08-23 06:19:02 (SGT)*
 
 ### 1. Grounded verification of chemical and materials reasoning: detection is the bottleneck
 
