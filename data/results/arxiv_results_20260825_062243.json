@@ -1,0 +1,31 @@
+[
+  {
+    "authors": [
+      "Anand Babu",
+      "Rogério Almeida Gouvêa",
+      "Gian-Marco Rignanese"
+    ],
+    "base_id": "2606.02507",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.ET",
+      "cs.LG",
+      "physics.app-ph",
+      "physics.comp-ph"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2606.02507v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2606.02507v2",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-06-01T17:20:55+00:00",
+    "short_id": "2606.02507v2",
+    "status": "update",
+    "summary": "Inverse materials design is shifting materials discovery from forward prediction toward targeted proposal of candidates that satisfy objectives under physical constraints. Here, we review advances in generative crystal structure modeling, multimodal learning, and closed-loop design pipelines for crystalline solids. We survey how generators learn chemical-structural priors from databases to enable controllable sampling of periodic structures, comparing variational autoencoders, normalizing flows, autoregressive models, and diffusion models. Across these families, we examine where feasibility constraints and physical priors enter, from representations and training objectives to sampling-time guidance, screening, and relaxation. We also discuss multimodal learning combining crystal structures, thermodynamic and electronic information, microscopy, spectroscopy, processing context, and scientific text to construct materials representations. Inverse-design strategies integrating conditional generation with latent optimization, Bayesian optimization, reinforcement learning, and active learning are also examined. We highlight recurring failure modes, including surrogate exploitation, diversity collapse, distribution shift, and the stability-synthesizability gap, and outline evaluation based on validity, novelty, uniqueness, stability, and cost. To support credible claims, we define a nine-rung discovery-credibility ladder and propose a minimum reporting standard: declared matching tolerances and database snapshots; separate reporting of uniqueness, training-set memorization, and external rediscovery; novelty as a continuous distance distribution; energy-above-hull distributions with functional and hull version; relaxation-survival and dynamical stability rates; and validation cost per credible hit. Headline validity or S.U.N. rates without these disclosures should be treated as uninformative.",
+    "title": "Towards Automated Discovery: A Review of Generative Models, Multimodal Learning and Closed-Loop Workflows in Inverse Materials Design",
+    "updated": "2026-08-21T12:16:45+00:00",
+    "url": "https://arxiv.org/abs/2606.02507v2",
+    "version": 2
+  }
+]
