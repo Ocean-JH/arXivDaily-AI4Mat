@@ -111,9 +111,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## Latest Papers (1)
 
-*Last checked: 2026-08-25 06:22:43 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-08-26 06:23:55 (SGT)*
 
 ### 1. Towards Automated Discovery: A Review of Generative Models, Multimodal Learning and Closed-Loop Workflows in Inverse Materials Design
 
