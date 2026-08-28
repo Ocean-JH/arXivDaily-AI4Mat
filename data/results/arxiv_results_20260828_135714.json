@@ -1,0 +1,28 @@
+[
+  {
+    "authors": [
+      "Nayoung Kim",
+      "Kiyoung Seong",
+      "Sungsoo Ahn"
+    ],
+    "base_id": "2608.26962",
+    "categories": [
+      "cs.LG",
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": "37 pages, 21 figures",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2608.26962v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2608.26962v1",
+    "primary_category": "cs.LG",
+    "published": "2026-08-27T11:01:18+00:00",
+    "short_id": "2608.26962v1",
+    "status": "new",
+    "summary": "Molecular crystal structure prediction (CSP) is important in pharmaceuticals, agrochemicals, and organic electronics, where subtle differences in molecular conformation and packing can strongly affect material properties. We present Packora, a flow-based generative model for molecular CSP that jointly predicts atomic coordinates and the lattice from molecular graphs. Packora supports multi-component and organometallic crystals and can condition on any subset of molecular conformers, stereochemical labels, and space-group information within a single model. Inspired by the CCDC CSP blind test, we evaluate generation and ranking separately, using generation to isolate generator quality and ranking to measure end-to-end performance under a common relaxation and ranking pipeline. We also systematically study architecture, training, conditioning, inference, and scaling, identifying an effective design based on cacheable pairwise reasoning, training objective and numerical solver choices, conditioning dropout, and balanced scaling of pairwise and single representations. Packora outperforms the baselines on both structure generation and ranking benchmarks, achieving the best matched-budget coverage across all six generation benchmarks, as well as higher experimental-form recovery, lower experimental-form ranks, and faster convergence in ranking.",
+    "title": "Packora: Systematic Design for Generative Molecular Crystal Structure Prediction",
+    "updated": "2026-08-27T11:01:18+00:00",
+    "url": "https://arxiv.org/abs/2608.26962v1",
+    "version": 1
+  }
+]

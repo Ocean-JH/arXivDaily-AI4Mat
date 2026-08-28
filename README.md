@@ -111,39 +111,23 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (2)
+## New Papers (1)
 
-*Last checked: 2026-08-27 10:54:36 (SGT)*
+*Last checked: 2026-08-28 13:57:14 (SGT)*
 
-### 1. Inverse Design of Inorganic Compounds with Generative AI
+### 1. Packora: Systematic Design for Generative Molecular Crystal Structure Prediction
 
-**Authors:** Hannes Kneiding, Lucía Morán-González, Nishamol Kuriakose, Ainara Nova, David Balcells
+**Authors:** Nayoung Kim, Kiyoung Seong, Sungsoo Ahn
 
-**Published:** 2026-04-11
+**Published:** 2026-08-27
 
-**Category:** physics.chem-ph
+**Category:** cs.LG
 
-**ID:** 2604.11827v3
+**ID:** 2608.26962v1
 
-**Link:** [https://arxiv.org/abs/2604.11827v3](https://arxiv.org/abs/2604.11827v3)
+**Link:** [https://arxiv.org/abs/2608.26962v1](https://arxiv.org/abs/2608.26962v1)
 
-**Summary:** Machine learning is revolutionizing chemistry. Beyond the value of predictive models accelerating virtual screening, generative AI aims at enabling inverse design, reversing the compound-to-property prediction paradigm into property-to-compound generation. Chemists now have access to a rich AI toolbox for organic chemistry, including drug discovery. However, the application of these methods to inorganic compounds remains limited by the challenges posed by their intrinsic nature. This Review analyzes how these challenges have been addressed, considering widely diverse systems ranging from molecules to crystals, including transition metal complexes and microporous materials. The analysis focuses on how generative AI methods have evolved towards data-representation-model pipelines that address the full complexity of inorganic compounds, including their chemical composition, geometry, symmetry, and electronic structure. Future directions, like benchmark standardization and the development of synthesizability metrics, are also discussed.
-
----
-
-### 2. Interpretable physics-informed retrieval-augmented generation language model for end-to-end inorganic crystal synthesis planning
-
-**Authors:** Wei-Jian Jiang, Ye-Nan Sha, Hui Guo, Jie Chen, Yu-Cai Liang, Ke Zhou, Qi-Long Gao, Dong-Lin Han, Xin-Gao Gong, Wan-Jian Yin
-
-**Published:** 2026-08-26
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2608.25392v1
-
-**Link:** [https://arxiv.org/abs/2608.25392v1](https://arxiv.org/abs/2608.25392v1)
-
-**Summary:** Synthesis planning for inorganic materials requires predicting both synthesizability and viable routes by linking microscopic thermodynamic stability with macroscopic synthesis methods, precursors, and processing conditions. Here, we develop an interpretable Physics-Informed Retrieval-Augmented Generation Language Model (PIRAG-LM) for end-to-end inorganic crystal synthesis planning. We construct a material-centered Structured Synthesis Knowledge Base (SSKB) containing route-level records for 13,820 experimentally synthesized inorganic crystals. PIRAG-LM retrieves historical precedents using chemical, structural, and thermodynamic similarity, then employs a structured LLM reasoning module to propose routes, precursors, and processing conditions and assess thermodynamic feasibility, kinetics, and accessibility. It achieves 91.4% accuracy in synthesis-method prediction, compared with 72.1% for the LLM alone, and generalizes to materials reported after the knowledge cutoff. Because the framework relies on retrieval rather than parametric memorization, its performance can be improved by expanding the SSKB without retraining the language model. Guided by PIRAG-LM, we experimentally synthesize five new compounds: BaMo0.3In0.7O2.95, BaNb0.4In0.6O2.9, Hg[B(CN)4]2, CoCo(CN)6, and SrNb2Fe2(PO4)6, via solid-state and solution routes. These results demonstrate an interpretable machine-learning approach that helps bridge computational materials discovery and experimental realization.
+**Summary:** Molecular crystal structure prediction (CSP) is important in pharmaceuticals, agrochemicals, and organic electronics, where subtle differences in molecular conformation and packing can strongly affect material properties. We present Packora, a flow-based generative model for molecular CSP that jointly predicts atomic coordinates and the lattice from molecular graphs. Packora supports multi-component and organometallic crystals and can condition on any subset of molecular conformers, stereochemical labels, and space-group information within a single model. Inspired by the CCDC CSP blind test, we evaluate generation and ranking separately, using generation to isolate generator quality and ranking to measure end-to-end performance under a common relaxation and ranking pipeline. We also systematically study architecture, training, conditioning, inference, and scaling, identifying an effective design based on cacheable pairwise reasoning, training objective and numerical solver choices, conditioning dropout, and balanced scaling of pairwise and single representations. Packora outperforms the baselines on both structure generation and ranking benchmarks, achieving the best matched-budget coverage across all six generation benchmarks, as well as higher experimental-form recovery, lower experimental-form ranks, and faster convergence in ranking.
 
 ---
 
