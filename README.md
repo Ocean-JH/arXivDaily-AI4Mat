@@ -111,9 +111,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## Latest Papers (1)
 
-*Last checked: 2026-08-28 13:57:14 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-08-29 11:29:40 (SGT)*
 
 ### 1. Packora: Systematic Design for Generative Molecular Crystal Structure Prediction
 
