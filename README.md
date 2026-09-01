@@ -111,9 +111,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## Latest Papers (1)
 
-*Last checked: 2026-09-01 08:58:32 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-09-02 07:47:09 (SGT)*
 
 ### 1. ED-CSP: Crystal Structure Prediction from Electron Diffraction
 
