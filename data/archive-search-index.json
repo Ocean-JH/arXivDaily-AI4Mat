@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T13:57:14+08:00",
+  "generated_at": "2026-09-01T08:58:32.248251+08:00",
   "papers": [
     {
       "anchor": "paper-2608.26962",
@@ -153,15 +153,15 @@
       "anchor": "paper-2608.06448",
       "authors": [
         "Germain Poloudenny",
-        "Yaël Frégier",
-        "Arnaud Demortière"
+        "Arnaud Demortière",
+        "Yaël Frégier"
       ],
       "base_id": "2608.06448",
       "categories": [
         "cs.LG",
         "cs.AI"
       ],
-      "id": "2608.06448v2",
+      "id": "2608.06448v3",
       "page": 1,
       "primary_category": "cs.LG",
       "published": "2026-08-06T16:55:20+00:00",
