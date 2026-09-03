@@ -111,9 +111,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (2)
+## Latest Papers (2)
 
-*Last checked: 2026-09-03 07:51:33 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-09-04 07:48:14 (SGT)*
 
 ### 1. Autonomous discovery of new structure-plausibility laws for explainable and rapid crystal diagnosis and screening
 
