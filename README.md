@@ -111,41 +111,23 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (2)
+## New Papers (1)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-09-09 07:49:43 (SGT)*
 
-*Last checked: 2026-09-07 07:28:28 (SGT)*
+### 1. GEWUM: General Exploration Workflow for the Utopia of Materials: A Unified Platform for Automated Structure Generation, Selection, and Validation
 
-### 1. Autonomous discovery of new structure-plausibility laws for explainable and rapid crystal diagnosis and screening
+**Authors:** Jiexi Song, Aixian She, Changpeng Song, Diwei Shi, Fengyuan Xuan, Chongde Cao
 
-**Authors:** Zhilong Song, Lixue Cheng
-
-**Published:** 2026-09-01
+**Published:** 2026-04-23
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2609.01209v1
+**ID:** 2604.21401v2
 
-**Link:** [https://arxiv.org/abs/2609.01209v1](https://arxiv.org/abs/2609.01209v1)
+**Link:** [https://arxiv.org/abs/2604.21401v2](https://arxiv.org/abs/2604.21401v2)
 
-**Summary:** Crystal generators and tool-using agents propose structures faster than density functional theory (DFT) energy and phonon calculations or experiments can assess them. Deciding which candidates merit expensive assessment is therefore the bottleneck, yet most screens test little beyond atomic overlap and give no chemical reason for failure. Here, our agents generate, test and actively refute two million candidate laws, leaving eight Plausibility Rules for Inorganic Structures (PRIS). These laws encode five mechanisms: short-range repulsion, ionic contact and packing, electrostatic balance, bond-valence conservation and crystallographic site complexity. Experimental structures satisfy our law sets at 82--99%, but satisfy Pauling's rules 2--5 together at only 6.5%. The strictest set detects 87.9% of damaged crystal structures, whereas distance cutoffs detect only 1.6--3.2%. PRIS plausibility is linearly correlated with synthesizability, so the PRIS-derived synthesis score (PSS) explainably screens 83.7% of hard-to-synthesize structures while retaining 80.7% of experimental structures. In a property-conditioned inverse-design run, PRIS and PSS can reduce the DFT validation queue by up to 67.3% and keep 99.2% of the candidates whose DFT-validated bulk moduli reach the design target. Beyond screening, PRIS explains why GNoME remains enriched in rare low-symmetry structures and reveals how wrong-element assignments in falsified crystal reports hide behind plausible coordinates. PRIS moves screening from a pass-or-fail verdict to a chemical reason for failure, showing that autonomous agents can discover, by active refutation, physicochemical laws that guide calculations and experiments.
-
----
-
-### 2. Fourier Neural Operators for Composition-Driven Crystal Structure Discovery
-
-**Authors:** Zhijie Yu, Jingyu Li, Yang Huang, Jingrun Chen
-
-**Published:** 2026-09-01
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2609.00900v1
-
-**Link:** [https://arxiv.org/abs/2609.00900v1](https://arxiv.org/abs/2609.00900v1)
-
-**Summary:** Crystalline materials discovery is essential for energy, electronics, and catalysis, but the vast chemical and structural space makes exhaustive screening infeasible. Existing voxel-based methods are limited by the local receptive fields of three-dimensional convolutional neural networks and the posterior collapse of high-dimensional variational autoencoders. Here, we develop a Fourier Neural Operator (FNO)-based crystal-field solver that maps a prescribed chemical formula and lattice parameters to periodic number-density and electron-density fields. By operating on global Fourier modes, the solver captures long-range correlations in periodic crystal fields beyond conventional local convolutions. Building on this solver, we construct a coupled generation-solving framework in which a conditional variational autoencoder generates diverse candidate lattice parameters in a low-dimensional basis-coefficient space, followed by density-field prediction and atomic reconstruction through peak detection, position optimization, and weight optimization. The reconstructed structures are further screened using voxel-level filtering, machine-learning interatomic-potential relaxation, and first-principle calculations. The framework generates novel structures across 104 chemical formulas with competitive reconstruction accuracy, demonstrating high generative diversity and structural validity. By extending Fourier neural operators to periodic crystal fields and coupling them with composition-conditioned lattice generation, our approach provides a scalable route to crystal structure discovery from prescribed chemical compositions.
+**Summary:** The fragmented landscape of existing computational tools often hinders the seamless integration of large-scale structure prediction with rigorous stability validation. To address this, we present GEWUM (General Exploration Workflow for the Utopia of Materials), an open-source platform that integrates the Selective Random Structure Search (SRSS) strategy with universal Machine Learning Interatomic Potentials (uMLIPs) to automate and accelerate materials discovery. With native support for SLURM-based HPC clusters, GEWUM unifies the entire workflow from structure generation and diversity-preserving selection to thermodynamic/dynamic stability assessments and property calculations. The platform further incorporates built-in visualization tools, including Sankey diagrams for space-group evolution, violin plots for energy distributions, and t-SNE/UMAP embeddings for structural diversity, enabling intuitive interpretation of screening results. We demonstrate GEWUM through three case studies: low-energy polymorph prediction in Al-Sc-N, identification of a P-62c phase of U3Si5, and high-pressure structure prediction of ThH10 at 150 GPa. Benchmark tests confirm reasonable agreement in thermophysical property predictions.
 
 ---
 

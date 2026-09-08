@@ -1,0 +1,30 @@
+[
+  {
+    "authors": [
+      "Jiexi Song",
+      "Aixian She",
+      "Changpeng Song",
+      "Diwei Shi",
+      "Fengyuan Xuan",
+      "Chongde Cao"
+    ],
+    "base_id": "2604.21401",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": null,
+    "doi": "10.1016/j.commatsci.2026.115049",
+    "id": "https://arxiv.org/abs/2604.21401v2",
+    "journal_ref": "Comput. Mater. Sci. 275, 115049 (2026)",
+    "pdf_url": "https://arxiv.org/pdf/2604.21401v2",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-04-23T08:11:01+00:00",
+    "short_id": "2604.21401v2",
+    "status": "update",
+    "summary": "The fragmented landscape of existing computational tools often hinders the seamless integration of large-scale structure prediction with rigorous stability validation. To address this, we present GEWUM (General Exploration Workflow for the Utopia of Materials), an open-source platform that integrates the Selective Random Structure Search (SRSS) strategy with universal Machine Learning Interatomic Potentials (uMLIPs) to automate and accelerate materials discovery. With native support for SLURM-based HPC clusters, GEWUM unifies the entire workflow from structure generation and diversity-preserving selection to thermodynamic/dynamic stability assessments and property calculations. The platform further incorporates built-in visualization tools, including Sankey diagrams for space-group evolution, violin plots for energy distributions, and t-SNE/UMAP embeddings for structural diversity, enabling intuitive interpretation of screening results. We demonstrate GEWUM through three case studies: low-energy polymorph prediction in Al-Sc-N, identification of a P-62c phase of U3Si5, and high-pressure structure prediction of ThH10 at 150 GPa. Benchmark tests confirm reasonable agreement in thermophysical property predictions.",
+    "title": "GEWUM: General Exploration Workflow for the Utopia of Materials: A Unified Platform for Automated Structure Generation, Selection, and Validation",
+    "updated": "2026-09-04T08:25:16+00:00",
+    "url": "https://arxiv.org/abs/2604.21401v2",
+    "version": 2
+  }
+]
