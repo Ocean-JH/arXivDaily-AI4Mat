@@ -111,9 +111,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (3)
+## Latest Papers (3)
 
-*Last checked: 2026-09-11 07:43:08 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-09-11 09:54:19 (SGT)*
 
 ### 1. uFlowCSP: Crystal Structure Prediction using Mean flow generative models
 
