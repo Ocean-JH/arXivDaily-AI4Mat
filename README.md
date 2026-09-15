@@ -111,57 +111,55 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (3)
+## New Papers (3)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-09-16 07:57:37 (SGT)*
 
-*Last checked: 2026-09-11 09:54:19 (SGT)*
+### 1. Multi4D: an end-to-end neural network for structural determination at complex material interfaces
 
-### 1. uFlowCSP: Crystal Structure Prediction using Mean flow generative models
+**Authors:** Haoran Zhang, Zian Mao, Shufen Chu, Xiaoya He, Yuyan Guan, Antong Yang, Mingze Li, Xiaoqin Zeng, Yujun Xie
 
-**Authors:** Sourin Dey, Dipannoy Das Gupta, Lai Wei, Sadman Sadeed Omee, Jianjun Hu
-
-**Published:** 2026-09-09
+**Published:** 2026-09-13
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2609.09799v1
+**ID:** 2609.14348v1
 
-**Link:** [https://arxiv.org/abs/2609.09799v1](https://arxiv.org/abs/2609.09799v1)
+**Link:** [https://arxiv.org/abs/2609.14348v1](https://arxiv.org/abs/2609.14348v1)
 
-**Summary:** Crystal structure prediction (CSP) is fundamental to computational materials discovery. Generative models including CDVAE, DiffCSP, FlowMM, and CrystalFlow learn stable-crystal distributions directly, but diffusion and flow-matching inference requires tens to thousands of sequential network evaluations per candidate.   We introduce uFlowCSP, a MeanFlow-based CSP model that learns the average, rather than instantaneous, probability-flow velocity. It generates a complete structure in one to five evaluations, delivering 5x-58x faster inference with equal or better performance. A chemistry- and symmetry-aware Transformer uses canonical atom ordering, global composition, and per-token chemistry embeddings. A coarse crystal-system token is used only during training; it provides additive gains, particularly improving space-group agreement despite being absent at inference, which remains formula-only.   On MP-20 with 20 candidates per target, one step matches CrystalFlow (78.38% vs. 78.34%) with 100x fewer evaluations and about 10x lower wall-clock time. Five steps reach 83.64%, exceeding CrystalFlow (78.34% at 2,000 evaluations) and DiffCSP (77.93% at about 20,000), while using 20x fewer evaluations. uFlowCSP generates 10,000 structures in 0.39-1.31 minutes, versus 6.5 for CrystalFlow and 76.1 for DiffCSP. Under CSPBench's energy-ranked top-five structure-and-space-group criterion, five-step uFlowCSP reaches 72%/72%/65% structure, space-group, and consensus match rates. CrystalFlow reaches 78%/73%/68% at 100 steps but falls to 49%/32%/31% at five. Thus, uFlowCSP improves accuracy per network evaluation, not merely peak accuracy.
+**Summary:** Heterogeneous interfaces dictate the performance and degradation of functional materials, making it essential to link local structural variations with macroscopic failure mechanisms to guide future materials design. Yet structural heterogeneity, phase overlap, and local disorder produce highly convoluted diffraction signatures, making extended transition regions difficult to interpret at atomic resolution across large fields of view. Here, we introduce Multi4D, a physics-informed neural network framework for automated multi-component crystallographic identification using four-dimensional scanning transmission electron microscopy (4D-STEM). By combining a latent-space Diffusion Transformer for physics-constrained style translation with a rotation-invariant convolutional neural network for orientation-agnostic classification, this approach translates multi-components diffraction datasets into deterministic crystallographic maps with 98.82% accuracy. In addition, we introduce Diffraction-Inferred Structural Complexity as an information-theoretic entropy metric derived from classifier predictive uncertainty that quantifies local structural ambiguity. We apply Multi4D to generate high-fidelity structural maps of complex superconducting heterostructures, corroded alloy surfaces, and degraded solid-state battery interfaces down to single-nanometer spatial resolution. This framework establishes a statistically robust analytical paradigm for automated microscopy, facilitating both industrial quality control and the data-driven discovery of interfacial design principles.
 
 ---
 
-### 2. Synthesizability Prediction of Crystalline Structures with Structure-Aware Feature Learning and Uncertainty Quantification
+### 2. Symmetry- and Property-Aware Crystal Generation with Reinforcement Learning for Inverse Materials Design
 
-**Authors:** Danial Ebrahimzadeh, Sarah Sharif, Yaser Mike Banad
+**Authors:** Ting-Wei Hsu, Arun Bansil, Qimin Yan
 
-**Published:** 2025-10-22
+**Published:** 2026-09-11
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2510.19251v2
+**ID:** 2609.13468v1
 
-**Link:** [https://arxiv.org/abs/2510.19251v2](https://arxiv.org/abs/2510.19251v2)
+**Link:** [https://arxiv.org/abs/2609.13468v1](https://arxiv.org/abs/2609.13468v1)
 
-**Summary:** Predicting which hypothetical inorganic crystals can be experimentally realized remains a central challenge in accelerating materials discovery. SyntheFormer is a positive-unlabeled framework that learns synthesizability directly from crystal structure, combining Fourier-transformed crystal properties (FTCP) representation with structure-aware feature extraction, Random-Forest feature selection, and a compact deep MLP classifier. The model is trained on historical data from 2011 through 2018 and evaluated prospectively on future years from 2019 to 2025, where the positive class constitutes only 1.02 percent of samples. Under this temporally separated evaluation, SyntheFormer achieves a test AUC of 0.735, AUPRC of 0.099 and 97.6 percent recall at 94.2 percent coverage with dual-threshold calibration. Direct prospective validation supports this result as two materials that were unlabeled at the time of data curation, Y6Fe(SiS7)2 and BaYb2F8, were assigned high SyntheFormer scores (0.961 and 0.753, respectively) and were subsequently reported experimentally. Crucially, the model recovers experimentally confirmed metastable compounds that lie far from the convex hull and simultaneously assigns low scores to many thermodynamically stable yet unsynthesized candidates, demonstrating that stability alone is insufficient to predict experimental attainability.
+**Summary:** The inverse design of crystalline materials ultimately seeks structures with desired physical properties. However, for many functional responses, a favorable numerical value is meaningful only when supported by the symmetry of the underlying crystal. Without the appropriate crystallographic constraints, an apparent response may be ill defined, accidental, or not symmetry protected. Here we introduce SPARC, a symmetry- and property-aware reinforcement learning framework that optimizes physical objectives while preserving the structural conditions required for their realization. We demonstrate SPARC on two complementary tasks. The first targets strong uniaxial dielectric anisotropy, a tensorial response that is well defined only within appropriate crystal classes. The second maximizes the spectroscopic limited maximum efficiency, a scalar device-level objective without a prescribed symmetry class, allowing the framework to identify favorable crystallographic motifs. These results show that symmetry is not merely an additional design constraint, but a physical foundation for generating candidates with meaningful, robust, and realizable functional properties.
 
 ---
 
-### 3. Atomistic Modeling of Chemical Disorder in Materials: Bridging Conventional Methods and AI-Assisted Approaches
+### 3. Remote epitaxial frustration stabilizes a correlated interfacial state
 
-**Authors:** Jiayu Peng, Peichen Zhong
+**Authors:** Taehwan Jung, Nicholas Hagopian, Anshu Sirohi, Quinn Campbell, Chengye Dong, Zachary T. LaDuca, Tamalika Samanta, Joshua Robinson, Paul M. Voyles, Jason K. Kawasaki
 
-**Published:** 2026-05-18
+**Published:** 2025-12-07
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2605.19124v2
+**ID:** 2512.06986v2
 
-**Link:** [https://arxiv.org/abs/2605.19124v2](https://arxiv.org/abs/2605.19124v2)
+**Link:** [https://arxiv.org/abs/2512.06986v2](https://arxiv.org/abs/2512.06986v2)
 
-**Summary:** Chemical disorder, originating from the mixed occupation of crystallographic sites by multiple elements, is widespread in alloys, ceramics, and compositionally complex materials, where short- and long-range orderings strongly influence properties. A central obstacle is the representation gap between experiments and simulations: experiments often report disorder as partial occupancies and ensemble-averaged behaviors, whereas atomistic simulations and AI workflows usually require fully specified configurations. Tackling this gap requires computational methods that convert averaged disorder descriptions into representative configurational ensembles while balancing cost, bias, and fidelity. This challenge has become more urgent in AI-driven computational discovery, where ignoring disorder may cause AI workflows to misrank stability, misjudge novelty, and misdirect experiments with too-idealized representations. This Review highlights how conventional and AI-driven methods can bridge this representation gap. We assess the strengths and limitations of approaches spanning mean-field theories, cluster expansion, quasi-random approximations, Monte Carlo, and emerging schemes powered by universal interatomic potentials and generative models. We further highlight how AI can accelerate various computational schemes by lowering the cost of microstate evaluation, configurational exploration, and atomistic-to-thermodynamic closure. We also emphasize how AI can enable disorder-native capabilities, including workflow triage, ordering-sensitive and alchemical representations, generative models of disordered structures and distributions, and kinetics-aware disorder prediction. Together, this framework outlines a practical roadmap toward disorder-native AI, which can transform chemical disorder from a representational obstacle into a controllable variable for realistic AI-accelerated materials discovery.
+**Summary:** Remote epitaxy exploits substrate interactions transmitted across atomically thin materials to replicate substrate crystal structure. Here we show that competition among graphene-, substrate-, and reconstruction-derived interactions can instead produce frustration. Using GdAuGe films on $N$-layer graphene/SiC(0001), we identify at intermediate $N$ a self-limited interfacial state with broken long-range translational order, accompanied by non-monotonic crystallographic orientation selection in the epitaxial film above. The frustrated interface is accompanied by strongly enhanced magnetic irreversibility above 300 K, with an interface-dominated rather than volume-scaled response, linking epitaxial frustration to an emergent collective property. Annealing drives an initially epitaxial crystal into the frustrated state, distinguishing it from kinetically trapped disorder. First-principles calculations reveal a multi-periodic interfacial potential that provides a microscopic basis for frustration. Together, these results establish epitaxial frustration as a materials-design principle for stabilizing correlated interfacial states and emergent collective properties.
 
 ---
 

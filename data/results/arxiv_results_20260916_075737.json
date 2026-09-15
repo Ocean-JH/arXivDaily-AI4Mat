@@ -1,0 +1,94 @@
+[
+  {
+    "authors": [
+      "Haoran Zhang",
+      "Zian Mao",
+      "Shufen Chu",
+      "Xiaoya He",
+      "Yuyan Guan",
+      "Antong Yang",
+      "Mingze Li",
+      "Xiaoqin Zeng",
+      "Yujun Xie"
+    ],
+    "base_id": "2609.14348",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.CV"
+    ],
+    "comment": "17 pages, 6 figures",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2609.14348v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2609.14348v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-09-13T07:12:53+00:00",
+    "short_id": "2609.14348v1",
+    "status": "new",
+    "summary": "Heterogeneous interfaces dictate the performance and degradation of functional materials, making it essential to link local structural variations with macroscopic failure mechanisms to guide future materials design. Yet structural heterogeneity, phase overlap, and local disorder produce highly convoluted diffraction signatures, making extended transition regions difficult to interpret at atomic resolution across large fields of view. Here, we introduce Multi4D, a physics-informed neural network framework for automated multi-component crystallographic identification using four-dimensional scanning transmission electron microscopy (4D-STEM). By combining a latent-space Diffusion Transformer for physics-constrained style translation with a rotation-invariant convolutional neural network for orientation-agnostic classification, this approach translates multi-components diffraction datasets into deterministic crystallographic maps with 98.82% accuracy. In addition, we introduce Diffraction-Inferred Structural Complexity as an information-theoretic entropy metric derived from classifier predictive uncertainty that quantifies local structural ambiguity. We apply Multi4D to generate high-fidelity structural maps of complex superconducting heterostructures, corroded alloy surfaces, and degraded solid-state battery interfaces down to single-nanometer spatial resolution. This framework establishes a statistically robust analytical paradigm for automated microscopy, facilitating both industrial quality control and the data-driven discovery of interfacial design principles.",
+    "title": "Multi4D: an end-to-end neural network for structural determination at complex material interfaces",
+    "updated": "2026-09-13T07:12:53+00:00",
+    "url": "https://arxiv.org/abs/2609.14348v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Ting-Wei Hsu",
+      "Arun Bansil",
+      "Qimin Yan"
+    ],
+    "base_id": "2609.13468",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.AI",
+      "physics.comp-ph",
+      "physics.optics"
+    ],
+    "comment": "18 pages, 5 figures",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2609.13468v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2609.13468v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-09-11T19:42:19+00:00",
+    "short_id": "2609.13468v1",
+    "status": "new",
+    "summary": "The inverse design of crystalline materials ultimately seeks structures with desired physical properties. However, for many functional responses, a favorable numerical value is meaningful only when supported by the symmetry of the underlying crystal. Without the appropriate crystallographic constraints, an apparent response may be ill defined, accidental, or not symmetry protected. Here we introduce SPARC, a symmetry- and property-aware reinforcement learning framework that optimizes physical objectives while preserving the structural conditions required for their realization. We demonstrate SPARC on two complementary tasks. The first targets strong uniaxial dielectric anisotropy, a tensorial response that is well defined only within appropriate crystal classes. The second maximizes the spectroscopic limited maximum efficiency, a scalar device-level objective without a prescribed symmetry class, allowing the framework to identify favorable crystallographic motifs. These results show that symmetry is not merely an additional design constraint, but a physical foundation for generating candidates with meaningful, robust, and realizable functional properties.",
+    "title": "Symmetry- and Property-Aware Crystal Generation with Reinforcement Learning for Inverse Materials Design",
+    "updated": "2026-09-11T19:42:19+00:00",
+    "url": "https://arxiv.org/abs/2609.13468v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Taehwan Jung",
+      "Nicholas Hagopian",
+      "Anshu Sirohi",
+      "Quinn Campbell",
+      "Chengye Dong",
+      "Zachary T. LaDuca",
+      "Tamalika Samanta",
+      "Joshua Robinson",
+      "Paul M. Voyles",
+      "Jason K. Kawasaki"
+    ],
+    "base_id": "2512.06986",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2512.06986v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.06986v2",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2025-12-07T20:41:25+00:00",
+    "short_id": "2512.06986v2",
+    "status": "new",
+    "summary": "Remote epitaxy exploits substrate interactions transmitted across atomically thin materials to replicate substrate crystal structure. Here we show that competition among graphene-, substrate-, and reconstruction-derived interactions can instead produce frustration. Using GdAuGe films on $N$-layer graphene/SiC(0001), we identify at intermediate $N$ a self-limited interfacial state with broken long-range translational order, accompanied by non-monotonic crystallographic orientation selection in the epitaxial film above. The frustrated interface is accompanied by strongly enhanced magnetic irreversibility above 300 K, with an interface-dominated rather than volume-scaled response, linking epitaxial frustration to an emergent collective property. Annealing drives an initially epitaxial crystal into the frustrated state, distinguishing it from kinetically trapped disorder. First-principles calculations reveal a multi-periodic interfacial potential that provides a microscopic basis for frustration. Together, these results establish epitaxial frustration as a materials-design principle for stabilizing correlated interfacial states and emergent collective properties.",
+    "title": "Remote epitaxial frustration stabilizes a correlated interfacial state",
+    "updated": "2026-09-11T04:30:18+00:00",
+    "url": "https://arxiv.org/abs/2512.06986v2",
+    "version": 2
+  }
+]

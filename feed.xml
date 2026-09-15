@@ -5,7 +5,21 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 11 Sep 2026 07:43:08 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 07:57:37 +0800</lastBuildDate>
+    <item>
+      <title>Multi4D: an end-to-end neural network for structural determination at complex material interfaces</title>
+      <link>https://arxiv.org/abs/2609.14348v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2609.14348v1</guid>
+      <pubDate>Sun, 13 Sep 2026 07:12:53 +0000</pubDate>
+      <description>Heterogeneous interfaces dictate the performance and degradation of functional materials, making it essential to link local structural variations with macroscopic failure mechanisms to guide future materials design. Yet structural heterogeneity, phase overlap, and local disorder produce highly convoluted diffraction signatures, making extended transition regions difficult to interpret at atomic resolution across large fields of view. Here, we introduce Multi4D, a physics-informed neural network framework for automated multi-component crystallographic identification using four-dimensional scanning transmission electron microscopy (4D-STEM). By combining a latent-space Diffusion Transformer for physics-constrained style translation with a rotation-invariant convolutional neural network for orientation-agnostic classification, this approach translates multi-components diffraction datasets into deterministic crystallographic maps with 98.82% accuracy. In addition, we introduce Diffraction-Inferred Structural Complexity as an information-theoretic entropy metric derived from classifier predictive uncertainty that quantifies local structural ambiguity. We apply Multi4D to generate high-fidelity structural maps of complex superconducting heterostructures, corroded alloy surfaces, and degraded solid-state battery interfaces down to single-nanometer spatial resolution. This framework establishes a statistically robust analytical paradigm for automated microscopy, facilitating both industrial quality control and the data-driven discovery of interfacial design principles.</description>
+    </item>
+    <item>
+      <title>Symmetry- and Property-Aware Crystal Generation with Reinforcement Learning for Inverse Materials Design</title>
+      <link>https://arxiv.org/abs/2609.13468v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2609.13468v1</guid>
+      <pubDate>Fri, 11 Sep 2026 19:42:19 +0000</pubDate>
+      <description>The inverse design of crystalline materials ultimately seeks structures with desired physical properties. However, for many functional responses, a favorable numerical value is meaningful only when supported by the symmetry of the underlying crystal. Without the appropriate crystallographic constraints, an apparent response may be ill defined, accidental, or not symmetry protected. Here we introduce SPARC, a symmetry- and property-aware reinforcement learning framework that optimizes physical objectives while preserving the structural conditions required for their realization. We demonstrate SPARC on two complementary tasks. The first targets strong uniaxial dielectric anisotropy, a tensorial response that is well defined only within appropriate crystal classes. The second maximizes the spectroscopic limited maximum efficiency, a scalar device-level objective without a prescribed symmetry class, allowing the framework to identify favorable crystallographic motifs. These results show that symmetry is not merely an additional design constraint, but a physical foundation for generating candidates with meaningful, robust, and realizable functional properties.</description>
+    </item>
     <item>
       <title>uFlowCSP: Crystal Structure Prediction using Mean flow generative models</title>
       <link>https://arxiv.org/abs/2609.09799v1</link>
@@ -344,20 +358,6 @@
       <guid isPermaLink="true">https://arxiv.org/abs/2607.11910v1</guid>
       <pubDate>Fri, 03 Jul 2026 12:00:39 +0000</pubDate>
       <description>Optimizing composite stacking sequences to match continuous targets (e.g., Lamination or Buckling Parameters) with discrete manufacturing constraints represents a challenging combinatorial inverse problem that regularly occurs in composite design especially when numerical optimization approaches are used (bi-step, bi-level configurations). In multipanel configurations, this complexity is further intensified by blending, a global compatibility/continuity requirement between the different panel stackings. This study presents SeqGPT, a conditional Transformer agent developed to replace computationally expensive iterative methods. To ensure both global continuity and manufacturing feasibility by construction, we implemented a hybrid neurosymbolic decoding strategy. SeqGPT predicts a conditional distribution that guides a Constrained Beam Search, where any branch violating blending rules is strictly pruned. Numerical experiments on the 18-panel horseshoe benchmark demonstrate that SeqGPT generates solutions near-instantaneously with buckling performance comparable to evolutionary methods, offering a significant speed-up compared to the state of the art.</description>
-    </item>
-    <item>
-      <title>Neural-Network Inverse Design of SRF Cavities and Transmons for Bosonic Quantum Computation</title>
-      <link>https://arxiv.org/abs/2607.02289v2</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2607.02289v2</guid>
-      <pubDate>Thu, 02 Jul 2026 15:06:11 +0000</pubDate>
-      <description>Three-dimensional superconducting radio-frequency (SRF) cavities provide exceptionally long-lived electromagnetic modes and, when coupled to nonlinear elements such as transmon qubits, become promising architectures for bosonic quantum information processing. The inverse design of such systems, i.e., recovering device geometries that produce specified electromagnetic and coupling targets, is generally a one-to-many problem. The qubit-cavity coupling strength depends sensitively on both the transmon geometry and its position within the cavity's electromagnetic field. As these systems scale up and their design parameter spaces grow, the cost of conventional iterative simulation becomes prohibitive. We present two deep neural network (DNN) approaches that address this inverse-design problem at complementary levels of the design stack. The first proposes SRF cavity geometries that produce target cavity observables. The second proposes transmon qubit designs that produce target qubit-cavity parameters - the coupling rate, qubit frequency, and anharmonicity $(g, ν_q, α)$. The recovered candidate designs match the targets to within ~5% (cavity) and ~2% (transmon), confirmed by end-to-end re-simulation. Both approaches map desired device behavior directly to candidate designs, a fast alternative to the iterative simulation studies usually required.</description>
-    </item>
-    <item>
-      <title>Mirror Illusion Art</title>
-      <link>https://arxiv.org/abs/2607.02015v1</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2607.02015v1</guid>
-      <pubDate>Thu, 02 Jul 2026 10:47:42 +0000</pubDate>
-      <description>Mirror Illusion Art is a novel reflection-conditioned 3D illusion where one object yields two target appearances (front and mirror). The task is formulated as inverse design from two target 2D images (front and mirror) to a printable 3D object with geometry and texture. Prior topology-driven and shadow-based approaches demand substantial manual effort, optimize shape only, and often yield non-smooth or incomplete geometry. To address these challenges, we propose AutoMIA, an automated Mirror Illusion Art design pipeline that jointly optimizes shape and color. To stabilize optimization and suppress artifacts, four mechanisms are introduced: (1) projection-alignment component (PAC) selection to reduce surface noise, (2) position-weighted adaptive (PWA) suppression for background noise, (3) internal voxel preservation (IVP) to prevent internal fractures, and (4) shape-color decoupled (SCD) optimization that balance shape and color optimization. AutoMIA generate diverse smooth Mirror Illusion artworks successfully both in the digital and physical world, with only around 76s design time and 2.6 GB memory on average using a single RTX 3090, advancing inverse graphics and computational design. Our code is available at https://github.com/zxp555/AutoMIA.</description>
     </item>
   </channel>
 </rss>
