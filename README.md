@@ -111,57 +111,23 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (3)
+## New Papers (1)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-09-18 07:54:18 (SGT)*
 
-*Last checked: 2026-09-17 08:04:48 (SGT)*
+### 1. Robust and Efficient AI Frameworks for Scalable Material Design and Property Prediction
 
-### 1. Multi4D: an end-to-end neural network for structural determination at complex material interfaces
+**Authors:** Kishalay Das
 
-**Authors:** Haoran Zhang, Zian Mao, Shufen Chu, Xiaoya He, Yuyan Guan, Antong Yang, Mingze Li, Xiaoqin Zeng, Yujun Xie
-
-**Published:** 2026-09-13
+**Published:** 2026-09-15
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2609.14348v1
+**ID:** 2609.17646v1
 
-**Link:** [https://arxiv.org/abs/2609.14348v1](https://arxiv.org/abs/2609.14348v1)
+**Link:** [https://arxiv.org/abs/2609.17646v1](https://arxiv.org/abs/2609.17646v1)
 
-**Summary:** Heterogeneous interfaces dictate the performance and degradation of functional materials, making it essential to link local structural variations with macroscopic failure mechanisms to guide future materials design. Yet structural heterogeneity, phase overlap, and local disorder produce highly convoluted diffraction signatures, making extended transition regions difficult to interpret at atomic resolution across large fields of view. Here, we introduce Multi4D, a physics-informed neural network framework for automated multi-component crystallographic identification using four-dimensional scanning transmission electron microscopy (4D-STEM). By combining a latent-space Diffusion Transformer for physics-constrained style translation with a rotation-invariant convolutional neural network for orientation-agnostic classification, this approach translates multi-components diffraction datasets into deterministic crystallographic maps with 98.82% accuracy. In addition, we introduce Diffraction-Inferred Structural Complexity as an information-theoretic entropy metric derived from classifier predictive uncertainty that quantifies local structural ambiguity. We apply Multi4D to generate high-fidelity structural maps of complex superconducting heterostructures, corroded alloy surfaces, and degraded solid-state battery interfaces down to single-nanometer spatial resolution. This framework establishes a statistically robust analytical paradigm for automated microscopy, facilitating both industrial quality control and the data-driven discovery of interfacial design principles.
-
----
-
-### 2. Symmetry- and Property-Aware Crystal Generation with Reinforcement Learning for Inverse Materials Design
-
-**Authors:** Ting-Wei Hsu, Arun Bansil, Qimin Yan
-
-**Published:** 2026-09-11
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2609.13468v1
-
-**Link:** [https://arxiv.org/abs/2609.13468v1](https://arxiv.org/abs/2609.13468v1)
-
-**Summary:** The inverse design of crystalline materials ultimately seeks structures with desired physical properties. However, for many functional responses, a favorable numerical value is meaningful only when supported by the symmetry of the underlying crystal. Without the appropriate crystallographic constraints, an apparent response may be ill defined, accidental, or not symmetry protected. Here we introduce SPARC, a symmetry- and property-aware reinforcement learning framework that optimizes physical objectives while preserving the structural conditions required for their realization. We demonstrate SPARC on two complementary tasks. The first targets strong uniaxial dielectric anisotropy, a tensorial response that is well defined only within appropriate crystal classes. The second maximizes the spectroscopic limited maximum efficiency, a scalar device-level objective without a prescribed symmetry class, allowing the framework to identify favorable crystallographic motifs. These results show that symmetry is not merely an additional design constraint, but a physical foundation for generating candidates with meaningful, robust, and realizable functional properties.
-
----
-
-### 3. Remote epitaxial frustration stabilizes a correlated interfacial state
-
-**Authors:** Taehwan Jung, Nicholas Hagopian, Anshu Sirohi, Quinn Campbell, Chengye Dong, Zachary T. LaDuca, Tamalika Samanta, Joshua Robinson, Paul M. Voyles, Jason K. Kawasaki
-
-**Published:** 2025-12-07
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2512.06986v2
-
-**Link:** [https://arxiv.org/abs/2512.06986v2](https://arxiv.org/abs/2512.06986v2)
-
-**Summary:** Remote epitaxy exploits substrate interactions transmitted across atomically thin materials to replicate substrate crystal structure. Here we show that competition among graphene-, substrate-, and reconstruction-derived interactions can instead produce frustration. Using GdAuGe films on $N$-layer graphene/SiC(0001), we identify at intermediate $N$ a self-limited interfacial state with broken long-range translational order, accompanied by non-monotonic crystallographic orientation selection in the epitaxial film above. The frustrated interface is accompanied by strongly enhanced magnetic irreversibility above 300 K, with an interface-dominated rather than volume-scaled response, linking epitaxial frustration to an emergent collective property. Annealing drives an initially epitaxial crystal into the frustrated state, distinguishing it from kinetically trapped disorder. First-principles calculations reveal a multi-periodic interfacial potential that provides a microscopic basis for frustration. Together, these results establish epitaxial frustration as a materials-design principle for stabilizing correlated interfacial states and emergent collective properties.
+**Summary:** This thesis develops robust and efficient AI frameworks for accelerating crystalline materials discovery by addressing both major stages of the materials-design pipeline: crystal property prediction and crystal structure generation. Motivated by the high computational cost of Density Functional Theory (DFT) and the limited availability of labeled materials data, the thesis explores graph representation learning, pretraining, multimodal learning, and generative modeling for scalable materials design.   For property prediction, the thesis first introduces CrysXPP, which learns transferable crystal representations through unsupervised graph autoencoding, reducing dependence on large property-labeled datasets. It then proposes CrysGNN, a large-scale self-supervised graph pretraining framework that captures atomic connectivity, chemical attributes, and global structural information and transfers this knowledge to downstream property predictors through knowledge distillation. CrysMMNet further enriches crystal representations by jointly modeling graph structure and textual descriptions, thereby incorporating both local chemical and global structural knowledge.   For crystal generation, the thesis introduces TGDMat, a text-guided joint diffusion framework that jointly models lattice parameters, atomic types, and atomic coordinates while incorporating textual structural knowledge during denoising. This enables the generation of more valid and stable periodic materials while also supporting conditional generation from natural-language descriptions.   Overall, the thesis establishes a unified AI-based framework for data-efficient property prediction and controllable crystal generation, demonstrating how graph learning, multimodal representations, and generative models can reduce computational cost and improve the scalability of materials
 
 ---
 

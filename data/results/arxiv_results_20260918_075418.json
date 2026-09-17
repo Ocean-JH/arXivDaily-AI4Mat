@@ -1,0 +1,26 @@
+[
+  {
+    "authors": [
+      "Kishalay Das"
+    ],
+    "base_id": "2609.17646",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.LG"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2609.17646v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2609.17646v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-09-15T15:15:21+00:00",
+    "short_id": "2609.17646v1",
+    "status": "new",
+    "summary": "This thesis develops robust and efficient AI frameworks for accelerating crystalline materials discovery by addressing both major stages of the materials-design pipeline: crystal property prediction and crystal structure generation. Motivated by the high computational cost of Density Functional Theory (DFT) and the limited availability of labeled materials data, the thesis explores graph representation learning, pretraining, multimodal learning, and generative modeling for scalable materials design.\n  For property prediction, the thesis first introduces CrysXPP, which learns transferable crystal representations through unsupervised graph autoencoding, reducing dependence on large property-labeled datasets. It then proposes CrysGNN, a large-scale self-supervised graph pretraining framework that captures atomic connectivity, chemical attributes, and global structural information and transfers this knowledge to downstream property predictors through knowledge distillation. CrysMMNet further enriches crystal representations by jointly modeling graph structure and textual descriptions, thereby incorporating both local chemical and global structural knowledge.\n  For crystal generation, the thesis introduces TGDMat, a text-guided joint diffusion framework that jointly models lattice parameters, atomic types, and atomic coordinates while incorporating textual structural knowledge during denoising. This enables the generation of more valid and stable periodic materials while also supporting conditional generation from natural-language descriptions.\n  Overall, the thesis establishes a unified AI-based framework for data-efficient property prediction and controllable crystal generation, demonstrating how graph learning, multimodal representations, and generative models can reduce computational cost and improve the scalability of materials",
+    "title": "Robust and Efficient AI Frameworks for Scalable Material Design and Property Prediction",
+    "updated": "2026-09-15T15:15:21+00:00",
+    "url": "https://arxiv.org/abs/2609.17646v1",
+    "version": 1
+  }
+]
