@@ -111,9 +111,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (3)
+## Latest Papers (3)
 
-*Last checked: 2026-09-16 07:57:37 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-09-17 08:04:48 (SGT)*
 
 ### 1. Multi4D: an end-to-end neural network for structural determination at complex material interfaces
 
