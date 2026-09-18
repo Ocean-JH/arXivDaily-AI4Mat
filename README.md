@@ -111,9 +111,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## Latest Papers (1)
 
-*Last checked: 2026-09-18 07:54:18 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-09-19 07:52:34 (SGT)*
 
 ### 1. Robust and Efficient AI Frameworks for Scalable Material Design and Property Prediction
 
