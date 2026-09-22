@@ -98,7 +98,7 @@
     </header>
 
     <main id="main-content" class="content-shell" tabindex="-1">
-        <div class="status-notice" role="status" aria-live="polite"><p>No new papers in the latest check. Showing the most recent additions.</p></div>
+        <div class="status-notice" role="status" aria-live="polite"><p><strong>1 new paper</strong> found in the latest check.</p></div>
 
         <section class="research-tools" aria-labelledby="search-label">
             <form id="paper-search" class="search-form" role="search" method="get">
@@ -137,45 +137,42 @@
 
         <div id="papers-content">
             <div class="section-heading"><h2 id="latest-papers">Latest papers (1)</h2>
-<p>Checked 2026-09-22 08:35 SGT</p></div>
+<p>Checked 2026-09-23 07:58 SGT</p></div>
 <article class="paper"
-         id="paper-2609.17646"
-         data-paper-id="2609.17646"
-         aria-labelledby="title-paper-2609.17646"
+         id="paper-2609.22233"
+         data-paper-id="2609.22233"
+         aria-labelledby="title-paper-2609.22233"
          tabindex="-1">
     <div class="paper-index" aria-hidden="true">1</div>
     <div class="paper-body">
-        <h3 id="title-paper-2609.17646" class="paper-title"><a href="https://arxiv.org/abs/2609.17646v1" target="_blank" rel="noopener noreferrer">Robust and Efficient AI Frameworks for Scalable Material Design and Property Prediction</a><span class="paper-badge">New</span></h3>
+        <h3 id="title-paper-2609.22233" class="paper-title"><a href="https://arxiv.org/abs/2609.22233v1" target="_blank" rel="noopener noreferrer">SCALE: Simulation-Calibrated Amortized Learning for Energy Materials (A hybrid architecture connecting deterministic modeling, real-world data, and transformer-scale inference for accelerated energy-materials discovery)</a><span class="paper-badge">New</span></h3>
 
         <dl class="paper-info">
             <div class="paper-authors">
                 <dt>Authors</dt>
-                <dd>Kishalay Das</dd>
+                <dd>Kuan Huang, Bo Bai</dd>
             </div>
             <div class="paper-date">
                 <dt>Published</dt>
-                <dd><time datetime="2026-09-15">2026-09-15</time></dd>
+                <dd><time datetime="2026-09-03">2026-09-03</time></dd>
             </div>
             <div class="paper-category">
                 <dt>Category</dt>
-                <dd>cond-mat.mtrl-sci</dd>
+                <dd>cs.LG</dd>
             </div>
             <div class="paper-id">
                 <dt>arXiv ID</dt>
-                <dd>2609.17646v1</dd>
+                <dd>2609.22233v1</dd>
             </div>
         </dl>
 
         <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2609.17646v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+            <a href="https://arxiv.org/abs/2609.22233v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
         </div>
 
         <details class="paper-summary">
             <summary>Read abstract</summary>
-            <p>This thesis develops robust and efficient AI frameworks for accelerating crystalline materials discovery by addressing both major stages of the materials-design pipeline: crystal property prediction and crystal structure generation. Motivated by the high computational cost of Density Functional Theory (DFT) and the limited availability of labeled materials data, the thesis explores graph representation learning, pretraining, multimodal learning, and generative modeling for scalable materials design.
-  For property prediction, the thesis first introduces CrysXPP, which learns transferable crystal representations through unsupervised graph autoencoding, reducing dependence on large property-labeled datasets. It then proposes CrysGNN, a large-scale self-supervised graph pretraining framework that captures atomic connectivity, chemical attributes, and global structural information and transfers this knowledge to downstream property predictors through knowledge distillation. CrysMMNet further enriches crystal representations by jointly modeling graph structure and textual descriptions, thereby incorporating both local chemical and global structural knowledge.
-  For crystal generation, the thesis introduces TGDMat, a text-guided joint diffusion framework that jointly models lattice parameters, atomic types, and atomic coordinates while incorporating textual structural knowledge during denoising. This enables the generation of more valid and stable periodic materials while also supporting conditional generation from natural-language descriptions.
-  Overall, the thesis establishes a unified AI-based framework for data-efficient property prediction and controllable crystal generation, demonstrating how graph learning, multimodal representations, and generative models can reduce computational cost and improve the scalability of materials</p>
+            <p>Energy systems face converging pressures for security, affordability, resilience, and sustainability, creating a need for faster discovery of deployable energy materials. Here we introduce SCALE (Simulation-Calibrated Amortized Learning for Energy Materials), a physics-grounded, real-world-data-calibrated learning architecture that connects deterministic scientific operators, experimental calibration, expanded calibrated label generation, and transformer-scale inference. SCALE converts selected high-cost mechanistic computation and measured evidence into reusable models for rapid screening, ranking, inverse design, and active learning. We formulate the framework, identify ten method-based application regimes, and demonstrate SCALE for solid-state metal-hydride hydrogen-storage capacity prediction. In this implementation, a hydride phase-equilibrium capacity operator is calibrated against 381 measured ML-HydPARK capacity anchors and used to generate 5,000 candidate-condition-prototype teacher labels. A crystallographically anchored periodic-graph representation preserves atomic sites, periodic neighbor relationships, and local metal environments absent from formula-only encodings. An edge-biased graph transformer with 2.90 million parameters reproduces calibrated teacher labels with five-fold surrogate fidelity of MAE 0.0582 wt% H2, RMSE 0.0833 wt% H2, R2 = 0.9927, and Pearson r = 0.9963. Post hoc attention analysis suggests that SCALE learns chemically organized element groupings and metal-metal relationships consistent with established hydride chemistry, without chemistry-group labels as supervision. Once trained, SCALE shifts million-candidate evaluation from repeated deterministic workflow execution to batched learned inference, reducing per-candidate screening cost by approximately 10^7-10^8 while retaining links to simulation and experimental evidence.</p>
         </details>
     </div>
 </article>
@@ -184,7 +181,7 @@
     </main>
 
     <footer class="site-footer">
-        <p>Last updated <time datetime="2026-09-22T08:35:24.491758+08:00">2026-09-22 08:35:24 SGT</time></p>
+        <p>Last updated <time datetime="2026-09-23T07:58:55.620129+08:00">2026-09-23 07:58:55 SGT</time></p>
         <p>© 2026 <a href="https://ocean-jh.github.io/"
                               target="_blank"
                               rel="noopener noreferrer">Wang Jianghai</a>
