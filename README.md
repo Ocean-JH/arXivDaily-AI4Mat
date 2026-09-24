@@ -113,21 +113,21 @@ arXiv's API access and attribution requirements.
 
 ## New Papers (1)
 
-*Last checked: 2026-09-23 07:58:55 (SGT)*
+*Last checked: 2026-09-24 08:13:49 (SGT)*
 
-### 1. SCALE: Simulation-Calibrated Amortized Learning for Energy Materials (A hybrid architecture connecting deterministic modeling, real-world data, and transformer-scale inference for accelerated energy-materials discovery)
+### 1. OMatG-flash: An All-Atom Flow Map with Reinforce Adjoint Matching for Scalable Materials Discovery
 
-**Authors:** Kuan Huang, Bo Bai
+**Authors:** Thomas Egg, Harry Winston Sullivan, Ellad B. Tadmor, Stefano Martiniani
 
-**Published:** 2026-09-03
+**Published:** 2026-09-22
 
 **Category:** cs.LG
 
-**ID:** 2609.22233v1
+**ID:** 2609.26402v1
 
-**Link:** [https://arxiv.org/abs/2609.22233v1](https://arxiv.org/abs/2609.22233v1)
+**Link:** [https://arxiv.org/abs/2609.26402v1](https://arxiv.org/abs/2609.26402v1)
 
-**Summary:** Energy systems face converging pressures for security, affordability, resilience, and sustainability, creating a need for faster discovery of deployable energy materials. Here we introduce SCALE (Simulation-Calibrated Amortized Learning for Energy Materials), a physics-grounded, real-world-data-calibrated learning architecture that connects deterministic scientific operators, experimental calibration, expanded calibrated label generation, and transformer-scale inference. SCALE converts selected high-cost mechanistic computation and measured evidence into reusable models for rapid screening, ranking, inverse design, and active learning. We formulate the framework, identify ten method-based application regimes, and demonstrate SCALE for solid-state metal-hydride hydrogen-storage capacity prediction. In this implementation, a hydride phase-equilibrium capacity operator is calibrated against 381 measured ML-HydPARK capacity anchors and used to generate 5,000 candidate-condition-prototype teacher labels. A crystallographically anchored periodic-graph representation preserves atomic sites, periodic neighbor relationships, and local metal environments absent from formula-only encodings. An edge-biased graph transformer with 2.90 million parameters reproduces calibrated teacher labels with five-fold surrogate fidelity of MAE 0.0582 wt% H2, RMSE 0.0833 wt% H2, R2 = 0.9927, and Pearson r = 0.9963. Post hoc attention analysis suggests that SCALE learns chemically organized element groupings and metal-metal relationships consistent with established hydride chemistry, without chemistry-group labels as supervision. Once trained, SCALE shifts million-candidate evaluation from repeated deterministic workflow execution to batched learned inference, reducing per-candidate screening cost by approximately 10^7-10^8 while retaining links to simulation and experimental evidence.
+**Summary:** The discovery of novel inorganic materials drives technological breakthroughs in critical fields such as computing and energy storage. Generative AI has promised to accelerate the materials discovery pipeline, but state-of-the-art flow and diffusion models remain bottlenecked by the cost of proposing candidate materials. To address this, we introduce OMatG-flash, an all-atom flow map for inorganic crystal structure prediction (CSP) and de novo generation (DNG). OMatG-flash is a Pareto-optimal inference engine for materials, sampling candidate materials with an order of magnitude fewer inference steps and less wall-clock time than existing flow and diffusion models while demonstrating benchmark performance on par with the state-of-the-art. To enable post-training fine-tuning we apply Reinforce Adjoint Matching to flow maps, further improving match rates and RMSE on the unconditional CSP task. OMatG-flash showcases the potential of flow maps to accelerate generation of high-quality candidate inorganic materials and demonstrates a step forward in sample throughput necessary for data-hungry materials discovery workflows.
 
 ---
 

@@ -5,7 +5,14 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Sep 2026 07:58:55 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 08:13:49 +0800</lastBuildDate>
+    <item>
+      <title>OMatG-flash: An All-Atom Flow Map with Reinforce Adjoint Matching for Scalable Materials Discovery</title>
+      <link>https://arxiv.org/abs/2609.26402v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2609.26402v1</guid>
+      <pubDate>Tue, 22 Sep 2026 13:36:33 +0000</pubDate>
+      <description>The discovery of novel inorganic materials drives technological breakthroughs in critical fields such as computing and energy storage. Generative AI has promised to accelerate the materials discovery pipeline, but state-of-the-art flow and diffusion models remain bottlenecked by the cost of proposing candidate materials. To address this, we introduce OMatG-flash, an all-atom flow map for inorganic crystal structure prediction (CSP) and de novo generation (DNG). OMatG-flash is a Pareto-optimal inference engine for materials, sampling candidate materials with an order of magnitude fewer inference steps and less wall-clock time than existing flow and diffusion models while demonstrating benchmark performance on par with the state-of-the-art. To enable post-training fine-tuning we apply Reinforce Adjoint Matching to flow maps, further improving match rates and RMSE on the unconditional CSP task. OMatG-flash showcases the potential of flow maps to accelerate generation of high-quality candidate inorganic materials and demonstrates a step forward in sample throughput necessary for data-hungry materials discovery workflows.</description>
+    </item>
     <item>
       <title>Robust and Efficient AI Frameworks for Scalable Material Design and Property Prediction</title>
       <link>https://arxiv.org/abs/2609.17646v1</link>
@@ -354,13 +361,6 @@
       <guid isPermaLink="true">https://arxiv.org/abs/2607.09761v1</guid>
       <pubDate>Mon, 06 Jul 2026 15:27:41 +0000</pubDate>
       <description>Variational quantum algorithms such as VQE and VQD are promising for near-term electronic structure calculations, but for periodic solids their reach is limited by the cost of building a faithful second-quantized Hamiltonian, typically via DFT plus Wannierization or hand-fit tight-binding parameters. SlaKoNet addresses this by combining deep learning with the Slater-Koster tight-binding formalism to fit hopping and overlap parameters across 65 elements, enabling deterministic Hamiltonian construction for any crystal built from these elements. Here we couple a SlaKoNet model trained on JARVIS-TBmBJ with a Qiskit-based VQD algorithm, replacing costly Hamiltonian construction with a universal neural Hamiltonian generator. The resulting SlaKoNet-VQD workflow is structure-agnostic, differentiable, and suited to high-throughput bandstructure screening. We benchmark on silicon, recovering the full eight-band structure along the standard k-path with mean absolute deviation of 1.78 meV from exact diagonalization on a 3-qubit simulator, and extend to five conventional superconductors (Al, Ta, Nb, V, ZrN) with similar accuracy. We demonstrate execution on IBM Quantum hardware for a k-point ground-state calculation on aluminum (MAE ~0.37 eV). We further promote the Hamiltonian to a correlated Hubbard model solved via dynamical mean-field theory, recovering weakening correlations across group-5 metals and strong quasiparticle renormalization in La2CuO4, identifying the impurity problem as a natural quantum solver target. This pipeline enables high-throughput VQA benchmarking across the periodic table and gradient-based ansatz-Hamiltonian co-optimization for materials discovery. Web app: https://atomgpt.org/quantum.</description>
-    </item>
-    <item>
-      <title>CertMix: Certified, Data-Efficient Metamaterial Design by Affine Mixing of Aligned Neural-Implicit Weight Spaces</title>
-      <link>https://arxiv.org/abs/2607.04123v1</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2607.04123v1</guid>
-      <pubDate>Sun, 05 Jul 2026 05:40:01 +0000</pubDate>
-      <description>Inverse design of mechanical metamaterials seeks a periodic unit cell whose homogenized elastic properties meet a prescribed target, but current learning-based methods are data-hungry, mostly interpolative, and provide no guarantee that the generated design satisfies the specification. We introduce CertMix, a data-efficient framework that represents each exemplar unit cell as a small periodic neural implicit field, specifically a SIREN signed-distance decoder overfit from a shared anchor, so that exemplar weight vectors become aligned and directly comparable. The key observation is that, in this aligned weight space, the homogenized elasticity tensor is approximately linear in the mixing coefficients. Targeted design therefore reduces to a small constrained affine-mixing problem solved with a differentiable periodic homogenizer in the loop. Negative coefficients enable extrapolation beyond the exemplar range, a linearity-mismatch trust region keeps blends valid, and split-conformal calibration converts the mismatch signal into a distribution-free certificate on achieved-property error. From as few as 50 exemplars, CertMix attains a scaled property error of $10^{-4}$, roughly two to three orders of magnitude below conditional generative baselines trained on 1000 cells. It remains accurate far outside the exemplar range, is $57\times$ faster than per-target topology optimization while avoiding checkerboards and enclosed voids, and extends to spatially graded fields, 3D triply periodic surfaces, and a certified running-shoe midsole application.</description>
     </item>
   </channel>
 </rss>
