@@ -115,7 +115,7 @@ arXiv's API access and attribution requirements.
 
 _No new papers were found in the latest check; showing the most recent additions._
 
-*Last checked: 2026-09-25 08:16:31 (SGT)*
+*Last checked: 2026-09-26 08:21:49 (SGT)*
 
 ### 1. OMatG-flash: An All-Atom Flow Map with Reinforce Adjoint Matching for Scalable Materials Discovery
 
