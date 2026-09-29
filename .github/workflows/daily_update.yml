@@ -71,7 +71,7 @@ jobs:
       - name: Run tests and static checks
         run: |
           python -m pytest
-          python -m compileall -q arxiv_tracker.py site_renderer.py scripts tests
+          python -m compileall -q arxiv_client.py arxiv_tracker.py site_renderer.py scripts tests
           python -m ruff check .
           python scripts/prepare_site_artifact.py check
           for script in static/js/*.js; do node --check "$script"; done

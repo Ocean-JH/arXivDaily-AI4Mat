@@ -48,7 +48,7 @@ jobs:
         run: python -m pytest
 
       - name: Compile Python sources
-        run: python -m compileall -q arxiv_tracker.py site_renderer.py scripts tests
+        run: python -m compileall -q arxiv_client.py arxiv_tracker.py site_renderer.py scripts tests
 
       - name: Run static checks
         run: python -m ruff check .

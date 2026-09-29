@@ -9,6 +9,7 @@ import types
 from pathlib import Path
 
 import pytest
+import requests
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
@@ -58,6 +59,7 @@ if importlib.util.find_spec("arxiv") is None:
 
 
 from arxiv_tracker import ArxivTracker, SGT, arxiv  # noqa: E402
+from scripts.prepare_site_artifact import _validate_status  # noqa: E402
 
 
 NOW = dt.datetime(2026, 8, 1, 9, 30, tzinfo=SGT)
@@ -267,18 +269,29 @@ def test_default_client_uses_conservative_request_settings(
             super().__init__()
             client_settings.update(kwargs)
 
-    monkeypatch.setattr(arxiv, "Client", RecordingClient)
+    import arxiv_client
+
+    monkeypatch.setattr(arxiv_client, "BackoffClient", RecordingClient)
 
     assert tracker.search_papers() == []
     assert client_settings == {
-        "page_size": 100,
+        "page_size": 20,
         "delay_seconds": 10.0,
         "num_retries": 5,
+        "retry_backoff_seconds": 60.0,
+        "retry_max_seconds": 300.0,
     }
 
 
-def test_transient_api_failure_rebuilds_saved_results(tmp_path: Path) -> None:
-    error = arxiv.HTTPError("https://export.arxiv.org/api/query", 5, 429)
+@pytest.mark.parametrize("error", [
+    arxiv.HTTPError("https://export.arxiv.org/api/query", 5, 429),
+    requests.exceptions.Timeout("read timed out"),
+    requests.exceptions.ConnectionError("connection reset"),
+])
+def test_transient_api_failure_rebuilds_saved_results(
+    tmp_path: Path, error: Exception, monkeypatch: pytest.MonkeyPatch, capsys,
+) -> None:
+    monkeypatch.setenv("GITHUB_ACTIONS", "true")
     tracker = make_project(tmp_path, client=FakeClient(error=error))
     record = stored_record(tracker, "2607.00001v1", "Previously saved", 1)
     write_results(tracker, [record])
@@ -289,8 +302,24 @@ def test_transient_api_failure_rebuilds_saved_results(tmp_path: Path) -> None:
     homepage = (tmp_path / "index.html").read_text(encoding="utf-8")
     assert "Previously saved" in homepage
     assert "Showing the most recent saved additions" in homepage
+    assert "The latest arXiv refresh failed" in homepage
     assert "Rebuilt from saved data 2026-08-01 09:30 SGT" in homepage
     assert "Last checked" not in (tmp_path / "README.md").read_text(encoding="utf-8")
+    status = json.loads((tmp_path / "site-status.json").read_text(encoding="utf-8"))
+    assert status["status"] == "stale"
+    assert status["new_papers_count"] == 0
+    assert _validate_status(tmp_path / "site-status.json")["status"] == "stale"
+    assert "::warning::arXiv refresh failed" in capsys.readouterr().out
+    assert json.loads(tracker.known_papers_file.read_text(encoding="utf-8")) == {}
+    assert len(list(tracker.output_dir.glob("*.json"))) == 1
+
+    # A subsequent successful search clears the stale indication.
+    tracker.client = FakeClient([FakeResult("2609.26547v1", "Recovered paper")])
+    tracker.run_with_api_fallback()
+    status = json.loads((tmp_path / "site-status.json").read_text(encoding="utf-8"))
+    assert status["status"] == "ok"
+    assert status["new_papers_count"] == 1
+    assert "refresh failed" not in (tmp_path / "index.html").read_text(encoding="utf-8")
 
 
 def test_non_transient_api_failure_does_not_fallback(tmp_path: Path) -> None:
@@ -338,7 +367,12 @@ def test_render_failure_does_not_advance_durable_known_state(tmp_path: Path) -> 
         ({"query": "x", "archive_page_size": 0}, "archive_page_size"),
         ({"query": "x", "arxiv_page_size": 0}, "arxiv_page_size"),
         ({"query": "x", "arxiv_delay_seconds": 0}, "arxiv_delay_seconds"),
+        ({"query": "x", "arxiv_delay_seconds": 2}, "arxiv_delay_seconds"),
+        ({"query": "x", "arxiv_delay_seconds": float("nan")}, "arxiv_delay_seconds"),
         ({"query": "x", "arxiv_num_retries": -1}, "arxiv_num_retries"),
+        ({"query": "x", "arxiv_retry_backoff_seconds": 0}, "arxiv_retry_backoff_seconds"),
+        ({"query": "x", "arxiv_retry_max_seconds": 30}, "arxiv_retry_max_seconds"),
+        ({"query": "x", "arxiv_retry_max_seconds": float("inf")}, "arxiv_retry_max_seconds"),
     ],
 )
 def test_configuration_validation(tmp_path: Path, kwargs: dict, message: str) -> None:

@@ -14,8 +14,17 @@ intersection of artificial intelligence and materials science.
 - Related computational materials science research
 
 The search expression, result limit, and arXiv request pacing live in
-[`config.json`](config.json). The default client requests 100 records per page,
-waits 10 seconds between requests, and retries transient failures five times.
+[`config.json`](config.json). The default client requests up to 500 records per
+page, so the configured 500-result search normally needs just one request.
+Requests remain sequential with a 10-second delay between pages (at least
+3 seconds is required by the [arXiv API terms](https://info.arxiv.org/help/api/tou.html)).
+Temporary HTTP and network failures retry the same page up to five times, with
+60, 120, 240, then 300-second backoff and a small random delay. The starting
+backoff and cap are configurable through `arxiv_retry_backoff_seconds` and
+`arxiv_retry_max_seconds`. Server `Retry-After` instructions take precedence,
+including HTTP dates. Retries share a 15-minute wait budget across the search;
+if a cooldown exceeds the remaining budget, the search stops instead of retrying
+early. Requests have 10-second connection and 60-second read timeouts.
 See the
 [arXiv API query documentation](https://info.arxiv.org/help/api/user-manual.html#51-details-of-query-construction)
 before adapting the query for another topic.
@@ -43,13 +52,18 @@ The command contacts arXiv, updates the local paper state, and regenerates the
 README, home page, archive pages, search index, feed, sitemap, and deployment
 status. If arXiv remains unavailable with a rate-limit or server error after
 the configured retries, an existing installation rebuilds from its latest
-saved results so a temporary upstream outage does not block deployment. Review
-the resulting diff before committing it.
+saved results so a temporary upstream outage does not block deployment. A failed
+refresh displays a notice on the home page, records `"status": "stale"` in
+`site-status.json`, and emits a GitHub Actions warning. A new generation timestamp
+therefore does not imply a successful arXiv refresh. Review the resulting diff
+before committing it.
 
 ## Architecture
 
 - `arxiv_tracker.py` handles arXiv ingestion, version-aware deduplication, and
   durable state updates.
+- `arxiv_client.py` adds bounded backoff and respects server cooldowns using
+  the pinned `arxiv==2.2.0` client's parsing and pagination.
 - `site_renderer.py` renders the paginated site, search data, feeds, sitemap,
   and health metadata from normalized paper records.
 - `templates/` and `static/` contain the source HTML, CSS, JavaScript, and image
@@ -70,7 +84,7 @@ Run the same checks used by CI:
 
 ```bash
 python -m pytest
-python -m compileall -q arxiv_tracker.py site_renderer.py scripts tests
+python -m compileall -q arxiv_client.py arxiv_tracker.py site_renderer.py scripts tests
 python -m ruff check .
 python scripts/prepare_site_artifact.py check
 for script in static/js/*.js; do node --check "$script"; done

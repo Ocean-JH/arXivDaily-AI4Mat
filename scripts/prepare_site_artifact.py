@@ -209,8 +209,8 @@ def _validate_status(path: Path) -> dict[str, object]:
         raise SiteValidationError(
             f"site-status.json is missing: {', '.join(sorted(missing))}"
         )
-    if status["status"] != "ok":
-        raise SiteValidationError("site-status.json status must be 'ok'")
+    if status["status"] not in ("ok", "stale"):
+        raise SiteValidationError("site-status.json status must be 'ok' or 'stale'")
 
     try:
         generated_at = datetime.fromisoformat(str(status["generated_at"]))

@@ -7,6 +7,7 @@ import argparse
 import datetime as dt
 import json
 import logging
+import math
 import os
 import re
 import tempfile
@@ -19,6 +20,7 @@ from site_renderer import SiteRenderer
 
 try:
     import arxiv
+    from requests.exceptions import ConnectionError, Timeout
 except ModuleNotFoundError:  # Build-only mode does not need the API dependency.
     arxiv = None  # type: ignore[assignment]
 
@@ -33,6 +35,7 @@ ALLOWED_ARXIV_HOSTS = {"arxiv.org", "www.arxiv.org", "export.arxiv.org"}
 TRANSIENT_ARXIV_HTTP_STATUSES = {408, 429}
 _arxiv_error = getattr(arxiv, "ArxivError", None)
 ARXIV_ERROR_TYPES = (_arxiv_error,) if isinstance(_arxiv_error, type) else ()
+NETWORK_ERROR_TYPES = (ConnectionError, Timeout) if arxiv is not None else ()
 
 
 def _json_text(value: Any, *, indent: int | None = 2) -> str:
@@ -85,9 +88,11 @@ class ArxivTracker:
         *,
         root_dir: str | Path = ".",
         archive_page_size: int = 40,
-        arxiv_page_size: int = 100,
+        arxiv_page_size: int = 500,
         arxiv_delay_seconds: float = 10.0,
         arxiv_num_retries: int = 5,
+        arxiv_retry_backoff_seconds: float = 60.0,
+        arxiv_retry_max_seconds: float = 300.0,
         client: Any | None = None,
         now_provider: Callable[[], dt.datetime] | None = None,
     ) -> None:
@@ -100,10 +105,22 @@ class ArxivTracker:
             raise ValueError("archive_page_size must be a positive integer")
         if isinstance(arxiv_page_size, bool) or int(arxiv_page_size) <= 0:
             raise ValueError("arxiv_page_size must be a positive integer")
-        if isinstance(arxiv_delay_seconds, bool) or float(arxiv_delay_seconds) <= 0:
-            raise ValueError("arxiv_delay_seconds must be a positive number")
+        if (
+            isinstance(arxiv_delay_seconds, bool)
+            or not math.isfinite(float(arxiv_delay_seconds))
+            or float(arxiv_delay_seconds) < 3
+        ):
+            raise ValueError("arxiv_delay_seconds must be at least 3 seconds")
         if isinstance(arxiv_num_retries, bool) or int(arxiv_num_retries) < 0:
             raise ValueError("arxiv_num_retries must be a non-negative integer")
+        for name, value in (
+            ("arxiv_retry_backoff_seconds", arxiv_retry_backoff_seconds),
+            ("arxiv_retry_max_seconds", arxiv_retry_max_seconds),
+        ):
+            if isinstance(value, bool) or not math.isfinite(float(value)) or float(value) <= 0:
+                raise ValueError(f"{name} must be a positive finite number")
+        if float(arxiv_retry_max_seconds) < float(arxiv_retry_backoff_seconds):
+            raise ValueError("arxiv_retry_max_seconds must be at least arxiv_retry_backoff_seconds")
 
         self.query = query
         self.max_results = int(max_results)
@@ -111,6 +128,8 @@ class ArxivTracker:
         self.arxiv_page_size = int(arxiv_page_size)
         self.arxiv_delay_seconds = float(arxiv_delay_seconds)
         self.arxiv_num_retries = int(arxiv_num_retries)
+        self.arxiv_retry_backoff_seconds = float(arxiv_retry_backoff_seconds)
+        self.arxiv_retry_max_seconds = float(arxiv_retry_max_seconds)
         self.root_dir = Path(root_dir).resolve()
         self.output_dir = self._resolve(output_dir)
         self.known_papers_file = self._resolve(known_papers_file)
@@ -168,10 +187,14 @@ class ArxivTracker:
                 "The arxiv package is required for live searches. "
                 "Install requirements.txt or use --build-only."
             )
-        client = self.client or arxiv.Client(
-            page_size=self.arxiv_page_size,
+        from arxiv_client import BackoffClient
+
+        client = self.client or BackoffClient(
+            page_size=min(self.arxiv_page_size, self.max_results),
             delay_seconds=self.arxiv_delay_seconds,
             num_retries=self.arxiv_num_retries,
+            retry_backoff_seconds=self.arxiv_retry_backoff_seconds,
+            retry_max_seconds=self.arxiv_retry_max_seconds,
         )
         search = arxiv.Search(
             query=self.query,
@@ -363,6 +386,8 @@ class ArxivTracker:
 
     @staticmethod
     def _is_transient_arxiv_error(error: Exception) -> bool:
+        if isinstance(error, NETWORK_ERROR_TYPES):
+            return True
         if arxiv is None:
             return False
 
@@ -381,7 +406,7 @@ class ArxivTracker:
         """Run ingestion, rebuilding saved data if arXiv is temporarily unavailable."""
         try:
             return self.run(update_readme=update_readme)
-        except ARXIV_ERROR_TYPES as error:
+        except (*ARXIV_ERROR_TYPES, *NETWORK_ERROR_TYPES) as error:
             if not self._is_transient_arxiv_error(error) or not self._result_files():
                 raise
             LOGGER.warning(
@@ -390,7 +415,9 @@ class ArxivTracker:
                 error,
             )
             # Preserve the README's last successful check timestamp.
-            return self.build_from_saved(update_readme=False)
+            if os.environ.get("GITHUB_ACTIONS") == "true":
+                print("::warning::arXiv refresh failed; publishing previously saved papers.")
+            return self.build_from_saved(update_readme=False, refresh_failed=True)
 
     def _dedupe_papers(self, papers: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
         latest: dict[str, dict[str, Any]] = {}
@@ -554,6 +581,7 @@ class ArxivTracker:
         *,
         checked_at: dt.datetime | None = None,
         update_readme: bool = True,
+        refresh_failed: bool = False,
     ) -> list[dict[str, Any]]:
         timestamp = checked_at or self._now()
         all_papers = self.load_all_saved_papers()
@@ -566,6 +594,7 @@ class ArxivTracker:
             content_updated_at=content_updated_at,
             new_count=0,
             build_only=True,
+            refresh_failed=refresh_failed,
         )
         if update_readme:
             readme_path = self.root_dir / "README.md"
@@ -647,9 +676,11 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "known_papers_file": "./data/known_papers.json",
     "templates_dir": "./templates",
     "archive_page_size": 40,
-    "arxiv_page_size": 100,
+    "arxiv_page_size": 500,
     "arxiv_delay_seconds": 10.0,
     "arxiv_num_retries": 5,
+    "arxiv_retry_backoff_seconds": 60.0,
+    "arxiv_retry_max_seconds": 300.0,
 }
 
 
@@ -691,9 +722,11 @@ def main() -> int:
         known_papers_file=config["known_papers_file"],
         templates_dir=config.get("templates_dir", "./templates"),
         archive_page_size=config.get("archive_page_size", 40),
-        arxiv_page_size=config.get("arxiv_page_size", 100),
+        arxiv_page_size=config.get("arxiv_page_size", 500),
         arxiv_delay_seconds=config.get("arxiv_delay_seconds", 10.0),
         arxiv_num_retries=config.get("arxiv_num_retries", 5),
+        arxiv_retry_backoff_seconds=config["arxiv_retry_backoff_seconds"],
+        arxiv_retry_max_seconds=config["arxiv_retry_max_seconds"],
     )
     if args.build_only:
         tracker.build_from_saved(update_readme=not args.no_readme)

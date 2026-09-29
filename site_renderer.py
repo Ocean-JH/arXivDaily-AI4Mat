@@ -164,8 +164,11 @@ class SiteRenderer:
         checked_at: dt.datetime,
         new_count: int,
         build_only: bool,
+        refresh_failed: bool = False,
     ) -> str:
-        if build_only:
+        if refresh_failed:
+            message = "The latest arXiv refresh failed. Showing the most recent saved additions."
+        elif build_only:
             message = "Showing the most recent saved additions."
         elif new_count:
             noun = "paper" if new_count == 1 else "papers"
@@ -382,6 +385,7 @@ class SiteRenderer:
         content_updated_at: dt.datetime,
         new_count: int,
         build_only: bool,
+        refresh_failed: bool = False,
     ) -> tuple[dict[Path, str], set[Path]]:
         archive_documents = self._archive_documents(
             all_papers,
@@ -394,6 +398,7 @@ class SiteRenderer:
                 checked_at=checked_at,
                 new_count=new_count,
                 build_only=build_only,
+                refresh_failed=refresh_failed,
             ),
             **archive_documents,
             self.root_dir / "data/archive-search-index.json": _json_text(
@@ -412,7 +417,7 @@ class SiteRenderer:
             ),
             self.root_dir / "site-status.json": _json_text(
                 {
-                    "status": "ok",
+                    "status": "stale" if refresh_failed else "ok",
                     "generated_at": checked_at.isoformat(),
                     "new_papers_count": new_count,
                     "latest_batch_count": len(latest_papers),
