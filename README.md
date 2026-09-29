@@ -111,25 +111,23 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (1)
+## New Papers (1)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-09-29 09:28:16 (SGT)*
 
-*Last checked: 2026-09-28 08:17:20 (SGT)*
+### 1. Knowledge-Driven XRD Phase Identification via Multi-View Retrieval and Explanation
 
-### 1. OMatG-flash: An All-Atom Flow Map with Reinforce Adjoint Matching for Scalable Materials Discovery
+**Authors:** Doaa Mohamed, Markus Stricker
 
-**Authors:** Thomas Egg, Harry Winston Sullivan, Ellad B. Tadmor, Stefano Martiniani
+**Published:** 2026-09-25
 
-**Published:** 2026-09-22
+**Category:** cond-mat.mtrl-sci
 
-**Category:** cs.LG
+**ID:** 2609.31888v1
 
-**ID:** 2609.26402v1
+**Link:** [https://arxiv.org/abs/2609.31888v1](https://arxiv.org/abs/2609.31888v1)
 
-**Link:** [https://arxiv.org/abs/2609.26402v1](https://arxiv.org/abs/2609.26402v1)
-
-**Summary:** The discovery of novel inorganic materials drives technological breakthroughs in critical fields such as computing and energy storage. Generative AI has promised to accelerate the materials discovery pipeline, but state-of-the-art flow and diffusion models remain bottlenecked by the cost of proposing candidate materials. To address this, we introduce OMatG-flash, an all-atom flow map for inorganic crystal structure prediction (CSP) and de novo generation (DNG). OMatG-flash is a Pareto-optimal inference engine for materials, sampling candidate materials with an order of magnitude fewer inference steps and less wall-clock time than existing flow and diffusion models while demonstrating benchmark performance on par with the state-of-the-art. To enable post-training fine-tuning we apply Reinforce Adjoint Matching to flow maps, further improving match rates and RMSE on the unconditional CSP task. OMatG-flash showcases the potential of flow maps to accelerate generation of high-quality candidate inorganic materials and demonstrates a step forward in sample throughput necessary for data-hungry materials discovery workflows.
+**Summary:** X-ray diffraction (XRD) is a experimental technique for determining the phase composition and structure of crystalline materials. However, interpreting XRD patterns is challenging, particularly in high-throughput materials discovery, where many novel materials may need to be characterized and no reference patterns are available. Consequently, machine learning is increasingly used to accelerate and automate the analysis while reducing errors associated with human interpretation. We propose a multi-decision framework for XRD phase analysis that integrates representation learning, similarity-based retrieval, and explainable decision support within a unified reference database. A convolutional autoencoder learns compact latent representations of XRD patterns that preserve structural similarity while remaining robust to variations arising from experimental noise and measurement conditions. By integrating multiple decision pathways within a shared latent space, the framework moves beyond single-label prediction toward ranked and interpretable phase analysis that mirrors expert practice. During inference, complementary decision mechanisms are applied, including latent-space classification and retrieval, explanation-guided similarity using Integrated Gradients, and composition-based similarity search. These mechanisms generate ranked candidate phase lists that are aggregated into a final prediction with an associated confidence score. Experiments on synthetic datasets demonstrate strong predictive performance, achieving 98.85\\,\\% accuracy for crystal system classification and 95.82\\,\\% accuracy for space group prediction on the test set, while maintaining robustness under realistic perturbations. The framework supports reliable, analyst-friendly identification of crystal phases and structures in high-throughput and exploratory materials discovery settings.
 
 ---
 

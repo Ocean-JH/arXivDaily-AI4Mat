@@ -1,0 +1,27 @@
+[
+  {
+    "authors": [
+      "Doaa Mohamed",
+      "Markus Stricker"
+    ],
+    "base_id": "2609.31888",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.LG"
+    ],
+    "comment": "12 pages, 5 figures, conference proceeding",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2609.31888v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2609.31888v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-09-25T18:25:51+00:00",
+    "short_id": "2609.31888v1",
+    "status": "new",
+    "summary": "X-ray diffraction (XRD) is a experimental technique for determining the phase composition and structure of crystalline materials. However, interpreting XRD patterns is challenging, particularly in high-throughput materials discovery, where many novel materials may need to be characterized and no reference patterns are available. Consequently, machine learning is increasingly used to accelerate and automate the analysis while reducing errors associated with human interpretation. We propose a multi-decision framework for XRD phase analysis that integrates representation learning, similarity-based retrieval, and explainable decision support within a unified reference database. A convolutional autoencoder learns compact latent representations of XRD patterns that preserve structural similarity while remaining robust to variations arising from experimental noise and measurement conditions. By integrating multiple decision pathways within a shared latent space, the framework moves beyond single-label prediction toward ranked and interpretable phase analysis that mirrors expert practice. During inference, complementary decision mechanisms are applied, including latent-space classification and retrieval, explanation-guided similarity using Integrated Gradients, and composition-based similarity search. These mechanisms generate ranked candidate phase lists that are aggregated into a final prediction with an associated confidence score. Experiments on synthetic datasets demonstrate strong predictive performance, achieving 98.85\\,\\% accuracy for crystal system classification and 95.82\\,\\% accuracy for space group prediction on the test set, while maintaining robustness under realistic perturbations. The framework supports reliable, analyst-friendly identification of crystal phases and structures in high-throughput and exploratory materials discovery settings.",
+    "title": "Knowledge-Driven XRD Phase Identification via Multi-View Retrieval and Explanation",
+    "updated": "2026-09-25T18:25:51+00:00",
+    "url": "https://arxiv.org/abs/2609.31888v1",
+    "version": 1
+  }
+]
