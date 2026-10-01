@@ -1,0 +1,87 @@
+[
+  {
+    "authors": [
+      "Emma Lei Hovmand",
+      "Jonas Elsborg",
+      "Melih Kandemir",
+      "Arghya Bhowmik"
+    ],
+    "base_id": "2609.33407",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.LG",
+      "physics.comp-ph"
+    ],
+    "comment": "52 pages, 2 figures, 23 tables",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2609.33407v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2609.33407v2",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-09-27T09:35:34+00:00",
+    "short_id": "2609.33407v2",
+    "status": "update",
+    "summary": "De novo crystal generation (DNG) models decide where to search in composition space and how to generate structures with one set of weights. We argue that discovery is better served by separating the two. A crystal structure prediction (CSP) model is a physical prior that should be improved by likelihood training, while rewards, including novelty measured against the search's own history, should act on a search over compositions. We introduce ANCHOR, a GRPO composition policy trained with multi-objective rewards around a frozen CSP model, and continuous adaptive novelty (CAN), a graded novelty score against known structures and a growing discovery history. Using the frozen CSP model as a fixed ruler under one evaluator, we test where adaptation should act. Replacing DNG compositions with ANCHOR's policy on the same CSP backbone raises MSUN from 11.4% to 47.6% and SUN from 1.1% to 22.1% at 99.9% formula uniqueness. Fine-tuning DNG models directly on the same rewards instead moves their composition marginal without raising their on-hull fraction. We show that KL-regularized fine-tuning of a DNG model can only reweight chemistry the pretrained model already supports by a bounded factor, while unregularized DNG fine-tunes move toward known or less stable chemistry. Even a stability-only reward routed into ANCHOR's CSP backbone roughly halves SUN relative to the frozen backbone, whereas likelihood training on structures found during search can improve a CSP backbone. Under MatterGen's evaluation pipeline, ANCHOR raises state-of-the-art MSUN from 29.2% to 41.3%, transfers without retraining to two further CSP backbones, and reaches 47.1% after distillation into Crystalite-CSP. As with any model optimised against a potential, its on-hull rate depends on that potential.",
+    "title": "Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors",
+    "updated": "2026-09-30T06:15:43+00:00",
+    "url": "https://arxiv.org/abs/2609.33407v2",
+    "version": 2
+  },
+  {
+    "authors": [
+      "Auguste de Lambilly",
+      "Vladimir Baturin",
+      "David Portehault",
+      "Guillaume Lambard",
+      "Nataliya Sokolovska",
+      "Florence d'Alché-Buc",
+      "Jean-Claude Crivello"
+    ],
+    "base_id": "2604.13354",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.AI"
+    ],
+    "comment": "Full article including supplementary information, 63 pages",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2604.13354v4",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2604.13354v4",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-04-14T23:25:54+00:00",
+    "short_id": "2604.13354v4",
+    "status": "update",
+    "summary": "Generative diffusion models have emerged as powerful tools for the discovery of inorganic crystal structures, yet steering their sampling process toward user-defined physical and chemical objectives remains challenging. We present a computational framework that integrates adaptive constraint guidance into a pre-trained crystal diffusion model, enabling the generation of candidate structures that satisfy targeted structural and chemical requirements without model retraining. The approach incorporates differentiable constraint functions directly during sampling, providing an interpretable mechanism for expert-driven exploration of the crystal structure space. To assess the reliability of generated candidates, we introduce a multi-stage validation workflow combining descriptor-based analysis, duplicate removal, comparison with reference crystal databases, graph neural network energy prediction, and thermodynamic stability evaluation through convex-hull analysis. The framework is applied to several classes of inorganic compounds and to constraints involving atomic volume, local coordination environments, and near-neighbor structural motifs. Results demonstrate that adaptive guidance effectively redirects the sampling distribution toward structures exhibiting the desired characteristics while preserving chemical plausibility. Subsequent validation reveals which generated candidates remain viable after energetic and thermodynamic screening. The proposed methodology provides a practical and transparent strategy for incorporating expert knowledge into crystal generative models and establishes a general computational framework for constrained materials discovery.",
+    "title": "Finetuning-Free Diffusion Model with Adaptive Constraint Guidance for Inorganic Crystal Structure Generation",
+    "updated": "2026-09-30T04:52:09+00:00",
+    "url": "https://arxiv.org/abs/2604.13354v4",
+    "version": 4
+  },
+  {
+    "authors": [
+      "Haocheng Tang",
+      "Junmei Wang",
+      "Wengong Jin"
+    ],
+    "base_id": "2609.36398",
+    "categories": [
+      "q-bio.BM",
+      "cs.AI",
+      "cs.CE"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2609.36398v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2609.36398v1",
+    "primary_category": "q-bio.BM",
+    "published": "2026-09-28T23:53:27+00:00",
+    "short_id": "2609.36398v1",
+    "status": "new",
+    "summary": "Generative models make molecular crystal structure prediction fast, but their samples still exhibit geometric and packing violations. Physics can be introduced during training, post-training, or inference, yet these choices are rarely compared with the generator and physical signal held fixed. We introduce CrystAF, an all-atom crystal flow-map generation model, and use it with the UMA interatomic potential to systematically study where physics should enter. Post-training learns physical preferences directly into CrystAF, improving molecular validity and crystal packing while leaving sampling unchanged: physics is paid for once during training rather than repeatedly at deployment. In contrast, UMA relaxation is effective at repairing local clashes but makes generation 6--26$\\times$ slower, while learning from relaxed targets provides little benefit. These routes are complementary rather than competing. Physics-informed post-training first shifts the generated distribution toward more physically reasonable structures, after which inexpensive inference-time corrections further remove clashes and restore stereochemistry that the generator cannot represent. Importantly, the same post-training strategy also improves the multi-step all-atom Clari-M and rigid-body MolCrystalFlow generators, demonstrating transfer across architectures and representations. Together, our results suggest a simple principle: learn reusable physical alignment into the generator, and reserve inference-time physics for residual constraints that are better corrected than learned.",
+    "title": "Where Should Physics Enter a Molecular Crystal Generator?",
+    "updated": "2026-09-28T23:53:27+00:00",
+    "url": "https://arxiv.org/abs/2609.36398v1",
+    "version": 1
+  }
+]
