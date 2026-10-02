@@ -1,8 +1,8 @@
 {
   "archive_pages": 48,
-  "generated_at": "2026-10-01T09:03:30.400031+08:00",
+  "generated_at": "2026-10-02T09:31:47.338540+08:00",
   "latest_batch_count": 3,
-  "new_papers_count": 3,
-  "status": "ok",
+  "new_papers_count": 0,
+  "status": "stale",
   "total_papers": 1882
 }
