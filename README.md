@@ -125,55 +125,71 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (3)
+## New Papers (4)
 
-*Last checked: 2026-10-01 09:03:30 (SGT)*
+*Last checked: 2026-10-03 08:55:33 (SGT)*
 
-### 1. Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors
+### 1. GEODE: Symmetry-Preserving Cartesian Diffusion for Crystal Generation
 
-**Authors:** Emma Lei Hovmand, Jonas Elsborg, Melih Kandemir, Arghya Bhowmik
+**Authors:** Yuchen Lou, Alex M. Ganose
 
-**Published:** 2026-09-27
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2609.33407v2
-
-**Link:** [https://arxiv.org/abs/2609.33407v2](https://arxiv.org/abs/2609.33407v2)
-
-**Summary:** De novo crystal generation (DNG) models decide where to search in composition space and how to generate structures with one set of weights. We argue that discovery is better served by separating the two. A crystal structure prediction (CSP) model is a physical prior that should be improved by likelihood training, while rewards, including novelty measured against the search's own history, should act on a search over compositions. We introduce ANCHOR, a GRPO composition policy trained with multi-objective rewards around a frozen CSP model, and continuous adaptive novelty (CAN), a graded novelty score against known structures and a growing discovery history. Using the frozen CSP model as a fixed ruler under one evaluator, we test where adaptation should act. Replacing DNG compositions with ANCHOR's policy on the same CSP backbone raises MSUN from 11.4% to 47.6% and SUN from 1.1% to 22.1% at 99.9% formula uniqueness. Fine-tuning DNG models directly on the same rewards instead moves their composition marginal without raising their on-hull fraction. We show that KL-regularized fine-tuning of a DNG model can only reweight chemistry the pretrained model already supports by a bounded factor, while unregularized DNG fine-tunes move toward known or less stable chemistry. Even a stability-only reward routed into ANCHOR's CSP backbone roughly halves SUN relative to the frozen backbone, whereas likelihood training on structures found during search can improve a CSP backbone. Under MatterGen's evaluation pipeline, ANCHOR raises state-of-the-art MSUN from 29.2% to 41.3%, transfers without retraining to two further CSP backbones, and reaches 47.1% after distillation into Crystalite-CSP. As with any model optimised against a potential, its on-hull rate depends on that potential.
-
----
-
-### 2. Finetuning-Free Diffusion Model with Adaptive Constraint Guidance for Inorganic Crystal Structure Generation
-
-**Authors:** Auguste de Lambilly, Vladimir Baturin, David Portehault, Guillaume Lambard, Nataliya Sokolovska, Florence d'Alché-Buc, Jean-Claude Crivello
-
-**Published:** 2026-04-14
+**Published:** 2026-10-01
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2604.13354v4
+**ID:** 2610.01898v1
 
-**Link:** [https://arxiv.org/abs/2604.13354v4](https://arxiv.org/abs/2604.13354v4)
+**Link:** [https://arxiv.org/abs/2610.01898v1](https://arxiv.org/abs/2610.01898v1)
 
-**Summary:** Generative diffusion models have emerged as powerful tools for the discovery of inorganic crystal structures, yet steering their sampling process toward user-defined physical and chemical objectives remains challenging. We present a computational framework that integrates adaptive constraint guidance into a pre-trained crystal diffusion model, enabling the generation of candidate structures that satisfy targeted structural and chemical requirements without model retraining. The approach incorporates differentiable constraint functions directly during sampling, providing an interpretable mechanism for expert-driven exploration of the crystal structure space. To assess the reliability of generated candidates, we introduce a multi-stage validation workflow combining descriptor-based analysis, duplicate removal, comparison with reference crystal databases, graph neural network energy prediction, and thermodynamic stability evaluation through convex-hull analysis. The framework is applied to several classes of inorganic compounds and to constraints involving atomic volume, local coordination environments, and near-neighbor structural motifs. Results demonstrate that adaptive guidance effectively redirects the sampling distribution toward structures exhibiting the desired characteristics while preserving chemical plausibility. Subsequent validation reveals which generated candidates remain viable after energetic and thermodynamic screening. The proposed methodology provides a practical and transparent strategy for incorporating expert knowledge into crystal generative models and establishes a general computational framework for constrained materials discovery.
+**Summary:** Most known inorganic crystals exhibit symmetric atomic arrangements, yet generative models often fail to reproduce them. Explicitly enforcing these symmetries has so far yielded fewer stable and novel structures than unconstrained generation. We introduce Generative Equivariant Orbit Diffusion Engine (GEODE), to our knowledge the first model to combine coordinate and lattice diffusion in Cartesian space. GEODE first samples symmetry templates, then jointly generates the lattice, atomic coordinates and atom types while preserving the specified symmetry with a novel Wyckoff-constrained loss. Cartesian diffusion gives coordinate noise a consistent physical scale that we empirically demonstrate improves performance. Unconditional generation achieves a metastable, unique and novel (mSUN) rate of 11.9%, compared with 7.7% for the next best symmetry-aware model. We also introduce sampling time template filtering, which increases mSUN by ~6% without retraining, making GEODE competitive with leading symmetry-agnostic models. Template selection also enables joint symmetry and property guidance, which we demonstrate through classifier-free guidance of permittivity.
 
 ---
 
-### 3. Where Should Physics Enter a Molecular Crystal Generator?
+### 2. EP-Flow: Disordered Crystal Structure Prediction without Site-Level Annotations
 
-**Authors:** Haocheng Tang, Junmei Wang, Wengong Jin
+**Authors:** Qiuliang Liu, Liming Wu, Qi Li, Zhonglong Peng, Chang Chen, Xiaolong Chen, Wenbing Huang, Shifeng Jin
 
-**Published:** 2026-09-28
+**Published:** 2026-10-01
 
-**Category:** q-bio.BM
+**Category:** cs.LG
 
-**ID:** 2609.36398v1
+**ID:** 2610.01315v1
 
-**Link:** [https://arxiv.org/abs/2609.36398v1](https://arxiv.org/abs/2609.36398v1)
+**Link:** [https://arxiv.org/abs/2610.01315v1](https://arxiv.org/abs/2610.01315v1)
 
-**Summary:** Generative models make molecular crystal structure prediction fast, but their samples still exhibit geometric and packing violations. Physics can be introduced during training, post-training, or inference, yet these choices are rarely compared with the generator and physical signal held fixed. We introduce CrystAF, an all-atom crystal flow-map generation model, and use it with the UMA interatomic potential to systematically study where physics should enter. Post-training learns physical preferences directly into CrystAF, improving molecular validity and crystal packing while leaving sampling unchanged: physics is paid for once during training rather than repeatedly at deployment. In contrast, UMA relaxation is effective at repairing local clashes but makes generation 6--26$\\times$ slower, while learning from relaxed targets provides little benefit. These routes are complementary rather than competing. Physics-informed post-training first shifts the generated distribution toward more physically reasonable structures, after which inexpensive inference-time corrections further remove clashes and restore stereochemistry that the generator cannot represent. Importantly, the same post-training strategy also improves the multi-step all-atom Clari-M and rigid-body MolCrystalFlow generators, demonstrating transfer across architectures and representations. Together, our results suggest a simple principle: learn reusable physical alignment into the generator, and reserve inference-time physics for residual constraints that are better corrected than learned.
+**Summary:** Generative models have made rapid progress in ordered crystal structure prediction, yet many functional materials are intrinsically disordered, with substitutional mixing, vacancies, or interstitial species controlling their properties. Existing crystal generators either assume deterministic site occupations or require site-level disorder annotations, which are often unavailable when the chemical formula is the primary input. We formulate disordered crystal structure prediction through an Occupancy Distribution Matrix (ODM), a continuous site-by-species representation that unifies ordered crystals, solid solutions, vacancy disorder, and interstitial occupancy. A valid ODM must satisfy coupled site-wise occupancy, mass-conservation, and non-negativity constraints, placing each sample on a formula-dependent transportation polytope. We propose Entropic Polytope Flow (EP-Flow), a marginal-constrained flow matching framework that canonicalizes heterogeneous polytopes into a shared double-centered space, learns a marginal-preserving flow, and recovers feasible occupancies through a Sinkhorn inverse map. By jointly generating occupancies, fractional coordinates, and lattice parameters, EP-Flow achieves state-of-the-art performance on formula-conditioned disordered CSP benchmarks derived from COD and MPDS, substantially outperforming adapted ordered-crystal generators. Analyses further show that EP-Flow recovers sparse and chemically meaningful local disorder patterns rather than merely matching global composition statistics.
+
+---
+
+### 3. Imaging Surface Magnetization in Altermagnetic MnTe Films
+
+**Authors:** Ling-Jie Zhou, Senlei Li, Zi-Jie Yan, Yufei Zhao, Hongtao Rong, Zelong Xiong, Yiran Zhao, Zhaorong Gu, Pu Xiao, Ke Wang, Lok Kan Lai, Hyeonhu Bae, Haoyu Liu, Chao-Xing Liu, Binghai Yan, Cui-Zu Chang, Hailong Wang, Chunhui Rita Du
+
+**Published:** 2026-05-24
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2605.25241v2
+
+**Link:** [https://arxiv.org/abs/2605.25241v2](https://arxiv.org/abs/2605.25241v2)
+
+**Summary:** Altermagnets with pronounced spin-splitting band structure, unconventional magnetic and crystal symmetries, and exotic magneto-transport properties have received immense interest in cutting-edge spintronics, materials science, and condensed matter physics research. Microscopic imaging of spontaneous magnetic domains and phases in altermagnets constitutes an important step for investigating their underlying material properties, mechanisms, and spin behaviors. Taking advantage of scanning-probe quantum microscopy, here we report nanoscale quantum sensing of a prototypical altermagnet candidate $α$-MnTe. We visualize evanescent magnetization and the associated magnetic domains in epitaxial MnTe films, which allows external magnetic fields to control the intrinsic altermagnetic order and configurations. By evaluating a series of MnTe films with different thicknesses down to the atomic scale, we further present evidence for the interfacial origin of the observed weak magnetization and show its correlation with the anomalous Hall effect in MnTe film. Our results advance the current understanding of emergent altermagnetism, providing insights into future material design of altermagnet-integrated spintronic devices.
+
+---
+
+### 4. Riemannian Flow Models with Reinforcement Learning for Molecular Crystal Structure Prediction
+
+**Authors:** Thomas Egg, Harry Winston Sullivan, Maya M. Martirossyan, Philipp Höllmer, Cheng Zeng, Adrian Roitberg, Mingjie Liu, Richard Hennig, Sapna Sarupria, Ellad B. Tadmor, Stefano Martiniani
+
+**Published:** 2026-09-30
+
+**Category:** cs.LG
+
+**ID:** 2609.39773v1
+
+**Link:** [https://arxiv.org/abs/2609.39773v1](https://arxiv.org/abs/2609.39773v1)
+
+**Summary:** Crystal structure governs material properties, making crystal structure prediction (CSP) a fundamental problem in materials science. Generative models are a promising approach for solving this problem, but the prevalence of polymorphism, coupled with large unit cells and complex packing geometry, makes the molecular CSP task challenging for existing models. To address this, we introduce Coarse-Grained Open Materials Generation (CG-OMatG), an equivariant Riemannian flow-based generative model. CG-OMatG predicts molecular crystal structures \\textit{via} a coarse-grained, hierarchical representation. CG-OMatG treats molecules as rigid bodies---performing both inter- and intra-molecular message passing to construct a geometric representation for molecular packings---and learns to reconstruct molecule centroid positions, orientations, and lattice parameters, conditioned on chemical species and conformer geometry. We train the model on subsets of the Open Molecular Crystals (OMC25) and Cambridge Structural Database (CSD) datasets. Further, we fine-tune the model \\textit{via} policy gradient reinforcement learning to steer the model towards generating low-energy candidate structures. We validate the generated structures on the CSP blind test benchmark, assessing agreement with experimentally determined crystals using COMPACK packing-similarity analysis. CG-OMatG exhibits strong performance for generative molecular crystal structure prediction, paving the way for accelerated polymorph screening and organic solid-state materials discovery.
 
 ---
 

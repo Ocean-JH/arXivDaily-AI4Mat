@@ -1,0 +1,132 @@
+[
+  {
+    "authors": [
+      "Yuchen Lou",
+      "Alex M. Ganose"
+    ],
+    "base_id": "2610.01898",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": "28 pages, 6 figures, 11 tables",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2610.01898v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2610.01898v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-10-01T15:46:50+00:00",
+    "short_id": "2610.01898v1",
+    "status": "new",
+    "summary": "Most known inorganic crystals exhibit symmetric atomic arrangements, yet generative models often fail to reproduce them. Explicitly enforcing these symmetries has so far yielded fewer stable and novel structures than unconstrained generation. We introduce Generative Equivariant Orbit Diffusion Engine (GEODE), to our knowledge the first model to combine coordinate and lattice diffusion in Cartesian space. GEODE first samples symmetry templates, then jointly generates the lattice, atomic coordinates and atom types while preserving the specified symmetry with a novel Wyckoff-constrained loss. Cartesian diffusion gives coordinate noise a consistent physical scale that we empirically demonstrate improves performance. Unconditional generation achieves a metastable, unique and novel (mSUN) rate of 11.9%, compared with 7.7% for the next best symmetry-aware model. We also introduce sampling time template filtering, which increases mSUN by ~6% without retraining, making GEODE competitive with leading symmetry-agnostic models. Template selection also enables joint symmetry and property guidance, which we demonstrate through classifier-free guidance of permittivity.",
+    "title": "GEODE: Symmetry-Preserving Cartesian Diffusion for Crystal Generation",
+    "updated": "2026-10-01T15:46:50+00:00",
+    "url": "https://arxiv.org/abs/2610.01898v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Qiuliang Liu",
+      "Liming Wu",
+      "Qi Li",
+      "Zhonglong Peng",
+      "Chang Chen",
+      "Xiaolong Chen",
+      "Wenbing Huang",
+      "Shifeng Jin"
+    ],
+    "base_id": "2610.01315",
+    "categories": [
+      "cs.LG",
+      "cond-mat.dis-nn"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2610.01315v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2610.01315v1",
+    "primary_category": "cs.LG",
+    "published": "2026-10-01T08:47:20+00:00",
+    "short_id": "2610.01315v1",
+    "status": "new",
+    "summary": "Generative models have made rapid progress in ordered crystal structure prediction, yet many functional materials are intrinsically disordered, with substitutional mixing, vacancies, or interstitial species controlling their properties. Existing crystal generators either assume deterministic site occupations or require site-level disorder annotations, which are often unavailable when the chemical formula is the primary input. We formulate disordered crystal structure prediction through an Occupancy Distribution Matrix (ODM), a continuous site-by-species representation that unifies ordered crystals, solid solutions, vacancy disorder, and interstitial occupancy. A valid ODM must satisfy coupled site-wise occupancy, mass-conservation, and non-negativity constraints, placing each sample on a formula-dependent transportation polytope. We propose Entropic Polytope Flow (EP-Flow), a marginal-constrained flow matching framework that canonicalizes heterogeneous polytopes into a shared double-centered space, learns a marginal-preserving flow, and recovers feasible occupancies through a Sinkhorn inverse map. By jointly generating occupancies, fractional coordinates, and lattice parameters, EP-Flow achieves state-of-the-art performance on formula-conditioned disordered CSP benchmarks derived from COD and MPDS, substantially outperforming adapted ordered-crystal generators. Analyses further show that EP-Flow recovers sparse and chemically meaningful local disorder patterns rather than merely matching global composition statistics.",
+    "title": "EP-Flow: Disordered Crystal Structure Prediction without Site-Level Annotations",
+    "updated": "2026-10-01T08:47:20+00:00",
+    "url": "https://arxiv.org/abs/2610.01315v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Ling-Jie Zhou",
+      "Senlei Li",
+      "Zi-Jie Yan",
+      "Yufei Zhao",
+      "Hongtao Rong",
+      "Zelong Xiong",
+      "Yiran Zhao",
+      "Zhaorong Gu",
+      "Pu Xiao",
+      "Ke Wang",
+      "Lok Kan Lai",
+      "Hyeonhu Bae",
+      "Haoyu Liu",
+      "Chao-Xing Liu",
+      "Binghai Yan",
+      "Cui-Zu Chang",
+      "Hailong Wang",
+      "Chunhui Rita Du"
+    ],
+    "base_id": "2605.25241",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cond-mat.mes-hall"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2605.25241v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2605.25241v2",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-05-24T19:58:43+00:00",
+    "short_id": "2605.25241v2",
+    "status": "update",
+    "summary": "Altermagnets with pronounced spin-splitting band structure, unconventional magnetic and crystal symmetries, and exotic magneto-transport properties have received immense interest in cutting-edge spintronics, materials science, and condensed matter physics research. Microscopic imaging of spontaneous magnetic domains and phases in altermagnets constitutes an important step for investigating their underlying material properties, mechanisms, and spin behaviors. Taking advantage of scanning-probe quantum microscopy, here we report nanoscale quantum sensing of a prototypical altermagnet candidate $α$-MnTe. We visualize evanescent magnetization and the associated magnetic domains in epitaxial MnTe films, which allows external magnetic fields to control the intrinsic altermagnetic order and configurations. By evaluating a series of MnTe films with different thicknesses down to the atomic scale, we further present evidence for the interfacial origin of the observed weak magnetization and show its correlation with the anomalous Hall effect in MnTe film. Our results advance the current understanding of emergent altermagnetism, providing insights into future material design of altermagnet-integrated spintronic devices.",
+    "title": "Imaging Surface Magnetization in Altermagnetic MnTe Films",
+    "updated": "2026-09-30T19:28:33+00:00",
+    "url": "https://arxiv.org/abs/2605.25241v2",
+    "version": 2
+  },
+  {
+    "authors": [
+      "Thomas Egg",
+      "Harry Winston Sullivan",
+      "Maya M. Martirossyan",
+      "Philipp Höllmer",
+      "Cheng Zeng",
+      "Adrian Roitberg",
+      "Mingjie Liu",
+      "Richard Hennig",
+      "Sapna Sarupria",
+      "Ellad B. Tadmor",
+      "Stefano Martiniani"
+    ],
+    "base_id": "2609.39773",
+    "categories": [
+      "cs.LG",
+      "physics.comp-ph"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2609.39773v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2609.39773v1",
+    "primary_category": "cs.LG",
+    "published": "2026-09-30T14:00:39+00:00",
+    "short_id": "2609.39773v1",
+    "status": "new",
+    "summary": "Crystal structure governs material properties, making crystal structure prediction (CSP) a fundamental problem in materials science. Generative models are a promising approach for solving this problem, but the prevalence of polymorphism, coupled with large unit cells and complex packing geometry, makes the molecular CSP task challenging for existing models. To address this, we introduce Coarse-Grained Open Materials Generation (CG-OMatG), an equivariant Riemannian flow-based generative model. CG-OMatG predicts molecular crystal structures \\textit{via} a coarse-grained, hierarchical representation. CG-OMatG treats molecules as rigid bodies---performing both inter- and intra-molecular message passing to construct a geometric representation for molecular packings---and learns to reconstruct molecule centroid positions, orientations, and lattice parameters, conditioned on chemical species and conformer geometry. We train the model on subsets of the Open Molecular Crystals (OMC25) and Cambridge Structural Database (CSD) datasets. Further, we fine-tune the model \\textit{via} policy gradient reinforcement learning to steer the model towards generating low-energy candidate structures. We validate the generated structures on the CSP blind test benchmark, assessing agreement with experimentally determined crystals using COMPACK packing-similarity analysis. CG-OMatG exhibits strong performance for generative molecular crystal structure prediction, paving the way for accelerated polymorph screening and organic solid-state materials discovery.",
+    "title": "Riemannian Flow Models with Reinforcement Learning for Molecular Crystal Structure Prediction",
+    "updated": "2026-09-30T14:00:39+00:00",
+    "url": "https://arxiv.org/abs/2609.39773v1",
+    "version": 1
+  }
+]
