@@ -125,9 +125,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (4)
+## Latest Papers (4)
 
-*Last checked: 2026-10-03 08:55:33 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-10-04 08:21:30 (SGT)*
 
 ### 1. GEODE: Symmetry-Preserving Cartesian Diffusion for Crystal Generation
 
