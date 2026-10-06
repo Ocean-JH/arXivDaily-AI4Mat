@@ -14,8 +14,12 @@ intersection of artificial intelligence and materials science.
 - Related computational materials science research
 
 The search expression, result limit, and arXiv request pacing live in
-[`config.json`](config.json). The default client requests up to 500 records per
-page, so the configured 500-result search normally needs just one request.
+[`config.json`](config.json). The default client requests up to 100 records per
+page, retaining the configured 500-result search limit. Smaller pages reduce
+response time and avoid repeatedly requesting a large response during arXiv
+server failures. HTTP 5xx errors and read timeouts halve the failing page size
+down to 25 records, keeping the same offset and using the smaller size for later
+pages. Rate limits (HTTP 429) keep the same request and respect the cooldown.
 Requests remain sequential with a 10-second delay between pages (at least
 3 seconds is required by the [arXiv API terms](https://info.arxiv.org/help/api/tou.html)).
 Temporary HTTP and network failures retry the same page up to five times, with
@@ -100,7 +104,9 @@ manually dispatched. It tests the project before generation, commits generated
 changes with the GitHub Actions bot, packages only public files, and deploys
 them through the protected `github-pages` environment. A final smoke check
 compares the deployed `site-status.json` timestamp with the artifact from the
-same run, so a stale deployment fails visibly.
+same run and requires `"status": "ok"`. Saved content is still deployed during
+an arXiv outage, but the workflow then fails explicitly so a successful
+deployment cannot hide a failed refresh.
 
 The deployment requires **GitHub Actions** under **Settings → Pages → Source**.
 The workflow rejects every other publishing source before generation begins.

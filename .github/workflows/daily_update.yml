@@ -146,12 +146,18 @@ jobs:
       - deploy
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    permissions: {}
+    permissions:
+      contents: read
     env:
       EXPECTED_GENERATED_AT: ${{ needs.update.outputs.generated_at }}
       PAGE_URL: ${{ needs.deploy.outputs.page_url }}
 
     steps:
+      - name: Check out verification script
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
       - name: Compare deployed site status
         shell: bash
         run: |
@@ -163,10 +169,13 @@ jobs:
               --max-time 10 \
               --header "Cache-Control: no-cache" \
               "$status_url" --output deployed-status.json; then
-              if deployed_generated_at="$(python3 -c 'import json; print(json.load(open("deployed-status.json", encoding="utf-8"))["generated_at"])')" &&
-                [[ "$deployed_generated_at" == "$EXPECTED_GENERATED_AT" ]]; then
-                echo "Deployment is current at ${deployed_generated_at}."
+              verification_status=0
+              python3 scripts/verify_site_status.py deployed-status.json \
+                --expected-generated-at "$EXPECTED_GENERATED_AT" || verification_status=$?
+              if [[ "$verification_status" == 0 ]]; then
                 exit 0
+              elif [[ "$verification_status" == 2 ]]; then
+                exit 1
               fi
             fi
             echo "Attempt ${attempt}: waiting for the deployed status to become current."
