@@ -94,16 +94,18 @@ def test_network_failure_does_not_reuse_previous_retry_after(monkeypatch):
     assert sleeps == [180, 120]
 
 
-def test_excessive_retry_after_stops_without_an_early_retry(monkeypatch):
-    client, calls, sleeps = mock_client(monkeypatch, [response(429, retry_after="3600")])
+@pytest.mark.parametrize("status", [429, 503])
+def test_excessive_retry_after_stops_without_an_early_retry(monkeypatch, status):
+    client, calls, sleeps = mock_client(monkeypatch, [response(status, retry_after="3600")])
     with pytest.raises(arxiv.HTTPError):
         search(client)
     assert len(calls) == 1
     assert sleeps == []
 
 
-def test_wait_budget_bounds_persistent_failures(monkeypatch):
-    client, calls, sleeps = mock_client(monkeypatch, [response(429)] * 6)
+@pytest.mark.parametrize("status", [429, 503])
+def test_wait_budget_bounds_persistent_failures(monkeypatch, status):
+    client, calls, sleeps = mock_client(monkeypatch, [response(status)] * 6)
     with pytest.raises(arxiv.HTTPError):
         search(client)
     assert len(calls) == 5
@@ -164,3 +166,94 @@ def test_jitter_never_reduces_backoff(monkeypatch):
     monkeypatch.setattr(arxiv_client.random, "uniform", lambda _start, end: end)
     search(client)
     assert sleeps == [66]
+
+
+@pytest.mark.parametrize("failure", [
+    response(500), response(502), response(503),
+    requests.exceptions.ReadTimeout("response took too long"),
+])
+def test_overloaded_page_retries_a_smaller_request_with_same_search(monkeypatch, failure):
+    client, calls, sleeps = mock_client(monkeypatch, [failure, response()])
+    query = '(cat:cond-mat.mtrl-sci OR cat:cs.LG) AND all:"crystal structure"'
+    request = arxiv.Search(
+        query=query,
+        max_results=500,
+        sort_by=arxiv.SortCriterion.LastUpdatedDate,
+        sort_order=arxiv.SortOrder.Descending,
+    )
+
+    assert list(client.results(request)) == []
+
+    original, retried = [parse_qs(urlsplit(url).query) for url, _ in calls]
+    assert original["max_results"] == ["500"]
+    assert retried == {**original, "max_results": ["250"]}
+    assert retried["search_query"] == [query]
+    assert client.page_size == 250
+    assert sleeps == [60]
+
+
+@pytest.mark.parametrize("max_results", [110, 500])
+def test_smaller_later_pages_preserve_all_results_and_result_limit(monkeypatch, max_results):
+    ids = [f"2609.{number:05d}v1" for number in range(125)]
+    client, calls, sleeps = mock_client(monkeypatch, [
+        response(ids=ids[:50], total=125),
+        response(503),
+        response(ids=ids[50:75], total=125),
+        response(ids=ids[75:100], total=125),
+        response(ids=ids[100:], total=125),
+    ], page_size=50)
+
+    papers = search(client, max_results)
+
+    assert [paper.get_short_id() for paper in papers] == ids[:max_results]
+    requests_made = [parse_qs(urlsplit(url).query) for url, _ in calls]
+    assert [params["start"] for params in requests_made] == [
+        ["0"], ["50"], ["50"], ["75"], ["100"],
+    ]
+    assert [params["max_results"] for params in requests_made] == [
+        ["50"], ["50"], ["25"], ["25"], ["25"],
+    ]
+    assert client.page_size == 25
+    assert 9 <= sleeps[0] <= 10
+    assert sleeps[1] == 60
+
+
+def test_page_reduction_stops_at_floor_without_resetting_backoff(monkeypatch):
+    client, calls, sleeps = mock_client(monkeypatch, [
+        response(503), response(503), response(503), response(),
+    ], page_size=75)
+
+    assert search(client) == []
+
+    assert [parse_qs(urlsplit(url).query)["max_results"] for url, _ in calls] == [
+        ["75"], ["37"], ["25"], ["25"],
+    ]
+    assert client.page_size == 25
+    assert sleeps == [60, 120, 240]
+
+
+@pytest.mark.parametrize("page_size", [1, 10, 25])
+def test_page_reduction_never_increases_small_requests(monkeypatch, page_size):
+    client, calls, sleeps = mock_client(monkeypatch, [
+        response(503), response(),
+    ], page_size=page_size)
+
+    assert search(client) == []
+
+    assert len({url for url, _ in calls}) == 1
+    assert client.page_size == page_size
+    assert sleeps == [60]
+
+
+def test_rate_limit_after_reduction_keeps_page_size_and_server_cooldowns(monkeypatch):
+    client, calls, sleeps = mock_client(monkeypatch, [
+        response(503, retry_after="180"), response(429, retry_after="600"), response(),
+    ])
+
+    assert search(client) == []
+
+    assert [parse_qs(urlsplit(url).query)["max_results"] for url, _ in calls] == [
+        ["500"], ["250"], ["250"],
+    ]
+    assert calls[1][0] == calls[2][0]
+    assert sleeps == [180, 600]

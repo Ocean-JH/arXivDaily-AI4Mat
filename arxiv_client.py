@@ -7,6 +7,7 @@ import logging
 import random
 import time
 from email.utils import parsedate_to_datetime
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 import arxiv
 import requests
@@ -68,6 +69,24 @@ class BackoffClient(arxiv.Client):
         # Shared across pages, keeping repeated outages within the CI time budget.
         self._retry_wait_remaining = 900.0
 
+    def _smaller_page_url(self, url: str) -> str:
+        """Reduce response work without changing the query or pagination offset."""
+        parts = urlsplit(url)
+        params = dict(parse_qsl(parts.query, keep_blank_values=True))
+        current_size = int(params["max_results"])
+        smaller_size = min(current_size, max(25, current_size // 2))
+        if smaller_size == current_size:
+            return url
+        params["max_results"] = str(smaller_size)
+        # arxiv.py advances by the number of returned entries, then uses this
+        # size for subsequent pages. Search.max_results still caps the total.
+        self.page_size = smaller_size
+        LOGGER.warning(
+            "Reducing arXiv page size from %d to %d after a server failure; "
+            "keeping start=%s", current_size, smaller_size, params.get("start", "0"),
+        )
+        return urlunsplit(parts._replace(query=urlencode(params)))
+
     def _parse_feed(self, url: str, first_page: bool = True, _try_index: int = 0):
         backoff = self._retry_backoff_seconds
         for attempt in range(self._page_retries + 1):
@@ -98,6 +117,12 @@ class BackoffClient(arxiv.Client):
                     # Never shorten the server's cooldown to fit our wait budget.
                     LOGGER.warning("arXiv retry wait budget exhausted; stopping the search")
                     raise
+                # Retrying a large response unchanged can repeatedly time out.
+                # Rate limits still retry the identical request after cooldown.
+                if (
+                    isinstance(error, arxiv.HTTPError) and error.status >= 500
+                ) or isinstance(error, requests.exceptions.ReadTimeout):
+                    url = self._smaller_page_url(url)
                 LOGGER.warning(
                     "Temporary arXiv failure (%s); retrying the same page in %.1fs (%d/%d)",
                     error, delay, attempt + 1, self._page_retries,
