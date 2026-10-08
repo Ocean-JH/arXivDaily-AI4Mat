@@ -5,7 +5,14 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Oct 2026 09:12:31 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 09:33:15 +0800</lastBuildDate>
+    <item>
+      <title>OxiGen: Oxidation-State-Aware Crystal Generation</title>
+      <link>https://arxiv.org/abs/2610.08296v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.08296v1</guid>
+      <pubDate>Tue, 06 Oct 2026 13:01:35 +0000</pubDate>
+      <description>Generative models have the potential to accelerate inorganic materials discovery by enabling inverse design, but generating experimentally realisable crystals remains challenging. Oxidation states are widely used to assess the compositional validity of crystals and guide inorganic materials discovery. While existing generative models for crystals can generate materials with charge-neutral oxidation-state assignments, they poorly reproduce the distributions of oxidation states observed in synthesised materials. To address this limitation, we propose OxiGen, an oxidation-state-aware crystal diffusion model that explicitly represents oxidation states during generation. OxiGen enforces global charge neutrality by construction using a structured output layer with exact inference over a finite-state automaton. Empirically, OxiGen substantially improves oxidation-state fidelity, generates the highest rate of stable, unique, and novel crystals among evaluated methods, and maintains high compositional validity even under property conditioning.</description>
+    </item>
     <item>
       <title>ManifoldCache: Training-Free Diffusion Acceleration via Constraint Manifold Caching</title>
       <link>https://arxiv.org/abs/2610.04510v1</link>
@@ -354,13 +361,6 @@
       <guid isPermaLink="true">https://arxiv.org/abs/2607.24274v1</guid>
       <pubDate>Mon, 27 Jul 2026 11:17:52 +0000</pubDate>
       <description>Inverse design of three-dimensional porous media is central to applications in filtration, catalysis, energy storage, fuel cells, thermal management, and biomedical scaffolds, but remains challenging because many distinct pore geometries can share similar porosity or permeability while small structural changes can strongly affect transport behaviour. This paper proposes a physics-guided generative AI framework for property-targeted porous media design, combining a property-aware variational autoencoder, a conditional latent diffusion model, and an independently trained differentiable structure-to-property surrogate. The framework learns a compact, physically informative latent design space, generates porous structures conditioned on target porosity and directional permeability, and refines generated samples using property-level feedback during denoising and decoding. Experiments on procedurally generated structures and real micro-CT porous-media datasets show improved target-property matching, directional permeability control, and property correlation compared with representative property-aware variational-autoencoder and latent-diffusion baselines. The results demonstrate a scalable route towards controllable inverse design of complex porous geometries and establish a foundation for simulation-informed generative AI tools in engineering and advanced materials discovery.</description>
-    </item>
-    <item>
-      <title>Catalyst Diffusion Transformer: Generative Inverse Design of Heterogeneous Catalysts</title>
-      <link>https://arxiv.org/abs/2607.24272v1</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2607.24272v1</guid>
-      <pubDate>Mon, 27 Jul 2026 11:11:33 +0000</pubDate>
-      <description>The vast chemical design space and complex, interdependent design variables make catalyst discovery for targeted properties highly labor- and resource-intensive. Although generative models have emerged as a promising solution, existing approaches are generally limited to single-property conditioning or narrow chemical spaces. Here, we present Catalyst Diffusion Transformer (CatDiT), a unified framework for inverse catalyst design that generates valid and novel structures ranging from intermetallic alloys to oxide surfaces. By learning compressed latent representations, CatDiT enables efficient training and rapid sampling while supporting simultaneous conditioning on adsorbate type, binding energy, and catalyst class. The model provides reliable control of discrete properties and directional control of continuous properties, enriching candidate pools for reaction-specific catalyst discovery. As a representative application, multi-conditional generation for the nitrogen reduction reaction (NRR) yields 28 density functional theory (DFT)-relaxed alloy candidates that satisfy the target activity window and lie above the pure-metal *N-*H scaling line, corresponding to a ~1.5-fold enrichment over the source distribution. These results establish CatDiT as a practical and scalable approach for property-directed catalyst inverse design and targeted catalyst generation.</description>
     </item>
   </channel>
 </rss>
