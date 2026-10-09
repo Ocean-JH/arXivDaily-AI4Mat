@@ -131,9 +131,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## Latest Papers (1)
 
-*Last checked: 2026-10-08 09:33:15 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-10-09 09:44:42 (SGT)*
 
 ### 1. OxiGen: Oxidation-State-Aware Crystal Generation
 
