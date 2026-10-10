@@ -135,7 +135,7 @@ arXiv's API access and attribution requirements.
 
 _No new papers were found in the latest check; showing the most recent additions._
 
-*Last checked: 2026-10-09 09:44:42 (SGT)*
+*Last checked: 2026-10-10 09:31:04 (SGT)*
 
 ### 1. OxiGen: Oxidation-State-Aware Crystal Generation
 
