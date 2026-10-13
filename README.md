@@ -131,25 +131,55 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (1)
+## New Papers (3)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-10-13 10:49:50 (SGT)*
 
-*Last checked: 2026-10-12 08:58:05 (SGT)*
+### 1. Necessary conditions for benchmarking next-generation AI in materials discovery
 
-### 1. OxiGen: Oxidation-State-Aware Crystal Generation
+**Authors:** Daniel E Widdowson, Tatiana V Kurlina, Olga D Anosova, Vitaliy A Kurlin
 
-**Authors:** Dylan John, Kim E. Jelfs, Alex M. Ganose, Eleonora Giunchiglia
+**Published:** 2026-10-09
 
-**Published:** 2026-10-06
+**Category:** cond-mat.mtrl-sci
 
-**Category:** cs.LG
+**ID:** 2610.13885v1
 
-**ID:** 2610.08296v1
+**Link:** [https://arxiv.org/abs/2610.13885v1](https://arxiv.org/abs/2610.13885v1)
 
-**Link:** [https://arxiv.org/abs/2610.08296v1](https://arxiv.org/abs/2610.08296v1)
+**Summary:** Current AI predicts materials by speeding up energy minimisation and training on large databases. However, scaling data generation prevents manual analysis by domain experts. If novelty is evaluated by chemical compositions or traditional representations in Crystallographic Information Files, or standard structure matchers based on manually chosen thresholds, one can easily generate millions of ``new'' compositions or files without discovering truly novel materials.   This paper uses a hierarchy of crystal invariants to continuously trace and quantify structural novelty based on the new mathematical definition of a crystal structure and asymptotic guarantees for invariant descriptors. The invariant-based analysis through cascade computations on a modest computer exposes the unexpected scale of duplication in the world's largest materials databases, shown here in the high-profile case of GNoME datasets. To prevent current ``embarrassment of over-prediction'', we propose necessary conditions for next-generation AI that should be automatically enforced before claiming any new materials.
 
-**Summary:** Generative models have the potential to accelerate inorganic materials discovery by enabling inverse design, but generating experimentally realisable crystals remains challenging. Oxidation states are widely used to assess the compositional validity of crystals and guide inorganic materials discovery. While existing generative models for crystals can generate materials with charge-neutral oxidation-state assignments, they poorly reproduce the distributions of oxidation states observed in synthesised materials. To address this limitation, we propose OxiGen, an oxidation-state-aware crystal diffusion model that explicitly represents oxidation states during generation. OxiGen enforces global charge neutrality by construction using a structured output layer with exact inference over a finite-state automaton. Empirically, OxiGen substantially improves oxidation-state fidelity, generates the highest rate of stable, unique, and novel crystals among evaluated methods, and maintains high compositional validity even under property conditioning.
+---
+
+### 2. Doubly Metastable Synthesis for Accelerated Quantum Materials Discovery
+
+**Authors:** Kyuho Lee, Berit H. Goodge, Soonhyun Kwon, Yash Anand, Theo Manev, Maximilien F. Debbas, Weiliang Luo, Takehito Suzuki, Heather J. Kulik, Joseph G. Checkelsky
+
+**Published:** 2026-10-09
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2610.13859v1
+
+**Link:** [https://arxiv.org/abs/2610.13859v1](https://arxiv.org/abs/2610.13859v1)
+
+**Summary:** New physics emerges from new materials, which in turn rely on the development of new synthesis techniques. Identifying the enlargement of metastable synthesis window as enabling for realizing novel materials, we develop diffusion-activated epitaxy, a technique which combines two metastable synthesis methods of diffusion and epitaxy. We observe that within a narrow window of investigated synthesis space we can experimentally identify the stabilization of four distinct phases, three of which show X-ray diffraction and scanning transmission electron microscopy characterization data that are incompatible with the crystal structures registered in experimental and computational inorganic structure databases. These results suggest an enlarged metastable synthesis window is enabled by this synthesis approach, identifying doubly metastable synthesis as a promising method for exploration of quantum materials.
+
+---
+
+### 3. Predictive Synthesis of MOFs and COFs
+
+**Authors:** Bin Feng, Reid A. Coyle, Shyam Chand Pal, Peter Walther, Saeun Park, Zhiling Zheng
+
+**Published:** 2026-10-08
+
+**Category:** physics.chem-ph
+
+**ID:** 2610.12739v1
+
+**Link:** [https://arxiv.org/abs/2610.12739v1](https://arxiv.org/abs/2610.12739v1)
+
+**Summary:** Predictive synthesis concerns the prospective modeling of how a targeted structure can be realized. The synthesis of metal-organic frameworks (MOFs) and covalent organic frameworks (COFs) intrinsically involves a multidimensional space of interdependent variables, posing a challenge for bench chemists to parameterize and predict. In this Perspective, we discuss the evolution from chemical-intuition-driven experimentation toward the integration of artificial intelligence (AI) and machine learning (ML) in the laboratory. By virtue of prior knowledge, uncertainty, and experimental failure in determining what should be attempted next, we envision predictive synthesis progressing from static recipe recommendation toward real-time control and transferable principles of framework formation. In this context, the significance lies in transforming trial-and-error practice into a means of measurable chemical reasoning, thereby accelerating crystalline materials discovery and advancing synthetic chemistry.
 
 ---
 
