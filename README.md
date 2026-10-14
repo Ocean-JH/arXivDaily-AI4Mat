@@ -131,9 +131,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (3)
+## Latest Papers (3)
 
-*Last checked: 2026-10-13 10:49:50 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-10-14 08:51:15 (SGT)*
 
 ### 1. Necessary conditions for benchmarking next-generation AI in materials discovery
 
