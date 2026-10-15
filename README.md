@@ -131,57 +131,55 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (3)
+## New Papers (3)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-10-15 08:17:04 (SGT)*
 
-*Last checked: 2026-10-14 08:51:15 (SGT)*
+### 1. CondMSP: Condition-Informed and Resource-Aware Inorganic Materials Synthesis Planning
 
-### 1. Necessary conditions for benchmarking next-generation AI in materials discovery
+**Authors:** Heewoong Noh, Gyoung S. Na, Elton Pan, Namkyeong Lee, Chanyoung Park
 
-**Authors:** Daniel E Widdowson, Tatiana V Kurlina, Olga D Anosova, Vitaliy A Kurlin
+**Published:** 2026-10-11
 
-**Published:** 2026-10-09
+**Category:** cs.AI
 
-**Category:** cond-mat.mtrl-sci
+**ID:** 2610.15603v1
 
-**ID:** 2610.13885v1
+**Link:** [https://arxiv.org/abs/2610.15603v1](https://arxiv.org/abs/2610.15603v1)
 
-**Link:** [https://arxiv.org/abs/2610.13885v1](https://arxiv.org/abs/2610.13885v1)
-
-**Summary:** Current AI predicts materials by speeding up energy minimisation and training on large databases. However, scaling data generation prevents manual analysis by domain experts. If novelty is evaluated by chemical compositions or traditional representations in Crystallographic Information Files, or standard structure matchers based on manually chosen thresholds, one can easily generate millions of ``new'' compositions or files without discovering truly novel materials.   This paper uses a hierarchy of crystal invariants to continuously trace and quantify structural novelty based on the new mathematical definition of a crystal structure and asymptotic guarantees for invariant descriptors. The invariant-based analysis through cascade computations on a modest computer exposes the unexpected scale of duplication in the world's largest materials databases, shown here in the high-profile case of GNoME datasets. To prevent current ``embarrassment of over-prediction'', we propose necessary conditions for next-generation AI that should be automatically enforced before claiming any new materials.
+**Summary:** Materials synthesis planning (MSP) connects AI-driven materials discovery to experimental realization by proposing precursors, synthesis operations, and processing conditions for a target material. Existing approaches predict these components separately or in pairs and treat conditions only as a prediction target. Consequently, MSP remains centered on recipe prediction: it leaves unexplored how conditions can serve as process context for constructing synthesis routes, and it does not address which candidate routes should be executed under limited experimental resources. We propose CondMSP, which extends MSP from recipe prediction to execution-aware planning. CondMSP predicts temperature, time, and atmosphere by combining a joint predictor with variable-specific experts, and then uses these predictions both as process context, grounding the generation and retrieval of operation sequences, and as execution requirements, specifying which thermal stages can share a furnace run and at what cost. This specification is held fixed across all compared methods; within it, CondMSP ranks routes across precursor sets by a common utility and, under furnace budgets, jointly selects routes and allocates their thermal stages by constrained optimization. CondMSP improves condition and operation prediction and, under this shared constraint, raises reference-recipe recovery from 27.9% to 32.9% at three simulated furnace runs per target and from 34.7% to 40.0% at 30 trials, while a new evaluation set of 2,344 targets supports generalization beyond oxide-dominated training chemistry.
 
 ---
 
-### 2. Doubly Metastable Synthesis for Accelerated Quantum Materials Discovery
+### 2. Inverse Designing Reconfigurable Piezoelectric Tensors via Architectural and Modal Programming
 
-**Authors:** Kyuho Lee, Berit H. Goodge, Soonhyun Kwon, Yash Anand, Theo Manev, Maximilien F. Debbas, Weiliang Luo, Takehito Suzuki, Heather J. Kulik, Joseph G. Checkelsky
+**Authors:** Anish Satpati, Marco Maurizi, Hyunmoon Cho, Victor Couedel, Nicolas Mule, Xiaoyu, Zheng
 
-**Published:** 2026-10-09
+**Published:** 2026-10-10
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2610.13859v1
+**ID:** 2610.14761v1
 
-**Link:** [https://arxiv.org/abs/2610.13859v1](https://arxiv.org/abs/2610.13859v1)
+**Link:** [https://arxiv.org/abs/2610.14761v1](https://arxiv.org/abs/2610.14761v1)
 
-**Summary:** New physics emerges from new materials, which in turn rely on the development of new synthesis techniques. Identifying the enlargement of metastable synthesis window as enabling for realizing novel materials, we develop diffusion-activated epitaxy, a technique which combines two metastable synthesis methods of diffusion and epitaxy. We observe that within a narrow window of investigated synthesis space we can experimentally identify the stabilization of four distinct phases, three of which show X-ray diffraction and scanning transmission electron microscopy characterization data that are incompatible with the crystal structures registered in experimental and computational inorganic structure databases. These results suggest an enlarged metastable synthesis window is enabled by this synthesis approach, identifying doubly metastable synthesis as a promising method for exploration of quantum materials.
+**Summary:** Piezoelectricity arises from the coupling between electric polarization and mechanical deformation, described by a third-rank tensor whose coefficients are constrained by crystal symmetry. In natural crystals, atomic periodicity and energetic stability restrict accessible symmetries, limited to 20 distinct anisotropies that can exist. Here we establish a general framework, based on graph representation, for controlling the full effective piezoelectric tensor through architecture by resolving how macroscopic symmetry, local polarization and deformation of structural elements act together. This enables each coefficient to be traced to the members that reinforce or cancel it and be controlled through targeted geometric changes. We further uncover frequency-selective tensor reconfiguration, in which excitation frequency switches the dominant piezoelectric coefficients of a single architecture. These principles open a broader class of applications in which a single piezoelectric architecture can deliver programmable sensing, actuation and mode conversion across multiple directions and deformation states. We realize a multi-degree-of-freedom actuator that integrates distinct actuation modes in one block and reduces volume by 90% relative to conventional multi-stack assemblies.
 
 ---
 
-### 3. Predictive Synthesis of MOFs and COFs
+### 3. Large Out-of-plane Polarization in Two-dimensional Bi2O3 Monolayers Predicted by an AI-driven Inverse-design Workflow
 
-**Authors:** Bin Feng, Reid A. Coyle, Shyam Chand Pal, Peter Walther, Saeun Park, Zhiling Zheng
+**Authors:** Hongmei Tan, Jing Zhang, Shan Gao, Yueyu Zhang, Xiangmei Duan
 
-**Published:** 2026-10-08
+**Published:** 2026-10-10
 
-**Category:** physics.chem-ph
+**Category:** cond-mat.mtrl-sci
 
-**ID:** 2610.12739v1
+**ID:** 2610.14429v1
 
-**Link:** [https://arxiv.org/abs/2610.12739v1](https://arxiv.org/abs/2610.12739v1)
+**Link:** [https://arxiv.org/abs/2610.14429v1](https://arxiv.org/abs/2610.14429v1)
 
-**Summary:** Predictive synthesis concerns the prospective modeling of how a targeted structure can be realized. The synthesis of metal-organic frameworks (MOFs) and covalent organic frameworks (COFs) intrinsically involves a multidimensional space of interdependent variables, posing a challenge for bench chemists to parameterize and predict. In this Perspective, we discuss the evolution from chemical-intuition-driven experimentation toward the integration of artificial intelligence (AI) and machine learning (ML) in the laboratory. By virtue of prior knowledge, uncertainty, and experimental failure in determining what should be attempted next, we envision predictive synthesis progressing from static recipe recommendation toward real-time control and transferable principles of framework formation. In this context, the significance lies in transforming trial-and-error practice into a means of measurable chemical reasoning, thereby accelerating crystalline materials discovery and advancing synthetic chemistry.
+**Summary:** Two-dimensional (2D) polar oxides with built-in electric fields offer promising opportunities for nanoscale electronics, optoelectronics, and surface charge engineering. However, their discovery remains challenging due to the enormous structural complexity of nonlayered oxide networks. Here, we combine inverse structural design with a machine-learning interatomic potential and first-principles calculations to explore 2D oxide configurations. Using Bi2O3 as a representative system, we identify two previously unreported polar monolayers with tetragonal and orthorhombic symmetries. Both structures exhibit vertically separated Bi and O sublayers, giving rise to pronounced intrinsic polarity with Berry-phase 2D polarizations of 34.12 and 37.15 pC/m, respectively. Notably, the o-Bi2O3 monolayer exhibits one of the largest reported out-of-plane polarizations among 2D oxides. Both monolayers exhibit dynamical stability, finite-temperature structural integrity, and wide band gaps (~3.8 eV). The large polarization originates from dimensionality-induced reconstruction of the nonlayered Bi-O network, which breaks local coordination symmetry and produces out-of-plane charge redistribution, while the stereochemically active Bi 6s2 lone pair further favors asymmetric Bi-O bonding. These findings suggest dimensionality-induced local-coordination symmetry breaking as a promising design motif for high-polarization 2D oxides, and demonstrate the utility of combining inverse design with machine-learning-assisted screening to explore unconventional polar phases in nonlayered oxide networks.
 
 ---
 
