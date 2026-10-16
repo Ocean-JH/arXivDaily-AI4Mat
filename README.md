@@ -131,55 +131,23 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (3)
+## New Papers (1)
 
-*Last checked: 2026-10-15 08:17:04 (SGT)*
+*Last checked: 2026-10-16 08:04:30 (SGT)*
 
-### 1. CondMSP: Condition-Informed and Resource-Aware Inorganic Materials Synthesis Planning
+### 1. Risk-Controlled DFT Selection for Machine-Learned Interatomic Potentials
 
-**Authors:** Heewoong Noh, Gyoung S. Na, Elton Pan, Namkyeong Lee, Chanyoung Park
+**Authors:** Kun Ryu, Yeo Jin Jung, Shyue Ping Ong, Claire Donnat, Ying Shirley Meng
 
-**Published:** 2026-10-11
+**Published:** 2026-10-14
 
-**Category:** cs.AI
+**Category:** stat.ML
 
-**ID:** 2610.15603v1
+**ID:** 2610.19630v1
 
-**Link:** [https://arxiv.org/abs/2610.15603v1](https://arxiv.org/abs/2610.15603v1)
+**Link:** [https://arxiv.org/abs/2610.19630v1](https://arxiv.org/abs/2610.19630v1)
 
-**Summary:** Materials synthesis planning (MSP) connects AI-driven materials discovery to experimental realization by proposing precursors, synthesis operations, and processing conditions for a target material. Existing approaches predict these components separately or in pairs and treat conditions only as a prediction target. Consequently, MSP remains centered on recipe prediction: it leaves unexplored how conditions can serve as process context for constructing synthesis routes, and it does not address which candidate routes should be executed under limited experimental resources. We propose CondMSP, which extends MSP from recipe prediction to execution-aware planning. CondMSP predicts temperature, time, and atmosphere by combining a joint predictor with variable-specific experts, and then uses these predictions both as process context, grounding the generation and retrieval of operation sequences, and as execution requirements, specifying which thermal stages can share a furnace run and at what cost. This specification is held fixed across all compared methods; within it, CondMSP ranks routes across precursor sets by a common utility and, under furnace budgets, jointly selects routes and allocates their thermal stages by constrained optimization. CondMSP improves condition and operation prediction and, under this shared constraint, raises reference-recipe recovery from 27.9% to 32.9% at three simulated furnace runs per target and from 34.7% to 40.0% at 30 trials, while a new evaluation set of 2,344 targets supports generalization beyond oxide-dominated training chemistry.
-
----
-
-### 2. Inverse Designing Reconfigurable Piezoelectric Tensors via Architectural and Modal Programming
-
-**Authors:** Anish Satpati, Marco Maurizi, Hyunmoon Cho, Victor Couedel, Nicolas Mule, Xiaoyu, Zheng
-
-**Published:** 2026-10-10
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2610.14761v1
-
-**Link:** [https://arxiv.org/abs/2610.14761v1](https://arxiv.org/abs/2610.14761v1)
-
-**Summary:** Piezoelectricity arises from the coupling between electric polarization and mechanical deformation, described by a third-rank tensor whose coefficients are constrained by crystal symmetry. In natural crystals, atomic periodicity and energetic stability restrict accessible symmetries, limited to 20 distinct anisotropies that can exist. Here we establish a general framework, based on graph representation, for controlling the full effective piezoelectric tensor through architecture by resolving how macroscopic symmetry, local polarization and deformation of structural elements act together. This enables each coefficient to be traced to the members that reinforce or cancel it and be controlled through targeted geometric changes. We further uncover frequency-selective tensor reconfiguration, in which excitation frequency switches the dominant piezoelectric coefficients of a single architecture. These principles open a broader class of applications in which a single piezoelectric architecture can deliver programmable sensing, actuation and mode conversion across multiple directions and deformation states. We realize a multi-degree-of-freedom actuator that integrates distinct actuation modes in one block and reduces volume by 90% relative to conventional multi-stack assemblies.
-
----
-
-### 3. Large Out-of-plane Polarization in Two-dimensional Bi2O3 Monolayers Predicted by an AI-driven Inverse-design Workflow
-
-**Authors:** Hongmei Tan, Jing Zhang, Shan Gao, Yueyu Zhang, Xiangmei Duan
-
-**Published:** 2026-10-10
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2610.14429v1
-
-**Link:** [https://arxiv.org/abs/2610.14429v1](https://arxiv.org/abs/2610.14429v1)
-
-**Summary:** Two-dimensional (2D) polar oxides with built-in electric fields offer promising opportunities for nanoscale electronics, optoelectronics, and surface charge engineering. However, their discovery remains challenging due to the enormous structural complexity of nonlayered oxide networks. Here, we combine inverse structural design with a machine-learning interatomic potential and first-principles calculations to explore 2D oxide configurations. Using Bi2O3 as a representative system, we identify two previously unreported polar monolayers with tetragonal and orthorhombic symmetries. Both structures exhibit vertically separated Bi and O sublayers, giving rise to pronounced intrinsic polarity with Berry-phase 2D polarizations of 34.12 and 37.15 pC/m, respectively. Notably, the o-Bi2O3 monolayer exhibits one of the largest reported out-of-plane polarizations among 2D oxides. Both monolayers exhibit dynamical stability, finite-temperature structural integrity, and wide band gaps (~3.8 eV). The large polarization originates from dimensionality-induced reconstruction of the nonlayered Bi-O network, which breaks local coordination symmetry and produces out-of-plane charge redistribution, while the stereochemically active Bi 6s2 lone pair further favors asymmetric Bi-O bonding. These findings suggest dimensionality-induced local-coordination symmetry breaking as a promising design motif for high-polarization 2D oxides, and demonstrate the utility of combining inverse design with machine-learning-assisted screening to explore unconventional polar phases in nonlayered oxide networks.
+**Summary:** Automated materials discovery requires evaluating large pools of candidate configurations, with density functional theory (DFT) as a major throughput bottleneck. Pretrained machine-learned interatomic potentials (MLIPs) approximate DFT cheaply, but their errors vary by orders of magnitude across configurations, making it difficult to decide when to trust the MLIP predictions and when to fall back to DFT. We frame this decision as a risk-controlled selection problem and solve it within a conformal risk control (CRC) framework. Each configuration is mapped from atomic numbers and Cartesian coordinates to a fixed geometric descriptor, which a lightweight predictor uses to estimate an MLIP-DFT disagreement score in energy, average force, and maximum force. CRC then calibrates this score into a selection threshold for DFT labeling such that the MLIP error on the unselected configurations, which keep their MLIP labels, stays below a user-chosen fraction $α$ of the expected error. Under an identical guarantee across eight dataset-MLIP pairs, our predictor routes 7% and 14% fewer configurations to DFT at $α=0.3$ than committee baselines. Because committee disagreement overlooks errors the MLIPs share, our gains are largest when the DFT labels and MLIP training data differ in DFT functional and basis set, and narrow when the two agree. Without model access, the structure-only predictor also ranks errors as well as the target MLIP's latent representation and outperforms widely used descriptors such as Smooth Overlap of Atomic Positions (SOAP) and Atom-Centered Symmetry Functions (ACSF).
 
 ---
 
