@@ -135,7 +135,7 @@ arXiv's API access and attribution requirements.
 
 _No new papers were found in the latest check; showing the most recent additions._
 
-*Last checked: 2026-10-17 08:08:49 (SGT)*
+*Last checked: 2026-10-18 07:44:10 (SGT)*
 
 ### 1. Risk-Controlled DFT Selection for Machine-Learned Interatomic Potentials
 
