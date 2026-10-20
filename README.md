@@ -131,25 +131,23 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (1)
+## New Papers (1)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-10-20 08:53:55 (SGT)*
 
-*Last checked: 2026-10-19 07:54:50 (SGT)*
+### 1. A Comprehensive Survey of Crystal Structural Prototypes: Construction, Classification, and Applications
 
-### 1. Risk-Controlled DFT Selection for Machine-Learned Interatomic Potentials
+**Authors:** Jianjun Hu, Ying Feng, Rongzhi Dong, Jeffrey Hu, Remy Rogers, Dipannoy Gupta
 
-**Authors:** Kun Ryu, Yeo Jin Jung, Shyue Ping Ong, Claire Donnat, Ying Shirley Meng
+**Published:** 2026-10-15
 
-**Published:** 2026-10-14
+**Category:** cond-mat.mtrl-sci
 
-**Category:** stat.ML
+**ID:** 2610.22600v1
 
-**ID:** 2610.19630v1
+**Link:** [https://arxiv.org/abs/2610.22600v1](https://arxiv.org/abs/2610.22600v1)
 
-**Link:** [https://arxiv.org/abs/2610.19630v1](https://arxiv.org/abs/2610.19630v1)
-
-**Summary:** Automated materials discovery requires evaluating large pools of candidate configurations, with density functional theory (DFT) as a major throughput bottleneck. Pretrained machine-learned interatomic potentials (MLIPs) approximate DFT cheaply, but their errors vary by orders of magnitude across configurations, making it difficult to decide when to trust the MLIP predictions and when to fall back to DFT. We frame this decision as a risk-controlled selection problem and solve it within a conformal risk control (CRC) framework. Each configuration is mapped from atomic numbers and Cartesian coordinates to a fixed geometric descriptor, which a lightweight predictor uses to estimate an MLIP-DFT disagreement score in energy, average force, and maximum force. CRC then calibrates this score into a selection threshold for DFT labeling such that the MLIP error on the unselected configurations, which keep their MLIP labels, stays below a user-chosen fraction $α$ of the expected error. Under an identical guarantee across eight dataset-MLIP pairs, our predictor routes 7% and 14% fewer configurations to DFT at $α=0.3$ than committee baselines. Because committee disagreement overlooks errors the MLIPs share, our gains are largest when the DFT labels and MLIP training data differ in DFT functional and basis set, and narrow when the two agree. Without model access, the structure-only predictor also ranks errors as well as the target MLIP's latent representation and outperforms widely used descriptors such as Smooth Overlap of Atomic Positions (SOAP) and Atom-Centered Symmetry Functions (ACSF).
+**Summary:** Crystal structural prototypes describe recurring atomic arrangements across chemically distinct materials. Prototype libraries are built through crystallographic curation, standardization, geometric matching, local-environment clustering, and periodic-graph analysis, and support chemical substitution, derivative enumeration, high-throughput screening, structure solution, crystal structure prediction (CSP), and generative design. This survey compares methods by the structural information they retain and the equivalence rules they impose, distinguishing crystallographic structure types, geometric realizations, chemistry-anonymous topologies, and chemical decorations. We review curated and automatically extracted prototype libraries (AFLOW, CSPD, LAE-ICSPD, EMFDTW, TYPIX, ICSD structure types), their source databases, and algorithms for assigning family membership. A GraphID-based analysis of samples from ICSD, the Materials Project, OQMD, and LeMat shows that the 100 most frequent families in each sample cover 30 to 67 percent of analyzed structures, while 72 to 82 percent of observed families are singletons. The GraphIDs of up to 76 percent of structures change when the neighbor tolerance is varied. In our comparison of 12 generative CSP models, template retrieval achieves the highest top-1 success rate. Removing a reduced-stoichiometry class from training introduces new failures in 50 to 78 percent of the test structures of that class, which measures sensitivity to stoichiometric coverage, not generalization to unseen prototypes. We relate these findings to earlier statistics of structure types, space groups, and periodic nets, and to protein-fold coverage studies. We propose independent-database coverage measurements, discovery-rate analyses, and family-held-out tests to assess how prototype reuse affects prediction accuracy, generalization, and novelty.
 
 ---
 
