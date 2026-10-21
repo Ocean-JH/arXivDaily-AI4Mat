@@ -133,21 +133,21 @@ arXiv's API access and attribution requirements.
 
 ## New Papers (1)
 
-*Last checked: 2026-10-20 08:53:55 (SGT)*
+*Last checked: 2026-10-21 08:22:27 (SGT)*
 
-### 1. A Comprehensive Survey of Crystal Structural Prototypes: Construction, Classification, and Applications
+### 1. Deep Generative Crystal Structure Prediction: A Benchmark Study and a Controlled Test of Prototype Dependence
 
-**Authors:** Jianjun Hu, Ying Feng, Rongzhi Dong, Jeffrey Hu, Remy Rogers, Dipannoy Gupta
+**Authors:** Lai Wei, Rongzhi Dong, Ying Feng, Madeline Miklos, Jianjun Hu
 
-**Published:** 2026-10-15
+**Published:** 2026-09-22
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2610.22600v1
+**ID:** 2609.26502v2
 
-**Link:** [https://arxiv.org/abs/2610.22600v1](https://arxiv.org/abs/2610.22600v1)
+**Link:** [https://arxiv.org/abs/2609.26502v2](https://arxiv.org/abs/2609.26502v2)
 
-**Summary:** Crystal structural prototypes describe recurring atomic arrangements across chemically distinct materials. Prototype libraries are built through crystallographic curation, standardization, geometric matching, local-environment clustering, and periodic-graph analysis, and support chemical substitution, derivative enumeration, high-throughput screening, structure solution, crystal structure prediction (CSP), and generative design. This survey compares methods by the structural information they retain and the equivalence rules they impose, distinguishing crystallographic structure types, geometric realizations, chemistry-anonymous topologies, and chemical decorations. We review curated and automatically extracted prototype libraries (AFLOW, CSPD, LAE-ICSPD, EMFDTW, TYPIX, ICSD structure types), their source databases, and algorithms for assigning family membership. A GraphID-based analysis of samples from ICSD, the Materials Project, OQMD, and LeMat shows that the 100 most frequent families in each sample cover 30 to 67 percent of analyzed structures, while 72 to 82 percent of observed families are singletons. The GraphIDs of up to 76 percent of structures change when the neighbor tolerance is varied. In our comparison of 12 generative CSP models, template retrieval achieves the highest top-1 success rate. Removing a reduced-stoichiometry class from training introduces new failures in 50 to 78 percent of the test structures of that class, which measures sensitivity to stoichiometric coverage, not generalization to unseen prototypes. We relate these findings to earlier statistics of structure types, space groups, and periodic nets, and to protein-fold coverage studies. We propose independent-database coverage measurements, discovery-rate analyses, and family-held-out tests to assess how prototype reuse affects prediction accuracy, generalization, and novelty.
+**Summary:** Deep generative models are widely reported to enable de novo crystal structure prediction (CSP), but their capability has not been measured consistently against template-based methods. We evaluate 12 representative generative CSP models, spanning latent-variable, diffusion, flow-matching, autoregressive, and manifold random-walk architectures, against TCSP 2.0 on 180 test structures and a leakage-controlled subset of 46. All methods use identical structure-matching, symmetry, and consensus criteria. Template retrieval is the strongest single method, reaching 68.3% top-1 success; symmetry-aware EquiCSP (66.4%) and Uni-3DAR (62.9%) form the next tier. However, comparison with TCSP 2.0 shows that most structures correctly predicted by generative models are also correctly predicted by template substitution. Thus, the set of structures uniquely reachable by generation is small, limiting its practical advantage for discovering structures outside existing prototype libraries. To test the source of this performance, we removed entire stoichiometric prototype families from the training set and retrained the strongest generative model. Accuracy declined by 50-78% across four families, establishing that performance is substantially prototype-dependent. A small minority of structures survived removal of their prototype family, demonstrating a real but limited retrieval-independent predictive capacity. Present generative CSP models therefore function largely as implicit, softer-edged prototype libraries rather than genuinely de novo predictors. Enlarging this residual capacity, rather than aggregate match rate alone, is the central open problem.
 
 ---
 

@@ -5,7 +5,7 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Oct 2026 08:53:55 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 08:22:27 +0800</lastBuildDate>
     <item>
       <title>A Comprehensive Survey of Crystal Structural Prototypes: Construction, Classification, and Applications</title>
       <link>https://arxiv.org/abs/2610.22600v1</link>
@@ -149,8 +149,8 @@
     </item>
     <item>
       <title>Deep Generative Crystal Structure Prediction: A Benchmark Study and a Controlled Test of Prototype Dependence</title>
-      <link>https://arxiv.org/abs/2609.26502v1</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2609.26502v1</guid>
+      <link>https://arxiv.org/abs/2609.26502v2</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2609.26502v2</guid>
       <pubDate>Tue, 22 Sep 2026 14:35:38 +0000</pubDate>
       <description>Deep generative models are widely reported to enable de novo crystal structure prediction (CSP), but their capability has not been measured consistently against template-based methods. We evaluate 12 representative generative CSP models, spanning latent-variable, diffusion, flow-matching, autoregressive, and manifold random-walk architectures, against TCSP 2.0 on 180 test structures and a leakage-controlled subset of 46. All methods use identical structure-matching, symmetry, and consensus criteria. Template retrieval is the strongest single method, reaching 68.3% top-1 success; symmetry-aware EquiCSP (66.4%) and Uni-3DAR (62.9%) form the next tier. However, comparison with TCSP 2.0 shows that most structures correctly predicted by generative models are also correctly predicted by template substitution. Thus, the set of structures uniquely reachable by generation is small, limiting its practical advantage for discovering structures outside existing prototype libraries. To test the source of this performance, we removed entire stoichiometric prototype families from the training set and retrained the strongest generative model. Accuracy declined by 50-78% across four families, establishing that performance is substantially prototype-dependent. A small minority of structures survived removal of their prototype family, demonstrating a real but limited retrieval-independent predictive capacity. Present generative CSP models therefore function largely as implicit, softer-edged prototype libraries rather than genuinely de novo predictors. Enlarging this residual capacity, rather than aggregate match rate alone, is the central open problem.</description>
     </item>
