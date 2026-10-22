@@ -137,42 +137,42 @@
 
         <div id="papers-content">
             <div class="section-heading"><h2 id="latest-papers">Latest papers (1)</h2>
-<p>Checked 2026-10-21 08:22 SGT</p></div>
+<p>Checked 2026-10-22 08:25 SGT</p></div>
 <article class="paper"
-         id="paper-2609.26502"
-         data-paper-id="2609.26502"
-         aria-labelledby="title-paper-2609.26502"
+         id="paper-2610.27762"
+         data-paper-id="2610.27762"
+         aria-labelledby="title-paper-2610.27762"
          tabindex="-1">
     <div class="paper-index" aria-hidden="true">1</div>
     <div class="paper-body">
-        <h3 id="title-paper-2609.26502" class="paper-title"><a href="https://arxiv.org/abs/2609.26502v2" target="_blank" rel="noopener noreferrer">Deep Generative Crystal Structure Prediction: A Benchmark Study and a Controlled Test of Prototype Dependence</a><span class="paper-badge updated">Updated</span></h3>
+        <h3 id="title-paper-2610.27762" class="paper-title"><a href="https://arxiv.org/abs/2610.27762v1" target="_blank" rel="noopener noreferrer">CrystalAR: Autoregressive Modeling for Symmetric Crystal Generation</a><span class="paper-badge">New</span></h3>
 
         <dl class="paper-info">
             <div class="paper-authors">
                 <dt>Authors</dt>
-                <dd>Lai Wei, Rongzhi Dong, Ying Feng, Madeline Miklos, Jianjun Hu</dd>
+                <dd>Ziqiao Meng, Rongsheng Chen, Zhi Zheng, Nikita Kazeev, Zhenkun Wang, Andrey Ustyuzhanin, Wee Sun Lee</dd>
             </div>
             <div class="paper-date">
                 <dt>Published</dt>
-                <dd><time datetime="2026-09-22">2026-09-22</time></dd>
+                <dd><time datetime="2026-10-20">2026-10-20</time></dd>
             </div>
             <div class="paper-category">
                 <dt>Category</dt>
-                <dd>cond-mat.mtrl-sci</dd>
+                <dd>cs.AI</dd>
             </div>
             <div class="paper-id">
                 <dt>arXiv ID</dt>
-                <dd>2609.26502v2</dd>
+                <dd>2610.27762v1</dd>
             </div>
         </dl>
 
         <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2609.26502v2" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+            <a href="https://arxiv.org/abs/2610.27762v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
         </div>
 
         <details class="paper-summary">
             <summary>Read abstract</summary>
-            <p>Deep generative models are widely reported to enable de novo crystal structure prediction (CSP), but their capability has not been measured consistently against template-based methods. We evaluate 12 representative generative CSP models, spanning latent-variable, diffusion, flow-matching, autoregressive, and manifold random-walk architectures, against TCSP 2.0 on 180 test structures and a leakage-controlled subset of 46. All methods use identical structure-matching, symmetry, and consensus criteria. Template retrieval is the strongest single method, reaching 68.3% top-1 success; symmetry-aware EquiCSP (66.4%) and Uni-3DAR (62.9%) form the next tier. However, comparison with TCSP 2.0 shows that most structures correctly predicted by generative models are also correctly predicted by template substitution. Thus, the set of structures uniquely reachable by generation is small, limiting its practical advantage for discovering structures outside existing prototype libraries. To test the source of this performance, we removed entire stoichiometric prototype families from the training set and retrained the strongest generative model. Accuracy declined by 50-78% across four families, establishing that performance is substantially prototype-dependent. A small minority of structures survived removal of their prototype family, demonstrating a real but limited retrieval-independent predictive capacity. Present generative CSP models therefore function largely as implicit, softer-edged prototype libraries rather than genuinely de novo predictors. Enlarging this residual capacity, rather than aggregate match rate alone, is the central open problem.</p>
+            <p>Deep generative modeling has achieved remarkable progress in crystal generation. Given the rich symmetries inherent in crystalline structures, recent work has sought to explicitly incorporate space-group symmetry into generative models, enabling more effective exploration of novel symmetry templates. Yet introducing symmetry templates increases the combinatorial complexity of stoichiometric relationships between atomic species and crystallographic sites, while creating a fundamental tension between flexible exploration of discrete crystallographic templates and faithful realization of these templates as continuous three-dimensional structures. To address these challenges, we propose CrystalAR, a unified autoregressive framework that models Wyckoff symmetry templates and complete crystal structures within a single generative sequence. Specifically, CrystalAR reformulates continuous coordinate generation as a symmetry-conditioned hierarchy of discrete spatial localization decisions, autoregressively refining the positions of all symmetry-inequivalent sites across resolution levels while jointly modeling their spatial configuration within each level. This discrete hierarchical formulation further enables constraint-aware search over both crystallographic templates and geometric realizations. As a result, CrystalAR retains strong symmetry-template generation capability while achieving competitive de novo generation performance and template-free crystal structure prediction (CSP) accuracy. These results suggest that symmetry-template generation can be retained alongside broadly competitive de novo generation performance and competitive CSP without reliance on symmetry templates retrieved from prior data, providing a promising alternative paradigm for symmetry-preserving crystal generation.</p>
         </details>
     </div>
 </article>
@@ -181,7 +181,7 @@
     </main>
 
     <footer class="site-footer">
-        <p>Last updated <time datetime="2026-10-21T08:22:27.003158+08:00">2026-10-21 08:22:27 SGT</time></p>
+        <p>Last updated <time datetime="2026-10-22T08:25:21.638777+08:00">2026-10-22 08:25:21 SGT</time></p>
         <p>© 2026 <a href="https://ocean-jh.github.io/"
                               target="_blank"
                               rel="noopener noreferrer">Wang Jianghai</a>
