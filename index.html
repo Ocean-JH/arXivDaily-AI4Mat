@@ -98,7 +98,7 @@
     </header>
 
     <main id="main-content" class="content-shell" tabindex="-1">
-        <div class="status-notice" role="status" aria-live="polite"><p><strong>1 new paper</strong> found in the latest check.</p></div>
+        <div class="status-notice" role="status" aria-live="polite"><p><strong>2 new papers</strong> found in the latest check.</p></div>
 
         <section class="research-tools" aria-labelledby="search-label">
             <form id="paper-search" class="search-form" role="search" method="get">
@@ -136,43 +136,82 @@
         </section>
 
         <div id="papers-content">
-            <div class="section-heading"><h2 id="latest-papers">Latest papers (1)</h2>
-<p>Checked 2026-10-22 08:25 SGT</p></div>
+            <div class="section-heading"><h2 id="latest-papers">Latest papers (2)</h2>
+<p>Checked 2026-10-23 08:23 SGT</p></div>
 <article class="paper"
-         id="paper-2610.27762"
-         data-paper-id="2610.27762"
-         aria-labelledby="title-paper-2610.27762"
+         id="paper-2610.30086"
+         data-paper-id="2610.30086"
+         aria-labelledby="title-paper-2610.30086"
          tabindex="-1">
     <div class="paper-index" aria-hidden="true">1</div>
     <div class="paper-body">
-        <h3 id="title-paper-2610.27762" class="paper-title"><a href="https://arxiv.org/abs/2610.27762v1" target="_blank" rel="noopener noreferrer">CrystalAR: Autoregressive Modeling for Symmetric Crystal Generation</a><span class="paper-badge">New</span></h3>
+        <h3 id="title-paper-2610.30086" class="paper-title"><a href="https://arxiv.org/abs/2610.30086v1" target="_blank" rel="noopener noreferrer">Orbitol: Crystal Generation on Wyckoff Orbits</a><span class="paper-badge">New</span></h3>
 
         <dl class="paper-info">
             <div class="paper-authors">
                 <dt>Authors</dt>
-                <dd>Ziqiao Meng, Rongsheng Chen, Zhi Zheng, Nikita Kazeev, Zhenkun Wang, Andrey Ustyuzhanin, Wee Sun Lee</dd>
+                <dd>Ivan Žugec, Joshua Rosenthal, Ivor Lončarić, Jan-Willem van de Meent, Tin Hadži Veljković</dd>
             </div>
             <div class="paper-date">
                 <dt>Published</dt>
-                <dd><time datetime="2026-10-20">2026-10-20</time></dd>
+                <dd><time datetime="2026-10-21">2026-10-21</time></dd>
             </div>
             <div class="paper-category">
                 <dt>Category</dt>
-                <dd>cs.AI</dd>
+                <dd>cs.LG</dd>
             </div>
             <div class="paper-id">
                 <dt>arXiv ID</dt>
-                <dd>2610.27762v1</dd>
+                <dd>2610.30086v1</dd>
             </div>
         </dl>
 
         <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2610.27762v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+            <a href="https://arxiv.org/abs/2610.30086v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
         </div>
 
         <details class="paper-summary">
             <summary>Read abstract</summary>
-            <p>Deep generative modeling has achieved remarkable progress in crystal generation. Given the rich symmetries inherent in crystalline structures, recent work has sought to explicitly incorporate space-group symmetry into generative models, enabling more effective exploration of novel symmetry templates. Yet introducing symmetry templates increases the combinatorial complexity of stoichiometric relationships between atomic species and crystallographic sites, while creating a fundamental tension between flexible exploration of discrete crystallographic templates and faithful realization of these templates as continuous three-dimensional structures. To address these challenges, we propose CrystalAR, a unified autoregressive framework that models Wyckoff symmetry templates and complete crystal structures within a single generative sequence. Specifically, CrystalAR reformulates continuous coordinate generation as a symmetry-conditioned hierarchy of discrete spatial localization decisions, autoregressively refining the positions of all symmetry-inequivalent sites across resolution levels while jointly modeling their spatial configuration within each level. This discrete hierarchical formulation further enables constraint-aware search over both crystallographic templates and geometric realizations. As a result, CrystalAR retains strong symmetry-template generation capability while achieving competitive de novo generation performance and template-free crystal structure prediction (CSP) accuracy. These results suggest that symmetry-template generation can be retained alongside broadly competitive de novo generation performance and competitive CSP without reliance on symmetry templates retrieved from prior data, providing a promising alternative paradigm for symmetry-preserving crystal generation.</p>
+            <p>Generative models propose crystalline materials by learning composition and geometry, but unconditional sampling gives no direct control over the space group, which constrains whether responses such as piezoelectricity are symmetry-allowed. We present Orbitol, a crystal generator built on the Crystalite diffusion Transformer that replaces atom tokens with Wyckoff-orbit tokens. Given a space group and a collection of occupied Wyckoff positions, Orbitol generates the atom type and free coordinates of each orbit together with a compatible lattice, so every valid structure is invariant under the operations of the requested group. It generates structures two to three orders of magnitude faster than the symmetry-aware baselines at the evaluated settings. On MP-20, 13.8% of Orbitol&#x27;s attempts yielded stable or metastable, unique and novel structures that retained the requested space group after relaxation, compared with 10.8% for SGFM, the next best model. We also introduce SPARC, a score that combines retention of the raw detected space group with agreement between the retained-group and training distributions. Finally, we used Orbitol to generate candidates in piezoelectric crystal classes. Of the structures selected by internal screening, 89% passed our density functional theory checks, and 79% also matched no Materials Project or Alexandria entry with the same space group. Their median figure of merit was nine times that of the piezoelectric materials computed in the Materials Project, and 24% of the new candidates ranked in that set&#x27;s top 10%.</p>
+        </details>
+    </div>
+</article>
+
+<article class="paper"
+         id="paper-2608.15900"
+         data-paper-id="2608.15900"
+         aria-labelledby="title-paper-2608.15900"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">2</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2608.15900" class="paper-title"><a href="https://arxiv.org/abs/2608.15900v2" target="_blank" rel="noopener noreferrer">Crystal-structure design by agentic AI in a language of motifs</a><span class="paper-badge updated">Updated</span></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Dinh-Khiet Le, Minh-Quyet Ha, Hong-Phuc Vu-Dinh, Viet-Cuong Nguyen, Huan Tran, Truyen Tran, Takashi Miyake, Hiori Kino, Hieu-Chi Dam</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2026-08-16">2026-08-16</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cond-mat.mtrl-sci</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2608.15900v2</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2608.15900v2" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Data-driven materials discovery interpolates more reliably than it extrapolates and seldom reveals new structure types. We present MatEvolve, an agentic-AI framework that designs crystals in an interpretable \emph{language of motifs}, in which each crystal is written as a \emph{motif profile} that describes the recurring geometric patterns---the \emph{motifs}---composing the crystal. The motif profile serves not merely as a description of a material but as the medium for material design: the agent edits the profile with a stated rationale and constructs a crystal from the modified one; the most promising candidates are then validated by first-principles calculations. MatEvolve is built on the state-of-the-art language model Claude Fable~5 without fine-tuning. It is applied to the design of rare-earth-lean permanent-magnet compounds and finds novel (meta)stable crystals that are both new structural prototypes and magnet compounds; under an equal validation budget, it does so an order of magnitude more often than generative models. Beyond design, analyzing the human-readable profiles of the discovered crystals reveals their structure--property relationships.</p>
         </details>
     </div>
 </article>
@@ -181,7 +220,7 @@
     </main>
 
     <footer class="site-footer">
-        <p>Last updated <time datetime="2026-10-22T08:25:21.638777+08:00">2026-10-22 08:25:21 SGT</time></p>
+        <p>Last updated <time datetime="2026-10-23T08:23:28.258292+08:00">2026-10-23 08:23:28 SGT</time></p>
         <p>© 2026 <a href="https://ocean-jh.github.io/"
                               target="_blank"
                               rel="noopener noreferrer">Wang Jianghai</a>
