@@ -5,7 +5,7 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Oct 2026 08:23:28 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 08:15:10 +0800</lastBuildDate>
     <item>
       <title>Orbitol: Crystal Generation on Wyckoff Orbits</title>
       <link>https://arxiv.org/abs/2610.30086v1</link>
@@ -15,8 +15,8 @@
     </item>
     <item>
       <title>CrystalAR: Autoregressive Modeling for Symmetric Crystal Generation</title>
-      <link>https://arxiv.org/abs/2610.27762v1</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.27762v1</guid>
+      <link>https://arxiv.org/abs/2610.27762v2</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.27762v2</guid>
       <pubDate>Tue, 20 Oct 2026 07:26:19 +0000</pubDate>
       <description>Deep generative modeling has achieved remarkable progress in crystal generation. Given the rich symmetries inherent in crystalline structures, recent work has sought to explicitly incorporate space-group symmetry into generative models, enabling more effective exploration of novel symmetry templates. Yet introducing symmetry templates increases the combinatorial complexity of stoichiometric relationships between atomic species and crystallographic sites, while creating a fundamental tension between flexible exploration of discrete crystallographic templates and faithful realization of these templates as continuous three-dimensional structures. To address these challenges, we propose CrystalAR, a unified autoregressive framework that models Wyckoff symmetry templates and complete crystal structures within a single generative sequence. Specifically, CrystalAR reformulates continuous coordinate generation as a symmetry-conditioned hierarchy of discrete spatial localization decisions, autoregressively refining the positions of all symmetry-inequivalent sites across resolution levels while jointly modeling their spatial configuration within each level. This discrete hierarchical formulation further enables constraint-aware search over both crystallographic templates and geometric realizations. As a result, CrystalAR retains strong symmetry-template generation capability while achieving competitive de novo generation performance and template-free crystal structure prediction (CSP) accuracy. These results suggest that symmetry-template generation can be retained alongside broadly competitive de novo generation performance and competitive CSP without reliance on symmetry templates retrieved from prior data, providing a promising alternative paradigm for symmetry-preserving crystal generation.</description>
     </item>
