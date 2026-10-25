@@ -135,7 +135,7 @@ arXiv's API access and attribution requirements.
 
 _No new papers were found in the latest check; showing the most recent additions._
 
-*Last checked: 2026-10-25 07:59:32 (SGT)*
+*Last checked: 2026-10-26 07:48:34 (SGT)*
 
 ### 1. CrystalAR: Autoregressive Modeling for Symmetric Crystal Generation
 
