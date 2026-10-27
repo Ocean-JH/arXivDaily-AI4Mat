@@ -131,25 +131,55 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (1)
+## New Papers (3)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-10-27 09:07:29 (SGT)*
 
-*Last checked: 2026-10-26 07:48:34 (SGT)*
+### 1. TCSP3.0: Template-Based Crystal Structure Prediction with Coefficient-Preserving Element Substitution and Structural Diversity
 
-### 1. CrystalAR: Autoregressive Modeling for Symmetric Crystal Generation
+**Authors:** Ying Feng, Jeffrey Hu, Lai Wei, Liang Tao, Madeline Miklos, Dipannoy Das Gupta, Hossein Erfanshekooh, Jianjun Hu
 
-**Authors:** Ziqiao Meng, Rongsheng Chen, Zhi Zheng, Nikita Kazeev, Zhenkun Wang, Andrey Ustyuzhanin, Wee Sun Lee
+**Published:** 2026-10-25
 
-**Published:** 2026-10-20
+**Category:** cond-mat.mtrl-sci
 
-**Category:** cs.AI
+**ID:** 2610.34029v1
 
-**ID:** 2610.27762v2
+**Link:** [https://arxiv.org/abs/2610.34029v1](https://arxiv.org/abs/2610.34029v1)
 
-**Link:** [https://arxiv.org/abs/2610.27762v2](https://arxiv.org/abs/2610.27762v2)
+**Summary:** Template-based crystal structure prediction (CSP) transfers a known crystal structure to a new composition by element substitution, so its accuracy depends on retrieving suitable templates, mapping elements and ranking the resulting candidates correctly. Auditing the original TCSP2.0 implementation on the T180 benchmark, we found that 469 of its 2,347 selected structures (20%) have the wrong composition, caused by element mappings that ignore stoichiometric coefficients and by sequential text substitution that cascades or corrupts element symbols. We propose TCSP3.0, which enforces coefficient-preserving mappings, substitutes species simultaneously on parsed structures and validates every candidate's composition and cell. It further adds periodic-number retrieval, soft oxidation-state evidence, radius-compatibility scoring, structural deduplication, and ORB-v3 machine-learning-potential relaxation and energy ranking of its candidates, as used by deep generative CSP baselines. TCSP3.0 achieves Top-1 and Top-20 match rates of 72.2% and 90.6% on T180, compared with 28.3% and 45.6% for TCSP2.0, and a Top-20 match rate of 74.0% on a new 800-target benchmark (T800). On T180 it also outperforms PNcsp+ and deep generative models CrystalFlow and MaskGXT (Top-1 72.2% versus at most 63.9%). Even without relaxation, TCSP3.0 reaches 67.8% at Top-1 and 90.6% at Top-20 in a median of 28 s per target on two CPU cores, about ten times faster than CrystalFlow. Paired ten-arm ablations on T180 and T800 show that most of the improvement comes from the correctness fixes; structural deduplication significantly improves the Top-5 match rate, embedding-based retrieval is required for coverage, and the remaining scoring features have small or null effects.
 
-**Summary:** Deep generative modeling has achieved remarkable progress in crystal generation. Given the rich symmetries inherent in crystalline structures, recent work has sought to explicitly incorporate space-group symmetry into generative models, enabling more effective exploration of novel symmetry templates. Yet introducing symmetry templates increases the combinatorial complexity of stoichiometric relationships between atomic species and crystallographic sites, while creating a fundamental tension between flexible exploration of discrete crystallographic templates and faithful realization of these templates as continuous three-dimensional structures. To address these challenges, we propose CrystalAR, a unified autoregressive framework that models Wyckoff symmetry templates and complete crystal structures within a single generative sequence. Specifically, CrystalAR reformulates continuous coordinate generation as a symmetry-conditioned hierarchy of discrete spatial localization decisions, autoregressively refining the positions of all symmetry-inequivalent sites across resolution levels while jointly modeling their spatial configuration within each level. This discrete hierarchical formulation further enables constraint-aware search over both crystallographic templates and geometric realizations. As a result, CrystalAR retains strong symmetry-template generation capability while achieving competitive de novo generation performance and template-free crystal structure prediction (CSP) accuracy. These results suggest that symmetry-template generation can be retained alongside broadly competitive de novo generation performance and competitive CSP without reliance on symmetry templates retrieved from prior data, providing a promising alternative paradigm for symmetry-preserving crystal generation.
+---
+
+### 2. Exploring Joint-Embedding Predictive Architectures for Self-Supervised Representation Learning of Powder X-ray Diffraction Patterns
+
+**Authors:** Ming-Chiang Chang, Brian DeCost
+
+**Published:** 2026-10-23
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2610.33310v1
+
+**Link:** [https://arxiv.org/abs/2610.33310v1](https://arxiv.org/abs/2610.33310v1)
+
+**Summary:** Powder X-ray diffraction (XRD) is the primary high-throughput method for resolving crystal structures, a cornerstone of materials science. As high-throughput synthesis and self-driving laboratories advance, automated XRD pattern analysis has become vital for accelerating materials discovery. However, traditional matrix factorization methods fail when lattice variations cause non-linear peak shifts. At the same time, supervised learning approaches face a combinatorial explosion when handling multi-phase mixtures. To overcome these challenges, we adopt a self-supervised Joint Embedding Predictive Architecture (JEPA) to learn representation embeddings from 1D diffraction patterns. By optimizing a masked self-prediction loss directly within the latent space, the framework captures high-level crystallographic semantics. Downstream evaluations show that lightweight attentive probes trained on frozen JEPA representations achieve space group classification and lattice parameter estimation accuracy close to much larger supervised vision transformers. Furthermore, latent probing reveals that the learned representation space naturally organizes physical transformations, isolating smooth trajectories for peak broadening. Interestingly, decoding along latent paths between single-phase crystal representations yields realistic multi-phase mixture patterns, demonstrating an emergent continuous structure learned without explicit multi-phase supervision.
+
+---
+
+### 3. An LLM agent for end-to-end computational materials discovery
+
+**Authors:** Chen Yuntong, Huang Lijiang, Li Yingqi, Liu Yu, Zhao Dan, Sun Mingqi, Ju Chentian, Liu Yanbing, Li Xiao-Yan, Zhao Guobin
+
+**Published:** 2026-08-20
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2608.20434v2
+
+**Link:** [https://arxiv.org/abs/2608.20434v2](https://arxiv.org/abs/2608.20434v2)
+
+**Summary:** Coordinating multi-scale tasks is an effective strategy for computational materials discovery, yet the diverse algorithms and tools involved make this process highly challenging. Here we present DREAMS, a large language model (LLM)-based agent system capable of executing the entire screening pipeline for metal-organic frameworks (MOFs). DREAMS processes a large body of MOF literature, links publications to their crystal structures, and curates them into a computation-ready database, which is then screened with progressively more expensive simulations. The promising candidates identified for separation under wet flue gas conditions all originate from independent studies. By bridging the heterogeneous stages from literature mining to high-throughput simulation, DREAMS operates across application domains and enables even non-experts to discover high-performance materials in an end-to-end, automated manner.
 
 ---
 
