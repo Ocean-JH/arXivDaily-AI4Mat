@@ -133,53 +133,53 @@ arXiv's API access and attribution requirements.
 
 ## New Papers (3)
 
-*Last checked: 2026-10-27 09:07:29 (SGT)*
+*Last checked: 2026-10-28 08:57:37 (SGT)*
 
-### 1. TCSP3.0: Template-Based Crystal Structure Prediction with Coefficient-Preserving Element Substitution and Structural Diversity
+### 1. Precursor Ratio-Controlled Chloride Vacancies in Lead-Free KCuCl3-x Memristors for Forming-Free Gradual Resistive Switching and Neuromorphic Learning
 
-**Authors:** Ying Feng, Jeffrey Hu, Lai Wei, Liang Tao, Madeline Miklos, Dipannoy Das Gupta, Hossein Erfanshekooh, Jianjun Hu
+**Authors:** Chinmayee Mandar Mhaskar, Sangeeta Roy Chaudhuri, Ayan Roy Chaudhuri
+
+**Published:** 2026-10-26
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2610.35436v1
+
+**Link:** [https://arxiv.org/abs/2610.35436v1](https://arxiv.org/abs/2610.35436v1)
+
+**Summary:** Defect engineering of memristive materials offers a powerful strategy for regulating ionic transport and analog resistive switching required for neuromorphic computing. Here, we report a wet chemical synthesis route for chloride-vacancy (VCl) engineering in lead-free all-inorganic KCuCl3-x thin films and establish a direct correlation between defect concentration, electronic structure, transport dynamics, and neuromorphic performance. Controlled precursor-ratio variation systematically tunes the VCl concentration in KCuCl3-x thin films, driving preferential vacancy formation at the terminal chloride sites, band-gap narrowing, and enhanced electronic disorder. W/KCuCl3-x/FTO memristors exhibit stable bipolar VCM-type resistive switching, with increasing VCl concentration promoting forming-free operation. An optimal VCl concentration (~ 1.3*10^21 cm^-3) provides a balance between ionic mobility and defect controllability, resulting in highly linear potentiation/depression characteristics and superior pulse endurance (&gt;104 cycles). When the experimentally measured conductance characteristics of the optimized memristor are implemented as synaptic weights in artificial neural network simulations, recognition accuracies of 98.96% and 91.82% are achieved on the MNIST and Fashion-MNIST datasets, respectively. These findings establish precursor ratio-controlled VCl engineering as an effective strategy for simultaneously optimizing ionic transport, analog switching, and neuromorphic learning in lead-free halide perovskite memristors, providing a general materials design principle for energy-efficient neuromorphic electronics.
+
+---
+
+### 2. SymADiT: Symmetry-Aware Crystal Generation with Latent Flow Matching
+
+**Authors:** Anmar Karmush, Cedric Mathieu Brandenburg, Soheil Ershadrad, Johanna Rosen, Michael Felsberg, Filip Ekström Kelvinius
+
+**Published:** 2026-05-11
+
+**Category:** cs.LG
+
+**ID:** 2605.10115v2
+
+**Link:** [https://arxiv.org/abs/2605.10115v2](https://arxiv.org/abs/2605.10115v2)
+
+**Summary:** Tackling the task of crystal generation, we aim to enhance the previously proposed, symmetry-agnostic, All-atom Diffusion Transformer (ADiT) by introducing SymADiT, a symmetry-aware variant. To do so, we use a representation of crystals based on Wyckoff positions. We follow ADiT and perform generative modelling in latent space, adapted to our symmetry-aware representation. By forcing the output of the generative model to adhere to the symmetry restrictions imposed by the generated crystal's space group and each atom's Wyckoff position, the generated crystals exhibit more realistic symmetry properties. We benchmark our method against both symmetry-aware and symmetry-agnostic models for crystal generation and show competitive performance, generating stable, symmetric, and physically plausible crystals with only an off-the-shelf Transformer architecture. Our code is available at https://github.com/Karmush21/SymADiT.
+
+---
+
+### 3. From Autonomous Knowledge Generation to Generalizable Property Prediction: A Precision-First Pipeline for Electro-Optic Materials Discovery
+
+**Authors:** Dibakar Datta
 
 **Published:** 2026-10-25
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2610.34029v1
+**ID:** 2610.34628v1
 
-**Link:** [https://arxiv.org/abs/2610.34029v1](https://arxiv.org/abs/2610.34029v1)
+**Link:** [https://arxiv.org/abs/2610.34628v1](https://arxiv.org/abs/2610.34628v1)
 
-**Summary:** Template-based crystal structure prediction (CSP) transfers a known crystal structure to a new composition by element substitution, so its accuracy depends on retrieving suitable templates, mapping elements and ranking the resulting candidates correctly. Auditing the original TCSP2.0 implementation on the T180 benchmark, we found that 469 of its 2,347 selected structures (20%) have the wrong composition, caused by element mappings that ignore stoichiometric coefficients and by sequential text substitution that cascades or corrupts element symbols. We propose TCSP3.0, which enforces coefficient-preserving mappings, substitutes species simultaneously on parsed structures and validates every candidate's composition and cell. It further adds periodic-number retrieval, soft oxidation-state evidence, radius-compatibility scoring, structural deduplication, and ORB-v3 machine-learning-potential relaxation and energy ranking of its candidates, as used by deep generative CSP baselines. TCSP3.0 achieves Top-1 and Top-20 match rates of 72.2% and 90.6% on T180, compared with 28.3% and 45.6% for TCSP2.0, and a Top-20 match rate of 74.0% on a new 800-target benchmark (T800). On T180 it also outperforms PNcsp+ and deep generative models CrystalFlow and MaskGXT (Top-1 72.2% versus at most 63.9%). Even without relaxation, TCSP3.0 reaches 67.8% at Top-1 and 90.6% at Top-20 in a median of 28 s per target on two CPU cores, about ten times faster than CrystalFlow. Paired ten-arm ablations on T180 and T800 show that most of the improvement comes from the correctness fixes; structural deduplication significantly improves the Top-5 match rate, embedding-based retrieval is required for coverage, and the remaining scoring features have small or null effects.
-
----
-
-### 2. Exploring Joint-Embedding Predictive Architectures for Self-Supervised Representation Learning of Powder X-ray Diffraction Patterns
-
-**Authors:** Ming-Chiang Chang, Brian DeCost
-
-**Published:** 2026-10-23
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2610.33310v1
-
-**Link:** [https://arxiv.org/abs/2610.33310v1](https://arxiv.org/abs/2610.33310v1)
-
-**Summary:** Powder X-ray diffraction (XRD) is the primary high-throughput method for resolving crystal structures, a cornerstone of materials science. As high-throughput synthesis and self-driving laboratories advance, automated XRD pattern analysis has become vital for accelerating materials discovery. However, traditional matrix factorization methods fail when lattice variations cause non-linear peak shifts. At the same time, supervised learning approaches face a combinatorial explosion when handling multi-phase mixtures. To overcome these challenges, we adopt a self-supervised Joint Embedding Predictive Architecture (JEPA) to learn representation embeddings from 1D diffraction patterns. By optimizing a masked self-prediction loss directly within the latent space, the framework captures high-level crystallographic semantics. Downstream evaluations show that lightweight attentive probes trained on frozen JEPA representations achieve space group classification and lattice parameter estimation accuracy close to much larger supervised vision transformers. Furthermore, latent probing reveals that the learned representation space naturally organizes physical transformations, isolating smooth trajectories for peak broadening. Interestingly, decoding along latent paths between single-phase crystal representations yields realistic multi-phase mixture patterns, demonstrating an emergent continuous structure learned without explicit multi-phase supervision.
-
----
-
-### 3. An LLM agent for end-to-end computational materials discovery
-
-**Authors:** Chen Yuntong, Huang Lijiang, Li Yingqi, Liu Yu, Zhao Dan, Sun Mingqi, Ju Chentian, Liu Yanbing, Li Xiao-Yan, Zhao Guobin
-
-**Published:** 2026-08-20
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2608.20434v2
-
-**Link:** [https://arxiv.org/abs/2608.20434v2](https://arxiv.org/abs/2608.20434v2)
-
-**Summary:** Coordinating multi-scale tasks is an effective strategy for computational materials discovery, yet the diverse algorithms and tools involved make this process highly challenging. Here we present DREAMS, a large language model (LLM)-based agent system capable of executing the entire screening pipeline for metal-organic frameworks (MOFs). DREAMS processes a large body of MOF literature, links publications to their crystal structures, and curates them into a computation-ready database, which is then screened with progressively more expensive simulations. The promising candidates identified for separation under wet flue gas conditions all originate from independent studies. By bridging the heterogeneous stages from literature mining to high-throughput simulation, DREAMS operates across application domains and enables even non-experts to discover high-performance materials in an end-to-end, automated manner.
+**Summary:** Electro-optic materials, whose refractive index changes linearly with an applied electric field (the Pockels effect), set the speed and energy of optical modulators and microwave-to-optical links for quantum computing. Designing better materials requires optimizing composition alongside temperature, strain, and bias field. However, general repositories lack electro-optic tensor data. We present a pipeline that builds such a database from literature following the rule: "no value is better than a wrong value." The pipeline has five stages: physics-aware acquisition, layout-aware extraction via LLM and deterministic table parsers, a three-tier verification gate, cross-paper consensus using median and median absolute deviation, and a noise-robust surrogate model audited by leave-one-material-out (LOMO) testing. Physics enters directly: notation is mapped, point-group symmetry-forbidden Pockels components are rejected, equivalent labels are merged, and values carry provenance tags. In a run over 49 publications, the gate processed 816 candidates into 414 accepted, 215 held for review, and 187 rejected. Against a hand-certified gold standard of 303 values from 16 papers, the run achieved a precision of 0.51 and recall of 0.48 for exact record matches. Across four database snapshots, held-out materials where the surrogate model beat a predict-the-mean baseline grew from 1 of 4 to 9 of 13 as the database expanded from 10 to 22 materials. While not a controlled comparison, this trend supports the premise that a precision-oriented, physics-checked database can power forward models beyond its training set and clarifies requirements for inverse material design.
 
 ---
 
