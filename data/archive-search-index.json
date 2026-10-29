@@ -1,6 +1,52 @@
 {
-  "generated_at": "2026-10-28T08:57:37.383440+08:00",
+  "generated_at": "2026-10-29T09:32:24.610195+08:00",
   "papers": [
+    {
+      "anchor": "paper-2610.37597",
+      "authors": [
+        "Adam Lahouari",
+        "Hengyu Zhou",
+        "Nikolaos Galanakis",
+        "Michael Kilgour",
+        "Daisuke Kuroshima",
+        "Jihye Han",
+        "Bart Kahr",
+        "Mark E. Tuckerman",
+        "Alexander G. Shtukenberg",
+        "Jutta Rogal"
+      ],
+      "base_id": "2610.37597",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "id": "2610.37597v1",
+      "page": 1,
+      "primary_category": "cond-mat.mtrl-sci",
+      "published": "2026-10-27T17:31:07+00:00",
+      "summary": "Polymorphism in molecular crystals presents a major challenge for controlling crystallization. Here, we combine experiment and theory to characterize the polymorph landscape of acridine and investigate its selective control by additives. Melt crystallization experiments resolve the previously unknown structure of form VIII, while topological crystal structure prediction recovers all seven known unsolvated polymorphs with determined crystal structures. Combining a fine-tuned machine-learned interatomic potential with anharmonic free energy calculations reproduces the experimentally observed stability relationships and reveals a shallow free energy landscape. Finally, experimentally observed additive-induced polymorph preferences correlate with mixed-crystal substitutional defect energies and topological similarities between additive and acridine crystal structures. Together, these results provide a comprehensive picture of acridine polymorphism, linking crystal structure, thermodynamic stability, and additive-controlled crystallization.",
+      "title": "The Acridine Polymorph Landscape: Characterization and Selective Control by Additives"
+    },
+    {
+      "anchor": "paper-2610.37222",
+      "authors": [
+        "Wen-Chuang Shang",
+        "Chenyu Shen",
+        "Mikito Tsujimoto",
+        "Tomonori Tanaka",
+        "Yoshihiro Gohda"
+      ],
+      "base_id": "2610.37222",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.comp-ph"
+      ],
+      "id": "2610.37222v1",
+      "page": 1,
+      "primary_category": "cond-mat.mtrl-sci",
+      "published": "2026-10-27T13:30:43+00:00",
+      "summary": "We introduce GMMag, a workflow for generating crystal structures together with their site-resolved magnetic moments, built on a conditional variational autoencoder with a graph neural network encoder and a transformer decoder. Gaussian-mixture sampling redirects generation towards selected chemical and magnetic targets without retraining. We systematically investigate how encoder and decoder design, the representation of magnetic-moment magnitudes and relative signs, and sampling choices affect reconstruction, generation quality and diversity. Because a higher screening pass rate does not necessarily yield more qualifying candidates with distinct chemical formulas absent from the reference dataset, we model how repeated generation of the same chemical formulas limits their accumulation and test the model in two separate ten-million-draw runs. As an application, the workflow identifies Nd-containing candidates with chemical formulas absent from the reference dataset, negative formation energies and high estimated saturation magnetization.",
+      "title": "Magnetic crystal generation with site-resolved magnetic moments via Gaussian-mixture retargeting and finite-budget yield prediction"
+    },
     {
       "anchor": "paper-2610.35436",
       "authors": [
@@ -792,7 +838,7 @@
         "cs.AI"
       ],
       "id": "2609.01076v2",
-      "page": 1,
+      "page": 2,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2026-09-01T11:07:18+00:00",
       "summary": "Crystal generators can now propose periodic structures, but their control interfaces remain poorly matched to the mixed descriptors used in materials design. Text provides a compact way to combine composition, symmetry, prototype and property cues, yet it has not been clear whether such information can steer flow-based crystal generation. Here we introduce TFMat, a text-conditioned flow-matching framework that uses structured materials language as a semantic prior for a CrystalFlow generator. Across Perov-5, Carbon-24 and MP-20 crystal structure prediction benchmarks, TFMat improves one-candidate match rates over CrystalFlow and reaches a 92.04% MP-20 match rate with 20 candidates; in de novo generation, it improves element-count and density distribution alignment while retaining coarse property consistency in composition-selected outputs. These results position structured text as an inspectable control layer for translating human-readable materials intent into candidate crystals for downstream simulation and validation.",
@@ -812,7 +858,7 @@
         "physics.comp-ph"
       ],
       "id": "2609.00900v1",
-      "page": 1,
+      "page": 2,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2026-09-01T08:24:32+00:00",
       "summary": "Crystalline materials discovery is essential for energy, electronics, and catalysis, but the vast chemical and structural space makes exhaustive screening infeasible. Existing voxel-based methods are limited by the local receptive fields of three-dimensional convolutional neural networks and the posterior collapse of high-dimensional variational autoencoders. Here, we develop a Fourier Neural Operator (FNO)-based crystal-field solver that maps a prescribed chemical formula and lattice parameters to periodic number-density and electron-density fields. By operating on global Fourier modes, the solver captures long-range correlations in periodic crystal fields beyond conventional local convolutions. Building on this solver, we construct a coupled generation-solving framework in which a conditional variational autoencoder generates diverse candidate lattice parameters in a low-dimensional basis-coefficient space, followed by density-field prediction and atomic reconstruction through peak detection, position optimization, and weight optimization. The reconstructed structures are further screened using voxel-level filtering, machine-learning interatomic-potential relaxation, and first-principle calculations. The framework generates novel structures across 104 chemical formulas with competitive reconstruction accuracy, demonstrating high generative diversity and structural validity. By extending Fourier neural operators to periodic crystal fields and coupling them with composition-conditioned lattice generation, our approach provides a scalable route to crystal structure discovery from prescribed chemical compositions.",
@@ -1632,7 +1678,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2607.11712v1",
-      "page": 2,
+      "page": 3,
       "primary_category": "cs.LG",
       "published": "2026-07-13T15:38:41+00:00",
       "summary": "Inverse design is an emerging data-driven paradigm for efficiently navigating vast chemical spaces to discover new materials with targeted properties, and in the context of heterogeneous catalysis, surface generative models have recently advanced this goal by directly generating catalyst surface-adsorbate structures. However, these models typically operate at the slab level and do not provide the corresponding parent bulk structure, making it difficult to assess bulk-dependent properties such as formation energy, surface energy, crystallographic symmetry, and synthesizability. Here, we address this missing slab-to-bulk connection as a retrieval problem and introduce CatRetriever, a contrastive representation learning model that aligns slab and bulk crystal representations in a shared latent space. From a slab query, CatRetriever accurately retrieves plausible parent bulk candidates with R@1 > 91% and R@3 > 98% on both the in-distribution and holdout evaluation sets. We further extend the CatRetriever framework into an adsorption energy targeted bulk discovery pipeline that combines bulk retrieval, generative search space expansion, and adsorption energy distribution analysis. This workflow evaluates candidates by both structural compatibility with the query slab and their ability to access the target adsorption energy range across diverse surface environments. CatRetriever therefore provides a scalable route for connecting catalyst generative models with physically plausible and adsorption energy compatible bulk catalyst discovery.",
@@ -1655,7 +1701,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2607.11209v1",
-      "page": 2,
+      "page": 3,
       "primary_category": "physics.comp-ph",
       "published": "2026-07-13T08:02:14+00:00",
       "summary": "Spinodoid metamaterials offer a broad, tunable design space for anisotropic mechanical properties, yet their structure-property relationships are commonly treated as representative mappings from cone-angle descriptors to single effective stiffness values. This deterministic view overlooks the stochastic nature of Gaussian random field (GRF)-based topology generation, where identical cone-angle descriptors can produce different morphology realizations and property scatter. Here, we present an uncertainty-aware structure-property mapping framework that reinterprets cone-angle descriptors as stochastic descriptors associated with input-dependent property distributions. Using heteroscedastic Gaussian process regression (GPR), the framework infers input-dependent predictive uncertainty from sparse one-realization-per-point data without requiring empirical variance labels at every design point. The results show that stiffness scatter differs across tensor components according to each component's mechanically active directions, and that parameter sets yielding identical mean stiffness can carry different aleatoric uncertainty. Applying this uncertainty to reliability-based design optimization (RBDO), we show that a deterministic optimum is highly susceptible to constraint violation once morphology-induced variability is considered, and that a homoscedastic RBDO formulation fails to meet the prescribed reliability target - only the heteroscedastic formulation satisfies the reliability target under the heteroscedastic uncertainty evaluation. This establishes uncertainty-aware surrogate modeling as essential for reliability-aware inverse design of spinodoid metamaterials; extending the framework to nonlinear responses remains for future work.",
@@ -2499,7 +2545,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2606.13414v1",
-      "page": 3,
+      "page": 4,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2026-06-11T14:44:26+00:00",
       "summary": "Accelerated ageing using elevated temperatures and illumination is one of the most common methods to rapidly study the stability of novel semiconductor materials. However, as the pace of materials discovery continues to accelerate, even faster stability evaluations are needed. A physics-informed time-series forecasting algorithm designed to predict the long-term photoluminescence stability of metal halide perovskites is presented. A diverse experimental dataset of 167 metal halide perovskites is collected, including different crystallinities and compositions. These are stressed using heat and light, while the photoluminescence (PL) is monitored. The >86k collected PL spectra are featurized using a physics-informed model, and a hybrid CNN-LSTM model is trained to forecast the PL intensity during degradation of samples unseen during model training. Notably, the approach generalizes across the material groups and outperforms baseline benchmarks. Furthermore, the physics-based featurization ensures explainability, enabling analysis to identify critical stability descriptors for given predictions. It is expected that this approach will be adapted to other types of time-series data and enables a pathway to significantly reduce experimental testing times.",
@@ -2521,7 +2567,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2606.10251v1",
-      "page": 3,
+      "page": 4,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2026-06-08T23:37:29+00:00",
       "summary": "Metal phosphides have diverse bonding motifs and coordination environments, making them promising for optoelectronic and thermoelectric applications, but their chemical space remains underexplored. Here we report an AI-driven high-throughput discovery workflow that combines generative materials design, machine-learning interatomic potentials, and targeted density functional theory (DFT) calculations. ICSD-derived Wyckoff-site substitution and MatterGen-based conditional structure generation are used to expand the candidate space beyond existing phosphide databases. A domain-finetuned DPA3 machine-learning potential then enables efficient prescreening of thermodynamic and dynamical stability before DFT validation. This workflow identifies 3,574 previously unreported stable phosphide structures, including 196 semiconductors with HSE06 band gaps of 0-3.0 eV. By screening these new semiconductors together with experimentally known phosphide semiconductors, we identify 30 promising optoelectronic candidates and 26 promising thermoelectric candidates, including seven newly discovered optoelectronic materials and eight newly discovered thermoelectric materials. These results provide a candidate pool for experimental synthesis and show that combining generative AI with machine-learning interatomic potentials can accelerate the discovery of functional semiconductor materials.",
@@ -3350,7 +3396,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2605.10115v2",
-      "page": 4,
+      "page": 5,
       "primary_category": "cs.LG",
       "published": "2026-05-11T07:32:01+00:00",
       "summary": "Tackling the task of crystal generation, we aim to enhance the previously proposed, symmetry-agnostic, All-atom Diffusion Transformer (ADiT) by introducing SymADiT, a symmetry-aware variant. To do so, we use a representation of crystals based on Wyckoff positions. We follow ADiT and perform generative modelling in latent space, adapted to our symmetry-aware representation. By forcing the output of the generative model to adhere to the symmetry restrictions imposed by the generated crystal's space group and each atom's Wyckoff position, the generated crystals exhibit more realistic symmetry properties. We benchmark our method against both symmetry-aware and symmetry-agnostic models for crystal generation and show competitive performance, generating stable, symmetric, and physically plausible crystals with only an off-the-shelf Transformer architecture. Our code is available at https://github.com/Karmush21/SymADiT.",
@@ -3370,7 +3416,7 @@
         "physics.comp-ph"
       ],
       "id": "2605.09495v1",
-      "page": 4,
+      "page": 5,
       "primary_category": "physics.chem-ph",
       "published": "2026-05-10T12:00:21+00:00",
       "summary": "Machine learning-based simulators offer the potential to model the dynamics of complex systems more efficiently than classical approaches, while retaining differentiability, a key property for materials design. Graph neural network (GNN)-based simulators have shown strong performance across a range of physical domains, including molecular dynamics. However, their reliance on temporal context for accurate prediction limits their use in inverse design settings, where simulations must be initialized from a single static configuration. Moreover, inverse design requires robust out-of-distribution (OOD) generalization, as candidate structures typically lie outside the training domain. Here, we address both challenges by introducing two complementary strategies that enable stable and accurate structure-only initialization of GNN-based simulations. To directly target OOD generalization, we propose an inference-time physics-based optimization framework that constrains model predictions to remain physically consistent during rollout. In addition, we introduce a differentiable, GNN-based barostat that enables accurate tracking of system dimensions and pressure, critical for capturing macroscopic responses and supporting OOD generalization. We evaluate these approaches in the context of uniaxial compression of disordered elastic networks spanning a broad range of geometries, Poisson ratios, and microscopic behaviors. We find that, together, these methods substantially improve rollout stability and enable reliable OOD generalization, including regimes with distinct, more complex dynamics than those in the training data. These results show that, when properly initialized and constrained, GNN-based simulators can serve as efficient and generalizable tools for materials discovery and structural optimization, advancing their use in materials, molecular, and dynamical system design.",
@@ -4196,7 +4242,7 @@
         "cs.LG"
       ],
       "id": "2604.07512v2",
-      "page": 5,
+      "page": 6,
       "primary_category": "cs.AI",
       "published": "2026-04-08T18:49:08+00:00",
       "summary": "We present Rhizome OS-1, a semi-autonomous operating system for small molecule drug discovery in which multi-modal AI agents operate as a full multidisciplinary discovery team. These agents function as computational chemists, medicinal chemists, and patent agents: they write and execute analysis code (fingerprint clustering, R-group decomposition, substructure search), visually triage molecular grids using vision capabilities, formulate explicit medicinal chemistry hypotheses across three strategy tiers, assess patent freedom-to-operate, and dynamically adapt generation strategies based on empirical screening feedback. Powered by r1 - a 246M-parameter graph diffusion model trained on 800 million molecular graphs - the system generates novel chemical matter directly on molecular graphs using fragment masking, scaffold decoration, linker design, and graph editing primitives. In two oncology campaigns (BCL6 BTB domain and EZH2 SET domain), the agent team executed 26 seeds and produced 5,231 novel molecules. Across both targets, 91.9% of generated Murcko scaffolds are absent from ChEMBL, with median Tanimoto similarity of 0.56-0.69 to the nearest known active. Boltz-2 binding affinity predictions, calibrated against ChEMBL data, achieved Spearman correlations of -0.53 to -0.64 and ROC AUC values of 0.88-0.93. These results demonstrate that semi-autonomous agent systems, equipped with graph-native generative tools and physics-informed scoring, enable a new paradigm for early-stage drug discovery: scaled, rapid, and adaptive inverse design with embedded medicinal chemistry reasoning.",
@@ -4215,7 +4261,7 @@
         "q-bio.MN"
       ],
       "id": "2604.06558v1",
-      "page": 5,
+      "page": 6,
       "primary_category": "cs.LG",
       "published": "2026-04-08T01:19:16+00:00",
       "summary": "We present the first systematic study of when target context helps molecular property prediction, evaluating context conditioning across 10 diverse protein families, 4 fusion architectures, data regimes spanning 67-9,409 training compounds, and both temporal and random evaluation splits. Using NestDrug, a FiLM-based architecture that conditions molecular representations on target identity, we characterize both success and failure modes with three principal findings. First, fusion architecture dominates: FiLM outperforms concatenation by 24.2 percentage points and additive conditioning by 8.6 pp; how you incorporate context matters more than whether you include it. Second, context enables otherwise impossible predictions: on data-scarce CYP3A4 (67 training compounds), multi-task transfer achieves 0.686 AUC where per-target Random Forest collapses to 0.238. Third, context can systematically hurt: distribution mismatch causes 10.2 pp degradation on BACE1; few-shot adaptation consistently underperforms zero-shot. Beyond methodology, we expose fundamental flaws in standard benchmarking: 1-nearest-neighbor Tanimoto achieves 0.991 AUC on DUD-E without any learning, and 50% of actives leak from training data, rendering absolute performance metrics meaningless. Our temporal split evaluation (train up to 2020, test 2021-2024) achieves stable 0.843 AUC with no degradation, providing the first rigorous evidence that context-conditional molecular representations generalize to future chemical space.",
@@ -5066,7 +5112,7 @@
         "cs.LG"
       ],
       "id": "2603.06685v1",
-      "page": 6,
+      "page": 7,
       "primary_category": "cs.LG",
       "published": "2026-03-04T05:48:02+00:00",
       "summary": "Stochastic differential equation (SDE)-based generative models have achieved substantial progress in conditional generation via training-free differentiable loss-guided approaches. However, existing methodologies utilizing posterior sam- pling typically confront a substantial estimation error, which results in inaccu- rate gradients for guidance and leading to inconsistent generation results. To mitigate this issue, we propose that performing an additional backward denois- ing step and Monte-Carlo sampling (ABMS) can achieve better guided diffu- sion, which is a plug-and-play adjustment strategy. To verify the effectiveness of our method, we provide theoretical analysis and propose the adoption of a dual-focus evaluation framework, which further serves to highlight the critical problem of cross-condition interference prevalent in existing approaches. We conduct experiments across various task settings and data types, mainly includ- ing conditional online handwritten trajectory generation, image inverse problems (inpainting, super resolution and gaussian deblurring) molecular inverse design and so on. Experimental results demonstrate that our approach can be effec- tively used with higher order samplers and consistently improves the quality of generation samples across all the different scenarios.",
@@ -5086,7 +5132,7 @@
         "cs.LG"
       ],
       "id": "2603.02346v2",
-      "page": 6,
+      "page": 7,
       "primary_category": "cond-mat.str-el",
       "published": "2026-03-02T19:29:12+00:00",
       "summary": "We introduce Large Electron Model, a single neural network model that produces variational wavefunctions of interacting electrons over the entire Hamiltonian parameter manifold. Our model employs the Fermi Sets architecture, a universal representation of many-body fermionic wavefunctions, which is further conditioned on Hamiltonian parameter and particle number. For interacting electrons in a two-dimensional harmonic potential, a single trained model accurately predicts the ground state wavefunction while generalizing across unseen coupling strengths and particle-number sectors, producing both accurate real-space charge densities and ground state energies, even up to $50$ particles. Our results establish a foundation model method for material discovery that is grounded in the variational principle, while accurately treating strong electron correlation beyond the capacity of density functional theory.",
@@ -5917,7 +5963,7 @@
         "cs.AI"
       ],
       "id": "2601.21527v3",
-      "page": 7,
+      "page": 8,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2026-01-29T10:42:44+00:00",
       "summary": "Artificial intelligence (AI) has transformed materials discovery, enabling rapid exploration of chemical space through generative models and surrogate screening. Yet current generative AI models for materials discovery, which now drive exploration of vast chemical and structural spaces, optimize candidates exclusively for structural stability and functional properties, with no integration of environmental assessment at any stage of the design loop. Prospective and ex-ante life cycle assessment methods exist and have been applied to emerging technologies, but they operate as standalone downstream analyses, not as active constraints within generative or active-learning pipelines. The result is that environmental feedback, even when produced, arrives after design decisions have been made rather than informing them. The disconnect between atomic-scale design and lifecycle assessment (LCA) reflects fundamental challenges: (i) data scarcity across heterogeneous sources, (ii) scale gaps from atoms to industrial systems, (iii) uncertainty in synthesis pathways, and (iv) the absence of frameworks that co-optimize performance with environmental impact. In this Perspective, we propose integrating upstream ML-assisted materials discovery with downstream LCA into the ML-LCA framework, comprising five components: information extraction for building materials-environment knowledge bases, harmonized databases linking properties to sustainability metrics, multi-scale models bridging atomic properties to lifecycle impacts, ensemble prediction of manufacturing pathways with uncertainty quantification, and uncertainty-aware optimization enabling simultaneous performance-sustainability navigation. Case studies spanning polymers, glass, photoresists, and cement demonstrate both necessity and feasibility while identifying material-specific integration challenges.",
@@ -5936,7 +5982,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2601.21393v1",
-      "page": 7,
+      "page": 8,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2026-01-29T08:29:03+00:00",
       "summary": "Large-scale computational surveys are increasingly used to map the landscape of stable crystalline materials. We report a high-throughput energy screening of inorganic crystals that enumerates binary and ternary compositions up to a specified unit-cell complexity, yielding 39 billion protostructures. Candidates predicted to lie on or near the convex hull are retained, and their degrees of freedom are explored via Latin hypercube sampling followed by relaxation with machine-learned interatomic potentials. The resulting dataset contains 81 million locally relaxed crystal structures spanning 4495 ternary phase diagrams constructed from elements ranging from lithium to bromine and contains 88,498 crystal prototypes not present in existing crystal-structure databases. The methods are validated both for three well-explored materials systems, Zr-Zn-N, Ti-Zn-N, and Hf-Zn-N, and by comparing with known data for structures resulting from the larger screening. The work provides a systematic map of low-energy compositional-structural space and a large, structured pool of candidates for downstream property evaluation and materials design.",
@@ -6791,7 +6837,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2512.18156v2",
-      "page": 8,
+      "page": 9,
       "primary_category": "quant-ph",
       "published": "2025-12-20T00:43:55+00:00",
       "summary": "We present a lattice-renormalized formalism for configurational tunneling two-level systems (TLS) that overcomes limitations of minimum-energy-path and light-particle models. Derived from the nuclear Hamiltonian, our formulation introduces composite phonon coordinates to capture lattice distortions between degenerate potential wells. This approach resolves deficiencies in prior models and enables accurate computation of tunnel splittings and excitation spectra for hydrogen-based TLS in bcc Nb. Our results bound experimental tunnel splittings and reveal strong anharmonic couplings between tunneling atoms and lattice phonons, establishing a direct link between TLS dynamics and phonon-mediated strain interactions. The formalism further generalizes to multi-level systems (MLS), providing insight into defect-induced decoherence in superconducting qubits and guiding strategies for materials design to suppress TLS-related loss.",
@@ -6810,7 +6856,7 @@
         "cs.AI"
       ],
       "id": "2512.15312v1",
-      "page": 8,
+      "page": 9,
       "primary_category": "cs.CL",
       "published": "2025-12-17T11:02:31+00:00",
       "summary": "Extracting structured information from zeolite synthesis experimental procedures is critical for materials discovery, yet existing methods have not systematically evaluated Large Language Models (LLMs) for this domain-specific task. This work addresses a fundamental question: what is the efficacy of different prompting strategies when applying LLMs to scientific information extraction? We focus on four key subtasks: event type classification (identifying synthesis steps), trigger text identification (locating event mentions), argument role extraction (recognizing parameter types), and argument text extraction (extracting parameter values). We evaluate four prompting strategies - zero-shot, few-shot, event-specific, and reflection-based - across six state-of-the-art LLMs (Gemma-3-12b-it, GPT-5-mini, O4-mini, Claude-Haiku-3.5, DeepSeek reasoning and non-reasoning) using the ZSEE dataset of 1,530 annotated sentences. Results demonstrate strong performance on event type classification (80-90\\% F1) but modest performance on fine-grained extraction tasks, particularly argument role and argument text extraction (50-65\\% F1). GPT-5-mini exhibits extreme prompt sensitivity with 11-79\\% F1 variation. Notably, advanced prompting strategies provide minimal improvements over zero-shot approaches, revealing fundamental architectural limitations. Error analysis identifies systematic hallucination, over-generalization, and inability to capture synthesis-specific nuances. Our findings demonstrate that while LLMs achieve high-level understanding, precise extraction of experimental parameters requires domain-adapted models, providing quantitative benchmarks for scientific information extraction.",
@@ -7682,7 +7728,7 @@
         "cs.AI"
       ],
       "id": "2512.03026v1",
-      "page": 9,
+      "page": 10,
       "primary_category": "cs.CL",
       "published": "2025-12-02T18:52:29+00:00",
       "summary": "The rapid advancement and adaptability of Large Language Models (LLMs) highlight the need for moral consistency, the capacity to maintain ethically coherent reasoning across varied contexts. Existing alignment frameworks, structured approaches designed to align model behavior with human ethical and social norms, often rely on static datasets and post-hoc evaluations, offering limited insight into how ethical reasoning may evolve across different contexts or temporal scales. This study presents the Moral Consistency Pipeline (MoCoP), a dataset-free, closed-loop framework for continuously evaluating and interpreting the moral stability of LLMs. MoCoP combines three supporting layers: (i) lexical integrity analysis, (ii) semantic risk estimation, and (iii) reasoning-based judgment modeling within a self-sustaining architecture that autonomously generates, evaluates, and refines ethical scenarios without external supervision. Our empirical results on GPT-4-Turbo and DeepSeek suggest that MoCoP effectively captures longitudinal ethical behavior, revealing a strong inverse relationship between ethical and toxicity dimensions (correlation rET = -0.81, p value less than 0.001) and a near-zero association with response latency (correlation rEL approximately equal to 0). These findings demonstrate that moral coherence and linguistic safety tend to emerge as stable and interpretable characteristics of model behavior rather than short-term fluctuations. Furthermore, by reframing ethical evaluation as a dynamic, model-agnostic form of moral introspection, MoCoP offers a reproducible foundation for scalable, continuous auditing and advances the study of computational morality in autonomous AI systems.",
@@ -7704,7 +7750,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2512.02974v1",
-      "page": 9,
+      "page": 10,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-12-02T17:52:36+00:00",
       "summary": "Spin field-effect transistors (SFETs) are promising candidates for low-power spin-based electronics, yet existing realizations that rely on spin-orbit coupling are constrained by limited material choices and short spin-coherence lengths. Here we propose a different operating principle based on multiferroic altermagnets, in which spin splitting is tuned by an electric field through symmetry control rather than conventional spin-orbit physics. Using an effective model combined with quantum transport simulations, we show that the conductance is determined by the degree of matching between the electrically controlled spin texture of the channel and the fixed spin polarization of ferromagnetic contacts, enabling clear ON and OFF states. Remarkably, we also address a long-standing challenge in multiferroic device design: spintronic channels require metallic carriers, whereas ferroelectricity is usually suppressed in metals. We resolve this conflict by imprinting multiferroic altermagnetism into highly conductive materials via the proximity effect. First-principles calculations for graphene on multiferroic vanadium sulfide halides confirm that graphene acquires a ferroelectrically switchable spin splitting while retaining its metallic character. These results establish a practical route to SFET implementation and identify multiferroic altermagnets as a versatile platform for next-generation spintronic devices.",
@@ -8627,7 +8673,7 @@
         "physics.chem-ph"
       ],
       "id": "2511.19347v1",
-      "page": 10,
+      "page": 11,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-11-24T17:46:54+00:00",
       "summary": "The discovery of high-performance photosensitizers has long been hindered by the time-consuming and resource-intensive nature of traditional trial-and-error approaches. Here, we present \\textbf{A}I-\\textbf{A}ccelerated \\textbf{P}hoto\\textbf{S}ensitizer \\textbf{I}nnovation (AAPSI), a closed-loop workflow that integrates expert knowledge, scaffold-based molecule generation, and Bayesian optimization to accelerate the design of novel photosensitizers. The scaffold-driven generation in AAPSI ensures structural novelty and synthetic feasibility, while the iterative AI-experiment loop accelerates the discovery of novel photosensitizers. AAPSI leverages a curated database of 102,534 photosensitizer-solvent pairs and generate 6,148 synthetically accessible candidates. These candidates are screened via graph transformers trained to predict singlet oxygen quantum yield ($φ_Δ$) and absorption maxima ($λ_{max}$), following experimental validation. This work generates several novel candidates for photodynamic therapy (PDT), among which the hypocrellin-based candidate HB4Ph exhibits exceptional performance at the Pareto frontier of high quantum yield of singlet oxygen and long absorption maxima among current photosensitizers ($φ_Δ$=0.85, $λ_{max}$=650nm).",
@@ -8653,7 +8699,7 @@
         "cs.LG"
       ],
       "id": "2511.19335v1",
-      "page": 10,
+      "page": 11,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-11-24T17:31:16+00:00",
       "summary": "High-throughput methods enable accelerated discovery of novel materials in complex systems such as high-entropy alloys, which exhibit intricate phase stability across vast compositional spaces. Computational approaches, including Density Functional Theory (DFT) and calculation of phase diagrams (CALPHAD), facilitate screening of phase formability as a function of composition and temperature. However, the integration of computational predictions with experimental validation remains challenging in high-throughput studies. In this work, we introduce a quantitative confidence metric to assess the agreement between predictions and experimental observations, providing a quantitative measure of the confidence of machine learning models trained on either DFT or CALPHAD input in accounting for experimental evidence. The experimental dataset was generated via high-throughput in-situ synchrotron X-ray diffraction on compositionally varied FeNiMnCr alloy libraries, heated from room temperature to ~1000 °C. Agreement between the observed and predicted phases was evaluated using either temperature-independent phase classification or a model that incorporates a temperature-dependent probability of phase formation. This integrated approach demonstrates where strong overall agreement between computation and experiment exists, while also identifying key discrepancies, particularly in FCC/BCC predictions at Mn-rich regions to inform future model refinement.",
@@ -9523,7 +9569,7 @@
         "cs.LG"
       ],
       "id": "2511.11388v2",
-      "page": 11,
+      "page": 12,
       "primary_category": "cs.LG",
       "published": "2025-11-14T15:17:37+00:00",
       "summary": "We propose a spectrally normalized surrogate for forward and inverse mechanical homogenization with hard physical guarantees. Leveraging the Voigt-Reuss bounds, we factor their difference via a Cholesky-like operator and learn a dimensionless, symmetric positive semi-definite representation with eigenvalues in $[0,1]$; the inverse map returns symmetric positive-definite predictions that lie between the bounds in the Löwner sense. In 3D linear elasticity on an open dataset of stochastic biphasic microstructures, a fully connected Voigt-Reuss net trained on $>\\!7.5\\times 10^{5}$ FFT-based labels with 236 isotropy-invariant descriptors and three contrast parameters recovers the isotropic projection with near-perfect fidelity (isotropy-related entries: $R^2 \\ge 0.998$), while anisotropy-revealing couplings are unidentifiable from $SO(3)$-invariant inputs. Tensor-level relative Frobenius errors have median $\\approx 1.7\\%$ and mean $\\approx 3.4\\%$ across splits. For 2D plane strain on thresholded trigonometric microstructures, coupling spectral normalization with a differentiable renderer and a CNN yields $R^2>0.99$ on all components, subpercent normalized losses, accurate tracking of percolation-induced eigenvalue jumps, and robust generalization to out-of-distribution images. Treating the parametric microstructure as design variables, batched first-order optimization with a single surrogate matches target tensors within a few percent and returns diverse near-optimal designs. Overall, the Voigt-Reuss net unifies accurate, physically admissible forward prediction with large-batch, constraint-consistent inverse design, and is generic to elliptic operators and coupled-physics settings.",
@@ -9549,7 +9595,7 @@
         "nucl-ex"
       ],
       "id": "2511.11221v1",
-      "page": 11,
+      "page": 12,
       "primary_category": "cs.LG",
       "published": "2025-11-14T12:25:54+00:00",
       "summary": "Time Projection Chambers (TPCs) are versatile detectors that reconstruct charged-particle tracks in an ionizing medium, enabling sensitive measurements across a wide range of nuclear physics experiments. We explore sparse convolutional networks for representation learning on TPC data, finding that a sparse ResNet architecture, even with randomly set weights, provides useful structured vector embeddings of events. Pre-training this architecture on a simple physics-motivated binary classification task further improves the embedding quality. Using data from the GAseous Detector with GErmanium Tagging (GADGET) II TPC, a detector optimized for measuring low-energy $β$-delayed particle decays, we represent raw pad-level signals as sparse tensors, train Minkowski Engine ResNet models, and probe the resulting event-level embeddings which reveal rich event structure. As a cross-detector test, we embed data from the Active-Target TPC (AT-TPC) -- a detector designed for nuclear reaction studies in inverse kinematics -- using the same encoder. We find that even an untrained sparse ResNet model provides useful embeddings of AT-TPC data, and we observe improvements when the model is trained on GADGET data. Together, these results highlight the potential of sparse convolutional techniques as a general tool for representation learning in diverse TPC experiments.",
@@ -10399,7 +10445,7 @@
         "cs.LG"
       ],
       "id": "2511.03032v1",
-      "page": 12,
+      "page": 13,
       "primary_category": "cs.LG",
       "published": "2025-11-04T21:57:51+00:00",
       "summary": "In the era of AI-driven science and engineering, we often want to design discrete objects in silico according to user-specified properties. For example, we may wish to design a protein to bind its target, arrange components within a circuit to minimize latency, or find materials with certain properties. Given a property predictive model, in silico design typically involves training a generative model over the design space (e.g., protein sequence space) to concentrate on designs with the desired properties. Distributional optimization -- which can be formalized as an estimation of distribution algorithm or as reinforcement learning policy optimization -- finds the generative model that maximizes an objective function in expectation. Optimizing a distribution over discrete-valued designs is in general challenging because of the combinatorial nature of the design space. However, many property predictors in scientific applications are decomposable in the sense that they can be factorized over design variables in a way that could in principle enable more effective optimization. For example, amino acids at a catalytic site of a protein may only loosely interact with amino acids of the rest of the protein to achieve maximal catalytic activity. Current distributional optimization algorithms are unable to make use of such decomposability structure. Herein, we propose and demonstrate use of a new distributional optimization algorithm, Decomposition-Aware Distributional Optimization (DADO), that can leverage any decomposability defined by a junction tree on the design variables, to make optimization more efficient. At its core, DADO employs a soft-factorized \"search distribution\" -- a learned generative model -- for efficient navigation of the search space, invoking graph message-passing to coordinate optimization across linked factors.",
@@ -10451,7 +10497,7 @@
         "cs.AI"
       ],
       "id": "2511.02824v2",
-      "page": 12,
+      "page": 13,
       "primary_category": "cs.AI",
       "published": "2025-11-04T18:50:52+00:00",
       "summary": "Data-driven scientific discovery requires iterative cycles of literature search, hypothesis generation, and data analysis. Substantial progress has been made towards AI agents that can automate scientific research, but all such agents remain limited in the number of actions they can take before losing coherence, thus limiting the depth of their findings. Here we present Kosmos, an AI scientist that automates data-driven discovery. Given an open-ended objective and a dataset, Kosmos runs for up to 12 hours performing cycles of parallel data analysis, literature search, and hypothesis generation before synthesizing discoveries into scientific reports. Unlike prior systems, Kosmos uses a structured world model to share information between a data analysis agent and a literature search agent. The world model enables Kosmos to coherently pursue the specified objective over 200 agent rollouts, collectively executing an average of 42,000 lines of code and reading 1,500 papers per run. Kosmos cites all statements in its reports with code or primary literature, ensuring its reasoning is traceable. Independent scientists found 79.4% of statements in Kosmos reports to be accurate, and collaborators reported that a single 20-cycle Kosmos run performed the equivalent of 6 months of their own research time on average. Furthermore, collaborators reported that the number of valuable scientific findings generated scales linearly with Kosmos cycles (tested up to 20 cycles). We highlight seven discoveries made by Kosmos that span metabolomics, materials science, neuroscience, and statistical genetics. Three discoveries independently reproduce findings from preprinted or unpublished manuscripts that were not accessed by Kosmos at runtime, while four make novel contributions to the scientific literature.",
@@ -11350,7 +11396,7 @@
         "cs.MA"
       ],
       "id": "2510.22969v2",
-      "page": 13,
+      "page": 14,
       "primary_category": "cs.AI",
       "published": "2025-10-27T03:42:18+00:00",
       "summary": "In wireless communication systems, efficient and adaptive resource allocation plays a crucial role in enhancing overall Quality of Service (QoS). Compared to the conventional Model-Free Reinforcement Learning (MFRL) scheme, Model-Based RL (MBRL) first learns a generative world model for subsequent planning. The reuse of historical experience in MBRL promises more stable training behavior, yet its deployment in large-scale wireless networks remains challenging due to high-dimensional stochastic dynamics, strong inter-agent cooperation, and communication constraints. To overcome these challenges, we propose the Multi-Agent Conditional Diffusion Model Planner (MA-CDMP) for decentralized communication resource management. Built upon the Distributed Training with Decentralized Execution (DTDE) paradigm, MA-CDMP models each communication node as an autonomous agent and employs Diffusion Models (DMs) to capture and predict environment dynamics. Meanwhile, an inverse dynamics model guides action generation, thereby enhancing sample efficiency and policy scalability. Moreover, to approximate large-scale agent interactions, a Mean-Field (MF) mechanism is introduced as an assistance to the classifier in DMs. This design mitigates inter-agent non-stationarity and enhances cooperation with minimal communication overhead in distributed settings. We further theoretically establish an upper bound on the distributional approximation error introduced by the MF-based diffusion generation, guaranteeing convergence stability and reliable modeling of multi-agent stochastic dynamics. Extensive experiments demonstrate that MA-CDMP consistently outperforms existing MARL baselines in terms of average reward and QoS metrics, showcasing its scalability and practicality for real-world wireless network optimization.",
@@ -11372,7 +11418,7 @@
         "cs.CE"
       ],
       "id": "2510.23667v1",
-      "page": 13,
+      "page": 14,
       "primary_category": "cs.LG",
       "published": "2025-10-26T15:11:54+00:00",
       "summary": "Structural topology optimization (TO) is central to engineering design but\nremains computationally intensive due to complex physics and hard constraints.\nExisting deep-learning methods are limited to fixed square grids, a few\nhand-coded boundary conditions, and post-hoc optimization, preventing general\ndeployment. We introduce Optimize Any Topology (OAT), a foundation-model\nframework that directly predicts minimum-compliance layouts for arbitrary\naspect ratios, resolutions, volume fractions, loads, and fixtures. OAT combines\na resolution- and shape-agnostic autoencoder with an implicit neural-field\ndecoder and a conditional latent-diffusion model trained on OpenTO, a new\ncorpus of 2.2 million optimized structures covering 2 million unique\nboundary-condition configurations. On four public benchmarks and two\nchallenging unseen tests, OAT lowers mean compliance up to 90% relative to the\nbest prior models and delivers sub-1 second inference on a single GPU across\nresolutions from 64 x 64 to 256 x 256 and aspect ratios as high as 10:1. These\nresults establish OAT as a general, fast, and resolution-free framework for\nphysics-aware topology optimization and provide a large-scale dataset to spur\nfurther research in generative modeling for inverse design. Code & data can be\nfound at https://github.com/ahnobari/OptimizeAnyTopology.",
@@ -12186,7 +12232,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2510.13457v1",
-      "page": 14,
+      "page": 15,
       "primary_category": "cond-mat.mes-hall",
       "published": "2025-10-15T11:59:30+00:00",
       "summary": "Valley Hall effect is fundamental to valleytronics and provides a promising avenue for advancing information technology. While conventional valley Hall effect requires the inversion symmetry breaking, the recently proposed nonlinear valley Hall (NVH) effect removes the symmetry constraint, and broaden material choices. However, existing studies are limited to nonmagnetic materials without spin involvement and rely on external strain to break rotational symmetry. Here, to address these limitations, we design a magnetically controllable NVH effect in centrosymmetric ferromagnets, by the tight-binding model and first-principles calculations. The model calculations demonstrate nonvanishing NVH conductivities can emerge in pristine hexagonal lattice without external strain, with the magnitude, sign, and spin polarization of the conductivities being all dependent on the magnetization orientation. The effect thus generates various spin-polarized valley Hall currents, characterized by distinct combinations of current direction and spin polarization. First-principle results on a ferromagnetic VSi$_2$N$_4$ bilayer confirm considerable NVH conductivities and their dependence on the magnetization. The magnetically controllable NVH effect unlocks the potential of centrosymmetric magnets for valleytronics, and offer opportunities for novel spintronic and valleytronic devices.",
@@ -12205,7 +12251,7 @@
         "cond-mat.other"
       ],
       "id": "2510.13440v1",
-      "page": 14,
+      "page": 15,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-10-15T11:38:16+00:00",
       "summary": "Two-dimensional (2D) nitride materials such as hexagonal boron nitride (h-BN), graphitic carbon nitride (g-C$_3$N$_4$), and beryllonitrene (BeN$_4$) have emerged as promising candidates for next generation electronic, optoelectronic, and energy applications due to their unique structural and electronic properties. This study presents a systematic investigation of the effects of vacancy defect, specifically the role of nitrogen and constituent atom vacancies on the electronic properties of these materials. Our findings reveal that the introduction of nitrogen vacancies significantly alters the electronic characteristics of these materials. In h-BN, the presence of a nitrogen monovacancy significantly lowers the work function from 5.97 eV to 3.45 eV, one of the lowest values reported for any 2D material. Additionally, this defect reduces the band gap from 4.6 eV to 0.64 eV, driving the material toward half-metallic behavior. This is accompanied by the emergence of flat bands near the Fermi level, indicative of strong electron-electron interactions. In g-C$_3$N$_4$, nitrogen vacancies lead to a decrease in work function and band gap, with double nitrogen vacancies rendering the material nearly metallic. In BeN$_4$, nitrogen vacancies result in minimal charge redistribution and a slight increase in work function, highlighting the material's unique electronic behavior. These results underscore the potential of vacancy engineering in tuning the electronic properties of 2D nitride materials, offering avenues for the design of materials with tailored work functions and band gaps for applications in optoelectronics, spintronics, and catalysis.",
@@ -13049,7 +13095,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2510.03694v1",
-      "page": 15,
+      "page": 16,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-10-04T06:13:49+00:00",
       "summary": "The focused ion beam (FIB) microscope is well established as a high-resolution machining instrument capable of site-selectively removing material down to the nanoscale. Beyond subtractive processing, however, the FIB can also add material using a technique known as focused ion beam induced deposition (FIBID), enabling the direct-write of complex nanostructures. This work explores new directions in three-dimensional nanoprinting with FIBID, harnessing unique features of helium and neon FIBs to fabricate nanoscale heterostructures, including multimaterial architectures and deposits with engineered internal voids. Detailed insight into the chemical and structural composition of these nanostructures is obtained using advanced electron microscopy, revealing buried interfaces and material transformations. Building on these results, the evolution of FIBID into a versatile platform for functional nanomaterials design is discussed, opening pathways toward next-generation nanoscale devices and technologies.",
@@ -13070,7 +13116,7 @@
         "quant-ph"
       ],
       "id": "2510.03575v1",
-      "page": 15,
+      "page": 16,
       "primary_category": "cond-mat.mes-hall",
       "published": "2025-10-03T23:55:12+00:00",
       "summary": "High-spin states hold significant promise for classical and quantum information storage and emerging magnetic memory technologies. Here, we present a systematic framework for engineering such high-spin magnetic states in dopant clusters formed from substitutional impurities in semiconductors. In single-valley materials such as gallium arsenide, impurity states are hydrogenic and exchange interactions generally favor low-spin configurations, except in special geometries. In contrast, multivalley semiconductors exhibit oscillatory form factors in their exchange couplings, enabling the controlled suppression of selected hopping processes and exchange couplings. Exploiting this feature, we demonstrate how carefully arranged impurities in aluminum arsenide, germanium, and silicon can stabilize ground states with a net spin that scale extensively with system size. Within effective mass theory and the tight-binding approximation for hopping, we construct explicit examples ranging from finite clusters to extended lattices and fractal-like tilings. In two dimensions, we identify several favorable dopant geometries supporting a net spin equal to around half of the fully polarized value in the thermodynamic limit, including one which achieves over $70\\%$ polarization. Our results provide a general design principle for harnessing valley degeneracy in semiconductors to construct robust high-spin states and outline a pathway for their experimental realization via precision implantation of dopants.",
@@ -13938,7 +13984,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2509.21908v1",
-      "page": 16,
+      "page": 17,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-09-26T05:44:15+00:00",
       "summary": "Single-orientation stitching of graphene has emerged as the predominant method for growth of large-area, high-quality graphene films. Particularly noteworthy is graphene grown on single-crystalline Cu(111)/sapphire substrates, which exhibits exceptionally planar oriented stitching due to the atomically smooth substrate, facilitating the formation of continuous, high-quality graphene monolayer. These single-orientation stitches have conventionally been regarded as seamless with negligible defect concentrations. In this report, we present experimental observations regarding graphene grown on single-crystalline Cu(111)/sapphire substrates. Among the graphene flakes with single-orientation, our findings reveal two major merging behaviors: one producing the expected seamless stitching, and another unexpectedly generating structural defects that create nanoscale pathways permitting water permeation. Notably, we identify a unique merging structure--overlapped junction, in which the edge of one graphene flake overlaps and lies atop the edge of another flake, rather than forming a continuous atomic stitch. This discovery challenges the conventional anticipation of single-orientation stitched graphene films as seamless single crystalline film, while offers unique perspective for graphene applications in molecular sieving, selective filtration membranes, and protective coatings.",
@@ -13955,7 +14001,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2509.21678v1",
-      "page": 16,
+      "page": 17,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-09-25T22:52:09+00:00",
       "summary": "We present an accelerated nudged elastic band (NEB) study of phenol direct deoxygenation (DDO) on Fe-based bimetallic surfaces using a recently developed Gaussian process regression (GPR) calculator. Our test calculations demonstrate that the GPR calculator achieves up to 3x speedup compared to conventional density functional theory (DFT) calculations while maintaining high accuracy, with energy barrier errors below 0.015 eV. Using GPR-NEB, we systematically examine the DDO mechanism on pristine Fe(110) and surfaces modified with Co and Ni in both top and subsurface layers. Our results show that subsurface Co and Ni substitutions preserve favorable thermodynamics and kinetics for both C-O bond cleavage and C-H bond formation, comparable to those on the pristine Fe(110) surface. In contrast, top-layer substitutions generally increase the C-O bond cleavage barrier, render the step endothermic, and result in significantly higher reverse reaction rates, making DDO unfavorable on these surfaces. This work demonstrates both the effectiveness of GRR-accelerated transition state searches for complex surface reactions and provides insights into rational design of bimetallic catalysts for selective deoxygenation.",
@@ -14816,7 +14862,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2509.12178v2",
-      "page": 17,
+      "page": 18,
       "primary_category": "cs.LG",
       "published": "2025-09-15T17:41:16+00:00",
       "summary": "Generative models for materials, especially inorganic crystals, hold potential to transform the theoretical prediction of novel compounds and structures. Advancement in this field depends on robust benchmarks and minimal, information-rich datasets that enable meaningful model evaluation. This paper critically examines common datasets and reported metrics for a crystal structure prediction task$\\unicode{x2014}$generating the most likely structures given the chemical composition of a material. We focus on three key issues: First, materials datasets should contain unique crystal structures; for example, we show that the widely-utilized carbon-24 dataset only contains $\\approx$40% unique structures. Second, materials datasets should not be split randomly if polymorphs of many different compositions are numerous, which we find to be the case for the perov-5 and MP-20 datasets. Third, benchmarks can mislead if used uncritically, e.g., reporting a match rate metric without considering the structural variety exhibited by identical building blocks. To address these oft-overlooked issues, we introduce several fixes. We provide revised versions of the carbon-24 dataset: one with duplicates removed, one deduplicated and split by number of atoms $N$, one with enantiomorphs, and two containing only identical structures but with different unit cells. We also propose new splits for datasets with polymorphs, ensuring that polymorphs are grouped within each split subset, setting a more sensible standard for benchmarking model performance. Finally, we present METRe and cRMSE, new model evaluation metrics that can correct existing issues with the match rate metric.",
@@ -14841,7 +14887,7 @@
         "physics.optics"
       ],
       "id": "2509.11835v1",
-      "page": 17,
+      "page": 18,
       "primary_category": "cond-mat.soft",
       "published": "2025-09-15T12:22:01+00:00",
       "summary": "Ferroelectric nematic fluids are promising materials for tunable nonlinear photonics, with applications ranging from second harmonic generation to sources of entangled photons. However, the few reported values of second-order susceptibilities vary widely depending on the molecular architecture. Here, we systematically measure second-order NLO susceptibilities of five different materials that exhibit the ferroelectric nematic phase, as well as the more recently discovered layered smectic A ferroelectric phase. The materials investigated include archetypal molecular architectures as well as mixtures showing room-temperature ferroelectric phases. The measured values, which range from 0.3 to 20 pm/V, are here reasonably predicted by combining calculations of molecular-level hyperpolarizabilities and a simple nematic potential, highlighting the opportunities of modelling-assisted design for enhanced NLO ferroelectric fluids.",
@@ -15698,7 +15744,7 @@
         "cs.AI"
       ],
       "id": "2509.00284v1",
-      "page": 18,
+      "page": 19,
       "primary_category": "cs.CV",
       "published": "2025-08-29T23:58:08+00:00",
       "summary": "Industrial computer vision systems often struggle with noise, material variability, and uncontrolled imaging conditions, limiting the effectiveness of classical edge detectors and handcrafted pipelines. In this work, we present a language-guided generative vision system for remnant contour detection in manufacturing, designed to achieve CAD-level precision. The system is organized into three stages: data acquisition and preprocessing, contour generation using a conditional GAN, and multimodal contour refinement through vision-language modeling, where standardized prompts are crafted in a human-in-the-loop process and applied through image-text guided synthesis. On proprietary FabTrack datasets, the proposed system improved contour fidelity, enhancing edge continuity and geometric alignment while reducing manual tracing. For the refinement stage, we benchmarked several vision-language models, including Google's Gemini 2.0 Flash, OpenAI's GPT-image-1 integrated within a VLM-guided workflow, and open-source baselines. Under standardized conditions, GPT-image-1 consistently outperformed Gemini 2.0 Flash in both structural accuracy and perceptual quality. These findings demonstrate the promise of VLM-guided generative workflows for advancing industrial computer vision beyond the limitations of classical pipelines.",
@@ -15718,7 +15764,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2509.00222v1",
-      "page": 18,
+      "page": 19,
       "primary_category": "quant-ph",
       "published": "2025-08-29T20:12:14+00:00",
       "summary": "Two-dimensional (2D) materials that can host qubits with long spin coherence time (T2) have the distinct advantage of integrating easily with existing microelectronic and photonic platforms, making them attractive for designing novel quantum devices with enhanced performance. However, the relative lack of 2D materials as spin qubit hosts, as well as appropriate substrates that can help maintain long T2, necessitates a strategy to search for candidates with robust spin coherence. Here, we develop a high-throughput computational workflow to predict the nuclear spin bath-driven qubit decoherence and T2 in 2D materials and heterostructures. We initially screen 1173 2D materials and find 190 monolayers with T2 > 1 ms, higher than that of naturally-abundant diamond. We then construct 1554 lattice-commensurate heterostructures between high-T2 2D materials and select 3D substrates, and we find that T2 is generally lower in a heterostructure than in the bare 2D host material; however, low-noise substrates (such as CeO2 and CaO) can help maintain high T2. To further accelerate the material screening effort, we derive analytical models that enable rapid predictions of T2 for 2D materials and heterotructures. The models offer a simple, yet quantitative, way to determine the relative contributions to decoherence from the nuclear spin baths of the 2D host and substrate in a heterostructural system. By developing a high-throughput workflow and analytical models, we expand the genome of 2D materials and their spin coherence times for the development of spin qubit platforms.",
@@ -16542,7 +16588,7 @@
         "cs.LG"
       ],
       "id": "2508.13097v1",
-      "page": 19,
+      "page": 20,
       "primary_category": "cs.CE",
       "published": "2025-08-18T17:07:51+00:00",
       "summary": "Programmable structures are systems whose undeformed geometries and material\nproperty distributions are deliberately designed to achieve prescribed deformed\nconfigurations under specific loading conditions. Inflatable structures are a\nprominent example, using internal pressurization to realize large, nonlinear\ndeformations in applications ranging from soft robotics and deployable\naerospace systems to biomedical devices and adaptive architecture. We present a\ngenerative design framework based on denoising diffusion probabilistic models\n(DDPMs) for the inverse design of elastic structures undergoing large,\nnonlinear deformations under pressure-driven actuation. The method formulates\nthe inverse design as a conditional generation task, using geometric\ndescriptors of target deformed states as inputs and outputting image-based\nrepresentations of the undeformed configuration. Representing these\nconfigurations as simple images is achieved by establishing a pre- and\npostprocessing pipeline that involves a fixed image processing, simulation\nsetup, and descriptor extraction methods. Numerical experiments with scalar and\nhigher-dimensional descriptors show that the framework can quickly produce\ndiverse undeformed configurations that achieve the desired deformations when\ninflated, enabling parallel exploration of viable design candidates while\naccommodating complex constraints.",
@@ -16584,7 +16630,7 @@
         "cs.LG"
       ],
       "id": "2508.14111v2",
-      "page": 19,
+      "page": 20,
       "primary_category": "cs.LG",
       "published": "2025-08-18T05:25:54+00:00",
       "summary": "Artificial intelligence (AI) is reshaping scientific discovery, evolving from specialized computational tools into autonomous research partners. We position Agentic Science as a pivotal stage within the broader AI for Science paradigm, where AI systems progress from partial assistance to full scientific agency. Enabled by large language models (LLMs), multimodal systems, and integrated research platforms, agentic AI shows capabilities in hypothesis generation, experimental design, execution, analysis, and iterative refinement -- behaviors once regarded as uniquely human. This survey provides a domain-oriented review of autonomous scientific discovery across life sciences, chemistry, materials science, and physics. We unify three previously fragmented perspectives -- process-oriented, autonomy-oriented, and mechanism-oriented -- through a comprehensive framework that connects foundational capabilities, core processes, and domain-specific realizations. Building on this framework, we (i) trace the evolution of AI for Science, (ii) identify five core capabilities underpinning scientific agency, (iii) model discovery as a dynamic four-stage workflow, (iv) review applications across the above domains, and (v) synthesize key challenges and future opportunities. This work establishes a domain-oriented synthesis of autonomous scientific discovery and positions Agentic Science as a structured paradigm for advancing AI-driven research.",
@@ -17459,7 +17505,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2508.04506v1",
-      "page": 20,
+      "page": 21,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-08-06T14:51:36+00:00",
       "summary": "The quest for sustainable and efficient energy storage has driven the exploration of sodium-ion batteries (SIBs) as promising alternatives to lithium-ion systems. However, the larger ionic radius of sodium poses intrinsic challenges such as slow diffusion and structural strain in conventional electrode materials. As a contribution to addressing these limitations, the \\b{eta}-Irida-graphene ($β$-IG) is herein introduced, a novel two-dimensional (2D) carbon allotrope derived from Irida-graphene, featuring a diverse polygonal lattice of 3-, 4-, 6-, 8-, and 9-membered carbon rings. Through density functional theory and ab initio molecular dynamics simulations, $β$-IG demonstrated remarkable thermal, dynamical, and mechanical stability, coupled with intrinsic conductive character and efficient sodium-ion mobility (energy barriers < 0.30 eV). Furthermore, the adsorption of sodium ions was energetically favorable, delivering an impressive predicted specific capacity of 554.5 mAh/g. The reported findings highlight $β$-IG as a good potential anode candidate for next-generation SIBs, offering high-rate performance and structural robustness, and expanding the functional design space for advanced carbon-based electrode materials.",
@@ -17480,7 +17526,7 @@
         "physics.bio-ph"
       ],
       "id": "2508.04468v3",
-      "page": 20,
+      "page": 21,
       "primary_category": "cond-mat.soft",
       "published": "2025-08-06T14:09:55+00:00",
       "summary": "Chiral active materials are abundant in nature, including the cytoskeleton with attached motor proteins, rotary clusters of bacteria flagella, and self-spinning starfish embryos. These materials break both time reversal and mirror-image (parity) symmetries due to injection of torques at the microscale. Recently, it was found that chiral active materials may show a new type of elastic response termed `odd' elasticity. Currently, odd elasticity is understood microscopically only in ordered structures, e.g., lattice designs of metamaterials. It still remains to explore how odd elasticity can emerge in natural or biological systems, which are usually disordered. To address this, we propose a minimal generic model for disordered `odd solids', using micropolar (Cosserat) elasticity in the presence of local active torques. We find that odd elasticity naturally emerges as a nonlinear effect of internal particle rotations. Exploring the viscoelasticity of this solid, when immersed in active self-spinning solvent (`odd fluid'), we discover both dynamically unstable regions and regions in which bulk waves can propagate even in an overdamped solid.",
@@ -18347,7 +18393,7 @@
         "physics.comp-ph"
       ],
       "id": "2507.17032v1",
-      "page": 21,
+      "page": 22,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-07-22T21:41:04+00:00",
       "summary": "High-entropy pyrochlore oxides possess ultra-low thermal conductivity and excellent high-temperature phase stability, making them promising candidate for next-generation thermal barrier coating (TBC) materials. However, reliable predictive models for such complex and disordered systems remain challenging. Ab initio methods, although accurate in describing anharmonic phonon-phonon interactions, struggle to capture the strong inherent phonon-disorder scattering in high-entropy systems. Moreover, the limited simulation cell size, hundreds of atoms, cannot fully represent the configurational complexity of high-entropy phases. On the other hand, classical molecular dynamics (MD) simulations lack accurate and transferable interatomic potentials, particularly in multi-component systems like high-entropy ceramics. In this work, we employed Deep Potential Molecular Dynamics (DPMD) to predict the thermophysical and mechanical properties of rare-earth high-entropy pyrochlore oxide system. The deep-potential (DP) model is trained on a limited dataset from ab initio molecular dynamics (AIMD) calculations, enabling large-scale molecular dynamics simulations with on-the-fly potential evaluations. This model not only achieves high accuracy in reproducing ab initio results but also demonstrates strong generalizability, making it applicable to medium-entropy ceramics containing the same constituent elements. Our study successfully develops a deep potential model for rare-earth pyrochlore systems and demonstrates that the deep-learning-based potential method offers a powerful computational approach for designing high-entropy TBC materials.",
@@ -18367,7 +18413,7 @@
         "cs.CV"
       ],
       "id": "2507.18654v1",
-      "page": 21,
+      "page": 22,
       "primary_category": "cs.LG",
       "published": "2025-07-22T19:35:14+00:00",
       "summary": "Diffusion models are powerful tools for sampling from high-dimensional distributions by progressively transforming pure noise into structured data through a denoising process. When equipped with a guidance mechanism, these models can also generate samples from conditional distributions. In this paper, a novel diffusion-based framework is introduced for solving inverse problems using a piecewise guidance scheme. The guidance term is defined as a piecewise function of the diffusion timestep, facilitating the use of different approximations during high-noise and low-noise phases. This design is shown to effectively balance computational efficiency with the accuracy of the guidance term. Unlike task-specific approaches that require retraining for each problem, the proposed method is problem-agnostic and readily adaptable to a variety of inverse problems. Additionally, it explicitly incorporates measurement noise into the reconstruction process. The effectiveness of the proposed framework is demonstrated through extensive experiments on image restoration tasks, specifically image inpainting and super-resolution. Using a class conditional diffusion model for recovery, compared to the \\pgdm baseline, the proposed framework achieves a reduction in inference time of \\(25\\%\\) for inpainting with both random and center masks, and \\(23\\%\\) and \\(24\\%\\) for \\(4\\times\\) and \\(8\\times\\) super-resolution tasks, respectively, while incurring only negligible loss in PSNR and SSIM.",
@@ -19215,7 +19261,7 @@
         "physics.optics"
       ],
       "id": "2507.00546v2",
-      "page": 22,
+      "page": 23,
       "primary_category": "physics.app-ph",
       "published": "2025-07-01T08:10:05+00:00",
       "summary": "Inverse design in nanophotonics, the computational discovery of structures\nachieving targeted electromagnetic (EM) responses, has become a key tool for\nrecent optical advances. Traditional intuition-driven or iterative optimization\nmethods struggle with the inherently high-dimensional, non-convex design spaces\nand the substantial computational demands of EM simulations. Recently, machine\nlearning (ML) has emerged to address these bottlenecks effectively. This review\nframes ML-enhanced inverse design methodologies through the lens of\nrepresentation learning, classifying them into two categories: output-side and\ninput-side approaches. Output-side methods use ML to learn a representation in\nthe solution space to create a differentiable solver that accelerates\noptimization. Conversely, input-side techniques employ ML to learn compact,\nlatent-space representations of feasible device geometries, enabling efficient\nglobal exploration through generative models. Each strategy presents unique\ntrade-offs in data requirements, generalization capacity, and novel design\ndiscovery potentials. Hybrid frameworks that combine physics-based optimization\nwith data-driven representations help escape poor local optima, improve\nscalability, and facilitate knowledge transfer. We conclude by highlighting\nopen challenges and opportunities, emphasizing complexity management,\ngeometry-independent representations, integration of fabrication constraints,\nand advancements in multiphysics co-designs.",
@@ -19238,7 +19284,7 @@
         "cs.AI"
       ],
       "id": "2507.00459v2",
-      "page": 22,
+      "page": 23,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-07-01T06:16:53+00:00",
       "summary": "Synthesizing realistic microstructure images conditioned on processing parameters is crucial for understanding process-structure relationships in materials design. However, this task remains challenging due to limited training micrographs and the continuous nature of processing variables. To overcome these challenges, we present a novel process-aware generative modeling approach based on Stable Diffusion 3.5 Large (SD3.5-Large), a state-of-the-art text-to-image diffusion model adapted for microstructure generation. Our method introduces numeric-aware embeddings that encode continuous variables (annealing temperature, time, and magnification) directly into the model's conditioning, enabling controlled image generation under specified process conditions and capturing process-driven microstructural variations. To address data scarcity and computational constraints, we fine-tune only a small fraction of the model's weights via DreamBooth and Low-Rank Adaptation (LoRA), efficiently transferring the pre-trained model to the materials domain. We validate realism using a semantic segmentation model based on a fine-tuned U-Net with a VGG16 encoder on 24 labeled micrographs. It achieves 97.1% accuracy and 85.7% mean IoU, outperforming previous methods. Quantitative analyses using physical descriptors and spatial statistics show strong agreement between synthetic and real microstructures. Specifically, two-point correlation and lineal-path errors remain below 2.1% and 0.6%, respectively. Our method represents the first adaptation of SD3.5-Large for process-aware microstructure generation, offering a scalable approach for data-driven materials design.",
@@ -20202,7 +20248,7 @@
         "physics.comp-ph"
       ],
       "id": "2506.05616v2",
-      "page": 23,
+      "page": 24,
       "primary_category": "cs.AI",
       "published": "2025-06-05T22:07:06+00:00",
       "summary": "We aim at designing language agents with greater autonomy for crystal\nmaterials discovery. While most of existing studies restrict the agents to\nperform specific tasks within predefined workflows, we aim to automate workflow\nplanning given high-level goals and scientist intuition. To this end, we\npropose Materials Agent unifying Planning, Physics, and Scientists, known as\nMAPPS. MAPPS consists of a Workflow Planner, a Tool Code Generator, and a\nScientific Mediator. The Workflow Planner uses large language models (LLMs) to\ngenerate structured and multi-step workflows. The Tool Code Generator\nsynthesizes executable Python code for various tasks, including invoking a\nforce field foundation model that encodes physics. The Scientific Mediator\ncoordinates communications, facilitates scientist feedback, and ensures\nrobustness through error reflection and recovery. By unifying planning,\nphysics, and scientists, MAPPS enables flexible and reliable materials\ndiscovery with greater autonomy, achieving a five-fold improvement in\nstability, uniqueness, and novelty rates compared with prior generative models\nwhen evaluated on the MP-20 data. We provide extensive experiments across\ndiverse tasks to show that MAPPS is a promising framework for autonomous\nmaterials discovery.",
@@ -20228,7 +20274,7 @@
         "cond-mat.other"
       ],
       "id": "2506.04930v1",
-      "page": 23,
+      "page": 24,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-06-05T12:02:23+00:00",
       "summary": "We have characterized the high-pressure behavior of alpha-SnWO4. The compound has been studied up to 30 GPa using a diamond-anvil cell and synchrotron powder X-ray diffraction. We report evidence of two structural phase transitions in the pressure range covered in our study, and we propose a crystal structure for the two high-pressure phases. The first one, observed around 12.9 GPa, has been obtained combining indexation using DICVOL and density-functional theory calculations. The second high-pressure phase, observed around 17.5 GPa, has been determined by using the CALYPSO code, the prediction of which was supported by a Le Bail fit to the experimental X-ray diffraction patterns. The proposed structural sequence involves two successive collapses of the unit-cell volume and an increase in the coordination number of Sn and W atoms. The room-temperature equations of state, the principal axes of compression and their compressibility, the elastic constants, and the elastic moduli are reported for α-SnWO4 and for the two high-pressure phases.",
@@ -21105,7 +21151,7 @@
         "physics.comp-ph"
       ],
       "id": "2505.07442v1",
-      "page": 24,
+      "page": 25,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-05-12T11:07:24+00:00",
       "summary": "Crystal structure generation is a foundational challenge in materials\ndiscovery, particularly in designing functional inorganic crystalline materials\nwith desired properties. Most existing diffusion-based generative models for\ncrystals rely on complex, hand-crafted priors and modular architectures to\nseparately model atom types, atomic positions, and lattice parameters. These\nmethods often require customized diffusion processes and conditional denoising,\nwhich can introduce additional model complexities and inconsistencies. Here we\nintroduce DiffCrysGen, a fully data-driven, score-based diffusion model that\njointly learns the distribution of all structural components in crystalline\nmaterials. With crystal structure representation as unified 2D matrices,\nDiffCrysGen bypasses the need for task-specific priors or decoupled modules,\nenabling end-to-end generation of atom types, fractional coordinates, and\nlattice parameters within a single framework. Our model learns crystallographic\nsymmetry and chemical validity directly from large-scale datasets, allowing it\nto scale to complex materials discovery tasks. As a demonstration, we applied\nDiffCrysGen to the design of rare-earth-free magnetic materials with high\nsaturation magnetization, showing its effectiveness in generating stable,\ndiverse, and property-aligned candidates for sustainable magnet applications.",
@@ -21123,7 +21169,7 @@
         "cs.AI"
       ],
       "id": "2505.06936v1",
-      "page": 24,
+      "page": 25,
       "primary_category": "cs.LG",
       "published": "2025-05-11T10:51:43+00:00",
       "summary": "Inverse electromagnetic modeling has emerged as a powerful approach for\ndesigning complex microwave structures with high accuracy and efficiency. In\nthis study, we propose an Iterative Residual Correction Network (IRC-Net) for\nthe inverse design of Ku-band Substrate Integrated Waveguide (SIW) components\nbased on multimode resonators. We use a multimode resonance structure to\ndemonstrate that it is possible to control the resonances of the structure.\nTherefore, these structures can be used for resonant components and smart\nfilter design. The proposed deep learning architecture leverages residual\nneural networks to overcome the limitations of traditional inverse design\ntechniques, such as the Feedforward Inverse Model (FIM), offering improved\ngeneralization and prediction accuracy. The approach begins with a FIM to\ngenerate initial design estimates, followed by an iterative correction strategy\ninspired by the Hybrid Inverse-Forward Residual Refinement Network\n(HiFR\\textsuperscript{2}-Net), which we call IRC-Net. Experiments demonstrate\nthat the IRC-Net achieves substantial improvements in prediction accuracy\ncompared to traditional single-stage networks, validated through statistical\nmetrics, full-wave electromagnetic simulations, and measurements. To validate\nthe proposed framework, we first design and fabricate a three-resonance SIW\nstructure. Next, we apply the trained IRC-Net model to predict the geometry of\na four-resonance structure based on its desired frequency response. Both\ndesigns are fabricated and tested, showing strong agreement between the\nsimulated, predicted, and measured results, confirming the effectiveness and\npracticality of the proposed method.",
@@ -22009,7 +22055,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2504.06249v1",
-      "page": 25,
+      "page": 26,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-04-08T17:54:49+00:00",
       "summary": "The electronic structure of a material fundamentally determines its\nunderlying physical, and by extension, its functional properties. Consequently,\nthe ability to identify or generate materials with desired electronic\nproperties would enable the design of tailored functional materials.\nTraditional approaches relying on human intuition or exhaustive computational\nscreening of known materials remain inefficient and resource-prohibitive for\nthis task. Here, we introduce DOSMatGen, the first instance of a machine\nlearning method which generates crystal structures that match a given desired\nelectronic density of states. DOSMatGen is an E(3)-equivariant joint diffusion\nframework, and utilizes classifier-free guidance to accurately condition the\ngenerated materials on the density of states. Our experiments find this\napproach can successfully yield materials which are both stable and match\nclosely with the desired density of states. Furthermore, this method is highly\nflexible and allows for finely controlled generation which can target specific\ntemplates or even individual sites within a material. This method enables a\nmore physics-driven approach to designing new materials for applications\nincluding catalysts, photovoltaics, and superconductors.",
@@ -22036,7 +22082,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2504.05780v2",
-      "page": 25,
+      "page": 26,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2025-04-08T08:03:31+00:00",
       "summary": "Spin-orbitronics, based on both spin and orbital angular momentum, presents a promising pathway for energy-efficient memory and logic devices. Recent studies have demonstrated the emergence of orbital currents in light transition metals such as Ti, Cr, and Zr, broadening the scope of spin-orbit torque (SOT). In particular, the orbital Hall effect, which arises independently of spin-obit coupling, has shown potential for enhancing torque efficiency in spintronic devices. However, the direct integration of orbital current into magnetic random-access memory (MRAM) remains unexplored. In this work, we design a light metal/heavy metal/ferromagnet multilayer structure and experimentally demonstrate magnetization switching by orbital current. Furthermore, we have realized a robust SOT-MRAM cell by incorporating a reference layer that is pinned by a synthetic antiferromagnetic structure. We observed a tunnel magnetoresistance of 66%, evident in both magnetic field and current-driven switching processes. Our findings underscore the potential for employing orbital current in designing next-generation spintronic devices.",
@@ -22936,7 +22982,7 @@
         "stat.ML"
       ],
       "id": "2503.03007v2",
-      "page": 26,
+      "page": 27,
       "primary_category": "math.OC",
       "published": "2025-03-04T21:07:15+00:00",
       "summary": "In recent years, the ascendance of diffusion modeling as a state-of-the-art generative modeling approach has spurred significant interest in their use as priors in Bayesian inverse problems. However, it is unclear how to optimally integrate a diffusion model trained on the prior distribution with a given likelihood function to obtain posterior samples. While algorithms developed for this purpose can produce high-quality, diverse point estimates of the unknown parameters of interest, they are often tested on problems where the prior distribution is analytically unknown, making it difficult to assess their performance in providing rigorous uncertainty quantification. Motivated by this challenge, this work introduces three benchmark problems for evaluating the performance of diffusion model based samplers. The benchmark problems, which are inspired by problems in image inpainting, x-ray tomography, and phase retrieval, have a posterior density that is analytically known. In this setting, approximate ground-truth posterior samples can be obtained, enabling principled evaluation of the performance of posterior sampling algorithms. This work also introduces a general framework for diffusion model based posterior sampling, Bayesian Inverse Problem Solvers through Diffusion Annealing (BIPSDA). This framework unifies several recently proposed diffusion-model-based posterior sampling algorithms and contains novel algorithms that can be realized through flexible combinations of design choices. We tested the performance of a set of BIPSDA algorithms, including previously proposed state-of-the-art approaches, on the proposed benchmark problems. The results provide insight into the strengths and limitations of existing diffusion-model based posterior samplers, while the benchmark problems provide a testing ground for future algorithmic developments.",
@@ -22957,7 +23003,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2503.02978v1",
-      "page": 26,
+      "page": 27,
       "primary_category": "cs.LG",
       "published": "2025-03-04T20:05:04+00:00",
       "summary": "We introduce a Deep Kernel Learning Variational Autoencoder (VAE-DKL)\nframework that integrates the generative power of a Variational Autoencoder\n(VAE) with the predictive nature of Deep Kernel Learning (DKL). The VAE learns\na latent representation of high-dimensional data, enabling the generation of\nnovel structures, while DKL refines this latent space by structuring it in\nalignment with target properties through Gaussian Process (GP) regression. This\napproach preserves the generative capabilities of the VAE while enhancing its\nlatent space for GP-based property prediction. We evaluate the framework on two\ndatasets: a structured card dataset with predefined variational factors and the\nQM9 molecular dataset, where enthalpy serves as the target function for\noptimization. The model demonstrates high-precision property prediction and\nenables the generation of novel out-of-training subset structures with desired\ncharacteristics. The VAE-DKL framework offers a promising approach for\nhigh-throughput material discovery and molecular design, balancing structured\nlatent space organization with generative flexibility.",
@@ -23876,7 +23922,7 @@
         "cs.LG"
       ],
       "id": "2502.02189v4",
-      "page": 27,
+      "page": 28,
       "primary_category": "cs.LG",
       "published": "2025-02-04T10:09:47+00:00",
       "summary": "Novel materials drive advancements in fields ranging from energy storage to electronics, with crystal structure characterization forming a crucial yet challenging step in materials discovery. In this work, we introduce \\emph{deCIFer}, an autoregressive language model designed for powder X-ray diffraction (PXRD)-conditioned crystal structure prediction (PXRD-CSP). Unlike traditional CSP methods that rely primarily on composition or symmetry constraints, deCIFer explicitly incorporates PXRD data, directly generating crystal structures in the widely adopted Crystallographic Information File (CIF) format. The model is trained on nearly 2.3 million crystal structures, with PXRD conditioning augmented by basic forms of synthetic experimental artifacts, specifically Gaussian noise and instrumental peak broadening, to reflect fundamental real-world conditions. Validated across diverse synthetic datasets representative of challenging inorganic materials, deCIFer achieves a 94\\% structural match rate. The evaluation is based on metrics such as the residual weighted profile ($R_{wp}$) and structural match rate (MR), chosen explicitly for their practical relevance in this inherently underdetermined problem. deCIFer establishes a robust baseline for future expansion toward more complex experimental scenarios, bridging the gap between computational predictions and experimental crystal structure determination.",
@@ -23902,7 +23948,7 @@
         "cs.LG"
       ],
       "id": "2502.02054v2",
-      "page": 27,
+      "page": 28,
       "primary_category": "cs.RO",
       "published": "2025-02-04T06:42:08+00:00",
       "summary": "This paper introduces a learning-based visual planner for agile drone flight in cluttered environments. The proposed planner generates collision-free waypoints in milliseconds, enabling drones to perform agile maneuvers in complex environments without building separate perception, mapping, and planning modules. Learning-based methods, such as behavior cloning (BC) and reinforcement learning (RL), demonstrate promising performance in visual navigation but still face inherent limitations. BC is susceptible to compounding errors due to limited expert imitation, while RL struggles with reward function design and sample inefficiency. To address these limitations, this paper proposes an inverse reinforcement learning (IRL)-based framework for high-speed visual navigation. By leveraging IRL, it is possible to reduce the number of interactions with simulation environments and improve capability to deal with high-dimensional spaces while preserving the robustness of RL policies. A motion primitive-based path planning algorithm collects an expert dataset with privileged map data from diverse environments, ensuring comprehensive scenario coverage. By leveraging both the acquired expert and learner dataset gathered from the agent's interactions with the simulation environments, a robust reward function and policy are learned across diverse states. While the proposed method is trained in a simulation environment only, it can be directly applied to real-world scenarios without additional training or tuning. The performance of the proposed method is validated in both simulation and real-world environments, including forests and various structures. The trained policy achieves an average speed of 7 m/s and a maximum speed of 8.8 m/s in real flight experiments. To the best of our knowledge, this is the first work to successfully apply an IRL framework for high-speed visual navigation of drones.",
@@ -24766,7 +24812,7 @@
         "cs.IR"
       ],
       "id": "2412.09560v2",
-      "page": 28,
+      "page": 29,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2024-12-12T18:46:38+00:00",
       "summary": "Materials discovery and development are critical for addressing global\nchallenges. Yet, the exponential growth in materials science literature\ncomprising vast amounts of textual data has created significant bottlenecks in\nknowledge extraction, synthesis, and scientific reasoning. Large Language\nModels (LLMs) offer unprecedented opportunities to accelerate materials\nresearch through automated analysis and prediction. Still, their effective\ndeployment requires domain-specific adaptation for understanding and solving\ndomain-relevant tasks. Here, we present LLaMat, a family of foundational models\nfor materials science developed through continued pretraining of LLaMA models\non an extensive corpus of materials literature and crystallographic data.\nThrough systematic evaluation, we demonstrate that LLaMat excels in\nmaterials-specific NLP and structured information extraction while maintaining\ngeneral linguistic capabilities. The specialized LLaMat-CIF variant\ndemonstrates unprecedented capabilities in crystal structure generation,\npredicting stable crystals with high coverage across the periodic table.\nIntriguingly, despite LLaMA-3's superior performance in comparison to LLaMA-2,\nwe observe that LLaMat-2 demonstrates unexpectedly enhanced domain-specific\nperformance across diverse materials science tasks, including structured\ninformation extraction from text and tables, more particularly in crystal\nstructure generation, a potential adaptation rigidity in overtrained LLMs.\nAltogether, the present work demonstrates the effectiveness of domain\nadaptation towards developing practically deployable LLM copilots for materials\nresearch. Beyond materials science, our findings reveal important\nconsiderations for domain adaptation of LLMs, such as model selection, training\nmethodology, and domain-specific performance, which may influence the\ndevelopment of specialized scientific AI systems.",
@@ -24785,7 +24831,7 @@
         "cond-mat.stat-mech"
       ],
       "id": "2412.08974v1",
-      "page": 28,
+      "page": 29,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2024-12-12T06:11:53+00:00",
       "summary": "Rigorous theories connecting physical properties of a heterogeneous material\nto its microstructure offer a promising avenue to guide the computational\nmaterial design and optimization. We present here an efficient Fourier-space\nbased computational framework and employ a variety of analytical ${\\tilde\n\\chi}_{_V}({k})$ functions that satisfy all known necessary conditions to\nconstruct 3D disordered stealthy hyperuniform, standard hyperuniform,\nnonhyperuniform, and antihyperuniform two-phase heterogeneous material systems\nat varying phase volume fractions. We show that a rich spectrum of distinct\nstructures within each of the above classes of materials can be generated by\ntuning correlations in the system across length scales. We present the first\nrealization of antihyperuniform two-phase heterogeneous materials in 3D, which\nare characterized by a power-law autocovariance function $\\chi_{_V}(r)$ and\ncontain clusters of dramatically different sizes and morphologies. We also\ndetermine the diffusion spreadability ${\\cal S}(t)$ and estimate the fluid\npermeability $k$ associated with all of the constructed materials directly from\nthe corresponding ${\\tilde \\chi}_{_V}({k})$ functions. We find that varying the\nlength-scale parameter within each class of ${\\tilde \\chi}_{_V}({k})$ functions\ncan also lead to orders of magnitude variation of ${\\cal S}(t)$ at intermediate\nand long time scales. Moreover, we find that increasing solid volume fraction\n$\\phi_1$ and correlation length $a$ in the constructed media generally leads to\na decrease in the dimensionless fluid permeability $k/a^2$. These results\nindicate the feasibility of employing parameterized ${\\tilde \\chi}_{_V}({k})$\nfor designing composites with targeted transport properties.",
@@ -25798,7 +25844,7 @@
         "cs.LG"
       ],
       "id": "2410.20976v1",
-      "page": 29,
+      "page": 30,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2024-10-28T12:50:46+00:00",
       "summary": "The synthesis of inorganic crystalline materials is essential for modern\ntechnology, especially in quantum materials development. However, designing\nefficient synthesis workflows remains a significant challenge due to the\nprecise experimental conditions and extensive trial and error. Here, we present\na framework using large language models (LLMs) to predict synthesis pathways\nfor inorganic materials, including quantum materials. Our framework contains\nthree models: LHS2RHS, predicting products from reactants; RHS2LHS, predicting\nreactants from products; and TGT2CEQ, generating full chemical equations for\ntarget compounds. Fine-tuned on a text-mined synthesis database, our model\nraises accuracy from under 40% with pretrained models, to under 80% using\nconventional fine-tuning, and further to around 90% with our proposed\ngeneralized Tanimoto similarity, while maintaining robust to additional\nsynthesis steps. Our model further demonstrates comparable performance across\nmaterials with varying degrees of quantumness quantified using quantum weight,\nindicating that LLMs offer a powerful tool to predict balanced chemical\nequations for quantum materials discovery.",
@@ -25818,7 +25864,7 @@
         "cs.AI"
       ],
       "id": "2410.21341v3",
-      "page": 29,
+      "page": 30,
       "primary_category": "cs.LG",
       "published": "2024-10-28T04:37:08+00:00",
       "summary": "While inorganic retrosynthesis planning is essential in the field of chemical science, the application of machine learning in this area has been notably less explored compared to organic retrosynthesis planning. In this paper, we propose Retrieval-Retro for inorganic retrosynthesis planning, which implicitly extracts the precursor information of reference materials that are retrieved from the knowledge base regarding domain expertise in the field. Specifically, instead of directly employing the precursor information of reference materials, we propose implicitly extracting it with various attention layers, which enables the model to learn novel synthesis recipes more effectively. Moreover, during retrieval, we consider the thermodynamic relationship between target material and precursors, which is essential domain expertise in identifying the most probable precursor set among various options. Extensive experiments demonstrate the superiority of Retrieval-Retro in retrosynthesis planning, especially in discovering novel synthesis recipes, which is crucial for materials discovery. The source code for Retrieval-Retro is available at https://github.com/HeewoongNoh/Retrieval-Retro.",
@@ -26636,7 +26682,7 @@
         "cs.LG"
       ],
       "id": "2408.13532v1",
-      "page": 30,
+      "page": 31,
       "primary_category": "cs.CE",
       "published": "2024-08-24T09:20:33+00:00",
       "summary": "Auxetic structures, known for their negative Poisson's ratio, exhibit\neffective elastic properties heavily influenced by their underlying structural\ngeometry and base material properties. While periodic homogenization of auxetic\nunit cells can be used to investigate these properties, it is computationally\nexpensive and limits design space exploration and inverse analysis. In this\npaper, surrogate models are developed for the real-time prediction of the\neffective elastic properties of auxetic unit cells with orthogonal voids of\ndifferent shapes. The unit cells feature orthogonal voids in four distinct\nshapes, including rectangular, diamond, oval, and peanut-shaped voids, each\ncharacterized by specific void diameters. The generated surrogate models accept\ngeometric parameters and the elastic properties of the base material as inputs\nto predict the effective elastic constants in real-time. This rapid evaluation\nenables a practical inverse analysis framework for obtaining the optimal design\nparameters that yield the desired effective response. The fast Fourier\ntransform (FFT)-based homogenization approach is adopted to efficiently\ngenerate data for developing the surrogate models, bypassing concerns about\nperiodic mesh generation and boundary conditions typically associated with the\nfinite element method (FEM). The performance of the generated surrogate models\nis rigorously examined through a train/test split methodology, a parametric\nstudy, and an inverse problem. Finally, a graphical user interface (GUI) is\ndeveloped, offering real-time prediction of the effective tangent stiffness and\nperforming inverse analysis to determine optimal geometric parameters.",
@@ -26659,7 +26705,7 @@
         "cs.LG"
       ],
       "id": "2408.12732v1",
-      "page": 30,
+      "page": 31,
       "primary_category": "cs.CV",
       "published": "2024-08-22T20:48:51+00:00",
       "summary": "Development of new materials in hard drive designs requires characterization of nanoscale materials through grain segmentation. The high-throughput quickly changing research environment makes zero-shot generalization an incredibly desirable feature. For this reason, we explore the application of Meta's Segment Anything Model (SAM) to this problem. We first analyze the out-of-the-box use of SAM. Then we discuss opportunities and strategies for improvement under the assumption of minimal labeled data availability. Out-of-the-box SAM shows promising accuracy at property distribution extraction. We are able to identify four potential areas for improvement and show preliminary gains in two of the four areas.",
@@ -27487,7 +27533,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2407.00733v1",
-      "page": 31,
+      "page": 32,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2024-06-30T15:39:09+00:00",
       "summary": "Crystal structure prediction (CSP) is now increasingly used in discovering novel materials with applications in diverse industries. However, despite decades of developments and significant progress in this area, there lacks a set of well-defined benchmark dataset, quantitative performance metrics, and studies that evaluate the status of the field. We aim to fill this gap by introducing a CSP benchmark suite with 180 test structures along with our recently implemented CSP performance metric set. We benchmark a collection of 13 state-of-the-art (SOTA) CSP algorithms including template-based CSP algorithms, conventional CSP algorithms based on DFT calculations and global search such as CALYPSO, CSP algorithms based on machine learning (ML) potentials and global search, and distance matrix based CSP algorithms. Our results demonstrate that the performance of the current CSP algorithms is far from being satisfactory. Most algorithms cannot even identify the structures with the correct space groups except for the template-based algorithms when applied to test structures with similar templates. We also find that the ML potential based CSP algorithms are now able to achieve competitive performances compared to the DFT-based algorithms. These CSP algorithms' performance is strongly determined by the quality of the neural potentials as well as the global optimization algorithms. Our benchmark suite comes with a comprehensive open-source codebase and 180 well-selected benchmark crystal structures, making it convenient to evaluate the advantages and disadvantages of CSP algorithms from future studies. All the code and benchmark data are available at https://github.com/usccolumbia/cspbenchmark",
@@ -27522,7 +27568,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2407.00729v1",
-      "page": 31,
+      "page": 32,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2024-06-30T15:37:13+00:00",
       "summary": "The inverse design of tailored organic molecules for specific optoelectronic\ndevices of high complexity holds an enormous potential, but has not yet been\nrealized1,2. The complexity and literally infinite diversity of conjugated\nmolecular structures present both, an unprecedented opportunity for\ntechnological breakthroughs as well as an unseen optimization challenge.\nCurrent models rely on big data which do not exist for specialized research\nfilms. However, a hybrid computational and high throughput experimental\nscreening workflow allowed us to train predictive models with as little as 149\nmolecules. We demonstrate a unique closed-loop workflow combining high\nthroughput synthesis and Bayesian optimization that discovers new hole\ntransporting materials with tailored properties for solar cell applications. A\nseries of high-performance molecules were identified from minimal suggestions,\nachieving up to 26.23% (certified 25.88%) power conversion efficiency in\nperovskite solar cells. Our work paves the way for rapid, informed discovery in\nvast molecular libraries, revolutionizing material selection for complex\ndevices. We believe that our approach can be generalized to other emerging\nfields and indeed accelerate the development of optoelectronic semiconductor\ndevices in general.",
@@ -28425,7 +28471,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2405.03680v2",
-      "page": 32,
+      "page": 33,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2024-05-06T17:54:54+00:00",
       "summary": "Large language models (LLMs) such as generative pretrained transformers\n(GPTs) have shown potential for various commercial applications, but their\napplicability for materials design remains underexplored. In this article, we\nintroduce AtomGPT, a model specifically developed for materials design based on\ntransformer architectures, to demonstrate the capability for both atomistic\nproperty prediction and structure generation. We show that a combination of\nchemical and structural text descriptions can efficiently predict material\nproperties with accuracy comparable to graph neural network models, including\nformation energies, electronic bandgaps from two different methods and\nsuperconducting transition temperatures. Furthermore, we demonstrate that\nAtomGPT can generate atomic structures for tasks such as designing new\nsuperconductors, with the predictions validated through density functional\ntheory calculations. This work paves the way for leveraging LLMs in forward and\ninverse materials design, offering an efficient approach to the discovery and\noptimization of materials.",
@@ -28443,7 +28489,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2405.02138v2",
-      "page": 32,
+      "page": 33,
       "primary_category": "physics.comp-ph",
       "published": "2024-05-03T14:40:54+00:00",
       "summary": "Version 13 of XtalOpt, an evolutionary algorithm for crystal structure prediction, is now available for download from the CPC program library or the XtalOpt website, https://xtalopt.github.io. In the new version of the XtalOpt code, a general platform for multi-objective global optimization is implemented. This functionality is designed to facilitate the search for (meta)stable phases of functional materials through minimization of the enthalpy of a crystalline system coupled with the simultaneous optimization of any desired properties that are specified by the user. The code is also able to perform a constrained search by filtering the parent pool of structures based on a user-specified feature, while optimizing multiple objectives. Here, we present the implementation and various technical details, and we provide a brief overview of additional improvements that have been introduced in the new version of XtalOpt.",
@@ -29284,7 +29330,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2402.18893v4",
-      "page": 33,
+      "page": 34,
       "primary_category": "cond-mat.str-el",
       "published": "2024-02-29T06:31:57+00:00",
       "summary": "Electronic liquid crystal (ELC) phases are spontaneous symmetry breaking states believed to arise from strong electron correlation in quantum materials such as cuprates and iron pnictides. Here, we report a direct observation of a smectic phase in a weakly correlated nonsymmorphic square-net semimetal GdSbxTe2-x. Incommensurate smectic charge modulation and intense local unidirectional nanostructure, which coexist with Dirac fermions across Fermi level, are visualized by using spectroscopic imaging - scanning tunneling microscopy. As materials with highly mobile carriers are mostly weakly correlated, the discovery of such an ELC phase are anomalous and raise questions on the origin of their emergence. Specifically, we demonstrate how chemical substitution generates these symmetry breaking phases before the system undergoes a charge density wave (CDW) - orthorhombic structural transition. Our results highlight the importance of impurities in realizing ELC phases and present a new material platform for exploring the interplay among quenched disorder, Dirac fermions and electron correlation.",
@@ -29309,7 +29355,7 @@
         "quant-ph"
       ],
       "id": "2402.18379v1",
-      "page": 33,
+      "page": 34,
       "primary_category": "cond-mat.str-el",
       "published": "2024-02-28T15:00:25+00:00",
       "summary": "Many of the most exciting materials discoveries in fundamental condensed\nmatter physics are made in systems hosting some degree of intrinsic disorder.\nWhile disorder has historically been regarded as something to be avoided in\nmaterials design, it is often of central importance to correlated and quantum\nmaterials. This is largely driven by the conceptual and theoretical ease to\nhandle, predict, and understand highly uniform systems that exhibit complex\ninteractions, symmetries and band structures. In this perspective, we highlight\nhow flipping this paradigm has enabled exciting possibilities in the emerging\nfield of high entropy oxide (HEO) quantum materials. These materials host high\nlevels of cation or anion compositional disorder while maintaining unexpectedly\nuniform single crystal lattices. The diversity of atomic scale interactions of\nspin, charge, orbital, and lattice degrees of freedom are found to emerge into\ncoherent properties on much larger length scales. Thus, altering the variance\nand magnitudes of the atomic scale properties through elemental selection can\nopen new routes to tune global correlated phases such as magnetism,\nmetal-insulator transitions, ferroelectricity, and even emergent topological\nresponses. The strategy of embracing disorder in this way provides a much\nbroader pallet from which functional states can be designed for next-generation\nmicroelectronic and quantum information systems.",
@@ -30161,7 +30207,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2312.14485v2",
-      "page": 34,
+      "page": 35,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2023-12-22T07:25:15+00:00",
       "summary": "Drawing inspiration from the achievements of natural language processing, we adopt self-supervised learning and utilize an equivariant graph neural network to develop a unified platform designed for training generative models capable of generating crystal structures, as well as efficiently adapting to downstream tasks in material property prediction. To mitigate the challenge of incorporating large-scale assessment on the reliability of generated structures into the training process, we utilize the generative adversarial network (GAN) with its discriminator being a cost-effective evaluator for the generated structures, resulting in notable improvements in model performance. We demonstrate the utility of our model in finding the optimal crystal structure under predefined conditions. Without reliance on properties acquired experimentally or numerically, our model further displays its capability to comprehend the mechanism of crystal structure formation through its ability to grouping chemically similar elements. Therefore, this paper extends an invitation to explore deeper into the scientific understanding of material structures through generative models, offering a fresh perspective on broadening the scope and efficacy of machine learning in material science.",
@@ -30181,7 +30227,7 @@
         "q-bio.BM"
       ],
       "id": "2312.13110v3",
-      "page": 34,
+      "page": 35,
       "primary_category": "cs.LG",
       "published": "2023-12-20T15:30:15+00:00",
       "summary": "Learning representations of molecular structures using deep learning is a\nfundamental problem in molecular property prediction tasks. Molecules\ninherently exist in the real world as three-dimensional structures;\nfurthermore, they are not static but in continuous motion in the 3D Euclidean\nspace, forming a potential energy surface. Therefore, it is desirable to\ngenerate multiple conformations in advance and extract molecular\nrepresentations using a 4D-QSAR model that incorporates multiple conformations.\nHowever, this approach is impractical for drug and material discovery tasks\nbecause of the computational cost of obtaining multiple conformations. To\naddress this issue, we propose a pre-training method for molecular GNNs using\nan existing dataset of molecular conformations to generate a latent vector\nuniversal to multiple conformations from a 2D molecular graph. Our method,\ncalled Boltzmann GNN, is formulated by maximizing the conditional marginal\nlikelihood of a conditional generative model for conformations generation. We\nshow that our model has a better prediction performance for molecular\nproperties than existing pre-training methods using molecular graphs and\nthree-dimensional molecular structures.",
@@ -31013,7 +31059,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2310.13153v1",
-      "page": 35,
+      "page": 36,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2023-10-19T20:55:08+00:00",
       "summary": "Expanding the pool of stable halide perovskites with attractive\noptoelectronic properties is crucial to addressing current limitations in their\nperformance as photovoltaic (PV) absorbers. In this article, we demonstrate how\na high-throughput density functional theory (DFT) dataset of halide perovskite\nalloys can be used to train accurate surrogate models for property prediction\nand subsequently perform inverse design using genetic algorithm (GA). Our\ndataset consists of decomposition energies, band gaps, and photovoltaic\nefficiencies of nearly 800 pure and mixed composition ABX$_3$ compounds from\nboth the GGA-PBE and HSE06 functionals, and are combined with ~ 100\nexperimental data points collected from the literature. Multi-fidelity random\nforest regression models are trained on the DFT + experimental dataset for each\nproperty using descriptors that one-hot encode composition, phase, and\nfidelity, and additionally include well-known elemental or molecular properties\nof species at the A, B, and X sites. Rigorously optimized models are deployed\nfor experiment-level prediction over > 150,000 hypothetical compounds, leading\nto thousands of promising materials with low decomposition energy, band gap\nbetween 1 and 2 eV, and efficiency > 15%. Surrogate models are further combined\nwith GA using an objective function to maintain chemical feasibility, minimize\ndecomposition energy, maximize PV efficiency, and keep band gap between 1 and 2\neV; hundreds more optimal compositions and phases are thus discovered. We\npresent an analysis of the screened and inverse-designed materials, visualize\nternary phase diagrams generated for many systems of interest using ML\npredictions, and suggest strategies for further improvement and expansion in\nthe future.",
@@ -31040,7 +31086,7 @@
         "physics.optics"
       ],
       "id": "2401.02961v1",
-      "page": 35,
+      "page": 36,
       "primary_category": "cs.LG",
       "published": "2023-10-18T09:59:35+00:00",
       "summary": "Metasurfaces have widespread applications in fifth-generation (5G) microwave\ncommunication. Among the metasurface family, free-form metasurfaces excel in\nachieving intricate spectral responses compared to regular-shape counterparts.\nHowever, conventional numerical methods for free-form metasurfaces are\ntime-consuming and demand specialized expertise. Alternatively, recent studies\ndemonstrate that deep learning has great potential to accelerate and refine\nmetasurface designs. Here, we present XGAN, an extended generative adversarial\nnetwork (GAN) with a surrogate for high-quality free-form metasurface designs.\nThe proposed surrogate provides a physical constraint to XGAN so that XGAN can\naccurately generate metasurfaces monolithically from input spectral responses.\nIn comparative experiments involving 20000 free-form metasurface designs, XGAN\nachieves 0.9734 average accuracy and is 500 times faster than the conventional\nmethodology. This method facilitates the metasurface library building for\nspecific spectral responses and can be extended to various inverse design\nproblems, including optical metamaterials, nanophotonic devices, and drug\ndiscovery.",
@@ -31879,7 +31925,7 @@
         "cs.LG"
       ],
       "id": "2308.10818v1",
-      "page": 36,
+      "page": 37,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2023-07-24T19:10:13+00:00",
       "summary": "Machine learning (ML) is widely used to explore crystal materials and predict their properties. However, the training is time-consuming for deep-learning models, and the regression process is a black box that is hard to interpret. Also, the preprocess to transfer a crystal structure into the input of ML, called descriptor, needs to be designed carefully. To efficiently predict important properties of materials, we propose an approach based on ensemble learning consisting of regression trees to predict formation energy and elastic constants based on small-size datasets of carbon allotropes as an example. Without using any descriptor, the inputs are the properties calculated by molecular dynamics with 9 different classical interatomic potentials. Overall, the results from ensemble learning are more accurate than those from classical interatomic potentials, and ensemble learning can capture the relatively accurate properties from the 9 classical potentials as criteria for predicting the final properties.",
@@ -31906,7 +31952,7 @@
         "physics.optics"
       ],
       "id": "2307.11562v1",
-      "page": 36,
+      "page": 37,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2023-07-21T13:14:47+00:00",
       "summary": "Degenerate states in condensed matter are frequently the cause of unwanted\nfluctuations, which prevent the formation of ordered phases and reduce their\nfunctionalities. Removing these degeneracies has been a common theme in\nmaterials design, pursued for example by strain engineering at interfaces.\nHere, we explore a non-equilibrium approach to lift degeneracies in solids. We\nshow that coherent driving of the crystal lattice in bi- and multilayer\ngraphene, boosts the coupling between two doubly-degenerate modes of E1u and\nE2g symmetry, which are virtually uncoupled at equilibrium. New vibronic states\nresult from anharmonic driving of the E1u mode to large amplitdues, boosting\nits coupling to the E2g mode. The vibrational structure of the driven state is\nprobed with time-resolved Raman scattering, which reveals laser-field dependent\nmode splitting and enhanced lifetimes. We expect this phenomenon to be\ngenerally observable in many materials systems, affecting the non-equilibrium\nemergent phases in matter.",
@@ -32868,7 +32914,7 @@
         "cs.LG"
       ],
       "id": "2305.03855v1",
-      "page": 37,
+      "page": 38,
       "primary_category": "math.OC",
       "published": "2023-05-05T21:43:00+00:00",
       "summary": "Optimal design of experiments for Bayesian inverse problems has recently gained wide popularity and attracted much attention, especially in the computational science and Bayesian inversion communities. An optimal design maximizes a predefined utility function that is formulated in terms of the elements of an inverse problem, an example being optimal sensor placement for parameter identification. The state-of-the-art algorithmic approaches following this simple formulation generally overlook misspecification of the elements of the inverse problem, such as the prior or the measurement uncertainties. This work presents an efficient algorithmic approach for designing optimal experimental design schemes for Bayesian inverse problems such that the optimal design is robust to misspecification of elements of the inverse problem. Specifically, we consider a worst-case scenario approach for the uncertain or misspecified parameters, formulate robust objectives, and propose an algorithmic approach for optimizing such objectives. Both relaxation and stochastic solution approaches are discussed with detailed analysis and insight into the interpretation of the problem and the proposed algorithmic approach. Extensive numerical experiments to validate and analyze the proposed approach are carried out for sensor placement in a parameter identification problem.",
@@ -32887,7 +32933,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2305.02917v1",
-      "page": 37,
+      "page": 38,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2023-05-04T15:20:59+00:00",
       "summary": "Developing methods to understand and control defect formation in\nnanomaterials offers a promising route for materials discovery. Monolayer MX2\nphases represent a particularly compelling case for defect engineering of\nnanomaterials due to the large variability in their physical properties as\ndifferent defects are introduced into their structure. However, effective\nidentification and quantification of defects remains a challenge even as\nhigh-throughput scanning tunneling electron microscopy (STEM) methods improve.\nThis study highlights the benefits of employing first principles calculations\nto produce digital twins for training deep learning segmentation models for\ndefect identification in monolayer MX2 phases. Around 600 defect structures\nwere obtained using density functional theory calculations, with each monolayer\nMX2 structure being subjected to multislice simulations for the purpose of\ngenerating the digital twins. Several deep learning segmentation architectures\nwere trained on this dataset, and their performances evaluated under a variety\nof conditions such as recognizing defects in the presence of unidentified\nimpurities, beam damage, grain boundaries, and with reduced image quality from\nlow electron doses. This digital twin approach allows benchmarking different\ndeep learning architectures on a theory dataset, which enables the study of\ndefect classification under a broad array of finely controlled conditions. It\nthus opens the door to resolving the underpinning physical reasons for model\nshortcomings, and potentially chart paths forward for automated discovery of\nmaterials defect phases in experiments.",
@@ -33717,7 +33763,7 @@
         "cs.LG"
       ],
       "id": "2302.00615v2",
-      "page": 38,
+      "page": 39,
       "primary_category": "cs.LG",
       "published": "2023-02-01T17:29:43+00:00",
       "summary": "Tackling the most pressing problems for humanity, such as the climate crisis\nand the threat of global pandemics, requires accelerating the pace of\nscientific discovery. While science has traditionally relied on trial and error\nand even serendipity to a large extent, the last few decades have seen a surge\nof data-driven scientific discoveries. However, in order to truly leverage\nlarge-scale data sets and high-throughput experimental setups, machine learning\nmethods will need to be further improved and better integrated in the\nscientific discovery pipeline. A key challenge for current machine learning\nmethods in this context is the efficient exploration of very large search\nspaces, which requires techniques for estimating reducible (epistemic)\nuncertainty and generating sets of diverse and informative experiments to\nperform. This motivated a new probabilistic machine learning framework called\nGFlowNets, which can be applied in the modeling, hypotheses generation and\nexperimental design stages of the experimental science loop. GFlowNets learn to\nsample from a distribution given indirectly by a reward function corresponding\nto an unnormalized probability, which enables sampling diverse, high-reward\ncandidates. GFlowNets can also be used to form efficient and amortized Bayesian\nposterior estimators for causal models conditioned on the already acquired\nexperimental data. Having such posterior models can then provide estimators of\nepistemic uncertainty and information gain that can drive an experimental\ndesign policy. Altogether, here we will argue that GFlowNets can become a\nvaluable tool for AI-driven scientific discovery, especially in scenarios of\nvery large candidate spaces where we have access to cheap but inaccurate\nmeasurements or to expensive but accurate measurements. This is a common\nsetting in the context of drug and material discovery, which we use as examples\nthroughout the paper.",
@@ -33738,7 +33784,7 @@
         "cs.LG"
       ],
       "id": "2302.00485v1",
-      "page": 38,
+      "page": 39,
       "primary_category": "cs.LG",
       "published": "2023-02-01T14:48:18+00:00",
       "summary": "Automatic material discovery with desired properties is a fundamental\nchallenge for material sciences. Considerable attention has recently been\ndevoted to generating stable crystal structures. While existing work has shown\nimpressive success on supervised tasks such as property prediction, the\nprogress on unsupervised tasks such as material generation is still hampered by\nthe limited extent to which the equivalent geometric representations of the\nsame crystal are considered. To address this challenge, we propose EMPNN a\nperiodic equivariant message-passing neural network that learns crystal lattice\ndeformation in an unsupervised fashion. Our model equivalently acts on lattice\naccording to the deformation action that must be performed, making it suitable\nfor crystal generation, relaxation and optimisation. We present experimental\nevaluations that demonstrate the effectiveness of our approach.",
@@ -34585,7 +34631,7 @@
         "q-bio.QM"
       ],
       "id": "2210.10838v1",
-      "page": 39,
+      "page": 40,
       "primary_category": "cs.LG",
       "published": "2022-10-19T19:04:45+00:00",
       "summary": "Deep generative models have emerged as a popular machine learning-based\napproach for inverse design problems in the life sciences. However, these\nproblems often require sampling new designs that satisfy multiple properties of\ninterest in addition to learning the data distribution. This multi-objective\noptimization becomes more challenging when properties are independent or\northogonal to each other. In this work, we propose a Pareto-compositional\nenergy-based model (pcEBM), a framework that uses multiple gradient descent for\nsampling new designs that adhere to various constraints in optimizing distinct\nproperties. We demonstrate its ability to learn non-convex Pareto fronts and\ngenerate sequences that simultaneously satisfy multiple desired properties\nacross a series of real-world antibody design tasks.",
@@ -34603,7 +34649,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2210.10069v1",
-      "page": 39,
+      "page": 40,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2022-10-18T18:05:10+00:00",
       "summary": "Ab-initio crystal structure prediction depends on accurate calculation of the energies of competing structures. Many DFT codes are available that utilize different approaches to solve the Kohn-Sham equation. We evaluate the consistency of three software packages (WIEN2k, VASP and MuST) that utilize three different methods (FL-APW, plane-wave pseudopotential and the KKR-Green's Function methods) by comparing the relative total energies obtained for a set of BCC and FCC binary metallic alloys. We focus on the impact of choices such as muffin-tin $vs.$ full-potential, angular momentum cutoff and other important KKR parameters. Different alloy systems prove more or less sensitive to these choices, and we explain the differences through study of the angular variation of their potentials. Our results can provide guidance in the application of KKR as a total energy method for structure prediction.",
@@ -35458,7 +35504,7 @@
         "cs.AI"
       ],
       "id": "2205.10014v2",
-      "page": 40,
+      "page": 41,
       "primary_category": "cs.LG",
       "published": "2022-05-20T08:10:35+00:00",
       "summary": "Deep graph learning has achieved remarkable progresses in both business and\nscientific areas ranging from finance and e-commerce, to drug and advanced\nmaterial discovery. Despite these progresses, how to ensure various deep graph\nlearning algorithms behave in a socially responsible manner and meet regulatory\ncompliance requirements becomes an emerging problem, especially in\nrisk-sensitive domains. Trustworthy graph learning (TwGL) aims to solve the\nabove problems from a technical viewpoint. In contrast to conventional graph\nlearning research which mainly cares about model performance, TwGL considers\nvarious reliability and safety aspects of the graph learning framework\nincluding but not limited to robustness, explainability, and privacy. In this\nsurvey, we provide a comprehensive review of recent leading approaches in the\nTwGL field from three dimensions, namely, reliability, explainability, and\nprivacy protection. We give a general categorization for existing work and\nreview typical work for each category. To give further insights for TwGL\nresearch, we provide a unified view to inspect previous works and build the\nconnection between them. We also point out some important open problems\nremaining to be solved in the future developments of TwGL.",
@@ -35478,7 +35524,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2205.09500v2",
-      "page": 40,
+      "page": 41,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2022-05-19T12:14:47+00:00",
       "summary": "The discovery of hidden spin polarization (HSP) in centrosymmetric nonmagnetic crystals, i.e., spatially distributed spin polarization originated from local symmetry breaking, has promised an expanded material pool for future spintronics. However, the measurements of such exotic effects have been limited to subtle space- and momentum-resolved techniques, unfortunately hindering their applications. Here, we theoretically predict macroscopic non-reciprocal transports induced by HSP when coupling another spatially distributed quantity, such as staggered local moments in a PT-symmetric anti-ferromagnet. By using a four-band model Hamiltonian, we demonstrate that HSP plays a crucial role in determining the asymmetric bands with respect to opposite momenta. Such band asymmetry leads to non-reciprocal nonlinear conductivity, exemplified by tetragonal CuMnAs via first-principles calculations. We further provide the material design principles for large nonlinear conductivity, including two-dimensional nature, multiple band crossings near the Fermi level, and symmetry protected HSP. Our work not only reveals direct spintronic applications of HSP (such as Néel order detection), but also sheds light on finding observables of other ''hidden effects'', such as hidden optical polarization and hidden Berry curvature.",
@@ -36297,7 +36343,7 @@
         "cond-mat.mes-hall"
       ],
       "id": "2201.07569v1",
-      "page": 41,
+      "page": 42,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2022-01-19T12:49:52+00:00",
       "summary": "Understanding ferroelectricity is of both fundamental and technological\nimportance to further stimulate the development of new materials designs and\nmanipulations. Here, we perform an in-depth first-principle study on the\nwell-known ferroelectric barium titanate BaTiO$_{3}$ under a hydrostatic\nnegative pressure, showing an isosymmetric phase transition to a\nsupertetragonal phase with high $c/a$ ratio of $\\sim1.3$. The microscopic\norigin and driving mechanisms of this phase transition are identified as a\ndrastic change of the covalently $\\pi$-bonded electrons. These findings provide\nguidance in the search for new supertetragonal phases, with great opportunities\nfor novel multiferroic materials; and can be generalized in the understanding\nof other isosymmetric phase transitions.",
@@ -36315,7 +36361,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2201.05649v2",
-      "page": 41,
+      "page": 42,
       "primary_category": "cs.LG",
       "published": "2022-01-14T19:49:45+00:00",
       "summary": "The success of machine learning (ML) in materials property prediction depends heavily on how the materials are represented for learning. Two dominant families of material descriptors exist, one that encodes crystal structure in the representation and the other that only uses stoichiometric information with the hope of discovering new materials. Graph neural networks (GNNs) in particular have excelled in predicting material properties within chemical accuracy. However, current GNNs are limited to only one of the above two avenues owing to the little overlap between respective material representations. Here, we introduce a new concept of formula graph which unifies stoichiometry-only and structure-based material descriptors. We further develop a self-attention integrated GNN that assimilates a formula graph and show that the proposed architecture produces material embeddings transferable between the two domains. Our model can outperform some previously proposed structure-agnostic models and their structure-based counterparts while exhibiting better sample efficiency and faster convergence. Finally, the model is applied in a challenging exemplar to predict the complex dielectric function of materials and nominate new substances that potentially exhibit epsilon-near-zero phenomena.",
@@ -37144,7 +37190,7 @@
         "cs.AI"
       ],
       "id": "2108.08500v3",
-      "page": 42,
+      "page": 43,
       "primary_category": "cs.LG",
       "published": "2021-08-19T05:00:08+00:00",
       "summary": "The inverse approach is computationally efficient in aerodynamic design as\nthe desired target performance distribution is prespecified. However, it has\nsome significant limitations that prevent it from achieving full efficiency.\nFirst, the iterative procedure should be repeated whenever the specified target\ndistribution changes. Target distribution optimization can be performed to\nclarify the ambiguity in specifying this distribution, but several additional\nproblems arise in this process such as loss of the representation capacity due\nto parameterization of the distribution, excessive constraints for a realistic\ndistribution, inaccuracy of quantities of interest due to theoretical/empirical\npredictions, and the impossibility of explicitly imposing geometric\nconstraints. To deal with these issues, a novel inverse design optimization\nframework with a two-step deep learning approach is proposed. A variational\nautoencoder and multi-layer perceptron are used to generate a realistic target\ndistribution and predict the quantities of interest and shape parameters from\nthe generated distribution, respectively. Then, target distribution\noptimization is performed as the inverse design optimization. The proposed\nframework applies active learning and transfer learning techniques to improve\naccuracy and efficiency. Finally, the framework is validated through\naerodynamic shape optimizations of the wind turbine airfoil. Their results show\nthat this framework is accurate, efficient, and flexible to be applied to other\ninverse design engineering applications.",
@@ -37161,7 +37207,7 @@
         "cs.LG"
       ],
       "id": "2108.13171v1",
-      "page": 42,
+      "page": 43,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2021-08-16T05:51:03+00:00",
       "summary": "Machine-learning (ML) techniques have revolutionized a host of research fields of chemical and materials science with accelerated, high-efficiency discoveries in design, synthesis, manufacturing, characterization and application of novel functional materials, especially at the nanometre scale. The reason is the time efficiency, prediction accuracy and good generalization abilities, which gradually replaces the traditional experimental or computational work. With enormous potentiality to tackle more real-world problems, ML provides a more comprehensive insight into combinations with molecules/materials under the fundamental procedures for constructing ML models, like predicting properties or functionalities from given parameters, nanoarchitecture design and generating specific models for other purposes. The key to the advances in nanomaterials discovery is how input fingerprints and output values can be linked quantitatively. Finally, some great opportunities and technical challenges are concluded in this fantastic field.",
@@ -38052,7 +38098,7 @@
         "cond-mat.str-el"
       ],
       "id": "2103.01467v1",
-      "page": 43,
+      "page": 44,
       "primary_category": "physics.app-ph",
       "published": "2021-03-02T04:38:05+00:00",
       "summary": "A large transverse thermoelectric response, known as anomalous Nernst effect (ANE) has been recently observed in several topological magnets. Building a thermopile employing this effect has been the subject of several recent propositions. Here, we design and build a thermopile with an array of tilted adjacent crystals of Mn$_3$Sn. The design employs a single material and replaces pairs of P and N thermocouples of the traditional design with hermaphroditic legs. The design exploits the large lag angle between the applied field and the magnetization, which we attribute to the interruption of magnetic octupoles at the edge of $xy$-plane. Eliminating extrinsic contacts between legs will boost the efficiency, simplify the process and pave the way for a new generation of thermopiles.",
@@ -38075,7 +38121,7 @@
         "cs.LG"
       ],
       "id": "2103.00608v1",
-      "page": 43,
+      "page": 44,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2021-02-28T20:15:23+00:00",
       "summary": "Active learning has been increasingly applied to screening functional materials from existing materials databases with desired properties. However, the number of known materials deposited in the popular materials databases such as ICSD and Materials Project is extremely limited and consists of just a tiny portion of the vast chemical design space. Herein we present an active generative inverse design method that combines active learning with a deep variational autoencoder neural network and a generative adversarial deep neural network model to discover new materials with a target property in the whole chemical design space. The application of this method has allowed us to discover new thermodynamically stable materials with high band gap (SrYF$_5$) and semiconductors with specified band gap ranges (SrClF$_3$, CaClF$_5$, YCl$_3$, SrC$_2$F$_3$, AlSCl, As$_2$O$_3$), all of which are verified by the first principle DFT calculations. Our experiments show that while active learning itself may sample chemically infeasible candidates, these samples help to train effective screening models for filtering out materials with desired properties from the hypothetical materials created by the generative model. The experiments show the effectiveness of our active generative inverse design approach.",
@@ -38941,7 +38987,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "2007.02085v1",
-      "page": 44,
+      "page": 45,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2020-07-04T12:29:14+00:00",
       "summary": "Oxidation states are well-established in chemical science teaching and research. We data-mine more than 168,000 crystallographic reports to find an optimal allocation of oxidation states to each element. In doing so we uncover discrepancies between text-book chemistry and reported charge states observed in materials. We go on to show how the oxidation states we recommend can significantly facilitate materials discovery and heuristic design of novel inorganic compounds.",
@@ -38964,7 +39010,7 @@
         "stat.ML"
       ],
       "id": "2006.15274v2",
-      "page": 44,
+      "page": 45,
       "primary_category": "cs.CE",
       "published": "2020-06-27T03:56:55+00:00",
       "summary": "Metamaterials are emerging as a new paradigmatic material system to render unprecedented and tailorable properties for a wide variety of engineering applications. However, the inverse design of metamaterial and its multiscale system is challenging due to high-dimensional topological design space, multiple local optima, and high computational cost. To address these hurdles, we propose a novel data-driven metamaterial design framework based on deep generative modeling. A variational autoencoder (VAE) and a regressor for property prediction are simultaneously trained on a large metamaterial database to map complex microstructures into a low-dimensional, continuous, and organized latent space. We show in this study that the latent space of VAE provides a distance metric to measure shape similarity, enable interpolation between microstructures and encode meaningful patterns of variation in geometries and properties. Based on these insights, systematic data-driven methods are proposed for the design of microstructure, graded family, and multiscale system. For microstructure design, the tuning of mechanical properties and complex manipulations of microstructures are easily achieved by simple vector operations in the latent space. The vector operation is further extended to generate metamaterial families with a controlled gradation of mechanical properties by searching on a constructed graph model. For multiscale metamaterial systems design, a diverse set of microstructures can be rapidly generated using VAE for target properties at different locations and then assembled by an efficient graph-based optimization method to ensure compatibility between adjacent microstructures. We demonstrate our framework by designing both functionally graded and heterogeneous metamaterial systems that achieve desired distortion behaviors.",
@@ -39839,7 +39885,7 @@
         "cond-mat.supr-con"
       ],
       "id": "1908.02369v1",
-      "page": 45,
+      "page": 46,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2019-08-06T21:13:53+00:00",
       "summary": "This review presents a survey of, and guide to, New Materials Physics research. It begins with an overview of the goals of New Materials Physics and then presents important ideas and techniques for the design and growth of new materials. An emphasis is placed on the use of compositional phase diagrams to inform and motivate solution growth of single crystals. The second half of this review focuses on the vital process of generating actionable ideas for the growth and discovery of new materials and ground states. Motivations ranging from (1) wanting a specific compound, to (2) wanting a specific ground state to (3) wanting to explore for known and unknown unknowns, will be discussed and illustrated with abundant examples. The goal of this review is to inform, inspire, an even entertain, as many practitioners of this field as possible.",
@@ -39858,7 +39904,7 @@
         "cs.LG"
       ],
       "id": "1907.09314v1",
-      "page": 45,
+      "page": 46,
       "primary_category": "physics.comp-ph",
       "published": "2019-07-19T09:07:09+00:00",
       "summary": "The model presented in this research predicts ideal chiral crystal and propose a new direction of designing chiral crystals. Skyrmions are topologically protected and structurally assymetric materials with an exotic spin composition. This work presents deep learning method for skyrmion material design of chiral crystals. This paper presents an approach to construct a probabilistic classifier and an Artificial Neural Network(ANN) from a true or false chirality dataset consisting of chiral and achiral compounds with 'A' and 'B' type elements. A quantitative predictor for accuracy of forming the chiral crystals is illustrated. The feasibility of ANN method is tested in a comprehensive manner by comparing with probalistic classifier method. Throughout this manuscript we present deep learnig algorithm design with modelling and simulations of materials. This research work elucidated paves a way to develop sophisticated software tool to make an indicator of crystal design.",
@@ -40705,7 +40751,7 @@
         "physics.comp-ph"
       ],
       "id": "1808.02470v1",
-      "page": 46,
+      "page": 47,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2018-08-07T17:33:20+00:00",
       "summary": "We discover many new crystalline solid materials with fast single crystal Li ion conductivity at room temperature, discovered through density functional theory simulations guided by machine learning-based methods. The discovery of new solid Li superionic conductors is of critical importance to the development of safe all-solid-state Li-ion batteries. With a predictive universal structure-property relationship for fast ion conduction not well understood, the search for new solid Li ion conductors has relied largely on trial-and-error computational and experimental searches over the last several decades. In this work, we perform a guided search of materials space with a machine learning (ML)-based prediction model for material selection and density functional theory molecular dynamics (DFT-MD) simulations for calculating ionic conductivity. These materials are screened from over 12,000 experimentally synthesized and characterized candidates with very diverse structures and compositions. When compared to a random search of materials space, we find that the ML-guided search is 2.7 times more likely to identify fast Li ion conductors, with at least a 45x improvement in the log-average of room temperature Li ion conductivity. The F1 score of the ML-based model is 0.50, 3.5 times better than the F1 score expected from completely random guesswork. In a head-to-head competition against six Ph.D. students working in the field, we find that the ML-based model doubles the F1 score of human experts in its ability to identify fast Li-ion conductors from atomistic structure with a thousand- fold increase in speed, clearly demonstrating the utility of this model for the research community. All conducting materials reported here lack transition metals and are predicted to exhibit low electronic conduction, high stability against oxidation, and high thermodynamic stability.",
@@ -40723,7 +40769,7 @@
         "cs.LG"
       ],
       "id": "1807.03404v2",
-      "page": 46,
+      "page": 47,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2018-07-09T22:06:04+00:00",
       "summary": "The combination of high throughput computation and machine learning has led to a new paradigm in materials design by allowing for the direct screening of vast portions of structural, chemical, and property space. The use of these powerful techniques leads to the generation of enormous amounts of data, which in turn calls for new techniques to efficiently explore and visualize the materials space to help identify underlying patterns. In this work, we develop a unified framework to hierarchically visualize the compositional and structural similarities between materials in an arbitrary material space with representations learned from different layers of graph convolutional neural networks. We demonstrate the potential for such a visualization approach by showing that patterns emerge automatically that reflect similarities at different scales in three representative classes of materials: perovskites, elemental boron, and general inorganic crystals, covering material spaces of different compositions, structures, and both. For perovskites, elemental similarities are learned that reflects multiple aspects of atom properties. For elemental boron, structural motifs emerge automatically showing characteristic boron local environments. For inorganic crystals, the similarity and stability of local coordination environments are shown combining different center and neighbor atoms. The method could help transition to a data-centered exploration of materials space in automated materials design.",
@@ -41526,7 +41572,7 @@
         "cond-mat.mtrl-sci"
       ],
       "id": "1603.04161v1",
-      "page": 47,
+      "page": 48,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2016-03-14T08:09:23+00:00",
       "summary": "Electrides are ionic solids that consist of cationic frameworks and anionic electrons trapped in the voids of lattices. Organic electrides exist in a large abundance, but the thermal instability at room temperature and sensitivity to moisture are bottlenecks that limit their practical uses. Known inorganic electrides are rare but appear to have high thermal and chemical stability and exhibit promising applications as electron-emitting materials, superior catalysts and strong reducing agents. Here, we report a developed inverse-design method that can be used to search for a large variety of inorganic electrides. Our method utilizes the intrinsic property of interstitial electron localization of electrides as the global variable function being incorporated into the swarm-intelligence based structure searches. Through screening 99 binary ionic compounds, we have designed 89 new inorganic electrides that are classified into three-, two-, and zero-dimensional species according to the way that the interstitial electrons are localized and the conductive properties of the systems. Our work reveals the rich abundance of inorganic electrides by extending them into more general forms and provides new structure types for electrides that are not thought of as before.",
@@ -41565,7 +41611,7 @@
         "physics.comp-ph"
       ],
       "id": "1601.04647v1",
-      "page": 47,
+      "page": 48,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2016-01-18T18:33:49+00:00",
       "summary": "Recent advances in theoretical structure prediction methods and high-throughput computational techniques are revolutionizing experimental discovery of the thermodynamically stable inorganic materials. Metastable materials represent a new frontier for studies, since even simple binary non ground state compounds of common elements may be awaiting discovery. However, there are significant research challenges related to non-equilibrium thin film synthesis and crystal structure predictions, such as small strained crystals in the experimental samples and energy minimization based theoretical algorithms. Here we report on experimental synthesis and characterization, as well as theoretical first-principles calculations of a previously unreported mixed-valent binary tin nitride. Thin film experiments indicate that this novel material is N-deficient SnN with tin in the mixed II/IV valence state and a small low-symmetry unit cell. Theoretical calculations suggest that the most likely crystal structure has the space group 2 (SG2) related to the distorted delafossite (SG166), which is nearly 0.1 eV/atom above the ground state SnN polymorph. This observation is rationalized by the structural similarity of the SnN distorted delafossite to the chemically related Sn3N4 spinel compound, which provides a fresh scientific insight into the reasons for growth of polymorphs of the metastable material. In addition to reporting on the discovery of the simple binary SnN compound, this paper illustrates a possible way of combining a wide range of advanced characterization techniques with the first-principle property calculation methods, to elucidate the most likely crystal structure of the previously unreported metastable materials.",
@@ -42083,5 +42129,5 @@
       "title": "Simulation of structural phase transitions by metadynamics"
     }
   ],
-  "total": 1905
+  "total": 1907
 }

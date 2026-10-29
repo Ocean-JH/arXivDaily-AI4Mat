@@ -138,13 +138,91 @@
         <div id="papers-content">
             <div class="section-heading">
 <h2 id="archive-papers">Paper archive</h2>
-<p>Page 13 of 48 · 1905 unique papers</p></div>
+<p>Page 13 of 48 · 1907 unique papers</p></div>
+<article class="paper"
+         id="paper-2511.03032"
+         data-paper-id="2511.03032"
+         aria-labelledby="title-paper-2511.03032"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">481</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2511.03032" class="paper-title"><a href="https://arxiv.org/abs/2511.03032v1" target="_blank" rel="noopener noreferrer">Leveraging Discrete Function Decomposability for Scientific Design</a></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>James C. Bowden, Sergey Levine, Jennifer Listgarten</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2025-11-04">2025-11-04</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cs.LG</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2511.03032v1</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2511.03032v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>In the era of AI-driven science and engineering, we often want to design discrete objects in silico according to user-specified properties. For example, we may wish to design a protein to bind its target, arrange components within a circuit to minimize latency, or find materials with certain properties. Given a property predictive model, in silico design typically involves training a generative model over the design space (e.g., protein sequence space) to concentrate on designs with the desired properties. Distributional optimization -- which can be formalized as an estimation of distribution algorithm or as reinforcement learning policy optimization -- finds the generative model that maximizes an objective function in expectation. Optimizing a distribution over discrete-valued designs is in general challenging because of the combinatorial nature of the design space. However, many property predictors in scientific applications are decomposable in the sense that they can be factorized over design variables in a way that could in principle enable more effective optimization. For example, amino acids at a catalytic site of a protein may only loosely interact with amino acids of the rest of the protein to achieve maximal catalytic activity. Current distributional optimization algorithms are unable to make use of such decomposability structure. Herein, we propose and demonstrate use of a new distributional optimization algorithm, Decomposition-Aware Distributional Optimization (DADO), that can leverage any decomposability defined by a junction tree on the design variables, to make optimization more efficient. At its core, DADO employs a soft-factorized &quot;search distribution&quot; -- a learned generative model -- for efficient navigation of the search space, invoking graph message-passing to coordinate optimization across linked factors.</p>
+        </details>
+    </div>
+</article>
+
+<article class="paper"
+         id="paper-2511.02824"
+         data-paper-id="2511.02824"
+         aria-labelledby="title-paper-2511.02824"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">482</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2511.02824" class="paper-title"><a href="https://arxiv.org/abs/2511.02824v2" target="_blank" rel="noopener noreferrer">Kosmos: An AI Scientist for Autonomous Discovery</a></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Ludovico Mitchener, Angela Yiu, Benjamin Chang, Mathieu Bourdenx, Tyler Nadolski, Arvis Sulovari, Eric C. Landsness, Daniel L. Barabasi, Siddharth Narayanan, Nicky Evans, Shriya Reddy, Martha Foiani, Aizad Kamal, Leah P. Shriver, Fang Cao, Asmamaw T. Wassie, Jon M. Laurent, Edwin Melville-Green, Mayk Caldas, Albert Bou, Kaleigh F. Roberts, Sladjana Zagorac, Timothy C. Orr, Miranda E. Orr, Kevin J. Zwezdaryk, Ali E. Ghareeb, Laurie McCoy, Bruna Gomes, Euan A. Ashley, Karen E. Duff, Tonio Buonassisi, Tom Rainforth, Randall J. Bateman, Michael Skarlinski, Samuel G. Rodriques, Michaela M. Hinks, Andrew D. White</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2025-11-04">2025-11-04</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cs.AI</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2511.02824v2</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2511.02824v2" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Data-driven scientific discovery requires iterative cycles of literature search, hypothesis generation, and data analysis. Substantial progress has been made towards AI agents that can automate scientific research, but all such agents remain limited in the number of actions they can take before losing coherence, thus limiting the depth of their findings. Here we present Kosmos, an AI scientist that automates data-driven discovery. Given an open-ended objective and a dataset, Kosmos runs for up to 12 hours performing cycles of parallel data analysis, literature search, and hypothesis generation before synthesizing discoveries into scientific reports. Unlike prior systems, Kosmos uses a structured world model to share information between a data analysis agent and a literature search agent. The world model enables Kosmos to coherently pursue the specified objective over 200 agent rollouts, collectively executing an average of 42,000 lines of code and reading 1,500 papers per run. Kosmos cites all statements in its reports with code or primary literature, ensuring its reasoning is traceable. Independent scientists found 79.4% of statements in Kosmos reports to be accurate, and collaborators reported that a single 20-cycle Kosmos run performed the equivalent of 6 months of their own research time on average. Furthermore, collaborators reported that the number of valuable scientific findings generated scales linearly with Kosmos cycles (tested up to 20 cycles). We highlight seven discoveries made by Kosmos that span metabolomics, materials science, neuroscience, and statistical genetics. Three discoveries independently reproduce findings from preprinted or unpublished manuscripts that were not accessed by Kosmos at runtime, while four make novel contributions to the scientific literature.</p>
+        </details>
+    </div>
+</article>
+
 <article class="paper"
          id="paper-2511.02609"
          data-paper-id="2511.02609"
          aria-labelledby="title-paper-2511.02609"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">481</div>
+    <div class="paper-index" aria-hidden="true">483</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.02609" class="paper-title"><a href="https://arxiv.org/abs/2511.02609v1" target="_blank" rel="noopener noreferrer">Suppression of auxetic behavior in black phosphorus with sulfur substitution</a></h3>
 
@@ -183,7 +261,7 @@
          data-paper-id="2511.02485"
          aria-labelledby="title-paper-2511.02485"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">482</div>
+    <div class="paper-index" aria-hidden="true">484</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.02485" class="paper-title"><a href="https://arxiv.org/abs/2511.02485v1" target="_blank" rel="noopener noreferrer">Mean field magnetism and spin frustration in a double perovskite oxide with compositional complexity</a></h3>
 
@@ -222,7 +300,7 @@
          data-paper-id="2511.02477"
          aria-labelledby="title-paper-2511.02477"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">483</div>
+    <div class="paper-index" aria-hidden="true">485</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.02477" class="paper-title"><a href="https://arxiv.org/abs/2511.02477v1" target="_blank" rel="noopener noreferrer">Adhesive strength of bio-inspired fibrillar arrays in the presence of contact defects</a></h3>
 
@@ -261,7 +339,7 @@
          data-paper-id="2511.02447"
          aria-labelledby="title-paper-2511.02447"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">484</div>
+    <div class="paper-index" aria-hidden="true">486</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.02447" class="paper-title"><a href="https://arxiv.org/abs/2511.02447v1" target="_blank" rel="noopener noreferrer">Non-altermagnetic spin texture in MnTe</a></h3>
 
@@ -300,7 +378,7 @@
          data-paper-id="2511.04704"
          aria-labelledby="title-paper-2511.04704"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">485</div>
+    <div class="paper-index" aria-hidden="true">487</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.04704" class="paper-title"><a href="https://arxiv.org/abs/2511.04704v1" target="_blank" rel="noopener noreferrer">AI-assisted design of chemically recyclable polymers for food packaging</a></h3>
 
@@ -339,7 +417,7 @@
          data-paper-id="2511.01790"
          aria-labelledby="title-paper-2511.01790"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">486</div>
+    <div class="paper-index" aria-hidden="true">488</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.01790" class="paper-title"><a href="https://arxiv.org/abs/2511.01790v1" target="_blank" rel="noopener noreferrer">A Synthesizability-Guided Pipeline for Materials Discovery</a></h3>
 
@@ -392,7 +470,7 @@ can play in materials discovery.</p>
          data-paper-id="2511.01095"
          aria-labelledby="title-paper-2511.01095"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">487</div>
+    <div class="paper-index" aria-hidden="true">489</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.01095" class="paper-title"><a href="https://arxiv.org/abs/2511.01095v1" target="_blank" rel="noopener noreferrer">Machine learning descriptors for predicting the high temperature oxidation of refractory complex concentrated alloys</a></h3>
 
@@ -431,7 +509,7 @@ can play in materials discovery.</p>
          data-paper-id="2511.00922"
          aria-labelledby="title-paper-2511.00922"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">488</div>
+    <div class="paper-index" aria-hidden="true">490</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.00922" class="paper-title"><a href="https://arxiv.org/abs/2511.00922v1" target="_blank" rel="noopener noreferrer">Validation of Semi-Empirical xTB Methods for High-Throughput Screening of TADF Emitters: A 747-Molecule Benchmark Study</a></h3>
 
@@ -470,7 +548,7 @@ can play in materials discovery.</p>
          data-paper-id="2511.04695"
          aria-labelledby="title-paper-2511.04695"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">489</div>
+    <div class="paper-index" aria-hidden="true">491</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.04695" class="paper-title"><a href="https://arxiv.org/abs/2511.04695v1" target="_blank" rel="noopener noreferrer">AI-Driven Design of poly(ethylene terephthalate)-replacement copolymers</a></h3>
 
@@ -509,7 +587,7 @@ can play in materials discovery.</p>
          data-paper-id="2510.27517"
          aria-labelledby="title-paper-2510.27517"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">490</div>
+    <div class="paper-index" aria-hidden="true">492</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.27517" class="paper-title"><a href="https://arxiv.org/abs/2510.27517v1" target="_blank" rel="noopener noreferrer">Learning Sparse Approximate Inverse Preconditioners for Conjugate Gradient Solvers on GPUs</a></h3>
 
@@ -548,7 +626,7 @@ can play in materials discovery.</p>
          data-paper-id="2510.27231"
          aria-labelledby="title-paper-2510.27231"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">491</div>
+    <div class="paper-index" aria-hidden="true">493</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.27231" class="paper-title"><a href="https://arxiv.org/abs/2510.27231v1" target="_blank" rel="noopener noreferrer">First-principles design of excitonic insulators: A review</a></h3>
 
@@ -587,7 +665,7 @@ can play in materials discovery.</p>
          data-paper-id="2510.27138"
          aria-labelledby="title-paper-2510.27138"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">492</div>
+    <div class="paper-index" aria-hidden="true">494</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.27138" class="paper-title"><a href="https://arxiv.org/abs/2510.27138v1" target="_blank" rel="noopener noreferrer">Crossover between intrinsic and temperature-assisted regimes in spin-orbit torque switching of antiferromagnetic order</a></h3>
 
@@ -626,7 +704,7 @@ can play in materials discovery.</p>
          data-paper-id="2510.26887"
          aria-labelledby="title-paper-2510.26887"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">493</div>
+    <div class="paper-index" aria-hidden="true">495</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.26887" class="paper-title"><a href="https://arxiv.org/abs/2510.26887v1" target="_blank" rel="noopener noreferrer">The Denario project: Deep knowledge AI agents for scientific discovery</a></h3>
 
@@ -665,7 +743,7 @@ can play in materials discovery.</p>
          data-paper-id="2510.26886"
          aria-labelledby="title-paper-2510.26886"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">494</div>
+    <div class="paper-index" aria-hidden="true">496</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.26886" class="paper-title"><a href="https://arxiv.org/abs/2510.26886v1" target="_blank" rel="noopener noreferrer">MaterialsGalaxy: A Platform Fusing Experimental and Theoretical Data in Condensed Matter Physics</a></h3>
 
@@ -719,7 +797,7 @@ research and accelerates the discovery of advanced materials.</p>
          data-paper-id="2510.26880"
          aria-labelledby="title-paper-2510.26880"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">495</div>
+    <div class="paper-index" aria-hidden="true">497</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.26880" class="paper-title"><a href="https://arxiv.org/abs/2510.26880v1" target="_blank" rel="noopener noreferrer">Higher-dimensional Fermiology in bulk moiré metals</a></h3>
 
@@ -782,7 +860,7 @@ physical phenomena proposed in higher dimensions.</p>
          data-paper-id="2510.26733"
          aria-labelledby="title-paper-2510.26733"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">496</div>
+    <div class="paper-index" aria-hidden="true">498</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.26733" class="paper-title"><a href="https://arxiv.org/abs/2510.26733v1" target="_blank" rel="noopener noreferrer">Impact of hydrogenation on the structure, chemistry, and electrical properties of flame-synthesized carbon nanoparticle films</a></h3>
 
@@ -821,7 +899,7 @@ physical phenomena proposed in higher dimensions.</p>
          data-paper-id="2510.26626"
          aria-labelledby="title-paper-2510.26626"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">497</div>
+    <div class="paper-index" aria-hidden="true">499</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.26626" class="paper-title"><a href="https://arxiv.org/abs/2510.26626v1" target="_blank" rel="noopener noreferrer">Stabilization of Metallic, Excitonic Insulator, and Superionic Phases in Helium-Rare Gas Compounds at Sub-Terapascal Pressures</a></h3>
 
@@ -860,7 +938,7 @@ physical phenomena proposed in higher dimensions.</p>
          data-paper-id="2511.00092"
          aria-labelledby="title-paper-2511.00092"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">498</div>
+    <div class="paper-index" aria-hidden="true">500</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.00092" class="paper-title"><a href="https://arxiv.org/abs/2511.00092v1" target="_blank" rel="noopener noreferrer">QuantumBench: A Benchmark for Quantum Problem Solving</a></h3>
 
@@ -899,7 +977,7 @@ physical phenomena proposed in higher dimensions.</p>
          data-paper-id="2510.26100"
          aria-labelledby="title-paper-2510.26100"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">499</div>
+    <div class="paper-index" aria-hidden="true">501</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.26100" class="paper-title"><a href="https://arxiv.org/abs/2510.26100v1" target="_blank" rel="noopener noreferrer">Applications of Machine Learning in Polymer Materials: Property Prediction, Material Design, and Systematic Processes</a></h3>
 
@@ -961,7 +1039,7 @@ standardized data sharing, and interpretable machine learning.</p>
          data-paper-id="2510.26058"
          aria-labelledby="title-paper-2510.26058"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">500</div>
+    <div class="paper-index" aria-hidden="true">502</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.26058" class="paper-title"><a href="https://arxiv.org/abs/2510.26058v1" target="_blank" rel="noopener noreferrer">A Review of AI-Driven Approaches for Nanoscale Heat Conduction and Radiation</a></h3>
 
@@ -1023,7 +1101,7 @@ transfer.</p>
          data-paper-id="2510.26054"
          aria-labelledby="title-paper-2510.26054"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">501</div>
+    <div class="paper-index" aria-hidden="true">503</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.26054" class="paper-title"><a href="https://arxiv.org/abs/2510.26054v1" target="_blank" rel="noopener noreferrer">Theoretical design of the large topological magnetoelectric effect in the Co-intercalated NbS$_2$ structure</a></h3>
 
@@ -1062,7 +1140,7 @@ transfer.</p>
          data-paper-id="2510.25986"
          aria-labelledby="title-paper-2510.25986"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">502</div>
+    <div class="paper-index" aria-hidden="true">504</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.25986" class="paper-title"><a href="https://arxiv.org/abs/2510.25986v1" target="_blank" rel="noopener noreferrer">A General and Streamlined Differentiable Optimization Framework</a></h3>
 
@@ -1101,7 +1179,7 @@ transfer.</p>
          data-paper-id="2511.00070"
          aria-labelledby="title-paper-2511.00070"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">503</div>
+    <div class="paper-index" aria-hidden="true">505</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.00070" class="paper-title"><a href="https://arxiv.org/abs/2511.00070v1" target="_blank" rel="noopener noreferrer">Benchmarking Generative AI Against Bayesian Optimization for Constrained Multi-Objective Inverse Design</a></h3>
 
@@ -1165,7 +1243,7 @@ critical to innovation and production efficiency.</p>
          data-paper-id="2510.25323"
          aria-labelledby="title-paper-2510.25323"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">504</div>
+    <div class="paper-index" aria-hidden="true">506</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.25323" class="paper-title"><a href="https://arxiv.org/abs/2510.25323v3" target="_blank" rel="noopener noreferrer">CDFlow: Building Invertible Layers with Circulant and Diagonal Matrices</a></h3>
 
@@ -1204,7 +1282,7 @@ critical to innovation and production efficiency.</p>
          data-paper-id="2510.25142"
          aria-labelledby="title-paper-2510.25142"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">505</div>
+    <div class="paper-index" aria-hidden="true">507</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.25142" class="paper-title"><a href="https://arxiv.org/abs/2510.25142v1" target="_blank" rel="noopener noreferrer">A Geometric Pathway for Tuning Ferroelectric Properties via Polar State Reconfiguration</a></h3>
 
@@ -1243,7 +1321,7 @@ critical to innovation and production efficiency.</p>
          data-paper-id="2510.24952"
          aria-labelledby="title-paper-2510.24952"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">506</div>
+    <div class="paper-index" aria-hidden="true">508</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.24952" class="paper-title"><a href="https://arxiv.org/abs/2510.24952v1" target="_blank" rel="noopener noreferrer">Stabilisation of hBN/SiC Heterostructures with Vacancies and Transition-Metal Atoms</a></h3>
 
@@ -1282,7 +1360,7 @@ critical to innovation and production efficiency.</p>
          data-paper-id="2510.25788"
          aria-labelledby="title-paper-2510.25788"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">507</div>
+    <div class="paper-index" aria-hidden="true">509</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.25788" class="paper-title"><a href="https://arxiv.org/abs/2510.25788v1" target="_blank" rel="noopener noreferrer">SHA-256 Infused Embedding-Driven Generative Modeling of High-Energy Molecules in Low-Data Regimes</a></h3>
 
@@ -1321,7 +1399,7 @@ critical to innovation and production efficiency.</p>
          data-paper-id="2510.24874"
          aria-labelledby="title-paper-2510.24874"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">508</div>
+    <div class="paper-index" aria-hidden="true">510</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.24874" class="paper-title"><a href="https://arxiv.org/abs/2510.24874v1" target="_blank" rel="noopener noreferrer">Molecular simulations of Perovskites CsXI3 (X = Pb,Sn) Using Machine-Learning Interatomic Potentials</a></h3>
 
@@ -1360,7 +1438,7 @@ critical to innovation and production efficiency.</p>
          data-paper-id="2510.24463"
          aria-labelledby="title-paper-2510.24463"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">509</div>
+    <div class="paper-index" aria-hidden="true">511</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.24463" class="paper-title"><a href="https://arxiv.org/abs/2510.24463v1" target="_blank" rel="noopener noreferrer">Deep-Learning-Empowered Programmable Topolectrical Circuits</a></h3>
 
@@ -1399,7 +1477,7 @@ critical to innovation and production efficiency.</p>
          data-paper-id="2510.24238"
          aria-labelledby="title-paper-2510.24238"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">510</div>
+    <div class="paper-index" aria-hidden="true">512</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.24238" class="paper-title"><a href="https://arxiv.org/abs/2510.24238v1" target="_blank" rel="noopener noreferrer">Unlocking Dynamic Luminescent Mapping of pH with Sustainable Lignin-Derived Carbon Dots with Multimodal Readout Capacity</a></h3>
 
@@ -1461,7 +1539,7 @@ development.</p>
          data-paper-id="2510.23983"
          aria-labelledby="title-paper-2510.23983"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">511</div>
+    <div class="paper-index" aria-hidden="true">513</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.23983" class="paper-title"><a href="https://arxiv.org/abs/2510.23983v1" target="_blank" rel="noopener noreferrer">Strong Intra- and Interchain Orbital Coupling Leads to Multiband and High Thermoelectric Performance in Na$_2$Au$X$ ($X$ = P, As, Sb, and Bi)</a></h3>
 
@@ -1500,7 +1578,7 @@ development.</p>
          data-paper-id="2510.23514"
          aria-labelledby="title-paper-2510.23514"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">512</div>
+    <div class="paper-index" aria-hidden="true">514</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.23514" class="paper-title"><a href="https://arxiv.org/abs/2510.23514v1" target="_blank" rel="noopener noreferrer">DeFecT-FF: Accelerated Modeling of Defects in Cd-Zn--Te-Se-S Compounds Combining High-Throughput DFT and Machine Learning Force Fields</a></h3>
 
@@ -1539,7 +1617,7 @@ development.</p>
          data-paper-id="2510.23394"
          aria-labelledby="title-paper-2510.23394"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">513</div>
+    <div class="paper-index" aria-hidden="true">515</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.23394" class="paper-title"><a href="https://arxiv.org/abs/2510.23394v1" target="_blank" rel="noopener noreferrer">fair_data.py: implementing FAIR data compliance in Tribchem</a></h3>
 
@@ -1594,7 +1672,7 @@ materials discovery.</p>
          data-paper-id="2511.03735"
          aria-labelledby="title-paper-2511.03735"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">514</div>
+    <div class="paper-index" aria-hidden="true">516</div>
     <div class="paper-body">
         <h3 id="title-paper-2511.03735" class="paper-title"><a href="https://arxiv.org/abs/2511.03735v1" target="_blank" rel="noopener noreferrer">Friction on Demand: A Generative Framework for the Inverse Design of Metainterfaces</a></h3>
 
@@ -1647,7 +1725,7 @@ frictional behavior through tailored surface topographies.</p>
          data-paper-id="2510.23251"
          aria-labelledby="title-paper-2510.23251"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">515</div>
+    <div class="paper-index" aria-hidden="true">517</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.23251" class="paper-title"><a href="https://arxiv.org/abs/2510.23251v1" target="_blank" rel="noopener noreferrer">Design principles for amorphous solid-state electrolytes</a></h3>
 
@@ -1686,7 +1764,7 @@ frictional behavior through tailored surface topographies.</p>
          data-paper-id="2510.23181"
          aria-labelledby="title-paper-2510.23181"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">516</div>
+    <div class="paper-index" aria-hidden="true">518</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.23181" class="paper-title"><a href="https://arxiv.org/abs/2510.23181v2" target="_blank" rel="noopener noreferrer">Introducing physics-informed generative models for targeting structural novelty in the exploration of chemical space</a></h3>
 
@@ -1725,7 +1803,7 @@ frictional behavior through tailored surface topographies.</p>
          data-paper-id="2510.23040"
          aria-labelledby="title-paper-2510.23040"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">517</div>
+    <div class="paper-index" aria-hidden="true">519</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.23040" class="paper-title"><a href="https://arxiv.org/abs/2510.23040v1" target="_blank" rel="noopener noreferrer">LLM Meets Diffusion: A Hybrid Framework for Crystal Material Generation</a></h3>
 
@@ -1764,7 +1842,7 @@ frictional behavior through tailored surface topographies.</p>
          data-paper-id="2510.23017"
          aria-labelledby="title-paper-2510.23017"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">518</div>
+    <div class="paper-index" aria-hidden="true">520</div>
     <div class="paper-body">
         <h3 id="title-paper-2510.23017" class="paper-title"><a href="https://arxiv.org/abs/2510.23017v1" target="_blank" rel="noopener noreferrer">Mastering energy landscapes via liquid liquid phase separation to program active supramolecular coassembly from the nano to macro scale</a></h3>
 
@@ -1798,101 +1876,6 @@ frictional behavior through tailored surface topographies.</p>
     </div>
 </article>
 
-<article class="paper"
-         id="paper-2510.22969"
-         data-paper-id="2510.22969"
-         aria-labelledby="title-paper-2510.22969"
-         tabindex="-1">
-    <div class="paper-index" aria-hidden="true">519</div>
-    <div class="paper-body">
-        <h3 id="title-paper-2510.22969" class="paper-title"><a href="https://arxiv.org/abs/2510.22969v2" target="_blank" rel="noopener noreferrer">Multi-Agent Conditional Diffusion Model with Mean Field Communication as Wireless Resource Allocation Planner</a></h3>
-
-        <dl class="paper-info">
-            <div class="paper-authors">
-                <dt>Authors</dt>
-                <dd>Kechen Meng, Sinuo Zhang, Rongpeng Li, Xiangming Meng, Yansha Deng, Chan Wang, Ming Lei, Zhifeng Zhao</dd>
-            </div>
-            <div class="paper-date">
-                <dt>Published</dt>
-                <dd><time datetime="2025-10-27">2025-10-27</time></dd>
-            </div>
-            <div class="paper-category">
-                <dt>Category</dt>
-                <dd>cs.AI</dd>
-            </div>
-            <div class="paper-id">
-                <dt>arXiv ID</dt>
-                <dd>2510.22969v2</dd>
-            </div>
-        </dl>
-
-        <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2510.22969v2" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <details class="paper-summary">
-            <summary>Read abstract</summary>
-            <p>In wireless communication systems, efficient and adaptive resource allocation plays a crucial role in enhancing overall Quality of Service (QoS). Compared to the conventional Model-Free Reinforcement Learning (MFRL) scheme, Model-Based RL (MBRL) first learns a generative world model for subsequent planning. The reuse of historical experience in MBRL promises more stable training behavior, yet its deployment in large-scale wireless networks remains challenging due to high-dimensional stochastic dynamics, strong inter-agent cooperation, and communication constraints. To overcome these challenges, we propose the Multi-Agent Conditional Diffusion Model Planner (MA-CDMP) for decentralized communication resource management. Built upon the Distributed Training with Decentralized Execution (DTDE) paradigm, MA-CDMP models each communication node as an autonomous agent and employs Diffusion Models (DMs) to capture and predict environment dynamics. Meanwhile, an inverse dynamics model guides action generation, thereby enhancing sample efficiency and policy scalability. Moreover, to approximate large-scale agent interactions, a Mean-Field (MF) mechanism is introduced as an assistance to the classifier in DMs. This design mitigates inter-agent non-stationarity and enhances cooperation with minimal communication overhead in distributed settings. We further theoretically establish an upper bound on the distributional approximation error introduced by the MF-based diffusion generation, guaranteeing convergence stability and reliable modeling of multi-agent stochastic dynamics. Extensive experiments demonstrate that MA-CDMP consistently outperforms existing MARL baselines in terms of average reward and QoS metrics, showcasing its scalability and practicality for real-world wireless network optimization.</p>
-        </details>
-    </div>
-</article>
-
-<article class="paper"
-         id="paper-2510.23667"
-         data-paper-id="2510.23667"
-         aria-labelledby="title-paper-2510.23667"
-         tabindex="-1">
-    <div class="paper-index" aria-hidden="true">520</div>
-    <div class="paper-body">
-        <h3 id="title-paper-2510.23667" class="paper-title"><a href="https://arxiv.org/abs/2510.23667v1" target="_blank" rel="noopener noreferrer">Optimize Any Topology: A Foundation Model for Shape- and Resolution-Free Structural Topology Optimization</a></h3>
-
-        <dl class="paper-info">
-            <div class="paper-authors">
-                <dt>Authors</dt>
-                <dd>Amin Heyrani Nobari, Lyle Regenwetter, Cyril Picard, Ligong Han, Faez Ahmed</dd>
-            </div>
-            <div class="paper-date">
-                <dt>Published</dt>
-                <dd><time datetime="2025-10-26">2025-10-26</time></dd>
-            </div>
-            <div class="paper-category">
-                <dt>Category</dt>
-                <dd>cs.LG</dd>
-            </div>
-            <div class="paper-id">
-                <dt>arXiv ID</dt>
-                <dd>2510.23667v1</dd>
-            </div>
-        </dl>
-
-        <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2510.23667v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <details class="paper-summary">
-            <summary>Read abstract</summary>
-            <p>Structural topology optimization (TO) is central to engineering design but
-remains computationally intensive due to complex physics and hard constraints.
-Existing deep-learning methods are limited to fixed square grids, a few
-hand-coded boundary conditions, and post-hoc optimization, preventing general
-deployment. We introduce Optimize Any Topology (OAT), a foundation-model
-framework that directly predicts minimum-compliance layouts for arbitrary
-aspect ratios, resolutions, volume fractions, loads, and fixtures. OAT combines
-a resolution- and shape-agnostic autoencoder with an implicit neural-field
-decoder and a conditional latent-diffusion model trained on OpenTO, a new
-corpus of 2.2 million optimized structures covering 2 million unique
-boundary-condition configurations. On four public benchmarks and two
-challenging unseen tests, OAT lowers mean compliance up to 90% relative to the
-best prior models and delivers sub-1 second inference on a single GPU across
-resolutions from 64 x 64 to 256 x 256 and aspect ratios as high as 10:1. These
-results establish OAT as a general, fast, and resolution-free framework for
-physics-aware topology optimization and provide a large-scale dataset to spur
-further research in generative modeling for inverse design. Code &amp; data can be
-found at https://github.com/ahnobari/OptimizeAnyTopology.</p>
-        </details>
-    </div>
-</article>
-
 <nav class="archive-pagination" aria-label="Archive pages">
 <a href="page-12.html" rel="prev">← Previous</a>
 <a href="../archive.html" aria-label="Page 1">1</a>
@@ -1910,7 +1893,7 @@ found at https://github.com/ahnobari/OptimizeAnyTopology.</p>
     </main>
 
     <footer class="site-footer">
-        <p>Last updated <time datetime="2026-10-28T08:57:37.383440+08:00">2026-10-28 08:57:37 SGT</time></p>
+        <p>Last updated <time datetime="2026-10-29T09:32:24.610195+08:00">2026-10-29 09:32:24 SGT</time></p>
         <p>© 2026 <a href="https://ocean-jh.github.io/"
                               target="_blank"
                               rel="noopener noreferrer">Wang Jianghai</a>

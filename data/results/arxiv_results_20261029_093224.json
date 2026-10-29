@@ -1,0 +1,62 @@
+[
+  {
+    "authors": [
+      "Adam Lahouari",
+      "Hengyu Zhou",
+      "Nikolaos Galanakis",
+      "Michael Kilgour",
+      "Daisuke Kuroshima",
+      "Jihye Han",
+      "Bart Kahr",
+      "Mark E. Tuckerman",
+      "Alexander G. Shtukenberg",
+      "Jutta Rogal"
+    ],
+    "base_id": "2610.37597",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2610.37597v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2610.37597v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-10-27T17:31:07+00:00",
+    "short_id": "2610.37597v1",
+    "status": "new",
+    "summary": "Polymorphism in molecular crystals presents a major challenge for controlling crystallization. Here, we combine experiment and theory to characterize the polymorph landscape of acridine and investigate its selective control by additives. Melt crystallization experiments resolve the previously unknown structure of form VIII, while topological crystal structure prediction recovers all seven known unsolvated polymorphs with determined crystal structures. Combining a fine-tuned machine-learned interatomic potential with anharmonic free energy calculations reproduces the experimentally observed stability relationships and reveals a shallow free energy landscape. Finally, experimentally observed additive-induced polymorph preferences correlate with mixed-crystal substitutional defect energies and topological similarities between additive and acridine crystal structures. Together, these results provide a comprehensive picture of acridine polymorphism, linking crystal structure, thermodynamic stability, and additive-controlled crystallization.",
+    "title": "The Acridine Polymorph Landscape: Characterization and Selective Control by Additives",
+    "updated": "2026-10-27T17:31:07+00:00",
+    "url": "https://arxiv.org/abs/2610.37597v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Wen-Chuang Shang",
+      "Chenyu Shen",
+      "Mikito Tsujimoto",
+      "Tomonori Tanaka",
+      "Yoshihiro Gohda"
+    ],
+    "base_id": "2610.37222",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "physics.comp-ph"
+    ],
+    "comment": "Main text: 28 pages, 8 figures; Supplementary Information: 31 pages, 2 figures (included)",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2610.37222v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2610.37222v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-10-27T13:30:43+00:00",
+    "short_id": "2610.37222v1",
+    "status": "new",
+    "summary": "We introduce GMMag, a workflow for generating crystal structures together with their site-resolved magnetic moments, built on a conditional variational autoencoder with a graph neural network encoder and a transformer decoder. Gaussian-mixture sampling redirects generation towards selected chemical and magnetic targets without retraining. We systematically investigate how encoder and decoder design, the representation of magnetic-moment magnitudes and relative signs, and sampling choices affect reconstruction, generation quality and diversity. Because a higher screening pass rate does not necessarily yield more qualifying candidates with distinct chemical formulas absent from the reference dataset, we model how repeated generation of the same chemical formulas limits their accumulation and test the model in two separate ten-million-draw runs. As an application, the workflow identifies Nd-containing candidates with chemical formulas absent from the reference dataset, negative formation energies and high estimated saturation magnetization.",
+    "title": "Magnetic crystal generation with site-resolved magnetic moments via Gaussian-mixture retargeting and finite-budget yield prediction",
+    "updated": "2026-10-27T13:30:43+00:00",
+    "url": "https://arxiv.org/abs/2610.37222v1",
+    "version": 1
+  }
+]

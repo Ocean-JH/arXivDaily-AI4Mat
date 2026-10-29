@@ -131,55 +131,39 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (3)
+## New Papers (2)
 
-*Last checked: 2026-10-28 08:57:37 (SGT)*
+*Last checked: 2026-10-29 09:32:24 (SGT)*
 
-### 1. Precursor Ratio-Controlled Chloride Vacancies in Lead-Free KCuCl3-x Memristors for Forming-Free Gradual Resistive Switching and Neuromorphic Learning
+### 1. The Acridine Polymorph Landscape: Characterization and Selective Control by Additives
 
-**Authors:** Chinmayee Mandar Mhaskar, Sangeeta Roy Chaudhuri, Ayan Roy Chaudhuri
+**Authors:** Adam Lahouari, Hengyu Zhou, Nikolaos Galanakis, Michael Kilgour, Daisuke Kuroshima, Jihye Han, Bart Kahr, Mark E. Tuckerman, Alexander G. Shtukenberg, Jutta Rogal
 
-**Published:** 2026-10-26
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2610.35436v1
-
-**Link:** [https://arxiv.org/abs/2610.35436v1](https://arxiv.org/abs/2610.35436v1)
-
-**Summary:** Defect engineering of memristive materials offers a powerful strategy for regulating ionic transport and analog resistive switching required for neuromorphic computing. Here, we report a wet chemical synthesis route for chloride-vacancy (VCl) engineering in lead-free all-inorganic KCuCl3-x thin films and establish a direct correlation between defect concentration, electronic structure, transport dynamics, and neuromorphic performance. Controlled precursor-ratio variation systematically tunes the VCl concentration in KCuCl3-x thin films, driving preferential vacancy formation at the terminal chloride sites, band-gap narrowing, and enhanced electronic disorder. W/KCuCl3-x/FTO memristors exhibit stable bipolar VCM-type resistive switching, with increasing VCl concentration promoting forming-free operation. An optimal VCl concentration (~ 1.3*10^21 cm^-3) provides a balance between ionic mobility and defect controllability, resulting in highly linear potentiation/depression characteristics and superior pulse endurance (&gt;104 cycles). When the experimentally measured conductance characteristics of the optimized memristor are implemented as synaptic weights in artificial neural network simulations, recognition accuracies of 98.96% and 91.82% are achieved on the MNIST and Fashion-MNIST datasets, respectively. These findings establish precursor ratio-controlled VCl engineering as an effective strategy for simultaneously optimizing ionic transport, analog switching, and neuromorphic learning in lead-free halide perovskite memristors, providing a general materials design principle for energy-efficient neuromorphic electronics.
-
----
-
-### 2. SymADiT: Symmetry-Aware Crystal Generation with Latent Flow Matching
-
-**Authors:** Anmar Karmush, Cedric Mathieu Brandenburg, Soheil Ershadrad, Johanna Rosen, Michael Felsberg, Filip Ekström Kelvinius
-
-**Published:** 2026-05-11
-
-**Category:** cs.LG
-
-**ID:** 2605.10115v2
-
-**Link:** [https://arxiv.org/abs/2605.10115v2](https://arxiv.org/abs/2605.10115v2)
-
-**Summary:** Tackling the task of crystal generation, we aim to enhance the previously proposed, symmetry-agnostic, All-atom Diffusion Transformer (ADiT) by introducing SymADiT, a symmetry-aware variant. To do so, we use a representation of crystals based on Wyckoff positions. We follow ADiT and perform generative modelling in latent space, adapted to our symmetry-aware representation. By forcing the output of the generative model to adhere to the symmetry restrictions imposed by the generated crystal's space group and each atom's Wyckoff position, the generated crystals exhibit more realistic symmetry properties. We benchmark our method against both symmetry-aware and symmetry-agnostic models for crystal generation and show competitive performance, generating stable, symmetric, and physically plausible crystals with only an off-the-shelf Transformer architecture. Our code is available at https://github.com/Karmush21/SymADiT.
-
----
-
-### 3. From Autonomous Knowledge Generation to Generalizable Property Prediction: A Precision-First Pipeline for Electro-Optic Materials Discovery
-
-**Authors:** Dibakar Datta
-
-**Published:** 2026-10-25
+**Published:** 2026-10-27
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2610.34628v1
+**ID:** 2610.37597v1
 
-**Link:** [https://arxiv.org/abs/2610.34628v1](https://arxiv.org/abs/2610.34628v1)
+**Link:** [https://arxiv.org/abs/2610.37597v1](https://arxiv.org/abs/2610.37597v1)
 
-**Summary:** Electro-optic materials, whose refractive index changes linearly with an applied electric field (the Pockels effect), set the speed and energy of optical modulators and microwave-to-optical links for quantum computing. Designing better materials requires optimizing composition alongside temperature, strain, and bias field. However, general repositories lack electro-optic tensor data. We present a pipeline that builds such a database from literature following the rule: "no value is better than a wrong value." The pipeline has five stages: physics-aware acquisition, layout-aware extraction via LLM and deterministic table parsers, a three-tier verification gate, cross-paper consensus using median and median absolute deviation, and a noise-robust surrogate model audited by leave-one-material-out (LOMO) testing. Physics enters directly: notation is mapped, point-group symmetry-forbidden Pockels components are rejected, equivalent labels are merged, and values carry provenance tags. In a run over 49 publications, the gate processed 816 candidates into 414 accepted, 215 held for review, and 187 rejected. Against a hand-certified gold standard of 303 values from 16 papers, the run achieved a precision of 0.51 and recall of 0.48 for exact record matches. Across four database snapshots, held-out materials where the surrogate model beat a predict-the-mean baseline grew from 1 of 4 to 9 of 13 as the database expanded from 10 to 22 materials. While not a controlled comparison, this trend supports the premise that a precision-oriented, physics-checked database can power forward models beyond its training set and clarifies requirements for inverse material design.
+**Summary:** Polymorphism in molecular crystals presents a major challenge for controlling crystallization. Here, we combine experiment and theory to characterize the polymorph landscape of acridine and investigate its selective control by additives. Melt crystallization experiments resolve the previously unknown structure of form VIII, while topological crystal structure prediction recovers all seven known unsolvated polymorphs with determined crystal structures. Combining a fine-tuned machine-learned interatomic potential with anharmonic free energy calculations reproduces the experimentally observed stability relationships and reveals a shallow free energy landscape. Finally, experimentally observed additive-induced polymorph preferences correlate with mixed-crystal substitutional defect energies and topological similarities between additive and acridine crystal structures. Together, these results provide a comprehensive picture of acridine polymorphism, linking crystal structure, thermodynamic stability, and additive-controlled crystallization.
+
+---
+
+### 2. Magnetic crystal generation with site-resolved magnetic moments via Gaussian-mixture retargeting and finite-budget yield prediction
+
+**Authors:** Wen-Chuang Shang, Chenyu Shen, Mikito Tsujimoto, Tomonori Tanaka, Yoshihiro Gohda
+
+**Published:** 2026-10-27
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2610.37222v1
+
+**Link:** [https://arxiv.org/abs/2610.37222v1](https://arxiv.org/abs/2610.37222v1)
+
+**Summary:** We introduce GMMag, a workflow for generating crystal structures together with their site-resolved magnetic moments, built on a conditional variational autoencoder with a graph neural network encoder and a transformer decoder. Gaussian-mixture sampling redirects generation towards selected chemical and magnetic targets without retraining. We systematically investigate how encoder and decoder design, the representation of magnetic-moment magnitudes and relative signs, and sampling choices affect reconstruction, generation quality and diversity. Because a higher screening pass rate does not necessarily yield more qualifying candidates with distinct chemical formulas absent from the reference dataset, we model how repeated generation of the same chemical formulas limits their accumulation and test the model in two separate ten-million-draw runs. As an application, the workflow identifies Nd-containing candidates with chemical formulas absent from the reference dataset, negative formation energies and high estimated saturation magnetization.
 
 ---
 

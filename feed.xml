@@ -5,7 +5,21 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 08:57:37 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 09:32:24 +0800</lastBuildDate>
+    <item>
+      <title>The Acridine Polymorph Landscape: Characterization and Selective Control by Additives</title>
+      <link>https://arxiv.org/abs/2610.37597v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.37597v1</guid>
+      <pubDate>Tue, 27 Oct 2026 17:31:07 +0000</pubDate>
+      <description>Polymorphism in molecular crystals presents a major challenge for controlling crystallization. Here, we combine experiment and theory to characterize the polymorph landscape of acridine and investigate its selective control by additives. Melt crystallization experiments resolve the previously unknown structure of form VIII, while topological crystal structure prediction recovers all seven known unsolvated polymorphs with determined crystal structures. Combining a fine-tuned machine-learned interatomic potential with anharmonic free energy calculations reproduces the experimentally observed stability relationships and reveals a shallow free energy landscape. Finally, experimentally observed additive-induced polymorph preferences correlate with mixed-crystal substitutional defect energies and topological similarities between additive and acridine crystal structures. Together, these results provide a comprehensive picture of acridine polymorphism, linking crystal structure, thermodynamic stability, and additive-controlled crystallization.</description>
+    </item>
+    <item>
+      <title>Magnetic crystal generation with site-resolved magnetic moments via Gaussian-mixture retargeting and finite-budget yield prediction</title>
+      <link>https://arxiv.org/abs/2610.37222v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.37222v1</guid>
+      <pubDate>Tue, 27 Oct 2026 13:30:43 +0000</pubDate>
+      <description>We introduce GMMag, a workflow for generating crystal structures together with their site-resolved magnetic moments, built on a conditional variational autoencoder with a graph neural network encoder and a transformer decoder. Gaussian-mixture sampling redirects generation towards selected chemical and magnetic targets without retraining. We systematically investigate how encoder and decoder design, the representation of magnetic-moment magnitudes and relative signs, and sampling choices affect reconstruction, generation quality and diversity. Because a higher screening pass rate does not necessarily yield more qualifying candidates with distinct chemical formulas absent from the reference dataset, we model how repeated generation of the same chemical formulas limits their accumulation and test the model in two separate ten-million-draw runs. As an application, the workflow identifies Nd-containing candidates with chemical formulas absent from the reference dataset, negative formation energies and high estimated saturation magnetization.</description>
+    </item>
     <item>
       <title>Precursor Ratio-Controlled Chloride Vacancies in Lead-Free KCuCl3-x Memristors for Forming-Free Gradual Resistive Switching and Neuromorphic Learning</title>
       <link>https://arxiv.org/abs/2610.35436v1</link>
@@ -347,20 +361,6 @@
       <guid isPermaLink="true">https://arxiv.org/abs/2608.14502v1</guid>
       <pubDate>Fri, 14 Aug 2026 17:16:27 +0000</pubDate>
       <description>Free energies govern solid-state phase stability, yet computational materials discovery still relies largely on ground-state energies because free energy calculations require ensemble averages. We introduce the thermodynamic interatomic potential (TIP), which extends an interatomic potential from its static energy to a thermodynamically consistent Gibbs free energy model, with thermodynamic responses following from temperature and pressure by automatic differentiation. We implement TIP[UMA] using the universal potential UMA, train it on free energies from quasi-harmonic to molecular dynamics fidelity, and calibrate it to higher-resolution calculations or experiment. From a single evaluation, it returns the equation of state of a crystal and locates phase transitions among competing branches, including dynamically stabilized phases. Fine-tuning extends the model to alloy solubility limits and miscibility gaps. TIP makes the free energy as accessible as the potential energy, opening finite-temperature phase stability to high-throughput discovery.</description>
-    </item>
-    <item>
-      <title>Symmetry-Breaking De Novo Crystal Generation via Markovian Jump Diffusion</title>
-      <link>https://arxiv.org/abs/2608.13457v1</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2608.13457v1</guid>
-      <pubDate>Thu, 13 Aug 2026 16:41:48 +0000</pubDate>
-      <description>Generating crystals has recently attracted significant interest due to their broad applications in materials science. However, existing generative models struggle to produce complete crystallographic specifications, limiting their ability to capture global symmetry and structural dependencies. In particular, current state-of-the-art approaches generate crystals only up to site symmetries and rely on sampling space groups from empirical distributions during generation. Inspired by \emph{spontaneous symmetry breaking} in physics, where crystals break symmetries under external conditions, we propose a novel diffusion-based framework that generates full structure specifications by reversing from the lowest-symmetry priors. Our method leverages a Markovian jump-diffusion process to model these symmetry-breaking dynamics, enabling it to traverse different space groups in a physically motivated manner. Our model, dubbed \emph{Symmetry-breaking Crystal Diffusion} (SbCD), introduces a principled approach to explicitly incorporate inter-space-group transitions into the generative process. In de novo generation experiments on MP20 and MPTS-52, SbCD outperforms its symmetry-preserving counterpart by a substantial margin, offering a promising perspective for generative modeling of crystalline materials.</description>
-    </item>
-    <item>
-      <title>Two-Stage Deformable-Convolutional Inverse Design of Nanophotonic Absorbers from Optical Spectra</title>
-      <link>https://arxiv.org/abs/2608.11860v1</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2608.11860v1</guid>
-      <pubDate>Wed, 12 Aug 2026 09:47:06 +0000</pubDate>
-      <description>Data-driven inverse design enables efficient generation of nanophotonic structures with prescribed optical responses, but spectrum-to-geometry mapping remains challenging due to non-uniqueness and fine geometric features. This work presents a two-stage deformable-convolutional framework for reconstructing metal--insulator--metal resonator geometries from 80-dimensional absorption spectra. The spectrum is projected to a $150\times4\times4$ latent representation and decoded into a $64\times64$ resonator mask. Training combines supervised reconstruction with least-squares adversarial refinement initialized from the best supervised checkpoint. A three-run ablation compares deformable convolution with plain convolution, involution, Dynamic Conv, and ODConv under the same architecture. The proposed model achieves $20.79\pm0.31$~dB PSNR and $0.8501\pm0.0082$ SSIM, improving over plain convolution by 2.16~dB and 0.0831, respectively. It further achieves Dice $0.9623\pm0.0027$, IoU $0.9342\pm0.0038$, and boundary F-score $0.9550\pm0.0027$. Spectral consistency evaluated using a frozen forward surrogate yields RMSE $0.0805\pm0.0013$ and $R^2=0.7923\pm0.0065$. Learned offsets show stronger adaptive sampling at coarse and intermediate decoder stages. Overall, deformable sampling with supervised initialization and adversarial refinement improves spectrum-conditioned geometry reconstruction.</description>
     </item>
   </channel>
 </rss>
