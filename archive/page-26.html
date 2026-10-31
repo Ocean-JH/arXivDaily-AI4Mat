@@ -138,13 +138,162 @@
         <div id="papers-content">
             <div class="section-heading">
 <h2 id="archive-papers">Paper archive</h2>
-<p>Page 26 of 48 · 1907 unique papers</p></div>
+<p>Page 26 of 48 · 1910 unique papers</p></div>
+<article class="paper"
+         id="paper-2504.08277"
+         data-paper-id="2504.08277"
+         aria-labelledby="title-paper-2504.08277"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">1001</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2504.08277" class="paper-title"><a href="https://arxiv.org/abs/2504.08277v2" target="_blank" rel="noopener noreferrer">Enabling Automatic Differentiation with Mollified Graph Neural Operators</a></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Ryan Y. Lin, Julius Berner, Valentin Duruisseaux, David Pitt, Daniel Leibovici, Jean Kossaifi, Kamyar Azizzadenesheli, Anima Anandkumar</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2025-04-11">2025-04-11</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cs.LG</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2504.08277v2</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2504.08277v2" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Physics-informed neural operators offer a powerful framework for learning
+solution operators of partial differential equations (PDEs) by combining data
+and physics losses. However, these physics losses rely on derivatives.
+Computing these derivatives remains challenging, with spectral and finite
+difference methods introducing approximation errors due to finite resolution.
+Here, we propose the mollified graph neural operator ($m$GNO), the first method
+to leverage automatic differentiation and compute exact gradients on arbitrary
+geometries. This enhancement enables efficient training on irregular grids and
+varying geometries while allowing seamless evaluation of physics losses at
+randomly sampled points for improved generalization. For a PDE example on
+regular grids, $m$GNO paired with autograd reduced the L2 relative data error
+by 20x compared to finite differences, although training was slower. It can
+also solve PDEs on unstructured point clouds seamlessly, using physics losses
+only, at resolutions vastly lower than those needed for finite differences to
+be accurate enough. On these unstructured point clouds, $m$GNO leads to errors
+that are consistently 2 orders of magnitude lower than machine learning
+baselines (Meta-PDE, which accelerates PINNs) for comparable runtimes, and also
+delivers speedups from 1 to 3 orders of magnitude compared to the numerical
+solver for similar accuracy. $m$GNOs can also be used to solve inverse design
+and shape optimization problems on complex geometries.</p>
+        </details>
+    </div>
+</article>
+
+<article class="paper"
+         id="paper-2504.06878"
+         data-paper-id="2504.06878"
+         aria-labelledby="title-paper-2504.06878"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">1002</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2504.06878" class="paper-title"><a href="https://arxiv.org/abs/2504.06878v1" target="_blank" rel="noopener noreferrer">CRYSIM: Prediction of Symmetric Structures of Large Crystals with GPU-based Ising Machines</a></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Chen Liang, Diptesh Das, Jiang Guo, Ryo Tamura, Zetian Mao, Koji Tsuda</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2025-04-09">2025-04-09</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cond-mat.mtrl-sci</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2504.06878v1</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2504.06878v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Solving black-box optimization problems with Ising machines is increasingly common in materials science. However, their application to crystal structure prediction (CSP) is still ineffective due to symmetry agnostic encoding of atomic coordinates. We introduce CRYSIM, an algorithm that encodes the space group, the Wyckoff positions combination, and coordinates of independent atomic sites as separate variables. This encoding reduces the search space substantially by exploiting the symmetry in space groups. When CRYSIM is interfaced to Fixstars Amplify, a GPU-based Ising machine, its prediction performance was competitive with CALYPSO and Bayesian optimization for crystals containing more than 150 atoms in a unit cell. Although it is not realistic to interface CRYSIM to current small-scale quantum devices, it has the potential to become the standard CSP algorithm in the coming quantum age.</p>
+        </details>
+    </div>
+</article>
+
+<article class="paper"
+         id="paper-2504.08810"
+         data-paper-id="2504.08810"
+         aria-labelledby="title-paper-2504.08810"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">1003</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2504.08810" class="paper-title"><a href="https://arxiv.org/abs/2504.08810v1" target="_blank" rel="noopener noreferrer">PriM: Principle-Inspired Material Discovery through Multi-Agent Collaboration</a></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Zheyuan Lai, Yingming Pu</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2025-04-09">2025-04-09</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cs.LG</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2504.08810v1</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2504.08810v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Complex chemical space and limited knowledge scope with biases holds immense
+challenge for human scientists, yet in automated materials discovery. Existing
+intelligent methods relies more on numerical computation, leading to
+inefficient exploration and results with hard-interpretability. To bridge this
+gap, we introduce a principles-guided material discovery system powered by
+language inferential multi-agent system (MAS), namely PriM. Our framework
+integrates automated hypothesis generation with experimental validation in a
+roundtable system of MAS, enabling systematic exploration while maintaining
+scientific rigor. Based on our framework, the case study of nano helix
+demonstrates higher materials exploration rate and property value while
+providing transparent reasoning pathways. This approach develops an
+automated-and-transparent paradigm for material discovery, with broad
+implications for rational design of functional materials. Code is publicly
+available at our \href{https://github.com/amair-lab/PriM}{GitHub}.</p>
+        </details>
+    </div>
+</article>
+
 <article class="paper"
          id="paper-2504.06249"
          data-paper-id="2504.06249"
          aria-labelledby="title-paper-2504.06249"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1001</div>
+    <div class="paper-index" aria-hidden="true">1004</div>
     <div class="paper-body">
         <h3 id="title-paper-2504.06249" class="paper-title"><a href="https://arxiv.org/abs/2504.06249v1" target="_blank" rel="noopener noreferrer">Electronic Structure Guided Inverse Design Using Generative Models</a></h3>
 
@@ -199,7 +348,7 @@ including catalysts, photovoltaics, and superconductors.</p>
          data-paper-id="2504.05780"
          aria-labelledby="title-paper-2504.05780"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1002</div>
+    <div class="paper-index" aria-hidden="true">1005</div>
     <div class="paper-body">
         <h3 id="title-paper-2504.05780" class="paper-title"><a href="https://arxiv.org/abs/2504.05780v2" target="_blank" rel="noopener noreferrer">Orbital Current-Driven Magnetization Switching in a Magnetic Tunnel Junction</a></h3>
 
@@ -238,7 +387,7 @@ including catalysts, photovoltaics, and superconductors.</p>
          data-paper-id="2504.04940"
          aria-labelledby="title-paper-2504.04940"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1003</div>
+    <div class="paper-index" aria-hidden="true">1006</div>
     <div class="paper-body">
         <h3 id="title-paper-2504.04940" class="paper-title"><a href="https://arxiv.org/abs/2504.04940v1" target="_blank" rel="noopener noreferrer">Fine tuning generative adversarial networks with universal force fields: application to two-dimensional topological insulators</a></h3>
 
@@ -290,7 +439,7 @@ is shown to yield novel topological insulators.</p>
          data-paper-id="2504.03979"
          aria-labelledby="title-paper-2504.03979"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1004</div>
+    <div class="paper-index" aria-hidden="true">1007</div>
     <div class="paper-body">
         <h3 id="title-paper-2504.03979" class="paper-title"><a href="https://arxiv.org/abs/2504.03979v1" target="_blank" rel="noopener noreferrer">Structured Extraction of Process Structure Properties Relationships in Materials Science</a></h3>
 
@@ -351,7 +500,7 @@ both modeling approaches.</p>
          data-paper-id="2504.03962"
          aria-labelledby="title-paper-2504.03962"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1005</div>
+    <div class="paper-index" aria-hidden="true">1008</div>
     <div class="paper-body">
         <h3 id="title-paper-2504.03962" class="paper-title"><a href="https://arxiv.org/abs/2504.03962v1" target="_blank" rel="noopener noreferrer">Accurate and efficient protocols for high-throughput first-principles materials simulations</a></h3>
 
@@ -404,7 +553,7 @@ from interactive input generators for DFT codes to high-throughput workflows.</p
          data-paper-id="2504.02528"
          aria-labelledby="title-paper-2504.02528"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1006</div>
+    <div class="paper-index" aria-hidden="true">1009</div>
     <div class="paper-body">
         <h3 id="title-paper-2504.02528" class="paper-title"><a href="https://arxiv.org/abs/2504.02528v1" target="_blank" rel="noopener noreferrer">RAFFLE: Active learning accelerated interface structure prediction</a></h3>
 
@@ -461,7 +610,7 @@ of complex configuration spaces.</p>
          data-paper-id="2504.02413"
          aria-labelledby="title-paper-2504.02413"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1007</div>
+    <div class="paper-index" aria-hidden="true">1010</div>
     <div class="paper-body">
         <h3 id="title-paper-2504.02413" class="paper-title"><a href="https://arxiv.org/abs/2504.02413v4" target="_blank" rel="noopener noreferrer">Dislocation saturation in slip rate driven processes and initial microstructure effects for large plastic deformation of crystals</a></h3>
 
@@ -500,7 +649,7 @@ of complex configuration spaces.</p>
          data-paper-id="2504.02367"
          aria-labelledby="title-paper-2504.02367"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1008</div>
+    <div class="paper-index" aria-hidden="true">1011</div>
     <div class="paper-body">
         <h3 id="title-paper-2504.02367" class="paper-title"><a href="https://arxiv.org/abs/2504.02367v3" target="_blank" rel="noopener noreferrer">Reinforcement Fine-Tuning for Materials Design</a></h3>
 
@@ -539,7 +688,7 @@ of complex configuration spaces.</p>
          data-paper-id="2504.01526"
          aria-labelledby="title-paper-2504.01526"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1009</div>
+    <div class="paper-index" aria-hidden="true">1012</div>
     <div class="paper-body">
         <h3 id="title-paper-2504.01526" class="paper-title"><a href="https://arxiv.org/abs/2504.01526v1" target="_blank" rel="noopener noreferrer">Accelerating the discovery of high-performance nonlinear optical materials using active learning and high-throughput screening</a></h3>
 
@@ -593,7 +742,7 @@ in an automated fashion.</p>
          data-paper-id="2504.00741"
          aria-labelledby="title-paper-2504.00741"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1010</div>
+    <div class="paper-index" aria-hidden="true">1013</div>
     <div class="paper-body">
         <h3 id="title-paper-2504.00741" class="paper-title"><a href="https://arxiv.org/abs/2504.00741v1" target="_blank" rel="noopener noreferrer">Accelerated Inorganic Materials Design with Generative AI Agents</a></h3>
 
@@ -648,7 +797,7 @@ discovery and design of next-generation inorganic materials.</p>
          data-paper-id="2503.23794"
          aria-labelledby="title-paper-2503.23794"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1011</div>
+    <div class="paper-index" aria-hidden="true">1014</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.23794" class="paper-title"><a href="https://arxiv.org/abs/2503.23794v1" target="_blank" rel="noopener noreferrer">Force-Free Molecular Dynamics Through Autoregressive Equivariant Networks</a></h3>
 
@@ -706,7 +855,7 @@ https://github.com/IBM/trajcast.</p>
          data-paper-id="2503.23766"
          aria-labelledby="title-paper-2503.23766"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1012</div>
+    <div class="paper-index" aria-hidden="true">1015</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.23766" class="paper-title"><a href="https://arxiv.org/abs/2503.23766v1" target="_blank" rel="noopener noreferrer">Accelerating High-Efficiency Organic Photovoltaic Discovery via Pretrained Graph Neural Networks and Generative Reinforcement Learning</a></h3>
 
@@ -761,7 +910,7 @@ predictive and generative models.</p>
          data-paper-id="2503.23183"
          aria-labelledby="title-paper-2503.23183"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1013</div>
+    <div class="paper-index" aria-hidden="true">1016</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.23183" class="paper-title"><a href="https://arxiv.org/abs/2503.23183v1" target="_blank" rel="noopener noreferrer">TCSP 2.0: Template Based Crystal Structure Prediction with Improved Oxidation State Prediction and Chemistry Heuristics</a></h3>
 
@@ -800,7 +949,7 @@ predictive and generative models.</p>
          data-paper-id="2503.22603"
          aria-labelledby="title-paper-2503.22603"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1014</div>
+    <div class="paper-index" aria-hidden="true">1017</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.22603" class="paper-title"><a href="https://arxiv.org/abs/2503.22603v3" target="_blank" rel="noopener noreferrer">Thermal Analog Computing: Application to Matrix-vector Multiplication with Inverse-designed Metastructures</a></h3>
 
@@ -839,7 +988,7 @@ predictive and generative models.</p>
          data-paper-id="2503.21201"
          aria-labelledby="title-paper-2503.21201"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1015</div>
+    <div class="paper-index" aria-hidden="true">1018</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.21201" class="paper-title"><a href="https://arxiv.org/abs/2503.21201v3" target="_blank" rel="noopener noreferrer">Efficient Crystal Structure Prediction Using Universal Neural Network Potential with Diversity Preservation in Genetic Algorithms</a></h3>
 
@@ -878,7 +1027,7 @@ predictive and generative models.</p>
          data-paper-id="2503.21129"
          aria-labelledby="title-paper-2503.21129"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1016</div>
+    <div class="paper-index" aria-hidden="true">1019</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.21129" class="paper-title"><a href="https://arxiv.org/abs/2503.21129v2" target="_blank" rel="noopener noreferrer">P-orbital spin generator with large spin Hall angle and long spin diffusion length</a></h3>
 
@@ -917,7 +1066,7 @@ predictive and generative models.</p>
          data-paper-id="2503.22737"
          aria-labelledby="title-paper-2503.22737"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1017</div>
+    <div class="paper-index" aria-hidden="true">1020</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.22737" class="paper-title"><a href="https://arxiv.org/abs/2503.22737v1" target="_blank" rel="noopener noreferrer">Symmetry-Informed Graph Neural Networks for Carbon Dioxide Isotherm and Adsorption Prediction in Aluminum-Substituted Zeolites</a></h3>
 
@@ -972,7 +1121,7 @@ multifunctional nanomaterials.</p>
          data-paper-id="2503.19148"
          aria-labelledby="title-paper-2503.19148"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1018</div>
+    <div class="paper-index" aria-hidden="true">1021</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.19148" class="paper-title"><a href="https://arxiv.org/abs/2503.19148v1" target="_blank" rel="noopener noreferrer">AI-Driven Defect Engineering for Advanced Thermoelectric Materials</a></h3>
 
@@ -1026,7 +1175,7 @@ accelerating the discovery of thermoelectric materials.</p>
          data-paper-id="2503.18975"
          aria-labelledby="title-paper-2503.18975"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1019</div>
+    <div class="paper-index" aria-hidden="true">1022</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.18975" class="paper-title"><a href="https://arxiv.org/abs/2503.18975v3" target="_blank" rel="noopener noreferrer">Machine Learning - Driven Materials Discovery: Unlocking Next-Generation Functional Materials - A review</a></h3>
 
@@ -1089,7 +1238,7 @@ electronics, and nanotechnology.</p>
          data-paper-id="2503.17286"
          aria-labelledby="title-paper-2503.17286"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1020</div>
+    <div class="paper-index" aria-hidden="true">1023</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.17286" class="paper-title"><a href="https://arxiv.org/abs/2503.17286v2" target="_blank" rel="noopener noreferrer">Offline Model-Based Optimization: Comprehensive Review</a></h3>
 
@@ -1128,7 +1277,7 @@ electronics, and nanotechnology.</p>
          data-paper-id="2503.17430"
          aria-labelledby="title-paper-2503.17430"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1021</div>
+    <div class="paper-index" aria-hidden="true">1024</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.17430" class="paper-title"><a href="https://arxiv.org/abs/2503.17430v4" target="_blank" rel="noopener noreferrer">Multi-timescale time encoding for CNN prediction of Fenna-Matthews-Olson energy-transfer dynamics</a></h3>
 
@@ -1167,7 +1316,7 @@ electronics, and nanotechnology.</p>
          data-paper-id="2503.17060"
          aria-labelledby="title-paper-2503.17060"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1022</div>
+    <div class="paper-index" aria-hidden="true">1025</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.17060" class="paper-title"><a href="https://arxiv.org/abs/2503.17060v1" target="_blank" rel="noopener noreferrer">PINK: physical-informed machine learning for lattice thermal conductivity</a></h3>
 
@@ -1206,7 +1355,7 @@ electronics, and nanotechnology.</p>
          data-paper-id="2503.16784"
          aria-labelledby="title-paper-2503.16784"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1023</div>
+    <div class="paper-index" aria-hidden="true">1026</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.16784" class="paper-title"><a href="https://arxiv.org/abs/2503.16784v1" target="_blank" rel="noopener noreferrer">Multi-property directed generative design of inorganic materials through Wyckoff-augmented transfer learning</a></h3>
 
@@ -1264,7 +1413,7 @@ a significant step forward in generative design of inorganic materials.</p>
          data-paper-id="2503.15215"
          aria-labelledby="title-paper-2503.15215"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1024</div>
+    <div class="paper-index" aria-hidden="true">1027</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.15215" class="paper-title"><a href="https://arxiv.org/abs/2503.15215v2" target="_blank" rel="noopener noreferrer">Electrically switchable non-relativistic Zeeman spin splittings in collinear antiferromagnets</a></h3>
 
@@ -1303,7 +1452,7 @@ a significant step forward in generative design of inorganic materials.</p>
          data-paper-id="2503.15567"
          aria-labelledby="title-paper-2503.15567"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1025</div>
+    <div class="paper-index" aria-hidden="true">1028</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.15567" class="paper-title"><a href="https://arxiv.org/abs/2503.15567v4" target="_blank" rel="noopener noreferrer">Towards Unified and Lossless Latent Space for 3D Molecular Latent Diffusion Modeling</a></h3>
 
@@ -1342,7 +1491,7 @@ a significant step forward in generative design of inorganic materials.</p>
          data-paper-id="2503.12615"
          aria-labelledby="title-paper-2503.12615"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1026</div>
+    <div class="paper-index" aria-hidden="true">1029</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.12615" class="paper-title"><a href="https://arxiv.org/abs/2503.12615v2" target="_blank" rel="noopener noreferrer">LATINO-PRO: LAtent consisTency INverse sOlver with PRompt Optimization</a></h3>
 
@@ -1381,7 +1530,7 @@ a significant step forward in generative design of inorganic materials.</p>
          data-paper-id="2503.12554"
          aria-labelledby="title-paper-2503.12554"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1027</div>
+    <div class="paper-index" aria-hidden="true">1030</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.12554" class="paper-title"><a href="https://arxiv.org/abs/2503.12554v2" target="_blank" rel="noopener noreferrer">TBHubbard: tight-binding and extended Hubbard model database for metal-organic frameworks</a></h3>
 
@@ -1420,7 +1569,7 @@ a significant step forward in generative design of inorganic materials.</p>
          data-paper-id="2503.12324"
          aria-labelledby="title-paper-2503.12324"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1028</div>
+    <div class="paper-index" aria-hidden="true">1031</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.12324" class="paper-title"><a href="https://arxiv.org/abs/2503.12324v2" target="_blank" rel="noopener noreferrer">First-principles predictions of the diversity in atomic structures and electronic properties of the reconstructed Si(111)-7x7 surface</a></h3>
 
@@ -1459,7 +1608,7 @@ a significant step forward in generative design of inorganic materials.</p>
          data-paper-id="2503.12057"
          aria-labelledby="title-paper-2503.12057"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1029</div>
+    <div class="paper-index" aria-hidden="true">1032</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.12057" class="paper-title"><a href="https://arxiv.org/abs/2503.12057v2" target="_blank" rel="noopener noreferrer">Texture- and Stress-Dependent Electromechanical Response in Ferroelectric PZT: Insights from a Micromechanical Model</a></h3>
 
@@ -1513,7 +1662,7 @@ understanding and designing next-generation piezoelectric materials.</p>
          data-paper-id="2503.11568"
          aria-labelledby="title-paper-2503.11568"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1030</div>
+    <div class="paper-index" aria-hidden="true">1033</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.11568" class="paper-title"><a href="https://arxiv.org/abs/2503.11568v2" target="_blank" rel="noopener noreferrer">Probing the Limit of Heat Transfer in Inorganic Crystals with Deep Learning</a></h3>
 
@@ -1569,7 +1718,7 @@ future materials discovery.</p>
          data-paper-id="2503.10471"
          aria-labelledby="title-paper-2503.10471"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1031</div>
+    <div class="paper-index" aria-hidden="true">1034</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.10471" class="paper-title"><a href="https://arxiv.org/abs/2503.10471v2" target="_blank" rel="noopener noreferrer">Siamese Foundation Models for Crystal Structure Prediction</a></h3>
 
@@ -1608,7 +1757,7 @@ future materials discovery.</p>
          data-paper-id="2503.10711"
          aria-labelledby="title-paper-2503.10711"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1032</div>
+    <div class="paper-index" aria-hidden="true">1035</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.10711" class="paper-title"><a href="https://arxiv.org/abs/2503.10711v1" target="_blank" rel="noopener noreferrer">3D Multiphase Heterogeneous Microstructure Generation Using Conditional Latent Diffusion Models</a></h3>
 
@@ -1666,7 +1815,7 @@ materials discovery.</p>
          data-paper-id="2503.09517"
          aria-labelledby="title-paper-2503.09517"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1033</div>
+    <div class="paper-index" aria-hidden="true">1036</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.09517" class="paper-title"><a href="https://arxiv.org/abs/2503.09517v1" target="_blank" rel="noopener noreferrer">Materials Discovery With Quantum-Enhanced Machine Learning Algorithms</a></h3>
 
@@ -1722,7 +1871,7 @@ to deploy the proposed quantum-enhanced protocols.</p>
          data-paper-id="2503.09032"
          aria-labelledby="title-paper-2503.09032"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1034</div>
+    <div class="paper-index" aria-hidden="true">1037</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.09032" class="paper-title"><a href="https://arxiv.org/abs/2503.09032v2" target="_blank" rel="noopener noreferrer">Teaching LLMs How to Learn with Contextual Fine-Tuning</a></h3>
 
@@ -1761,7 +1910,7 @@ to deploy the proposed quantum-enhanced protocols.</p>
          data-paper-id="2503.08207"
          aria-labelledby="title-paper-2503.08207"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1035</div>
+    <div class="paper-index" aria-hidden="true">1038</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.08207" class="paper-title"><a href="https://arxiv.org/abs/2503.08207v1" target="_blank" rel="noopener noreferrer">To Use or Not to Use a Universal Force Field</a></h3>
 
@@ -1820,7 +1969,7 @@ for computational materials discovery.</p>
          data-paper-id="2503.07056"
          aria-labelledby="title-paper-2503.07056"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1036</div>
+    <div class="paper-index" aria-hidden="true">1039</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.07056" class="paper-title"><a href="https://arxiv.org/abs/2503.07056v1" target="_blank" rel="noopener noreferrer">Generative method for aerodynamic optimization based on classifier-free guided denoising diffusion probabilistic model</a></h3>
 
@@ -1883,7 +2032,7 @@ product parts targeting selected performance indicators.</p>
          data-paper-id="2503.07043"
          aria-labelledby="title-paper-2503.07043"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1037</div>
+    <div class="paper-index" aria-hidden="true">1040</div>
     <div class="paper-body">
         <h3 id="title-paper-2503.07043" class="paper-title"><a href="https://arxiv.org/abs/2503.07043v1" target="_blank" rel="noopener noreferrer">Conditional Generative Modeling for Amorphous Multi-Element Materials</a></h3>
 
@@ -1917,123 +2066,6 @@ product parts targeting selected performance indicators.</p>
     </div>
 </article>
 
-<article class="paper"
-         id="paper-2503.06687"
-         data-paper-id="2503.06687"
-         aria-labelledby="title-paper-2503.06687"
-         tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1038</div>
-    <div class="paper-body">
-        <h3 id="title-paper-2503.06687" class="paper-title"><a href="https://arxiv.org/abs/2503.06687v2" target="_blank" rel="noopener noreferrer">UniGenX: a unified generative foundation model that couples sequence, structure and function to accelerate scientific design across proteins, molecules and materials</a></h3>
-
-        <dl class="paper-info">
-            <div class="paper-authors">
-                <dt>Authors</dt>
-                <dd>Gongbo Zhang, Yanting Li, Renqian Luo, Pipi Hu, Yang Yang, Zeru Zhao, Lingbo Li, Guoqing Liu, Zun Wang, Ran Bi, Kaiyuan Gao, Liya Guo, Yu Xie, Chang Liu, Jia Zhang, Tian Xie, Robert Pinsler, Claudio Zeni, Ziheng Lu, Hongxia Hao, Yingce Xia, Marwin Segler, Maik Riechert, Wei Yang, Hao Jiang, Wen-Bin Zhang, Zhijun Zeng, Yi Zhu, Li Dong, Xiuyuan Hu, Li Yuan, Lei Chen, Haiguang Liu, Tao Qin</dd>
-            </div>
-            <div class="paper-date">
-                <dt>Published</dt>
-                <dd><time datetime="2025-03-09">2025-03-09</time></dd>
-            </div>
-            <div class="paper-category">
-                <dt>Category</dt>
-                <dd>cs.LG</dd>
-            </div>
-            <div class="paper-id">
-                <dt>arXiv ID</dt>
-                <dd>2503.06687v2</dd>
-            </div>
-        </dl>
-
-        <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2503.06687v2" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <details class="paper-summary">
-            <summary>Read abstract</summary>
-            <p>Function in natural systems arises from one-dimensional sequences forming three-dimensional structures with specific properties. However, current generative models suffer from critical limitations: training objectives seldom target function directly, discrete sequences and continuous coordinates are optimized in isolation, and conformational ensembles are under-modeled. We present UniGenX, a unified generative foundation model that addresses these gaps by co-generating sequences and coordinates under direct functional and property objectives across proteins, molecules, and materials. UniGenX represents heterogeneous inputs as a mixed stream of symbolic and numeric tokens, where a decoder-only autoregressive transformer provides global context and a conditional diffusion head generates numeric fields steered by task-specific tokens. Besides the new high SOTAs on structure prediction tasks, the model demonstrates state-of-the-art or competitive performance for the function-aware generation across domains: in materials, it achieves &quot;conflicted&quot; multi-property conditional generation, yielding 436 crystal candidates meeting triple constraints, including 11 with novel compositions; in chemistry, it sets new benchmarks on five property targets and conformer ensemble generation on GEOM; and in biology, it improves success in modeling protein induced fit (RMSD &lt; 2 Å) by over 23-fold and enhances EC-conditioned enzyme design. Ablation studies and cross-domain transfer substantiate the benefits of joint discrete-continuous training, establishing UniGenX as a significant advance from prediction to controllable, function-aware generation.</p>
-        </details>
-    </div>
-</article>
-
-<article class="paper"
-         id="paper-2503.06512"
-         data-paper-id="2503.06512"
-         aria-labelledby="title-paper-2503.06512"
-         tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1039</div>
-    <div class="paper-body">
-        <h3 id="title-paper-2503.06512" class="paper-title"><a href="https://arxiv.org/abs/2503.06512v2" target="_blank" rel="noopener noreferrer">LLM-Feynman: Leveraging Large Language Models for Universal Scientific Formula and Theory Discovery</a></h3>
-
-        <dl class="paper-info">
-            <div class="paper-authors">
-                <dt>Authors</dt>
-                <dd>Zhilong Song, Qionghua Zhou, Chunjin Ren, Chongyi Ling, Minggang Ju, Jinlan Wang</dd>
-            </div>
-            <div class="paper-date">
-                <dt>Published</dt>
-                <dd><time datetime="2025-03-09">2025-03-09</time></dd>
-            </div>
-            <div class="paper-category">
-                <dt>Category</dt>
-                <dd>cond-mat.mtrl-sci</dd>
-            </div>
-            <div class="paper-id">
-                <dt>arXiv ID</dt>
-                <dd>2503.06512v2</dd>
-            </div>
-        </dl>
-
-        <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2503.06512v2" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <details class="paper-summary">
-            <summary>Read abstract</summary>
-            <p>Distilling underlying principles from data has historically driven scientific breakthroughs. However, conventional data-driven machine learning often produces complex models that lack interpretability and generalization due to insufficient domain expertise. Here, we present LLM-Feynman, a novel framework that leverages large language models (LLMs) alongside systematic optimization to derive concise, interpretable formulas from data and domain knowledge. Our method integrates automated feature engineering, LLM-guided symbolic regression with self-evaluation, and Monte Carlo tree search to enhance formula discovery and clarity. The embedding of domain knowledge simplifies the formula, while self-evaluation based on this knowledge further minimizes prediction errors, surpassing conventional symbolic regression in accuracy and interpretability. Our LLM-Feynman successfully rediscovered over 90% of fundamental physical formulas and demonstrated its efficacy in key materials science applications, including classification of two-dimensional material and perovskite synthesizability and determination of the Green&#x27;s function and screened Coulomb interaction bandgaps, and prediction of ionic conductivity in lithium solid-state electrolytes. By transcending mere data fitting through the integration of deep domain knowledge, this LLM-Feynman offers a transformative paradigm for the automated discovery of generalizable scientific formulas and theories across disciplines.</p>
-        </details>
-    </div>
-</article>
-
-<article class="paper"
-         id="paper-2503.04492"
-         data-paper-id="2503.04492"
-         aria-labelledby="title-paper-2503.04492"
-         tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1040</div>
-    <div class="paper-body">
-        <h3 id="title-paper-2503.04492" class="paper-title"><a href="https://arxiv.org/abs/2503.04492v3" target="_blank" rel="noopener noreferrer">Accurate predictive model of band gap with selected important features based on explainable machine learning</a></h3>
-
-        <dl class="paper-info">
-            <div class="paper-authors">
-                <dt>Authors</dt>
-                <dd>Joohwi Lee, Kaito Miyamoto</dd>
-            </div>
-            <div class="paper-date">
-                <dt>Published</dt>
-                <dd><time datetime="2025-03-06">2025-03-06</time></dd>
-            </div>
-            <div class="paper-category">
-                <dt>Category</dt>
-                <dd>cond-mat.mtrl-sci</dd>
-            </div>
-            <div class="paper-id">
-                <dt>arXiv ID</dt>
-                <dd>2503.04492v3</dd>
-            </div>
-        </dl>
-
-        <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2503.04492v3" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <details class="paper-summary">
-            <summary>Read abstract</summary>
-            <p>In the rapidly advancing field of materials informatics, nonlinear machine learning models have demonstrated exceptional predictive capabilities for material properties. However, their black-box nature limits interpretability, and they may incorporate features that do not contribute to -- or even deteriorate -- model performance. This study employs explainable ML (XML) techniques, including permutation feature importance and the SHapley Additive exPlanation, applied to a pristine support vector regression model designed to predict band gaps at the GW level using 18 input features. Guided by XML-derived individual feature importance, a simple framework is proposed to construct reduced-feature predictive models. Model evaluations indicate that an XML-guided compact model, consisting of the top five features, achieves comparable accuracy to the pristine model on in-domain datasets (0.254 vs. 0.247 eV) while showing improved generalization with lower prediction errors on out-of-domain data (0.348 vs. 0.460 eV). Additionally, the study underscores the necessity for eliminating strongly correlated features (correlation coefficient greater than 0.8) to prevent misinterpretation and overestimation of feature importance before applying XML. This study highlights XML&#x27;s effectiveness in developing simplified yet highly accurate machine learning models by clarifying feature roles, thereby reducing computational costs for feature acquisition and enhancing model trustworthiness for materials discovery.</p>
-        </details>
-    </div>
-</article>
-
 <nav class="archive-pagination" aria-label="Archive pages">
 <a href="page-25.html" rel="prev">← Previous</a>
 <a href="../archive.html" aria-label="Page 1">1</a>
@@ -2051,7 +2083,7 @@ product parts targeting selected performance indicators.</p>
     </main>
 
     <footer class="site-footer">
-        <p>Last updated <time datetime="2026-10-29T09:32:24+08:00">2026-10-29 09:32:24 SGT</time></p>
+        <p>Last updated <time datetime="2026-10-31T09:25:04.364973+08:00">2026-10-31 09:25:04 SGT</time></p>
         <p>© 2026 <a href="https://ocean-jh.github.io/"
                               target="_blank"
                               rel="noopener noreferrer">Wang Jianghai</a>

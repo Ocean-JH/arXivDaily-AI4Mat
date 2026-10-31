@@ -138,13 +138,130 @@
         <div id="papers-content">
             <div class="section-heading">
 <h2 id="archive-papers">Paper archive</h2>
-<p>Page 1 of 48 · 1907 unique papers</p></div>
+<p>Page 1 of 48 · 1910 unique papers</p></div>
+<article class="paper"
+         id="paper-2610.40443"
+         data-paper-id="2610.40443"
+         aria-labelledby="title-paper-2610.40443"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">1</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2610.40443" class="paper-title"><a href="https://arxiv.org/abs/2610.40443v1" target="_blank" rel="noopener noreferrer">Framework-Conditional Open Materials Generation</a></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Maya M. Martirossyan, Hillary Pan, Philipp Höllmer, Stefano Martiniani</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2026-10-29">2026-10-29</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cs.LG</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2610.40443v1</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2610.40443v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Theoretical predictions of novel materials rely on a variety of techniques, from data-mining-based ion substitution methods to fully de novo generative models. Each approach imposes specific constraints and encounters unique challenges when extrapolating beyond the distribution of known materials to discover new ones. The foremost goal of materials generation is to produce stable, unique, and novel (S.U.N.) structures. Predicted structures that meet these criteria, however, typically result from novel chemical compositions mapped onto known structural prototypes or frameworks. We leverage this heuristic insight to present a new generative paradigm for the de novo prediction of inorganic crystalline materials constrained by their structural framework---i.e., the unit cell shapes and respective particle positions. Our method, termed OMatG-FC (Open Materials Framework-Conditional Generation), learns via a combination of discrete flow matching on the atomic species and stochastic interpolants for the volume scaling of the unit cell lattice, while fixing in-place the fractional coordinates and the unit-volume lattice vectors, dramatically reducing the dimensionality of the problem compared to unconstrained (framework-free) generation. Our method is more flexible than existing prototype-constrained methods, demonstrating capability for discovery of unseen, stable prototypes derived from known structural frameworks. We also investigate the number of unique frameworks in the MP-20 dataset, demonstrating the propensity of duplicate frameworks within the dataset and providing a framework-split version. We benchmark the performance of our model using the LeMat-GenBench suite using three ML interatomic potentials and achieve state-of-the-art S.U.N. rate below the convex hull, eschewing the need to learn atomic packings for materials discovery.</p>
+        </details>
+    </div>
+</article>
+
+<article class="paper"
+         id="paper-2610.38517"
+         data-paper-id="2610.38517"
+         aria-labelledby="title-paper-2610.38517"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">2</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2610.38517" class="paper-title"><a href="https://arxiv.org/abs/2610.38517v1" target="_blank" rel="noopener noreferrer">AtomSteer: Test-Time Constraint Steering for Atomistic Generative Models</a></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Pengfei Cai, Katharina S. C. Jäger, Utkarsh Utkarsh, Nofit Segal, Bowen Deng, Akshay Subramanian, Rafael Gomez-Bombarelli</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2026-10-28">2026-10-28</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cs.LG</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2610.38517v1</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2610.38517v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Diffusion and flow matching models offer scalable approaches to generating crystalline materials, molecular conformers, and protein-ligand complexes. However, satisfying crystallographic symmetry, structural geometry, and accurate stereochemistry remains challenging. Satisfying these requirements calls for corrections that preserve the geometry already captured by the pretrained model. In this work, we propose AtomSteer, a test-time inference framework for steering pretrained atomistic generative models with structural constraints. During sampling, AtomSteer corrects intermediate structure predictions with bounded local projections, graph-rigid stereochemical transformations, and projections over periodic symmetries, accepting updates that improve constraint satisfaction while limiting changes to the rest of the structure. We demonstrate AtomSteer across three pretrained backbones, FlowMM, ET-Flow, and Boltz-2, spanning de novo crystal generation and crystal structure prediction, molecular conformer generation, and protein-ligand complex structure prediction. AtomSteer improves space-group distribution coverage in de novo crystal generation and improves target space-group recovery in crystal structure prediction. AtomSteer improves molecular validity and E/Z stereochemical accuracy while retaining conformer ensemble fidelity. For protein-ligand complexes, AtomSteer reduces ligand E/Z errors relative to experimental reference structures while achieving competitive docking success and PoseBusters validity. Our method provides a unified framework for adding chemical and crystallographic control to existing atomistic generative models without retraining or architectural changes.</p>
+        </details>
+    </div>
+</article>
+
+<article class="paper"
+         id="paper-2610.38195"
+         data-paper-id="2610.38195"
+         aria-labelledby="title-paper-2610.38195"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">3</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2610.38195" class="paper-title"><a href="https://arxiv.org/abs/2610.38195v1" target="_blank" rel="noopener noreferrer">Crystoria: A Large-Scale Crystal Dataset Linking Thermodynamic and Dynamical Stability for Materials AI</a></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Ke-Xin Pang, Ze-Feng Gao, Yan Gao, Zhong-Yi Lu</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2026-10-28">2026-10-28</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cond-mat.mtrl-sci</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2610.38195v1</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2610.38195v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Large-scale crystal databases have transformed materials discovery by making millions of structures and thermodynamic properties accessible to materials informatics. Yet dynamical stability remains sparsely characterized at a comparable scale because its evaluation is substantially more computationally demanding than conventional structure and energy calculations. This mismatch creates a critical gap between the rapidly expanding crystal-structure space and the physical information available for materials research and machine learning. Here we introduce Crystoria, a large-scale crystal dataset designed to bring dynamical stability to the scale of modern materials data. We construct Crystoria by systematically curating low-energy and metastable inorganic crystals, standardizing their structural identities, and combining machine-learning-accelerated structural relaxation with phonon-based dynamical screening. The resulting dataset contains 2,649,640 crystal structures, spanning 89 elements, 219 of the 230 space groups, and primitive cells containing 1-48 atoms. Among them, 1,793,353 structures (67.68%) are classified as dynamically stable, revealing substantial variation in dynamical stability across chemical and crystallographic space. By bringing dynamical stability to the scale of millions of crystal structures, Crystoria provides a physically grounded foundation for materials artificial intelligence (AI) and enables systematic exploration of the dynamical crystal landscape.</p>
+        </details>
+    </div>
+</article>
+
 <article class="paper"
          id="paper-2610.37597"
          data-paper-id="2610.37597"
          aria-labelledby="title-paper-2610.37597"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">1</div>
+    <div class="paper-index" aria-hidden="true">4</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.37597" class="paper-title"><a href="https://arxiv.org/abs/2610.37597v1" target="_blank" rel="noopener noreferrer">The Acridine Polymorph Landscape: Characterization and Selective Control by Additives</a></h3>
 
@@ -183,7 +300,7 @@
          data-paper-id="2610.37222"
          aria-labelledby="title-paper-2610.37222"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">2</div>
+    <div class="paper-index" aria-hidden="true">5</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.37222" class="paper-title"><a href="https://arxiv.org/abs/2610.37222v1" target="_blank" rel="noopener noreferrer">Magnetic crystal generation with site-resolved magnetic moments via Gaussian-mixture retargeting and finite-budget yield prediction</a></h3>
 
@@ -222,7 +339,7 @@
          data-paper-id="2610.35436"
          aria-labelledby="title-paper-2610.35436"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">3</div>
+    <div class="paper-index" aria-hidden="true">6</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.35436" class="paper-title"><a href="https://arxiv.org/abs/2610.35436v1" target="_blank" rel="noopener noreferrer">Precursor Ratio-Controlled Chloride Vacancies in Lead-Free KCuCl3-x Memristors for Forming-Free Gradual Resistive Switching and Neuromorphic Learning</a></h3>
 
@@ -261,7 +378,7 @@
          data-paper-id="2610.34628"
          aria-labelledby="title-paper-2610.34628"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">4</div>
+    <div class="paper-index" aria-hidden="true">7</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.34628" class="paper-title"><a href="https://arxiv.org/abs/2610.34628v1" target="_blank" rel="noopener noreferrer">From Autonomous Knowledge Generation to Generalizable Property Prediction: A Precision-First Pipeline for Electro-Optic Materials Discovery</a></h3>
 
@@ -300,7 +417,7 @@
          data-paper-id="2610.34029"
          aria-labelledby="title-paper-2610.34029"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">5</div>
+    <div class="paper-index" aria-hidden="true">8</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.34029" class="paper-title"><a href="https://arxiv.org/abs/2610.34029v1" target="_blank" rel="noopener noreferrer">TCSP3.0: Template-Based Crystal Structure Prediction with Coefficient-Preserving Element Substitution and Structural Diversity</a></h3>
 
@@ -339,7 +456,7 @@
          data-paper-id="2610.33310"
          aria-labelledby="title-paper-2610.33310"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">6</div>
+    <div class="paper-index" aria-hidden="true">9</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.33310" class="paper-title"><a href="https://arxiv.org/abs/2610.33310v1" target="_blank" rel="noopener noreferrer">Exploring Joint-Embedding Predictive Architectures for Self-Supervised Representation Learning of Powder X-ray Diffraction Patterns</a></h3>
 
@@ -378,7 +495,7 @@
          data-paper-id="2610.30086"
          aria-labelledby="title-paper-2610.30086"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">7</div>
+    <div class="paper-index" aria-hidden="true">10</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.30086" class="paper-title"><a href="https://arxiv.org/abs/2610.30086v1" target="_blank" rel="noopener noreferrer">Orbitol: Crystal Generation on Wyckoff Orbits</a></h3>
 
@@ -417,7 +534,7 @@
          data-paper-id="2610.27762"
          aria-labelledby="title-paper-2610.27762"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">8</div>
+    <div class="paper-index" aria-hidden="true">11</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.27762" class="paper-title"><a href="https://arxiv.org/abs/2610.27762v2" target="_blank" rel="noopener noreferrer">CrystalAR: Autoregressive Modeling for Symmetric Crystal Generation</a></h3>
 
@@ -456,7 +573,7 @@
          data-paper-id="2610.22600"
          aria-labelledby="title-paper-2610.22600"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">9</div>
+    <div class="paper-index" aria-hidden="true">12</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.22600" class="paper-title"><a href="https://arxiv.org/abs/2610.22600v1" target="_blank" rel="noopener noreferrer">A Comprehensive Survey of Crystal Structural Prototypes: Construction, Classification, and Applications</a></h3>
 
@@ -495,7 +612,7 @@
          data-paper-id="2610.19630"
          aria-labelledby="title-paper-2610.19630"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">10</div>
+    <div class="paper-index" aria-hidden="true">13</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.19630" class="paper-title"><a href="https://arxiv.org/abs/2610.19630v1" target="_blank" rel="noopener noreferrer">Risk-Controlled DFT Selection for Machine-Learned Interatomic Potentials</a></h3>
 
@@ -534,7 +651,7 @@
          data-paper-id="2610.15603"
          aria-labelledby="title-paper-2610.15603"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">11</div>
+    <div class="paper-index" aria-hidden="true">14</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.15603" class="paper-title"><a href="https://arxiv.org/abs/2610.15603v1" target="_blank" rel="noopener noreferrer">CondMSP: Condition-Informed and Resource-Aware Inorganic Materials Synthesis Planning</a></h3>
 
@@ -573,7 +690,7 @@
          data-paper-id="2610.14761"
          aria-labelledby="title-paper-2610.14761"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">12</div>
+    <div class="paper-index" aria-hidden="true">15</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.14761" class="paper-title"><a href="https://arxiv.org/abs/2610.14761v1" target="_blank" rel="noopener noreferrer">Inverse Designing Reconfigurable Piezoelectric Tensors via Architectural and Modal Programming</a></h3>
 
@@ -612,7 +729,7 @@
          data-paper-id="2610.14429"
          aria-labelledby="title-paper-2610.14429"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">13</div>
+    <div class="paper-index" aria-hidden="true">16</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.14429" class="paper-title"><a href="https://arxiv.org/abs/2610.14429v1" target="_blank" rel="noopener noreferrer">Large Out-of-plane Polarization in Two-dimensional Bi2O3 Monolayers Predicted by an AI-driven Inverse-design Workflow</a></h3>
 
@@ -651,7 +768,7 @@
          data-paper-id="2610.13885"
          aria-labelledby="title-paper-2610.13885"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">14</div>
+    <div class="paper-index" aria-hidden="true">17</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.13885" class="paper-title"><a href="https://arxiv.org/abs/2610.13885v1" target="_blank" rel="noopener noreferrer">Necessary conditions for benchmarking next-generation AI in materials discovery</a></h3>
 
@@ -691,7 +808,7 @@
          data-paper-id="2610.13859"
          aria-labelledby="title-paper-2610.13859"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">15</div>
+    <div class="paper-index" aria-hidden="true">18</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.13859" class="paper-title"><a href="https://arxiv.org/abs/2610.13859v1" target="_blank" rel="noopener noreferrer">Doubly Metastable Synthesis for Accelerated Quantum Materials Discovery</a></h3>
 
@@ -730,7 +847,7 @@
          data-paper-id="2610.12739"
          aria-labelledby="title-paper-2610.12739"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">16</div>
+    <div class="paper-index" aria-hidden="true">19</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.12739" class="paper-title"><a href="https://arxiv.org/abs/2610.12739v1" target="_blank" rel="noopener noreferrer">Predictive Synthesis of MOFs and COFs</a></h3>
 
@@ -769,7 +886,7 @@
          data-paper-id="2610.08296"
          aria-labelledby="title-paper-2610.08296"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">17</div>
+    <div class="paper-index" aria-hidden="true">20</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.08296" class="paper-title"><a href="https://arxiv.org/abs/2610.08296v1" target="_blank" rel="noopener noreferrer">OxiGen: Oxidation-State-Aware Crystal Generation</a></h3>
 
@@ -808,9 +925,9 @@
          data-paper-id="2610.04510"
          aria-labelledby="title-paper-2610.04510"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">18</div>
+    <div class="paper-index" aria-hidden="true">21</div>
     <div class="paper-body">
-        <h3 id="title-paper-2610.04510" class="paper-title"><a href="https://arxiv.org/abs/2610.04510v1" target="_blank" rel="noopener noreferrer">ManifoldCache: Training-Free Diffusion Acceleration via Constraint Manifold Caching</a></h3>
+        <h3 id="title-paper-2610.04510" class="paper-title"><a href="https://arxiv.org/abs/2610.04510v2" target="_blank" rel="noopener noreferrer">ManifoldCache: Training-Free Diffusion Acceleration via Constraint Manifold Caching</a></h3>
 
         <dl class="paper-info">
             <div class="paper-authors">
@@ -827,12 +944,12 @@
             </div>
             <div class="paper-id">
                 <dt>arXiv ID</dt>
-                <dd>2610.04510v1</dd>
+                <dd>2610.04510v2</dd>
             </div>
         </dl>
 
         <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2610.04510v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+            <a href="https://arxiv.org/abs/2610.04510v2" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
         </div>
 
         <details class="paper-summary">
@@ -847,7 +964,7 @@
          data-paper-id="2610.04193"
          aria-labelledby="title-paper-2610.04193"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">19</div>
+    <div class="paper-index" aria-hidden="true">22</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.04193" class="paper-title"><a href="https://arxiv.org/abs/2610.04193v1" target="_blank" rel="noopener noreferrer">Molecular Crystal Structure Prediction from Conditional Flow on the Unit Cells</a></h3>
 
@@ -886,7 +1003,7 @@
          data-paper-id="2610.03880"
          aria-labelledby="title-paper-2610.03880"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">20</div>
+    <div class="paper-index" aria-hidden="true">23</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.03880" class="paper-title"><a href="https://arxiv.org/abs/2610.03880v1" target="_blank" rel="noopener noreferrer">Reinforcement Learning on the Discrete Composition Channel of a Crystal Generator: Validated Gains and Reward Hacking</a></h3>
 
@@ -925,7 +1042,7 @@
          data-paper-id="2610.02671"
          aria-labelledby="title-paper-2610.02671"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">21</div>
+    <div class="paper-index" aria-hidden="true">24</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.02671" class="paper-title"><a href="https://arxiv.org/abs/2610.02671v1" target="_blank" rel="noopener noreferrer">LATHE: LAnguage-driven Toolkit for Hypothesis-based crystal Editing</a></h3>
 
@@ -964,7 +1081,7 @@
          data-paper-id="2610.01898"
          aria-labelledby="title-paper-2610.01898"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">22</div>
+    <div class="paper-index" aria-hidden="true">25</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.01898" class="paper-title"><a href="https://arxiv.org/abs/2610.01898v1" target="_blank" rel="noopener noreferrer">GEODE: Symmetry-Preserving Cartesian Diffusion for Crystal Generation</a></h3>
 
@@ -1003,7 +1120,7 @@
          data-paper-id="2610.01315"
          aria-labelledby="title-paper-2610.01315"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">23</div>
+    <div class="paper-index" aria-hidden="true">26</div>
     <div class="paper-body">
         <h3 id="title-paper-2610.01315" class="paper-title"><a href="https://arxiv.org/abs/2610.01315v1" target="_blank" rel="noopener noreferrer">EP-Flow: Disordered Crystal Structure Prediction without Site-Level Annotations</a></h3>
 
@@ -1042,7 +1159,7 @@
          data-paper-id="2609.39773"
          aria-labelledby="title-paper-2609.39773"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">24</div>
+    <div class="paper-index" aria-hidden="true">27</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.39773" class="paper-title"><a href="https://arxiv.org/abs/2609.39773v1" target="_blank" rel="noopener noreferrer">Riemannian Flow Models with Reinforcement Learning for Molecular Crystal Structure Prediction</a></h3>
 
@@ -1081,7 +1198,7 @@
          data-paper-id="2609.36398"
          aria-labelledby="title-paper-2609.36398"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">25</div>
+    <div class="paper-index" aria-hidden="true">28</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.36398" class="paper-title"><a href="https://arxiv.org/abs/2609.36398v1" target="_blank" rel="noopener noreferrer">Where Should Physics Enter a Molecular Crystal Generator?</a></h3>
 
@@ -1120,7 +1237,7 @@
          data-paper-id="2609.33407"
          aria-labelledby="title-paper-2609.33407"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">26</div>
+    <div class="paper-index" aria-hidden="true">29</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.33407" class="paper-title"><a href="https://arxiv.org/abs/2609.33407v2" target="_blank" rel="noopener noreferrer">Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors</a></h3>
 
@@ -1159,7 +1276,7 @@
          data-paper-id="2609.31888"
          aria-labelledby="title-paper-2609.31888"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">27</div>
+    <div class="paper-index" aria-hidden="true">30</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.31888" class="paper-title"><a href="https://arxiv.org/abs/2609.31888v1" target="_blank" rel="noopener noreferrer">Knowledge-Driven XRD Phase Identification via Multi-View Retrieval and Explanation</a></h3>
 
@@ -1198,7 +1315,7 @@
          data-paper-id="2609.26547"
          aria-labelledby="title-paper-2609.26547"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">28</div>
+    <div class="paper-index" aria-hidden="true">31</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.26547" class="paper-title"><a href="https://arxiv.org/abs/2609.26547v1" target="_blank" rel="noopener noreferrer">Topology-Stratified Materials Discovery with A Flow-Based Generative Model</a></h3>
 
@@ -1237,7 +1354,7 @@
          data-paper-id="2609.26502"
          aria-labelledby="title-paper-2609.26502"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">29</div>
+    <div class="paper-index" aria-hidden="true">32</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.26502" class="paper-title"><a href="https://arxiv.org/abs/2609.26502v2" target="_blank" rel="noopener noreferrer">Deep Generative Crystal Structure Prediction: A Benchmark Study and a Controlled Test of Prototype Dependence</a></h3>
 
@@ -1276,7 +1393,7 @@
          data-paper-id="2609.26402"
          aria-labelledby="title-paper-2609.26402"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">30</div>
+    <div class="paper-index" aria-hidden="true">33</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.26402" class="paper-title"><a href="https://arxiv.org/abs/2609.26402v1" target="_blank" rel="noopener noreferrer">OMatG-flash: An All-Atom Flow Map with Reinforce Adjoint Matching for Scalable Materials Discovery</a></h3>
 
@@ -1315,7 +1432,7 @@
          data-paper-id="2609.17646"
          aria-labelledby="title-paper-2609.17646"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">31</div>
+    <div class="paper-index" aria-hidden="true">34</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.17646" class="paper-title"><a href="https://arxiv.org/abs/2609.17646v1" target="_blank" rel="noopener noreferrer">Robust and Efficient AI Frameworks for Scalable Material Design and Property Prediction</a></h3>
 
@@ -1357,7 +1474,7 @@
          data-paper-id="2609.16545"
          aria-labelledby="title-paper-2609.16545"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">32</div>
+    <div class="paper-index" aria-hidden="true">35</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.16545" class="paper-title"><a href="https://arxiv.org/abs/2609.16545v1" target="_blank" rel="noopener noreferrer">Exotic centrosymmetric phase of acentric urea under high pressure</a></h3>
 
@@ -1396,7 +1513,7 @@
          data-paper-id="2609.14348"
          aria-labelledby="title-paper-2609.14348"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">33</div>
+    <div class="paper-index" aria-hidden="true">36</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.14348" class="paper-title"><a href="https://arxiv.org/abs/2609.14348v1" target="_blank" rel="noopener noreferrer">Multi4D: an end-to-end neural network for structural determination at complex material interfaces</a></h3>
 
@@ -1435,7 +1552,7 @@
          data-paper-id="2609.13468"
          aria-labelledby="title-paper-2609.13468"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">34</div>
+    <div class="paper-index" aria-hidden="true">37</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.13468" class="paper-title"><a href="https://arxiv.org/abs/2609.13468v1" target="_blank" rel="noopener noreferrer">Symmetry- and Property-Aware Crystal Generation with Reinforcement Learning for Inverse Materials Design</a></h3>
 
@@ -1474,7 +1591,7 @@
          data-paper-id="2609.09799"
          aria-labelledby="title-paper-2609.09799"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">35</div>
+    <div class="paper-index" aria-hidden="true">38</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.09799" class="paper-title"><a href="https://arxiv.org/abs/2609.09799v1" target="_blank" rel="noopener noreferrer">uFlowCSP: Crystal Structure Prediction using Mean flow generative models</a></h3>
 
@@ -1515,7 +1632,7 @@
          data-paper-id="2609.07477"
          aria-labelledby="title-paper-2609.07477"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">36</div>
+    <div class="paper-index" aria-hidden="true">39</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.07477" class="paper-title"><a href="https://arxiv.org/abs/2609.07477v1" target="_blank" rel="noopener noreferrer">Benchmarking Universal Machine Learning Force Fields for Crystal Structure Prediction of High-Energy Molecular Systems</a></h3>
 
@@ -1554,7 +1671,7 @@
          data-paper-id="2609.06159"
          aria-labelledby="title-paper-2609.06159"
          tabindex="-1">
-    <div class="paper-index" aria-hidden="true">37</div>
+    <div class="paper-index" aria-hidden="true">40</div>
     <div class="paper-body">
         <h3 id="title-paper-2609.06159" class="paper-title"><a href="https://arxiv.org/abs/2609.06159v1" target="_blank" rel="noopener noreferrer">Altermagnetism from the viewpoint of chemistry</a></h3>
 
@@ -1588,123 +1705,6 @@
     </div>
 </article>
 
-<article class="paper"
-         id="paper-2609.05163"
-         data-paper-id="2609.05163"
-         aria-labelledby="title-paper-2609.05163"
-         tabindex="-1">
-    <div class="paper-index" aria-hidden="true">38</div>
-    <div class="paper-body">
-        <h3 id="title-paper-2609.05163" class="paper-title"><a href="https://arxiv.org/abs/2609.05163v1" target="_blank" rel="noopener noreferrer">Neural-field design of broadband Rayleigh-wave carpet cloaks under microstructure realisability constraints</a></h3>
-
-        <dl class="paper-info">
-            <div class="paper-authors">
-                <dt>Authors</dt>
-                <dd>David Aznaurov, Davit Piliposyan, Danila Rukhovich, Sebastien Guenneau</dd>
-            </div>
-            <div class="paper-date">
-                <dt>Published</dt>
-                <dd><time datetime="2026-09-04">2026-09-04</time></dd>
-            </div>
-            <div class="paper-category">
-                <dt>Category</dt>
-                <dd>cond-mat.mtrl-sci</dd>
-            </div>
-            <div class="paper-id">
-                <dt>arXiv ID</dt>
-                <dd>2609.05163v1</dd>
-            </div>
-        </dl>
-
-        <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2609.05163v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <details class="paper-summary">
-            <summary>Read abstract</summary>
-            <p>Transformation elasticity provides appropriate material distributions for elastodynamic cloaks but the required stiffness tensors generally violate the minor symmetries of Cauchy elasticity and are difficult to realise using conventional materials. Existing approaches restore these symmetries by modifying the transformed tensor, producing only an approximate cloak. In this work rather than modifying the transformed tensor we seek the best performing cloak within the class of Cauchy materials. We formulate 2D Rayleigh wave carpet cloak design as an optimisation problem governed by partial differential equations. Using a coordinate based neural-field and a differentiable finite element model solver we optimise symmetric stiffness and density fields by minimising wave field distortion. Both single frequency and broadband optimisation are considered, with the broadband model trained over multiple frequencies. Physical realisability is addressed using a database of homogenised microstructures through conditional diffusion, neural-field inverse design, and nearest-neighbour selection. FEM simulations show that the optimised Cauchy design approaches the ideal transformation-based cloak. After projection onto explicit microstructures, the homogenised representation recovers approximately 97% of the defect free reference surface-displacement magnitude, while direct FEM simulation of the fully resolved microstructured geometry recovers approximately 76%</p>
-        </details>
-    </div>
-</article>
-
-<article class="paper"
-         id="paper-2609.22233"
-         data-paper-id="2609.22233"
-         aria-labelledby="title-paper-2609.22233"
-         tabindex="-1">
-    <div class="paper-index" aria-hidden="true">39</div>
-    <div class="paper-body">
-        <h3 id="title-paper-2609.22233" class="paper-title"><a href="https://arxiv.org/abs/2609.22233v1" target="_blank" rel="noopener noreferrer">SCALE: Simulation-Calibrated Amortized Learning for Energy Materials (A hybrid architecture connecting deterministic modeling, real-world data, and transformer-scale inference for accelerated energy-materials discovery)</a></h3>
-
-        <dl class="paper-info">
-            <div class="paper-authors">
-                <dt>Authors</dt>
-                <dd>Kuan Huang, Bo Bai</dd>
-            </div>
-            <div class="paper-date">
-                <dt>Published</dt>
-                <dd><time datetime="2026-09-03">2026-09-03</time></dd>
-            </div>
-            <div class="paper-category">
-                <dt>Category</dt>
-                <dd>cs.LG</dd>
-            </div>
-            <div class="paper-id">
-                <dt>arXiv ID</dt>
-                <dd>2609.22233v1</dd>
-            </div>
-        </dl>
-
-        <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2609.22233v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <details class="paper-summary">
-            <summary>Read abstract</summary>
-            <p>Energy systems face converging pressures for security, affordability, resilience, and sustainability, creating a need for faster discovery of deployable energy materials. Here we introduce SCALE (Simulation-Calibrated Amortized Learning for Energy Materials), a physics-grounded, real-world-data-calibrated learning architecture that connects deterministic scientific operators, experimental calibration, expanded calibrated label generation, and transformer-scale inference. SCALE converts selected high-cost mechanistic computation and measured evidence into reusable models for rapid screening, ranking, inverse design, and active learning. We formulate the framework, identify ten method-based application regimes, and demonstrate SCALE for solid-state metal-hydride hydrogen-storage capacity prediction. In this implementation, a hydride phase-equilibrium capacity operator is calibrated against 381 measured ML-HydPARK capacity anchors and used to generate 5,000 candidate-condition-prototype teacher labels. A crystallographically anchored periodic-graph representation preserves atomic sites, periodic neighbor relationships, and local metal environments absent from formula-only encodings. An edge-biased graph transformer with 2.90 million parameters reproduces calibrated teacher labels with five-fold surrogate fidelity of MAE 0.0582 wt% H2, RMSE 0.0833 wt% H2, R2 = 0.9927, and Pearson r = 0.9963. Post hoc attention analysis suggests that SCALE learns chemically organized element groupings and metal-metal relationships consistent with established hydride chemistry, without chemistry-group labels as supervision. Once trained, SCALE shifts million-candidate evaluation from repeated deterministic workflow execution to batched learned inference, reducing per-candidate screening cost by approximately 10^7-10^8 while retaining links to simulation and experimental evidence.</p>
-        </details>
-    </div>
-</article>
-
-<article class="paper"
-         id="paper-2609.01209"
-         data-paper-id="2609.01209"
-         aria-labelledby="title-paper-2609.01209"
-         tabindex="-1">
-    <div class="paper-index" aria-hidden="true">40</div>
-    <div class="paper-body">
-        <h3 id="title-paper-2609.01209" class="paper-title"><a href="https://arxiv.org/abs/2609.01209v1" target="_blank" rel="noopener noreferrer">Autonomous discovery of new structure-plausibility laws for explainable and rapid crystal diagnosis and screening</a></h3>
-
-        <dl class="paper-info">
-            <div class="paper-authors">
-                <dt>Authors</dt>
-                <dd>Zhilong Song, Lixue Cheng</dd>
-            </div>
-            <div class="paper-date">
-                <dt>Published</dt>
-                <dd><time datetime="2026-09-01">2026-09-01</time></dd>
-            </div>
-            <div class="paper-category">
-                <dt>Category</dt>
-                <dd>cond-mat.mtrl-sci</dd>
-            </div>
-            <div class="paper-id">
-                <dt>arXiv ID</dt>
-                <dd>2609.01209v1</dd>
-            </div>
-        </dl>
-
-        <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2609.01209v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <details class="paper-summary">
-            <summary>Read abstract</summary>
-            <p>Crystal generators and tool-using agents propose structures faster than density functional theory (DFT) energy and phonon calculations or experiments can assess them. Deciding which candidates merit expensive assessment is therefore the bottleneck, yet most screens test little beyond atomic overlap and give no chemical reason for failure. Here, our agents generate, test and actively refute two million candidate laws, leaving eight Plausibility Rules for Inorganic Structures (PRIS). These laws encode five mechanisms: short-range repulsion, ionic contact and packing, electrostatic balance, bond-valence conservation and crystallographic site complexity. Experimental structures satisfy our law sets at 82--99%, but satisfy Pauling&#x27;s rules 2--5 together at only 6.5%. The strictest set detects 87.9% of damaged crystal structures, whereas distance cutoffs detect only 1.6--3.2%. PRIS plausibility is linearly correlated with synthesizability, so the PRIS-derived synthesis score (PSS) explainably screens 83.7% of hard-to-synthesize structures while retaining 80.7% of experimental structures. In a property-conditioned inverse-design run, PRIS and PSS can reduce the DFT validation queue by up to 67.3% and keep 99.2% of the candidates whose DFT-validated bulk moduli reach the design target. Beyond screening, PRIS explains why GNoME remains enriched in rare low-symmetry structures and reveals how wrong-element assignments in falsified crystal reports hide behind plausible coordinates. PRIS moves screening from a pass-or-fail verdict to a chemical reason for failure, showing that autonomous agents can discover, by active refutation, physicochemical laws that guide calculations and experiments.</p>
-        </details>
-    </div>
-</article>
-
 <nav class="archive-pagination" aria-label="Archive pages">
 <span aria-current="page" aria-label="Page 1">1</span>
 <a href="archive/page-2.html" aria-label="Page 2">2</a>
@@ -1717,7 +1717,7 @@
     </main>
 
     <footer class="site-footer">
-        <p>Last updated <time datetime="2026-10-29T09:32:24+08:00">2026-10-29 09:32:24 SGT</time></p>
+        <p>Last updated <time datetime="2026-10-31T09:25:04.364973+08:00">2026-10-31 09:25:04 SGT</time></p>
         <p>© 2026 <a href="https://ocean-jh.github.io/"
                               target="_blank"
                               rel="noopener noreferrer">Wang Jianghai</a>

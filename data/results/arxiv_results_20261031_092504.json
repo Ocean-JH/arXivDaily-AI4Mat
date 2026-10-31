@@ -1,0 +1,111 @@
+[
+  {
+    "authors": [
+      "Maya M. Martirossyan",
+      "Hillary Pan",
+      "Philipp Höllmer",
+      "Stefano Martiniani"
+    ],
+    "base_id": "2610.40443",
+    "categories": [
+      "cs.LG",
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2610.40443v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2610.40443v1",
+    "primary_category": "cs.LG",
+    "published": "2026-10-29T16:57:14+00:00",
+    "short_id": "2610.40443v1",
+    "status": "new",
+    "summary": "Theoretical predictions of novel materials rely on a variety of techniques, from data-mining-based ion substitution methods to fully de novo generative models. Each approach imposes specific constraints and encounters unique challenges when extrapolating beyond the distribution of known materials to discover new ones. The foremost goal of materials generation is to produce stable, unique, and novel (S.U.N.) structures. Predicted structures that meet these criteria, however, typically result from novel chemical compositions mapped onto known structural prototypes or frameworks. We leverage this heuristic insight to present a new generative paradigm for the de novo prediction of inorganic crystalline materials constrained by their structural framework---i.e., the unit cell shapes and respective particle positions. Our method, termed OMatG-FC (Open Materials Framework-Conditional Generation), learns via a combination of discrete flow matching on the atomic species and stochastic interpolants for the volume scaling of the unit cell lattice, while fixing in-place the fractional coordinates and the unit-volume lattice vectors, dramatically reducing the dimensionality of the problem compared to unconstrained (framework-free) generation. Our method is more flexible than existing prototype-constrained methods, demonstrating capability for discovery of unseen, stable prototypes derived from known structural frameworks. We also investigate the number of unique frameworks in the MP-20 dataset, demonstrating the propensity of duplicate frameworks within the dataset and providing a framework-split version. We benchmark the performance of our model using the LeMat-GenBench suite using three ML interatomic potentials and achieve state-of-the-art S.U.N. rate below the convex hull, eschewing the need to learn atomic packings for materials discovery.",
+    "title": "Framework-Conditional Open Materials Generation",
+    "updated": "2026-10-29T16:57:14+00:00",
+    "url": "https://arxiv.org/abs/2610.40443v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Pengfei Cai",
+      "Katharina S. C. Jäger",
+      "Utkarsh Utkarsh",
+      "Nofit Segal",
+      "Bowen Deng",
+      "Akshay Subramanian",
+      "Rafael Gomez-Bombarelli"
+    ],
+    "base_id": "2610.38517",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2610.38517v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2610.38517v1",
+    "primary_category": "cs.LG",
+    "published": "2026-10-28T09:29:17+00:00",
+    "short_id": "2610.38517v1",
+    "status": "new",
+    "summary": "Diffusion and flow matching models offer scalable approaches to generating crystalline materials, molecular conformers, and protein-ligand complexes. However, satisfying crystallographic symmetry, structural geometry, and accurate stereochemistry remains challenging. Satisfying these requirements calls for corrections that preserve the geometry already captured by the pretrained model. In this work, we propose AtomSteer, a test-time inference framework for steering pretrained atomistic generative models with structural constraints. During sampling, AtomSteer corrects intermediate structure predictions with bounded local projections, graph-rigid stereochemical transformations, and projections over periodic symmetries, accepting updates that improve constraint satisfaction while limiting changes to the rest of the structure. We demonstrate AtomSteer across three pretrained backbones, FlowMM, ET-Flow, and Boltz-2, spanning de novo crystal generation and crystal structure prediction, molecular conformer generation, and protein-ligand complex structure prediction. AtomSteer improves space-group distribution coverage in de novo crystal generation and improves target space-group recovery in crystal structure prediction. AtomSteer improves molecular validity and E/Z stereochemical accuracy while retaining conformer ensemble fidelity. For protein-ligand complexes, AtomSteer reduces ligand E/Z errors relative to experimental reference structures while achieving competitive docking success and PoseBusters validity. Our method provides a unified framework for adding chemical and crystallographic control to existing atomistic generative models without retraining or architectural changes.",
+    "title": "AtomSteer: Test-Time Constraint Steering for Atomistic Generative Models",
+    "updated": "2026-10-28T09:29:17+00:00",
+    "url": "https://arxiv.org/abs/2610.38517v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Ke-Xin Pang",
+      "Ze-Feng Gao",
+      "Yan Gao",
+      "Zhong-Yi Lu"
+    ],
+    "base_id": "2610.38195",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": "9 pages, 3 figures, 1 table; 6 pages of Supplementary Information with 4 supplementary figures included",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2610.38195v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2610.38195v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-10-28T02:41:14+00:00",
+    "short_id": "2610.38195v1",
+    "status": "new",
+    "summary": "Large-scale crystal databases have transformed materials discovery by making millions of structures and thermodynamic properties accessible to materials informatics. Yet dynamical stability remains sparsely characterized at a comparable scale because its evaluation is substantially more computationally demanding than conventional structure and energy calculations. This mismatch creates a critical gap between the rapidly expanding crystal-structure space and the physical information available for materials research and machine learning. Here we introduce Crystoria, a large-scale crystal dataset designed to bring dynamical stability to the scale of modern materials data. We construct Crystoria by systematically curating low-energy and metastable inorganic crystals, standardizing their structural identities, and combining machine-learning-accelerated structural relaxation with phonon-based dynamical screening. The resulting dataset contains 2,649,640 crystal structures, spanning 89 elements, 219 of the 230 space groups, and primitive cells containing 1-48 atoms. Among them, 1,793,353 structures (67.68%) are classified as dynamically stable, revealing substantial variation in dynamical stability across chemical and crystallographic space. By bringing dynamical stability to the scale of millions of crystal structures, Crystoria provides a physically grounded foundation for materials artificial intelligence (AI) and enables systematic exploration of the dynamical crystal landscape.",
+    "title": "Crystoria: A Large-Scale Crystal Dataset Linking Thermodynamic and Dynamical Stability for Materials AI",
+    "updated": "2026-10-28T02:41:14+00:00",
+    "url": "https://arxiv.org/abs/2610.38195v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Prashant Pandey",
+      "Devineni Sri Venkatraya Chowdary",
+      "Brejesh Lall"
+    ],
+    "base_id": "2610.04510",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2610.04510v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2610.04510v2",
+    "primary_category": "cs.AI",
+    "published": "2026-10-03T13:18:15+00:00",
+    "short_id": "2610.04510v2",
+    "status": "update",
+    "summary": "Diffusion models for structured scientific generation must produce samples satisfying hard geometric constraints imposed by physics, chemistry, or biology, yet inference in these settings is prohibitively slow, demanding hundreds to thousands of neural-function evaluations per sample. We unify eight state-of-the-art models spanning medical volumetrics, molecular conformations, protein backbone design, crystal structure prediction, and multi-view 3D scenes under a single abstraction, Constraint-Manifold Diffusion Models (CMDMs), in which the target distribution is supported on a manifold defined by an externally specified constraint map. All existing acceleration families fail on this class: quantization exhausts memory on high-dimensional volumetric operators; pruning breaks constraint fidelity; fast ODE solvers allow trajectories to drift off the constraint manifold; and feature-caching heuristics are blind to constraint geometry, inducing mode confusion in the high-noise regime. We introduce ManifoldCache, the first training-free, data-free accelerator designed from first principles for CMDMs. The key insight is that the conditional score decomposes orthogonally into a normal component, which enforces constraint satisfaction, and a tangential component, which navigates within the manifold. Exploiting this structure, we prove that the noise-schedule midpoint is a sharp safe-caching boundary: caching before it incurs provably bounded error, while caching after it guarantees a strictly positive fraction of trajectories suffer mode confusion, a gap that persists up to the boundary. We further prove that deeper network blocks admit provably larger certified cache strides within the safe phase, as a consequence of the score decomposition propagating through block Jacobians. The resulting schedule requires no calibration data, along with zero training overhead.",
+    "title": "ManifoldCache: Training-Free Diffusion Acceleration via Constraint Manifold Caching",
+    "updated": "2026-10-27T18:26:59+00:00",
+    "url": "https://arxiv.org/abs/2610.04510v2",
+    "version": 2
+  }
+]
