@@ -131,9 +131,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (4)
+## Latest Papers (4)
 
-*Last checked: 2026-10-31 09:25:04 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-11-01 08:40:26 (SGT)*
 
 ### 1. Framework-Conditional Open Materials Generation
 
