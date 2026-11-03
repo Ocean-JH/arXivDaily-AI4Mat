@@ -5,7 +5,14 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 31 Oct 2026 09:25:04 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 11:18:29 +0800</lastBuildDate>
+    <item>
+      <title>Learning Nonlocal Interactions in Large-Scale Heterogeneous Metamaterials through Scientific Machine Learning</title>
+      <link>https://arxiv.org/abs/2610.41887v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.41887v1</guid>
+      <pubDate>Fri, 30 Oct 2026 15:31:41 +0000</pubDate>
+      <description>In multiscale systems, nonlocal interactions among spatially distributed constituents can unlock collective, potentially emergent behavior irreducible to individual constituent responses. Beyond characterization, nonlocality in multiscale systems is increasingly viewed as a design element across fracture mechanics, wave physics, and disordered systems. Existing nonlocality theories provide rigorous descriptions and mechanistic insight, but often require prescribed analytic forms, range, symmetries, or periodicity. Machine learning offers a data-driven route to learn interactions, yet principled approaches that tie the network design to physical theory remain nascent. Here we present domain-decomposition attention neural operator (DANO), which learns configuration-dependent interactions in heterogeneous systems governed by linear field equations from field data alone. Through a case study in large-scale optical metasurfaces, we demonstrate DANO's full-field prediction under geometric heterogeneity and across drive conditions, small-to-large domain transfer, and multifunctional inverse design, with learned interactions validated through physics-based interrogation. As an AI-for-Science tool, it supports interaction discovery and scalable, customizable design of nonlocal multiscale systems, including virtual-reality optics.</description>
+    </item>
     <item>
       <title>Framework-Conditional Open Materials Generation</title>
       <link>https://arxiv.org/abs/2610.40443v1</link>
@@ -354,13 +361,6 @@
       <guid isPermaLink="true">https://arxiv.org/abs/2608.25270v1</guid>
       <pubDate>Wed, 26 Aug 2026 01:11:59 +0000</pubDate>
       <description>We present an accelerated materials discovery framework that combines diffusion-based crystal structure generation with hierarchical screening to identify new rare-earth--transition-metal magnets simultaneously achieving high magnetization and thermodynamic stability. Using this workflow, we systematically explored over 3000 binary (R-T) and ternary (R-T-T$'$) compositions spanning R~$\in \{\text{Y, Sm}\}$, T~$\in \{\text{Fe, Co, Ni}\}$, and T$' \in \{\text{Ti, V, Cr, Mn, Cu, Zn}\}$, and filtered approximately 240{,}000 generated crystal structures through machine-learning interatomic potential prescreening and spin-polarized density functional theory validation. We identify 300+ low-energy magnetic candidates within 0.1~eV/atom above the convex hull at the DFT level, including 5 thermodynamically stable phases. The highest saturation magnetization reaches ${\sim}1.8$~T in Fe-rich binary and ternary phases (SmFe$_{12}$, YFe$_{12}$, YFe$_{18}$Ti and Sm$_2$Fe$_{16}$Mn). Symmetry analysis reveals that the majority of ternary candidates are subgroup derivatives of known binary prototypes through Wyckoff site splitting that accommodates T$'$ substitution. Site-resolved magnetic moment analysis further shows that Mn aligns ferromagnetically with the Fe sublattice with minimal magnetization loss, whereas Cr couples antiferromagnetically, providing systematic guidance for dopant selection. These findings demonstrate a generalizable strategy for targeted magnetic materials discovery and suggest that extending generative searches to larger unit cells ($&gt;$20 atoms) with higher Fe fractions is a promising route toward stable phases with saturation magnetization exceeding 1.8~T.</description>
-    </item>
-    <item>
-      <title>An LLM agent for end-to-end computational materials discovery</title>
-      <link>https://arxiv.org/abs/2608.20434v2</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2608.20434v2</guid>
-      <pubDate>Thu, 20 Aug 2026 06:23:09 +0000</pubDate>
-      <description>Coordinating multi-scale tasks is an effective strategy for computational materials discovery, yet the diverse algorithms and tools involved make this process highly challenging. Here we present DREAMS, a large language model (LLM)-based agent system capable of executing the entire screening pipeline for metal-organic frameworks (MOFs). DREAMS processes a large body of MOF literature, links publications to their crystal structures, and curates them into a computation-ready database, which is then screened with progressively more expensive simulations. The promising candidates identified for separation under wet flue gas conditions all originate from independent studies. By bridging the heterogeneous stages from literature mining to high-throughput simulation, DREAMS operates across application domains and enables even non-experts to discover high-performance materials in an end-to-end, automated manner.</description>
     </item>
   </channel>
 </rss>
