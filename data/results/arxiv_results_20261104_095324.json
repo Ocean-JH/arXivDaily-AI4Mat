@@ -1,0 +1,87 @@
+[
+  {
+    "authors": [
+      "Heewoong Noh",
+      "Gyoung S. Na",
+      "Namkyeong Lee",
+      "Chanyoung Park"
+    ],
+    "base_id": "2602.07543",
+    "categories": [
+      "cs.AI",
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2602.07543v4",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.07543v4",
+    "primary_category": "cs.AI",
+    "published": "2026-02-07T13:37:43+00:00",
+    "short_id": "2602.07543v4",
+    "status": "new",
+    "summary": "Material synthesis planning (MSP) remains a fundamental and underexplored bottleneck in AI-driven materials discovery, as it requires not only identifying suitable precursor materials but also designing coherent sequences of synthesis operations to realize a target material. Although several AI-based approaches have been proposed to address isolated subtasks of MSP, a methodology for solving the entire MSP task has yet to be established. We propose MSP-LLM, a structured LLM-based framework that formulates MSP as a two-stage process composed of two constituent subproblems: precursor prediction (PP) and synthesis operation prediction (SOP). Our approach introduces a discrete material class as an intermediate decision variable that organizes both tasks into a chemically consistent decision chain. For SOP, we further incorporate hierarchical precursor types as synthesis-relevant inductive biases and employ precursor constraint factorization that preserves precursor-related information in the autoregressive decoding state. Extensive experiments show that MSP-LLM consistently outperforms existing methods on both PP and SOP, as well as on the MSP task, demonstrating an effective and scalable framework with practical potential for autonomous MSP.",
+    "title": "MSP-LLM: A Structured Large Language Model Framework for Inorganic Material Synthesis Planning",
+    "updated": "2026-11-02T11:47:49+00:00",
+    "url": "https://arxiv.org/abs/2602.07543v4",
+    "version": 4
+  },
+  {
+    "authors": [
+      "Junchi Liu",
+      "Haoran Si",
+      "Luo Yan",
+      "Sergei Tretiak",
+      "Liujiang Zhou"
+    ],
+    "base_id": "2611.02906",
+    "categories": [
+      "physics.comp-ph",
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.02906v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.02906v1",
+    "primary_category": "physics.comp-ph",
+    "published": "2026-11-02T10:38:43+00:00",
+    "short_id": "2611.02906v1",
+    "status": "new",
+    "summary": "Generative models for crystal structure prediction (CSP) have expanded the search space for novel materials and improved screening efficiency. However, simultaneously generating stable and novel structures remains challenging because of the complex structural and physical constraints governing crystals. To address this challenge, we propose site-orbit masked twin-branch Transformer model (ST2M), a symmetry-guided discrete--continuous diffusion framework incorporating degree-of-freedom masks and conditioned on Wyckoff patterns. ST2M represents crystal structures as sequences of independent occupied Wyckoff orbits and employs a twin-branch Transformer to jointly denoise discrete and continuous variables. In our experiments, ST2M achieves a structural validity of 96.37\\%. For known patterns in dataset, 23.86\\% of generated structures simultaneously satisfy stability, uniqueness, and novelty criteria, representing a relative improvement of 68.15\\% over the best-performing baseline. First-principles calculations identify a total of 21 previously unreported stable structures among selected candidates with low predicted energies. These results demonstrate that ST2M can generate chemically viable crystal candidates under prescribed crystallographic constraints and generalize to unknown Wyckoff patterns, providing a practical route to accelerated materials discovery.",
+    "title": "Site-orbit masked twin-branch Transformer for symmetry-constrained crystal generation",
+    "updated": "2026-11-02T10:38:43+00:00",
+    "url": "https://arxiv.org/abs/2611.02906v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Adam M. Krajewski",
+      "Ricardo Amaral",
+      "Jonathan W. Siegel",
+      "Luke A. Myers",
+      "Rushi Gong",
+      "Shun-Li Shang",
+      "Zi-Kui Liu"
+    ],
+    "base_id": "2611.02584",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.CE"
+    ],
+    "comment": "19 pages, 7 figures, software repository https://github.com/PhasesResearchLab/crystALL",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.02584v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.02584v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-11-02T06:11:06+00:00",
+    "short_id": "2611.02584v1",
+    "status": "new",
+    "summary": "Real materials consist of multiple stable or metastable states under real-world conditions, existing as statistical ergodic ensembles of configurations rather than ideal crystals. Yet, data-driven computational materials discovery increasingly biases itself toward finding \"new stable structures\" from ground-state DFT calculations alone. This limits our long-term ability to discover materials whose properties emerge from metastable phases, to explain experimental observations, or to model thermodynamic behavior comprehensively. Predicting ergodic sets of atomic configurations of known and hypothetical solids is a fundamental challenge in theoretical crystallography, approached via many complementary methods. We discuss this conceptually and introduce crystALL, a pragmatic and powerful data-driven approach to discovering ensembles beyond the convex hull, embracing structural diversity over stability alone, enabling robust experiment matching in cases evading traditional methods. crystALL leverages 5 million relaxed structures from OPTIMADE and MPDD to rapidly generate a comprehensive candidate set by: (1) species substitutions; (2) ML feature-space analysis with pySIPFENN; (3) representative structure selection via clustering and energy-minimization or property matching; and (4) construction of the final candidate ensemble for experimental or ab initio validation. We also uniquely address the common challenge of experimental composition uncertainties spanning many integer stoichiometries by new efficient searches across anonymized compositional ranges rather than fixed formulas. Overall, crystALL's ensemble-focused philosophy provides critical advantages over the prevailing convex-hull-searching paradigm, which often fails to account for key experimental observations and increases AI/ML discovery bias over time - akin to model collapse in LLMs retrained on iteratively generated content.",
+    "title": "Data-driven candidate structure ensemble generation beyond the convex hull with crystALL approach",
+    "updated": "2026-11-02T06:11:06+00:00",
+    "url": "https://arxiv.org/abs/2611.02584v1",
+    "version": 1
+  }
+]

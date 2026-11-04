@@ -131,23 +131,55 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## New Papers (3)
 
-*Last checked: 2026-11-03 11:18:29 (SGT)*
+*Last checked: 2026-11-04 09:53:24 (SGT)*
 
-### 1. Learning Nonlocal Interactions in Large-Scale Heterogeneous Metamaterials through Scientific Machine Learning
+### 1. MSP-LLM: A Structured Large Language Model Framework for Inorganic Material Synthesis Planning
 
-**Authors:** Dex Doksoo Lee, Jehyeon Shin, Yue Yu, Sunkyu Yu, Junsuk Rho, Wei Chen
+**Authors:** Heewoong Noh, Gyoung S. Na, Namkyeong Lee, Chanyoung Park
 
-**Published:** 2026-10-30
+**Published:** 2026-02-07
 
-**Category:** cs.CE
+**Category:** cs.AI
 
-**ID:** 2610.41887v1
+**ID:** 2602.07543v4
 
-**Link:** [https://arxiv.org/abs/2610.41887v1](https://arxiv.org/abs/2610.41887v1)
+**Link:** [https://arxiv.org/abs/2602.07543v4](https://arxiv.org/abs/2602.07543v4)
 
-**Summary:** In multiscale systems, nonlocal interactions among spatially distributed constituents can unlock collective, potentially emergent behavior irreducible to individual constituent responses. Beyond characterization, nonlocality in multiscale systems is increasingly viewed as a design element across fracture mechanics, wave physics, and disordered systems. Existing nonlocality theories provide rigorous descriptions and mechanistic insight, but often require prescribed analytic forms, range, symmetries, or periodicity. Machine learning offers a data-driven route to learn interactions, yet principled approaches that tie the network design to physical theory remain nascent. Here we present domain-decomposition attention neural operator (DANO), which learns configuration-dependent interactions in heterogeneous systems governed by linear field equations from field data alone. Through a case study in large-scale optical metasurfaces, we demonstrate DANO's full-field prediction under geometric heterogeneity and across drive conditions, small-to-large domain transfer, and multifunctional inverse design, with learned interactions validated through physics-based interrogation. As an AI-for-Science tool, it supports interaction discovery and scalable, customizable design of nonlocal multiscale systems, including virtual-reality optics.
+**Summary:** Material synthesis planning (MSP) remains a fundamental and underexplored bottleneck in AI-driven materials discovery, as it requires not only identifying suitable precursor materials but also designing coherent sequences of synthesis operations to realize a target material. Although several AI-based approaches have been proposed to address isolated subtasks of MSP, a methodology for solving the entire MSP task has yet to be established. We propose MSP-LLM, a structured LLM-based framework that formulates MSP as a two-stage process composed of two constituent subproblems: precursor prediction (PP) and synthesis operation prediction (SOP). Our approach introduces a discrete material class as an intermediate decision variable that organizes both tasks into a chemically consistent decision chain. For SOP, we further incorporate hierarchical precursor types as synthesis-relevant inductive biases and employ precursor constraint factorization that preserves precursor-related information in the autoregressive decoding state. Extensive experiments show that MSP-LLM consistently outperforms existing methods on both PP and SOP, as well as on the MSP task, demonstrating an effective and scalable framework with practical potential for autonomous MSP.
+
+---
+
+### 2. Site-orbit masked twin-branch Transformer for symmetry-constrained crystal generation
+
+**Authors:** Junchi Liu, Haoran Si, Luo Yan, Sergei Tretiak, Liujiang Zhou
+
+**Published:** 2026-11-02
+
+**Category:** physics.comp-ph
+
+**ID:** 2611.02906v1
+
+**Link:** [https://arxiv.org/abs/2611.02906v1](https://arxiv.org/abs/2611.02906v1)
+
+**Summary:** Generative models for crystal structure prediction (CSP) have expanded the search space for novel materials and improved screening efficiency. However, simultaneously generating stable and novel structures remains challenging because of the complex structural and physical constraints governing crystals. To address this challenge, we propose site-orbit masked twin-branch Transformer model (ST2M), a symmetry-guided discrete--continuous diffusion framework incorporating degree-of-freedom masks and conditioned on Wyckoff patterns. ST2M represents crystal structures as sequences of independent occupied Wyckoff orbits and employs a twin-branch Transformer to jointly denoise discrete and continuous variables. In our experiments, ST2M achieves a structural validity of 96.37\\%. For known patterns in dataset, 23.86\\% of generated structures simultaneously satisfy stability, uniqueness, and novelty criteria, representing a relative improvement of 68.15\\% over the best-performing baseline. First-principles calculations identify a total of 21 previously unreported stable structures among selected candidates with low predicted energies. These results demonstrate that ST2M can generate chemically viable crystal candidates under prescribed crystallographic constraints and generalize to unknown Wyckoff patterns, providing a practical route to accelerated materials discovery.
+
+---
+
+### 3. Data-driven candidate structure ensemble generation beyond the convex hull with crystALL approach
+
+**Authors:** Adam M. Krajewski, Ricardo Amaral, Jonathan W. Siegel, Luke A. Myers, Rushi Gong, Shun-Li Shang, Zi-Kui Liu
+
+**Published:** 2026-11-02
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2611.02584v1
+
+**Link:** [https://arxiv.org/abs/2611.02584v1](https://arxiv.org/abs/2611.02584v1)
+
+**Summary:** Real materials consist of multiple stable or metastable states under real-world conditions, existing as statistical ergodic ensembles of configurations rather than ideal crystals. Yet, data-driven computational materials discovery increasingly biases itself toward finding "new stable structures" from ground-state DFT calculations alone. This limits our long-term ability to discover materials whose properties emerge from metastable phases, to explain experimental observations, or to model thermodynamic behavior comprehensively. Predicting ergodic sets of atomic configurations of known and hypothetical solids is a fundamental challenge in theoretical crystallography, approached via many complementary methods. We discuss this conceptually and introduce crystALL, a pragmatic and powerful data-driven approach to discovering ensembles beyond the convex hull, embracing structural diversity over stability alone, enabling robust experiment matching in cases evading traditional methods. crystALL leverages 5 million relaxed structures from OPTIMADE and MPDD to rapidly generate a comprehensive candidate set by: (1) species substitutions; (2) ML feature-space analysis with pySIPFENN; (3) representative structure selection via clustering and energy-minimization or property matching; and (4) construction of the final candidate ensemble for experimental or ab initio validation. We also uniquely address the common challenge of experimental composition uncertainties spanning many integer stoichiometries by new efficient searches across anonymized compositional ranges rather than fixed formulas. Overall, crystALL's ensemble-focused philosophy provides critical advantages over the prevailing convex-hull-searching paradigm, which often fails to account for key experimental observations and increases AI/ML discovery bias over time - akin to model collapse in LLMs retrained on iteratively generated content.
 
 ---
 
