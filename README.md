@@ -131,55 +131,39 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (3)
+## New Papers (2)
 
-*Last checked: 2026-11-04 09:53:24 (SGT)*
+*Last checked: 2026-11-05 09:58:58 (SGT)*
 
-### 1. MSP-LLM: A Structured Large Language Model Framework for Inorganic Material Synthesis Planning
+### 1. AMGenC: Generating Charge Balanced Amorphous Materials
 
-**Authors:** Heewoong Noh, Gyoung S. Na, Namkyeong Lee, Chanyoung Park
+**Authors:** Yan Lin, Jilin Hu, N. M. Anoop Krishnan, Morten M. Smedskjaer
 
-**Published:** 2026-02-07
+**Published:** 2026-04-30
 
-**Category:** cs.AI
+**Category:** cs.LG
 
-**ID:** 2602.07543v4
+**ID:** 2604.27613v2
 
-**Link:** [https://arxiv.org/abs/2602.07543v4](https://arxiv.org/abs/2602.07543v4)
+**Link:** [https://arxiv.org/abs/2604.27613v2](https://arxiv.org/abs/2604.27613v2)
 
-**Summary:** Material synthesis planning (MSP) remains a fundamental and underexplored bottleneck in AI-driven materials discovery, as it requires not only identifying suitable precursor materials but also designing coherent sequences of synthesis operations to realize a target material. Although several AI-based approaches have been proposed to address isolated subtasks of MSP, a methodology for solving the entire MSP task has yet to be established. We propose MSP-LLM, a structured LLM-based framework that formulates MSP as a two-stage process composed of two constituent subproblems: precursor prediction (PP) and synthesis operation prediction (SOP). Our approach introduces a discrete material class as an intermediate decision variable that organizes both tasks into a chemically consistent decision chain. For SOP, we further incorporate hierarchical precursor types as synthesis-relevant inductive biases and employ precursor constraint factorization that preserves precursor-related information in the autoregressive decoding state. Extensive experiments show that MSP-LLM consistently outperforms existing methods on both PP and SOP, as well as on the MSP task, demonstrating an effective and scalable framework with practical potential for autonomous MSP.
-
----
-
-### 2. Site-orbit masked twin-branch Transformer for symmetry-constrained crystal generation
-
-**Authors:** Junchi Liu, Haoran Si, Luo Yan, Sergei Tretiak, Liujiang Zhou
-
-**Published:** 2026-11-02
-
-**Category:** physics.comp-ph
-
-**ID:** 2611.02906v1
-
-**Link:** [https://arxiv.org/abs/2611.02906v1](https://arxiv.org/abs/2611.02906v1)
-
-**Summary:** Generative models for crystal structure prediction (CSP) have expanded the search space for novel materials and improved screening efficiency. However, simultaneously generating stable and novel structures remains challenging because of the complex structural and physical constraints governing crystals. To address this challenge, we propose site-orbit masked twin-branch Transformer model (ST2M), a symmetry-guided discrete--continuous diffusion framework incorporating degree-of-freedom masks and conditioned on Wyckoff patterns. ST2M represents crystal structures as sequences of independent occupied Wyckoff orbits and employs a twin-branch Transformer to jointly denoise discrete and continuous variables. In our experiments, ST2M achieves a structural validity of 96.37\\%. For known patterns in dataset, 23.86\\% of generated structures simultaneously satisfy stability, uniqueness, and novelty criteria, representing a relative improvement of 68.15\\% over the best-performing baseline. First-principles calculations identify a total of 21 previously unreported stable structures among selected candidates with low predicted energies. These results demonstrate that ST2M can generate chemically viable crystal candidates under prescribed crystallographic constraints and generalize to unknown Wyckoff patterns, providing a practical route to accelerated materials discovery.
+**Summary:** Amorphous (disordered) materials require simulation cells with at least hundreds to thousands of atoms to accurately capture their diverse local atomic environments, compared to crystalline materials that can be described by unit cells containing a few to hundreds of atoms. To advance the design of amorphous materials with desired properties and facilitate the exploration of their vast design space, generative inverse design has emerged as a promising approach. It aims to directly output materials with properties closely aligned with the desired ones using probabilistic generative models conditioned on desired properties, which can be more resource efficient than the traditional trial-and-error approach. However, due to the inherent stochasticity of probabilistic generative models, when element assignments are unconstrained, a large portion of generated materials may be charge unbalanced, and existing methods either fix the composition in advance or discard charge unbalanced samples after generation. In this work, we propose AMGenC, a new generative inverse design method for amorphous materials that can guarantee the generation of formally charge balanced samples, with minimal additional computational overhead and without sacrificing inverse design accuracy. AMGenC achieves this through an element noise that gives the generation process a starting point centered around charge balance, and the combination of a per-step soft projection and a final discrete projection for steering the elements toward exact charge balance throughout the generation. We perform extensive experiments on two amorphous materials datasets. Experimental results provide evidence that AMGenC achieves its design goal.
 
 ---
 
-### 3. Data-driven candidate structure ensemble generation beyond the convex hull with crystALL approach
+### 2. Physics-Informed and Knowledge-Driven Generative AI for Autonomous Discovery of Porous Oxide Energy Materials: Opportunities and Challenges
 
-**Authors:** Adam M. Krajewski, Ricardo Amaral, Jonathan W. Siegel, Luke A. Myers, Rushi Gong, Shun-Li Shang, Zi-Kui Liu
+**Authors:** Dibakar Datta
 
-**Published:** 2026-11-02
+**Published:** 2026-08-03
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2611.02584v1
+**ID:** 2608.02858v2
 
-**Link:** [https://arxiv.org/abs/2611.02584v1](https://arxiv.org/abs/2611.02584v1)
+**Link:** [https://arxiv.org/abs/2608.02858v2](https://arxiv.org/abs/2608.02858v2)
 
-**Summary:** Real materials consist of multiple stable or metastable states under real-world conditions, existing as statistical ergodic ensembles of configurations rather than ideal crystals. Yet, data-driven computational materials discovery increasingly biases itself toward finding "new stable structures" from ground-state DFT calculations alone. This limits our long-term ability to discover materials whose properties emerge from metastable phases, to explain experimental observations, or to model thermodynamic behavior comprehensively. Predicting ergodic sets of atomic configurations of known and hypothetical solids is a fundamental challenge in theoretical crystallography, approached via many complementary methods. We discuss this conceptually and introduce crystALL, a pragmatic and powerful data-driven approach to discovering ensembles beyond the convex hull, embracing structural diversity over stability alone, enabling robust experiment matching in cases evading traditional methods. crystALL leverages 5 million relaxed structures from OPTIMADE and MPDD to rapidly generate a comprehensive candidate set by: (1) species substitutions; (2) ML feature-space analysis with pySIPFENN; (3) representative structure selection via clustering and energy-minimization or property matching; and (4) construction of the final candidate ensemble for experimental or ab initio validation. We also uniquely address the common challenge of experimental composition uncertainties spanning many integer stoichiometries by new efficient searches across anonymized compositional ranges rather than fixed formulas. Overall, crystALL's ensemble-focused philosophy provides critical advantages over the prevailing convex-hull-searching paradigm, which often fails to account for key experimental observations and increases AI/ML discovery bias over time - akin to model collapse in LLMs retrained on iteratively generated content.
+**Summary:** The discovery of next-generation energy-storage materials is increasingly limited by the complexity of the underlying design problem rather than by computational capability alone. Porous transition-metal oxides represent a particularly challenging class of battery materials because their performance emerges from coupled interactions among crystal chemistry, pore architecture, ion transport, electrochemistry, electro-chemo-mechanics, synthesis, manufacturing, and battery-system operation. Recent advances in generative artificial intelligence (AI) have demonstrated remarkable capabilities for generating chemically plausible crystal structures. However, current approaches remain largely focused on crystallographic validity and thermodynamic stability. This perspective presents a roadmap for advancing generative AI beyond crystal generation toward physics-informed, application-aware, and synthesis-aware inverse design. Using porous oxide electrodes as a representative materials platform, we propose a seven-tier physics-informed inverse-design framework integrating chemistry, thermodynamics, transport, electrochemistry, durability, cell compatibility, and manufacturability. We further identify the "Missing Data Problem" as a fundamental bottleneck limiting application-aware AI and introduce an autonomous knowledge-generation framework supported by a Porous Oxide Energy Materials Ontology and a continuously evolving "Knowledge Base". Together, these concepts establish the foundation for Synthesis-Aware, Closed-Loop Autonomous Discovery, providing a general framework for AI-enabled autonomous materials discovery across energy-storage materials and other functional materials.
 
 ---
 

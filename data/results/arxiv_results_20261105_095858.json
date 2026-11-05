@@ -1,0 +1,51 @@
+[
+  {
+    "authors": [
+      "Yan Lin",
+      "Jilin Hu",
+      "N. M. Anoop Krishnan",
+      "Morten M. Smedskjaer"
+    ],
+    "base_id": "2604.27613",
+    "categories": [
+      "cs.LG"
+    ],
+    "comment": "Accepted to NeurIPS 2026",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2604.27613v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2604.27613v2",
+    "primary_category": "cs.LG",
+    "published": "2026-04-30T09:04:02+00:00",
+    "short_id": "2604.27613v2",
+    "status": "update",
+    "summary": "Amorphous (disordered) materials require simulation cells with at least hundreds to thousands of atoms to accurately capture their diverse local atomic environments, compared to crystalline materials that can be described by unit cells containing a few to hundreds of atoms. To advance the design of amorphous materials with desired properties and facilitate the exploration of their vast design space, generative inverse design has emerged as a promising approach. It aims to directly output materials with properties closely aligned with the desired ones using probabilistic generative models conditioned on desired properties, which can be more resource efficient than the traditional trial-and-error approach. However, due to the inherent stochasticity of probabilistic generative models, when element assignments are unconstrained, a large portion of generated materials may be charge unbalanced, and existing methods either fix the composition in advance or discard charge unbalanced samples after generation. In this work, we propose AMGenC, a new generative inverse design method for amorphous materials that can guarantee the generation of formally charge balanced samples, with minimal additional computational overhead and without sacrificing inverse design accuracy. AMGenC achieves this through an element noise that gives the generation process a starting point centered around charge balance, and the combination of a per-step soft projection and a final discrete projection for steering the elements toward exact charge balance throughout the generation. We perform extensive experiments on two amorphous materials datasets. Experimental results provide evidence that AMGenC achieves its design goal.",
+    "title": "AMGenC: Generating Charge Balanced Amorphous Materials",
+    "updated": "2026-11-03T15:04:47+00:00",
+    "url": "https://arxiv.org/abs/2604.27613v2",
+    "version": 2
+  },
+  {
+    "authors": [
+      "Dibakar Datta"
+    ],
+    "base_id": "2608.02858",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": "28 pages, 11 figures",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2608.02858v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2608.02858v2",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-08-03T20:27:19+00:00",
+    "short_id": "2608.02858v2",
+    "status": "update",
+    "summary": "The discovery of next-generation energy-storage materials is increasingly limited by the complexity of the underlying design problem rather than by computational capability alone. Porous transition-metal oxides represent a particularly challenging class of battery materials because their performance emerges from coupled interactions among crystal chemistry, pore architecture, ion transport, electrochemistry, electro-chemo-mechanics, synthesis, manufacturing, and battery-system operation. Recent advances in generative artificial intelligence (AI) have demonstrated remarkable capabilities for generating chemically plausible crystal structures. However, current approaches remain largely focused on crystallographic validity and thermodynamic stability. This perspective presents a roadmap for advancing generative AI beyond crystal generation toward physics-informed, application-aware, and synthesis-aware inverse design. Using porous oxide electrodes as a representative materials platform, we propose a seven-tier physics-informed inverse-design framework integrating chemistry, thermodynamics, transport, electrochemistry, durability, cell compatibility, and manufacturability. We further identify the \"Missing Data Problem\" as a fundamental bottleneck limiting application-aware AI and introduce an autonomous knowledge-generation framework supported by a Porous Oxide Energy Materials Ontology and a continuously evolving \"Knowledge Base\". Together, these concepts establish the foundation for Synthesis-Aware, Closed-Loop Autonomous Discovery, providing a general framework for AI-enabled autonomous materials discovery across energy-storage materials and other functional materials.",
+    "title": "Physics-Informed and Knowledge-Driven Generative AI for Autonomous Discovery of Porous Oxide Energy Materials: Opportunities and Challenges",
+    "updated": "2026-11-02T23:36:23+00:00",
+    "url": "https://arxiv.org/abs/2608.02858v2",
+    "version": 2
+  }
+]

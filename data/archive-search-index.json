@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T09:53:24.498011+08:00",
+  "generated_at": "2026-11-05T09:58:58.318551+08:00",
   "papers": [
     {
       "anchor": "paper-2611.02906",
@@ -1293,7 +1293,7 @@
       "categories": [
         "cond-mat.mtrl-sci"
       ],
-      "id": "2608.02858v1",
+      "id": "2608.02858v2",
       "page": 2,
       "primary_category": "cond-mat.mtrl-sci",
       "published": "2026-08-03T20:27:19+00:00",
@@ -3781,11 +3781,11 @@
       "categories": [
         "cs.LG"
       ],
-      "id": "2604.27613v1",
+      "id": "2604.27613v2",
       "page": 5,
       "primary_category": "cs.LG",
       "published": "2026-04-30T09:04:02+00:00",
-      "summary": "Amorphous (disordered) materials are solids that have shown great potential in various domains, including energy storage, thermal management, and advanced materials. Unlike crystalline materials that can be described by unit cells containing a few to hundreds of atoms, amorphous materials require larger simulation cells with at least hundreds to thousands of atoms. To advance the design of amorphous materials with desired properties and facilitate the exploration of their vast design space, generative inverse design has emerged as a promising approach. It aims to directly output materials with properties closely aligned with the desired ones using probabilistic generative models conditioned on desired properties, which can be more resource efficient than the traditional trial-and-error approach. However, due to the inherent stochasticity of probabilistic generative models, when element assignments are unconstrained, a large portion of generated materials may be charge unbalanced, and no existing methods can effectively mitigate this limitation. In this work, we propose AMGenC, a new generative inverse design method for amorphous materials that can guarantee the generation of charge balanced samples, with minimal additional computational overhead and without sacrificing inverse design accuracy. AMGenC achieves this through an element noise that gives the generation process a starting point centered around charge balance, and the combination of a per-step soft projection and a final discrete projection for steering the elements toward exact charge balance throughout the generation. We perform extensive experiments on two amorphous materials datasets. Experimental results provide evidence that AMGenC achieves its design goal.",
+      "summary": "Amorphous (disordered) materials require simulation cells with at least hundreds to thousands of atoms to accurately capture their diverse local atomic environments, compared to crystalline materials that can be described by unit cells containing a few to hundreds of atoms. To advance the design of amorphous materials with desired properties and facilitate the exploration of their vast design space, generative inverse design has emerged as a promising approach. It aims to directly output materials with properties closely aligned with the desired ones using probabilistic generative models conditioned on desired properties, which can be more resource efficient than the traditional trial-and-error approach. However, due to the inherent stochasticity of probabilistic generative models, when element assignments are unconstrained, a large portion of generated materials may be charge unbalanced, and existing methods either fix the composition in advance or discard charge unbalanced samples after generation. In this work, we propose AMGenC, a new generative inverse design method for amorphous materials that can guarantee the generation of formally charge balanced samples, with minimal additional computational overhead and without sacrificing inverse design accuracy. AMGenC achieves this through an element noise that gives the generation process a starting point centered around charge balance, and the combination of a per-step soft projection and a final discrete projection for steering the elements toward exact charge balance throughout the generation. We perform extensive experiments on two amorphous materials datasets. Experimental results provide evidence that AMGenC achieves its design goal.",
       "title": "AMGenC: Generating Charge Balanced Amorphous Materials"
     },
     {
