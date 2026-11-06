@@ -131,9 +131,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (2)
+## Latest Papers (2)
 
-*Last checked: 2026-11-05 09:58:58 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-11-06 09:58:57 (SGT)*
 
 ### 1. AMGenC: Generating Charge Balanced Amorphous Materials
 
