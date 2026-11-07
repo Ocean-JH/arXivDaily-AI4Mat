@@ -1,0 +1,29 @@
+[
+  {
+    "authors": [
+      "Ivan Žugec",
+      "Joshua Rosenthal",
+      "Ivor Lončarić",
+      "Jan-Willem van de Meent",
+      "Tin Hadži Veljković"
+    ],
+    "base_id": "2610.30086",
+    "categories": [
+      "cs.LG"
+    ],
+    "comment": "39 pages, 9 figures, 13 tables",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2610.30086v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2610.30086v2",
+    "primary_category": "cs.LG",
+    "published": "2026-10-21T17:33:59+00:00",
+    "short_id": "2610.30086v2",
+    "status": "update",
+    "summary": "Generative models propose crystalline materials by learning composition and geometry, but unconditional sampling gives no direct control over the space group, which constrains whether responses such as piezoelectricity are symmetry-allowed. We present Orbitol, a crystal generator built on the Crystalite diffusion Transformer that replaces atom tokens with Wyckoff-orbit tokens. Given a space group and a collection of occupied Wyckoff positions, Orbitol generates the atom type and free coordinates of each orbit together with a compatible lattice, so every valid structure is invariant under the operations of the requested group. It generates structures two to three orders of magnitude faster than the symmetry-aware baselines at the evaluated settings. On MP-20, 13.8% of Orbitol's attempts yielded stable or metastable, unique and novel structures that retained the requested space group after relaxation, compared with 10.8% for SGFM, the next best model. We also introduce SPARC, a score that combines retention of the raw detected space group with agreement between the retained-group and training distributions. Finally, we used Orbitol to generate candidates in piezoelectric crystal classes. Of the structures selected by internal screening, 89% passed our density functional theory checks, and 79% also matched no Materials Project or Alexandria entry with the same space group. Their median figure of merit was nine times that of the piezoelectric materials computed in the Materials Project, and 24% of the new candidates ranked in that set's top 10%.",
+    "title": "Orbitol: Crystal Generation on Wyckoff Orbits",
+    "updated": "2026-11-05T17:03:59+00:00",
+    "url": "https://arxiv.org/abs/2610.30086v2",
+    "version": 2
+  }
+]

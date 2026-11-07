@@ -5,7 +5,7 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 09:58:58 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 09:35:47 +0800</lastBuildDate>
     <item>
       <title>Site-orbit masked twin-branch Transformer for symmetry-constrained crystal generation</title>
       <link>https://arxiv.org/abs/2611.02906v1</link>
@@ -92,8 +92,8 @@
     </item>
     <item>
       <title>Orbitol: Crystal Generation on Wyckoff Orbits</title>
-      <link>https://arxiv.org/abs/2610.30086v1</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.30086v1</guid>
+      <link>https://arxiv.org/abs/2610.30086v2</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.30086v2</guid>
       <pubDate>Wed, 21 Oct 2026 17:33:59 +0000</pubDate>
       <description>Generative models propose crystalline materials by learning composition and geometry, but unconditional sampling gives no direct control over the space group, which constrains whether responses such as piezoelectricity are symmetry-allowed. We present Orbitol, a crystal generator built on the Crystalite diffusion Transformer that replaces atom tokens with Wyckoff-orbit tokens. Given a space group and a collection of occupied Wyckoff positions, Orbitol generates the atom type and free coordinates of each orbit together with a compatible lattice, so every valid structure is invariant under the operations of the requested group. It generates structures two to three orders of magnitude faster than the symmetry-aware baselines at the evaluated settings. On MP-20, 13.8% of Orbitol's attempts yielded stable or metastable, unique and novel structures that retained the requested space group after relaxation, compared with 10.8% for SGFM, the next best model. We also introduce SPARC, a score that combines retention of the raw detected space group with agreement between the retained-group and training distributions. Finally, we used Orbitol to generate candidates in piezoelectric crystal classes. Of the structures selected by internal screening, 89% passed our density functional theory checks, and 79% also matched no Materials Project or Alexandria entry with the same space group. Their median figure of merit was nine times that of the piezoelectric materials computed in the Materials Project, and 24% of the new candidates ranked in that set's top 10%.</description>
     </item>
