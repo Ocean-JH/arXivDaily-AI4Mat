@@ -131,9 +131,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## Latest Papers (1)
 
-*Last checked: 2026-11-07 09:35:47 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-11-08 09:04:47 (SGT)*
 
 ### 1. Orbitol: Crystal Generation on Wyckoff Orbits
 
