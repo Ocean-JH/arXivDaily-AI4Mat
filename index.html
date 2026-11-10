@@ -98,7 +98,7 @@
     </header>
 
     <main id="main-content" class="content-shell" tabindex="-1">
-        <div class="status-notice" role="status" aria-live="polite"><p>No new papers in the latest check. Showing the most recent additions.</p></div>
+        <div class="status-notice" role="status" aria-live="polite"><p><strong>2 new papers</strong> found in the latest check.</p></div>
 
         <section class="research-tools" aria-labelledby="search-label">
             <form id="paper-search" class="search-form" role="search" method="get">
@@ -136,25 +136,25 @@
         </section>
 
         <div id="papers-content">
-            <div class="section-heading"><h2 id="latest-papers">Latest papers (1)</h2>
-<p>Checked 2026-11-09 09:25 SGT</p></div>
+            <div class="section-heading"><h2 id="latest-papers">Latest papers (2)</h2>
+<p>Checked 2026-11-10 11:57 SGT</p></div>
 <article class="paper"
-         id="paper-2610.30086"
-         data-paper-id="2610.30086"
-         aria-labelledby="title-paper-2610.30086"
+         id="paper-2611.10380"
+         data-paper-id="2611.10380"
+         aria-labelledby="title-paper-2611.10380"
          tabindex="-1">
     <div class="paper-index" aria-hidden="true">1</div>
     <div class="paper-body">
-        <h3 id="title-paper-2610.30086" class="paper-title"><a href="https://arxiv.org/abs/2610.30086v2" target="_blank" rel="noopener noreferrer">Orbitol: Crystal Generation on Wyckoff Orbits</a><span class="paper-badge updated">Updated</span></h3>
+        <h3 id="title-paper-2611.10380" class="paper-title"><a href="https://arxiv.org/abs/2611.10380v1" target="_blank" rel="noopener noreferrer">Quantitative Assessment of Crystal Structure Prediction</a><span class="paper-badge">New</span></h3>
 
         <dl class="paper-info">
             <div class="paper-authors">
                 <dt>Authors</dt>
-                <dd>Ivan Žugec, Joshua Rosenthal, Ivor Lončarić, Jan-Willem van de Meent, Tin Hadži Veljković</dd>
+                <dd>Sergio Rincón, Gabriel González, Nicolás Andrade, Rafael Velásquez, Sebastián Ojeda, Juanita Puentes, Nicolás Aparicio, Paula Cárdenas, Pablo Arbeláez</dd>
             </div>
             <div class="paper-date">
                 <dt>Published</dt>
-                <dd><time datetime="2026-10-21">2026-10-21</time></dd>
+                <dd><time datetime="2026-11-07">2026-11-07</time></dd>
             </div>
             <div class="paper-category">
                 <dt>Category</dt>
@@ -162,17 +162,56 @@
             </div>
             <div class="paper-id">
                 <dt>arXiv ID</dt>
-                <dd>2610.30086v2</dd>
+                <dd>2611.10380v1</dd>
             </div>
         </dl>
 
         <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2610.30086v2" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+            <a href="https://arxiv.org/abs/2611.10380v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
         </div>
 
         <details class="paper-summary">
             <summary>Read abstract</summary>
-            <p>Generative models propose crystalline materials by learning composition and geometry, but unconditional sampling gives no direct control over the space group, which constrains whether responses such as piezoelectricity are symmetry-allowed. We present Orbitol, a crystal generator built on the Crystalite diffusion Transformer that replaces atom tokens with Wyckoff-orbit tokens. Given a space group and a collection of occupied Wyckoff positions, Orbitol generates the atom type and free coordinates of each orbit together with a compatible lattice, so every valid structure is invariant under the operations of the requested group. It generates structures two to three orders of magnitude faster than the symmetry-aware baselines at the evaluated settings. On MP-20, 13.8% of Orbitol&#x27;s attempts yielded stable or metastable, unique and novel structures that retained the requested space group after relaxation, compared with 10.8% for SGFM, the next best model. We also introduce SPARC, a score that combines retention of the raw detected space group with agreement between the retained-group and training distributions. Finally, we used Orbitol to generate candidates in piezoelectric crystal classes. Of the structures selected by internal screening, 89% passed our density functional theory checks, and 79% also matched no Materials Project or Alexandria entry with the same space group. Their median figure of merit was nine times that of the piezoelectric materials computed in the Materials Project, and 24% of the new candidates ranked in that set&#x27;s top 10%.</p>
+            <p>Crystal Structure Prediction (CSP) aims to predict a material&#x27;s 3D structure from its chemical composition, with applications from energy storage to biomedical devices. Despite its importance, existing evaluation frameworks suffer from key limitations: they rely on threshold-sensitive or incomparable metrics, focus predominantly on geometric performance while overlooking physical plausibility, and fail to account for polymorphism, where a chemical composition can crystallize into multiple stable structures. In parallel, recent Symmetry-Informed CSP (SICSP) methods often report results alongside standard CSP baselines while receiving crystallographic templates at inference, which constrain the search space and make SICSP a fundamentally different task. To address these limitations, we introduce an Orientation-invariant, Polymorph-Aware, Large Benchmark (OPAL-Bench) that evaluates CSP and SICSP as separate tasks. We evaluate 7 CSP and 2 SICSP methods under OPAL-Bench across 4 datasets using threshold-free geometric and physical distance metrics. Our results show that no method dominates across all metrics, and that geometric performance is not strongly correlated with physical plausibility. We also release OPAL-CSP, an SE(3)-equivariant flow-matching baseline for the CSP track that performs competitively on geometric metrics and ranks among the best on physical ones. By unifying geometric and physical metrics under a polymorph-aware protocol, OPAL-Bench enables a more comprehensive assessment of generative quality in CSP.</p>
+        </details>
+    </div>
+</article>
+
+<article class="paper"
+         id="paper-2611.09572"
+         data-paper-id="2611.09572"
+         aria-labelledby="title-paper-2611.09572"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">2</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2611.09572" class="paper-title"><a href="https://arxiv.org/abs/2611.09572v1" target="_blank" rel="noopener noreferrer">Inverse design of superconductors and semiconductors with differentiable foundation models</a><span class="paper-badge">New</span></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Cristóbal Méndez, Justin Tahmassebpur, Tomás A. Arias</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2026-11-06">2026-11-06</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cond-mat.mtrl-sci</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2611.09572v1</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2611.09572v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Designing a crystal for a target property requires choosing its elements, stoichiometry, and atomic structure together, yet gradients exist only for the continuous structural variables. We introduce differentiable Equiformer fast effective-atom theory (DEFEAT), which lets a pretrained EquiformerV3 foundation model accept continuous species weights and site occupancies without retraining on fractional data, thereby enabling gradient-based materials optimization. Gradients from fine-tuned property models and a machine-learned energy penalty then guide updates to composition, atom count, atomic positions, and lattice vectors in a single optimization. In a search for phonon-mediated superconductors, density-functional perturbation theory on 45 structurally novel designs gives isotropic Allen-Dynes critical temperatures above 10 K for 39; the highest is 24.0 K for ZrTiNb2CN3, and H4LiPd3 (23.2 K) lies on the static DFT hull. In searches for photovoltaic absorbers, SCAN calculations confirm ten novel crystal structures with band gaps within 20% of a 1.34 eV target on their respective raw or empirically corrected scales, all within 70 meV/atom of the DFT hull, and show that the systematic gap error of the training functional propagates into the designs unless the objective corrects for it. Quasiharmonic free energies from machine-learned potentials further show that finite-temperature competition with solid phases can reorder candidates relative to the static hull.</p>
         </details>
     </div>
 </article>
@@ -181,7 +220,7 @@
     </main>
 
     <footer class="site-footer">
-        <p>Last updated <time datetime="2026-11-09T09:25:04.182448+08:00">2026-11-09 09:25:04 SGT</time></p>
+        <p>Last updated <time datetime="2026-11-10T11:57:10.669908+08:00">2026-11-10 11:57:10 SGT</time></p>
         <p>© 2026 <a href="https://ocean-jh.github.io/"
                               target="_blank"
                               rel="noopener noreferrer">Wang Jianghai</a>

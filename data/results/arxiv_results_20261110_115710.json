@@ -1,0 +1,61 @@
+[
+  {
+    "authors": [
+      "Sergio Rincón",
+      "Gabriel González",
+      "Nicolás Andrade",
+      "Rafael Velásquez",
+      "Sebastián Ojeda",
+      "Juanita Puentes",
+      "Nicolás Aparicio",
+      "Paula Cárdenas",
+      "Pablo Arbeláez"
+    ],
+    "base_id": "2611.10380",
+    "categories": [
+      "cs.LG",
+      "cond-mat.mtrl-sci",
+      "cs.AI"
+    ],
+    "comment": "Accepted at NeurIPS 2026, Track on Evaluations and Datasets. 49 pages, 21 figures, 17 tables. Code: https://github.com/BCV-Uniandes/OPAL",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.10380v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.10380v1",
+    "primary_category": "cs.LG",
+    "published": "2026-11-07T01:34:05+00:00",
+    "short_id": "2611.10380v1",
+    "status": "new",
+    "summary": "Crystal Structure Prediction (CSP) aims to predict a material's 3D structure from its chemical composition, with applications from energy storage to biomedical devices. Despite its importance, existing evaluation frameworks suffer from key limitations: they rely on threshold-sensitive or incomparable metrics, focus predominantly on geometric performance while overlooking physical plausibility, and fail to account for polymorphism, where a chemical composition can crystallize into multiple stable structures. In parallel, recent Symmetry-Informed CSP (SICSP) methods often report results alongside standard CSP baselines while receiving crystallographic templates at inference, which constrain the search space and make SICSP a fundamentally different task. To address these limitations, we introduce an Orientation-invariant, Polymorph-Aware, Large Benchmark (OPAL-Bench) that evaluates CSP and SICSP as separate tasks. We evaluate 7 CSP and 2 SICSP methods under OPAL-Bench across 4 datasets using threshold-free geometric and physical distance metrics. Our results show that no method dominates across all metrics, and that geometric performance is not strongly correlated with physical plausibility. We also release OPAL-CSP, an SE(3)-equivariant flow-matching baseline for the CSP track that performs competitively on geometric metrics and ranks among the best on physical ones. By unifying geometric and physical metrics under a polymorph-aware protocol, OPAL-Bench enables a more comprehensive assessment of generative quality in CSP.",
+    "title": "Quantitative Assessment of Crystal Structure Prediction",
+    "updated": "2026-11-07T01:34:05+00:00",
+    "url": "https://arxiv.org/abs/2611.10380v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Cristóbal Méndez",
+      "Justin Tahmassebpur",
+      "Tomás A. Arias"
+    ],
+    "base_id": "2611.09572",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cond-mat.supr-con"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.09572v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.09572v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-11-06T15:12:07+00:00",
+    "short_id": "2611.09572v1",
+    "status": "new",
+    "summary": "Designing a crystal for a target property requires choosing its elements, stoichiometry, and atomic structure together, yet gradients exist only for the continuous structural variables. We introduce differentiable Equiformer fast effective-atom theory (DEFEAT), which lets a pretrained EquiformerV3 foundation model accept continuous species weights and site occupancies without retraining on fractional data, thereby enabling gradient-based materials optimization. Gradients from fine-tuned property models and a machine-learned energy penalty then guide updates to composition, atom count, atomic positions, and lattice vectors in a single optimization. In a search for phonon-mediated superconductors, density-functional perturbation theory on 45 structurally novel designs gives isotropic Allen-Dynes critical temperatures above 10 K for 39; the highest is 24.0 K for ZrTiNb2CN3, and H4LiPd3 (23.2 K) lies on the static DFT hull. In searches for photovoltaic absorbers, SCAN calculations confirm ten novel crystal structures with band gaps within 20% of a 1.34 eV target on their respective raw or empirically corrected scales, all within 70 meV/atom of the DFT hull, and show that the systematic gap error of the training functional propagates into the designs unless the objective corrects for it. Quasiharmonic free energies from machine-learned potentials further show that finite-temperature competition with solid phases can reorder candidates relative to the static hull.",
+    "title": "Inverse design of superconductors and semiconductors with differentiable foundation models",
+    "updated": "2026-11-06T15:12:07+00:00",
+    "url": "https://arxiv.org/abs/2611.09572v1",
+    "version": 1
+  }
+]
