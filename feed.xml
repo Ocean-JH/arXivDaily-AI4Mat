@@ -5,7 +5,7 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 11:57:10 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 09:41:59 +0800</lastBuildDate>
     <item>
       <title>Quantitative Assessment of Crystal Structure Prediction</title>
       <link>https://arxiv.org/abs/2611.10380v1</link>
@@ -184,8 +184,8 @@
     </item>
     <item>
       <title>ManifoldCache: Training-Free Diffusion Acceleration via Constraint Manifold Caching</title>
-      <link>https://arxiv.org/abs/2610.04510v2</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.04510v2</guid>
+      <link>https://arxiv.org/abs/2610.04510v3</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04510v3</guid>
       <pubDate>Sat, 03 Oct 2026 13:18:15 +0000</pubDate>
       <description>Diffusion models for structured scientific generation must produce samples satisfying hard geometric constraints imposed by physics, chemistry, or biology, yet inference in these settings is prohibitively slow, demanding hundreds to thousands of neural-function evaluations per sample. We unify eight state-of-the-art models spanning medical volumetrics, molecular conformations, protein backbone design, crystal structure prediction, and multi-view 3D scenes under a single abstraction, Constraint-Manifold Diffusion Models (CMDMs), in which the target distribution is supported on a manifold defined by an externally specified constraint map. All existing acceleration families fail on this class: quantization exhausts memory on high-dimensional volumetric operators; pruning breaks constraint fidelity; fast ODE solvers allow trajectories to drift off the constraint manifold; and feature-caching heuristics are blind to constraint geometry, inducing mode confusion in the high-noise regime. We introduce ManifoldCache, the first training-free, data-free accelerator designed from first principles for CMDMs. The key insight is that the conditional score decomposes orthogonally into a normal component, which enforces constraint satisfaction, and a tangential component, which navigates within the manifold. Exploiting this structure, we prove that the noise-schedule midpoint is a sharp safe-caching boundary: caching before it incurs provably bounded error, while caching after it guarantees a strictly positive fraction of trajectories suffer mode confusion, a gap that persists up to the boundary. We further prove that deeper network blocks admit provably larger certified cache strides within the safe phase, as a consequence of the score decomposition propagating through block Jacobians. The resulting schedule requires no calibration data, along with zero training overhead.</description>
     </item>

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T11:57:10.669908+08:00",
+  "generated_at": "2026-11-11T09:41:59.351707+08:00",
   "papers": [
     {
       "anchor": "paper-2611.10380",
@@ -545,7 +545,7 @@
         "cs.AI",
         "cs.LG"
       ],
-      "id": "2610.04510v2",
+      "id": "2610.04510v3",
       "page": 1,
       "primary_category": "cs.AI",
       "published": "2026-10-03T13:18:15+00:00",
@@ -2834,11 +2834,11 @@
         "cs.LG",
         "physics.chem-ph"
       ],
-      "id": "2606.03199v1",
+      "id": "2606.03199v2",
       "page": 4,
       "primary_category": "cs.LG",
       "published": "2026-06-02T05:58:40+00:00",
-      "summary": "Organic crystal structure prediction (CSP) is a requirement for computational modelling of organic solids, but traditionally costs several CPU-years per molecule. Generative models such as OXtal dramatically reduce this cost by sampling stable organic crystal structures directly. However, OXtal forgoes explicit lattice parametrization in favour of modelling large crops of the bulk material with expensive triangle layers, which can incur a computational cost of minutes per molecule. In this paper, we reduce this to seconds with Clari, a large-scale flow matching model that generates redundancy-free unit cells and replaces triangle layers with pure pair-bias attention. Clari requires only atom types and bonds as input and does not need an RDKit-sanitizable input molecule, which expands its applicability to challenging chemistries such as fullerenes, metal complexes, and atom clusters. We further ablate key design choices such as auxiliary losses, timestep distributions, noise priors, and self-conditioning. On OXtal's test sets, we surpass OXtal's solve rate while obtaining a speedup of $15$-$30\\times$. Because Clari also models explicit hydrogens, it supports inference-time scaling via direct energy ranking, without any decoration or relaxation step. When generating 150 crystals and selecting the top-30 by energy, we further improve solve rate while maintaining a speedup of $5$-$8\\times$. We also introduce the CSD Teaching Subset as a new test split of diverse and complex molecules for future benchmarking. Our contributions enable CSP within seconds, making large-scale virtual screening of organic solids practical. Code is available at https://github.com/aspuru-guzik-group/clari.",
+      "summary": "Organic crystal structure prediction (CSP) is a requirement for computational modelling of organic solids, but traditionally costs several CPU-years per molecule. Generative models such as OXtal dramatically reduce this cost by sampling stable organic crystal structures directly. However, OXtal forgoes explicit lattice parametrization in favour of modelling large crops of the bulk material with expensive triangle layers, which can incur a computational cost of minutes per molecule. In this paper, we reduce this to seconds with Clari, a large-scale flow matching model that generates redundancy-free unit cells and replaces triangle layers with pair-bias attention. Clari requires only atom types and bonds as input and does not need an RDKit-sanitizable input molecule, which expands its applicability to challenging chemistries such as fullerenes, metal complexes, and atom clusters. We further ablate key design choices such as auxiliary losses, timestep distributions, noise priors, and self-conditioning. On OXtal's test sets, we surpass OXtal's solve rate while obtaining a speedup of 15-30$\\times$. Because Clari also models explicit hydrogens, it supports inference-time scaling via direct energy ranking, without any decoration or relaxation step. When generating 150 crystals and selecting the top-30 by energy, we further improve solve rate while maintaining a speedup of 5-8$\\times$. We also introduce the CSD Teaching Subset as a new test split of diverse and complex molecules for future benchmarking. Our contributions enable CSP within seconds, making large-scale virtual screening of organic solids practical. Code is available at https://github.com/the-matter-lab/clari.",
       "title": "Fast Organic Crystal Structure Prediction with Unit Cell Flow Matching"
     },
     {
@@ -7697,11 +7697,11 @@
       "categories": [
         "cs.LG"
       ],
-      "id": "2512.04562v2",
+      "id": "2512.04562v3",
       "page": 9,
       "primary_category": "cs.LG",
       "published": "2025-12-04T08:25:16+00:00",
-      "summary": "Generative machine learning (ML) models hold great promise for accelerating materials discovery through the inverse design of inorganic crystals, enabling an unprecedented exploration of chemical space. Yet, the lack of standardized evaluation frameworks makes it challenging to evaluate, compare, and further develop these ML models meaningfully. In this work, we introduce LeMat-GenBench, a unified benchmark for generative models of crystalline materials, supported by a set of evaluation metrics designed to better inform model development and downstream applications. We release both an open-source evaluation suite and a public leaderboard on Hugging Face, and benchmark 12 recent generative models. Results reveal that an increase in stability leads to a decrease in novelty and diversity on average, with no model excelling across all dimensions. Altogether, LeMat-GenBench establishes a reproducible and extensible foundation for fair model comparison and aims to guide the development of more reliable, discovery-oriented generative models for crystalline materials.",
+      "summary": "Generative machine learning (ML) models hold great promise for accelerating materials discovery through the inverse design of inorganic crystals, enabling an unprecedented exploration of chemical space. Yet, the lack of standardized evaluation frameworks makes it challenging to evaluate, compare, and further develop these ML models meaningfully. In this work, we introduce LeMat-GenBench, a unified benchmark for generative models of crystalline materials, supported by a set of evaluation metrics designed to better inform model development and downstream applications. We release both an open-source evaluation suite and a public leaderboard on Hugging Face, and benchmark 12 recent generative models. Results reveal that an increase in stability is accompanied by lower novelty and diversity on average, with no model excelling across all dimensions. Altogether, LeMat-GenBench establishes a reproducible and extensible foundation for fair model comparison and aims to guide the development of more reliable, discovery-oriented generative models for crystalline materials.",
       "title": "LeMat-GenBench: A Unified Evaluation Framework for Crystal Generative Models"
     },
     {
@@ -15895,11 +15895,11 @@
         "cs.LG",
         "cond-mat.mtrl-sci"
       ],
-      "id": "2509.00832v3",
+      "id": "2509.00832v4",
       "page": 19,
       "primary_category": "cs.LG",
       "published": "2025-08-31T13:03:08+00:00",
-      "summary": "Crystalline structure prediction is an essential prerequisite for designing\nmaterials with targeted properties. Yet, it is still an open challenge in\nmaterials design and drug discovery. Despite recent advances in computational\nmaterials science, accurately predicting three-dimensional non-polymeric\ncrystal structures remains elusive. In this work, we focus on the molecular\nassembly problem, where a set $\\mathcal{S}$ of identical rigid molecules is\npacked to form a crystalline structure. Such a simplified formulation provides\na useful approximation to the actual problem. However, while recent\nstate-of-the-art methods have increasingly adopted sophisticated techniques,\nthe underlying learning objective remains ill-posed. We propose a better\nformulation that introduces a loss function capturing key geometric molecular\nproperties while ensuring permutation invariance over $\\mathcal{S}$.\nRemarkably, we demonstrate that within this framework, a simple regression\nmodel already outperforms prior approaches, including flow matching techniques,\non the COD-Cluster17 benchmark, a curated non-polymeric subset of the\nCrystallography Open Database (COD).",
+      "summary": "Crystalline structure prediction is an essential prerequisite for designing materials with targeted properties. Yet, it is still an open challenge in materials design and drug discovery. Despite recent advances in computational materials science, accurately predicting three-dimensional non-polymeric crystal structures remains elusive. In this work, we focus on the molecular assembly problem, where a set~$\\mathcal{S}$ of identical rigid molecules is packed to form a crystalline structure. Such a simplified formulation provides a useful approximation to the actual problem. However, while recent state-of-the-art methods have increasingly adopted sophisticated techniques, the underlying learning objective remains ill-posed. We propose a better formulation that introduces a loss function capturing key geometric molecular properties while ensuring permutation invariance over $\\mathcal{S}$. Remarkably, we demonstrate that within this framework, a simple regression model already outperforms prior approaches, including flow matching techniques, on the COD-Cluster17 benchmark, a curated non-polymeric subset of the Crystallography Open Database (COD). Our code is available at https://github.com/inria-thoth/SinkFast.",
       "title": "Challenges in Non-Polymeric Crystal Structure Prediction: Why a Geometric, Permutation-Invariant Loss is Needed"
     },
     {

@@ -131,39 +131,71 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (2)
+## New Papers (4)
 
-*Last checked: 2026-11-10 11:57:10 (SGT)*
+*Last checked: 2026-11-11 09:41:59 (SGT)*
 
-### 1. Quantitative Assessment of Crystal Structure Prediction
+### 1. Challenges in Non-Polymeric Crystal Structure Prediction: Why a Geometric, Permutation-Invariant Loss is Needed
 
-**Authors:** Sergio Rincón, Gabriel González, Nicolás Andrade, Rafael Velásquez, Sebastián Ojeda, Juanita Puentes, Nicolás Aparicio, Paula Cárdenas, Pablo Arbeláez
+**Authors:** Emmanuel Jehanno, Romain Menegaux, Julien Mairal, Sergei Grudinin
 
-**Published:** 2026-11-07
+**Published:** 2025-08-31
 
 **Category:** cs.LG
 
-**ID:** 2611.10380v1
+**ID:** 2509.00832v4
 
-**Link:** [https://arxiv.org/abs/2611.10380v1](https://arxiv.org/abs/2611.10380v1)
+**Link:** [https://arxiv.org/abs/2509.00832v4](https://arxiv.org/abs/2509.00832v4)
 
-**Summary:** Crystal Structure Prediction (CSP) aims to predict a material's 3D structure from its chemical composition, with applications from energy storage to biomedical devices. Despite its importance, existing evaluation frameworks suffer from key limitations: they rely on threshold-sensitive or incomparable metrics, focus predominantly on geometric performance while overlooking physical plausibility, and fail to account for polymorphism, where a chemical composition can crystallize into multiple stable structures. In parallel, recent Symmetry-Informed CSP (SICSP) methods often report results alongside standard CSP baselines while receiving crystallographic templates at inference, which constrain the search space and make SICSP a fundamentally different task. To address these limitations, we introduce an Orientation-invariant, Polymorph-Aware, Large Benchmark (OPAL-Bench) that evaluates CSP and SICSP as separate tasks. We evaluate 7 CSP and 2 SICSP methods under OPAL-Bench across 4 datasets using threshold-free geometric and physical distance metrics. Our results show that no method dominates across all metrics, and that geometric performance is not strongly correlated with physical plausibility. We also release OPAL-CSP, an SE(3)-equivariant flow-matching baseline for the CSP track that performs competitively on geometric metrics and ranks among the best on physical ones. By unifying geometric and physical metrics under a polymorph-aware protocol, OPAL-Bench enables a more comprehensive assessment of generative quality in CSP.
+**Summary:** Crystalline structure prediction is an essential prerequisite for designing materials with targeted properties. Yet, it is still an open challenge in materials design and drug discovery. Despite recent advances in computational materials science, accurately predicting three-dimensional non-polymeric crystal structures remains elusive. In this work, we focus on the molecular assembly problem, where a set~$\\mathcal{S}$ of identical rigid molecules is packed to form a crystalline structure. Such a simplified formulation provides a useful approximation to the actual problem. However, while recent state-of-the-art methods have increasingly adopted sophisticated techniques, the underlying learning objective remains ill-posed. We propose a better formulation that introduces a loss function capturing key geometric molecular properties while ensuring permutation invariance over $\\mathcal{S}$. Remarkably, we demonstrate that within this framework, a simple regression model already outperforms prior approaches, including flow matching techniques, on the COD-Cluster17 benchmark, a curated non-polymeric subset of the Crystallography Open Database (COD). Our code is available at https://github.com/inria-thoth/SinkFast.
 
 ---
 
-### 2. Inverse design of superconductors and semiconductors with differentiable foundation models
+### 2. ManifoldCache: Training-Free Diffusion Acceleration via Constraint Manifold Caching
 
-**Authors:** Cristóbal Méndez, Justin Tahmassebpur, Tomás A. Arias
+**Authors:** Prashant Pandey, Devineni Sri Venkatraya Chowdary, Brejesh Lall
 
-**Published:** 2026-11-06
+**Published:** 2026-10-03
 
-**Category:** cond-mat.mtrl-sci
+**Category:** cs.AI
 
-**ID:** 2611.09572v1
+**ID:** 2610.04510v3
 
-**Link:** [https://arxiv.org/abs/2611.09572v1](https://arxiv.org/abs/2611.09572v1)
+**Link:** [https://arxiv.org/abs/2610.04510v3](https://arxiv.org/abs/2610.04510v3)
 
-**Summary:** Designing a crystal for a target property requires choosing its elements, stoichiometry, and atomic structure together, yet gradients exist only for the continuous structural variables. We introduce differentiable Equiformer fast effective-atom theory (DEFEAT), which lets a pretrained EquiformerV3 foundation model accept continuous species weights and site occupancies without retraining on fractional data, thereby enabling gradient-based materials optimization. Gradients from fine-tuned property models and a machine-learned energy penalty then guide updates to composition, atom count, atomic positions, and lattice vectors in a single optimization. In a search for phonon-mediated superconductors, density-functional perturbation theory on 45 structurally novel designs gives isotropic Allen-Dynes critical temperatures above 10 K for 39; the highest is 24.0 K for ZrTiNb2CN3, and H4LiPd3 (23.2 K) lies on the static DFT hull. In searches for photovoltaic absorbers, SCAN calculations confirm ten novel crystal structures with band gaps within 20% of a 1.34 eV target on their respective raw or empirically corrected scales, all within 70 meV/atom of the DFT hull, and show that the systematic gap error of the training functional propagates into the designs unless the objective corrects for it. Quasiharmonic free energies from machine-learned potentials further show that finite-temperature competition with solid phases can reorder candidates relative to the static hull.
+**Summary:** Diffusion models for structured scientific generation must produce samples satisfying hard geometric constraints imposed by physics, chemistry, or biology, yet inference in these settings is prohibitively slow, demanding hundreds to thousands of neural-function evaluations per sample. We unify eight state-of-the-art models spanning medical volumetrics, molecular conformations, protein backbone design, crystal structure prediction, and multi-view 3D scenes under a single abstraction, Constraint-Manifold Diffusion Models (CMDMs), in which the target distribution is supported on a manifold defined by an externally specified constraint map. All existing acceleration families fail on this class: quantization exhausts memory on high-dimensional volumetric operators; pruning breaks constraint fidelity; fast ODE solvers allow trajectories to drift off the constraint manifold; and feature-caching heuristics are blind to constraint geometry, inducing mode confusion in the high-noise regime. We introduce ManifoldCache, the first training-free, data-free accelerator designed from first principles for CMDMs. The key insight is that the conditional score decomposes orthogonally into a normal component, which enforces constraint satisfaction, and a tangential component, which navigates within the manifold. Exploiting this structure, we prove that the noise-schedule midpoint is a sharp safe-caching boundary: caching before it incurs provably bounded error, while caching after it guarantees a strictly positive fraction of trajectories suffer mode confusion, a gap that persists up to the boundary. We further prove that deeper network blocks admit provably larger certified cache strides within the safe phase, as a consequence of the score decomposition propagating through block Jacobians. The resulting schedule requires no calibration data, along with zero training overhead.
+
+---
+
+### 3. LeMat-GenBench: A Unified Evaluation Framework for Crystal Generative Models
+
+**Authors:** Siddharth Betala, Samuel P. Gleason, Ali Ramlaoui, Andy Xu, Georgia Channing, Daniel Levy, Clémentine Fourrier, Nikita Kazeev, Chaitanya K. Joshi, Sékou-Oumar Kaba, Félix Therrien, Alex Hernandez-Garcia, Rocío Mercado, N. M. Anoop Krishnan, Alexandre Duval
+
+**Published:** 2025-12-04
+
+**Category:** cs.LG
+
+**ID:** 2512.04562v3
+
+**Link:** [https://arxiv.org/abs/2512.04562v3](https://arxiv.org/abs/2512.04562v3)
+
+**Summary:** Generative machine learning (ML) models hold great promise for accelerating materials discovery through the inverse design of inorganic crystals, enabling an unprecedented exploration of chemical space. Yet, the lack of standardized evaluation frameworks makes it challenging to evaluate, compare, and further develop these ML models meaningfully. In this work, we introduce LeMat-GenBench, a unified benchmark for generative models of crystalline materials, supported by a set of evaluation metrics designed to better inform model development and downstream applications. We release both an open-source evaluation suite and a public leaderboard on Hugging Face, and benchmark 12 recent generative models. Results reveal that an increase in stability is accompanied by lower novelty and diversity on average, with no model excelling across all dimensions. Altogether, LeMat-GenBench establishes a reproducible and extensible foundation for fair model comparison and aims to guide the development of more reliable, discovery-oriented generative models for crystalline materials.
+
+---
+
+### 4. Fast Organic Crystal Structure Prediction with Unit Cell Flow Matching
+
+**Authors:** Alston Lo, Luka Mucko, Austin H. Cheng, Andy Cai, Alastair J. A. Price, Wojciech Matusik, Alán Aspuru-Guzik
+
+**Published:** 2026-06-02
+
+**Category:** cs.LG
+
+**ID:** 2606.03199v2
+
+**Link:** [https://arxiv.org/abs/2606.03199v2](https://arxiv.org/abs/2606.03199v2)
+
+**Summary:** Organic crystal structure prediction (CSP) is a requirement for computational modelling of organic solids, but traditionally costs several CPU-years per molecule. Generative models such as OXtal dramatically reduce this cost by sampling stable organic crystal structures directly. However, OXtal forgoes explicit lattice parametrization in favour of modelling large crops of the bulk material with expensive triangle layers, which can incur a computational cost of minutes per molecule. In this paper, we reduce this to seconds with Clari, a large-scale flow matching model that generates redundancy-free unit cells and replaces triangle layers with pair-bias attention. Clari requires only atom types and bonds as input and does not need an RDKit-sanitizable input molecule, which expands its applicability to challenging chemistries such as fullerenes, metal complexes, and atom clusters. We further ablate key design choices such as auxiliary losses, timestep distributions, noise priors, and self-conditioning. On OXtal's test sets, we surpass OXtal's solve rate while obtaining a speedup of 15-30$\\times$. Because Clari also models explicit hydrogens, it supports inference-time scaling via direct energy ranking, without any decoration or relaxation step. When generating 150 crystals and selecting the top-30 by energy, we further improve solve rate while maintaining a speedup of 5-8$\\times$. We also introduce the CSD Teaching Subset as a new test split of diverse and complex molecules for future benchmarking. Our contributions enable CSP within seconds, making large-scale virtual screening of organic solids practical. Code is available at https://github.com/the-matter-lab/clari.
 
 ---
 
