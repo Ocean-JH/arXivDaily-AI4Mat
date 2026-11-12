@@ -5,7 +5,14 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 09:41:59 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 10:41:01 +0800</lastBuildDate>
+    <item>
+      <title>How anion composition governs structural frameworks and Li-ion transport in oxychloride solid-state electrolytes</title>
+      <link>https://arxiv.org/abs/2611.13611v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.13611v1</guid>
+      <pubDate>Tue, 10 Nov 2026 05:40:10 +0000</pubDate>
+      <description>Mixed-anion lithium oxychlorides exhibit high Li conductivity, but the relationship between oxygen content, structural framework, and Li-ion transport remains unclear. Here, crystal structure prediction and molecular dynamics simulations with machine-learning interatomic potentials are used to examine $\mathrm{Li}_yM\mathrm{O}_x\mathrm{Cl}_{6-2x}$ ($M$ = Nb and Ta [Group 5] and $M$ = Ti, Zr, and Hf [Group 4]). Increasing oxygen content changes isolated chloride-rich polyhedra into one-dimensional chains and subsequently more highly connected two- and three-dimensional frameworks. In the Group 5 series, fast Li diffusion occurs over $x \approx 0.67$--1.5, where the Li sites form a three-dimensional percolating network. Potential of mean force maps and nudged elastic band calculations reveal that fast Li-ion transport requires a low-dimensional framework supporting long-range migration through undercoordinated Li sites with low barriers, together with similar energies across Li sites. Finally, we perform fine-grid compositional search, which identifies $\mathrm{LiNbO}_{0.67}\mathrm{Cl}_{4.67}$, $\mathrm{LiTaO}_{0.75}\mathrm{Cl}_{4.5}$, $\mathrm{LiNbO}_{1.5}\mathrm{Cl}_3$, and $\mathrm{LiTaO}_{1.5}\mathrm{Cl}_3$ as stable candidates with predicted room-temperature self-diffusivities of up to $\sim 10^{-6}\,\mathrm{cm}^2/\mathrm{s}$. These findings establish how oxygen content controls framework and Li-ion transport, guiding the design of lithium oxyhalide electrolytes.</description>
+    </item>
     <item>
       <title>Quantitative Assessment of Crystal Structure Prediction</title>
       <link>https://arxiv.org/abs/2611.10380v1</link>
@@ -354,13 +361,6 @@
       <guid isPermaLink="true">https://arxiv.org/abs/2609.01076v2</guid>
       <pubDate>Tue, 01 Sep 2026 11:07:18 +0000</pubDate>
       <description>Crystal generators can now propose periodic structures, but their control interfaces remain poorly matched to the mixed descriptors used in materials design. Text provides a compact way to combine composition, symmetry, prototype and property cues, yet it has not been clear whether such information can steer flow-based crystal generation. Here we introduce TFMat, a text-conditioned flow-matching framework that uses structured materials language as a semantic prior for a CrystalFlow generator. Across Perov-5, Carbon-24 and MP-20 crystal structure prediction benchmarks, TFMat improves one-candidate match rates over CrystalFlow and reaches a 92.04% MP-20 match rate with 20 candidates; in de novo generation, it improves element-count and density distribution alignment while retaining coarse property consistency in composition-selected outputs. These results position structured text as an inspectable control layer for translating human-readable materials intent into candidate crystals for downstream simulation and validation.</description>
-    </item>
-    <item>
-      <title>Fourier Neural Operators for Composition-Driven Crystal Structure Discovery</title>
-      <link>https://arxiv.org/abs/2609.00900v1</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2609.00900v1</guid>
-      <pubDate>Tue, 01 Sep 2026 08:24:32 +0000</pubDate>
-      <description>Crystalline materials discovery is essential for energy, electronics, and catalysis, but the vast chemical and structural space makes exhaustive screening infeasible. Existing voxel-based methods are limited by the local receptive fields of three-dimensional convolutional neural networks and the posterior collapse of high-dimensional variational autoencoders. Here, we develop a Fourier Neural Operator (FNO)-based crystal-field solver that maps a prescribed chemical formula and lattice parameters to periodic number-density and electron-density fields. By operating on global Fourier modes, the solver captures long-range correlations in periodic crystal fields beyond conventional local convolutions. Building on this solver, we construct a coupled generation-solving framework in which a conditional variational autoencoder generates diverse candidate lattice parameters in a low-dimensional basis-coefficient space, followed by density-field prediction and atomic reconstruction through peak detection, position optimization, and weight optimization. The reconstructed structures are further screened using voxel-level filtering, machine-learning interatomic-potential relaxation, and first-principle calculations. The framework generates novel structures across 104 chemical formulas with competitive reconstruction accuracy, demonstrating high generative diversity and structural validity. By extending Fourier neural operators to periodic crystal fields and coupling them with composition-conditioned lattice generation, our approach provides a scalable route to crystal structure discovery from prescribed chemical compositions.</description>
     </item>
   </channel>
 </rss>

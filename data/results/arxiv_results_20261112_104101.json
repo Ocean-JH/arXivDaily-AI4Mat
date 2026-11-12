@@ -1,0 +1,89 @@
+[
+  {
+    "authors": [
+      "Zhuotao Jin",
+      "Xiaoyun Wang",
+      "Nicholas Brawand",
+      "Roman Zubatyuk",
+      "Atul Thakur",
+      "Eric Qu",
+      "Boris Kozinsky",
+      "Justin Smith"
+    ],
+    "base_id": "2608.07401",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.LG"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2608.07401v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2608.07401v2",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-08-07T16:45:51+00:00",
+    "short_id": "2608.07401v2",
+    "status": "update",
+    "summary": "The search for new crystalline materials spans an enormous compositional and structural space. Generating candidates in this space requires modeling the relationships between elemental composition, crystallographic symmetry, and crystal geometry. The space group specifies the crystal's symmetry and determines the admissible Wyckoff positions and geometric degrees of freedom; fixing it in advance prevents this global symmetry choice from being revised using information from evolving Wyckoff occupations and elemental composition. We introduce DynaCrys, the first framework for complete crystal generation in which the space group co-evolves with Wyckoff occupations and elements. We develop physics-informed space-group diffusion that explicitly incorporates crystallographic group-subgroup relations, and a legality-constrained stochastic decoder that jointly samples compatible space groups, Wyckoff occupations, and elements, followed by symmetry-constrained geometry generation. In large-scale evaluations on standard benchmarks, DynaCrys achieves state-of-the-art performance in symmetry-aware crystal generation while supporting fast sampling.",
+    "title": "DynaCrys: Crystal Generation with Dynamic Space-Group Diffusion",
+    "updated": "2026-11-10T18:59:10+00:00",
+    "url": "https://arxiv.org/abs/2608.07401v2",
+    "version": 2
+  },
+  {
+    "authors": [
+      "Petr Jaroš",
+      "Petr Sedlák",
+      "Petr Šesták",
+      "Miroslav Černý",
+      "Jörg Behler",
+      "Hanuš Seiner"
+    ],
+    "base_id": "2607.20681",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": "Manuscript accepted to Materials \\& Design",
+    "doi": "10.1016/j.matdes.2026.117424",
+    "id": "https://arxiv.org/abs/2607.20681v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2607.20681v2",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-07-22T19:32:23+00:00",
+    "short_id": "2607.20681v2",
+    "status": "update",
+    "summary": "We present a high-dimensional neural network potential (HDNNP) for the martensitic phase of the NiTi shape-memory alloy trained to density functional theory (DFT) data. A central aspect of this work is the systematic validation of the potential with respect to the underlying DFT reference method for key properties governing structural evolution, including equilibrium crystal structures, elastic constants, generalized-stacking fault energies, and vibrational spectra. The HDNNP accurately describes the relative stability of the B19$^\\prime$ and B33 phases, including subtle energy differences on the order of meV/atom. The predicted stacking-fault energy landscape is strongly anisotropic and reveals a preferential shear pathway, providing atomistic insight into deformation and twinning mechanisms. Finite-temperature molecular dynamics simulations further enable the investigation of unconstrained structural evolution as a function of temperature. Overall, the developed HDNNP provides a robust basis for atomistic simulations of the complex structural and functional behavior of martensitic NiTi systems containing hundreds of thousands of atoms on nanosecond time scales.",
+    "title": "A high-dimensional neural network potential for finite-temperature phenomena in NiTi martensite",
+    "updated": "2026-11-10T10:13:46+00:00",
+    "url": "https://arxiv.org/abs/2607.20681v2",
+    "version": 2
+  },
+  {
+    "authors": [
+      "Jiho Lee",
+      "Seungwoo Hwang",
+      "Seungwu Han",
+      "Jisu Jung",
+      "Youngho Kang",
+      "Sungwoo Kang"
+    ],
+    "base_id": "2611.13611",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": "The Supplementary Information is provided as an ancillary file (Anc/Supplementary_Information.pdf)",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.13611v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.13611v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-11-10T05:40:10+00:00",
+    "short_id": "2611.13611v1",
+    "status": "new",
+    "summary": "Mixed-anion lithium oxychlorides exhibit high Li conductivity, but the relationship between oxygen content, structural framework, and Li-ion transport remains unclear. Here, crystal structure prediction and molecular dynamics simulations with machine-learning interatomic potentials are used to examine $\\mathrm{Li}_yM\\mathrm{O}_x\\mathrm{Cl}_{6-2x}$ ($M$ = Nb and Ta [Group 5] and $M$ = Ti, Zr, and Hf [Group 4]). Increasing oxygen content changes isolated chloride-rich polyhedra into one-dimensional chains and subsequently more highly connected two- and three-dimensional frameworks. In the Group 5 series, fast Li diffusion occurs over $x \\approx 0.67$--1.5, where the Li sites form a three-dimensional percolating network. Potential of mean force maps and nudged elastic band calculations reveal that fast Li-ion transport requires a low-dimensional framework supporting long-range migration through undercoordinated Li sites with low barriers, together with similar energies across Li sites. Finally, we perform fine-grid compositional search, which identifies $\\mathrm{LiNbO}_{0.67}\\mathrm{Cl}_{4.67}$, $\\mathrm{LiTaO}_{0.75}\\mathrm{Cl}_{4.5}$, $\\mathrm{LiNbO}_{1.5}\\mathrm{Cl}_3$, and $\\mathrm{LiTaO}_{1.5}\\mathrm{Cl}_3$ as stable candidates with predicted room-temperature self-diffusivities of up to $\\sim 10^{-6}\\,\\mathrm{cm}^2/\\mathrm{s}$. These findings establish how oxygen content controls framework and Li-ion transport, guiding the design of lithium oxyhalide electrolytes.",
+    "title": "How anion composition governs structural frameworks and Li-ion transport in oxychloride solid-state electrolytes",
+    "updated": "2026-11-10T05:40:10+00:00",
+    "url": "https://arxiv.org/abs/2611.13611v1",
+    "version": 1
+  }
+]
