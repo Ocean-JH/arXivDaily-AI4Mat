@@ -1,0 +1,35 @@
+[
+  {
+    "authors": [
+      "Sergio Rincón",
+      "Gabriel González",
+      "Nicolás Andrade",
+      "Rafael Velásquez",
+      "Sebastián Ojeda",
+      "Juanita Puentes",
+      "Nicolás Aparicio",
+      "Paula Cárdenas",
+      "Pablo Arbeláez"
+    ],
+    "base_id": "2611.10380",
+    "categories": [
+      "cs.LG",
+      "cond-mat.mtrl-sci",
+      "cs.AI"
+    ],
+    "comment": "Accepted at NeurIPS 2026, Track on Evaluations and Datasets. 49 pages, 21 figures, 17 tables. Code: https://github.com/BCV-Uniandes/OPAL",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.10380v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.10380v2",
+    "primary_category": "cs.LG",
+    "published": "2026-11-07T01:34:05+00:00",
+    "short_id": "2611.10380v2",
+    "status": "update",
+    "summary": "Crystal Structure Prediction (CSP) aims to predict a material's 3D structure from its chemical composition, with applications from energy storage to biomedical devices. Despite its importance, existing evaluation frameworks suffer from key limitations: they rely on threshold-sensitive or incomparable metrics, focus predominantly on geometric performance while overlooking physical plausibility, and fail to account for polymorphism, where a chemical composition can crystallize into multiple stable structures. In parallel, recent Symmetry-Informed CSP (SICSP) methods often report results alongside standard CSP baselines while receiving crystallographic templates at inference, which constrain the search space and make SICSP a fundamentally different task. To address these limitations, we introduce an Orientation-invariant, Polymorph-Aware, Large Benchmark (OPAL-Bench) that evaluates CSP and SICSP as separate tasks. We evaluate 7 CSP and 2 SICSP methods under OPAL-Bench across 4 datasets using threshold-free geometric and physical distance metrics. Our results show that no method dominates across all metrics, and that geometric performance is not strongly correlated with physical plausibility. We also release OPAL-CSP, an SE(3)-equivariant flow-matching baseline for the CSP track that performs competitively on geometric metrics and ranks among the best on physical ones. By unifying geometric and physical metrics under a polymorph-aware protocol, OPAL-Bench enables a more comprehensive assessment of generative quality in CSP.",
+    "title": "Quantitative Assessment of Crystal Structure Prediction",
+    "updated": "2026-11-10T20:15:46+00:00",
+    "url": "https://arxiv.org/abs/2611.10380v2",
+    "version": 2
+  }
+]
