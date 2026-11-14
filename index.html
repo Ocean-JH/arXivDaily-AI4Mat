@@ -98,7 +98,7 @@
     </header>
 
     <main id="main-content" class="content-shell" tabindex="-1">
-        <div class="status-notice" role="status" aria-live="polite"><p><strong>1 new paper</strong> found in the latest check.</p></div>
+        <div class="status-notice" role="status" aria-live="polite"><p><strong>2 new papers</strong> found in the latest check.</p></div>
 
         <section class="research-tools" aria-labelledby="search-label">
             <form id="paper-search" class="search-form" role="search" method="get">
@@ -136,43 +136,82 @@
         </section>
 
         <div id="papers-content">
-            <div class="section-heading"><h2 id="latest-papers">Latest papers (1)</h2>
-<p>Checked 2026-11-13 10:22 SGT</p></div>
+            <div class="section-heading"><h2 id="latest-papers">Latest papers (2)</h2>
+<p>Checked 2026-11-14 09:58 SGT</p></div>
 <article class="paper"
-         id="paper-2611.10380"
-         data-paper-id="2611.10380"
-         aria-labelledby="title-paper-2611.10380"
+         id="paper-2611.16308"
+         data-paper-id="2611.16308"
+         aria-labelledby="title-paper-2611.16308"
          tabindex="-1">
     <div class="paper-index" aria-hidden="true">1</div>
     <div class="paper-body">
-        <h3 id="title-paper-2611.10380" class="paper-title"><a href="https://arxiv.org/abs/2611.10380v2" target="_blank" rel="noopener noreferrer">Quantitative Assessment of Crystal Structure Prediction</a><span class="paper-badge updated">Updated</span></h3>
+        <h3 id="title-paper-2611.16308" class="paper-title"><a href="https://arxiv.org/abs/2611.16308v1" target="_blank" rel="noopener noreferrer">ORCHID-SAGE: Fully Reproducible CALPHAD Assessment from Evidence to Phase Diagram</a><span class="paper-badge">New</span></h3>
 
         <dl class="paper-info">
             <div class="paper-authors">
                 <dt>Authors</dt>
-                <dd>Sergio Rincón, Gabriel González, Nicolás Andrade, Rafael Velásquez, Sebastián Ojeda, Juanita Puentes, Nicolás Aparicio, Paula Cárdenas, Pablo Arbeláez</dd>
+                <dd>Raymundo Arróyave</dd>
             </div>
             <div class="paper-date">
                 <dt>Published</dt>
-                <dd><time datetime="2026-11-07">2026-11-07</time></dd>
+                <dd><time datetime="2026-11-12">2026-11-12</time></dd>
             </div>
             <div class="paper-category">
                 <dt>Category</dt>
-                <dd>cs.LG</dd>
+                <dd>cond-mat.mtrl-sci</dd>
             </div>
             <div class="paper-id">
                 <dt>arXiv ID</dt>
-                <dd>2611.10380v2</dd>
+                <dd>2611.16308v1</dd>
             </div>
         </dl>
 
         <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2611.10380v2" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+            <a href="https://arxiv.org/abs/2611.16308v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
         </div>
 
         <details class="paper-summary">
             <summary>Read abstract</summary>
-            <p>Crystal Structure Prediction (CSP) aims to predict a material&#x27;s 3D structure from its chemical composition, with applications from energy storage to biomedical devices. Despite its importance, existing evaluation frameworks suffer from key limitations: they rely on threshold-sensitive or incomparable metrics, focus predominantly on geometric performance while overlooking physical plausibility, and fail to account for polymorphism, where a chemical composition can crystallize into multiple stable structures. In parallel, recent Symmetry-Informed CSP (SICSP) methods often report results alongside standard CSP baselines while receiving crystallographic templates at inference, which constrain the search space and make SICSP a fundamentally different task. To address these limitations, we introduce an Orientation-invariant, Polymorph-Aware, Large Benchmark (OPAL-Bench) that evaluates CSP and SICSP as separate tasks. We evaluate 7 CSP and 2 SICSP methods under OPAL-Bench across 4 datasets using threshold-free geometric and physical distance metrics. Our results show that no method dominates across all metrics, and that geometric performance is not strongly correlated with physical plausibility. We also release OPAL-CSP, an SE(3)-equivariant flow-matching baseline for the CSP track that performs competitively on geometric metrics and ranks among the best on physical ones. By unifying geometric and physical metrics under a polymorph-aware protocol, OPAL-Bench enables a more comprehensive assessment of generative quality in CSP.</p>
+            <p>Knowledge of phase stability is the first requirement for materials design, and predicting the conditions under which new materials can be synthesized has become a key capability of self-driving laboratories (SDLs). For inorganic materials, notably alloys, these predictions come from thermodynamic databases built with the CALPHAD method. Building a database, however, requires expert judgment at many steps, and because these decisions are rarely recorded, others can use a database but cannot regenerate or update it. Machines can already collect the data, build a first model with machine-learned interatomic potentials and refine it against experiments. The assessment itself, the sequence of judgments that turns these parts into a reliable database, is still carried out by human experts. We argue that it can be automated reproducibly only if the expert knowledge behind an assessment is encoded in formal protocols, so that an assessment delivers a record of its construction and not only its parameters. We introduce ORCHID-SAGE, a standard that organizes this record into reproducible and automatable protocols. In this first attempt, applied to Cr-Ni, the database was regenerated from its record by a script on a second machine, by an AI agent working only through the Model Context Protocol (MCP) and by a refit from public sources only, with the same predictions. Recorded in this way, a database need no longer be fixed at publication but can be updated by AI agents as SDLs and other sources provide new evidence, while the judgment remains with people and on the record.</p>
+        </details>
+    </div>
+</article>
+
+<article class="paper"
+         id="paper-2611.16016"
+         data-paper-id="2611.16016"
+         aria-labelledby="title-paper-2611.16016"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">2</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2611.16016" class="paper-title"><a href="https://arxiv.org/abs/2611.16016v1" target="_blank" rel="noopener noreferrer">Quantum Material Generation via Coherent Hamiltonian Search</a><span class="paper-badge">New</span></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Jiang Yuhan, Matthew Otten</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2026-11-11">2026-11-11</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>quant-ph</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2611.16016v1</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2611.16016v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Discovering new materials with targeted properties is a central goal of materials science, yet the space of candidates is vast. Data-driven generative models learn the distribution of known materials, but they extrapolate poorly, and a generated structure is not known to be stable. A material&#x27;s properties follow from its Hamiltonian, and a quantum computer can calculate them from it. We introduce the quantum material generative algorithm (QMage), a coherent search, guided by the Hamiltonian, over crystalline configurations of atomic composition, unit cell structure, and atomic positions, for one whose calculated properties meet the targets to within a given error tolerance. The computation is a single coherent quantum circuit in which each configuration&#x27;s Hamiltonian is block-encoded, its target eigenstate isolated and properties evaluated, and the satisfying configurations amplified by fixed-point search and measured. One framework covers many targets, from formation energy and band gaps to elasticity and conductivity. We design the algorithm for the mature fault-tolerant era and estimate its cost in logical qubits and Toffoli depth from a classically routine benchmark to targets where established methods are unreliable. The approach generates candidate materials from first principles, rather than generalizing from those known, and could enable materials discovery when the target properties are difficult to predict classically.</p>
         </details>
     </div>
 </article>
@@ -181,7 +220,7 @@
     </main>
 
     <footer class="site-footer">
-        <p>Last updated <time datetime="2026-11-13T10:22:34.667907+08:00">2026-11-13 10:22:34 SGT</time></p>
+        <p>Last updated <time datetime="2026-11-14T09:58:13.358717+08:00">2026-11-14 09:58:13 SGT</time></p>
         <p>© 2026 <a href="https://ocean-jh.github.io/"
                               target="_blank"
                               rel="noopener noreferrer">Wang Jianghai</a>
