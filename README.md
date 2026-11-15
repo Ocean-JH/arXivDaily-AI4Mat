@@ -131,9 +131,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (2)
+## Latest Papers (2)
 
-*Last checked: 2026-11-14 09:58:13 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-11-15 09:30:01 (SGT)*
 
 ### 1. ORCHID-SAGE: Fully Reproducible CALPHAD Assessment from Evidence to Phase Diagram
 
