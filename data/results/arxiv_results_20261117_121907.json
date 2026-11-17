@@ -1,0 +1,173 @@
+[
+  {
+    "authors": [
+      "Omri Puny",
+      "Yaron Lipman",
+      "Benjamin Kurt Miller"
+    ],
+    "base_id": "2509.23822",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2509.23822v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2509.23822v2",
+    "primary_category": "cs.LG",
+    "published": "2025-09-28T11:51:29+00:00",
+    "short_id": "2509.23822v2",
+    "status": "update",
+    "summary": "Inorganic crystals are periodic, highly-symmetric arrangements of atoms in three-dimensional space. Their structures are constrained by the symmetry operations of a crystallographic \\emph{space group} and restricted to lie in specific affine subspaces known as \\emph{Wyckoff positions}. The frequency an atom appears in the crystal and its rough positioning are determined by its Wyckoff position. Most generative models that predict atomic coordinates overlook these symmetry constraints, leading to unrealistically high populations of proposed crystals exhibiting limited symmetry. We introduce Space Group Conditional Flow Matching, a novel generative framework that samples significantly closer to the target population of highly-symmetric, stable crystals. We achieve this by conditioning the entire generation process on a given space group and set of Wyckoff positions; specifically, we define a conditionally symmetric noise base distribution and a group-conditioned, equivariant, parametric vector field that restricts the motion of atoms to their initial Wyckoff position. Our form of group-conditioned equivariance is achieved using an efficient reformulation of \\emph{group averaging} tailored for symmetric crystals. Importantly, it reduces the computational overhead of symmetrization to a negligible level. We achieve state of the art results on crystal structure prediction and de novo generation benchmarks. We also perform relevant ablations.",
+    "title": "Space Group Conditional Flow Matching",
+    "updated": "2026-11-15T12:47:50+00:00",
+    "url": "https://arxiv.org/abs/2509.23822v2",
+    "version": 2
+  },
+  {
+    "authors": [
+      "Austin H. Cheng",
+      "Marcel Müller",
+      "Andreas Burger",
+      "Yeonghun Kang",
+      "Tsz Wai Ko",
+      "Marta Skreta",
+      "Luka Mucko",
+      "Ella Miray Rajaonson",
+      "Cher Tian Ser",
+      "Jérôme F. Gonthier",
+      "Alex Zook",
+      "Varinia Bernales",
+      "Alán Aspuru-Guzik"
+    ],
+    "base_id": "2611.19072",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "physics.chem-ph"
+    ],
+    "comment": "NeurIPS 2026",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.19072v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.19072v1",
+    "primary_category": "cs.LG",
+    "published": "2026-11-14T01:22:49+00:00",
+    "short_id": "2611.19072v1",
+    "status": "new",
+    "summary": "Generative models play a rapidly growing role in the design and simulation of molecules. The most widely used applications of generative models are in large language models (LLMs), owing to the natural flexibility of language for specifying and answering queries. However, generalist LLMs do not effectively handle large sets of 3D coordinates, whereas specialist generative models of 3D molecules cannot reach the controllability afforded by language. To bridge these capabilities, we propose Nahual, a decoder-only autoregressive diffusion model for any sequence of text and 3D molecules. To enable expressive autoregression on continuous coordinates, we propose next-token diffusion, whereby a causal transformer denoises each token while attending to the clean tokens before it, without increasing context size. We train Nahual on a curated set of twelve 3D chemistry tasks ranging from microsolvation to molecular conformer search to adsorption on metal surfaces, with associated evaluation metrics and baselines. The result is a single set of end-to-end-trained weights that simultaneously performs all tasks and surpasses state-of-the-art models specialized for crystal structure prediction and property-conditional molecule generation. Our results demonstrate the viability of scaling generalist decoder-only models for native multimodal understanding and generation across language and chemistry. Code is available at https://github.com/the-matter-lab/nahual.",
+    "title": "Nahual: A Sequence Model for Language and Atoms",
+    "updated": "2026-11-14T01:22:49+00:00",
+    "url": "https://arxiv.org/abs/2611.19072v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Zhennan Zhang",
+      "Shaobo Yu",
+      "Haoting Zhang",
+      "Yu Han",
+      "Zhiyue Guo",
+      "Junjie Wang",
+      "Hao Gao",
+      "Jian Sun"
+    ],
+    "base_id": "2611.18303",
+    "categories": [
+      "physics.comp-ph",
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": null,
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.18303v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.18303v1",
+    "primary_category": "physics.comp-ph",
+    "published": "2026-11-13T15:26:12+00:00",
+    "short_id": "2611.18303v1",
+    "status": "new",
+    "summary": "Autoregressive language models offer a unified route to crystal generation and inverse design, but their performance depends on how periodic structures are serialized. Symmetry equivalent and closely related crystals can receive different atomic orders under coordinate-based serialization, introducing variability unrelated to their structural connectivity. Here, we present CGTransformer (Crystal Graph Transformer), an autoregressive generative framework that addresses this challenge via a graph-embedded sorting strategy. Using quotientgraph topology and barycentric embeddings, Element Symmetry Graph (ESG) converts periodic crystal networks into topology-guided one-dimensional sequences that retain key local and symmetry-related structural information. CGTransformer achieves high generation validity and the highest single shot crystal structure prediction (CSP) match rate among the compared MP-20 baselines (63.24%), while same backbone comparisons show improved structure recovery over coordinate-based ordering. Furthermore, we demonstrate property-conditioned inverse design for wide-bandgap semiconductors, where ESG achieves a much higher stable, unique and novel (S.U.N.) rate and stronger target-property alignment than the coordinate-based baseline. These results establish topology-guided sequence construction as an effective route to improving crystal generation and property-directed design at fixed model capacity.",
+    "title": "CGTransformer: A Topology-Aware Autoregressive Framework for Crystal Generation and Inverse Design",
+    "updated": "2026-11-13T15:26:12+00:00",
+    "url": "https://arxiv.org/abs/2611.18303v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Jack Yang"
+    ],
+    "base_id": "2611.18797",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": "196 pages; 60 Figures",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.18797v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.18797v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-11-13T05:18:37+00:00",
+    "short_id": "2611.18797v1",
+    "status": "new",
+    "summary": "Computational modelling has become a cornerstone of materials science, with advances in atomistic simulations, high-throughput computation, and artificial intelligence transforming how materials are understood, discovered, and designed. These developments build upon generations of theoretical innovations that have translated complex mathematical and physical principles into practical predictive tools. However, the growing diversity of computational methods presents challenges for practitioners seeking a coherent understanding of their theoretical foundations. Drawing upon the author's research experience, this monograph provides a practitioner-oriented, pedagogical overview of computational materials science, unified through the concepts of potential-energy landscapes and statistical sampling. It explores how these concepts underpin structural stability, phase behaviour, and electronic and magnetic properties, through a systematic treatment of empirical force fields, density-functional theory, many-body electronic-structure methods, statistical sampling, and property prediction. It further examines high-throughput workflows, materials databases, and the probabilistic foundations of artificial intelligence. Particular emphasis is placed on atomistic representations, graph neural networks, and generative models, highlighting the roles of symmetry, group theory, differential geometry, and stochastic processes in modern materials modelling. By connecting established physical theories with emerging data-driven approaches, this monograph offers a unified perspective on computational materials science and identifies opportunities and challenges toward physics-informed, efficient, and reliable materials discovery.",
+    "title": "A Practitioner's Guide to Materials Theory and Computation in the Age of Big Data and Artificial Intelligence",
+    "updated": "2026-11-13T05:18:37+00:00",
+    "url": "https://arxiv.org/abs/2611.18797v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Jianjun Hu",
+      "Ying Feng"
+    ],
+    "base_id": "2611.17670",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": "71 pages",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.17670v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.17670v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-11-13T02:33:55+00:00",
+    "short_id": "2611.17670v1",
+    "status": "new",
+    "summary": "Crystal structure prediction (CSP) determines periodic atomic or molecular arrangements from chemical composition and physical conditions. Over three decades, CSP has evolved from chemical construction and global energy optimization to hybrid approaches combining symmetry, learned potentials, adaptive search, and deep generative models. This survey reviews method, software, review, and benchmark records from 1996 to October 2026, covering inorganic and molecular crystals, including formula-conditioned diffusion, flow, and autoregressive models that preserve composition. We classify methods by candidate construction and exploration: template and discrete construction, random search, evolutionary search, swarm and differential evolution, energy-landscape exploration, adaptive machine-learning-guided search, and learned generation. We distinguish representation, relaxation, ranking, and physical qualification. Benchmarks reveal no universally dominant approach. In a 46-target leaderboard snapshot, the best-performing template method achieves higher top-1 recovery than leading generative models, but paired tests show no statistically significant differences from several generative competitors. We also audit predictions for 68 experimentally examined materials, including 52 with structures confirmed by diffraction or microscopy. Predictions for 23 of the 68 preceded experiment, mostly through first-principles global search. Within the reviewed evidence, we find no independently confirmed discovery in which a deep generative model predicted the structure before experiment. We conclude with the principal limitations of current CSP algorithms and priorities for future research.",
+    "title": "Crystal Structure Prediction from Search to Learning: A 30-Year Expedition",
+    "updated": "2026-11-13T02:33:55+00:00",
+    "url": "https://arxiv.org/abs/2611.17670v1",
+    "version": 1
+  },
+  {
+    "authors": [
+      "Daniel T. Levy",
+      "Vineet Jain",
+      "Tara Akhound-Sadegh",
+      "Sékou-Oumar Kaba",
+      "Siamak Ravanbakhsh"
+    ],
+    "base_id": "2611.17462",
+    "categories": [
+      "cs.LG",
+      "cond-mat.mtrl-sci",
+      "cs.AI"
+    ],
+    "comment": "24 pages, 7 figures. Accepted to NeurIPS 2026",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.17462v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.17462v1",
+    "primary_category": "cs.LG",
+    "published": "2026-11-12T19:40:38+00:00",
+    "short_id": "2611.17462v1",
+    "status": "new",
+    "summary": "Diffusion-based generative models have become strong priors over plausible crystal structures, but turning that prior into promising candidates requires steering toward several conflicting properties at once. Fine-tuning is expensive and produces a new model for every new objective, while differentiable guidance is not applicable to many real-world tasks. We instead adapt these generative models at inference time using Diffusion Tree Sampling (DTS), a Monte Carlo tree search procedure over the denoising trajectory. We make two technical contributions on top of DTS that are particularly relevant for AI-for-science applications. First, we show how to use existing property-conditional generative models (e.g., models fine-tuned for classifier-free guidance) as guided proposals inside DTS, without distorting the target distribution. Second, we extend DTS to multi-objective sampling, so that a single search produces samples spanning an entire Pareto front. We instantiate both adaptations on de novo crystal generation: improving the stability of crystals generated by different models, using pretrained conditional models to generate crystals belonging to rare space groups or with high bulk modulus, and generating crystals along a Pareto front of high dielectric constant and high bandgap materials. Across these tasks, DTS-based inference-time adaptation successfully improves model outputs without modifying the models themselves.",
+    "title": "Diffusion Tree Sampling for Inference Time Adaptation of Crystal Generative Models",
+    "updated": "2026-11-12T19:40:38+00:00",
+    "url": "https://arxiv.org/abs/2611.17462v1",
+    "version": 1
+  }
+]
