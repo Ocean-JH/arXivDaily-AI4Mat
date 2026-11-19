@@ -1,0 +1,56 @@
+[
+  {
+    "authors": [
+      "Jiho Lee",
+      "Seungwoo Hwang",
+      "Seungwu Han",
+      "Jung-Hoon Lee",
+      "Jisu Jung",
+      "Youngho Kang",
+      "Sungwoo Kang"
+    ],
+    "base_id": "2611.13611",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": "The Supplementary Information is provided as an ancillary file (Anc/Supplementary_Information.pdf)",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.13611v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.13611v2",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-11-10T05:40:10+00:00",
+    "short_id": "2611.13611v2",
+    "status": "update",
+    "summary": "Mixed-anion lithium oxychlorides exhibit high Li conductivity, but the relationship between oxygen content, structural framework, and Li-ion transport remains unclear. Here, crystal structure prediction and molecular dynamics simulations with machine-learning interatomic potentials are used to examine $\\mathrm{Li}_yM\\mathrm{O}_x\\mathrm{Cl}_{6-2x}$ ($M$ = Nb and Ta [Group 5] and $M$ = Ti, Zr, and Hf [Group 4]). Increasing oxygen content changes isolated chloride-rich polyhedra into one-dimensional chains and subsequently more highly connected two- and three-dimensional frameworks. In the Group 5 series, fast Li diffusion occurs over $x \\approx 0.67$--1.5, where the Li sites form a three-dimensional percolating network. Potential of mean force maps and nudged elastic band calculations reveal that fast Li-ion transport requires a low-dimensional framework supporting long-range migration through undercoordinated Li sites with low barriers, together with similar energies across Li sites. Finally, we perform fine-grid compositional search, which identifies $\\mathrm{LiNbO}_{0.67}\\mathrm{Cl}_{4.67}$, $\\mathrm{LiTaO}_{0.75}\\mathrm{Cl}_{4.5}$, $\\mathrm{LiNbO}_{1.5}\\mathrm{Cl}_3$, and $\\mathrm{LiTaO}_{1.5}\\mathrm{Cl}_3$ as stable candidates with predicted room-temperature self-diffusivities of up to $\\sim 10^{-6}\\,\\mathrm{cm}^2/\\mathrm{s}$. These findings establish how oxygen content controls framework and Li-ion transport, guiding the design of lithium oxyhalide electrolytes.",
+    "title": "How anion composition governs structural frameworks and Li-ion transport in oxychloride solid-state electrolytes",
+    "updated": "2026-11-18T03:47:55+00:00",
+    "url": "https://arxiv.org/abs/2611.13611v2",
+    "version": 2
+  },
+  {
+    "authors": [
+      "Yunsung Lim",
+      "Seungwoo Hwang",
+      "Seungwu Han"
+    ],
+    "base_id": "2611.23760",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "comment": "15 pages, 7 figures. Supporting Information is available as an ancillary file",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2611.23760v1",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2611.23760v1",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-11-18T03:14:08+00:00",
+    "short_id": "2611.23760v1",
+    "status": "new",
+    "summary": "Determining unique atomic coordinates from powder X-ray diffraction (PXRD) remains challenging because peak overlap, weak scattering from light elements, limited scattering contrast between elements with similar atomic numbers, and experimental noise render the inverse problem underdetermined. Here, we present XCAPE (XRD-Constrained Accelerated Prediction Engine), a crystal structure prediction (CSP) framework that integrates experimentally derived composition, unit cell parameters, space group, and PXRD data into a symmetry-aware evolutionary search. XCAPE explores Wyckoff-site configurations using tailored mutation operations, evaluates candidates by both energetic stability and diffraction agreement, and accelerates geometry optimization using a universal machine-learning interatomic potential (MLIP). The framework recovered 71 of 77 database-derived benchmark structures (92.2%) from simulated PXRD patterns and all 12 reference structures from experimental PXRD patterns. It further identified 12 candidate structure assignments that are consistent with experimental PXRD patterns, lack matching entries in the Inorganic Crystal Structure Database (ICSD), and are thermodynamically competitive at the MLIP level. Density functional theory (DFT) calculations showed that 10 of these 12 candidates lie within 10 meV/atom of the convex hull. By bridging experimental diffraction data and physically plausible atomistic models, XCAPE can provide structural insight into previously unresolved materials and support accelerated materials discovery in automated research workflows.",
+    "title": "Physics-Guided Crystal Structure Elucidation from Powder X-Ray Diffraction with Universal Machine-Learning Interatomic Potentials",
+    "updated": "2026-11-18T03:14:08+00:00",
+    "url": "https://arxiv.org/abs/2611.23760v1",
+    "version": 1
+  }
+]

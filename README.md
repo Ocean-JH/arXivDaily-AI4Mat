@@ -133,37 +133,37 @@ arXiv's API access and attribution requirements.
 
 ## New Papers (2)
 
-*Last checked: 2026-11-18 11:18:33 (SGT)*
+*Last checked: 2026-11-19 10:55:56 (SGT)*
 
-### 1. What Do LLMs Use to Judge Synthesis Recipes? An Experimental Analysis on 240 Solid-State Syntheses
+### 1. How anion composition governs structural frameworks and Li-ion transport in oxychloride solid-state electrolytes
 
-**Authors:** Derek van Tilborg, Laura-Bianca Pasca, Harry Sevi, Kyle Reeves, Thomas Loux, Aikaterini Flessa Savvidou, Varincka Jean-Gilles, Marilou Carouge, Joonatan E. M. Laulainen
+**Authors:** Jiho Lee, Seungwoo Hwang, Seungwu Han, Jung-Hoon Lee, Jisu Jung, Youngho Kang, Sungwoo Kang
 
-**Published:** 2026-11-17
+**Published:** 2026-11-10
 
-**Category:** cs.CE
+**Category:** cond-mat.mtrl-sci
 
-**ID:** 2611.22623v1
+**ID:** 2611.13611v2
 
-**Link:** [https://arxiv.org/abs/2611.22623v1](https://arxiv.org/abs/2611.22623v1)
+**Link:** [https://arxiv.org/abs/2611.13611v2](https://arxiv.org/abs/2611.13611v2)
 
-**Summary:** Inorganic materials discovery is increasingly limited by synthesis rather than by material design. Large language models (LLMs) are being adopted to propose synthesis conditions with little experimental evidence of their capabilities and biases. Here, we carry out an experimental synthesis benchmark of 240 experiments across eight known and unknown inorganic oxides and subsequently evaluate an LLM as a zero-shot ranker over fixed banks of solid-state synthesis recipes. For each pair of recipes for the same oxide target, `GPT-5.6-Sol` selects the recipe expected to yield higher target-phase purity. We aggregate these pairwise preferences using a regularized Bradley-Terry model to obtain a ranked list of synthesis recipes for a given target material. By comparison with the actual purity, obtained through X-ray diffraction, we measure `GPT-5.6-Sol`'s performance as a zero-shot ranker (0.72 pairwise accuracy). By selective removal of the information exposed to the model during this ranking, we conclude that ranking is driven predominantly by thermal features, with reaction chemistry modulating the effect. Ranking accuracy tracks the purity-temperature correlation by target (Spearman ρ= 0.91\\), \\(p = 0.002\\), and on the six thermally-driven targets withholding all chemical identity hardly impacts performance (0.68) compared to withholding temperature (0.56). Ranking performance was higher on known than unknown targets, but the group-level difference was not statistically conclusive. The methodological choices highlight the need for more experimentally validated synthesis benchmarks and position LLMs as a thermally informed prior.
+**Summary:** Mixed-anion lithium oxychlorides exhibit high Li conductivity, but the relationship between oxygen content, structural framework, and Li-ion transport remains unclear. Here, crystal structure prediction and molecular dynamics simulations with machine-learning interatomic potentials are used to examine $\\mathrm{Li}_yM\\mathrm{O}_x\\mathrm{Cl}_{6-2x}$ ($M$ = Nb and Ta [Group 5] and $M$ = Ti, Zr, and Hf [Group 4]). Increasing oxygen content changes isolated chloride-rich polyhedra into one-dimensional chains and subsequently more highly connected two- and three-dimensional frameworks. In the Group 5 series, fast Li diffusion occurs over $x \\approx 0.67$--1.5, where the Li sites form a three-dimensional percolating network. Potential of mean force maps and nudged elastic band calculations reveal that fast Li-ion transport requires a low-dimensional framework supporting long-range migration through undercoordinated Li sites with low barriers, together with similar energies across Li sites. Finally, we perform fine-grid compositional search, which identifies $\\mathrm{LiNbO}_{0.67}\\mathrm{Cl}_{4.67}$, $\\mathrm{LiTaO}_{0.75}\\mathrm{Cl}_{4.5}$, $\\mathrm{LiNbO}_{1.5}\\mathrm{Cl}_3$, and $\\mathrm{LiTaO}_{1.5}\\mathrm{Cl}_3$ as stable candidates with predicted room-temperature self-diffusivities of up to $\\sim 10^{-6}\\,\\mathrm{cm}^2/\\mathrm{s}$. These findings establish how oxygen content controls framework and Li-ion transport, guiding the design of lithium oxyhalide electrolytes.
 
 ---
 
-### 2. DSADiff: Data Structure-Aware Diffusion for Crystal Structure Prediction via Mitigating Complexity- and Imbalance-Induced Biases
+### 2. Physics-Guided Crystal Structure Elucidation from Powder X-Ray Diffraction with Universal Machine-Learning Interatomic Potentials
 
-**Authors:** Jiang Xiaobo, Dinghong Lai
+**Authors:** Yunsung Lim, Seungwoo Hwang, Seungwu Han
 
-**Published:** 2026-11-17
+**Published:** 2026-11-18
 
-**Category:** cs.LG
+**Category:** cond-mat.mtrl-sci
 
-**ID:** 2611.22050v1
+**ID:** 2611.23760v1
 
-**Link:** [https://arxiv.org/abs/2611.22050v1](https://arxiv.org/abs/2611.22050v1)
+**Link:** [https://arxiv.org/abs/2611.23760v1](https://arxiv.org/abs/2611.23760v1)
 
-**Summary:** Crystal Structure Prediction (CSP) is an important step in accelerating the generation and discovery of new materials. In recent years, diffusion-based CSP methods have made significant progress. However, existing models still suffer from generation bias when facing diverse materials spaces, while systematic approaches for tracing the sources of such performance variations remain limited. To address this issue, we propose LAS (Layered Analysis Strategy), a mechanism analysis framework that identifies crystal complexity and elemental composition imbalance as two key factors affecting generation difficulty and further reveals their relationships with model generation performance. Building on these findings, we further propose DSADiff (Data Structure-Aware Diffusion), a data structure-aware diffusion model that transforms the key factors identified by LAS into a unified generation difficulty representation and uses it to jointly drive feature modeling and training strategy optimization. This enables the model to adapt its representation and generation capability to samples with different data structures and difficulty levels, thereby mitigating learning bias across samples. Experiments on three CSP benchmark datasets, including Carbon-24, demonstrate that DSADiff consistently improves both Match Rate and RMSE, with a maximum Match Rate improvement of 9%, surpassing existing state-of-the-art methods and achieving new state-of-the-art performance. This work deepens the understanding of diffusion-based CSP models from the perspective of generation bias and provides a new direction for designing less biased generative models for complex materials spaces.
+**Summary:** Determining unique atomic coordinates from powder X-ray diffraction (PXRD) remains challenging because peak overlap, weak scattering from light elements, limited scattering contrast between elements with similar atomic numbers, and experimental noise render the inverse problem underdetermined. Here, we present XCAPE (XRD-Constrained Accelerated Prediction Engine), a crystal structure prediction (CSP) framework that integrates experimentally derived composition, unit cell parameters, space group, and PXRD data into a symmetry-aware evolutionary search. XCAPE explores Wyckoff-site configurations using tailored mutation operations, evaluates candidates by both energetic stability and diffraction agreement, and accelerates geometry optimization using a universal machine-learning interatomic potential (MLIP). The framework recovered 71 of 77 database-derived benchmark structures (92.2%) from simulated PXRD patterns and all 12 reference structures from experimental PXRD patterns. It further identified 12 candidate structure assignments that are consistent with experimental PXRD patterns, lack matching entries in the Inorganic Crystal Structure Database (ICSD), and are thermodynamically competitive at the MLIP level. Density functional theory (DFT) calculations showed that 10 of these 12 candidates lie within 10 meV/atom of the convex hull. By bridging experimental diffraction data and physically plausible atomistic models, XCAPE can provide structural insight into previously unresolved materials and support accelerated materials discovery in automated research workflows.
 
 ---
 
