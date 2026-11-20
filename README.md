@@ -133,37 +133,37 @@ arXiv's API access and attribution requirements.
 
 ## New Papers (2)
 
-*Last checked: 2026-11-19 10:55:56 (SGT)*
+*Last checked: 2026-11-20 10:49:29 (SGT)*
 
-### 1. How anion composition governs structural frameworks and Li-ion transport in oxychloride solid-state electrolytes
+### 1. GEODE: Symmetry-Preserving Cartesian Diffusion for Crystal Generation
 
-**Authors:** Jiho Lee, Seungwoo Hwang, Seungwu Han, Jung-Hoon Lee, Jisu Jung, Youngho Kang, Sungwoo Kang
+**Authors:** Yuchen Lou, Alex M. Ganose
 
-**Published:** 2026-11-10
+**Published:** 2026-10-01
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2611.13611v2
+**ID:** 2610.01898v2
 
-**Link:** [https://arxiv.org/abs/2611.13611v2](https://arxiv.org/abs/2611.13611v2)
+**Link:** [https://arxiv.org/abs/2610.01898v2](https://arxiv.org/abs/2610.01898v2)
 
-**Summary:** Mixed-anion lithium oxychlorides exhibit high Li conductivity, but the relationship between oxygen content, structural framework, and Li-ion transport remains unclear. Here, crystal structure prediction and molecular dynamics simulations with machine-learning interatomic potentials are used to examine $\\mathrm{Li}_yM\\mathrm{O}_x\\mathrm{Cl}_{6-2x}$ ($M$ = Nb and Ta [Group 5] and $M$ = Ti, Zr, and Hf [Group 4]). Increasing oxygen content changes isolated chloride-rich polyhedra into one-dimensional chains and subsequently more highly connected two- and three-dimensional frameworks. In the Group 5 series, fast Li diffusion occurs over $x \\approx 0.67$--1.5, where the Li sites form a three-dimensional percolating network. Potential of mean force maps and nudged elastic band calculations reveal that fast Li-ion transport requires a low-dimensional framework supporting long-range migration through undercoordinated Li sites with low barriers, together with similar energies across Li sites. Finally, we perform fine-grid compositional search, which identifies $\\mathrm{LiNbO}_{0.67}\\mathrm{Cl}_{4.67}$, $\\mathrm{LiTaO}_{0.75}\\mathrm{Cl}_{4.5}$, $\\mathrm{LiNbO}_{1.5}\\mathrm{Cl}_3$, and $\\mathrm{LiTaO}_{1.5}\\mathrm{Cl}_3$ as stable candidates with predicted room-temperature self-diffusivities of up to $\\sim 10^{-6}\\,\\mathrm{cm}^2/\\mathrm{s}$. These findings establish how oxygen content controls framework and Li-ion transport, guiding the design of lithium oxyhalide electrolytes.
+**Summary:** Most known inorganic crystals exhibit symmetric atomic arrangements, yet generative models often fail to reproduce them. Explicitly enforcing these symmetries has so far yielded fewer stable and novel structures than unconstrained generation. We introduce Generative Equivariant Orbit Diffusion Engine (GEODE), to our knowledge the first model to combine coordinate and lattice diffusion in Cartesian space. GEODE first samples symmetry templates, then jointly generates the lattice, atomic coordinates and atom types while preserving the specified symmetry with a novel Wyckoff-constrained loss. Cartesian diffusion gives coordinate noise a consistent physical scale that we empirically demonstrate improves performance. Unconditional generation achieves a metastable, unique and novel (mSUN) rate of 11.9%, compared with 7.7% for the next best symmetry-aware model. We also introduce sampling time template filtering, which increases mSUN by ~6% without retraining, making GEODE competitive with leading symmetry-agnostic models. Template selection also enables joint symmetry and property guidance, which we demonstrate through classifier-free guidance of permittivity.
 
 ---
 
-### 2. Physics-Guided Crystal Structure Elucidation from Powder X-Ray Diffraction with Universal Machine-Learning Interatomic Potentials
+### 2. Autonomous discovery of new structure-plausibility laws for explainable and rapid crystal diagnosis and screening
 
-**Authors:** Yunsung Lim, Seungwoo Hwang, Seungwu Han
+**Authors:** Zhilong Song, Heung Law, Lixue Cheng
 
-**Published:** 2026-11-18
+**Published:** 2026-09-01
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2611.23760v1
+**ID:** 2609.01209v2
 
-**Link:** [https://arxiv.org/abs/2611.23760v1](https://arxiv.org/abs/2611.23760v1)
+**Link:** [https://arxiv.org/abs/2609.01209v2](https://arxiv.org/abs/2609.01209v2)
 
-**Summary:** Determining unique atomic coordinates from powder X-ray diffraction (PXRD) remains challenging because peak overlap, weak scattering from light elements, limited scattering contrast between elements with similar atomic numbers, and experimental noise render the inverse problem underdetermined. Here, we present XCAPE (XRD-Constrained Accelerated Prediction Engine), a crystal structure prediction (CSP) framework that integrates experimentally derived composition, unit cell parameters, space group, and PXRD data into a symmetry-aware evolutionary search. XCAPE explores Wyckoff-site configurations using tailored mutation operations, evaluates candidates by both energetic stability and diffraction agreement, and accelerates geometry optimization using a universal machine-learning interatomic potential (MLIP). The framework recovered 71 of 77 database-derived benchmark structures (92.2%) from simulated PXRD patterns and all 12 reference structures from experimental PXRD patterns. It further identified 12 candidate structure assignments that are consistent with experimental PXRD patterns, lack matching entries in the Inorganic Crystal Structure Database (ICSD), and are thermodynamically competitive at the MLIP level. Density functional theory (DFT) calculations showed that 10 of these 12 candidates lie within 10 meV/atom of the convex hull. By bridging experimental diffraction data and physically plausible atomistic models, XCAPE can provide structural insight into previously unresolved materials and support accelerated materials discovery in automated research workflows.
+**Summary:** Generative models and autonomous agents now propose candidate inorganic crystals by the million, yet most screens test little beyond a minimum-distance cutoff and give no chemical reason for failure. For nearly a century, Pauling's rules have served as the main empirical theory of crystal-structure stability, but they remain qualitative and idealized, leading to only 6.5% of known ionic crystals satisfying rules 2--5 simultaneously. Here our agents generate, test and refute two million candidate laws to discover eight Plausibility Rules for Inorganic Structures (PRIS). These laws encode five physical mechanisms: short-range repulsion, ionic contact and packing, electrostatic balance, bond-valence conservation and crystallographic site simplicity. Experimental structures satisfy the PRIS law sets in 82--99% of cases, and the strictest set detects 87.9% of artificially damaged structures, far above the 1.6--3.2% of conventional distance cutoffs. Although derived without synthesis labels, PRIS plausibility is highly linearly correlated with synthesizability, and a continuous PRIS-derived synthesis score (PSS) explainably filters out 83.7% of hard-to-synthesize structures while retaining 80.7% of experimental structures. In an inverse-design task targeting ultra-incompressible crystals, explainable screening by PRIS and PSS cuts the density functional theory (DFT) validation queue by up to 67.3% while retaining 99.2% of the DFT-verified target candidates. Beyond screening, PRIS traces GNoME's low-symmetry excess to artificial element ordering and identifies falsified crystal structures. PRIS moves screening from a pass-or-fail verdict to a chemical reason for failure, showing that autonomous agents can discover, by active refutation, physicochemical laws that guide calculations and experiments.
 
 ---
 

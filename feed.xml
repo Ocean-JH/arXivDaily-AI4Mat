@@ -5,7 +5,7 @@
     <link>https://ocean-jh.github.io/arXivDaily-AI4Mat/</link>
     <description>Recent arXiv papers on artificial intelligence for materials science.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 10:55:56 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 10:49:29 +0800</lastBuildDate>
     <item>
       <title>Physics-Guided Crystal Structure Elucidation from Powder X-Ray Diffraction with Universal Machine-Learning Interatomic Potentials</title>
       <link>https://arxiv.org/abs/2611.23760v1</link>
@@ -289,8 +289,8 @@
     </item>
     <item>
       <title>GEODE: Symmetry-Preserving Cartesian Diffusion for Crystal Generation</title>
-      <link>https://arxiv.org/abs/2610.01898v1</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.01898v1</guid>
+      <link>https://arxiv.org/abs/2610.01898v2</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.01898v2</guid>
       <pubDate>Thu, 01 Oct 2026 15:46:50 +0000</pubDate>
       <description>Most known inorganic crystals exhibit symmetric atomic arrangements, yet generative models often fail to reproduce them. Explicitly enforcing these symmetries has so far yielded fewer stable and novel structures than unconstrained generation. We introduce Generative Equivariant Orbit Diffusion Engine (GEODE), to our knowledge the first model to combine coordinate and lattice diffusion in Cartesian space. GEODE first samples symmetry templates, then jointly generates the lattice, atomic coordinates and atom types while preserving the specified symmetry with a novel Wyckoff-constrained loss. Cartesian diffusion gives coordinate noise a consistent physical scale that we empirically demonstrate improves performance. Unconditional generation achieves a metastable, unique and novel (mSUN) rate of 11.9%, compared with 7.7% for the next best symmetry-aware model. We also introduce sampling time template filtering, which increases mSUN by ~6% without retraining, making GEODE competitive with leading symmetry-agnostic models. Template selection also enables joint symmetry and property guidance, which we demonstrate through classifier-free guidance of permittivity.</description>
     </item>
