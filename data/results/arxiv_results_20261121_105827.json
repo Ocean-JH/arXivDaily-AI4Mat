@@ -1,0 +1,28 @@
+[
+  {
+    "authors": [
+      "Zhilong Song",
+      "Zijun Pang",
+      "Lixue Cheng"
+    ],
+    "base_id": "2610.32678",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.LG"
+    ],
+    "comment": "27 pages, 5 figures, 1 table. Supplementary Information (50 pages) is provided as an ancillary file",
+    "doi": null,
+    "id": "https://arxiv.org/abs/2610.32678v2",
+    "journal_ref": null,
+    "pdf_url": "https://arxiv.org/pdf/2610.32678v2",
+    "primary_category": "cond-mat.mtrl-sci",
+    "published": "2026-10-23T14:15:47+00:00",
+    "short_id": "2610.32678v2",
+    "status": "new",
+    "summary": "Forward screening and inverse design drive materials discovery, yet their limits remain unquantified because records of known crystal structures and properties are fragmented across databases. Consequently, forward screening leaves known crystals underexplored for new functions, whereas generative and autonomous discovery has repeatedly reported known phases or close variants as new materials. Here we match structures across 55 databases to assemble MateriaViva, a unified database of 14.6 million distinct crystals and over one billion property values. To provide the missing properties of every structure, a task we term property completion, we develop an equivariant Crystal Graph Transformer Network with state-of-the-art accuracy on nine benchmark tasks and apply 140 property-prediction models across the database. These predictions reveal the underestimated potential of forward screening, identifying tens of thousands of high-performance candidates among previously synthesized or computationally studied materials that lack recorded target-property values. Conversely, comparison with MateriaViva shows that the novelty of inverse design has been overestimated, as 55-100% of inverse-designed structures are not new. Under equal density functional theory verification budgets for bulk-modulus design, inverse design yields a higher fraction of qualifying candidates, whereas forward screening reaches the higher bulk modulus. MateriaViva thus provides a comprehensive reference for probing the limits of both paradigms, revealing unrecognized performance in known crystals and directing inverse design beyond reported structures.",
+    "title": "Probing the limits of materials design via a comprehensive crystal database of 14.6 million structures with 140 properties",
+    "updated": "2026-11-19T10:01:42+00:00",
+    "url": "https://arxiv.org/abs/2610.32678v2",
+    "version": 2
+  }
+]

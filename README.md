@@ -131,39 +131,23 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (2)
+## New Papers (1)
 
-*Last checked: 2026-11-20 10:49:29 (SGT)*
+*Last checked: 2026-11-21 10:58:27 (SGT)*
 
-### 1. GEODE: Symmetry-Preserving Cartesian Diffusion for Crystal Generation
+### 1. Probing the limits of materials design via a comprehensive crystal database of 14.6 million structures with 140 properties
 
-**Authors:** Yuchen Lou, Alex M. Ganose
+**Authors:** Zhilong Song, Zijun Pang, Lixue Cheng
 
-**Published:** 2026-10-01
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2610.01898v2
-
-**Link:** [https://arxiv.org/abs/2610.01898v2](https://arxiv.org/abs/2610.01898v2)
-
-**Summary:** Most known inorganic crystals exhibit symmetric atomic arrangements, yet generative models often fail to reproduce them. Explicitly enforcing these symmetries has so far yielded fewer stable and novel structures than unconstrained generation. We introduce Generative Equivariant Orbit Diffusion Engine (GEODE), to our knowledge the first model to combine coordinate and lattice diffusion in Cartesian space. GEODE first samples symmetry templates, then jointly generates the lattice, atomic coordinates and atom types while preserving the specified symmetry with a novel Wyckoff-constrained loss. Cartesian diffusion gives coordinate noise a consistent physical scale that we empirically demonstrate improves performance. Unconditional generation achieves a metastable, unique and novel (mSUN) rate of 11.9%, compared with 7.7% for the next best symmetry-aware model. We also introduce sampling time template filtering, which increases mSUN by ~6% without retraining, making GEODE competitive with leading symmetry-agnostic models. Template selection also enables joint symmetry and property guidance, which we demonstrate through classifier-free guidance of permittivity.
-
----
-
-### 2. Autonomous discovery of new structure-plausibility laws for explainable and rapid crystal diagnosis and screening
-
-**Authors:** Zhilong Song, Heung Law, Lixue Cheng
-
-**Published:** 2026-09-01
+**Published:** 2026-10-23
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2609.01209v2
+**ID:** 2610.32678v2
 
-**Link:** [https://arxiv.org/abs/2609.01209v2](https://arxiv.org/abs/2609.01209v2)
+**Link:** [https://arxiv.org/abs/2610.32678v2](https://arxiv.org/abs/2610.32678v2)
 
-**Summary:** Generative models and autonomous agents now propose candidate inorganic crystals by the million, yet most screens test little beyond a minimum-distance cutoff and give no chemical reason for failure. For nearly a century, Pauling's rules have served as the main empirical theory of crystal-structure stability, but they remain qualitative and idealized, leading to only 6.5% of known ionic crystals satisfying rules 2--5 simultaneously. Here our agents generate, test and refute two million candidate laws to discover eight Plausibility Rules for Inorganic Structures (PRIS). These laws encode five physical mechanisms: short-range repulsion, ionic contact and packing, electrostatic balance, bond-valence conservation and crystallographic site simplicity. Experimental structures satisfy the PRIS law sets in 82--99% of cases, and the strictest set detects 87.9% of artificially damaged structures, far above the 1.6--3.2% of conventional distance cutoffs. Although derived without synthesis labels, PRIS plausibility is highly linearly correlated with synthesizability, and a continuous PRIS-derived synthesis score (PSS) explainably filters out 83.7% of hard-to-synthesize structures while retaining 80.7% of experimental structures. In an inverse-design task targeting ultra-incompressible crystals, explainable screening by PRIS and PSS cuts the density functional theory (DFT) validation queue by up to 67.3% while retaining 99.2% of the DFT-verified target candidates. Beyond screening, PRIS traces GNoME's low-symmetry excess to artificial element ordering and identifies falsified crystal structures. PRIS moves screening from a pass-or-fail verdict to a chemical reason for failure, showing that autonomous agents can discover, by active refutation, physicochemical laws that guide calculations and experiments.
+**Summary:** Forward screening and inverse design drive materials discovery, yet their limits remain unquantified because records of known crystal structures and properties are fragmented across databases. Consequently, forward screening leaves known crystals underexplored for new functions, whereas generative and autonomous discovery has repeatedly reported known phases or close variants as new materials. Here we match structures across 55 databases to assemble MateriaViva, a unified database of 14.6 million distinct crystals and over one billion property values. To provide the missing properties of every structure, a task we term property completion, we develop an equivariant Crystal Graph Transformer Network with state-of-the-art accuracy on nine benchmark tasks and apply 140 property-prediction models across the database. These predictions reveal the underestimated potential of forward screening, identifying tens of thousands of high-performance candidates among previously synthesized or computationally studied materials that lack recorded target-property values. Conversely, comparison with MateriaViva shows that the novelty of inverse design has been overestimated, as 55-100% of inverse-designed structures are not new. Under equal density functional theory verification budgets for bulk-modulus design, inverse design yields a higher fraction of qualifying candidates, whereas forward screening reaches the higher bulk modulus. MateriaViva thus provides a comprehensive reference for probing the limits of both paradigms, revealing unrecognized performance in known crystals and directing inverse design beyond reported structures.
 
 ---
 
