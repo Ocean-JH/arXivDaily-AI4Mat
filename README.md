@@ -131,9 +131,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## Latest Papers (1)
 
-*Last checked: 2026-11-21 10:58:27 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-11-22 09:54:15 (SGT)*
 
 ### 1. Probing the limits of materials design via a comprehensive crystal database of 14.6 million structures with 140 properties
 
