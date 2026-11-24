@@ -98,7 +98,7 @@
     </header>
 
     <main id="main-content" class="content-shell" tabindex="-1">
-        <div class="status-notice" role="status" aria-live="polite"><p>The latest arXiv refresh failed. Showing the most recent saved additions.</p></div>
+        <div class="status-notice" role="status" aria-live="polite"><p><strong>3 new papers</strong> found in the latest check.</p></div>
 
         <section class="research-tools" aria-labelledby="search-label">
             <form id="paper-search" class="search-form" role="search" method="get">
@@ -136,25 +136,64 @@
         </section>
 
         <div id="papers-content">
-            <div class="section-heading"><h2 id="latest-papers">Latest papers (1)</h2>
-<p>Rebuilt from saved data 2026-11-23 10:28 SGT</p></div>
+            <div class="section-heading"><h2 id="latest-papers">Latest papers (3)</h2>
+<p>Checked 2026-11-24 13:43 SGT</p></div>
 <article class="paper"
-         id="paper-2610.32678"
-         data-paper-id="2610.32678"
-         aria-labelledby="title-paper-2610.32678"
+         id="paper-2611.30066"
+         data-paper-id="2611.30066"
+         aria-labelledby="title-paper-2611.30066"
          tabindex="-1">
     <div class="paper-index" aria-hidden="true">1</div>
     <div class="paper-body">
-        <h3 id="title-paper-2610.32678" class="paper-title"><a href="https://arxiv.org/abs/2610.32678v2" target="_blank" rel="noopener noreferrer">Probing the limits of materials design via a comprehensive crystal database of 14.6 million structures with 140 properties</a><span class="paper-badge">New</span></h3>
+        <h3 id="title-paper-2611.30066" class="paper-title"><a href="https://arxiv.org/abs/2611.30066v1" target="_blank" rel="noopener noreferrer">Diagnostic Accuracy Is Not Deployment Value: Decision-Aligned Reliability Evaluation for Foundation MLIPs in Materials Discovery</a><span class="paper-badge">New</span></h3>
 
         <dl class="paper-info">
             <div class="paper-authors">
                 <dt>Authors</dt>
-                <dd>Zhilong Song, Zijun Pang, Lixue Cheng</dd>
+                <dd>Harry Sevi, Joonatan E. M. Laulainen</dd>
             </div>
             <div class="paper-date">
                 <dt>Published</dt>
-                <dd><time datetime="2026-10-23">2026-10-23</time></dd>
+                <dd><time datetime="2026-11-23">2026-11-23</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cs.LG</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2611.30066v1</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2611.30066v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>In AI-guided materials discovery, machine-learning models increasingly decide which candidate materials should receive expensive first-principles or experimental evaluation. Standard reliability metrics such as uncertainty, calibration, novelty, and ranking accuracy evaluate properties of the predictions, but success on these metrics does not necessarily imply a better downstream screening decision. We study this mismatch for foundation machine-learned interatomic potentials (MACE-MP, CHGNet, Orb V3) used to rank candidate crystal structures before DFT verification. We evaluate three representative reliability interventions (novelty detection, sparse DFT calibration, and chemistry-level ranking audits) using a deployment objective that measures how much DFT can be avoided while maintaining a required recall of near-hull candidates. Across all three, a reliability signal can succeed on its immediate target without improving the final screening decision: novelty detects distribution shift but weakly ranks failure severity; calibration can improve pooled ranking metrics while leaving screening unchanged or degrading it; and sparse audits identify MLIP-chemistry combinations with poor ranking reliability without yielding a robustly beneficial routing policy. A two-oracle analysis further shows that the source of failure depends on the screening decision itself: under formation-energy screening, even perfect knowledge of average ranking reliability can select the wrong model, whereas in the evaluated hull-aligned variant the oracle target becomes decision-aligned but finite-budget audits still fail to realize the value. Reliability should be evaluated relative to the decision it supports: the relevant question is not whether a model is uncertain or inaccurate, but whether acquiring and acting on additional information will improve the final discovery decision enough to justify its cost.</p>
+        </details>
+    </div>
+</article>
+
+<article class="paper"
+         id="paper-2611.29889"
+         data-paper-id="2611.29889"
+         aria-labelledby="title-paper-2611.29889"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">2</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2611.29889" class="paper-title"><a href="https://arxiv.org/abs/2611.29889v1" target="_blank" rel="noopener noreferrer">Unveiling the Complex high-pressure phases of Sodium at the Melting Curve Minimum via Data-Drive Crystal Structure Prediction</a><span class="paper-badge">New</span></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Zhenyu Wang, Chengqian Zhang, Xiaoyang Wang, Haiyang Niu, Jian Lv, Han Wang</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2026-11-23">2026-11-23</time></dd>
             </div>
             <div class="paper-category">
                 <dt>Category</dt>
@@ -162,17 +201,56 @@
             </div>
             <div class="paper-id">
                 <dt>arXiv ID</dt>
-                <dd>2610.32678v2</dd>
+                <dd>2611.29889v1</dd>
             </div>
         </dl>
 
         <div class="paper-actions">
-            <a href="https://arxiv.org/abs/2610.32678v2" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+            <a href="https://arxiv.org/abs/2611.29889v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
         </div>
 
         <details class="paper-summary">
             <summary>Read abstract</summary>
-            <p>Forward screening and inverse design drive materials discovery, yet their limits remain unquantified because records of known crystal structures and properties are fragmented across databases. Consequently, forward screening leaves known crystals underexplored for new functions, whereas generative and autonomous discovery has repeatedly reported known phases or close variants as new materials. Here we match structures across 55 databases to assemble MateriaViva, a unified database of 14.6 million distinct crystals and over one billion property values. To provide the missing properties of every structure, a task we term property completion, we develop an equivariant Crystal Graph Transformer Network with state-of-the-art accuracy on nine benchmark tasks and apply 140 property-prediction models across the database. These predictions reveal the underestimated potential of forward screening, identifying tens of thousands of high-performance candidates among previously synthesized or computationally studied materials that lack recorded target-property values. Conversely, comparison with MateriaViva shows that the novelty of inverse design has been overestimated, as 55-100% of inverse-designed structures are not new. Under equal density functional theory verification budgets for bulk-modulus design, inverse design yields a higher fraction of qualifying candidates, whereas forward screening reaches the higher bulk modulus. MateriaViva thus provides a comprehensive reference for probing the limits of both paradigms, revealing unrecognized performance in known crystals and directing inverse design beyond reported structures.</p>
+            <p>Sodium exhibits a remarkable concentration of complex crystalline phases near its melting-curve minimum, yet the atomic arrangements of several experimentally observed phases remain unresolved. Here, we combine CALYPSO crystal structure prediction with Deep Potential models developed through concurrent learning to explore this structural landscape. Searches over more than 1.6 million configurations recover the previously reported $I4/m$ structure of $tI50$ and identify candidate atomic arrangements for $oC120$ and $aP90$, together with three additional low-enthalpy structures, $tI52$, $oP72$, and $oP92$. The proposed candidates reproduce key features of the experimentally indexed cell geometries. First-principles enthalpy calculations, Gibbs free-energy comparisons, and solid--liquid coexistence simulations reveal close competition among these structures and established sodium phases. Near the calculated reference melting minimum, $tI50$ is favored over $cI16$ and $oP8$, whereas $oC120$ and $aP90$ remain closely competitive, with their relative stability sensitive to model accuracy. These results provide testable structural models for unresolved experimental phases and reveal multiple closely competing low-enthalpy configurations near sodium&#x27;s melting minimum</p>
+        </details>
+    </div>
+</article>
+
+<article class="paper"
+         id="paper-2611.27188"
+         data-paper-id="2611.27188"
+         aria-labelledby="title-paper-2611.27188"
+         tabindex="-1">
+    <div class="paper-index" aria-hidden="true">3</div>
+    <div class="paper-body">
+        <h3 id="title-paper-2611.27188" class="paper-title"><a href="https://arxiv.org/abs/2611.27188v1" target="_blank" rel="noopener noreferrer">Generating grain boundary structures at a specified energy with a symmetry-constrained diffusion model</a><span class="paper-badge">New</span></h3>
+
+        <dl class="paper-info">
+            <div class="paper-authors">
+                <dt>Authors</dt>
+                <dd>Kazuya Miyamoto, Ibuki Okuda, Izumi Takahara, Teruyasu Mizoguchi</dd>
+            </div>
+            <div class="paper-date">
+                <dt>Published</dt>
+                <dd><time datetime="2026-11-20">2026-11-20</time></dd>
+            </div>
+            <div class="paper-category">
+                <dt>Category</dt>
+                <dd>cond-mat.mtrl-sci</dd>
+            </div>
+            <div class="paper-id">
+                <dt>arXiv ID</dt>
+                <dd>2611.27188v1</dd>
+            </div>
+        </dl>
+
+        <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2611.27188v1" target="_blank" rel="noopener noreferrer">Open on arXiv <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="paper-summary">
+            <summary>Read abstract</summary>
+            <p>Grain boundaries (GBs) govern many properties of polycrystalline materials, and inverse design would make the GB structure itself a design variable. Crystal generative models such as MatterGen operate on periodic cells, which contain two GBs. The cell energy defines a single GB only when the two are equivalent, but existing models do not enforce this equivalence. Building on MatterGen, we developed a symmetry-constrained diffusion model in which the two GBs are related by a symmetry operation: atoms near one GB are generated, and those near the other are reconstructed through a symmetry projection applied at every denoising step. We applied it to the $Σ5(210)[001]$ symmetric tilt GB in Al, conditioning generation on the GB energy from a machine-learning interatomic potential (MLIP). All 350 generated structures kept a geometrically equivalent GB pair after relaxation. Given a target GB energy, the model generated structures at that energy: for the three in-range targets with many nearby training structures, 44% to 70% fell within $\pm 0.1$ J/m$^2$ of the target. Tracking weakened at higher energies and failed outside the training range. Of the 91 near-target structures, 90 matched no training structure under the adopted geometric criterion, indicating that the model can propose configurations near the target energy that are distinct from the training structures, a capability that could help identify unknown metastable GB structures observed in experiments. Building GB-pair equivalence into generation thus makes GB properties well-defined design targets, enabling inverse design of GB structures.</p>
         </details>
     </div>
 </article>
@@ -181,7 +259,7 @@
     </main>
 
     <footer class="site-footer">
-        <p>Last updated <time datetime="2026-11-23T10:28:10.475165+08:00">2026-11-23 10:28:10 SGT</time></p>
+        <p>Last updated <time datetime="2026-11-24T13:43:48.101092+08:00">2026-11-24 13:43:48 SGT</time></p>
         <p>© 2026 <a href="https://ocean-jh.github.io/"
                               target="_blank"
                               rel="noopener noreferrer">Wang Jianghai</a>

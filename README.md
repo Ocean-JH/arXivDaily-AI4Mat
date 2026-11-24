@@ -131,25 +131,55 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (1)
+## New Papers (3)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-11-24 13:43:48 (SGT)*
 
-*Last checked: 2026-11-22 09:54:15 (SGT)*
+### 1. Diagnostic Accuracy Is Not Deployment Value: Decision-Aligned Reliability Evaluation for Foundation MLIPs in Materials Discovery
 
-### 1. Probing the limits of materials design via a comprehensive crystal database of 14.6 million structures with 140 properties
+**Authors:** Harry Sevi, Joonatan E. M. Laulainen
 
-**Authors:** Zhilong Song, Zijun Pang, Lixue Cheng
+**Published:** 2026-11-23
 
-**Published:** 2026-10-23
+**Category:** cs.LG
+
+**ID:** 2611.30066v1
+
+**Link:** [https://arxiv.org/abs/2611.30066v1](https://arxiv.org/abs/2611.30066v1)
+
+**Summary:** In AI-guided materials discovery, machine-learning models increasingly decide which candidate materials should receive expensive first-principles or experimental evaluation. Standard reliability metrics such as uncertainty, calibration, novelty, and ranking accuracy evaluate properties of the predictions, but success on these metrics does not necessarily imply a better downstream screening decision. We study this mismatch for foundation machine-learned interatomic potentials (MACE-MP, CHGNet, Orb V3) used to rank candidate crystal structures before DFT verification. We evaluate three representative reliability interventions (novelty detection, sparse DFT calibration, and chemistry-level ranking audits) using a deployment objective that measures how much DFT can be avoided while maintaining a required recall of near-hull candidates. Across all three, a reliability signal can succeed on its immediate target without improving the final screening decision: novelty detects distribution shift but weakly ranks failure severity; calibration can improve pooled ranking metrics while leaving screening unchanged or degrading it; and sparse audits identify MLIP-chemistry combinations with poor ranking reliability without yielding a robustly beneficial routing policy. A two-oracle analysis further shows that the source of failure depends on the screening decision itself: under formation-energy screening, even perfect knowledge of average ranking reliability can select the wrong model, whereas in the evaluated hull-aligned variant the oracle target becomes decision-aligned but finite-budget audits still fail to realize the value. Reliability should be evaluated relative to the decision it supports: the relevant question is not whether a model is uncertain or inaccurate, but whether acquiring and acting on additional information will improve the final discovery decision enough to justify its cost.
+
+---
+
+### 2. Unveiling the Complex high-pressure phases of Sodium at the Melting Curve Minimum via Data-Drive Crystal Structure Prediction
+
+**Authors:** Zhenyu Wang, Chengqian Zhang, Xiaoyang Wang, Haiyang Niu, Jian Lv, Han Wang
+
+**Published:** 2026-11-23
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2610.32678v2
+**ID:** 2611.29889v1
 
-**Link:** [https://arxiv.org/abs/2610.32678v2](https://arxiv.org/abs/2610.32678v2)
+**Link:** [https://arxiv.org/abs/2611.29889v1](https://arxiv.org/abs/2611.29889v1)
 
-**Summary:** Forward screening and inverse design drive materials discovery, yet their limits remain unquantified because records of known crystal structures and properties are fragmented across databases. Consequently, forward screening leaves known crystals underexplored for new functions, whereas generative and autonomous discovery has repeatedly reported known phases or close variants as new materials. Here we match structures across 55 databases to assemble MateriaViva, a unified database of 14.6 million distinct crystals and over one billion property values. To provide the missing properties of every structure, a task we term property completion, we develop an equivariant Crystal Graph Transformer Network with state-of-the-art accuracy on nine benchmark tasks and apply 140 property-prediction models across the database. These predictions reveal the underestimated potential of forward screening, identifying tens of thousands of high-performance candidates among previously synthesized or computationally studied materials that lack recorded target-property values. Conversely, comparison with MateriaViva shows that the novelty of inverse design has been overestimated, as 55-100% of inverse-designed structures are not new. Under equal density functional theory verification budgets for bulk-modulus design, inverse design yields a higher fraction of qualifying candidates, whereas forward screening reaches the higher bulk modulus. MateriaViva thus provides a comprehensive reference for probing the limits of both paradigms, revealing unrecognized performance in known crystals and directing inverse design beyond reported structures.
+**Summary:** Sodium exhibits a remarkable concentration of complex crystalline phases near its melting-curve minimum, yet the atomic arrangements of several experimentally observed phases remain unresolved. Here, we combine CALYPSO crystal structure prediction with Deep Potential models developed through concurrent learning to explore this structural landscape. Searches over more than 1.6 million configurations recover the previously reported $I4/m$ structure of $tI50$ and identify candidate atomic arrangements for $oC120$ and $aP90$, together with three additional low-enthalpy structures, $tI52$, $oP72$, and $oP92$. The proposed candidates reproduce key features of the experimentally indexed cell geometries. First-principles enthalpy calculations, Gibbs free-energy comparisons, and solid--liquid coexistence simulations reveal close competition among these structures and established sodium phases. Near the calculated reference melting minimum, $tI50$ is favored over $cI16$ and $oP8$, whereas $oC120$ and $aP90$ remain closely competitive, with their relative stability sensitive to model accuracy. These results provide testable structural models for unresolved experimental phases and reveal multiple closely competing low-enthalpy configurations near sodium's melting minimum
+
+---
+
+### 3. Generating grain boundary structures at a specified energy with a symmetry-constrained diffusion model
+
+**Authors:** Kazuya Miyamoto, Ibuki Okuda, Izumi Takahara, Teruyasu Mizoguchi
+
+**Published:** 2026-11-20
+
+**Category:** cond-mat.mtrl-sci
+
+**ID:** 2611.27188v1
+
+**Link:** [https://arxiv.org/abs/2611.27188v1](https://arxiv.org/abs/2611.27188v1)
+
+**Summary:** Grain boundaries (GBs) govern many properties of polycrystalline materials, and inverse design would make the GB structure itself a design variable. Crystal generative models such as MatterGen operate on periodic cells, which contain two GBs. The cell energy defines a single GB only when the two are equivalent, but existing models do not enforce this equivalence. Building on MatterGen, we developed a symmetry-constrained diffusion model in which the two GBs are related by a symmetry operation: atoms near one GB are generated, and those near the other are reconstructed through a symmetry projection applied at every denoising step. We applied it to the $Σ5(210)[001]$ symmetric tilt GB in Al, conditioning generation on the GB energy from a machine-learning interatomic potential (MLIP). All 350 generated structures kept a geometrically equivalent GB pair after relaxation. Given a target GB energy, the model generated structures at that energy: for the three in-range targets with many nearby training structures, 44% to 70% fell within $\\pm 0.1$ J/m$^2$ of the target. Tracking weakened at higher energies and failed outside the training range. Of the 91 near-target structures, 90 matched no training structure under the adopted geometric criterion, indicating that the model can propose configurations near the target energy that are distinct from the training structures, a capability that could help identify unknown metastable GB structures observed in experiments. Building GB-pair equivalence into generation thus makes GB properties well-defined design targets, enabling inverse design of GB structures.
 
 ---
 
