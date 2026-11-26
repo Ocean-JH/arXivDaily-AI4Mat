@@ -135,7 +135,7 @@ arXiv's API access and attribution requirements.
 
 _No new papers were found in the latest check; showing the most recent additions._
 
-*Last checked: 2026-11-25 12:46:13 (SGT)*
+*Last checked: 2026-11-26 11:56:29 (SGT)*
 
 ### 1. Diagnostic Accuracy Is Not Deployment Value: Decision-Aligned Reliability Evaluation for Foundation MLIPs in Materials Discovery
 
