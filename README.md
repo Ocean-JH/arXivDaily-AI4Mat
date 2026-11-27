@@ -131,57 +131,23 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## Latest Papers (3)
+## New Papers (1)
 
-_No new papers were found in the latest check; showing the most recent additions._
+*Last checked: 2026-11-27 11:55:38 (SGT)*
 
-*Last checked: 2026-11-26 11:56:29 (SGT)*
+### 1. AlphaDiffract: Automated Crystallographic Analysis of Powder X-ray Diffraction Data
 
-### 1. Diagnostic Accuracy Is Not Deployment Value: Decision-Aligned Reliability Evaluation for Foundation MLIPs in Materials Discovery
+**Authors:** Nina Andrejevic, Ming Du, Hemant Sharma, James P. Horwath, Aileen Luo, Xiangyu Yin, Michael Prince, Brian H. Toby, Mathew J. Cherukara
 
-**Authors:** Harry Sevi, Joonatan E. M. Laulainen
-
-**Published:** 2026-11-23
-
-**Category:** cs.LG
-
-**ID:** 2611.30066v1
-
-**Link:** [https://arxiv.org/abs/2611.30066v1](https://arxiv.org/abs/2611.30066v1)
-
-**Summary:** In AI-guided materials discovery, machine-learning models increasingly decide which candidate materials should receive expensive first-principles or experimental evaluation. Standard reliability metrics such as uncertainty, calibration, novelty, and ranking accuracy evaluate properties of the predictions, but success on these metrics does not necessarily imply a better downstream screening decision. We study this mismatch for foundation machine-learned interatomic potentials (MACE-MP, CHGNet, Orb V3) used to rank candidate crystal structures before DFT verification. We evaluate three representative reliability interventions (novelty detection, sparse DFT calibration, and chemistry-level ranking audits) using a deployment objective that measures how much DFT can be avoided while maintaining a required recall of near-hull candidates. Across all three, a reliability signal can succeed on its immediate target without improving the final screening decision: novelty detects distribution shift but weakly ranks failure severity; calibration can improve pooled ranking metrics while leaving screening unchanged or degrading it; and sparse audits identify MLIP-chemistry combinations with poor ranking reliability without yielding a robustly beneficial routing policy. A two-oracle analysis further shows that the source of failure depends on the screening decision itself: under formation-energy screening, even perfect knowledge of average ranking reliability can select the wrong model, whereas in the evaluated hull-aligned variant the oracle target becomes decision-aligned but finite-budget audits still fail to realize the value. Reliability should be evaluated relative to the decision it supports: the relevant question is not whether a model is uncertain or inaccurate, but whether acquiring and acting on additional information will improve the final discovery decision enough to justify its cost.
-
----
-
-### 2. Unveiling the Complex high-pressure phases of Sodium at the Melting Curve Minimum via Data-Drive Crystal Structure Prediction
-
-**Authors:** Zhenyu Wang, Chengqian Zhang, Xiaoyang Wang, Haiyang Niu, Jian Lv, Han Wang
-
-**Published:** 2026-11-23
+**Published:** 2026-03-24
 
 **Category:** cond-mat.mtrl-sci
 
-**ID:** 2611.29889v1
+**ID:** 2603.23367v2
 
-**Link:** [https://arxiv.org/abs/2611.29889v1](https://arxiv.org/abs/2611.29889v1)
+**Link:** [https://arxiv.org/abs/2603.23367v2](https://arxiv.org/abs/2603.23367v2)
 
-**Summary:** Sodium exhibits a remarkable concentration of complex crystalline phases near its melting-curve minimum, yet the atomic arrangements of several experimentally observed phases remain unresolved. Here, we combine CALYPSO crystal structure prediction with Deep Potential models developed through concurrent learning to explore this structural landscape. Searches over more than 1.6 million configurations recover the previously reported $I4/m$ structure of $tI50$ and identify candidate atomic arrangements for $oC120$ and $aP90$, together with three additional low-enthalpy structures, $tI52$, $oP72$, and $oP92$. The proposed candidates reproduce key features of the experimentally indexed cell geometries. First-principles enthalpy calculations, Gibbs free-energy comparisons, and solid--liquid coexistence simulations reveal close competition among these structures and established sodium phases. Near the calculated reference melting minimum, $tI50$ is favored over $cI16$ and $oP8$, whereas $oC120$ and $aP90$ remain closely competitive, with their relative stability sensitive to model accuracy. These results provide testable structural models for unresolved experimental phases and reveal multiple closely competing low-enthalpy configurations near sodium's melting minimum
-
----
-
-### 3. Generating grain boundary structures at a specified energy with a symmetry-constrained diffusion model
-
-**Authors:** Kazuya Miyamoto, Ibuki Okuda, Izumi Takahara, Teruyasu Mizoguchi
-
-**Published:** 2026-11-20
-
-**Category:** cond-mat.mtrl-sci
-
-**ID:** 2611.27188v1
-
-**Link:** [https://arxiv.org/abs/2611.27188v1](https://arxiv.org/abs/2611.27188v1)
-
-**Summary:** Grain boundaries (GBs) govern many properties of polycrystalline materials, and inverse design would make the GB structure itself a design variable. Crystal generative models such as MatterGen operate on periodic cells, which contain two GBs. The cell energy defines a single GB only when the two are equivalent, but existing models do not enforce this equivalence. Building on MatterGen, we developed a symmetry-constrained diffusion model in which the two GBs are related by a symmetry operation: atoms near one GB are generated, and those near the other are reconstructed through a symmetry projection applied at every denoising step. We applied it to the $Σ5(210)[001]$ symmetric tilt GB in Al, conditioning generation on the GB energy from a machine-learning interatomic potential (MLIP). All 350 generated structures kept a geometrically equivalent GB pair after relaxation. Given a target GB energy, the model generated structures at that energy: for the three in-range targets with many nearby training structures, 44% to 70% fell within $\\pm 0.1$ J/m$^2$ of the target. Tracking weakened at higher energies and failed outside the training range. Of the 91 near-target structures, 90 matched no training structure under the adopted geometric criterion, indicating that the model can propose configurations near the target energy that are distinct from the training structures, a capability that could help identify unknown metastable GB structures observed in experiments. Building GB-pair equivalence into generation thus makes GB properties well-defined design targets, enabling inverse design of GB structures.
+**Summary:** Materials identification and structural understanding from powder X-ray diffraction (PXRD) data are long-standing challenges in materials science, fundamental to discovering and characterizing novel materials. A prerequisite for full structure solution is the accurate determination of the crystal lattice, including lattice parameters and crystallographic symmetries. Traditional methods for this are iterative and typically require expert input, and while existing deep learning approaches have shown promise, a robust, single-shot method for comprehensive lattice determination from experimental data remains a key goal. Here, we introduce AlphaDiffract, a deep learning framework for jointly predicting the crystal system, space group, and lattice parameters directly from PXRD patterns. AlphaDiffract utilizes a 1D adaptation of the ConvNeXt architecture, a modern convolutional neural network that integrates key design principles from transformers, coupled with dedicated prediction heads for each crystallographic property. The model is trained and validated on the largest-to-date physics-based dataset of over 31 million simulated diffraction patterns, generated by augmenting 312,267 curated structures from the ICSD and Materials Project databases. Crucially, it demonstrates strong transfer from simulated training data to experimental measurements, achieving 81.7% crystal system accuracy and 66.2% space group accuracy on the RRUFF dataset while additionally predicting all six lattice parameters. By providing a unified model for rapid, simultaneous prediction of lattice symmetry and parameters from PXRD data, AlphaDiffract represents a significant step forward in leveraging deep learning for high-throughput materials discovery.
 
 ---
 
