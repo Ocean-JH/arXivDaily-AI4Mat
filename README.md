@@ -131,9 +131,11 @@ arXiv's API access and attribution requirements.
 
 <!-- ARXIV_PAPERS_START -->
 
-## New Papers (1)
+## Latest Papers (1)
 
-*Last checked: 2026-11-27 11:55:38 (SGT)*
+_No new papers were found in the latest check; showing the most recent additions._
+
+*Last checked: 2026-11-28 11:42:56 (SGT)*
 
 ### 1. AlphaDiffract: Automated Crystallographic Analysis of Powder X-ray Diffraction Data
 
